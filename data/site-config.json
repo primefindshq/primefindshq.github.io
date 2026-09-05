@@ -1,0 +1,28 @@
+{
+  "siteName": "PRIME.FINDS",
+  "tagline": "Curated products. Smart finds.",
+  "shortPitch": "We find interesting products so you don't have to spend hours searching.",
+  "description": "PRIME.FINDS is an international product discovery brand curating interesting, useful, and stylish products worth knowing about.",
+  "url": "https://primefinds.example",
+  "locale": "en",
+  "currencyDefault": "USD",
+  "navLinks": [
+    { "label": "Home", "href": "/" },
+    { "label": "Categories", "href": "/#categories" },
+    { "label": "Trending", "href": "/#trending" },
+    { "label": "Latest", "href": "/#latest" },
+    { "label": "About", "href": "/about.html" }
+  ],
+  "footerLegalLinks": [
+    { "label": "Privacy Policy", "href": "/privacy-policy.html" },
+    { "label": "Terms", "href": "/terms.html" },
+    { "label": "Affiliate Disclosure", "href": "/affiliate-disclosure.html" }
+  ],
+  "social": {
+    "instagram": ""
+  },
+  "analytics": {
+    "provider": "none",
+    "note": "Set NEXT_PUBLIC_ANALYTICS_PROVIDER / write key in your deployment environment. The analytics service abstraction in js/core/analytics.js reads window.__PRIME_FINDS_ANALYTICS_CONFIG and no-ops until configured."
+  }
+}

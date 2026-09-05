@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="PRIME.FINDS favicon">
+  <defs>
+    <linearGradient id="favGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0dca0"/>
+      <stop offset="45%" stop-color="#c9a24b"/>
+      <stop offset="100%" stop-color="#8a6f34"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#0a0a0b"/>
+  <path d="M22 14 H36 C43 14 48.5 19.3 48.5 26 C48.5 32.7 43 38 36 38 H28 V50 H22 Z M28 20.5 V31.5 H35.3 C38.4 31.5 41 29 41 26 C41 23 38.4 20.5 35.3 20.5 Z"
+        fill="url(#favGold)"/>
+  <path d="M28 31.5 H40 L33 41.5 H28 Z" fill="url(#favGold)" opacity="0.55"/>
+  <circle cx="23" cy="47" r="3" fill="url(#favGold)"/>
+</svg>

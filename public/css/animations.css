@@ -1,0 +1,76 @@
+/* =========================================================================
+   PRIME.FINDS — Animations
+   All entrance/reveal animations are intentionally short and are skipped
+   entirely for prefers-reduced-motion (see tokens.css + base.css durations).
+   ========================================================================= */
+
+/* ---- Scroll reveal (IntersectionObserver adds .is-visible) ---- */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity var(--duration-slow) var(--ease-standard),
+              transform var(--duration-slow) var(--ease-standard);
+}
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+[data-reveal="fade"] { transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { opacity: 1; transform: none; }
+}
+
+/* ---- Homepage entrance sequence ---- */
+.entrance-mark {
+  opacity: 0;
+  transform: scale(0.92);
+  animation: entrance-pop var(--duration-slow) var(--ease-standard) forwards;
+}
+.entrance-headline {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: entrance-rise var(--duration-slow) var(--ease-standard) forwards;
+  animation-delay: 160ms;
+}
+.entrance-sub {
+  opacity: 0;
+  transform: translateY(14px);
+  animation: entrance-rise var(--duration-slow) var(--ease-standard) forwards;
+  animation-delay: 280ms;
+}
+.entrance-cta {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: entrance-rise var(--duration-slow) var(--ease-standard) forwards;
+  animation-delay: 380ms;
+}
+
+@keyframes entrance-pop {
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes entrance-rise {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .entrance-mark, .entrance-headline, .entrance-sub, .entrance-cta {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---- Loading spinner ---- */
+.spinner {
+  width: 20px; height: 20px;
+  border: 2px solid var(--color-border-strong);
+  border-top-color: var(--color-gold);
+  border-radius: 50%;
+  animation: spin 700ms linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ---- Fade transition helper (page content swap) ---- */
+.fade-in { animation: fade-in var(--duration-base) var(--ease-standard) both; }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }

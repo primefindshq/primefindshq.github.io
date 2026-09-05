@@ -1,0 +1,65 @@
+[
+  {
+    "id": "cat-tech",
+    "slug": "tech",
+    "name": "Tech",
+    "shortDescription": "Gadgets and devices worth your attention.",
+    "description": "Smart gadgets, audio, chargers, and everyday tech that actually earns a spot on your desk or in your bag. We skip the gimmicks and keep the genuinely useful.",
+    "icon": "tech",
+    "order": 1
+  },
+  {
+    "id": "cat-home",
+    "slug": "home",
+    "name": "Home",
+    "shortDescription": "Upgrade the space you live in.",
+    "description": "Considered pieces for a calmer, better-looking home \u2014 from lighting to small appliances that quietly make everyday life easier.",
+    "icon": "home",
+    "order": 2
+  },
+  {
+    "id": "cat-gaming",
+    "slug": "gaming",
+    "name": "Gaming",
+    "shortDescription": "Gear for players who notice the details.",
+    "description": "Controllers, peripherals, and setup upgrades for people who take their play seriously \u2014 comfort, response time, and build quality first.",
+    "icon": "gaming",
+    "order": 3
+  },
+  {
+    "id": "cat-travel",
+    "slug": "travel",
+    "name": "Travel",
+    "shortDescription": "Pack light. Move easy.",
+    "description": "Bags, organizers, and travel tech built for people who move often and don't want to think twice about what's in their carry-on.",
+    "icon": "travel",
+    "order": 4
+  },
+  {
+    "id": "cat-desk-setup",
+    "slug": "desk-setup",
+    "name": "Desk Setup",
+    "shortDescription": "Build a workspace worth showing up to.",
+    "description": "Monitor arms, lighting, cable management, and small details that turn a desk into a proper setup.",
+    "icon": "desk",
+    "order": 5
+  },
+  {
+    "id": "cat-gifts",
+    "slug": "gifts",
+    "name": "Gifts",
+    "shortDescription": "Something worth giving.",
+    "description": "Curated picks for when you want to give a gift that doesn't feel like a last-minute decision.",
+    "icon": "gift",
+    "order": 6
+  },
+  {
+    "id": "cat-under-25",
+    "slug": "under-25",
+    "name": "Under $25",
+    "shortDescription": "Small price. Still worth it.",
+    "description": "Proof that genuinely good finds don't need a big budget. Everything here is under $25.",
+    "icon": "value",
+    "order": 7
+  }
+]
