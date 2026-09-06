@@ -718,5 +718,77 @@
     "published": true,
     "createdAt": "2026-09-07T07:00:00.000Z",
     "updatedAt": "2026-09-07T07:00:00.000Z"
+  },
+  {
+    "id": "prd-0051",
+    "name": "cudinham X6 Mini Sticker Printer",
+    "slug": "mini-thermal-printer",
+    "category": "tech",
+    "subcategory": "Photo & Print",
+    "shortDescription": "A compact thermal printer that turns your phone into a pocket-sized creative tool for labels, notes, and stickers.",
+    "description": "A Bluetooth pocket printer that connects to a phone app and prints instantly on thermal paper \u2014 no ink, no cartridges. Comes with 10 paper rolls to start printing photos, stickers, labels, and journaling pages right away.",
+    "whyWeLikeIt": "No ink means no dried-out cartridges waiting to ruin the one time you actually need to print something.",
+    "image": "/assets/images/products/mini-thermal-printer.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": [
+      "thermal printer",
+      "sticker maker",
+      "portable printer",
+      "phone accessory",
+      "tech"
+    ],
+    "highlights": [
+      "Bluetooth connection to a companion phone app",
+      "Zero-ink thermal printing",
+      "Includes 10 rolls of thermal paper",
+      "Prints photos, stickers, labels, and notes"
+    ],
+    "affiliateUrl": "https://amzn.to/4xaEafQ",
+    "externalUrl": "https://www.amazon.com/dp/B0CL6ND8C8?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-07T08:00:00.000Z",
+    "updatedAt": "2026-09-07T08:00:00.000Z"
+  },
+  {
+    "id": "prd-0052",
+    "name": "HERHOTER Galaxy Star Projector",
+    "slug": "galaxy-star-projector",
+    "category": "home",
+    "subcategory": "Ambience",
+    "shortDescription": "A mesmerizing galaxy projector that fills your space with immersive stars and cosmic light.",
+    "description": "A remote-controlled projector that washes an entire ceiling in a moving nebula of stars and aurora light, with adjustable brightness, speed, and color plus a built-in timer for falling asleep under it without leaving it running all night.",
+    "whyWeLikeIt": "It genuinely changes how a room feels in about ten seconds \u2014 the kind of thing that gets a reaction the first time someone sees it turned on.",
+    "image": "/assets/images/products/galaxy-star-projector.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": [
+      "galaxy projector",
+      "star projector",
+      "ambient lighting",
+      "home decor",
+      "home"
+    ],
+    "highlights": [
+      "Projects a moving galaxy/aurora pattern across ceiling and walls",
+      "Remote control with brightness, speed, and color settings",
+      "Built-in timer and sleep mode",
+      "Great for bedrooms, parties, and movie nights"
+    ],
+    "affiliateUrl": "https://amzn.to/4A0jA4q",
+    "externalUrl": "https://www.amazon.com/dp/B0CQSJRPXF?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-07T09:00:00.000Z",
+    "updatedAt": "2026-09-07T09:00:00.000Z"
   }
 ]
