@@ -1,6 +1,7 @@
 // Small, dependency-free helpers shared across the site.
 
 export function formatPrice(price, currency = 'USD') {
+  if (price == null) return 'Check price';
   try {
     return new Intl.NumberFormat('en-US', { style: 'currency', currency }).format(price);
   } catch {
@@ -64,5 +65,8 @@ export function renderStars(rating = 0, reviewCount = null) {
   const label = rating > 0
     ? `${rating.toFixed(1)} out of 5${reviewCount ? ` (${reviewCount.toLocaleString()} reviews)` : ''}`
     : 'Not yet rated';
-  return `<span class="rating" role="img" aria-label="${label}"><span class="stars">${stars}</span>${rating > 0 ? `<span>${rating.toFixed(1)}</span>` : ''}${reviewCount ? `<span class="text-faint">(${reviewCount.toLocaleString()})</span>` : ''}</span>`;
+  const extra = rating > 0
+    ? `<span>${rating.toFixed(1)}</span>${reviewCount ? `<span class="text-faint">(${reviewCount.toLocaleString()})</span>` : ''}`
+    : '<span class="text-faint">New</span>';
+  return `<span class="rating" role="img" aria-label="${label}"><span class="stars">${stars}</span>${extra}</span>`;
 }

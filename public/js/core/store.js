@@ -88,9 +88,10 @@ export function sortProducts(products, sortKey) {
     case 'newest':
       return list.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
     case 'price-asc':
-      return list.sort((a, b) => a.price - b.price);
+      // unknown price ("Check price") always sorts last, regardless of direction
+      return list.sort((a, b) => (a.price ?? Infinity) - (b.price ?? Infinity));
     case 'price-desc':
-      return list.sort((a, b) => b.price - a.price);
+      return list.sort((a, b) => (b.price ?? -Infinity) - (a.price ?? -Infinity));
     case 'rating':
       return list.sort((a, b) => b.rating - a.rating);
     case 'trending':
@@ -118,8 +119,10 @@ export function searchProducts(products, query) {
 export function filterProducts(products, filters) {
   return products.filter((p) => {
     if (filters.categories?.length && !filters.categories.includes(p.category)) return false;
-    if (filters.minPrice != null && p.price < filters.minPrice) return false;
-    if (filters.maxPrice != null && p.price > filters.maxPrice) return false;
+    // a product with no confirmed price can't be verified against a price filter, so it's excluded
+    // rather than guessed at when one is active (it still shows normally with no filter applied).
+    if (filters.minPrice != null && (p.price == null || p.price < filters.minPrice)) return false;
+    if (filters.maxPrice != null && (p.price == null || p.price > filters.maxPrice)) return false;
     if (filters.minRating != null && p.rating < filters.minRating) return false;
     if (filters.featuredOnly && !p.featured) return false;
     if (filters.trendingOnly && !p.trending) return false;

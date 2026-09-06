@@ -12,7 +12,7 @@ A premium, international product-discovery brand: curated products, smart finds,
 - **Affiliate link architecture**: one function (`getProductUrl`) and one hydration path — never hand-written hrefs.
 - **Analytics abstraction**: a `track()` call site the whole app shares; no vendor is wired in yet, and none is required for the site to work.
 - **Placeholder demo content**: 29 original (non-copied) demo products across all 7 categories, plus generated abstract gold/black SVG art standing in for product photography.
-- **Placeholder logo**: a gold "P/F" monogram + wordmark matching the brand's described visual identity, wired into header/footer/mobile nav/favicon — see [Logo](#7-logo--important) below.
+- **Real logo**: the official gold "P/F" monogram + "PRIME.FINDS" wordmark, derived from the supplied brand render and wired into header/footer/mobile nav/hero/favicons/social share image — see [Logo](#7-logo) below.
 
 ## 2. Important deviation from the original tech-stack request — please read
 
@@ -139,20 +139,23 @@ Every CTA (product cards, product detail page, related products) renders as an i
 
 **All demo affiliate/external URLs point to the reserved `.invalid` TLD** (e.g. `https://affiliate.invalid/prime-finds-demo/...`) — guaranteed not to resolve, so they can never be mistaken for a real, clickable affiliate link during development. Swap in real URLs per-product in `data/products.json` when real affiliate relationships exist.
 
-## 7. Logo — important
+## 7. Logo
 
-The image you shared in chat (the gold "P/F" monogram wordmark) could not be extracted as a file — this session only has filesystem access, not the ability to save an image pasted into chat. **The three logo files at `public/assets/logo/` are placeholders I built to match that visual identity** (gold gradient monogram + wordmark), not the exact supplied asset.
+The site now uses the **real, official PRIME.FINDS logo** — the gold "P/F" monogram over the "PRIME.FINDS" wordmark. The master render lives at `scripts/logo-source/prime-finds-logo-master.png`; `scripts/generate_logo_assets.py` derives every asset the site actually uses from it (alpha-cut against its black background, cropped into a mark/wordmark/full lockup, and rendered down into favicons, an apple-touch-icon, a maskable PWA icon, and a 1200×630 social share image) into `public/assets/logo/`.
 
-**To use your real logo:** replace these three files, keeping the exact filenames:
-- `public/assets/logo/mark.svg` (compact monogram)
-- `public/assets/logo/wordmark.svg` (full lockup — used in header/footer)
-- `public/assets/logo/favicon.svg` (browser tab icon)
+Preserving proportions was non-negotiable, so nothing was redrawn or recreated in HTML/CSS — every usage is that same source image, just cropped/scaled.
 
-Every page references these paths, so dropping in the real files updates the whole site instantly — no code changes needed. (See `public/assets/logo/README.md`.)
+**To update the logo later:** replace `scripts/logo-source/prime-finds-logo-master.png` with a new master render (same layout — mark on top, wordmark below, tagline at the bottom, on a solid near-black background) and run:
+
+```bash
+python scripts/generate_logo_assets.py
+python scripts/build.py
+```
+
+Every page references the generated files by fixed name, so nothing else needs to change. (See `public/assets/logo/README.md`.)
 
 ## 8. What remains to be configured
 
-- **Real logo files** (§7).
 - **Real domain**: `data/site-config.json` → `"url"` is currently `https://primefinds.example`; canonical URLs, OG tags, and the sitemap all derive from it.
 - **Instagram URL**: `data/site-config.json` → `"social.instagram"` is intentionally blank (footer shows a disabled icon until it's filled in) — no URL was invented.
 - **Analytics provider**: set `window.__PRIME_FINDS_ANALYTICS_CONFIG` (see `public/js/core/analytics.js`) once GA4/Plausible/etc. is chosen. Nothing needs to change elsewhere.
@@ -165,7 +168,6 @@ Every page references these paths, so dropping in the real files updates the who
 
 - No Node/Next.js/React — see §2 for why and the migration path in §10.
 - No build-time image optimization (no Next.js `<Image>` equivalent) — the demo art is hand-generated SVG (tiny, vector, no optimization needed); real product photos should be pre-sized/compressed before adding.
-- No true multi-size favicon set (ICO/PNG for older browsers/platforms) — only a modern SVG favicon. Generate a full favicon set from the final logo before launch.
 - Category/product filtering and sorting are entirely client-side against the full product list for that scope — fine at hundreds of products, but a true "thousands of products" catalog should paginate via a real API instead of shipping the whole JSON to the client.
 - No automated test suite — verification was manual (build run, local server, in-browser check across desktop/mobile viewports, link/status checks).
 

@@ -62,6 +62,8 @@ def esc(value):
 
 
 def format_price(price, currency="USD"):
+    if price is None:
+        return "Check price"
     symbol = {"USD": "$", "EUR": "€", "GBP": "£"}.get(currency, currency + " ")
     return f"{symbol}{price:,.2f}"
 
@@ -112,7 +114,7 @@ def render_header(site, active=None):
 <header class="site-header">
   <div class="container site-header__inner">
     <a class="brand-logo" href="/" aria-label="{esc(site['siteName'])} home">
-      <img src="/assets/logo/wordmark.svg" alt="{esc(site['siteName'])}" />
+      <img src="/assets/logo/wordmark.png" alt="{esc(site['siteName'])}" width="1075" height="580" />
     </a>
     <nav class="main-nav" aria-label="Primary">
       <ul class="main-nav__list">{nav_items}</ul>
@@ -136,7 +138,7 @@ def render_mobile_menu(site):
     return f"""
 <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
   <div class="mobile-menu__top">
-    <a class="brand-logo" href="/" aria-label="{esc(site['siteName'])} home"><img src="/assets/logo/wordmark.svg" alt="{esc(site['siteName'])}" /></a>
+    <a class="brand-logo" href="/" aria-label="{esc(site['siteName'])} home"><img src="/assets/logo/wordmark.png" alt="{esc(site['siteName'])}" width="1075" height="580" /></a>
     <button class="icon-btn" type="button" data-menu-close aria-label="Close menu">{CLOSE_ICON}</button>
   </div>
   <ul class="mobile-menu__list">{links}</ul>
@@ -178,7 +180,7 @@ def render_footer(site):
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a class="brand-logo" href="/"><img src="/assets/logo/wordmark.svg" alt="{esc(site['siteName'])}" /></a>
+        <a class="brand-logo" href="/"><img src="/assets/logo/wordmark.png" alt="{esc(site['siteName'])}" width="1075" height="580" /></a>
         <p class="footer-brand__tagline">{esc(site['tagline'])}</p>
       </div>
       <div>
@@ -260,7 +262,7 @@ def render_category_card(category, count):
 def base_page(site, *, title, description, canonical_path, og_image=None, body_html, active_nav=None, page_scripts=None, extra_head=""):
     css_links = "\n  ".join(f'<link rel="stylesheet" href="{href}" />' for href in CSS_FILES)
     canonical_url = site["url"].rstrip("/") + canonical_path
-    og_image_url = site["url"].rstrip("/") + (og_image or "/assets/images/hero/hero.svg")
+    og_image_url = site["url"].rstrip("/") + (og_image or "/assets/logo/og-image.jpg")
     scripts = "".join(f'<script type="module" src="{s}"></script>' for s in (page_scripts or []))
 
     return f"""<!doctype html>
@@ -271,7 +273,10 @@ def base_page(site, *, title, description, canonical_path, og_image=None, body_h
   <title>{esc(title)}</title>
   <meta name="description" content="{esc(description)}" />
   <link rel="canonical" href="{canonical_url}" />
-  <link rel="icon" href="/assets/logo/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/assets/logo/favicon.ico" sizes="any" />
+  <link rel="icon" href="/assets/logo/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="icon" href="/assets/logo/favicon-192.png" type="image/png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/assets/logo/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="theme-color" content="#0a0a0b" />
 
@@ -321,7 +326,7 @@ def render_homepage(site, categories, products, counts):
 <section class="hero">
   <div class="hero__bg"><img src="/assets/images/hero/hero.svg" alt="" /></div>
   <div class="container hero__content">
-    <span class="hero__eyebrow entrance-mark"><img src="/assets/logo/mark.svg" alt="" style="height:18px;width:auto;" /> {esc(site['siteName'])}</span>
+    <span class="hero__eyebrow entrance-mark"><img src="/assets/logo/mark.png" alt="" width="374" height="419" style="height:18px;width:auto;" /> {esc(site['siteName'])}</span>
     <h1 class="hero__title entrance-headline">DISCOVER WHAT'S <span class="accent">WORTH BUYING.</span></h1>
     <p class="hero__sub entrance-sub">Curated products. Smart finds. No endless searching.</p>
     <div class="hero__ctas entrance-cta">
@@ -396,7 +401,7 @@ def render_homepage(site, categories, products, counts):
         "@type": "Organization",
         "name": site["siteName"],
         "url": site["url"],
-        "logo": site["url"].rstrip("/") + "/assets/logo/wordmark.svg",
+        "logo": site["url"].rstrip("/") + "/assets/logo/wordmark.png",
         "description": site["description"],
     })
     extra_head = f'<script type="application/ld+json">{ld_json}</script>'
@@ -574,14 +579,15 @@ def render_product_page(site, product, category, related_products):
         "description": product["shortDescription"],
         "image": site["url"].rstrip("/") + product["image"],
         "brand": {"@type": "Brand", "name": site["siteName"]},
-        "offers": {
+    }
+    if product.get("price") is not None:
+        ld_json["offers"] = {
             "@type": "Offer",
             "price": product["price"],
             "priceCurrency": product["currency"],
             "availability": "https://schema.org/InStock",
             "url": product.get("externalUrl") or "",
-        },
-    }
+        }
     if product.get("rating") and product.get("reviewCount"):
         ld_json["aggregateRating"] = {
             "@type": "AggregateRating",
@@ -838,7 +844,11 @@ def main():
         "display": "standalone",
         "background_color": "#0a0a0b",
         "theme_color": "#0a0a0b",
-        "icons": [{"src": "/assets/logo/favicon.svg", "sizes": "any", "type": "image/svg+xml"}],
+        "icons": [
+            {"src": "/assets/logo/favicon-192.png", "sizes": "192x192", "type": "image/png"},
+            {"src": "/assets/logo/favicon-512.png", "sizes": "512x512", "type": "image/png"},
+            {"src": "/assets/logo/maskable-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"},
+        ],
     }
     write_file(os.path.join(PUBLIC_DIR, "site.webmanifest"), json.dumps(manifest, indent=2))
 
