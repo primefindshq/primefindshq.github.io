@@ -1060,5 +1060,41 @@
     "published": true,
     "createdAt": "2026-09-08T02:00:00.000Z",
     "updatedAt": "2026-09-08T02:00:00.000Z"
+  },
+  {
+    "id": "prd-0065",
+    "name": "EUCOS 62\" Phone Tripod & Selfie Stick with Remote",
+    "slug": "eucos-phone-tripod-selfie-stick",
+    "category": "under-25",
+    "subcategory": "Photography",
+    "shortDescription": "An extendable 62-inch phone tripod and selfie stick with a Bluetooth remote, compatible with iPhone and Android.",
+    "description": "One stand, every angle. This tripod extends up to 62 inches and doubles as a handheld selfie stick, with a solid phone clamp that fits iPhone and Android and a Bluetooth remote for hands-free shutter control from across the room.",
+    "whyWeLikeIt": "It replaces three separate purchases — selfie stick, tripod, and remote — with one setup that's actually sturdy enough to trust with your phone.",
+    "image": "/assets/images/products/eucos-phone-tripod-selfie-stick.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": [
+      "phone tripod",
+      "selfie stick",
+      "bluetooth remote",
+      "photography",
+      "under 25"
+    ],
+    "highlights": [
+      "Extends up to 62 inches",
+      "Doubles as a handheld selfie stick",
+      "Bluetooth remote included",
+      "Compatible with iPhone and Android"
+    ],
+    "affiliateUrl": "https://amzn.to/466Kdaf",
+    "externalUrl": "https://www.amazon.com/dp/B09XHZ8F7F?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-08T02:30:00.000Z",
+    "updatedAt": "2026-09-08T02:30:00.000Z"
   }
 ]
