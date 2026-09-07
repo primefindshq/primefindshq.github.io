@@ -1042,5 +1042,41 @@
     "published": true,
     "createdAt": "2026-09-07T23:30:00.000Z",
     "updatedAt": "2026-09-07T23:30:00.000Z"
+  },
+  {
+    "id": "prd-0060",
+    "name": "OlarHike 10-Set Compression Packing Cubes",
+    "slug": "olarhike-compression-packing-cubes",
+    "category": "travel",
+    "subcategory": "Organization",
+    "shortDescription": "Compression packing cubes designed to maximize luggage space while keeping clothes organized and compact.",
+    "description": "Pack more. Stress less. A 10-piece compression packing system \u2014 six double-zip cubes that compress clothes down flat, plus a hanging toiletry organizer, a mesh shoe bag, and a laundry pouch \u2014 so every trip stays organized from the suitcase to the hotel room.",
+    "whyWeLikeIt": "The compression zippers are the difference-maker \u2014 squeeze the air out and suddenly a full week of clothes fits where three days used to.",
+    "image": "/assets/images/products/olarhike-compression-packing-cubes.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": [
+      "packing cubes",
+      "compression",
+      "luggage organizer",
+      "travel accessories",
+      "travel"
+    ],
+    "highlights": [
+      "10-piece set with double-zip compression cubes",
+      "Hanging toiletry organizer included",
+      "Mesh shoe bag and laundry pouch included",
+      "Over 1,000 mesh holes for breathability"
+    ],
+    "affiliateUrl": "https://amzn.to/4hdXcwX",
+    "externalUrl": "https://www.amazon.com/dp/B0D99J3X5L?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-08T00:00:00.000Z",
+    "updatedAt": "2026-09-08T00:00:00.000Z"
   }
 ]
