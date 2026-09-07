@@ -778,5 +778,35 @@
     "published": true,
     "createdAt": "2026-09-07T21:00:00.000Z",
     "updatedAt": "2026-09-07T21:00:00.000Z"
+  },
+  {
+    "id": "prd-0057",
+    "name": "Retro Handheld Game Console (220 Games)",
+    "slug": "retro-handheld-game-console",
+    "category": "gaming",
+    "subcategory": "Handheld & Retro",
+    "shortDescription": "A compact handheld console packed with retro games, built for quick gaming sessions wherever you go.",
+    "description": "220 preloaded retro-style games on a 3-inch LCD screen, with a rechargeable battery so it's ready whenever boredom hits — no downloads, no subscriptions, no charging cable required at the arcade, the car, or the couch.",
+    "whyWeLikeIt": "Old-school gaming, zero setup — turn it on and you're already three menus deep into a road trip's worth of games.",
+    "image": "/assets/images/products/retro-handheld-game-console.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": ["handheld console", "retro games", "portable gaming", "gift", "gaming"],
+    "highlights": [
+      "220 preloaded retro-style games",
+      "3.0-inch LCD screen",
+      "Rechargeable battery",
+      "Compact, pocket-sized design"
+    ],
+    "affiliateUrl": "https://amzn.to/4xGzTlc",
+    "externalUrl": "https://www.amazon.com/dp/B0DJ5RPZY2?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-07T22:00:00.000Z",
+    "updatedAt": "2026-09-07T22:00:00.000Z"
   }
 ]
