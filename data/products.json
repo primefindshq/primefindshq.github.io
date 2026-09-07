@@ -1168,5 +1168,41 @@
     "published": true,
     "createdAt": "2026-09-08T03:30:00.000Z",
     "updatedAt": "2026-09-08T03:30:00.000Z"
+  },
+  {
+    "id": "prd-0068",
+    "name": "Apple AirTag (2nd Generation)",
+    "slug": "apple-airtag-2nd-gen",
+    "category": "travel",
+    "subcategory": "Travel Tech",
+    "shortDescription": "A precision item tracker for luggage, keys, or a wallet, with one-tap setup and Find My support.",
+    "description": "Never wonder where your bag is again. Attach an AirTag to a suitcase, backpack, or keychain and track it through Find My, with Precision Finding, a built-in speaker for locating it by sound, and IP67 water resistance for real travel conditions.",
+    "whyWeLikeIt": "Precision Finding turns 'somewhere in this airport' into a literal arrow and distance — the single best peace-of-mind add for checked luggage.",
+    "image": "/assets/images/products/apple-airtag-2nd-gen.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": [
+      "airtag",
+      "item tracker",
+      "luggage tracker",
+      "find my",
+      "travel tech"
+    ],
+    "highlights": [
+      "Precision Finding for pinpoint location",
+      "Find My network support",
+      "Built-in speaker for sound-based locating",
+      "IP67 water resistant"
+    ],
+    "affiliateUrl": "https://amzn.to/4A5em7C",
+    "externalUrl": "https://www.amazon.com/dp/B0GJTFXNRX?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-08T04:00:00.000Z",
+    "updatedAt": "2026-09-08T04:00:00.000Z"
   }
 ]
