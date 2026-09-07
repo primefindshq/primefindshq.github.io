@@ -862,5 +862,41 @@
     "published": true,
     "createdAt": "2026-09-07T19:00:00.000Z",
     "updatedAt": "2026-09-07T19:00:00.000Z"
+  },
+  {
+    "id": "prd-0055",
+    "name": "Zulay Kitchen Milk Frother",
+    "slug": "zulay-milk-frother",
+    "category": "home",
+    "subcategory": "Kitchen",
+    "shortDescription": "A compact electric milk frother that creates smooth, creamy foam in seconds.",
+    "description": "Coffeehouse vibes at home. This handheld electric frother whisks milk, matcha, protein powder, and hot chocolate into smooth, creamy foam in under 20 seconds \u2014 battery-powered, no cords, no cleanup beyond a quick rinse.",
+    "whyWeLikeIt": "It's a five-dollar-latte upgrade for about the price of one \u2014 the foam difference between shaking a spoon and using this is not subtle.",
+    "image": "/assets/images/products/zulay-milk-frother.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": [
+      "milk frother",
+      "coffee accessory",
+      "kitchen gadget",
+      "matcha",
+      "home"
+    ],
+    "highlights": [
+      "Whisks milk, matcha, and protein powder into foam in seconds",
+      "Durable titanium-coated whisk",
+      "Battery-powered, cordless design",
+      "Stand included"
+    ],
+    "affiliateUrl": "https://amzn.to/4xDl7fb",
+    "externalUrl": "https://www.amazon.com/dp/B082314NFL?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-07T20:00:00.000Z",
+    "updatedAt": "2026-09-07T20:00:00.000Z"
   }
 ]
