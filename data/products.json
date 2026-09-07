@@ -658,5 +658,35 @@
     "published": true,
     "createdAt": "2026-09-07T09:00:00.000Z",
     "updatedAt": "2026-09-07T09:00:00.000Z"
+  },
+  {
+    "id": "prd-0053",
+    "name": "RAYHOME Flexible LED Matrix Display",
+    "slug": "led-matrix-display",
+    "category": "tech",
+    "subcategory": "Lighting & Displays",
+    "shortDescription": "A customizable LED matrix display that lets you showcase animations, messages, and pixel art in a futuristic way.",
+    "description": "A flexible, Bluetooth-controlled LED panel that displays scrolling text, animations, and custom pixel art straight from a phone app — no coding required. Bends to fit curved surfaces and runs off any standard USB port.",
+    "whyWeLikeIt": "The app makes it stupidly easy to go from a blank panel to a custom animated message in under a minute — no code, no manual, just draw and send.",
+    "image": "/assets/images/products/led-matrix-display.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": ["led display", "led matrix", "pixel art", "car accessory", "tech"],
+    "highlights": [
+      "Flexible 7\" x 3\" LED matrix panel",
+      "Bluetooth app control for text, animations, and pixel art",
+      "DIY programmable, no coding required",
+      "Powered by any standard USB port"
+    ],
+    "affiliateUrl": "https://amzn.to/4yjUCex",
+    "externalUrl": "https://www.amazon.com/dp/B0BHHW9JCC?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-07T18:00:00.000Z",
+    "updatedAt": "2026-09-07T18:00:00.000Z"
   }
 ]
