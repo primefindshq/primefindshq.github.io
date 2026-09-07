@@ -1204,5 +1204,41 @@
     "published": true,
     "createdAt": "2026-09-08T04:00:00.000Z",
     "updatedAt": "2026-09-08T04:00:00.000Z"
+  },
+  {
+    "id": "prd-0069",
+    "name": "Perilogics Universal Airplane Phone Holder",
+    "slug": "perilogics-airplane-phone-holder",
+    "category": "travel",
+    "subcategory": "Travel Tech",
+    "shortDescription": "A hands-free phone mount that clips onto a tray table or seatback tray edge, with dual 360° rotation.",
+    "description": "Turn any tray table into a hands-free screen. This clip-on mount attaches to the edge of an airplane, train, or car tray table, with dual 360° rotation so the phone lands at exactly the right angle for movies, video calls, or FaceTime.",
+    "whyWeLikeIt": "It clips on in seconds and holds the angle through turbulence — the difference between watching a movie propped on a tray table versus actually enjoying it.",
+    "image": "/assets/images/products/perilogics-airplane-phone-holder.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": [
+      "airplane phone holder",
+      "travel accessory",
+      "phone mount",
+      "hands-free",
+      "travel tech"
+    ],
+    "highlights": [
+      "Clips onto tray tables and similar edges",
+      "Dual 360° rotation for any viewing angle",
+      "Hands-free video and calls on the go",
+      "Compact, foldable design"
+    ],
+    "affiliateUrl": "https://amzn.to/4y0VuFv",
+    "externalUrl": "https://www.amazon.com/dp/B07T8KL6C6?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-08T04:30:00.000Z",
+    "updatedAt": "2026-09-08T04:30:00.000Z"
   }
 ]
