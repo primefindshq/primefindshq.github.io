@@ -1006,5 +1006,41 @@
     "published": true,
     "createdAt": "2026-09-07T23:00:00.000Z",
     "updatedAt": "2026-09-07T23:00:00.000Z"
+  },
+  {
+    "id": "prd-0059",
+    "name": "Spopal Portable Camping Shower with Water Pump & Temperature Display",
+    "slug": "spopal-portable-camping-shower",
+    "category": "travel",
+    "subcategory": "Outdoor & Camping",
+    "shortDescription": "A portable camping shower system with a compact water pump and temperature display, for a real shower anywhere.",
+    "description": "Bring a real shower anywhere. A rechargeable, waterproof pump drives water through a coiled hose to a multi-mode showerhead, with a smart display showing battery level, flow, and water temperature at a glance \u2014 built for campsites, road trips, beach days, and outdoor rinse-offs after the hike is over.",
+    "whyWeLikeIt": "It turns any bucket, lake, or jug into a real shower \u2014 the temperature readout means no more guessing before the water hits you.",
+    "image": "/assets/images/products/spopal-portable-camping-shower.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": [
+      "camping shower",
+      "portable shower",
+      "outdoor gear",
+      "camping",
+      "travel"
+    ],
+    "highlights": [
+      "Rechargeable, waterproof water pump",
+      "Digital display: battery, flow, water temperature",
+      "Multi-mode handheld showerhead",
+      "Includes hose, mounting suction cups, and storage bags"
+    ],
+    "affiliateUrl": "https://amzn.to/4xgoJmq",
+    "externalUrl": "https://www.amazon.com/dp/B0F37K9LV1?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-07T23:30:00.000Z",
+    "updatedAt": "2026-09-07T23:30:00.000Z"
   }
 ]
