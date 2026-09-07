@@ -826,5 +826,41 @@
     "published": true,
     "createdAt": "2026-09-07T18:00:00.000Z",
     "updatedAt": "2026-09-07T18:00:00.000Z"
+  },
+  {
+    "id": "prd-0054",
+    "name": "PLAUD Note Pro AI Voice Recorder",
+    "slug": "plaud-ai-voice-recorder",
+    "category": "tech",
+    "subcategory": "AI & Productivity",
+    "shortDescription": "A sleek AI-powered device that captures conversations and turns them into organized transcripts and summaries.",
+    "description": "Record. Transcribe. Understand. This ultra-slim recorder captures meetings and calls, then transcribes and summarizes them in over 112 languages, with an InstantView display for a quick glance and a case included for everyday carry.",
+    "whyWeLikeIt": "The gap between \"recorded a meeting\" and \"actually have useful notes from it\" is normally hours of typing \u2014 this closes it automatically.",
+    "image": "/assets/images/products/plaud-ai-voice-recorder.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": [
+      "ai recorder",
+      "voice recorder",
+      "transcription",
+      "productivity",
+      "tech"
+    ],
+    "highlights": [
+      "AI transcription and summarization in 112 languages",
+      "Ultra-slim design with InstantView display",
+      "Built for meetings, calls, and professional note-taking",
+      "Case included"
+    ],
+    "affiliateUrl": "https://amzn.to/46Or1y4",
+    "externalUrl": "https://www.amazon.com/dp/B0FYQ4Y2ZZ?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-07T19:00:00.000Z",
+    "updatedAt": "2026-09-07T19:00:00.000Z"
   }
 ]
