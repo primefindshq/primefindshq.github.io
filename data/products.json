@@ -1132,5 +1132,41 @@
     "published": true,
     "createdAt": "2026-09-08T03:00:00.000Z",
     "updatedAt": "2026-09-08T03:00:00.000Z"
+  },
+  {
+    "id": "prd-0067",
+    "name": "ErGear Dual Monitor Arm",
+    "slug": "ergear-dual-monitor-arm",
+    "category": "desk-setup",
+    "subcategory": "Ergonomics",
+    "shortDescription": "A full-motion dual monitor arm with tool-free VESA mounting, fitting screens from 13 to 32 inches.",
+    "description": "Free up the desk, gain the whole range of motion. This gas-spring dual arm holds two monitors from 13 to 32 inches, each up to 19.8 lbs, with tool-free VESA mounting and a clamp base that fits most desk edges.",
+    "whyWeLikeIt": "Tool-free VESA mounting means you're not hunting for a screwdriver mid-setup — clip it on and start adjusting.",
+    "image": "/assets/images/products/ergear-dual-monitor-arm.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": [
+      "monitor arm",
+      "dual monitor mount",
+      "desk setup",
+      "vesa mount",
+      "ergonomics"
+    ],
+    "highlights": [
+      "Fits screens from 13 to 32 inches",
+      "Tool-free VESA mount, 100x100mm",
+      "Max load 19.8 lbs per arm",
+      "Desk clamp base included"
+    ],
+    "affiliateUrl": "https://amzn.to/4zZslvr",
+    "externalUrl": "https://www.amazon.com/dp/B0FPXFYG17?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-08T03:30:00.000Z",
+    "updatedAt": "2026-09-08T03:30:00.000Z"
   }
 ]
