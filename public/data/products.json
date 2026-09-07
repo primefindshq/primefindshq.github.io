@@ -1114,5 +1114,41 @@
     "published": true,
     "createdAt": "2026-09-08T00:30:00.000Z",
     "updatedAt": "2026-09-08T00:30:00.000Z"
+  },
+  {
+    "id": "prd-0062",
+    "name": "ODISTAR Mini Desktop Vacuum Cleaner",
+    "slug": "odistar-mini-desk-vacuum",
+    "category": "desk-setup",
+    "subcategory": "Accessories",
+    "shortDescription": "A compact, 360\u00b0 rotatable mini vacuum for clearing dust and eraser crumbs off your desk.",
+    "description": "Small desk, big mess \u2014 this mini vacuum sucks up dust, crumbs, and eraser bits in seconds. Cordless and AA-battery powered with up to 4 hours of runtime, its 360\u00b0 rotatable head reaches corners and keyboard gaps a rag or brush can't.",
+    "whyWeLikeIt": "It turns 'I'll clean it later' into a five-second fix \u2014 genuinely satisfying to run across a crumb-covered keyboard.",
+    "image": "/assets/images/products/odistar-mini-desk-vacuum.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": [
+      "mini vacuum",
+      "desk cleaning",
+      "desk gadget",
+      "office accessories",
+      "desk setup"
+    ],
+    "highlights": [
+      "Up to 4 hours of cordless runtime",
+      "360\u00b0 rotatable design",
+      "Cleans desk dust and eraser crumbs",
+      "Powered by AA battery"
+    ],
+    "affiliateUrl": "https://amzn.to/3TdqQJH",
+    "externalUrl": "https://www.amazon.com/dp/B07Q128V6W?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-08T01:00:00.000Z",
+    "updatedAt": "2026-09-08T01:00:00.000Z"
   }
 ]
