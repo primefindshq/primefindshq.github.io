@@ -1150,5 +1150,41 @@
     "published": true,
     "createdAt": "2026-09-08T01:00:00.000Z",
     "updatedAt": "2026-09-08T01:00:00.000Z"
+  },
+  {
+    "id": "prd-0063",
+    "name": "3D Printed Moon Lamp with Wood Stand & Remote",
+    "slug": "3d-moon-lamp-remote-control",
+    "category": "gifts",
+    "subcategory": "Novelty",
+    "shortDescription": "A 3D-printed moon night light with 16 colors, remote and touch control, on a wooden display stand.",
+    "description": "A little glowing moon for the nightstand. This 4.8-inch 3D-printed lamp reproduces the moon's real surface texture, lit from within across 16 colors with 4 modes, adjustable by remote or touch, and displayed on its own wooden stand.",
+    "whyWeLikeIt": "It has real presence switched off, and switched on it's the kind of soft, ever-changing glow that makes a genuinely good gift, not just a novelty.",
+    "image": "/assets/images/products/3d-moon-lamp-remote-control.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": [
+      "moon lamp",
+      "night light",
+      "novelty gift",
+      "home decor",
+      "gifts"
+    ],
+    "highlights": [
+      "4.8-inch 3D-printed moon surface texture",
+      "16 colors, 4 lighting modes",
+      "Remote and touch control",
+      "Includes wooden display stand"
+    ],
+    "affiliateUrl": "https://amzn.to/4ytXG8i",
+    "externalUrl": "https://www.amazon.com/dp/B07FDXY48N?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-08T01:30:00.000Z",
+    "updatedAt": "2026-09-08T01:30:00.000Z"
   }
 ]
