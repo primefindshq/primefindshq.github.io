@@ -1277,5 +1277,41 @@
     "published": true,
     "createdAt": "2026-09-08T05:00:00.000Z",
     "updatedAt": "2026-09-08T05:00:00.000Z"
+  },
+  {
+    "id": "prd-0071",
+    "name": "Vtopmart 25-Piece Clear Drawer Organizer Set",
+    "slug": "vtopmart-drawer-organizer-set",
+    "category": "home",
+    "subcategory": "Storage",
+    "shortDescription": "A 25-piece clear plastic organizer set in 4 sizes, for drawers in the office, bathroom, kitchen, or bedroom.",
+    "description": "One drawer, finally sorted. This 25-piece set of clear plastic trays in 4 sizes mixes and matches to fit almost any drawer — pens, paperclips, makeup, utensils — so everything has its own spot and stays visible at a glance.",
+    "whyWeLikeIt": "The mix-and-match sizing is what makes it work — you're not stuck with one bin size for a drawer that never had one shape of stuff in it anyway.",
+    "image": "/assets/images/products/vtopmart-drawer-organizer-set.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": [
+      "drawer organizer",
+      "storage bins",
+      "clear organizer",
+      "office organization",
+      "storage"
+    ],
+    "highlights": [
+      "25 pieces in 4 sizes",
+      "Clear plastic for at-a-glance contents",
+      "Mix-and-match layout for any drawer",
+      "Works in office, bathroom, kitchen, or bedroom"
+    ],
+    "affiliateUrl": "https://amzn.to/4qZ1bRf",
+    "externalUrl": "https://www.amazon.com/dp/B08KXKVT4K?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-08T05:30:00.000Z",
+    "updatedAt": "2026-09-08T05:30:00.000Z"
   }
 ]
