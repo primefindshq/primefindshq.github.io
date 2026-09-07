@@ -1024,5 +1024,41 @@
     "published": true,
     "createdAt": "2026-09-08T01:30:00.000Z",
     "updatedAt": "2026-09-08T01:30:00.000Z"
+  },
+  {
+    "id": "prd-0064",
+    "name": "PUFTEM Electric Spin Scrubber",
+    "slug": "puftem-electric-spin-scrubber",
+    "category": "under-25",
+    "subcategory": "Cleaning",
+    "shortDescription": "A cordless electric scrubber with 6 replaceable brush heads for tubs, tile, and sinks.",
+    "description": "Scrubbing, minus the elbow grease. This cordless spin scrubber comes with 6 replaceable brush and pad heads for everything from grout to glass, dual speed settings, a battery level display, and IPX7 waterproof construction so it's safe to use right in the shower.",
+    "whyWeLikeIt": "One pass with this does what five minutes of hand-scrubbing used to — the dual speed setting means it's gentle enough for glass and strong enough for grout.",
+    "image": "/assets/images/products/puftem-electric-spin-scrubber.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": [
+      "spin scrubber",
+      "cleaning tool",
+      "cordless",
+      "bathroom cleaning",
+      "under 25"
+    ],
+    "highlights": [
+      "6 replaceable brush and pad heads",
+      "Dual speed settings",
+      "IPX7 waterproof",
+      "Battery level display"
+    ],
+    "affiliateUrl": "https://amzn.to/4A1kddV",
+    "externalUrl": "https://www.amazon.com/dp/B0D4YZY511?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-08T02:00:00.000Z",
+    "updatedAt": "2026-09-08T02:00:00.000Z"
   }
 ]
