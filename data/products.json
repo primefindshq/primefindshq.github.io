@@ -1096,5 +1096,41 @@
     "published": true,
     "createdAt": "2026-09-08T02:30:00.000Z",
     "updatedAt": "2026-09-08T02:30:00.000Z"
+  },
+  {
+    "id": "prd-0066",
+    "name": "LISEN Height-Adjustable Aluminum Phone Stand",
+    "slug": "lisen-adjustable-phone-stand",
+    "category": "desk-setup",
+    "subcategory": "Accessories",
+    "shortDescription": "An aluminum desk stand with adjustable height and angle, compatible with phones and tablets.",
+    "description": "A steadier way to prop up a screen. This aluminum stand telescopes to the height you want and tilts to the angle you need, with a sturdy wide base and a secure clip that holds anything from a phone to a full-size tablet.",
+    "whyWeLikeIt": "The aluminum build makes it feel like a real desk fixture, not a flimsy accessory — it holds an iPad steady without wobbling.",
+    "image": "/assets/images/products/lisen-adjustable-phone-stand.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": [
+      "phone stand",
+      "tablet stand",
+      "desk accessory",
+      "aluminum",
+      "desk setup"
+    ],
+    "highlights": [
+      "Adjustable height and viewing angle",
+      "Aluminum construction",
+      "Wide, stable base",
+      "Compatible with phones and tablets"
+    ],
+    "affiliateUrl": "https://amzn.to/4xaLOXq",
+    "externalUrl": "https://www.amazon.com/dp/B07Z82895W?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-08T03:00:00.000Z",
+    "updatedAt": "2026-09-08T03:00:00.000Z"
   }
 ]
