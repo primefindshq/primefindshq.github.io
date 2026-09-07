@@ -898,5 +898,41 @@
     "published": true,
     "createdAt": "2026-09-07T20:00:00.000Z",
     "updatedAt": "2026-09-07T20:00:00.000Z"
+  },
+  {
+    "id": "prd-0056",
+    "name": "EUHOMY Countertop Ice Maker",
+    "slug": "euhomy-countertop-ice-maker",
+    "category": "home",
+    "subcategory": "Kitchen",
+    "shortDescription": "A compact countertop ice maker that produces fresh ice on demand.",
+    "description": "Fresh ice in under 6 minutes. This countertop ice maker turns out up to 26 lbs of bullet-shaped ice a day, with auto-cleaning and a carrying handle that makes it as easy to bring to the RV or the patio as it is to leave on the counter.",
+    "whyWeLikeIt": "Nine ice cubes in six minutes means it's basically always ready before the drink is.",
+    "image": "/assets/images/products/euhomy-countertop-ice-maker.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": [
+      "ice maker",
+      "countertop appliance",
+      "kitchen gadget",
+      "portable",
+      "home"
+    ],
+    "highlights": [
+      "9 ice cubes ready in 6 minutes, up to 26 lbs per day",
+      "Auto-cleaning function",
+      "Portable with built-in carrying handle",
+      "Includes ice basket and scoop"
+    ],
+    "affiliateUrl": "https://amzn.to/4xij67b",
+    "externalUrl": "https://www.amazon.com/dp/B0BWHZJHPL?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-07T21:00:00.000Z",
+    "updatedAt": "2026-09-07T21:00:00.000Z"
   }
 ]
