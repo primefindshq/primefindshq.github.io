@@ -916,5 +916,41 @@
     "published": true,
     "createdAt": "2026-09-08T00:00:00.000Z",
     "updatedAt": "2026-09-08T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0061",
+    "name": "Divoom Ditoo Retro Pixel Art Bluetooth Speaker",
+    "slug": "divoom-ditoo-pixel-art-speaker",
+    "category": "desk-setup",
+    "subcategory": "Audio & Fun",
+    "shortDescription": "A retro-styled Bluetooth speaker with an app-controlled 16x16 LED pixel art display and built-in mini games.",
+    "description": "A desk speaker that's also a canvas. The Divoom Ditoo pairs a 15W Bluetooth speaker with a 16x16 LED front screen you can fill with pixel art, animations, or an alarm clock face via the companion app, plus built-in mini games and a white noise mode for focus or wind-down.",
+    "whyWeLikeIt": "It's the rare desk gadget that's actually fun to look at — a different pixel scene every day means your desk never looks the same way twice.",
+    "image": "/assets/images/products/divoom-ditoo-pixel-art-speaker.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": [
+      "bluetooth speaker",
+      "pixel art",
+      "desk gadget",
+      "retro",
+      "desk setup"
+    ],
+    "highlights": [
+      "15W Bluetooth speaker",
+      "16x16 LED app-controlled pixel display",
+      "Built-in alarm clock and white noise modes",
+      "Mini games playable on the front screen"
+    ],
+    "affiliateUrl": "https://amzn.to/4im6KHv",
+    "externalUrl": "https://www.amazon.com/dp/B07YWWYK86?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-08T00:30:00.000Z",
+    "updatedAt": "2026-09-08T00:30:00.000Z"
   }
 ]
