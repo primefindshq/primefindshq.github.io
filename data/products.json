@@ -808,5 +808,41 @@
     "published": true,
     "createdAt": "2026-09-07T22:00:00.000Z",
     "updatedAt": "2026-09-07T22:00:00.000Z"
+  },
+  {
+    "id": "prd-0058",
+    "name": "TranquilRelax Under-Desk Foot Rest, 3-Height Adjustable",
+    "slug": "tranquilrelax-under-desk-footrest",
+    "category": "gaming",
+    "subcategory": "Comfort & Ergonomics",
+    "shortDescription": "A supportive under-desk footrest that keeps your legs comfortable through long gaming sessions.",
+    "description": "Game in comfort. This 3-height adjustable foot rest gives your legs proper support during marathon sessions, with a machine-washable cover and a non-slip base that stays put under a gaming desk, office desk, or car footwell.",
+    "whyWeLikeIt": "The kind of upgrade you don't notice until it's missing — your legs stop fidgeting and your setup instantly feels more dialed-in.",
+    "image": "/assets/images/products/tranquilrelax-under-desk-footrest.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": [
+      "footrest",
+      "ergonomics",
+      "under desk",
+      "comfort",
+      "gaming setup"
+    ],
+    "highlights": [
+      "3-height adjustable design",
+      "Machine-washable cover",
+      "Non-slip base",
+      "Great for gaming, office, or car use"
+    ],
+    "affiliateUrl": "https://amzn.to/46LER4m",
+    "externalUrl": "https://www.amazon.com/dp/B0DK4HP264?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-07T23:00:00.000Z",
+    "updatedAt": "2026-09-07T23:00:00.000Z"
   }
 ]
