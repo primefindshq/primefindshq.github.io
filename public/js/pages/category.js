@@ -2,7 +2,7 @@
 // The initial grid markup is server-rendered (SEO baseline); this script
 // re-renders the grid client-side from the full in-memory product list
 // whenever the visitor changes a control.
-import { getProducts, filterProducts, searchProducts, sortProducts } from '../core/store.js';
+import { getProducts, getProductsByCategory, filterProducts, searchProducts, sortProducts } from '../core/store.js';
 import { hydrateAffiliateLinks } from '../core/affiliate.js';
 import { productCardMarkup } from '../components/productCard.js';
 import { debounce, qs, qsa } from '../core/utils.js';
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const clearBtn = qs('[data-filters-clear]', app);
 
   const allProducts = await getProducts();
-  const categoryProducts = allProducts.filter((p) => p.category === categorySlug);
+  const categoryProducts = await getProductsByCategory(categorySlug);
   const bySlug = new Map(allProducts.map((p) => [p.slug, p]));
 
   track(EVENTS.CATEGORY_VIEW, { category: categorySlug, productCount: categoryProducts.length });

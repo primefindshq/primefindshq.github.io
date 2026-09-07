@@ -1402,5 +1402,44 @@
     "published": true,
     "createdAt": "2026-09-08T04:30:00.000Z",
     "updatedAt": "2026-09-08T04:30:00.000Z"
+  },
+  {
+    "id": "prd-0070",
+    "name": "Innqoo Dimmable Candle Warmer Lamp",
+    "slug": "innqoo-candle-warmer-lamp",
+    "category": "home",
+    "secondaryCategories": [
+      "gifts"
+    ],
+    "subcategory": "Ambience",
+    "shortDescription": "A height-adjustable candle warmer lamp that melts jar candles from above, with a dimmable timer.",
+    "description": "All the scent, none of the open flame. This lamp warms jar candles and wax melts from above instead of burning a wick, with adjustable height, dimmable brightness, and a built-in timer \u2014 a cozy, flameless glow for a nightstand, shelf, or gift table.",
+    "whyWeLikeIt": "It's a genuinely thoughtful gift \u2014 flameless means it fits dorms, offices, and anywhere an open flame isn't allowed, without giving up the ritual of a lit candle.",
+    "image": "/assets/images/products/innqoo-candle-warmer-lamp.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": [
+      "candle warmer",
+      "flameless candle",
+      "home decor",
+      "gift",
+      "ambience"
+    ],
+    "highlights": [
+      "Warms candles and wax melts flameless from above",
+      "Height adjustable",
+      "Dimmable brightness with built-in timer",
+      "Fits standard jar candles"
+    ],
+    "affiliateUrl": "https://amzn.to/4x5yEeh",
+    "externalUrl": "https://www.amazon.com/dp/B0DZFGTCLR?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-08T05:00:00.000Z",
+    "updatedAt": "2026-09-08T05:00:00.000Z"
   }
 ]

@@ -45,15 +45,24 @@ export async function getCategoryBySlug(slug) {
   return categories.find((c) => c.slug === slug) || null;
 }
 
+/** A product belongs to its primary category plus any listed secondaryCategories --
+ * lets one product (e.g. a candle warmer that's both home decor and a gift) surface
+ * in more than one category grid without duplicating the product entry. */
+function isInCategory(product, categorySlug) {
+  return product.category === categorySlug || (product.secondaryCategories || []).includes(categorySlug);
+}
+
 export async function getProductsByCategory(categorySlug) {
   const products = await getProducts();
-  return products.filter((p) => p.category === categorySlug);
+  return products.filter((p) => isInCategory(p, categorySlug));
 }
 
 export async function getCategoryCounts() {
   const products = await getProducts();
   const counts = {};
-  for (const p of products) counts[p.category] = (counts[p.category] || 0) + 1;
+  for (const p of products) {
+    for (const slug of [p.category, ...(p.secondaryCategories || [])]) counts[slug] = (counts[slug] || 0) + 1;
+  }
   return counts;
 }
 
@@ -118,7 +127,7 @@ export function searchProducts(products, query) {
 /** Apply the shared filter set used on category pages. */
 export function filterProducts(products, filters) {
   return products.filter((p) => {
-    if (filters.categories?.length && !filters.categories.includes(p.category)) return false;
+    if (filters.categories?.length && !filters.categories.some((c) => isInCategory(p, c))) return false;
     // a product with no confirmed price can't be verified against a price filter, so it's excluded
     // rather than guessed at when one is active (it still shows normally with no filter applied).
     if (filters.minPrice != null && (p.price == null || p.price < filters.minPrice)) return false;

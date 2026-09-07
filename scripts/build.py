@@ -94,6 +94,13 @@ def category_label(slug):
     return slug.replace("-", " ")
 
 
+def product_in_category(product, category_slug):
+    """A product belongs to its primary category plus any listed secondaryCategories --
+    lets one product (e.g. a candle warmer that's both home decor and a gift) surface
+    in more than one category grid without duplicating the product entry."""
+    return product["category"] == category_slug or category_slug in product.get("secondaryCategories", [])
+
+
 # --------------------------------------------------------------------------
 # Shared chrome: header, mobile menu, search overlay, footer
 # --------------------------------------------------------------------------
@@ -790,7 +797,8 @@ def main():
     published = [p for p in products if p.get("published")]
     counts = {}
     for p in published:
-        counts[p["category"]] = counts.get(p["category"], 0) + 1
+        for slug in [p["category"], *p.get("secondaryCategories", [])]:
+            counts[slug] = counts.get(slug, 0) + 1
 
     # ---- Client-side data snapshot (mirrors a future public API response) ----
     write_file(os.path.join(PUBLIC_DIR, "data", "products.json"), json.dumps(published, indent=2))
@@ -801,7 +809,7 @@ def main():
 
     # ---- Category pages ----
     for category in categories:
-        cat_products = [p for p in published if p["category"] == category["slug"]]
+        cat_products = [p for p in published if product_in_category(p, category["slug"])]
         write_file(
             os.path.join(PUBLIC_DIR, "category", category["slug"], "index.html"),
             render_category_page(site, category, categories, cat_products),
