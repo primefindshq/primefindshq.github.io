@@ -1496,5 +1496,42 @@
     "published": true,
     "createdAt": "2026-09-08T08:00:00.000Z",
     "updatedAt": "2026-09-08T08:00:00.000Z"
+  },
+  {
+    "id": "prd-0077",
+    "name": "BAGSMART Hanging Jewelry Organizer",
+    "slug": "bagsmart-hanging-jewelry-organizer",
+    "category": "travel",
+    "secondaryCategories": ["gifts"],
+    "subcategory": "Organization",
+    "shortDescription": "A 2-sided hanging jewelry case with clear pockets for rings and earrings, plus loops for necklaces.",
+    "description": "Jewelry that stays untangled, wherever it goes. This 2-sided case hangs from its own hook, with clear pockets on one side for rings, earrings, and bracelets, and elastic loops on the other for necklaces — rolls up compact for a suitcase or hangs flat in a closet.",
+    "whyWeLikeIt": "The necklace loops are the real win — no more spending the first morning of a trip untangling chains.",
+    "image": "/assets/images/products/bagsmart-hanging-jewelry-organizer.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": [
+      "jewelry organizer",
+      "travel accessory",
+      "necklace holder",
+      "jewelry case",
+      "gift"
+    ],
+    "highlights": [
+      "2-sided design: clear pockets plus necklace loops",
+      "Built-in hanging hook",
+      "Rolls up for travel or hangs flat in a closet",
+      "Holds rings, earrings, bracelets, and necklaces"
+    ],
+    "affiliateUrl": "https://amzn.to/4herJL8",
+    "externalUrl": "https://www.amazon.com/dp/B09XMJNL8R?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-08T08:30:00.000Z",
+    "updatedAt": "2026-09-08T08:30:00.000Z"
   }
 ]
