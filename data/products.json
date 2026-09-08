@@ -1898,5 +1898,42 @@
     "published": true,
     "createdAt": "2026-09-08T13:30:00.000Z",
     "updatedAt": "2026-09-08T13:30:00.000Z"
+  },
+  {
+    "id": "prd-0088",
+    "name": "Veken Stainless Steel French Press",
+    "slug": "veken-stainless-steel-french-press",
+    "category": "home",
+    "secondaryCategories": ["gifts"],
+    "subcategory": "Kitchen",
+    "shortDescription": "A 34oz stainless steel French press with thickened borosilicate glass and a no-plastic-touching design.",
+    "description": "Coffee, without the plastic aftertaste. This 34oz French press pairs thickened borosilicate glass with a stainless steel frame, built so nothing plastic touches the brew — equally at home making coffee, cold brew, or tea in the kitchen or packed for a trip.",
+    "whyWeLikeIt": "No-plastic-touching sounds like a small detail until you taste the difference — this is what a French press is supposed to taste like.",
+    "image": "/assets/images/products/veken-stainless-steel-french-press.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": [
+      "french press",
+      "coffee maker",
+      "cold brew",
+      "stainless steel",
+      "kitchen"
+    ],
+    "highlights": [
+      "34oz (1L) capacity",
+      "Thickened borosilicate glass",
+      "No-plastic-touching brewing design",
+      "Works for coffee, cold brew, and tea"
+    ],
+    "affiliateUrl": "https://amzn.to/4gTZUX3",
+    "externalUrl": "https://www.amazon.com/dp/B0FDQJFRYS?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-08T14:00:00.000Z",
+    "updatedAt": "2026-09-08T14:00:00.000Z"
   }
 ]
