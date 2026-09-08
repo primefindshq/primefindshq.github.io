@@ -1824,5 +1824,42 @@
     "published": true,
     "createdAt": "2026-09-08T12:30:00.000Z",
     "updatedAt": "2026-09-08T12:30:00.000Z"
+  },
+  {
+    "id": "prd-0086",
+    "name": "Cisily Sink Sponge & Brush Holder Organizer",
+    "slug": "cisily-sink-sponge-holder-organizer",
+    "category": "home",
+    "secondaryCategories": ["gifts"],
+    "subcategory": "Kitchen",
+    "shortDescription": "A rustproof stainless steel sink caddy with a tall brush holder for sponges, brushes, and soap.",
+    "description": "The sink's junk drawer, finally organized. This 304 stainless steel caddy pairs a tall brush holder with a wide sponge tray, keeping scrub brushes, sponges, and soap upright and draining instead of pooling water on the counter.",
+    "whyWeLikeIt": "The tall brush holder is the detail most sink caddies skip — dish brushes actually stand up and dry instead of lying in a puddle.",
+    "image": "/assets/images/products/cisily-sink-sponge-holder-organizer.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": [
+      "sink organizer",
+      "sponge holder",
+      "kitchen caddy",
+      "stainless steel",
+      "kitchen"
+    ],
+    "highlights": [
+      "Rustproof 304 stainless steel",
+      "Tall brush holder plus sponge tray",
+      "Drains water away from the counter",
+      "9.25-inch compact footprint"
+    ],
+    "affiliateUrl": "https://amzn.to/4yMcoHV",
+    "externalUrl": "https://www.amazon.com/dp/B0C3QZ7SNF?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-08T13:00:00.000Z",
+    "updatedAt": "2026-09-08T13:00:00.000Z"
   }
 ]
