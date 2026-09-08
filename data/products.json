@@ -1313,5 +1313,42 @@
     "published": true,
     "createdAt": "2026-09-08T05:30:00.000Z",
     "updatedAt": "2026-09-08T05:30:00.000Z"
+  },
+  {
+    "id": "prd-0072",
+    "name": "YGSKK Mini Portable Projector with WiFi & Bluetooth",
+    "slug": "mini-portable-projector-bluetooth",
+    "category": "travel",
+    "secondaryCategories": ["home"],
+    "subcategory": "Travel Tech",
+    "shortDescription": "A pocket-sized 1080P projector with WiFi, Bluetooth, and built-in streaming apps for movies anywhere.",
+    "description": "A movie theater that fits in one hand. This compact 1080P projector connects over WiFi or Bluetooth, runs built-in streaming apps, and hooks up to a phone, laptop, TV stick, or game console — perfect for a hotel room, a backyard movie night, or a bedroom wall.",
+    "whyWeLikeIt": "It's genuinely small enough to travel with, but doesn't feel like a compromise — built-in apps mean no extra streaming stick to pack.",
+    "image": "/assets/images/products/mini-portable-projector-bluetooth.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": [
+      "mini projector",
+      "portable projector",
+      "bluetooth projector",
+      "home theater",
+      "travel tech"
+    ],
+    "highlights": [
+      "1080P video support",
+      "Built-in WiFi and Bluetooth",
+      "Built-in streaming apps",
+      "Connects to phone, laptop, TV stick, PS5, and more"
+    ],
+    "affiliateUrl": "https://amzn.to/3UXaWDG",
+    "externalUrl": "https://www.amazon.com/dp/B0F7RR3YC6?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-08T06:00:00.000Z",
+    "updatedAt": "2026-09-08T06:00:00.000Z"
   }
 ]
