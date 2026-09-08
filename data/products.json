@@ -1605,5 +1605,41 @@
     "published": true,
     "createdAt": "2026-09-08T09:30:00.000Z",
     "updatedAt": "2026-09-08T09:30:00.000Z"
+  },
+  {
+    "id": "prd-0080",
+    "name": "Seinloes Expandable Pull-Out Cabinet Organizer (2-Pack)",
+    "slug": "seinloes-expandable-cabinet-organizer",
+    "category": "home",
+    "subcategory": "Storage",
+    "shortDescription": "A 2-pack of expandable pull-out cabinet shelves, 21 inches deep, adjustable from 12 to 20.4 inches wide.",
+    "description": "Turn a dig-and-search cabinet into a pull-and-see one. This 2-pack of roll-out shelves adjusts from 12.05 to 20.4 inches wide with 3 slide rails, giving pots, pans, and lids their own drawer instead of a stack that always topples.",
+    "whyWeLikeIt": "Adjustable width means it actually fits the cabinet you have — no returning it because your cabinet was two inches off spec.",
+    "image": "/assets/images/products/seinloes-expandable-cabinet-organizer.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": [
+      "cabinet organizer",
+      "pull out shelf",
+      "kitchen storage",
+      "pot organizer",
+      "storage"
+    ],
+    "highlights": [
+      "2-pack, 21 inches deep",
+      "Adjustable width, 12.05\" to 20.4\"",
+      "3 slide rails for smooth roll-out",
+      "Fits framed cabinets with included raising pad"
+    ],
+    "affiliateUrl": "https://amzn.to/4x9iqAV",
+    "externalUrl": "https://www.amazon.com/dp/B0D3LL3VFX?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-08T10:00:00.000Z",
+    "updatedAt": "2026-09-08T10:00:00.000Z"
   }
 ]
