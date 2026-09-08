@@ -1677,5 +1677,41 @@
     "published": true,
     "createdAt": "2026-09-08T10:30:00.000Z",
     "updatedAt": "2026-09-08T10:30:00.000Z"
+  },
+  {
+    "id": "prd-0082",
+    "name": "EUDELE Adhesive Bathroom Organizer (5-Pack)",
+    "slug": "eudele-adhesive-bathroom-organizer",
+    "category": "home",
+    "subcategory": "Storage",
+    "shortDescription": "A 5-pack of no-drill adhesive stainless steel shower caddies and organizers for bathroom storage.",
+    "description": "Real storage, zero holes in the tile. This 5-piece set of rustproof stainless steel caddies mounts with adhesive alone, giving shampoo bottles, toothbrushes, towels, and soap their own dedicated shelf without a single drill hole.",
+    "whyWeLikeIt": "No-drill adhesive mounting is the whole appeal — a rental-friendly bathroom upgrade that comes back off clean if you move.",
+    "image": "/assets/images/products/eudele-adhesive-bathroom-organizer.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": [
+      "bathroom organizer",
+      "shower caddy",
+      "no drill",
+      "stainless steel",
+      "storage"
+    ],
+    "highlights": [
+      "5-piece organizer set",
+      "No-drill adhesive mounting",
+      "Rustproof stainless steel",
+      "Large capacity shelving"
+    ],
+    "affiliateUrl": "https://amzn.to/4r0bpB3",
+    "externalUrl": "https://www.amazon.com/dp/B0BLSCY6PR?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-08T11:00:00.000Z",
+    "updatedAt": "2026-09-08T11:00:00.000Z"
   }
 ]
