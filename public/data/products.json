@@ -1925,5 +1925,44 @@
     "published": true,
     "createdAt": "2026-09-08T11:30:00.000Z",
     "updatedAt": "2026-09-08T11:30:00.000Z"
+  },
+  {
+    "id": "prd-0084",
+    "name": "Circle Joy Gravity Electric Salt & Pepper Grinder Set",
+    "slug": "circle-joy-electric-salt-pepper-grinder",
+    "category": "home",
+    "secondaryCategories": [
+      "gifts"
+    ],
+    "subcategory": "Kitchen",
+    "shortDescription": "A gravity-activated electric salt and pepper grinder set with LED light and adjustable coarseness.",
+    "description": "Grinding, automated. Just tilt this set and gravity triggers the grind \u2014 no squeezing or twisting \u2014 with an LED light for seasoning in dim kitchens, adjustable coarseness, and an upgraded large-capacity chamber.",
+    "whyWeLikeIt": "The gravity trigger is the whole trick \u2014 tilt, grind, set down, and it's already stopped by the time it's back on the table.",
+    "image": "/assets/images/products/circle-joy-electric-salt-pepper-grinder.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": [
+      "salt and pepper grinder",
+      "electric grinder",
+      "kitchen gadget",
+      "gift",
+      "kitchen"
+    ],
+    "highlights": [
+      "Gravity-activated, automatic grinding",
+      "Built-in LED light",
+      "Adjustable coarseness",
+      "Upgraded large capacity chamber"
+    ],
+    "affiliateUrl": "https://amzn.to/4dl6t3V",
+    "externalUrl": "https://www.amazon.com/dp/B0DFY5TNFX?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-08T12:00:00.000Z",
+    "updatedAt": "2026-09-08T12:00:00.000Z"
   }
 ]
