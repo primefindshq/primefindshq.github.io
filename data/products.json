@@ -1460,5 +1460,41 @@
     "published": true,
     "createdAt": "2026-09-08T07:30:00.000Z",
     "updatedAt": "2026-09-08T07:30:00.000Z"
+  },
+  {
+    "id": "prd-0076",
+    "name": "Univivi No-Drill Under Desk Cable Management Tray",
+    "slug": "univivi-under-desk-cable-management-tray",
+    "category": "desk-setup",
+    "subcategory": "Accessories",
+    "shortDescription": "A 36-inch no-drill fabric cable tray that clamps under the desk to hide power strips and cords.",
+    "description": "Every cable, out of sight. This 36-inch fabric tray clamps or screws under the desk with no drilling required, holding a power strip and the tangle of cords behind it so the desktop and the floor both stay clear.",
+    "whyWeLikeIt": "No-drill clamp mounting means it goes on a rented desk or a standing desk just as easily as a permanent one.",
+    "image": "/assets/images/products/univivi-under-desk-cable-management-tray.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": [
+      "cable management",
+      "cable tray",
+      "desk organizer",
+      "cord organizer",
+      "desk setup"
+    ],
+    "highlights": [
+      "36-inch fabric cable tray",
+      "No-drill clamp or screw mounting",
+      "Large capacity for a power strip and cords",
+      "Includes cable ties"
+    ],
+    "affiliateUrl": "https://amzn.to/468p2EN",
+    "externalUrl": "https://www.amazon.com/dp/B0DK13ZHNJ?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-08T08:00:00.000Z",
+    "updatedAt": "2026-09-08T08:00:00.000Z"
   }
 ]
