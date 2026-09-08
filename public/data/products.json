@@ -1591,5 +1591,45 @@
     "published": true,
     "createdAt": "2026-09-08T07:00:00.000Z",
     "updatedAt": "2026-09-08T07:00:00.000Z"
+  },
+  {
+    "id": "prd-0075",
+    "name": "Daymeet RGB LED TV Backlight",
+    "slug": "daymeet-tv-led-backlight",
+    "category": "home",
+    "secondaryCategories": [
+      "desk-setup",
+      "gifts"
+    ],
+    "subcategory": "Lighting",
+    "shortDescription": "A 9.8ft RGB LED TV backlight with Bluetooth app control and music sync, for TVs 32-43 inches.",
+    "description": "Instant ambient upgrade behind any screen. This 9.8-foot RGB strip wraps around a 32-43 inch TV, syncing color changes to music and controllable by Bluetooth app or included remote \u2014 USB powered, no extra outlet needed.",
+    "whyWeLikeIt": "The music-sync mode is what makes it stick \u2014 colors pulse with whatever's playing instead of just cycling on a timer.",
+    "image": "/assets/images/products/daymeet-tv-led-backlight.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": [
+      "led backlight",
+      "tv led strip",
+      "rgb lighting",
+      "bluetooth app control",
+      "desk setup"
+    ],
+    "highlights": [
+      "9.8ft RGB LED strip",
+      "Fits 32-43 inch TVs",
+      "Bluetooth app and remote control",
+      "Syncs color changes to music"
+    ],
+    "affiliateUrl": "https://amzn.to/3SWmB4Z",
+    "externalUrl": "https://www.amazon.com/dp/B098DVZZDQ?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-08T07:30:00.000Z",
+    "updatedAt": "2026-09-08T07:30:00.000Z"
   }
 ]
