@@ -1706,5 +1706,41 @@
     "published": true,
     "createdAt": "2026-09-08T08:30:00.000Z",
     "updatedAt": "2026-09-08T08:30:00.000Z"
+  },
+  {
+    "id": "prd-0078",
+    "name": "Pritent Convertible Crossbody Sling Bag",
+    "slug": "pritent-convertible-crossbody-bag",
+    "category": "travel",
+    "subcategory": "Bags",
+    "shortDescription": "A crossbody sling bag with a convertible shoulder strap and 2 side mesh pockets, for travel and hiking.",
+    "description": "One bag, either shoulder. This sling backpack switches from crossbody to shoulder carry with a convertible strap, with 2 side mesh pockets for a water bottle or quick-grab items \u2014 sized to stay light on a hike, a day of sightseeing, or a flight.",
+    "whyWeLikeIt": "The convertible strap actually gets used \u2014 swap sides through a long travel day instead of one shoulder doing all the work.",
+    "image": "/assets/images/products/pritent-convertible-crossbody-bag.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": [
+      "crossbody bag",
+      "sling bag",
+      "travel bag",
+      "hiking bag",
+      "travel accessory"
+    ],
+    "highlights": [
+      "Convertible shoulder strap",
+      "2 side mesh pockets",
+      "Lightweight, casual design",
+      "Suitable for travel, hiking, and daily use"
+    ],
+    "affiliateUrl": "https://amzn.to/4d7HPnn",
+    "externalUrl": "https://www.amazon.com/dp/B0CJFN2HJK?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-08T09:00:00.000Z",
+    "updatedAt": "2026-09-08T09:00:00.000Z"
   }
 ]
