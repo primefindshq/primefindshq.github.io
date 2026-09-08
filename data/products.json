@@ -1787,5 +1787,42 @@
     "published": true,
     "createdAt": "2026-09-08T12:00:00.000Z",
     "updatedAt": "2026-09-08T12:00:00.000Z"
+  },
+  {
+    "id": "prd-0085",
+    "name": "DEKOPRO 126-Piece Home Tool Set with 8V Cordless Drill",
+    "slug": "dekopro-126pc-home-tool-set",
+    "category": "home",
+    "secondaryCategories": ["gifts"],
+    "subcategory": "Tools & Repair",
+    "shortDescription": "A 126-piece home tool kit with an 8V cordless drill, hand tools, and hardware, in a carrying case.",
+    "description": "One case, every basic repair covered. This 126-piece set pairs an 8V cordless drill with screwdrivers, pliers, a hammer, an adjustable wrench, a bit and socket set, and a tape measure — all organized in a carrying case built for a closet shelf or a car trunk.",
+    "whyWeLikeIt": "It's the kit that actually gets used — a real cordless drill alongside the hand tools, not just a box of screwdrivers calling itself a tool set.",
+    "image": "/assets/images/products/dekopro-126pc-home-tool-set.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": [
+      "tool set",
+      "cordless drill",
+      "home repair",
+      "tool kit",
+      "gift"
+    ],
+    "highlights": [
+      "126 pieces including an 8V cordless drill",
+      "Hammer, pliers, adjustable wrench included",
+      "Bit and socket set plus tape measure",
+      "Organized carrying case"
+    ],
+    "affiliateUrl": "https://amzn.to/4zYQC53",
+    "externalUrl": "https://www.amazon.com/dp/B0D2VRS76D?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-08T12:30:00.000Z",
+    "updatedAt": "2026-09-08T12:30:00.000Z"
   }
 ]
