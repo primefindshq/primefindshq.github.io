@@ -1555,5 +1555,41 @@
     "published": true,
     "createdAt": "2026-09-08T06:30:00.000Z",
     "updatedAt": "2026-09-08T06:30:00.000Z"
+  },
+  {
+    "id": "prd-0074",
+    "name": "3-in-1 Under Desk Headphone & Controller Hanger",
+    "slug": "under-desk-headphone-controller-hanger",
+    "category": "desk-setup",
+    "subcategory": "Gaming Accessories",
+    "shortDescription": "A clamp-mounted under-desk hanger with 2 controller slots, a headset holder, and a cable organizer.",
+    "description": "Clear the desk without losing the setup. This clamp-mounted hanger tucks under the desk edge with 2 rotatable controller slots, a universal headset holder, and built-in cable organizing \u2014 keeping an Xbox or PS5 controller and headset within reach but off the desktop.",
+    "whyWeLikeIt": "The rotatable slots are the detail that makes it work \u2014 controllers hang secure at any angle instead of sliding off a flat hook.",
+    "image": "/assets/images/products/under-desk-headphone-controller-hanger.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": [
+      "controller holder",
+      "headphone hanger",
+      "cable organizer",
+      "gaming desk accessory",
+      "desk setup"
+    ],
+    "highlights": [
+      "2 rotatable controller slots",
+      "Universal headset holder",
+      "Adjustable clamp mount, no tools required",
+      "Built-in cable organizer"
+    ],
+    "affiliateUrl": "https://amzn.to/3STCvNt",
+    "externalUrl": "https://www.amazon.com/dp/B0DN1WK7JW?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-08T07:00:00.000Z",
+    "updatedAt": "2026-09-08T07:00:00.000Z"
   }
 ]
