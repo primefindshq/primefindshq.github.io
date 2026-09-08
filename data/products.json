@@ -1350,5 +1350,42 @@
     "published": true,
     "createdAt": "2026-09-08T06:00:00.000Z",
     "updatedAt": "2026-09-08T06:00:00.000Z"
+  },
+  {
+    "id": "prd-0073",
+    "name": "Smirly Bamboo Charcuterie & Cheese Board Set",
+    "slug": "smirly-cheeseboard-charcuterie-set",
+    "category": "home",
+    "secondaryCategories": ["gifts"],
+    "subcategory": "Kitchen",
+    "shortDescription": "A bamboo charcuterie board with a slide-out drawer of cheese knives, dip bowls, and a fruit board.",
+    "description": "Everything a good spread needs, in one board. This bamboo charcuterie set has a slide-out drawer holding 4 cheese knives and 2 ceramic dip bowls, plus a separate divided board for fruit — all arriving in gift-ready packaging.",
+    "whyWeLikeIt": "The slide-out drawer is the detail that sells it — knives and bowls stay tucked away and organized instead of rattling around a kitchen drawer.",
+    "image": "/assets/images/products/smirly-cheeseboard-charcuterie-set.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": [
+      "charcuterie board",
+      "cheese board",
+      "bamboo",
+      "gift",
+      "kitchen"
+    ],
+    "highlights": [
+      "Bamboo construction",
+      "Slide-out drawer with 4 cheese knives",
+      "2 ceramic dip bowls included",
+      "Separate divided fruit board included"
+    ],
+    "affiliateUrl": "https://amzn.to/4d2gJxW",
+    "externalUrl": "https://www.amazon.com/dp/B07DL7ZV31?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-08T06:30:00.000Z",
+    "updatedAt": "2026-09-08T06:30:00.000Z"
   }
 ]
