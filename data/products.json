@@ -1641,5 +1641,41 @@
     "published": true,
     "createdAt": "2026-09-08T10:00:00.000Z",
     "updatedAt": "2026-09-08T10:00:00.000Z"
+  },
+  {
+    "id": "prd-0081",
+    "name": "7 code 2-Tier Dish Drying Rack",
+    "slug": "7code-2tier-dish-drying-rack",
+    "category": "home",
+    "subcategory": "Kitchen",
+    "shortDescription": "A detachable 2-tier dish rack with auto drain, cup and utensil holders, for large-capacity counter drying.",
+    "description": "A drying rack that actually holds a full sink's worth of dishes. This 2-tier rack detaches for easy cleaning, with an auto drain system, built-in cup and utensil holders, and anti-rust construction sized for a real kitchen counter.",
+    "whyWeLikeIt": "The two tiers make the difference — plates and bowls up top, cups and cutlery organized below, instead of one crowded pile.",
+    "image": "/assets/images/products/7code-2tier-dish-drying-rack.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": [
+      "dish rack",
+      "dish drying rack",
+      "kitchen organizer",
+      "counter storage",
+      "kitchen"
+    ],
+    "highlights": [
+      "2-tier, large capacity design",
+      "Detachable for easy cleaning",
+      "Auto drain system",
+      "Built-in cup and utensil holders, anti-rust"
+    ],
+    "affiliateUrl": "https://amzn.to/4A3gLzt",
+    "externalUrl": "https://www.amazon.com/dp/B0B3QTRP8X?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-08T10:30:00.000Z",
+    "updatedAt": "2026-09-08T10:30:00.000Z"
   }
 ]
