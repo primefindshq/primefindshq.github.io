@@ -1886,5 +1886,44 @@
     "published": true,
     "createdAt": "2026-09-08T11:00:00.000Z",
     "updatedAt": "2026-09-08T11:00:00.000Z"
+  },
+  {
+    "id": "prd-0083",
+    "name": "Royal Craft Wood Expandable Bathtub Caddy Tray",
+    "slug": "royal-craft-wood-bathtub-caddy-tray",
+    "category": "home",
+    "secondaryCategories": [
+      "gifts"
+    ],
+    "subcategory": "Ambience",
+    "shortDescription": "An expandable, foldable wood bathtub tray with slots for a wine glass, candle, book, and tablet.",
+    "description": "A proper bath deserves a proper setup. This foldable wood caddy expands to fit most bathtubs, with built-in slots for a wine glass and candle, a stand for a book or tablet, and space for whatever else turns a bath into an actual break.",
+    "whyWeLikeIt": "Everything has its slot \u2014 the wine glass holder alone turns a bath from 'careful not to spill' into actually relaxing.",
+    "image": "/assets/images/products/royal-craft-wood-bathtub-caddy-tray.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": [
+      "bathtub tray",
+      "bath caddy",
+      "wood tray",
+      "self care",
+      "gift"
+    ],
+    "highlights": [
+      "Expandable, foldable design fits most bathtubs",
+      "Built-in wine glass and candle slots",
+      "Book or tablet stand included",
+      "Wood construction"
+    ],
+    "affiliateUrl": "https://amzn.to/4ywzQJ3",
+    "externalUrl": "https://www.amazon.com/dp/B0HBRBKVNM?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-08T11:30:00.000Z",
+    "updatedAt": "2026-09-08T11:30:00.000Z"
   }
 ]
