@@ -2042,5 +2042,44 @@
     "published": true,
     "createdAt": "2026-09-08T13:00:00.000Z",
     "updatedAt": "2026-09-08T13:00:00.000Z"
+  },
+  {
+    "id": "prd-0087",
+    "name": "Hamilton Beach 3-Cup Mini Food Processor",
+    "slug": "hamilton-beach-mini-food-processor",
+    "category": "home",
+    "secondaryCategories": [
+      "gifts"
+    ],
+    "subcategory": "Kitchen",
+    "shortDescription": "A 350-watt electric mini food processor with stainless steel blades for dicing, mincing, and puree.",
+    "description": "Chopping, minus the knife work. This 3-cup electric processor dices, minces, and purees at the press of a button, with a simple stack-and-press design, 350 watts of power, and stainless steel blades \u2014 the whole thing is dishwasher safe when you're done.",
+    "whyWeLikeIt": "The stack-and-press design is genuinely one-handed \u2014 no lid to lock, no settings to figure out, just press and chop.",
+    "image": "/assets/images/products/hamilton-beach-mini-food-processor.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": [
+      "food processor",
+      "vegetable chopper",
+      "kitchen appliance",
+      "gift",
+      "kitchen"
+    ],
+    "highlights": [
+      "3-cup capacity, 350 watts",
+      "Stainless steel blades",
+      "Simple stack and press design",
+      "Dishwasher safe"
+    ],
+    "affiliateUrl": "https://amzn.to/4qXOaaI",
+    "externalUrl": "https://www.amazon.com/dp/B06Y2GZWCJ?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-08T13:30:00.000Z",
+    "updatedAt": "2026-09-08T13:30:00.000Z"
   }
 ]
