@@ -1742,5 +1742,41 @@
     "published": true,
     "createdAt": "2026-09-08T09:00:00.000Z",
     "updatedAt": "2026-09-08T09:00:00.000Z"
+  },
+  {
+    "id": "prd-0079",
+    "name": "Basic Concepts Airplane Foot Hammock",
+    "slug": "basic-concepts-travel-foot-hammock",
+    "category": "travel",
+    "subcategory": "Flight Essentials",
+    "shortDescription": "An adjustable foot hammock that hangs from the tray table to keep legs elevated on long flights.",
+    "description": "Long-haul legs, finally comfortable. This foot hammock straps to the tray table with adjustable buckles, letting you elevate and rest your feet mid-flight \u2014 packs down into its own drawstring bag for the overhead bin or a carry-on pocket.",
+    "whyWeLikeIt": "It's a five-dollar-sized fix for one of flying's biggest small discomforts \u2014 legs that never get to relax on a long flight.",
+    "image": "/assets/images/products/basic-concepts-travel-foot-hammock.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": [
+      "foot hammock",
+      "travel essentials",
+      "flight comfort",
+      "footrest",
+      "travel accessory"
+    ],
+    "highlights": [
+      "Adjustable straps with quick-release buckles",
+      "Attaches to the tray table",
+      "Packs into included drawstring bag",
+      "Lightweight for carry-on travel"
+    ],
+    "affiliateUrl": "https://amzn.to/4xiyIYq",
+    "externalUrl": "https://www.amazon.com/dp/B07SK6ZFLM?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-08T09:30:00.000Z",
+    "updatedAt": "2026-09-08T09:30:00.000Z"
   }
 ]
