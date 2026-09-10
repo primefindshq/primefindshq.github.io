@@ -2120,5 +2120,45 @@
     "published": true,
     "createdAt": "2026-09-08T14:00:00.000Z",
     "updatedAt": "2026-09-08T14:00:00.000Z"
+  },
+  {
+    "id": "prd-0089",
+    "name": "Northern Galaxy Aurora Star Projector",
+    "slug": "northern-galaxy-aurora-projector",
+    "category": "tech",
+    "secondaryCategories": [
+      "home",
+      "gifts"
+    ],
+    "subcategory": "Lighting & Displays",
+    "shortDescription": "A galaxy and aurora light projector with 33 light effects, Bluetooth speaker, and white noise.",
+    "description": "Turn a ceiling into a night sky. This projector layers swirling aurora waves over a starfield of drifting nebula clouds, with 33 light effects total, a remote control, a built-in Bluetooth speaker, and white noise sounds for a full sensory wind-down.",
+    "whyWeLikeIt": "It's the rare projector that's genuinely immersive from every angle in the room \u2014 the aurora waves alone make a plain ceiling feel like a planetarium.",
+    "image": "/assets/images/products/northern-galaxy-aurora-projector.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": [
+      "aurora projector",
+      "galaxy projector",
+      "star projector",
+      "bluetooth speaker",
+      "gift"
+    ],
+    "highlights": [
+      "33 light effects",
+      "Built-in Bluetooth speaker",
+      "Remote control included",
+      "White noise sounds"
+    ],
+    "affiliateUrl": "https://link.amazon/B0gLnZjgH",
+    "externalUrl": "https://www.amazon.com/dp/B0B4518KC2?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-11T00:00:00.000Z",
+    "updatedAt": "2026-09-11T00:00:00.000Z"
   }
 ]
