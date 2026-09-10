@@ -1972,5 +1972,42 @@
     "published": true,
     "createdAt": "2026-09-11T00:00:00.000Z",
     "updatedAt": "2026-09-11T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0090",
+    "name": "AI Smart Glasses with Camera & Real-Time Translation",
+    "slug": "ai-smart-glasses-camera-translation",
+    "category": "tech",
+    "secondaryCategories": ["travel", "gifts"],
+    "subcategory": "Wearables",
+    "shortDescription": "AI smart glasses with a 4K camera, real-time translation, an AI assistant, and open-ear Bluetooth audio.",
+    "description": "Everyday glasses with an AI layer built in. These smart glasses capture 4K photo and video hands-free, translate conversations in real time, recognize objects on request, and stream calls or audio through open-ear speakers — all through transparent lenses that look like a normal pair of frames.",
+    "whyWeLikeIt": "Real-time translation through a pair of glasses feels genuinely futuristic — no phone to hold up, just a conversation that happens to cross a language barrier.",
+    "image": "/assets/images/products/ai-smart-glasses-camera-translation.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": null,
+    "reviewCount": null,
+    "tags": [
+      "smart glasses",
+      "ai glasses",
+      "translation device",
+      "wearable camera",
+      "gift"
+    ],
+    "highlights": [
+      "4K photo and video capture",
+      "Real-time translation",
+      "Built-in AI assistant and object recognition",
+      "Open-ear speakers with Bluetooth calling"
+    ],
+    "affiliateUrl": "https://link.amazon/B03oVG83Y",
+    "externalUrl": "https://www.amazon.com/dp/B0GJ5LD7QL?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-11T00:30:00.000Z",
+    "updatedAt": "2026-09-11T00:30:00.000Z"
   }
 ]
