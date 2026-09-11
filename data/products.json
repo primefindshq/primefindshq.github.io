@@ -2083,5 +2083,42 @@
     "published": true,
     "createdAt": "2026-09-11T01:30:00.000Z",
     "updatedAt": "2026-09-11T01:30:00.000Z"
+  },
+  {
+    "id": "prd-0093",
+    "name": "ZOMAKE Lightweight Packable 30L Backpack",
+    "slug": "zomake-lightweight-packable-backpack",
+    "category": "travel",
+    "secondaryCategories": ["under-25"],
+    "subcategory": "Bags",
+    "shortDescription": "A 0.74lb packable 30L backpack that folds down to sandwich size for travel, hiking, and everyday carry.",
+    "description": "A full-size backpack that disappears into your luggage. At just 0.74lb, this 30L pack unfolds from a 10x8x3.55 inch pouch to a full 19x13x7 inch daypack, with a main compartment, inner divider, front and side pockets, and water-resistant tear-proof nylon for hiking, weekend trips, or a spare bag on the way home.",
+    "whyWeLikeIt": "It's the backpack you pack for the trip you might take — folds small enough to live in a suitcase pocket until the day you actually need a second bag.",
+    "image": "/assets/images/products/zomake-lightweight-packable-backpack.jpg",
+    "additionalImages": [],
+    "price": 19.79,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 16780,
+    "tags": [
+      "packable backpack",
+      "travel backpack",
+      "hiking daypack",
+      "foldable bag",
+      "under 25"
+    ],
+    "highlights": [
+      "Only 0.74lb, folds to sandwich size",
+      "30L capacity with layered storage",
+      "Water-resistant, tear-proof nylon",
+      "Safety whistle, bottle straps, reflective strips"
+    ],
+    "affiliateUrl": "https://link.amazon/B07AN82FM",
+    "externalUrl": "https://www.amazon.com/dp/B07C1LW9HP?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-11T02:00:00.000Z",
+    "updatedAt": "2026-09-11T02:00:00.000Z"
   }
 ]
