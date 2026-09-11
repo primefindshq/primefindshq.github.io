@@ -2120,5 +2120,42 @@
     "published": true,
     "createdAt": "2026-09-11T02:00:00.000Z",
     "updatedAt": "2026-09-11T02:00:00.000Z"
+  },
+  {
+    "id": "prd-0094",
+    "name": "CACOE Floatable Waterproof Phone Pouch (2-Pack)",
+    "slug": "cacoe-waterproof-phone-pouch",
+    "category": "travel",
+    "secondaryCategories": ["under-25"],
+    "subcategory": "Travel Tech",
+    "shortDescription": "A 2-pack of IPX8 waterproof, floating phone pouches with adjustable lanyards for phones up to 7 inches.",
+    "description": "Bring the phone into the water without the worry. This 2-pack of IPX8-certified pouches seals with a snap-and-lock clip rated to 30m, with four-sided airbags that keep the phone floating instead of sinking — TPU material stays touch-sensitive enough to shoot photos and video right through the case.",
+    "whyWeLikeIt": "The floating airbags are the detail that matters most — drop it off a kayak or a pool float and it bobs on the surface instead of disappearing.",
+    "image": "/assets/images/products/cacoe-waterproof-phone-pouch.jpg",
+    "additionalImages": [],
+    "price": 9.99,
+    "currency": "USD",
+    "rating": 4.5,
+    "reviewCount": 4618,
+    "tags": [
+      "waterproof phone case",
+      "floating phone pouch",
+      "dry bag",
+      "beach essentials",
+      "under 25"
+    ],
+    "highlights": [
+      "IPX8 certified, rated to 30m depth",
+      "Floats via four-sided airbags",
+      "Fits smartphones up to 7.0 inches",
+      "Touch-sensitive TPU, adjustable lanyard"
+    ],
+    "affiliateUrl": "https://link.amazon/B0cCdBTIr",
+    "externalUrl": "https://www.amazon.com/dp/B0BV6DF22F?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-11T02:30:00.000Z",
+    "updatedAt": "2026-09-11T02:30:00.000Z"
   }
 ]
