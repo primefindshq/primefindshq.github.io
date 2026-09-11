@@ -2239,5 +2239,44 @@
     "published": true,
     "createdAt": "2026-09-11T01:00:00.000Z",
     "updatedAt": "2026-09-11T01:00:00.000Z"
+  },
+  {
+    "id": "prd-0092",
+    "name": "LENRUE G11 RGB Desktop Computer Speakers",
+    "slug": "lenrue-g11-rgb-computer-speakers",
+    "category": "desk-setup",
+    "secondaryCategories": [
+      "gaming"
+    ],
+    "subcategory": "Audio & Fun",
+    "shortDescription": "Compact USB-powered desktop speakers with touch-controlled RGB lighting and USB-C/AUX connectivity.",
+    "description": "Sound and light for the whole desk. This compact soundbar connects over USB or USB-C with a 3.5mm AUX cable, driven by 4 built-in IC amplifiers for distortion-free stereo sound, with touch-controlled RGB lighting running the full length of the speaker for a dynamic gaming glow.",
+    "whyWeLikeIt": "The touch on/off for the lights is the nice detail \u2014 no fumbling for a tiny switch when you just want the glow off during a video call.",
+    "image": "/assets/images/products/lenrue-g11-rgb-computer-speakers.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.2,
+    "reviewCount": 5892,
+    "tags": [
+      "computer speakers",
+      "rgb speakers",
+      "gaming soundbar",
+      "usb speakers",
+      "desk setup"
+    ],
+    "highlights": [
+      "4 built-in IC amplifiers for distortion-free sound",
+      "Touch-controlled RGB lighting",
+      "USB / USB-C powered with 3.5mm AUX input",
+      "Compact, fits under any monitor"
+    ],
+    "affiliateUrl": "https://link.amazon/B0cID1Xva",
+    "externalUrl": "https://www.amazon.com/dp/B0BRFN13S9?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-11T01:30:00.000Z",
+    "updatedAt": "2026-09-11T01:30:00.000Z"
   }
 ]
