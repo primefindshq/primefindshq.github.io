@@ -2356,5 +2356,47 @@
     "published": true,
     "createdAt": "2026-09-11T02:30:00.000Z",
     "updatedAt": "2026-09-11T02:30:00.000Z"
+  },
+  {
+    "id": "prd-0095",
+    "name": "Govee 16.4ft RGBIC LED Strip Lights",
+    "slug": "govee-rgbic-led-strip-lights",
+    "category": "home",
+    "secondaryCategories": [
+      "gaming",
+      "desk-setup",
+      "gifts",
+      "under-25"
+    ],
+    "subcategory": "Lighting",
+    "shortDescription": "16.4ft RGBIC LED strip lights with app control, 16 million colors, and music sync mode.",
+    "description": "Multiple colors, one strip, at the same time. Unlike standard single-color RGB strips, this 16.4ft RGBIC strip displays several colors along its length at once, controlled through the Govee Home app with 16 million colors, 64+ preset scenes, and a music sync mode that reacts to sound through a built-in mic.",
+    "whyWeLikeIt": "Music sync is the feature that sells it \u2014 the strip actually reacts to what's playing instead of just cycling through colors on its own.",
+    "image": "/assets/images/products/govee-rgbic-led-strip-lights.jpg",
+    "additionalImages": [],
+    "price": 11.99,
+    "currency": "USD",
+    "rating": 4.4,
+    "reviewCount": 26347,
+    "tags": [
+      "led strip lights",
+      "rgbic lights",
+      "app controlled lighting",
+      "music sync lights",
+      "under 25"
+    ],
+    "highlights": [
+      "16.4ft, multiple colors on one line (RGBIC)",
+      "Govee Home app control, 16 million colors",
+      "Music sync mode with built-in mic",
+      "64+ preset scenes, Bluetooth"
+    ],
+    "affiliateUrl": "https://link.amazon/B02Cr2Syq",
+    "externalUrl": "https://www.amazon.com/dp/B0991Q94KP?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-11T03:00:00.000Z",
+    "updatedAt": "2026-09-11T03:00:00.000Z"
   }
 ]
