@@ -2200,5 +2200,44 @@
     "published": true,
     "createdAt": "2026-09-11T00:30:00.000Z",
     "updatedAt": "2026-09-11T00:30:00.000Z"
+  },
+  {
+    "id": "prd-0091",
+    "name": "Guankai 8-Pack Motion Sensor Stair Lights",
+    "slug": "guankai-motion-sensor-stair-lights",
+    "category": "home",
+    "secondaryCategories": [
+      "gifts"
+    ],
+    "subcategory": "Lighting",
+    "shortDescription": "An 8-pack of wireless, battery-operated motion sensor night lights that stick on anywhere.",
+    "description": "Light that finds you in the dark, automatically. Each of these 8 wireless lights senses motion and switches on a soft warm glow, then shuts off on its own \u2014 no wiring, no switches, just peel-and-stick adhesive pads that go on stairs, closets, hallways, or under cabinets in minutes.",
+    "whyWeLikeIt": "Eight lights means you can actually light a full staircase or hallway run, not just one dark corner \u2014 and moving one is as easy as peeling it off and sticking it somewhere else.",
+    "image": "/assets/images/products/guankai-motion-sensor-stair-lights.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.2,
+    "reviewCount": 2687,
+    "tags": [
+      "motion sensor light",
+      "stair lights",
+      "night light",
+      "battery operated",
+      "gift"
+    ],
+    "highlights": [
+      "8-pack, wireless and battery operated",
+      "Motion sensor with automatic on/off",
+      "Warm, eye-friendly light output",
+      "Peel-and-stick installation, no wiring"
+    ],
+    "affiliateUrl": "https://link.amazon/B0fLtnVjl",
+    "externalUrl": "https://www.amazon.com/dp/B0DHTVLJZ2?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-11T01:00:00.000Z",
+    "updatedAt": "2026-09-11T01:00:00.000Z"
   }
 ]
