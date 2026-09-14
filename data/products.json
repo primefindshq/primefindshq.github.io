@@ -2231,5 +2231,42 @@
     "published": true,
     "createdAt": "2026-09-14T00:00:00.000Z",
     "updatedAt": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0097",
+    "name": "MOKOQI Magnetic Levitating Globe with LED Light",
+    "slug": "mokoqi-magnetic-levitating-globe",
+    "category": "desk-setup",
+    "secondaryCategories": ["home", "gifts", "tech"],
+    "subcategory": "Decor",
+    "shortDescription": "A magnetically levitating, auto-spinning world globe with 7-color LED lighting.",
+    "description": "A globe that floats on magnetic force alone. This 3.5-inch world globe hovers in midair inside its C-shaped frame, rotating continuously with near-zero friction while LED beads cycle through 7 colors — a genuine conversation piece for a desk, shelf, or office.",
+    "whyWeLikeIt": "It never stops being a little bit unbelievable — watching a real globe hang in midair with nothing touching it gets a reaction every time.",
+    "image": "/assets/images/products/mokoqi-magnetic-levitating-globe.jpg",
+    "additionalImages": [],
+    "price": 41.99,
+    "currency": "USD",
+    "rating": 4.4,
+    "reviewCount": 5444,
+    "tags": [
+      "levitating globe",
+      "floating globe",
+      "desk decor",
+      "led gift",
+      "gift"
+    ],
+    "highlights": [
+      "Magnetic levitation, no visible support",
+      "Automatic 360° spinning",
+      "LED lighting in 7 colors",
+      "3.5-inch globe with clear country and ocean labels"
+    ],
+    "affiliateUrl": "https://link.amazon/B01oCE4F4",
+    "externalUrl": "https://www.amazon.com/dp/B0CWWZMTWQ?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-14T00:30:00.000Z",
+    "updatedAt": "2026-09-14T00:30:00.000Z"
   }
 ]
