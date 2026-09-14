@@ -2606,5 +2606,47 @@
     "published": true,
     "createdAt": "2026-09-14T01:15:00.000Z",
     "updatedAt": "2026-09-14T01:15:00.000Z"
+  },
+  {
+    "id": "prd-0101",
+    "name": "BlissTrends Under-Desk Foot Rest with 2 Adjustable Heights",
+    "slug": "blisstrends-under-desk-foot-hammock",
+    "category": "desk-setup",
+    "secondaryCategories": [
+      "home",
+      "gifts",
+      "travel"
+    ],
+    "subcategory": "Ergonomics",
+    "shortDescription": "A two-layer, height-adjustable foot rest with a washable cover to relieve back, lumbar, and knee pain while sitting.",
+    "description": "A two-piece foot rest that adjusts to two heights via touch fasteners between its layers, so it fits your desk and chair setup rather than the other way around. The high-quality foam core resists collapsing under regular use, the base is non-slip, and the cover unzips for machine washing. Equally at home under a desk, in the car, or propped up on a plane.",
+    "whyWeLikeIt": "The adjustable two-layer design means it actually fits different chair heights instead of being a fixed lump of foam \u2014 small detail, but it's the difference between using it daily and it collecting dust under the desk.",
+    "image": "/assets/images/products/blisstrends-under-desk-foot-hammock.jpg",
+    "additionalImages": [],
+    "price": 24.99,
+    "currency": "USD",
+    "rating": 4.4,
+    "reviewCount": 9102,
+    "tags": [
+      "foot rest",
+      "under desk footrest",
+      "ergonomic footrest",
+      "travel footrest",
+      "gift"
+    ],
+    "highlights": [
+      "2 adjustable heights via touch-fastener layers",
+      "High-density foam core resists collapsing",
+      "Removable, machine-washable cover",
+      "Non-slip base",
+      "Doubles as a car or airplane footrest"
+    ],
+    "affiliateUrl": "https://link.amazon/B0fYqiUpv",
+    "externalUrl": "https://www.amazon.com/dp/B0BFQX3YFY?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-14T01:30:00.000Z",
+    "updatedAt": "2026-09-14T01:30:00.000Z"
   }
 ]
