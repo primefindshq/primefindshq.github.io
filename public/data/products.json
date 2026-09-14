@@ -2564,5 +2564,47 @@
     "published": true,
     "createdAt": "2026-09-14T01:00:00.000Z",
     "updatedAt": "2026-09-14T01:00:00.000Z"
+  },
+  {
+    "id": "prd-0100",
+    "name": "5-in-1 LED Table Lamp with Wireless Charging & Bluetooth Speaker",
+    "slug": "g-shape-wireless-charging-lamp-speaker",
+    "category": "tech",
+    "secondaryCategories": [
+      "desk-setup",
+      "home",
+      "gifts"
+    ],
+    "subcategory": "Smart Lighting",
+    "shortDescription": "A G-shaped smart lamp combining ambient LED lighting, wireless phone charging, a Bluetooth speaker, and an alarm clock.",
+    "description": "A single nightstand or desk device that replaces four: ambient LED lighting with 3 solid colors and 7 dynamic modes, a built-in wireless charging pad for overnight phone charging, a Bluetooth speaker with 9 white noise sounds, and an alarm clock display. The unique G-shaped silhouette is app-controlled for easily saving favorite light and sound combinations.",
+    "whyWeLikeIt": "It quietly clears four separate gadgets off a nightstand \u2014 lamp, charger, speaker, and alarm clock \u2014 while the glowing G shape looks like a deliberate decor choice rather than a compromise.",
+    "image": "/assets/images/products/g-shape-wireless-charging-lamp-speaker.jpg",
+    "additionalImages": [],
+    "price": 44.99,
+    "currency": "USD",
+    "rating": 4.0,
+    "reviewCount": 1337,
+    "tags": [
+      "wireless charging lamp",
+      "bluetooth speaker lamp",
+      "led night light",
+      "alarm clock",
+      "gift"
+    ],
+    "highlights": [
+      "Built-in wireless phone charging pad",
+      "Integrated Bluetooth speaker with 9 white noise sounds",
+      "3 solid colors + 7 dynamic LED lighting modes",
+      "App-controlled with an alarm clock display",
+      "Distinctive G-shaped design"
+    ],
+    "affiliateUrl": "https://link.amazon/B03iG0oQj",
+    "externalUrl": "https://www.amazon.com/dp/B0C535NZQ8?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-14T01:15:00.000Z",
+    "updatedAt": "2026-09-14T01:15:00.000Z"
   }
 ]
