@@ -2479,5 +2479,48 @@
     "published": true,
     "createdAt": "2026-09-14T00:30:00.000Z",
     "updatedAt": "2026-09-14T00:30:00.000Z"
+  },
+  {
+    "id": "prd-0098",
+    "name": "CHIFENCHY PulseSound Portable Bluetooth Speaker with LED Lights",
+    "slug": "chifenchy-pulsesound-bluetooth-speaker",
+    "category": "tech",
+    "secondaryCategories": [
+      "travel",
+      "gifts",
+      "gaming"
+    ],
+    "subcategory": "Speakers",
+    "shortDescription": "A compact IPX5 waterproof Bluetooth speaker with beat-syncing LED lights and up to 15 hours of playtime.",
+    "description": "A pocket-sized speaker built for beach days, pool trips, and late-night gaming sessions alike. IPX5 waterproof and sand-resistant, it pairs 15W (20W peak) sound with a dynamic LED light ring that syncs to the music, Bluetooth 5.3 for a stable connection up to 100 ft, and TWS pairing to link two units for 30W stereo. A built-in lanyard keeps it hooked to a bag, bike, or shower caddy wherever you take it.",
+    "whyWeLikeIt": "It's the rare combination of genuinely loud, genuinely waterproof, and genuinely portable \u2014 small enough to toss in a bag but powerful enough to fill a room or a backyard.",
+    "image": "/assets/images/products/chifenchy-pulsesound-bluetooth-speaker.jpg",
+    "additionalImages": [],
+    "price": 19.99,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 8084,
+    "tags": [
+      "bluetooth speaker",
+      "waterproof speaker",
+      "led speaker",
+      "portable speaker",
+      "gift"
+    ],
+    "highlights": [
+      "IPX5 waterproof and sand-resistant",
+      "15W continuous / 20W peak sound output",
+      "Beat-syncing LED light ring",
+      "Bluetooth 5.3 with up to 100 ft range",
+      "TWS pairing for 30W stereo sound",
+      "Up to 15 hours of playtime"
+    ],
+    "affiliateUrl": "https://link.amazon/B05i1D7pc",
+    "externalUrl": "https://www.amazon.com/dp/B0CX1FRR27?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-14T00:45:00.000Z",
+    "updatedAt": "2026-09-14T00:45:00.000Z"
   }
 ]

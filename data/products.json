@@ -14,7 +14,13 @@
     "currency": "USD",
     "rating": null,
     "reviewCount": null,
-    "tags": ["magsafe", "charging station", "apple watch charger", "desk", "tech"],
+    "tags": [
+      "magsafe",
+      "charging station",
+      "apple watch charger",
+      "desk",
+      "tech"
+    ],
     "highlights": [
       "15W MagSafe-compatible wireless charging for iPhone",
       "Built-in Apple Watch charging puck",
@@ -44,7 +50,13 @@
     "currency": "USD",
     "rating": null,
     "reviewCount": null,
-    "tags": ["power bank", "fast charging", "usb-c", "travel", "tech"],
+    "tags": [
+      "power bank",
+      "fast charging",
+      "usb-c",
+      "travel",
+      "tech"
+    ],
     "highlights": [
       "10,000mAh capacity, 45W fast charging",
       "Built-in, detachable USB-C cable",
@@ -74,7 +86,13 @@
     "currency": "USD",
     "rating": null,
     "reviewCount": null,
-    "tags": ["usb-c hub", "hdmi", "laptop accessories", "card reader", "tech"],
+    "tags": [
+      "usb-c hub",
+      "hdmi",
+      "laptop accessories",
+      "card reader",
+      "tech"
+    ],
     "highlights": [
       "HDMI output up to 4K@30Hz",
       "Two USB 3.0 ports at up to 5Gbps",
@@ -104,7 +122,13 @@
     "currency": "USD",
     "rating": null,
     "reviewCount": null,
-    "tags": ["led light", "motion sensor", "under cabinet", "home", "rechargeable"],
+    "tags": [
+      "led light",
+      "motion sensor",
+      "under cabinet",
+      "home",
+      "rechargeable"
+    ],
     "highlights": [
       "40 LEDs per bar, 5 dimmable brightness levels",
       "Motion-sensor auto on/off",
@@ -134,7 +158,13 @@
     "currency": "USD",
     "rating": null,
     "reviewCount": null,
-    "tags": ["soap dispenser", "touchless", "automatic", "home", "kitchen"],
+    "tags": [
+      "soap dispenser",
+      "touchless",
+      "automatic",
+      "home",
+      "kitchen"
+    ],
     "highlights": [
       "Touch-free infrared motion sensor",
       "Adjustable dispensing volume",
@@ -164,7 +194,13 @@
     "currency": "USD",
     "rating": null,
     "reviewCount": null,
-    "tags": ["organizer", "storage", "closet", "over the door", "home"],
+    "tags": [
+      "organizer",
+      "storage",
+      "closet",
+      "over the door",
+      "home"
+    ],
     "highlights": [
       "5 shelves plus 4 side pockets",
       "Sturdy anti-tilt hooks, holds up to 40 lbs",
@@ -194,7 +230,13 @@
     "currency": "USD",
     "rating": null,
     "reviewCount": null,
-    "tags": ["led strip", "rgb lighting", "gaming setup", "desk lighting", "gaming"],
+    "tags": [
+      "led strip",
+      "rgb lighting",
+      "gaming setup",
+      "desk lighting",
+      "gaming"
+    ],
     "highlights": [
       "100ft of RGB LED strip lighting",
       "App and remote control included",
@@ -224,7 +266,13 @@
     "currency": "USD",
     "rating": null,
     "reviewCount": null,
-    "tags": ["headset stand", "rgb lighting", "gaming setup", "desk accessory", "gaming"],
+    "tags": [
+      "headset stand",
+      "rgb lighting",
+      "gaming setup",
+      "desk accessory",
+      "gaming"
+    ],
     "highlights": [
       "RGB light bar with multiple lighting modes",
       "Sturdy aluminum build, fits all headphone sizes",
@@ -254,7 +302,13 @@
     "currency": "USD",
     "rating": null,
     "reviewCount": null,
-    "tags": ["xbox", "controller charger", "charging dock", "battery pack", "gaming"],
+    "tags": [
+      "xbox",
+      "controller charger",
+      "charging dock",
+      "battery pack",
+      "gaming"
+    ],
     "highlights": [
       "Dual charging dock fits Xbox One, S, X, Elite, Series S/X controllers",
       "Two 6200mWh rechargeable battery packs included",
@@ -284,7 +338,13 @@
     "currency": "USD",
     "rating": null,
     "reviewCount": null,
-    "tags": ["ps5", "controller charger", "charging dock", "playstation", "gaming"],
+    "tags": [
+      "ps5",
+      "controller charger",
+      "charging dock",
+      "playstation",
+      "gaming"
+    ],
     "highlights": [
       "Dual charging dock for PS5 DualSense controllers",
       "LED charge indicators for each slot",
@@ -314,7 +374,13 @@
     "currency": "USD",
     "rating": null,
     "reviewCount": null,
-    "tags": ["packing cubes", "travel organizer", "luggage", "packing", "travel"],
+    "tags": [
+      "packing cubes",
+      "travel organizer",
+      "luggage",
+      "packing",
+      "travel"
+    ],
     "highlights": [
       "8-piece set: 4 nesting cubes plus toiletry, drawstring, and slim organizers",
       "Compressible zippered cubes save luggage space",
@@ -344,7 +410,13 @@
     "currency": "USD",
     "rating": null,
     "reviewCount": null,
-    "tags": ["travel adapter", "universal adapter", "usb-c charger", "international travel", "travel"],
+    "tags": [
+      "travel adapter",
+      "universal adapter",
+      "usb-c charger",
+      "international travel",
+      "travel"
+    ],
     "highlights": [
       "1 universal AC socket, 3 USB-C, 2 USB-A — charges 6 devices at once",
       "Works with US, UK, EU, and Australia plug types",
@@ -374,7 +446,13 @@
     "currency": "USD",
     "rating": null,
     "reviewCount": null,
-    "tags": ["cable organizer", "travel case", "tech pouch", "packing", "travel"],
+    "tags": [
+      "cable organizer",
+      "travel case",
+      "tech pouch",
+      "packing",
+      "travel"
+    ],
     "highlights": [
       "Double-layer interior with mesh pockets and elastic cable loops",
       "Water-resistant exterior",
@@ -404,7 +482,13 @@
     "currency": "USD",
     "rating": null,
     "reviewCount": null,
-    "tags": ["laptop stand", "desk setup", "ergonomic", "aluminum stand", "desk-setup"],
+    "tags": [
+      "laptop stand",
+      "desk setup",
+      "ergonomic",
+      "aluminum stand",
+      "desk-setup"
+    ],
     "highlights": [
       "Adjustable height and viewing angle",
       "Sturdy aluminum build, folds flat for travel",
@@ -434,7 +518,13 @@
     "currency": "USD",
     "rating": null,
     "reviewCount": null,
-    "tags": ["desk lamp", "led light", "monitor light", "reading light", "desk-setup"],
+    "tags": [
+      "desk lamp",
+      "led light",
+      "monitor light",
+      "reading light",
+      "desk-setup"
+    ],
     "highlights": [
       "17-inch light bar, 100 flicker-free LEDs",
       "Stepless dimming, 2700K-6500K color range",
@@ -464,7 +554,13 @@
     "currency": "USD",
     "rating": null,
     "reviewCount": null,
-    "tags": ["desk mat", "desk pad", "leather mat", "desk accessories", "desk-setup"],
+    "tags": [
+      "desk mat",
+      "desk pad",
+      "leather mat",
+      "desk accessories",
+      "desk-setup"
+    ],
     "highlights": [
       "23.6\" x 13.7\" non-slip PU leather surface",
       "Waterproof, easy to wipe clean",
@@ -494,7 +590,13 @@
     "currency": "USD",
     "rating": null,
     "reviewCount": null,
-    "tags": ["sunset lamp", "mood lighting", "led projector", "gift", "gifts"],
+    "tags": [
+      "sunset lamp",
+      "mood lighting",
+      "led projector",
+      "gift",
+      "gifts"
+    ],
     "highlights": [
       "Projects a warm, rotating sunset glow",
       "App and button control, multiple color options",
@@ -524,7 +626,13 @@
     "currency": "USD",
     "rating": null,
     "reviewCount": null,
-    "tags": ["mini projector", "home theater", "gift", "tech gift", "gifts"],
+    "tags": [
+      "mini projector",
+      "home theater",
+      "gift",
+      "tech gift",
+      "gifts"
+    ],
     "highlights": [
       "4K support with built-in streaming app",
       "WiFi 6 and Bluetooth 5.4",
@@ -554,7 +662,13 @@
     "currency": "USD",
     "rating": null,
     "reviewCount": null,
-    "tags": ["car mount", "phone holder", "magnetic mount", "car accessories", "under-25"],
+    "tags": [
+      "car mount",
+      "phone holder",
+      "magnetic mount",
+      "car accessories",
+      "under-25"
+    ],
     "highlights": [
       "Strong magnetic hold, adjustable ball-joint arm",
       "Mounts to dashboard, windshield, or air vent panel",
@@ -584,7 +698,13 @@
     "currency": "USD",
     "rating": null,
     "reviewCount": null,
-    "tags": ["multitool", "pliers", "pocket tool", "gift", "under-25"],
+    "tags": [
+      "multitool",
+      "pliers",
+      "pocket tool",
+      "gift",
+      "under-25"
+    ],
     "highlights": [
       "Pliers, wire cutter, saw, knife blade, and ruler in one tool",
       "4 swappable screwdriver bits included",
@@ -614,7 +734,13 @@
     "currency": "USD",
     "rating": null,
     "reviewCount": null,
-    "tags": ["thermal printer", "sticker maker", "portable printer", "phone accessory", "tech"],
+    "tags": [
+      "thermal printer",
+      "sticker maker",
+      "portable printer",
+      "phone accessory",
+      "tech"
+    ],
     "highlights": [
       "Bluetooth connection to a companion phone app",
       "Zero-ink thermal printing",
@@ -644,7 +770,13 @@
     "currency": "USD",
     "rating": null,
     "reviewCount": null,
-    "tags": ["galaxy projector", "star projector", "ambient lighting", "home decor", "home"],
+    "tags": [
+      "galaxy projector",
+      "star projector",
+      "ambient lighting",
+      "home decor",
+      "home"
+    ],
     "highlights": [
       "Projects a moving galaxy/aurora pattern across ceiling and walls",
       "Remote control with brightness, speed, and color settings",
@@ -674,7 +806,13 @@
     "currency": "USD",
     "rating": null,
     "reviewCount": null,
-    "tags": ["led display", "led matrix", "pixel art", "car accessory", "tech"],
+    "tags": [
+      "led display",
+      "led matrix",
+      "pixel art",
+      "car accessory",
+      "tech"
+    ],
     "highlights": [
       "Flexible 7\" x 3\" LED matrix panel",
       "Bluetooth app control for text, animations, and pixel art",
@@ -704,7 +842,13 @@
     "currency": "USD",
     "rating": null,
     "reviewCount": null,
-    "tags": ["ai recorder", "voice recorder", "transcription", "productivity", "tech"],
+    "tags": [
+      "ai recorder",
+      "voice recorder",
+      "transcription",
+      "productivity",
+      "tech"
+    ],
     "highlights": [
       "AI transcription and summarization in 112 languages",
       "Ultra-slim design with InstantView display",
@@ -734,7 +878,13 @@
     "currency": "USD",
     "rating": null,
     "reviewCount": null,
-    "tags": ["milk frother", "coffee accessory", "kitchen gadget", "matcha", "home"],
+    "tags": [
+      "milk frother",
+      "coffee accessory",
+      "kitchen gadget",
+      "matcha",
+      "home"
+    ],
     "highlights": [
       "Whisks milk, matcha, and protein powder into foam in seconds",
       "Durable titanium-coated whisk",
@@ -764,7 +914,13 @@
     "currency": "USD",
     "rating": null,
     "reviewCount": null,
-    "tags": ["ice maker", "countertop appliance", "kitchen gadget", "portable", "home"],
+    "tags": [
+      "ice maker",
+      "countertop appliance",
+      "kitchen gadget",
+      "portable",
+      "home"
+    ],
     "highlights": [
       "9 ice cubes ready in 6 minutes, up to 26 lbs per day",
       "Auto-cleaning function",
@@ -794,7 +950,13 @@
     "currency": "USD",
     "rating": null,
     "reviewCount": null,
-    "tags": ["handheld console", "retro games", "portable gaming", "gift", "gaming"],
+    "tags": [
+      "handheld console",
+      "retro games",
+      "portable gaming",
+      "gift",
+      "gaming"
+    ],
     "highlights": [
       "220 preloaded retro-style games",
       "3.0-inch LCD screen",
@@ -1246,7 +1408,9 @@
     "name": "Innqoo Dimmable Candle Warmer Lamp",
     "slug": "innqoo-candle-warmer-lamp",
     "category": "home",
-    "secondaryCategories": ["gifts"],
+    "secondaryCategories": [
+      "gifts"
+    ],
     "subcategory": "Ambience",
     "shortDescription": "A height-adjustable candle warmer lamp that melts jar candles from above, with a dimmable timer.",
     "description": "All the scent, none of the open flame. This lamp warms jar candles and wax melts from above instead of burning a wick, with adjustable height, dimmable brightness, and a built-in timer — a cozy, flameless glow for a nightstand, shelf, or gift table.",
@@ -1319,7 +1483,9 @@
     "name": "YGSKK Mini Portable Projector with WiFi & Bluetooth",
     "slug": "mini-portable-projector-bluetooth",
     "category": "travel",
-    "secondaryCategories": ["home"],
+    "secondaryCategories": [
+      "home"
+    ],
     "subcategory": "Travel Tech",
     "shortDescription": "A pocket-sized 1080P projector with WiFi, Bluetooth, and built-in streaming apps for movies anywhere.",
     "description": "A movie theater that fits in one hand. This compact 1080P projector connects over WiFi or Bluetooth, runs built-in streaming apps, and hooks up to a phone, laptop, TV stick, or game console — perfect for a hotel room, a backyard movie night, or a bedroom wall.",
@@ -1356,7 +1522,9 @@
     "name": "Smirly Bamboo Charcuterie & Cheese Board Set",
     "slug": "smirly-cheeseboard-charcuterie-set",
     "category": "home",
-    "secondaryCategories": ["gifts"],
+    "secondaryCategories": [
+      "gifts"
+    ],
     "subcategory": "Kitchen",
     "shortDescription": "A bamboo charcuterie board with a slide-out drawer of cheese knives, dip bowls, and a fruit board.",
     "description": "Everything a good spread needs, in one board. This bamboo charcuterie set has a slide-out drawer holding 4 cheese knives and 2 ceramic dip bowls, plus a separate divided board for fruit — all arriving in gift-ready packaging.",
@@ -1429,7 +1597,10 @@
     "name": "Daymeet RGB LED TV Backlight",
     "slug": "daymeet-tv-led-backlight",
     "category": "home",
-    "secondaryCategories": ["desk-setup", "gifts"],
+    "secondaryCategories": [
+      "desk-setup",
+      "gifts"
+    ],
     "subcategory": "Lighting",
     "shortDescription": "A 9.8ft RGB LED TV backlight with Bluetooth app control and music sync, for TVs 32-43 inches.",
     "description": "Instant ambient upgrade behind any screen. This 9.8-foot RGB strip wraps around a 32-43 inch TV, syncing color changes to music and controllable by Bluetooth app or included remote — USB powered, no extra outlet needed.",
@@ -1502,7 +1673,9 @@
     "name": "BAGSMART Hanging Jewelry Organizer",
     "slug": "bagsmart-hanging-jewelry-organizer",
     "category": "travel",
-    "secondaryCategories": ["gifts"],
+    "secondaryCategories": [
+      "gifts"
+    ],
     "subcategory": "Organization",
     "shortDescription": "A 2-sided hanging jewelry case with clear pockets for rings and earrings, plus loops for necklaces.",
     "description": "Jewelry that stays untangled, wherever it goes. This 2-sided case hangs from its own hook, with clear pockets on one side for rings, earrings, and bracelets, and elastic loops on the other for necklaces — rolls up compact for a suitcase or hangs flat in a closet.",
@@ -1719,7 +1892,9 @@
     "name": "Royal Craft Wood Expandable Bathtub Caddy Tray",
     "slug": "royal-craft-wood-bathtub-caddy-tray",
     "category": "home",
-    "secondaryCategories": ["gifts"],
+    "secondaryCategories": [
+      "gifts"
+    ],
     "subcategory": "Ambience",
     "shortDescription": "An expandable, foldable wood bathtub tray with slots for a wine glass, candle, book, and tablet.",
     "description": "A proper bath deserves a proper setup. This foldable wood caddy expands to fit most bathtubs, with built-in slots for a wine glass and candle, a stand for a book or tablet, and space for whatever else turns a bath into an actual break.",
@@ -1756,7 +1931,9 @@
     "name": "Circle Joy Gravity Electric Salt & Pepper Grinder Set",
     "slug": "circle-joy-electric-salt-pepper-grinder",
     "category": "home",
-    "secondaryCategories": ["gifts"],
+    "secondaryCategories": [
+      "gifts"
+    ],
     "subcategory": "Kitchen",
     "shortDescription": "A gravity-activated electric salt and pepper grinder set with LED light and adjustable coarseness.",
     "description": "Grinding, automated. Just tilt this set and gravity triggers the grind — no squeezing or twisting — with an LED light for seasoning in dim kitchens, adjustable coarseness, and an upgraded large-capacity chamber.",
@@ -1793,7 +1970,9 @@
     "name": "DEKOPRO 126-Piece Home Tool Set with 8V Cordless Drill",
     "slug": "dekopro-126pc-home-tool-set",
     "category": "home",
-    "secondaryCategories": ["gifts"],
+    "secondaryCategories": [
+      "gifts"
+    ],
     "subcategory": "Tools & Repair",
     "shortDescription": "A 126-piece home tool kit with an 8V cordless drill, hand tools, and hardware, in a carrying case.",
     "description": "One case, every basic repair covered. This 126-piece set pairs an 8V cordless drill with screwdrivers, pliers, a hammer, an adjustable wrench, a bit and socket set, and a tape measure — all organized in a carrying case built for a closet shelf or a car trunk.",
@@ -1830,7 +2009,9 @@
     "name": "Cisily Sink Sponge & Brush Holder Organizer",
     "slug": "cisily-sink-sponge-holder-organizer",
     "category": "home",
-    "secondaryCategories": ["gifts"],
+    "secondaryCategories": [
+      "gifts"
+    ],
     "subcategory": "Kitchen",
     "shortDescription": "A rustproof stainless steel sink caddy with a tall brush holder for sponges, brushes, and soap.",
     "description": "The sink's junk drawer, finally organized. This 304 stainless steel caddy pairs a tall brush holder with a wide sponge tray, keeping scrub brushes, sponges, and soap upright and draining instead of pooling water on the counter.",
@@ -1867,7 +2048,9 @@
     "name": "Hamilton Beach 3-Cup Mini Food Processor",
     "slug": "hamilton-beach-mini-food-processor",
     "category": "home",
-    "secondaryCategories": ["gifts"],
+    "secondaryCategories": [
+      "gifts"
+    ],
     "subcategory": "Kitchen",
     "shortDescription": "A 350-watt electric mini food processor with stainless steel blades for dicing, mincing, and puree.",
     "description": "Chopping, minus the knife work. This 3-cup electric processor dices, minces, and purees at the press of a button, with a simple stack-and-press design, 350 watts of power, and stainless steel blades — the whole thing is dishwasher safe when you're done.",
@@ -1904,7 +2087,9 @@
     "name": "Veken Stainless Steel French Press",
     "slug": "veken-stainless-steel-french-press",
     "category": "home",
-    "secondaryCategories": ["gifts"],
+    "secondaryCategories": [
+      "gifts"
+    ],
     "subcategory": "Kitchen",
     "shortDescription": "A 34oz stainless steel French press with thickened borosilicate glass and a no-plastic-touching design.",
     "description": "Coffee, without the plastic aftertaste. This 34oz French press pairs thickened borosilicate glass with a stainless steel frame, built so nothing plastic touches the brew — equally at home making coffee, cold brew, or tea in the kitchen or packed for a trip.",
@@ -1941,7 +2126,10 @@
     "name": "Northern Galaxy Aurora Star Projector",
     "slug": "northern-galaxy-aurora-projector",
     "category": "tech",
-    "secondaryCategories": ["home", "gifts"],
+    "secondaryCategories": [
+      "home",
+      "gifts"
+    ],
     "subcategory": "Lighting & Displays",
     "shortDescription": "A galaxy and aurora light projector with 33 light effects, Bluetooth speaker, and white noise.",
     "description": "Turn a ceiling into a night sky. This projector layers swirling aurora waves over a starfield of drifting nebula clouds, with 33 light effects total, a remote control, a built-in Bluetooth speaker, and white noise sounds for a full sensory wind-down.",
@@ -1978,7 +2166,10 @@
     "name": "AI Smart Glasses with Camera & Real-Time Translation",
     "slug": "ai-smart-glasses-camera-translation",
     "category": "tech",
-    "secondaryCategories": ["travel", "gifts"],
+    "secondaryCategories": [
+      "travel",
+      "gifts"
+    ],
     "subcategory": "Wearables",
     "shortDescription": "AI smart glasses with a 4K camera, real-time translation, an AI assistant, and open-ear Bluetooth audio.",
     "description": "Everyday glasses with an AI layer built in. These smart glasses capture 4K photo and video hands-free, translate conversations in real time, recognize objects on request, and stream calls or audio through open-ear speakers — all through transparent lenses that look like a normal pair of frames.",
@@ -2015,7 +2206,9 @@
     "name": "Guankai 8-Pack Motion Sensor Stair Lights",
     "slug": "guankai-motion-sensor-stair-lights",
     "category": "home",
-    "secondaryCategories": ["gifts"],
+    "secondaryCategories": [
+      "gifts"
+    ],
     "subcategory": "Lighting",
     "shortDescription": "An 8-pack of wireless, battery-operated motion sensor night lights that stick on anywhere.",
     "description": "Light that finds you in the dark, automatically. Each of these 8 wireless lights senses motion and switches on a soft warm glow, then shuts off on its own — no wiring, no switches, just peel-and-stick adhesive pads that go on stairs, closets, hallways, or under cabinets in minutes.",
@@ -2052,7 +2245,9 @@
     "name": "LENRUE G11 RGB Desktop Computer Speakers",
     "slug": "lenrue-g11-rgb-computer-speakers",
     "category": "desk-setup",
-    "secondaryCategories": ["gaming"],
+    "secondaryCategories": [
+      "gaming"
+    ],
     "subcategory": "Audio & Fun",
     "shortDescription": "Compact USB-powered desktop speakers with touch-controlled RGB lighting and USB-C/AUX connectivity.",
     "description": "Sound and light for the whole desk. This compact soundbar connects over USB or USB-C with a 3.5mm AUX cable, driven by 4 built-in IC amplifiers for distortion-free stereo sound, with touch-controlled RGB lighting running the full length of the speaker for a dynamic gaming glow.",
@@ -2089,7 +2284,9 @@
     "name": "ZOMAKE Lightweight Packable 30L Backpack",
     "slug": "zomake-lightweight-packable-backpack",
     "category": "travel",
-    "secondaryCategories": ["under-25"],
+    "secondaryCategories": [
+      "under-25"
+    ],
     "subcategory": "Bags",
     "shortDescription": "A 0.74lb packable 30L backpack that folds down to sandwich size for travel, hiking, and everyday carry.",
     "description": "A full-size backpack that disappears into your luggage. At just 0.74lb, this 30L pack unfolds from a 10x8x3.55 inch pouch to a full 19x13x7 inch daypack, with a main compartment, inner divider, front and side pockets, and water-resistant tear-proof nylon for hiking, weekend trips, or a spare bag on the way home.",
@@ -2126,7 +2323,9 @@
     "name": "CACOE Floatable Waterproof Phone Pouch (2-Pack)",
     "slug": "cacoe-waterproof-phone-pouch",
     "category": "travel",
-    "secondaryCategories": ["under-25"],
+    "secondaryCategories": [
+      "under-25"
+    ],
     "subcategory": "Travel Tech",
     "shortDescription": "A 2-pack of IPX8 waterproof, floating phone pouches with adjustable lanyards for phones up to 7 inches.",
     "description": "Bring the phone into the water without the worry. This 2-pack of IPX8-certified pouches seals with a snap-and-lock clip rated to 30m, with four-sided airbags that keep the phone floating instead of sinking — TPU material stays touch-sensitive enough to shoot photos and video right through the case.",
@@ -2163,7 +2362,12 @@
     "name": "Govee 16.4ft RGBIC LED Strip Lights",
     "slug": "govee-rgbic-led-strip-lights",
     "category": "home",
-    "secondaryCategories": ["gaming", "desk-setup", "gifts", "under-25"],
+    "secondaryCategories": [
+      "gaming",
+      "desk-setup",
+      "gifts",
+      "under-25"
+    ],
     "subcategory": "Lighting",
     "shortDescription": "16.4ft RGBIC LED strip lights with app control, 16 million colors, and music sync mode.",
     "description": "Multiple colors, one strip, at the same time. Unlike standard single-color RGB strips, this 16.4ft RGBIC strip displays several colors along its length at once, controlled through the Govee Home app with 16 million colors, 64+ preset scenes, and a music sync mode that reacts to sound through a built-in mic.",
@@ -2200,7 +2404,10 @@
     "name": "Acer AI Face Tracking Tripod",
     "slug": "acer-ai-face-tracking-tripod",
     "category": "tech",
-    "secondaryCategories": ["gifts", "travel"],
+    "secondaryCategories": [
+      "gifts",
+      "travel"
+    ],
     "subcategory": "Content Creation",
     "shortDescription": "A no-app AI face-tracking tripod with a detachable remote and ring light for vlogging and streaming.",
     "description": "A camera operator that never needs a break. This tripod's AI tracking detects and follows your face automatically, no app required, while a detachable remote with gesture control and a removable ring light round it out for vlogging, TikTok, and live streaming — extends to 64.4 inches and folds down to 13 inches for travel.",
@@ -2237,7 +2444,11 @@
     "name": "MOKOQI Magnetic Levitating Globe with LED Light",
     "slug": "mokoqi-magnetic-levitating-globe",
     "category": "desk-setup",
-    "secondaryCategories": ["home", "gifts", "tech"],
+    "secondaryCategories": [
+      "home",
+      "gifts",
+      "tech"
+    ],
     "subcategory": "Decor",
     "shortDescription": "A magnetically levitating, auto-spinning world globe with 7-color LED lighting.",
     "description": "A globe that floats on magnetic force alone. This 3.5-inch world globe hovers in midair inside its C-shaped frame, rotating continuously with near-zero friction while LED beads cycle through 7 colors — a genuine conversation piece for a desk, shelf, or office.",
@@ -2268,5 +2479,48 @@
     "published": true,
     "createdAt": "2026-09-14T00:30:00.000Z",
     "updatedAt": "2026-09-14T00:30:00.000Z"
+  },
+  {
+    "id": "prd-0098",
+    "name": "CHIFENCHY PulseSound Portable Bluetooth Speaker with LED Lights",
+    "slug": "chifenchy-pulsesound-bluetooth-speaker",
+    "category": "tech",
+    "secondaryCategories": [
+      "travel",
+      "gifts",
+      "gaming"
+    ],
+    "subcategory": "Speakers",
+    "shortDescription": "A compact IPX5 waterproof Bluetooth speaker with beat-syncing LED lights and up to 15 hours of playtime.",
+    "description": "A pocket-sized speaker built for beach days, pool trips, and late-night gaming sessions alike. IPX5 waterproof and sand-resistant, it pairs 15W (20W peak) sound with a dynamic LED light ring that syncs to the music, Bluetooth 5.3 for a stable connection up to 100 ft, and TWS pairing to link two units for 30W stereo. A built-in lanyard keeps it hooked to a bag, bike, or shower caddy wherever you take it.",
+    "whyWeLikeIt": "It's the rare combination of genuinely loud, genuinely waterproof, and genuinely portable — small enough to toss in a bag but powerful enough to fill a room or a backyard.",
+    "image": "/assets/images/products/chifenchy-pulsesound-bluetooth-speaker.jpg",
+    "additionalImages": [],
+    "price": 19.99,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 8084,
+    "tags": [
+      "bluetooth speaker",
+      "waterproof speaker",
+      "led speaker",
+      "portable speaker",
+      "gift"
+    ],
+    "highlights": [
+      "IPX5 waterproof and sand-resistant",
+      "15W continuous / 20W peak sound output",
+      "Beat-syncing LED light ring",
+      "Bluetooth 5.3 with up to 100 ft range",
+      "TWS pairing for 30W stereo sound",
+      "Up to 15 hours of playtime"
+    ],
+    "affiliateUrl": "https://link.amazon/B05i1D7pc",
+    "externalUrl": "https://www.amazon.com/dp/B0CX1FRR27?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-14T00:45:00.000Z",
+    "updatedAt": "2026-09-14T00:45:00.000Z"
   }
 ]
