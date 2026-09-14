@@ -2522,5 +2522,47 @@
     "published": true,
     "createdAt": "2026-09-14T00:45:00.000Z",
     "updatedAt": "2026-09-14T00:45:00.000Z"
+  },
+  {
+    "id": "prd-0099",
+    "name": "Camkory Digital Camera FHD 1080P, 16X Zoom, 32GB Card — Pink",
+    "slug": "camkory-digital-camera-pink",
+    "category": "tech",
+    "secondaryCategories": [
+      "travel",
+      "gifts"
+    ],
+    "subcategory": "Cameras",
+    "shortDescription": "A compact 44MP point-and-shoot camera with FHD 1080P video, 16X digital zoom, and a 32GB card included.",
+    "description": "A beginner-friendly point-and-shoot built for travel and everyday memory-keeping. It captures FHD 1080P video and 44MP photos with simple, automatic controls, a 16X digital zoom for distant subjects, and 20 built-in creative filters. The kit includes a 32GB memory card, two rechargeable batteries, a charging cable, wrist strap, and storage bag — ready to use out of the box.",
+    "whyWeLikeIt": "It strips photography down to the essentials — point, shoot, done — which makes it an easy pick for beginners, kids, or anyone who wants a dedicated camera for trips without fussing over settings.",
+    "image": "/assets/images/products/camkory-digital-camera-pink.jpg",
+    "additionalImages": [],
+    "price": 39.98,
+    "currency": "USD",
+    "rating": 4.2,
+    "reviewCount": 10818,
+    "tags": [
+      "digital camera",
+      "point and shoot camera",
+      "travel camera",
+      "kids camera",
+      "gift"
+    ],
+    "highlights": [
+      "FHD 1080P video and 44MP photos",
+      "16X digital zoom",
+      "32GB memory card included",
+      "2 rechargeable batteries + charging cable included",
+      "20 built-in creative filters",
+      "Compact, lightweight design"
+    ],
+    "affiliateUrl": "https://link.amazon/B02gKiqR8",
+    "externalUrl": "https://www.amazon.com/dp/B0BTCZ2RR9?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-14T01:00:00.000Z",
+    "updatedAt": "2026-09-14T01:00:00.000Z"
   }
 ]
