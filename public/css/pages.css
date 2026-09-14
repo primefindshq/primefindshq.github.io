@@ -219,6 +219,14 @@
   overflow: hidden;
   border: 1px solid var(--color-border);
   margin-bottom: var(--space-xs);
+  background: var(--color-bg-elevated);
+}
+/* Some product photos arrive as non-square source images that must display
+   uncropped (see prd-0090+ onward) -- contain them within the square frame
+   instead of the sitewide cover default, letterboxed on the themed bg. */
+.product-detail__gallery-main img,
+.product-detail__thumb img {
+  object-fit: contain;
 }
 .product-detail__thumbs {
   display: flex;

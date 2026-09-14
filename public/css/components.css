@@ -144,6 +144,11 @@
 .product-card__media img {
   width: 100%;
   height: 100%;
+  /* Product photos aren't all pre-composited to a 1:1 canvas -- some must
+     display uncropped at their original aspect ratio. contain is a no-op
+     for the square ones and letterboxes the rest on the themed bg instead
+     of cropping them. */
+  object-fit: contain;
   transition: transform var(--duration-slow) var(--ease-standard);
 }
 .product-card:hover .product-card__media img { transform: scale(1.06); }

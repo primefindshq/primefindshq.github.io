@@ -2194,5 +2194,42 @@
     "published": true,
     "createdAt": "2026-09-11T03:00:00.000Z",
     "updatedAt": "2026-09-11T03:00:00.000Z"
+  },
+  {
+    "id": "prd-0096",
+    "name": "Acer AI Face Tracking Tripod",
+    "slug": "acer-ai-face-tracking-tripod",
+    "category": "tech",
+    "secondaryCategories": ["gifts", "travel"],
+    "subcategory": "Content Creation",
+    "shortDescription": "A no-app AI face-tracking tripod with a detachable remote and ring light for vlogging and streaming.",
+    "description": "A camera operator that never needs a break. This tripod's AI tracking detects and follows your face automatically, no app required, while a detachable remote with gesture control and a removable ring light round it out for vlogging, TikTok, and live streaming — extends to 64.4 inches and folds down to 13 inches for travel.",
+    "whyWeLikeIt": "No-app tracking is the real win — point it at yourself and start moving, no phone fiddling required mid-shot.",
+    "image": "/assets/images/products/acer-ai-face-tracking-tripod.jpg",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 456,
+    "tags": [
+      "phone tripod",
+      "ai tracking tripod",
+      "vlogging gear",
+      "selfie stick",
+      "gift"
+    ],
+    "highlights": [
+      "360° AI face tracking, no app needed",
+      "Detachable remote with gesture control",
+      "Removable ring light, 3 color modes",
+      "Extends to 64.4in, folds to 13in"
+    ],
+    "affiliateUrl": "https://link.amazon/B095BQXTv",
+    "externalUrl": "https://www.amazon.com/dp/B0F6Y6RXVN?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-14T00:00:00.000Z",
+    "updatedAt": "2026-09-14T00:00:00.000Z"
   }
 ]
