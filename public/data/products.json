@@ -2648,5 +2648,46 @@
     "published": true,
     "createdAt": "2026-09-14T01:30:00.000Z",
     "updatedAt": "2026-09-14T01:30:00.000Z"
+  },
+  {
+    "id": "prd-0102",
+    "name": "Chef Preserve Compact Vacuum Sealer for Food",
+    "slug": "chef-preserve-compact-vacuum-sealer",
+    "category": "home",
+    "secondaryCategories": [
+      "gifts",
+      "travel"
+    ],
+    "subcategory": "Kitchen",
+    "shortDescription": "A handheld, rechargeable vacuum sealer that seals reusable bags in under 5 seconds, with 10 BPA-free bags included.",
+    "description": "A cordless vacuum sealer the size of a pepper grinder that replaces the bulky countertop kind. Press the button and it seals a reusable, BPA-free bag in under 5 seconds, then shuts off automatically. The dishwasher-, freezer-, and microwave-safe bags work for meat, produce, dry goods, and leftovers, and a single charge is rated for up to 1,000 bags \u2014 small enough to pack for trips, camping, or RV use.",
+    "whyWeLikeIt": "It shrinks a whole category of bulky kitchen gear into something that fits in a drawer, and the reusable bags mean it keeps paying for itself instead of burning through single-use rolls.",
+    "image": "/assets/images/products/chef-preserve-compact-vacuum-sealer.jpg",
+    "additionalImages": [],
+    "price": 79.0,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 15420,
+    "tags": [
+      "vacuum sealer",
+      "food storage",
+      "kitchen gadget",
+      "travel gadget",
+      "gift"
+    ],
+    "highlights": [
+      "Seals a bag in under 5 seconds",
+      "10 reusable, BPA-free vacuum bags included",
+      "Dishwasher, freezer, and microwave safe bags",
+      "Rechargeable battery rated for up to 1,000 bags",
+      "Compact, cordless design for travel and camping"
+    ],
+    "affiliateUrl": "https://link.amazon/B0b1kLQsx",
+    "externalUrl": "https://www.amazon.com/dp/B0D3Z8VWBH?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-15T00:00:00.000Z",
+    "updatedAt": "2026-09-15T00:00:00.000Z"
   }
 ]
