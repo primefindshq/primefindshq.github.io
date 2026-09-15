@@ -1,64 +1,318 @@
 /* =========================================================================
    PRIME.FINDS — Animations
    All entrance/reveal animations are intentionally short and are skipped
-   entirely for prefers-reduced-motion (see tokens.css + base.css durations).
+   entirely for prefers-reduced-motion (see tokens.css + base.css durations,
+   plus explicit overrides below for the brand intro and hero choreography,
+   which use hardcoded ms values that don't inherit the token override).
    ========================================================================= */
 
-/* ---- Scroll reveal (IntersectionObserver adds .is-visible) ---- */
+/* ---- Scroll reveal (IntersectionObserver adds .is-visible) ----
+   Uses the standalone `translate` property (not `transform`) for the
+   entrance offset. Several revealed elements -- product cards, category
+   cards -- also `transform` on :hover at a different, faster duration;
+   sharing the `transform` property between the two would mean whichever
+   stylesheet loads last silently wins and the loser's transition never
+   plays. `translate` and `transform` compose independently, so the entrance
+   and the hover lift can each keep their own timing. */
 [data-reveal] {
   opacity: 0;
-  transform: translateY(18px);
+  translate: 0 18px;
   transition: opacity var(--duration-slow) var(--ease-standard),
-              transform var(--duration-slow) var(--ease-standard);
+              translate var(--duration-slow) var(--ease-standard);
 }
 [data-reveal].is-visible {
   opacity: 1;
-  transform: translateY(0);
+  translate: 0 0;
 }
-[data-reveal="fade"] { transform: none; }
+[data-reveal="fade"] { translate: 0 0; }
+
+/* A distinct scroll-rhythm beat for the one-per-homepage "editorial"
+   moment: depth instead of a rise, so the scroll doesn't read as the same
+   "fade up" gesture repeating for every section. `scale` is a standalone
+   property like `translate`, so it composes with this same element's hover
+   transform (see .editorial:hover) without the cross-stylesheet collision
+   the comment above describes. */
+[data-reveal="scale"] {
+  opacity: 0;
+  translate: 0 0;
+  scale: 0.94;
+  transition: opacity 640ms var(--ease-out-strong),
+              scale 640ms var(--ease-out-strong);
+}
+[data-reveal="scale"].is-visible { opacity: 1; scale: 1; }
+
+/* `transition-property` doesn't merge across two same-specificity rules --
+   whichever stylesheet loads last wins outright and the other rule's
+   properties silently stop transitioning. Product cards and category cards
+   both reveal on scroll AND transition their own properties on :hover, so
+   give each a single combined declaration at a specificity ([data-reveal]
+   + the component class) that reliably beats either rule alone, instead of
+   depending on load order. */
+.product-card[data-reveal] {
+  transition: border-color var(--duration-base) var(--ease-standard),
+              box-shadow var(--duration-base) var(--ease-standard),
+              transform var(--duration-base) var(--ease-standard),
+              opacity var(--duration-slow) var(--ease-standard),
+              translate var(--duration-slow) var(--ease-standard);
+}
+.category-tile[data-reveal] {
+  transition: transform var(--duration-base) var(--ease-standard),
+              opacity var(--duration-slow) var(--ease-standard),
+              translate var(--duration-slow) var(--ease-standard);
+}
 
 @media (prefers-reduced-motion: reduce) {
-  [data-reveal] { opacity: 1; transform: none; }
+  [data-reveal] { opacity: 1; translate: 0 0; }
 }
 
-/* ---- Homepage entrance sequence ---- */
-.entrance-mark {
-  opacity: 0;
-  transform: scale(0.92);
-  animation: entrance-pop var(--duration-slow) var(--ease-standard) forwards;
+/* =========================================================================
+   Brand intro -- "The Aperture". PRIME.FINDS's one recurring visual motif:
+   a ring of light opening to reveal something in the dark -- discovery,
+   literally staged. The intro is this motif's first and fullest statement;
+   the same iris shape closes the intro, and its logic (a named element
+   scaling from a small trigger into a large destination) is what drives
+   the category/product view-transition morphs elsewhere in the CSS.
+
+   Two variants, chosen by js/components/brandIntro.js based on whether
+   this browser has ever visited before (localStorage, not per-session):
+
+   FULL (true first visit, ~1.7s) -- a thin gold ring scales up from a
+   point, the mark racks into focus inside it, they hold together a beat,
+   then both dissolve as the kinetic wordmark reveals left-to-right behind
+   a traveling glint of light (the ring's light, now sweeping horizontally)
+   while its letter-spacing collapses, a gold rule draws underneath, then
+   the whole overlay opens through the same iris shape to release the page.
+   A few drifting points of gold dust give the black field depth without
+   ever reading as decoration -- pure CSS, no canvas, no cost off-screen.
+
+   QUICK (returning visitor, new session, ~700ms) -- the ring and mark
+   play, no wordmark stage, straight to the iris release. Still the same
+   signature, never a tax on someone who already knows this site.
+
+   Homepage only. Skippable on any click/key. Never plays under
+   prefers-reduced-motion.
+   ========================================================================= */
+.brand-intro {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-intro);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  background: var(--color-bg);
+  cursor: pointer;
+  clip-path: circle(150% at 50% 50%);
+  overflow: hidden;
 }
-.entrance-headline {
-  opacity: 0;
-  transform: translateY(16px);
-  animation: entrance-rise var(--duration-slow) var(--ease-standard) forwards;
-  animation-delay: 160ms;
-}
-.entrance-sub {
-  opacity: 0;
-  transform: translateY(14px);
-  animation: entrance-rise var(--duration-slow) var(--ease-standard) forwards;
-  animation-delay: 280ms;
-}
-.entrance-cta {
-  opacity: 0;
-  transform: translateY(12px);
-  animation: entrance-rise var(--duration-slow) var(--ease-standard) forwards;
-  animation-delay: 380ms;
+.brand-intro.is-playing { display: flex; }
+.brand-intro.is-done {
+  animation: intro-iris-out 680ms cubic-bezier(0.65, 0, 0.35, 1) forwards;
 }
 
-@keyframes entrance-pop {
-  to { opacity: 1; transform: scale(1); }
+.brand-intro__atmosphere {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
 }
-@keyframes entrance-rise {
-  to { opacity: 1; transform: translateY(0); }
+.brand-intro__atmosphere span {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--color-gold);
+  opacity: 0;
+  animation: intro-dust 3.2s ease-in-out infinite;
+}
+.brand-intro.is-quick .brand-intro__atmosphere { display: none; }
+
+.brand-intro__glow {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--color-gold-wash), transparent 70%);
+  opacity: 0;
+  animation: intro-glow-in 900ms var(--ease-out-strong) forwards 80ms;
+}
+
+/* The aperture ring -- the motif's clearest statement. A perfect circle,
+   the width of the ISO-style rings you'd find on real camera glass. */
+.brand-intro__ring {
+  position: absolute;
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  border: 1px solid var(--color-gold);
+  opacity: 0;
+  scale: 0.4;
+  animation: intro-ring-open 620ms var(--ease-out-strong) forwards 40ms;
+}
+.brand-intro.is-playing:not(.is-quick) .brand-intro__ring {
+  animation: intro-ring-open 620ms var(--ease-out-strong) forwards 40ms,
+             intro-ring-dissolve 340ms ease-in forwards 620ms;
+}
+.brand-intro__ring::before {
+  content: '';
+  position: absolute;
+  inset: -18px;
+  border-radius: 50%;
+  border: 1px solid var(--color-gold-dim);
+  opacity: 0.4;
+}
+
+.brand-intro__mark {
+  position: relative;
+  opacity: 0;
+  filter: blur(14px);
+  transform: scale(1.18);
+  animation: intro-mark-focus 560ms var(--ease-out-strong) forwards 120ms;
+}
+.brand-intro__mark img { height: 56px; width: auto; }
+.brand-intro.is-playing:not(.is-quick) .brand-intro__mark {
+  animation: intro-mark-focus 560ms var(--ease-out-strong) forwards 120ms,
+             intro-mark-out 300ms ease-in forwards 620ms;
+}
+.brand-intro.is-quick .brand-intro__mark {
+  animation: intro-mark-focus 480ms var(--ease-out-strong) forwards 120ms;
+}
+
+.brand-intro__word {
+  position: relative;
+  opacity: 0;
+  letter-spacing: 0.5em;
+  clip-path: inset(0 100% 0 0);
+  animation: intro-word-reveal 560ms var(--ease-out-strong) forwards 700ms,
+             intro-word-tracking 560ms var(--ease-out-strong) forwards 700ms;
+}
+.brand-intro__word img { height: 34px; width: auto; }
+.brand-intro.is-quick .brand-intro__word { display: none; }
+/* The glint that leads the reveal -- the ring's light, now travelling
+   horizontally across the wordmark as it's read into existence. */
+.brand-intro__word::after {
+  content: '';
+  position: absolute;
+  top: -6px; bottom: -6px;
+  width: 36px;
+  background: linear-gradient(90deg, transparent, rgba(232, 207, 138, 0.85), transparent);
+  translate: -36px 0;
+  pointer-events: none;
+  animation: intro-word-glint 620ms var(--ease-out-strong) forwards 700ms;
+}
+.brand-intro.is-quick .brand-intro__word::after { display: none; }
+
+.brand-intro__rule {
+  width: 64px;
+  height: 1px;
+  background: var(--color-gold);
+  transform: scaleX(0);
+  transform-origin: center;
+  animation: intro-rule-in 320ms var(--ease-standard) forwards 1140ms;
+}
+.brand-intro.is-quick .brand-intro__rule { display: none; }
+
+@keyframes intro-dust {
+  0% { opacity: 0; translate: 0 0; }
+  15% { opacity: 0.5; }
+  85% { opacity: 0.35; }
+  100% { opacity: 0; translate: var(--dust-x, 12px) var(--dust-y, -60px); }
+}
+@keyframes intro-glow-in {
+  to { opacity: 1; }
+}
+@keyframes intro-ring-open {
+  to { opacity: 1; scale: 1; }
+}
+@keyframes intro-ring-dissolve {
+  to { opacity: 0; scale: 1.35; }
+}
+@keyframes intro-mark-focus {
+  to { opacity: 1; filter: blur(0); transform: scale(1); }
+}
+@keyframes intro-mark-out {
+  to { opacity: 0; filter: blur(6px); transform: scale(0.92); }
+}
+@keyframes intro-word-reveal {
+  to { clip-path: inset(0 0 0 0); }
+}
+@keyframes intro-word-tracking {
+  to { opacity: 1; letter-spacing: 0.06em; }
+}
+@keyframes intro-word-glint {
+  to { translate: 340px 0; }
+}
+@keyframes intro-rule-in {
+  to { transform: scaleX(1); }
+}
+@keyframes intro-iris-out {
+  to { clip-path: circle(0% at 50% 50%); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .entrance-mark, .entrance-headline, .entrance-sub, .entrance-cta {
-    animation: none;
-    opacity: 1;
-    transform: none;
-  }
+  .brand-intro { display: none !important; }
+}
+
+/* ---- Homepage hero entrance ----
+   One coordinated rise, not a checklist of separately-timed elements --
+   the eyebrow, headline and CTA move together as a single gesture, and the
+   floating product collage staggers in slightly behind it so the headline
+   always reads first. */
+.hero-enter {
+  opacity: 0;
+  translate: 0 22px;
+  animation: hero-rise 720ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.hero-enter--1 { animation-delay: 80ms; }
+.hero-enter--2 { animation-delay: 180ms; }
+.hero-enter--3 { animation-delay: 280ms; }
+
+.hero-collage__item {
+  opacity: 0;
+  translate: 0 30px;
+  animation: hero-rise 820ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.hero-collage__item--1 { animation-delay: 200ms; }
+.hero-collage__item--2 { animation-delay: 340ms; }
+.hero-collage__item--3 { animation-delay: 460ms; }
+
+@keyframes hero-rise {
+  to { opacity: 1; translate: 0 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-enter, .hero-collage__item { animation: none; opacity: 1; translate: 0 0; }
+}
+
+/* ---- Product detail entrance ----
+   The same "one coordinated rise" logic as the hero, in five beats instead
+   of three: index/category, title, price, the supporting detail (desc +
+   why-we-like-it + highlights + tags, entering together as one group, not
+   as four separate events), then the CTA lands last -- so the eye is
+   handed the price before it's handed a reason to click. */
+.pd-enter {
+  opacity: 0;
+  translate: 0 16px;
+  animation: hero-rise 640ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.pd-enter--1 { animation-delay: 40ms; }
+.pd-enter--2 { animation-delay: 120ms; }
+.pd-enter--3 { animation-delay: 200ms; }
+.pd-enter--4 { animation-delay: 280ms; }
+.pd-enter--5 { animation-delay: 360ms; }
+
+.pd-gallery-enter {
+  opacity: 0;
+  scale: 1.03;
+  filter: blur(6px);
+  animation: pd-gallery-in 720ms var(--ease-out-strong) forwards;
+}
+@keyframes pd-gallery-in {
+  to { opacity: 1; scale: 1; filter: blur(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pd-enter, .pd-gallery-enter { animation: none; opacity: 1; translate: 0 0; scale: 1; filter: none; }
 }
 
 /* ---- Loading spinner ---- */

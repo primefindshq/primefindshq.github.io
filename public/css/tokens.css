@@ -3,53 +3,72 @@
    Single source of truth for color, type, spacing, radius, shadow, motion.
    Every other stylesheet should read these variables rather than hardcode
    raw values, so the whole visual system can be retuned from one file.
+
+   Direction: "The Archive" — PRIME.FINDS reads like a collector's catalog,
+   not a storefront. Confident oversized serif type, near-black ink instead
+   of soft dark-mode grey, sharp/near-sharp corners instead of rounded app
+   chrome, gold used as a rare accent (rule lines, single digits, one CTA)
+   rather than a wash over everything. Everything traces back to these
+   tokens so the system stays coherent as it's applied across the site.
    ========================================================================= */
 
 :root {
-  /* ---- Color: surface ---- */
-  --color-bg: #0a0a0b;
-  --color-bg-raised: #131315;
-  --color-bg-elevated: #18181b;
-  --color-bg-overlay: rgba(8, 8, 9, 0.86);
-  --color-border: #2a2a2d;
-  --color-border-strong: #3a3a3d;
+  /* ---- Color: surface ----
+     True ink black (not dark-grey #0a0a0b) so gold and bone-white have
+     something to actually cut against. */
+  --color-bg: #060607;
+  --color-bg-raised: #101012;
+  --color-bg-elevated: #17171a;
+  --color-bg-overlay: rgba(4, 4, 5, 0.94);
+  --color-border: #232326;
+  --color-border-strong: #37373b;
 
   /* ---- Color: text ---- */
-  --color-text: #f5f1e8;
-  --color-text-dim: #a8a6a0;
-  --color-text-faint: #706e68;
-  --color-text-on-gold: #14120a;
+  --color-text: #f6f2e9;
+  --color-text-dim: #a3a099;
+  --color-text-faint: #6b6863;
+  --color-text-on-gold: #120f08;
 
-  /* ---- Color: gold accent (metallic, not bright yellow) ---- */
+  /* ---- Color: gold accent (metallic, not bright yellow) ----
+     One accent, used sparingly: rule lines, a digit, a single CTA, a hover
+     edge. Never a background wash across a whole section. */
   --color-gold: #c9a24b;
   --color-gold-light: #e8cf8a;
   --color-gold-dim: #8a6f34;
-  --color-gold-wash: rgba(201, 162, 75, 0.12);
+  --color-gold-wash: rgba(201, 162, 75, 0.1);
   --gradient-gold: linear-gradient(135deg, var(--color-gold-light), var(--color-gold) 55%, var(--color-gold-dim));
 
   /* ---- Color: state ---- */
   --color-success: #7fae83;
   --color-error: #c96a5a;
 
-  /* ---- Typography ---- */
+  /* ---- Typography ----
+     Fraunces carries the brand voice at real scale (this is an editorial
+     mark, not a polite heading font). Inter stays neutral for body copy.
+     A mono stack is the third voice: catalog metadata (price, index,
+     category tag) reads like a specimen label, not UI chrome. */
   --font-display: 'Fraunces', 'Georgia', serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', 'Cascadia Code', Consolas, monospace;
 
-  --fs-display-xl: clamp(2.75rem, 6vw, 5.5rem);
-  --fs-display-lg: clamp(2.1rem, 4.4vw, 3.4rem);
+  --fs-display-hero: clamp(3.4rem, 9vw, 8.4rem);
+  --fs-display-xl: clamp(2.75rem, 6vw, 6rem);
+  --fs-display-lg: clamp(2.1rem, 4.4vw, 3.6rem);
   --fs-display-md: clamp(1.6rem, 2.8vw, 2.25rem);
   --fs-display-sm: clamp(1.25rem, 1.8vw, 1.6rem);
   --fs-body-lg: 1.125rem;
   --fs-body: 1rem;
   --fs-body-sm: 0.875rem;
   --fs-caption: 0.75rem;
+  --fs-micro: 0.6875rem;
 
-  --lh-tight: 1.08;
+  --lh-tight: 1.02;
   --lh-snug: 1.3;
   --lh-normal: 1.6;
 
   --tracking-wide: 0.14em;
   --tracking-mid: 0.06em;
+  --tracking-tight: -0.02em;
 
   /* ---- Spacing scale ---- */
   --space-3xs: 0.25rem;
@@ -61,38 +80,63 @@
   --space-xl: 3rem;
   --space-2xl: 4.5rem;
   --space-3xl: 7rem;
+  --space-4xl: 10rem;
 
-  --container-max: 1360px;
-  --container-pad: clamp(1.25rem, 4vw, 3rem);
+  --container-max: 1440px;
+  --container-pad: clamp(1.25rem, 4vw, 3.5rem);
 
-  /* ---- Radius ---- */
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 14px;
+  /* ---- Radius ----
+     Sharper than a typical SaaS card system on purpose -- soft rounded
+     corners read as "app", near-square corners read as "object catalog".
+     Reserved for full-round on pills/avatars only. */
+  --radius-sm: 2px;
+  --radius-md: 3px;
+  --radius-lg: 6px;
   --radius-full: 999px;
 
   /* ---- Shadow ---- */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
-  --shadow-lg: 0 20px 48px rgba(0, 0, 0, 0.55);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 24px 56px rgba(0, 0, 0, 0.6);
   --shadow-gold: 0 8px 28px rgba(201, 162, 75, 0.16);
+  --shadow-card-hover: 0 24px 44px rgba(0, 0, 0, 0.55), 0 2px 0 rgba(201, 162, 75, 0.12);
 
-  /* ---- Motion ---- */
+  /* ---- Motion ----
+     PRIME.FINDS's signature motion language, in four curves:
+       ease-standard   general-purpose UI motion (reveals, most transitions)
+       ease-out-strong  entrances that need real punch (hero, intro, rails)
+       ease-in-out      things that move ON screen (image swaps, drags)
+       ease-spring      tactile feedback that should feel released, not
+                        stopped -- magnetic pulls, press feedback settling
+     Duration follows the same logic everywhere: press < hover < entrance <
+     page-level moment. Never invent a fifth curve or a one-off duration in
+     a component file -- extend this list instead. */
   --ease-standard: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out-strong: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --duration-instant: 90ms;
   --duration-fast: 150ms;
   --duration-base: 280ms;
   --duration-slow: 520ms;
+  --duration-intro: 1500ms;
+  --duration-intro-return: 650ms;
 
   /* ---- Z-index scale ---- */
   --z-header: 100;
+  --z-rail-control: 150;
   --z-overlay: 200;
   --z-toast: 300;
+  --z-intro: 1000;
 }
 
 @media (prefers-reduced-motion: reduce) {
   :root {
+    --duration-instant: 0ms;
     --duration-fast: 0ms;
     --duration-base: 0ms;
     --duration-slow: 0ms;
+    --duration-intro: 0ms;
+    --duration-intro-return: 0ms;
   }
 }

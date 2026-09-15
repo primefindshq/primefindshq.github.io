@@ -2,116 +2,172 @@
    PRIME.FINDS — Page-specific styles
    ========================================================================= */
 
-/* ---- Hero ---- */
+/* ---- Hero ----
+   Asymmetric split: an oversized headline carries the first five seconds,
+   a rotated collage of real product photography stands in as proof rather
+   than decoration. No hero background art, no centered layout -- the
+   product itself is the visual. */
 .hero {
   position: relative;
-  display: flex;
-  align-items: center;
-  min-height: 88vh;
+  padding-block: var(--space-xl) var(--space-3xl);
   overflow: hidden;
   border-bottom: 1px solid var(--color-border);
 }
-.hero__bg {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-}
-.hero__bg img { width: 100%; height: 100%; opacity: 0.9; }
-.hero__bg::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(10,10,11,0.35) 0%, rgba(10,10,11,0.55) 55%, var(--color-bg) 100%);
-}
-.hero__content {
-  position: relative;
-  z-index: 1;
-  max-width: 880px;
-  padding-block: var(--space-3xl) var(--space-2xl);
-}
-.hero__eyebrow {
-  display: inline-flex;
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
   align-items: center;
-  gap: var(--space-2xs);
-  color: var(--color-gold-light);
-  font-size: var(--fs-body-sm);
-  letter-spacing: var(--tracking-wide);
-  text-transform: uppercase;
-  margin-bottom: var(--space-md);
+  gap: var(--space-2xl);
+  min-height: 62vh;
 }
+@media (max-width: 900px) {
+  .hero__grid { grid-template-columns: 1fr; min-height: auto; gap: 0; }
+}
+
 .hero__title {
-  font-size: var(--fs-display-xl);
+  font-size: var(--fs-display-hero);
+  line-height: 0.98;
+  letter-spacing: var(--tracking-tight);
   color: var(--color-text);
-  margin-bottom: var(--space-md);
 }
-.hero__title .accent { color: var(--color-gold); }
+.hero__title .accent { color: var(--color-gold); font-style: italic; }
 .hero__sub {
+  margin-top: var(--space-md);
   font-size: var(--fs-body-lg);
   color: var(--color-text-dim);
-  max-width: 46ch;
-  margin-bottom: var(--space-lg);
+  max-width: 40ch;
 }
 .hero__ctas {
+  margin-top: var(--space-lg);
   display: flex;
-  gap: var(--space-sm);
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+.hero__ctas-note {
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  color: var(--color-text-faint);
+  letter-spacing: var(--tracking-mid);
+  text-transform: uppercase;
+}
+
+.hero__collage {
+  position: relative;
+  height: 460px;
+}
+/* A few pixels of scroll-linked parallax on the collage as a whole -- the
+   container only, never the individual photos, which already carry hover
+   and entrance motion of their own on the same `translate` property.
+   Scroll-driven, so it costs nothing (runs off the main thread, no JS scroll
+   listener) and simply does nothing in browsers that lack it yet. */
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .hero__collage {
+      animation: hero-parallax linear both;
+      animation-timeline: scroll(root block);
+      animation-range: 0 70vh;
+    }
+    @keyframes hero-parallax {
+      to { translate: 0 34px; }
+    }
+  }
+}
+@media (max-width: 900px) {
+  .hero__collage { height: 300px; margin-top: var(--space-xl); }
+}
+@media (max-width: 560px) {
+  .hero__collage { height: 260px; }
+}
+.hero-collage__item {
+  position: absolute;
+  border: 1px solid var(--color-border-strong);
+  background: var(--color-bg-raised);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  transition: rotate var(--duration-base) var(--ease-standard), translate var(--duration-base) var(--ease-standard);
+}
+.hero-collage__item:hover { rotate: 0deg !important; translate: 0 -6px; z-index: 4 !important; }
+.hero-collage__item img { width: 100%; height: 100%; object-fit: contain; background: var(--color-bg-elevated); }
+.hero-collage__item--1 { width: 56%; aspect-ratio: 4/5; top: 2%; left: 2%; z-index: 3; rotate: -4deg; }
+.hero-collage__item--2 { width: 44%; aspect-ratio: 4/5; bottom: 0; right: 0; z-index: 2; rotate: 5deg; }
+.hero-collage__item--3 { width: 32%; aspect-ratio: 1/1; top: 14%; right: 10%; z-index: 1; rotate: -7deg; }
+@media (max-width: 900px) {
+  .hero-collage__item--1 { width: 48%; left: 0; }
+  .hero-collage__item--2 { width: 38%; }
+  .hero-collage__item--3 { display: none; }
+}
+
+/* ---- Section framing shared across homepage sections ---- */
+.section-head--split {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
   flex-wrap: wrap;
 }
 
-/* ---- Featured product (editorial) ---- */
-.featured-product {
+/* ---- Editorial feature ----
+   The homepage's one dramatic full-bleed moment: a single hand-picked
+   product presented as a magazine spread, not a card. The "why we like
+   it" copy runs as a real pull-quote in the display face, not a boxed
+   callout. */
+.editorial {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-2xl);
-  align-items: center;
-  padding: var(--space-2xl);
+  grid-template-columns: 1.1fr 0.9fr;
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  background: linear-gradient(160deg, var(--color-bg-raised), var(--color-bg));
-  position: relative;
+  background: var(--color-bg-raised);
   overflow: hidden;
 }
-.featured-product::before {
-  content: '';
-  position: absolute;
-  top: -30%; right: -10%;
-  width: 60%; height: 160%;
-  background: radial-gradient(circle, var(--color-gold-wash), transparent 70%);
-  pointer-events: none;
-}
-.featured-product__media {
+@media (max-width: 900px) { .editorial { grid-template-columns: 1fr; } }
+.editorial__media {
   position: relative;
   aspect-ratio: 4/5;
-  border-radius: var(--radius-md);
+  background: var(--color-bg-elevated);
   overflow: hidden;
 }
-.featured-product__text { position: relative; }
-.featured-product__label {
-  font-family: var(--font-body);
-  font-size: var(--fs-caption);
-  font-weight: 700;
+@media (max-width: 900px) { .editorial__media { aspect-ratio: 4/3; } }
+.editorial__media img {
+  width: 100%; height: 100%;
+  object-fit: contain;
+  transition: transform 800ms var(--ease-out-strong);
+}
+.editorial:hover .editorial__media img { transform: scale(1.03); }
+.editorial__text {
+  padding: var(--space-2xl) var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 900px) { .editorial__text { padding: var(--space-xl) var(--space-lg); } }
+.editorial__label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
   color: var(--color-gold);
   margin-bottom: var(--space-sm);
 }
-.featured-product__title {
-  font-size: var(--fs-display-lg);
-  margin-bottom: var(--space-sm);
-}
-.featured-product__desc {
-  color: var(--color-text-dim);
-  font-size: var(--fs-body-lg);
-  margin-bottom: var(--space-lg);
-  max-width: 48ch;
-}
-.featured-product__price {
+.editorial__quote {
   font-family: var(--font-display);
-  font-size: 1.4rem;
+  font-style: italic;
+  font-size: var(--fs-display-md);
+  line-height: 1.18;
+  color: var(--color-text);
+  margin-bottom: var(--space-md);
+}
+.editorial__name {
+  font-size: var(--fs-body-lg);
+  font-weight: 600;
+  color: var(--color-text-dim);
   margin-bottom: var(--space-lg);
 }
-
-@media (max-width: 860px) {
-  .featured-product { grid-template-columns: 1fr; padding: var(--space-lg); gap: var(--space-lg); }
+.editorial__price {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--color-gold-light);
+  margin-bottom: var(--space-lg);
 }
 
 /* ---- Search overlay ---- */
@@ -135,13 +191,14 @@
   max-width: 720px;
   background: var(--color-bg-raised);
   border: 1px solid var(--color-border-strong);
-  border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
   padding: var(--space-lg);
-  transform: translateY(-12px);
-  transition: transform var(--duration-base) var(--ease-standard);
+  transform: translateY(-16px) scale(0.97);
+  filter: blur(4px);
+  transition: transform var(--duration-base) var(--ease-out-strong),
+              filter var(--duration-base) var(--ease-out-strong);
 }
-.search-overlay.is-open .search-overlay__panel { transform: translateY(0); }
+.search-overlay.is-open .search-overlay__panel { transform: translateY(0) scale(1); filter: blur(0); }
 .search-overlay__input-row {
   display: flex;
   align-items: center;
@@ -173,20 +230,67 @@
   align-items: center;
   gap: var(--space-sm);
   padding: var(--space-xs);
-  border-radius: var(--radius-sm);
-  transition: background var(--duration-fast) var(--ease-standard);
+  transition: background var(--duration-fast) var(--ease-standard),
+              opacity 180ms var(--ease-standard),
+              translate 180ms var(--ease-standard);
 }
 .search-result:hover, .search-result:focus-visible { background: var(--color-gold-wash); }
-.search-result img { width: 48px; height: 48px; border-radius: var(--radius-sm); flex-shrink: 0; }
+.search-result[data-reveal] { opacity: 0; translate: 0 6px; }
+.search-result[data-reveal].is-visible { opacity: 1; translate: 0 0; }
+.search-result img { width: 48px; height: 48px; flex-shrink: 0; object-fit: contain; background: var(--color-bg-elevated); }
 .search-result__name { font-weight: 600; font-size: var(--fs-body-sm); }
-.search-result__meta { font-size: var(--fs-caption); color: var(--color-text-faint); }
+.search-result__meta { font-size: var(--fs-caption); color: var(--color-text-faint); font-family: var(--font-mono); }
 .search-overlay__hint {
   color: var(--color-text-faint);
   font-size: var(--fs-caption);
   margin-top: var(--space-sm);
 }
+.search-suggest {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs);
+  margin-top: var(--space-sm);
+}
+.search-suggest__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px 8px 14px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border-strong);
+  font-size: var(--fs-body-sm);
+  color: var(--color-text-dim);
+  opacity: 0;
+  translate: 0 6px;
+  transition: border-color var(--duration-fast) var(--ease-standard),
+              color var(--duration-fast) var(--ease-standard),
+              opacity 200ms var(--ease-standard),
+              translate 200ms var(--ease-standard);
+}
+.search-suggest__chip.is-visible { opacity: 1; translate: 0 0; }
+.search-suggest__chip:hover { border-color: var(--color-gold); color: var(--color-text); }
+.search-suggest__chip-count {
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  color: var(--color-text-faint);
+}
 
 /* ---- Category page ---- */
+.category-hero {
+  position: relative;
+  overflow: hidden;
+}
+.category-hero__watermark {
+  position: absolute;
+  top: -10%;
+  right: -6%;
+  width: 46%;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+}
+.category-hero__watermark img { width: 100%; height: auto; }
+.category-hero__content { position: relative; z-index: 1; }
 .category-hero__desc { color: var(--color-text-dim); font-size: var(--fs-body-lg); max-width: 60ch; margin-top: var(--space-sm); }
 .category-layout {
   display: grid;
@@ -203,68 +307,110 @@
 }
 @media (max-width: 900px) { .category-filters { position: static; } }
 
-/* ---- Product detail page ---- */
+/* ---- Product detail page ----
+   A two-act stage: the product gets most of the width and all of the
+   silence around it, the info column stays compact and confident rather
+   than trying to fill the same visual weight as the photo. */
 .product-detail {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.2fr 1fr;
   gap: var(--space-2xl);
   align-items: start;
 }
 @media (max-width: 900px) {
   .product-detail { grid-template-columns: 1fr; gap: var(--space-lg); }
 }
+.product-detail__gallery { position: sticky; top: 112px; }
+@media (max-width: 900px) { .product-detail__gallery { position: static; } }
 .product-detail__gallery-main {
-  aspect-ratio: 1/1;
-  border-radius: var(--radius-md);
+  position: relative;
+  aspect-ratio: 4/5;
   overflow: hidden;
   border: 1px solid var(--color-border);
   margin-bottom: var(--space-xs);
-  background: var(--color-bg-elevated);
+  background: var(--color-bg-raised);
 }
 /* Some product photos arrive as non-square source images that must display
-   uncropped (see prd-0090+ onward) -- contain them within the square frame
-   instead of the sitewide cover default, letterboxed on the themed bg. */
+   uncropped -- contain them within the frame instead of the sitewide cover
+   default, letterboxed on the themed bg. */
 .product-detail__gallery-main img,
 .product-detail__thumb img {
   object-fit: contain;
 }
+.product-detail__gallery-main img {
+  transition: opacity 140ms var(--ease-standard), filter 140ms var(--ease-standard), scale 900ms var(--ease-out-strong);
+}
+.product-detail__gallery-main:hover img { scale: 1.035; }
+.product-detail__gallery-main img.is-swapping {
+  opacity: 0;
+  filter: blur(8px);
+}
+/* Same restrained sheen as the product card, at a scale that matches how
+   much more room this photo has to breathe. */
+.product-detail__gallery-main::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(115deg, transparent 42%, rgba(232, 207, 138, 0.09) 50%, transparent 58%);
+  translate: -140% 0;
+  transition: translate 1100ms var(--ease-in-out);
+}
+.product-detail__gallery-main:hover::after { translate: 140% 0; }
 .product-detail__thumbs {
   display: flex;
   gap: var(--space-2xs);
 }
 .product-detail__thumb {
-  width: 72px; height: 72px;
-  border-radius: var(--radius-sm);
+  width: 68px; height: 68px;
   overflow: hidden;
   border: 1px solid var(--color-border);
   cursor: pointer;
+  background: var(--color-bg-raised);
   transition: border-color var(--duration-fast) var(--ease-standard);
 }
 .product-detail__thumb.is-active,
 .product-detail__thumb:hover { border-color: var(--color-gold); }
 
-.product-detail__category { color: var(--color-gold); font-size: var(--fs-caption); font-weight: 600; letter-spacing: var(--tracking-wide); text-transform: uppercase; margin-bottom: var(--space-xs); }
+.product-detail__index {
+  margin-bottom: var(--space-sm);
+}
+.product-detail__category { color: var(--color-text-faint); font-family: var(--font-mono); font-size: var(--fs-micro); letter-spacing: var(--tracking-wide); text-transform: uppercase; margin-bottom: var(--space-xs); }
 .product-detail__title { font-size: var(--fs-display-lg); margin-bottom: var(--space-sm); }
 .product-detail__meta-row { display: flex; align-items: center; gap: var(--space-md); margin-bottom: var(--space-md); flex-wrap: wrap; }
-.product-detail__price { font-family: var(--font-display); font-size: 1.75rem; }
+.product-detail__price { font-family: var(--font-display); font-size: 2rem; color: var(--color-gold-light); }
 .product-detail__desc { color: var(--color-text-dim); margin-bottom: var(--space-lg); font-size: var(--fs-body-lg); }
 
 .why-we-like-it {
+  position: relative;
+  overflow: hidden;
   background: var(--color-bg-raised);
   border: 1px solid var(--color-border);
-  border-left: 3px solid var(--color-gold);
-  border-radius: var(--radius-sm);
   padding: var(--space-md);
   margin-bottom: var(--space-lg);
 }
+/* Same radial gold-wash device used behind the homepage editorial feature --
+   a recurring, recognizable way this brand marks an editorial aside,
+   instead of a generic colored-border callout box. */
+.why-we-like-it::before {
+  content: '';
+  position: absolute;
+  top: -40%; left: -15%;
+  width: 70%; height: 180%;
+  background: radial-gradient(circle, var(--color-gold-wash), transparent 70%);
+  pointer-events: none;
+}
 .why-we-like-it__label {
-  font-size: var(--fs-caption);
-  font-weight: 700;
+  position: relative;
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  font-weight: 600;
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
   color: var(--color-gold);
   margin-bottom: var(--space-2xs);
 }
+.why-we-like-it p { position: relative; font-family: var(--font-display); font-size: 1.05rem; }
 
 .highlights-list { display: flex; flex-direction: column; gap: var(--space-2xs); margin-bottom: var(--space-lg); }
 .highlights-list li {
@@ -303,7 +449,7 @@
   gap: var(--space-lg);
 }
 @media (max-width: 760px) { .value-grid { grid-template-columns: 1fr; } }
-.value-item__num { font-family: var(--font-display); color: var(--color-gold-dim); font-size: var(--fs-display-sm); margin-bottom: var(--space-2xs); }
+.value-item__num { font-family: var(--font-mono); color: var(--color-gold-dim); font-size: var(--fs-display-sm); margin-bottom: var(--space-2xs); }
 .value-item__title { font-size: var(--fs-body-lg); font-weight: 600; margin-bottom: var(--space-2xs); }
 .value-item__desc { color: var(--color-text-dim); font-size: var(--fs-body-sm); }
 

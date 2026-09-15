@@ -21,11 +21,27 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   const mainImg = qs('[data-gallery-main]', app);
   const thumbs = qsa('[data-gallery-thumb]', app);
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   thumbs.forEach((thumb) => {
     thumb.addEventListener('click', () => {
+      if (thumb.classList.contains('is-active')) return;
       thumbs.forEach((t) => t.classList.remove('is-active'));
       thumb.classList.add('is-active');
-      if (mainImg) mainImg.src = thumb.dataset.fullSrc;
+      if (!mainImg) return;
+      const nextSrc = thumb.dataset.fullSrc;
+      if (reduceMotion) {
+        mainImg.src = nextSrc;
+        return;
+      }
+      // Briefly fade + blur the outgoing image before swapping `src`, so the
+      // old and new photo are never both visible in the same frame -- a
+      // plain instant swap reads as a jump cut between two products' worth
+      // of lighting and framing.
+      mainImg.classList.add('is-swapping');
+      window.setTimeout(() => {
+        mainImg.src = nextSrc;
+        mainImg.classList.remove('is-swapping');
+      }, 140);
     });
   });
 });

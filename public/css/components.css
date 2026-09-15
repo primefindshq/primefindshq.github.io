@@ -1,5 +1,10 @@
 /* =========================================================================
    PRIME.FINDS — Components
+   Shape system: pills/chips are full-round (the only rounded things on the
+   site); everything else -- cards, media, inputs, buttons -- is sharp or
+   near-sharp (radius-sm/md). Color system: gold is reserved for exactly one
+   accent per component (a price, a hover edge, a rule line), never a wash
+   across a whole surface.
    ========================================================================= */
 
 /* ---- Buttons ---- */
@@ -18,7 +23,12 @@
   text-transform: uppercase;
   cursor: pointer;
   white-space: nowrap;
+  /* `translate` carries the magnetic pull (js/components/magneticButton.js),
+     `transform` stays free for the :active press -- the same reason the
+     scroll-reveal system keeps the two properties apart (see animations.css). */
+  translate: var(--mag-x, 0) var(--mag-y, 0);
   transition: transform var(--duration-fast) var(--ease-standard),
+              translate 500ms var(--ease-spring),
               background var(--duration-base) var(--ease-standard),
               border-color var(--duration-base) var(--ease-standard),
               color var(--duration-base) var(--ease-standard);
@@ -26,10 +36,27 @@
 .btn:active { transform: scale(0.98); }
 
 .btn--primary {
+  position: relative;
+  overflow: hidden;
   background: var(--gradient-gold);
   color: var(--color-text-on-gold);
 }
 .btn--primary:hover { filter: brightness(1.08); box-shadow: var(--shadow-gold); }
+/* A single sweep of light on hover -- the gold surface catching light
+   rather than just brightening, the same restrained trick as the card and
+   gallery sheens elsewhere, sized for a button instead of a photo. */
+.btn--primary::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 35%, rgba(255, 255, 255, 0.35) 48%, transparent 61%);
+  translate: -130% 0;
+  pointer-events: none;
+}
+.btn--primary:hover::after {
+  translate: 130% 0;
+  transition: translate 650ms var(--ease-in-out);
+}
 
 .btn--secondary {
   background: transparent;
@@ -58,20 +85,20 @@
 }
 .btn--icon-trail:hover svg { transform: translateX(3px); }
 
-/* ---- Badges ---- */
+/* ---- Badges (pill -- the deliberate exception to the sharp-corner rule) --- */
 .badge {
   display: inline-flex;
   align-items: center;
   gap: 5px;
   padding: 4px 10px;
   border-radius: var(--radius-full);
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: var(--tracking-mid);
   text-transform: uppercase;
   border: 1px solid var(--color-border-strong);
   color: var(--color-text-dim);
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(4, 4, 5, 0.7);
   backdrop-filter: blur(6px);
 }
 .badge--gold {
@@ -82,7 +109,7 @@
 .badge--outline-gold {
   border-color: var(--color-gold-dim);
   color: var(--color-gold-light);
-  background: rgba(10, 10, 11, 0.5);
+  background: rgba(5, 5, 6, 0.6);
 }
 
 /* ---- Inputs ---- */
@@ -96,12 +123,14 @@
   border: 1px solid var(--color-border-strong);
   background: var(--color-bg-raised);
   transition: border-color var(--duration-fast) var(--ease-standard);
+  min-width: 0;
 }
 .input-field:focus-within { border-color: var(--color-gold); }
 .input-field svg { width: 16px; height: 16px; color: var(--color-text-faint); flex-shrink: 0; }
 .input-field input,
 .input-field select {
   flex: 1;
+  min-width: 0;
   background: transparent;
   border: none;
   color: var(--color-text);
@@ -116,48 +145,79 @@
   cursor: pointer;
 }
 
-/* ---- Product Card ---- */
+/* ---- Product Card ----
+   Cells in a hairline specimen grid (see .grid-products in layout.css --
+   the 1px gaps between cards are the grid's own background color showing
+   through, not individual card borders). Portrait media, Fraunces for the
+   product name so it reads as a catalog entry, mono metadata, and gold
+   spent on exactly one element: the price. */
 .product-card {
+  --tilt-x: 0deg;
+  --tilt-y: 0deg;
+  --card-lift: 0px;
   position: relative;
   display: flex;
   flex-direction: column;
   background: var(--color-bg-raised);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  transition: border-color var(--duration-base) var(--ease-standard),
-              transform var(--duration-base) var(--ease-standard),
-              box-shadow var(--duration-base) var(--ease-standard);
+  transform: perspective(1000px) translateY(var(--card-lift)) rotateX(var(--tilt-x)) rotateY(var(--tilt-y));
+  transition: background var(--duration-base) var(--ease-standard),
+              transform var(--duration-base) var(--ease-standard);
 }
-.product-card:hover {
-  border-color: var(--color-border-strong);
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+.product-card:hover { background: var(--color-bg-elevated); --card-lift: -4px; }
+/* The cursor-follow tilt (js/components/cardTilt.js) only makes sense with
+   a real pointer hovering a real 3D-capable viewport -- touch devices get
+   the lift and image zoom without the tilt math running for nothing. */
+@media (hover: none), (pointer: coarse) {
+  .product-card { --tilt-x: 0deg !important; --tilt-y: 0deg !important; }
 }
 
 .product-card__media {
   position: relative;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 5;
   overflow: hidden;
   background: var(--color-bg-elevated);
 }
 .product-card__media img {
   width: 100%;
   height: 100%;
-  /* Product photos aren't all pre-composited to a 1:1 canvas -- some must
-     display uncropped at their original aspect ratio. contain is a no-op
-     for the square ones and letterboxes the rest on the themed bg instead
-     of cropping them. */
+  /* Product photos aren't all pre-composited to the same canvas -- some
+     must display uncropped at their original aspect ratio. contain is a
+     no-op for images that already fill the frame and letterboxes the rest
+     on the themed bg instead of cropping them. */
   object-fit: contain;
-  transition: transform var(--duration-slow) var(--ease-standard);
+  transition: transform 650ms var(--ease-out-strong), filter 650ms var(--ease-out-strong);
 }
-.product-card:hover .product-card__media img { transform: scale(1.06); }
+.product-card:hover .product-card__media img { transform: scale(1.06); filter: brightness(1.04); }
+
+/* A single soft diagonal sheen, the kind of light a genuinely lit product
+   photo catches -- not a filter on the photo itself, a separate layer on
+   top, so the source image is never touched. */
+.product-card__media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(115deg, transparent 42%, rgba(232, 207, 138, 0.1) 50%, transparent 58%);
+  translate: -140% 0;
+  transition: translate 900ms var(--ease-in-out);
+}
+.product-card:hover .product-card__media::after { translate: 140% 0; }
+
+.product-card__index {
+  position: absolute;
+  top: var(--space-sm);
+  left: var(--space-sm);
+  z-index: 2;
+}
 
 .product-card__badges {
   position: absolute;
-  top: var(--space-xs);
-  left: var(--space-xs);
+  top: var(--space-sm);
+  right: var(--space-sm);
   display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   gap: 6px;
   z-index: 2;
 }
@@ -165,23 +225,24 @@
 .product-card__body {
   display: flex;
   flex-direction: column;
-  gap: var(--space-2xs);
-  padding: var(--space-sm);
+  gap: 5px;
+  padding: var(--space-md) var(--space-md) var(--space-sm);
   flex: 1;
 }
 
 .product-card__category {
-  font-size: 0.68rem;
-  font-weight: 600;
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
-  color: var(--color-gold);
+  color: var(--color-text-faint);
 }
 
 .product-card__name {
-  font-family: var(--font-body);
-  font-size: 0.98rem;
-  font-weight: 600;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.22;
   color: var(--color-text);
 }
 
@@ -199,11 +260,15 @@
 }
 
 .product-card__price {
+  display: inline-block;
   font-family: var(--font-display);
-  font-size: 1.15rem;
-  color: var(--color-text);
+  font-size: 1.2rem;
+  color: var(--color-gold-light);
+  transform-origin: left center;
+  transition: scale var(--duration-base) var(--ease-out-strong);
 }
-.product-card__price .currency-note { font-size: 0.65em; color: var(--color-text-faint); margin-left: 4px; }
+.product-card:hover .product-card__price { scale: 1.08; }
+.product-card__price .currency-note { font-size: 0.6em; color: var(--color-text-faint); margin-left: 4px; font-family: var(--font-body); }
 
 .rating {
   display: inline-flex;
@@ -214,26 +279,42 @@
 }
 .rating svg { width: 13px; height: 13px; color: var(--color-gold); }
 
-.product-card__cta {
+/* A hairline, not a boxed button -- the CTA stays quiet at rest and only
+   picks up gold when the card is actually being considered. */
+.product-card__cta { padding: 0 var(--space-md) var(--space-md); }
+.product-card__cta .btn--ghost {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--space-xs);
-  padding: var(--space-xs) var(--space-sm);
+  width: 100%;
+  padding-top: var(--space-xs);
   border-top: 1px solid var(--color-border);
-  font-size: var(--fs-caption);
-  font-weight: 600;
-  letter-spacing: var(--tracking-mid);
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
-  color: var(--color-text-dim);
-  transition: color var(--duration-base) var(--ease-standard), background var(--duration-base) var(--ease-standard);
+  color: var(--color-text-faint);
+  transition: color var(--duration-base) var(--ease-standard);
 }
-.product-card:hover .product-card__cta {
-  color: var(--color-gold-light);
-  background: var(--color-gold-wash);
+/* The gold rule draws in from the left instead of the whole hairline just
+   changing color -- the same "cut here" device as .rule-gold, playing out
+   as a hover reveal instead of sitting static. */
+.product-card__cta .btn--ghost::before {
+  content: '';
+  position: absolute;
+  top: -1px; left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--color-gold-dim);
+  scale: 0 1;
+  transform-origin: left;
+  transition: scale var(--duration-slow) var(--ease-out-strong);
 }
+.product-card:hover .product-card__cta .btn--ghost::before { scale: 1 1; }
+.product-card:hover .product-card__cta .btn--ghost { color: var(--color-gold-light); }
 .product-card__cta svg {
-  width: 13px; height: 13px;
+  width: 12px; height: 12px;
   transition: transform var(--duration-base) var(--ease-standard);
 }
 .product-card:hover .product-card__cta svg { transform: translateX(3px); }
@@ -241,70 +322,130 @@
 /* Card as a whole clickable link wrapper */
 a.product-card-link { display: block; }
 
+/* Tactile press feedback for touch -- most PRIME.FINDS traffic taps, it
+   doesn't hover, so the card itself needs to acknowledge the tap. */
+.product-card:has(.product-card-link:active) { background: var(--color-bg-elevated); }
+.product-card:has(.product-card-link:active) .product-card__media img { transform: scale(1.02); }
+
 .product-card__skeleton {
   background: linear-gradient(90deg, var(--color-bg-raised) 25%, var(--color-bg-elevated) 37%, var(--color-bg-raised) 63%);
   background-size: 400% 100%;
   animation: skeleton-shimmer 1.4s ease infinite;
-  border-radius: var(--radius-md);
-  aspect-ratio: 3/4;
+  aspect-ratio: 4/5;
 }
 @keyframes skeleton-shimmer {
   0% { background-position: 100% 50%; }
   100% { background-position: 0 50%; }
 }
 
-/* ---- Category Card ---- */
-.category-card {
+/* ---- Category Bento ----
+   The homepage's showcase entry into categories: a dense, asymmetric grid
+   (same hairline-grid language as the product catalog) rather than a row
+   of identical rounded tiles. See layout.css for the span pattern. */
+/* 7 categories, one twice as wide as the rest: 2 + 1+1+1 + 1+1+1 = exactly
+   8 unit-cells, tiling two full 4-column rows with nothing left empty. */
+.category-bento {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 208px;
+  gap: 1px;
+  background: var(--color-border);
+  border: 1px solid var(--color-border);
+}
+.category-bento .category-tile:first-child { grid-column: span 2; }
+@media (max-width: 760px) {
+  .category-bento { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 168px; }
+  .category-bento .category-tile:first-child { grid-column: span 2; }
+}
+
+.category-tile {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  min-height: 320px;
-  border-radius: var(--radius-md);
   overflow: hidden;
-  border: 1px solid var(--color-border);
-  transition: border-color var(--duration-base) var(--ease-standard), transform var(--duration-base) var(--ease-standard);
+  background: var(--color-bg);
 }
-.category-card:hover { border-color: var(--color-gold-dim); transform: translateY(-4px); }
-
-.category-card__media {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-}
-.category-card__media img {
+.category-tile__media { position: absolute; inset: 0; z-index: 0; }
+.category-tile__media img {
   width: 100%; height: 100%;
-  transition: transform var(--duration-slow) var(--ease-standard);
+  transition: transform 650ms var(--ease-out-strong);
 }
-.category-card:hover .category-card__media img { transform: scale(1.08); }
-.category-card__media::after {
+.category-tile:hover .category-tile__media img { transform: scale(1.06); }
+.category-tile__media::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(10,10,11,0.05) 20%, rgba(10,10,11,0.92) 100%);
+  background: linear-gradient(180deg, rgba(6,6,7,0.1) 30%, rgba(6,6,7,0.9) 100%);
 }
 
-.category-card__body {
+.category-tile__body {
   position: relative;
   z-index: 1;
   padding: var(--space-md);
+  transition: translate var(--duration-base) var(--ease-standard);
 }
-.category-card__name {
+.category-tile:hover .category-tile__body { translate: 0 -2px; }
+.category-tile__name {
   font-size: var(--fs-display-sm);
   color: var(--color-text);
-  margin-bottom: 4px;
+  margin-bottom: 3px;
+  transition: color var(--duration-fast) var(--ease-standard);
 }
-.category-card__desc {
-  color: var(--color-text-dim);
-  font-size: var(--fs-body-sm);
-  margin-bottom: var(--space-xs);
-}
-.category-card__count {
-  font-size: var(--fs-caption);
-  color: var(--color-gold-light);
+.category-tile:hover .category-tile__name { color: var(--color-gold-light); }
+.category-tile__count {
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  color: var(--color-text-faint);
   letter-spacing: var(--tracking-mid);
   text-transform: uppercase;
 }
+.category-bento .category-tile:first-child .category-tile__name { font-size: var(--fs-display-md); }
+
+/* The line-art icon draws itself in as the tile scrolls into view, like the
+   shape is being discovered rather than just sitting there --
+   js/components/categoryIconDraw.js measures each path's real length into
+   --dash-len so the draw is exact regardless of how different each icon's
+   silhouette is. Tied to the same scroll-reveal as the tile itself (not
+   :hover) so it plays for touch visitors too, who never trigger a hover
+   state at all. */
+.category-tile__icon-path {
+  stroke-dasharray: var(--dash-len, 1);
+  stroke-dashoffset: var(--dash-len, 1);
+  transition: stroke-dashoffset 1100ms var(--ease-out-strong) 200ms;
+}
+.category-tile.is-visible .category-tile__icon-path { stroke-dashoffset: 0; }
+
+/* ---- Horizontal rail ----
+   A scroll-snapped row for "Trending" -- browsed with a drag or a swipe
+   rather than scrolled past, so a handful of picks get sustained attention
+   instead of collapsing into just another grid. Native scroll-snap, no
+   scroll-hijacking. */
+.rail {
+  display: flex;
+  gap: var(--space-md);
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  scroll-padding-inline: var(--container-pad);
+  padding-bottom: var(--space-sm);
+  scrollbar-width: none;
+}
+.rail::-webkit-scrollbar { display: none; }
+.rail__item {
+  flex: 0 0 auto;
+  width: min(78vw, 320px);
+  scroll-snap-align: start;
+}
+.rail .product-card { height: 100%; background: var(--color-bg-raised); border: 1px solid var(--color-border); }
+.rail .product-card:hover { border-color: var(--color-gold-dim); }
+
+.rail-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xs);
+}
+.rail-controls .icon-btn:disabled { opacity: 0.3; cursor: default; }
+.rail-controls .icon-btn:disabled:hover { border-color: var(--color-border); background: transparent; }
 
 /* ---- Filter chips / sidebar ---- */
 .chip {
@@ -317,10 +458,14 @@ a.product-card-link { display: block; }
   font-size: var(--fs-body-sm);
   color: var(--color-text-dim);
   cursor: pointer;
-  transition: all var(--duration-fast) var(--ease-standard);
+  transition: border-color var(--duration-fast) var(--ease-standard),
+              color var(--duration-fast) var(--ease-standard),
+              background var(--duration-fast) var(--ease-standard),
+              transform var(--duration-fast) var(--ease-standard);
   background: transparent;
 }
 .chip:hover { border-color: var(--color-gold); color: var(--color-text); }
+.chip:active { transform: scale(0.96); }
 .chip.is-active {
   border-color: transparent;
   background: var(--gradient-gold);
@@ -363,7 +508,7 @@ a.product-card-link { display: block; }
   padding-bottom: var(--space-md);
   border-bottom: 1px solid var(--color-border);
 }
-.toolbar__count { color: var(--color-text-faint); font-size: var(--fs-body-sm); }
+.toolbar__count { color: var(--color-text-faint); font-size: var(--fs-body-sm); font-family: var(--font-mono); }
 .toolbar__controls { display: flex; align-items: center; gap: var(--space-sm); }
 
 /* ---- Empty / error / loading states ---- */
@@ -397,6 +542,7 @@ a.product-card-link { display: block; }
   border-radius: var(--radius-full);
   border: 1px solid var(--color-border-strong);
   font-size: var(--fs-caption);
+  font-family: var(--font-mono);
   color: var(--color-text-dim);
 }
 

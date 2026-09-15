@@ -40,8 +40,9 @@ CATEGORY_ICON_PATHS = {
     "home": "M -20 0 L 0 -18 L 20 0 M -14 0 V 16 H 14 V 0",
     "gaming": "M -20 4 a 8 8 0 0 1 8 -8 h 24 a 8 8 0 0 1 8 8 l 2 10 a 6 6 0 0 1 -10 5 l -6 -7 h -10 l -6 7 a 6 6 0 0 1 -10 -5 z",
     "travel": "M -14 -6 h 28 v 20 a 4 4 0 0 1 -4 4 h -20 a 4 4 0 0 1 -4 -4 z M -6 -6 v -6 a 4 4 0 0 1 4 -4 h 4 a 4 4 0 0 1 4 4 v 6",
-    "desk": "M -20 -10 h 40 v 6 h -40 z M -14 -4 v 18 M 14 -4 v 18",
-    "gift": "M -18 -4 h 36 v 22 h -36 z M -18 -4 v -6 h 36 v 6 M 0 -10 v 26 M 0 -10 c -4 -10 -16 -8 -14 0 c 2 6 10 4 14 0 c 4 -10 16 -8 14 0 c -2 6 -10 4 -14 0",
+    "desk-setup": "M -20 -10 h 40 v 6 h -40 z M -14 -4 v 18 M 14 -4 v 18",
+    "gifts": "M -18 -4 h 36 v 22 h -36 z M -18 -4 v -6 h 36 v 6 M 0 -10 v 26 M 0 -10 c -4 -10 -16 -8 -14 0 c 2 6 10 4 14 0 c 4 -10 16 -8 14 0 c -2 6 -10 4 -14 0",
+    "under-25": "M -14 14 L 14 -14 M -9 -13 a 4 4 0 1 0 0.1 0 z M 9 9 a 4 4 0 1 0 0.1 0 z",
     "value": "M 0 -20 a 20 20 0 1 0 0.1 0 z M -6 -6 h 12 v 4 h -12 z M -6 2 h 12 v 4 h -12 z",
 }
 
@@ -136,7 +137,7 @@ def category_tile(slug, width=1200, height=900):
     shapes.append(
         f'<g transform="translate({cx:.1f} {cy:.1f}) scale({scale/20:.3f})" '
         f'stroke="url(#gold-{uid})" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round">'
-        f'<path d="{path}"/></g>'
+        f'<path class="category-tile__icon-path" d="{path}"/></g>'
     )
     for i in range(4):
         y = height * (0.15 + i * 0.22)

@@ -10,13 +10,16 @@ export function productCardMarkup(product) {
   const badges = [];
   if (product.trending) badges.push('<span class="badge badge--gold">Trending</span>');
   if (product.featured) badges.push('<span class="badge badge--outline-gold">Featured</span>');
+  const indexLabel = `No. ${String(product.id).split('-').pop()}`;
 
   return `
     <article class="product-card" data-reveal>
       <a class="product-card-link" href="/product/${product.slug}/" aria-label="View ${escapeHtml(product.name)}">
         <div class="product-card__media">
+          <span class="product-card__index tag-mono">${escapeHtml(indexLabel)}</span>
           <div class="product-card__badges">${badges.join('')}</div>
           <img src="${product.image}" alt="${escapeHtml(product.name)}" loading="lazy" width="800" height="800"
+               style="view-transition-name: product-photo-${product.slug}"
                onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
         </div>
         <div class="product-card__body">
@@ -30,8 +33,7 @@ export function productCardMarkup(product) {
         </div>
       </a>
       <div class="product-card__cta">
-        <span>View details</span>
-        ${affiliateLinkMarkup(product, { label: 'View Product', className: 'btn--ghost btn--icon-trail' })}
+        ${affiliateLinkMarkup(product, { label: 'View at Amazon', className: 'btn--ghost btn--icon-trail' })}
       </div>
     </article>
   `;

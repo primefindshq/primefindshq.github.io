@@ -11,7 +11,7 @@
   <link rel="icon" href="/assets/logo/favicon-192.png" type="image/png" sizes="192x192" />
   <link rel="apple-touch-icon" href="/assets/logo/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
-  <meta name="theme-color" content="#0a0a0b" />
+  <meta name="theme-color" content="#060607" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="PRIME.FINDS" />
@@ -27,7 +27,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
   <link rel="stylesheet" href="/css/tokens.css" />
   <link rel="stylesheet" href="/css/base.css" />
   <link rel="stylesheet" href="/css/layout.css" />
@@ -38,32 +38,37 @@
 </head>
 <body>
   
+  
 <a class="skip-link" href="#main-content">Skip to content</a>
 <header class="site-header">
   <div class="container site-header__inner">
     <a class="brand-logo" href="/" aria-label="PRIME.FINDS home">
       <img src="/assets/logo/wordmark.png" alt="PRIME.FINDS" width="1075" height="580" />
     </a>
-    <nav class="main-nav" aria-label="Primary">
-      <ul class="main-nav__list"><li><a class="main-nav__link" href="/">Home</a></li><li><a class="main-nav__link" href="/#categories">Categories</a></li><li><a class="main-nav__link" href="/#trending">Trending</a></li><li><a class="main-nav__link" href="/#latest">Latest</a></li><li><a class="main-nav__link is-active" href="/about.html">About</a></li></ul>
-    </nav>
     <div class="header-actions">
       <button class="icon-btn" type="button" data-search-open aria-label="Search products"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="9" cy="9" r="6.5"/><path d="M18 18l-3.8-3.8"/></svg></button>
-      <button class="hamburger-btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
-        <span></span><span></span><span></span>
+      <button class="index-trigger" type="button" data-index-toggle aria-expanded="false" aria-controls="site-index" aria-label="Open site index">
+        <span class="index-trigger__glyph"><span></span><span></span></span>
+        Index
       </button>
     </div>
   </div>
 </header>
 
   
-<div class="mobile-menu" id="mobile-menu" data-mobile-menu>
-  <div class="mobile-menu__top">
+<div class="site-index" id="site-index" data-index-panel>
+  <div class="site-index__top">
     <a class="brand-logo" href="/" aria-label="PRIME.FINDS home"><img src="/assets/logo/wordmark.png" alt="PRIME.FINDS" width="1075" height="580" /></a>
-    <button class="icon-btn" type="button" data-menu-close aria-label="Close menu"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15"/></svg></button>
+    <button class="icon-btn" type="button" data-index-close aria-label="Close index"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15"/></svg></button>
   </div>
-  <ul class="mobile-menu__list"><li><a class="mobile-menu__link" href="/">Home</a></li><li><a class="mobile-menu__link" href="/#categories">Categories</a></li><li><a class="mobile-menu__link" href="/#trending">Trending</a></li><li><a class="mobile-menu__link" href="/#latest">Latest</a></li><li><a class="mobile-menu__link" href="/about.html">About</a></li></ul>
-  <p class="mobile-menu__footer">Curated products. Smart finds.</p>
+  <div class="site-index__body">
+    <ul class="site-index__nav-list"><li><a class="site-index__nav-link" href="/">Home</a></li><li><a class="site-index__nav-link" href="/#categories">Categories</a></li><li><a class="site-index__nav-link" href="/#trending">Trending</a></li><li><a class="site-index__nav-link" href="/#latest">Latest</a></li><li><a class="site-index__nav-link" href="/about.html">About</a></li></ul>
+    <div>
+      <span class="eyebrow site-index__cats-label">The Catalog</span>
+      <div class="site-index__cats"><a class="site-index__cat" href="/category/tech/"><span class="site-index__cat-name">Tech</span><span class="site-index__cat-count">13</span></a><a class="site-index__cat" href="/category/home/"><span class="site-index__cat-name">Home</span><span class="site-index__cat-count">27</span></a><a class="site-index__cat" href="/category/gaming/"><span class="site-index__cat-name">Gaming</span><span class="site-index__cat-count">09</span></a><a class="site-index__cat" href="/category/travel/"><span class="site-index__cat-name">Travel</span><span class="site-index__cat-count">19</span></a><a class="site-index__cat" href="/category/desk-setup/"><span class="site-index__cat-name">Desk Setup</span><span class="site-index__cat-count">15</span></a><a class="site-index__cat" href="/category/gifts/"><span class="site-index__cat-name">Gifts</span><span class="site-index__cat-count">24</span></a><a class="site-index__cat" href="/category/under-25/"><span class="site-index__cat-name">Under $25</span><span class="site-index__cat-count">07</span></a></div>
+    </div>
+  </div>
+  <p class="site-index__footer">Curated products. Smart finds.</p>
 </div>
 
   

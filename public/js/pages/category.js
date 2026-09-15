@@ -5,6 +5,7 @@
 import { getProducts, getProductsByCategory, filterProducts, searchProducts, sortProducts } from '../core/store.js';
 import { hydrateAffiliateLinks } from '../core/affiliate.js';
 import { productCardMarkup } from '../components/productCard.js';
+import { initCardTilt } from '../components/cardTilt.js';
 import { debounce, qs, qsa } from '../core/utils.js';
 import { track, EVENTS } from '../core/analytics.js';
 
@@ -46,19 +47,36 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     countEl.textContent = `${list.length} ${list.length === 1 ? 'find' : 'finds'}`;
 
-    if (!list.length) {
-      grid.innerHTML = `
+    const html = list.length
+      ? list.map(productCardMarkup).join('')
+      : `
         <div class="state-panel" style="grid-column: 1/-1;">
           <svg class="state-panel__icon" viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
           <p class="state-panel__title">No finds match those filters</p>
           <p>Try widening your price range or clearing a filter.</p>
         </div>`;
-      return;
-    }
 
-    grid.innerHTML = list.map(productCardMarkup).join('');
+    grid.innerHTML = html;
+    if (!list.length) return;
+
     hydrateAffiliateLinks(grid, bySlug, `category:${categorySlug}`);
-    grid.querySelectorAll('[data-reveal]').forEach((el) => el.classList.add('is-visible'));
+    initCardTilt(grid);
+    const cards = grid.querySelectorAll('[data-reveal]');
+    cards.forEach((el, i) => {
+      el.style.transitionDelay = `${Math.min(i, 3) * 45}ms`;
+      // Clear the inline delay once the entrance has played so it never
+      // lingers and dulls this card's next hover transition.
+      el.addEventListener('transitionend', () => { el.style.transitionDelay = ''; }, { once: true });
+    });
+    // Two rAFs so the browser actually paints the opacity:0 starting style
+    // before .is-visible is added -- adding it in the same tick as the
+    // innerHTML swap collapses both states into one frame and the fade
+    // never plays, which is why this grid used to just snap.
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        cards.forEach((el) => el.classList.add('is-visible'));
+      });
+    });
   }
 
   const debouncedSearch = debounce((value) => {

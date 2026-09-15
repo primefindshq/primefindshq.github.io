@@ -11,7 +11,7 @@
   <link rel="icon" href="/assets/logo/favicon-192.png" type="image/png" sizes="192x192" />
   <link rel="apple-touch-icon" href="/assets/logo/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
-  <meta name="theme-color" content="#0a0a0b" />
+  <meta name="theme-color" content="#060607" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="PRIME.FINDS" />
@@ -27,7 +27,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
   <link rel="stylesheet" href="/css/tokens.css" />
   <link rel="stylesheet" href="/css/base.css" />
   <link rel="stylesheet" href="/css/layout.css" />
@@ -38,32 +38,37 @@
 </head>
 <body>
   
+  
 <a class="skip-link" href="#main-content">Skip to content</a>
 <header class="site-header">
   <div class="container site-header__inner">
     <a class="brand-logo" href="/" aria-label="PRIME.FINDS home">
       <img src="/assets/logo/wordmark.png" alt="PRIME.FINDS" width="1075" height="580" />
     </a>
-    <nav class="main-nav" aria-label="Primary">
-      <ul class="main-nav__list"><li><a class="main-nav__link" href="/">Home</a></li><li><a class="main-nav__link" href="/#categories">Categories</a></li><li><a class="main-nav__link" href="/#trending">Trending</a></li><li><a class="main-nav__link" href="/#latest">Latest</a></li><li><a class="main-nav__link" href="/about.html">About</a></li></ul>
-    </nav>
     <div class="header-actions">
       <button class="icon-btn" type="button" data-search-open aria-label="Search products"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="9" cy="9" r="6.5"/><path d="M18 18l-3.8-3.8"/></svg></button>
-      <button class="hamburger-btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
-        <span></span><span></span><span></span>
+      <button class="index-trigger" type="button" data-index-toggle aria-expanded="false" aria-controls="site-index" aria-label="Open site index">
+        <span class="index-trigger__glyph"><span></span><span></span></span>
+        Index
       </button>
     </div>
   </div>
 </header>
 
   
-<div class="mobile-menu" id="mobile-menu" data-mobile-menu>
-  <div class="mobile-menu__top">
+<div class="site-index" id="site-index" data-index-panel>
+  <div class="site-index__top">
     <a class="brand-logo" href="/" aria-label="PRIME.FINDS home"><img src="/assets/logo/wordmark.png" alt="PRIME.FINDS" width="1075" height="580" /></a>
-    <button class="icon-btn" type="button" data-menu-close aria-label="Close menu"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15"/></svg></button>
+    <button class="icon-btn" type="button" data-index-close aria-label="Close index"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15"/></svg></button>
   </div>
-  <ul class="mobile-menu__list"><li><a class="mobile-menu__link" href="/">Home</a></li><li><a class="mobile-menu__link" href="/#categories">Categories</a></li><li><a class="mobile-menu__link" href="/#trending">Trending</a></li><li><a class="mobile-menu__link" href="/#latest">Latest</a></li><li><a class="mobile-menu__link" href="/about.html">About</a></li></ul>
-  <p class="mobile-menu__footer">Curated products. Smart finds.</p>
+  <div class="site-index__body">
+    <ul class="site-index__nav-list"><li><a class="site-index__nav-link" href="/">Home</a></li><li><a class="site-index__nav-link" href="/#categories">Categories</a></li><li><a class="site-index__nav-link" href="/#trending">Trending</a></li><li><a class="site-index__nav-link" href="/#latest">Latest</a></li><li><a class="site-index__nav-link" href="/about.html">About</a></li></ul>
+    <div>
+      <span class="eyebrow site-index__cats-label">The Catalog</span>
+      <div class="site-index__cats"><a class="site-index__cat" href="/category/tech/"><span class="site-index__cat-name">Tech</span><span class="site-index__cat-count">13</span></a><a class="site-index__cat" href="/category/home/"><span class="site-index__cat-name">Home</span><span class="site-index__cat-count">27</span></a><a class="site-index__cat" href="/category/gaming/"><span class="site-index__cat-name">Gaming</span><span class="site-index__cat-count">09</span></a><a class="site-index__cat" href="/category/travel/"><span class="site-index__cat-name">Travel</span><span class="site-index__cat-count">19</span></a><a class="site-index__cat" href="/category/desk-setup/"><span class="site-index__cat-name">Desk Setup</span><span class="site-index__cat-count">15</span></a><a class="site-index__cat" href="/category/gifts/"><span class="site-index__cat-name">Gifts</span><span class="site-index__cat-count">24</span></a><a class="site-index__cat" href="/category/under-25/"><span class="site-index__cat-name">Under $25</span><span class="site-index__cat-count">07</span></a></div>
+    </div>
+  </div>
+  <p class="site-index__footer">Curated products. Smart finds.</p>
 </div>
 
   
@@ -87,41 +92,54 @@
     <span aria-current="page">BlissTrends Under-Desk Foot Rest with 2 Adjustable Heights</span>
   </nav>
   <div class="product-detail">
-    <div>
-      <div class="product-detail__gallery-main"><img src="/assets/images/products/blisstrends-under-desk-foot-hammock.jpg" alt="BlissTrends Under-Desk Foot Rest with 2 Adjustable Heights" data-gallery-main loading="eager" /></div>
+    <div class="product-detail__gallery pd-gallery-enter">
+      <div class="product-detail__gallery-main"><img src="/assets/images/products/blisstrends-under-desk-foot-hammock.jpg" alt="BlissTrends Under-Desk Foot Rest with 2 Adjustable Heights" data-gallery-main loading="eager" style="view-transition-name: product-photo-blisstrends-under-desk-foot-hammock" /></div>
       
     </div>
     <div>
-      <span class="product-detail__category">desk setup · Ergonomics</span>
-      <h1 class="product-detail__title">BlissTrends Under-Desk Foot Rest with 2 Adjustable Heights</h1>
-      <div class="product-detail__meta-row">
+      <div class="pd-enter pd-enter--1">
+        <span class="product-detail__index tag-mono">No. 0101</span>
+        <span class="product-detail__category">desk setup · Ergonomics</span>
+      </div>
+      <h1 class="product-detail__title pd-enter pd-enter--2">BlissTrends Under-Desk Foot Rest with 2 Adjustable Heights</h1>
+      <div class="product-detail__meta-row pd-enter pd-enter--3">
         <span class="product-detail__price">$24.99</span>
         <span class="rating" role="img" aria-label="4.4 out of 5 (9,102 reviews)"><span class="stars"><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg></span><span>4.4</span><span class="text-faint">(9,102)</span></span>
         
       </div>
-      <p class="product-detail__desc">A two-piece foot rest that adjusts to two heights via touch fasteners between its layers, so it fits your desk and chair setup rather than the other way around. The high-quality foam core resists collapsing under regular use, the base is non-slip, and the cover unzips for machine washing. Equally at home under a desk, in the car, or propped up on a plane.</p>
-      <div class="why-we-like-it">
-        <div class="why-we-like-it__label">Why We Like It</div>
-        <p>The adjustable two-layer design means it actually fits different chair heights instead of being a fixed lump of foam — small detail, but it&#x27;s the difference between using it daily and it collecting dust under the desk.</p>
+      <div class="pd-enter pd-enter--4">
+        <p class="product-detail__desc">A two-piece foot rest that adjusts to two heights via touch fasteners between its layers, so it fits your desk and chair setup rather than the other way around. The high-quality foam core resists collapsing under regular use, the base is non-slip, and the cover unzips for machine washing. Equally at home under a desk, in the car, or propped up on a plane.</p>
+        <div class="why-we-like-it">
+          <div class="why-we-like-it__label">Why We Like It</div>
+          <p>The adjustable two-layer design means it actually fits different chair heights instead of being a fixed lump of foam — small detail, but it&#x27;s the difference between using it daily and it collecting dust under the desk.</p>
+        </div>
+        <ul class="highlights-list"><li><svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 10l4 4 8-9"/></svg><span>2 adjustable heights via touch-fastener layers</span></li><li><svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 10l4 4 8-9"/></svg><span>High-density foam core resists collapsing</span></li><li><svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 10l4 4 8-9"/></svg><span>Removable, machine-washable cover</span></li><li><svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 10l4 4 8-9"/></svg><span>Non-slip base</span></li><li><svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 10l4 4 8-9"/></svg><span>Doubles as a car or airplane footrest</span></li></ul>
+        <div class="tag-row"><span class="tag-pill">foot rest</span><span class="tag-pill">under desk footrest</span><span class="tag-pill">ergonomic footrest</span><span class="tag-pill">travel footrest</span><span class="tag-pill">gift</span></div>
       </div>
-      <ul class="highlights-list"><li><svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 10l4 4 8-9"/></svg><span>2 adjustable heights via touch-fastener layers</span></li><li><svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 10l4 4 8-9"/></svg><span>High-density foam core resists collapsing</span></li><li><svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 10l4 4 8-9"/></svg><span>Removable, machine-washable cover</span></li><li><svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 10l4 4 8-9"/></svg><span>Non-slip base</span></li><li><svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 10l4 4 8-9"/></svg><span>Doubles as a car or airplane footrest</span></li></ul>
-      <div class="tag-row"><span class="tag-pill">foot rest</span><span class="tag-pill">under desk footrest</span><span class="tag-pill">ergonomic footrest</span><span class="tag-pill">travel footrest</span><span class="tag-pill">gift</span></div>
-      <div class="cta-panel">
-        <a class="btn btn--primary btn--full" data-affiliate-link data-product-slug="blisstrends-under-desk-foot-hammock">View Product <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
+      <div class="cta-panel pd-enter pd-enter--5">
+        <a class="btn btn--primary btn--full" data-affiliate-link data-product-slug="blisstrends-under-desk-foot-hammock">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
         <p class="cta-panel__disclaimer">You'll leave PRIME.FINDS to view this product on the retailer's site. This may be an affiliate link — see our <a href="/affiliate-disclosure.html" style="color:var(--color-gold-light);">Affiliate Disclosure</a>.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section container">
-  <div class="section-head"><div><span class="eyebrow">You Might Also Like</span><h2 class="section-title">More from Desk Setup</h2></div></div>
-  <div class="grid-products">
+<section class="section">
+  <div class="container section-head--split" data-reveal="fade">
+    <div><span class="eyebrow">You Might Also Like</span><h2 class="section-title">More from Desk Setup</h2></div>
+    <div class="rail-controls">
+      <button class="icon-btn" type="button" data-rail-prev="related-rail" aria-label="Scroll back"><svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M13 5l-6 5 6 5"/></svg></button>
+      <button class="icon-btn" type="button" data-rail-next="related-rail" aria-label="Scroll forward"><svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></button>
+    </div>
+  </div>
+  <div class="container">
+    <div class="rail" id="related-rail" data-rail><div class="rail__item">
 <article class="product-card" >
   <a class="product-card-link" href="/product/adjustable-laptop-stand/" aria-label="View Nulaxy Ergonomic Adjustable Laptop Stand">
     <div class="product-card__media">
+      <span class="product-card__index tag-mono">No. 0044</span>
       <div class="product-card__badges"></div>
-      <img src="/assets/images/products/adjustable-laptop-stand.jpg" alt="Nulaxy Ergonomic Adjustable Laptop Stand" loading="lazy" width="800" height="800"
+      <img src="/assets/images/products/adjustable-laptop-stand.jpg" alt="Nulaxy Ergonomic Adjustable Laptop Stand" loading="lazy" width="800" height="800" style="view-transition-name: product-photo-adjustable-laptop-stand"
            onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
     </div>
     <div class="product-card__body">
@@ -135,16 +153,16 @@
     </div>
   </a>
   <div class="product-card__cta">
-    <span>View details</span>
-    <a class="btn--ghost" data-affiliate-link data-product-slug="adjustable-laptop-stand">View Product <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
+    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="adjustable-laptop-stand">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
   </div>
 </article>
-
+</div><div class="rail__item">
 <article class="product-card" >
   <a class="product-card-link" href="/product/led-desk-lamp-light-bar/" aria-label="View Airlonv 17&quot; LED Desk Lamp with Clamp">
     <div class="product-card__media">
+      <span class="product-card__index tag-mono">No. 0045</span>
       <div class="product-card__badges"></div>
-      <img src="/assets/images/products/led-desk-lamp-light-bar.jpg" alt="Airlonv 17&quot; LED Desk Lamp with Clamp" loading="lazy" width="800" height="800"
+      <img src="/assets/images/products/led-desk-lamp-light-bar.jpg" alt="Airlonv 17&quot; LED Desk Lamp with Clamp" loading="lazy" width="800" height="800" style="view-transition-name: product-photo-led-desk-lamp-light-bar"
            onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
     </div>
     <div class="product-card__body">
@@ -158,16 +176,16 @@
     </div>
   </a>
   <div class="product-card__cta">
-    <span>View details</span>
-    <a class="btn--ghost" data-affiliate-link data-product-slug="led-desk-lamp-light-bar">View Product <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
+    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="led-desk-lamp-light-bar">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
   </div>
 </article>
-
+</div><div class="rail__item">
 <article class="product-card" >
   <a class="product-card-link" href="/product/leather-desk-mat/" aria-label="View Aothia PU Leather Desk Mat">
     <div class="product-card__media">
+      <span class="product-card__index tag-mono">No. 0046</span>
       <div class="product-card__badges"><span class="badge badge--gold">Trending</span></div>
-      <img src="/assets/images/products/leather-desk-mat.jpg" alt="Aothia PU Leather Desk Mat" loading="lazy" width="800" height="800"
+      <img src="/assets/images/products/leather-desk-mat.jpg" alt="Aothia PU Leather Desk Mat" loading="lazy" width="800" height="800" style="view-transition-name: product-photo-leather-desk-mat"
            onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
     </div>
     <div class="product-card__body">
@@ -181,16 +199,16 @@
     </div>
   </a>
   <div class="product-card__cta">
-    <span>View details</span>
-    <a class="btn--ghost" data-affiliate-link data-product-slug="leather-desk-mat">View Product <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
+    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="leather-desk-mat">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
   </div>
 </article>
-
+</div><div class="rail__item">
 <article class="product-card" >
   <a class="product-card-link" href="/product/divoom-ditoo-pixel-art-speaker/" aria-label="View Divoom Ditoo Retro Pixel Art Bluetooth Speaker">
     <div class="product-card__media">
+      <span class="product-card__index tag-mono">No. 0061</span>
       <div class="product-card__badges"></div>
-      <img src="/assets/images/products/divoom-ditoo-pixel-art-speaker.jpg" alt="Divoom Ditoo Retro Pixel Art Bluetooth Speaker" loading="lazy" width="800" height="800"
+      <img src="/assets/images/products/divoom-ditoo-pixel-art-speaker.jpg" alt="Divoom Ditoo Retro Pixel Art Bluetooth Speaker" loading="lazy" width="800" height="800" style="view-transition-name: product-photo-divoom-ditoo-pixel-art-speaker"
            onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
     </div>
     <div class="product-card__body">
@@ -204,11 +222,11 @@
     </div>
   </a>
   <div class="product-card__cta">
-    <span>View details</span>
-    <a class="btn--ghost" data-affiliate-link data-product-slug="divoom-ditoo-pixel-art-speaker">View Product <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
+    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="divoom-ditoo-pixel-art-speaker">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
   </div>
 </article>
-</div>
+</div></div>
+  </div>
 </section>
 
 

@@ -11,7 +11,7 @@
   <link rel="icon" href="/assets/logo/favicon-192.png" type="image/png" sizes="192x192" />
   <link rel="apple-touch-icon" href="/assets/logo/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
-  <meta name="theme-color" content="#0a0a0b" />
+  <meta name="theme-color" content="#060607" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="PRIME.FINDS" />
@@ -27,7 +27,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
   <link rel="stylesheet" href="/css/tokens.css" />
   <link rel="stylesheet" href="/css/base.css" />
   <link rel="stylesheet" href="/css/layout.css" />
@@ -38,32 +38,37 @@
 </head>
 <body>
   
+  
 <a class="skip-link" href="#main-content">Skip to content</a>
 <header class="site-header">
   <div class="container site-header__inner">
     <a class="brand-logo" href="/" aria-label="PRIME.FINDS home">
       <img src="/assets/logo/wordmark.png" alt="PRIME.FINDS" width="1075" height="580" />
     </a>
-    <nav class="main-nav" aria-label="Primary">
-      <ul class="main-nav__list"><li><a class="main-nav__link" href="/">Home</a></li><li><a class="main-nav__link" href="/#categories">Categories</a></li><li><a class="main-nav__link" href="/#trending">Trending</a></li><li><a class="main-nav__link" href="/#latest">Latest</a></li><li><a class="main-nav__link" href="/about.html">About</a></li></ul>
-    </nav>
     <div class="header-actions">
       <button class="icon-btn" type="button" data-search-open aria-label="Search products"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="9" cy="9" r="6.5"/><path d="M18 18l-3.8-3.8"/></svg></button>
-      <button class="hamburger-btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
-        <span></span><span></span><span></span>
+      <button class="index-trigger" type="button" data-index-toggle aria-expanded="false" aria-controls="site-index" aria-label="Open site index">
+        <span class="index-trigger__glyph"><span></span><span></span></span>
+        Index
       </button>
     </div>
   </div>
 </header>
 
   
-<div class="mobile-menu" id="mobile-menu" data-mobile-menu>
-  <div class="mobile-menu__top">
+<div class="site-index" id="site-index" data-index-panel>
+  <div class="site-index__top">
     <a class="brand-logo" href="/" aria-label="PRIME.FINDS home"><img src="/assets/logo/wordmark.png" alt="PRIME.FINDS" width="1075" height="580" /></a>
-    <button class="icon-btn" type="button" data-menu-close aria-label="Close menu"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15"/></svg></button>
+    <button class="icon-btn" type="button" data-index-close aria-label="Close index"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15"/></svg></button>
   </div>
-  <ul class="mobile-menu__list"><li><a class="mobile-menu__link" href="/">Home</a></li><li><a class="mobile-menu__link" href="/#categories">Categories</a></li><li><a class="mobile-menu__link" href="/#trending">Trending</a></li><li><a class="mobile-menu__link" href="/#latest">Latest</a></li><li><a class="mobile-menu__link" href="/about.html">About</a></li></ul>
-  <p class="mobile-menu__footer">Curated products. Smart finds.</p>
+  <div class="site-index__body">
+    <ul class="site-index__nav-list"><li><a class="site-index__nav-link" href="/">Home</a></li><li><a class="site-index__nav-link" href="/#categories">Categories</a></li><li><a class="site-index__nav-link" href="/#trending">Trending</a></li><li><a class="site-index__nav-link" href="/#latest">Latest</a></li><li><a class="site-index__nav-link" href="/about.html">About</a></li></ul>
+    <div>
+      <span class="eyebrow site-index__cats-label">The Catalog</span>
+      <div class="site-index__cats"><a class="site-index__cat" href="/category/tech/"><span class="site-index__cat-name">Tech</span><span class="site-index__cat-count">13</span></a><a class="site-index__cat" href="/category/home/"><span class="site-index__cat-name">Home</span><span class="site-index__cat-count">27</span></a><a class="site-index__cat" href="/category/gaming/"><span class="site-index__cat-name">Gaming</span><span class="site-index__cat-count">09</span></a><a class="site-index__cat" href="/category/travel/"><span class="site-index__cat-name">Travel</span><span class="site-index__cat-count">19</span></a><a class="site-index__cat" href="/category/desk-setup/"><span class="site-index__cat-name">Desk Setup</span><span class="site-index__cat-count">15</span></a><a class="site-index__cat" href="/category/gifts/"><span class="site-index__cat-name">Gifts</span><span class="site-index__cat-count">24</span></a><a class="site-index__cat" href="/category/under-25/"><span class="site-index__cat-name">Under $25</span><span class="site-index__cat-count">07</span></a></div>
+    </div>
+  </div>
+  <p class="site-index__footer">Curated products. Smart finds.</p>
 </div>
 
   
@@ -87,41 +92,54 @@
     <span aria-current="page">RAYHOME Flexible LED Matrix Display</span>
   </nav>
   <div class="product-detail">
-    <div>
-      <div class="product-detail__gallery-main"><img src="/assets/images/products/led-matrix-display.jpg" alt="RAYHOME Flexible LED Matrix Display" data-gallery-main loading="eager" /></div>
+    <div class="product-detail__gallery pd-gallery-enter">
+      <div class="product-detail__gallery-main"><img src="/assets/images/products/led-matrix-display.jpg" alt="RAYHOME Flexible LED Matrix Display" data-gallery-main loading="eager" style="view-transition-name: product-photo-led-matrix-display" /></div>
       
     </div>
     <div>
-      <span class="product-detail__category">tech · Lighting &amp; Displays</span>
-      <h1 class="product-detail__title">RAYHOME Flexible LED Matrix Display</h1>
-      <div class="product-detail__meta-row">
+      <div class="pd-enter pd-enter--1">
+        <span class="product-detail__index tag-mono">No. 0053</span>
+        <span class="product-detail__category">tech · Lighting &amp; Displays</span>
+      </div>
+      <h1 class="product-detail__title pd-enter pd-enter--2">RAYHOME Flexible LED Matrix Display</h1>
+      <div class="product-detail__meta-row pd-enter pd-enter--3">
         <span class="product-detail__price">Check price</span>
         <span class="rating" role="img" aria-label="Not yet rated"><span class="stars"><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg></span><span class="text-faint">New</span></span>
         
       </div>
-      <p class="product-detail__desc">A flexible, Bluetooth-controlled LED panel that displays scrolling text, animations, and custom pixel art straight from a phone app — no coding required. Bends to fit curved surfaces and runs off any standard USB port.</p>
-      <div class="why-we-like-it">
-        <div class="why-we-like-it__label">Why We Like It</div>
-        <p>The app makes it stupidly easy to go from a blank panel to a custom animated message in under a minute — no code, no manual, just draw and send.</p>
+      <div class="pd-enter pd-enter--4">
+        <p class="product-detail__desc">A flexible, Bluetooth-controlled LED panel that displays scrolling text, animations, and custom pixel art straight from a phone app — no coding required. Bends to fit curved surfaces and runs off any standard USB port.</p>
+        <div class="why-we-like-it">
+          <div class="why-we-like-it__label">Why We Like It</div>
+          <p>The app makes it stupidly easy to go from a blank panel to a custom animated message in under a minute — no code, no manual, just draw and send.</p>
+        </div>
+        <ul class="highlights-list"><li><svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 10l4 4 8-9"/></svg><span>Flexible 7&quot; x 3&quot; LED matrix panel</span></li><li><svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 10l4 4 8-9"/></svg><span>Bluetooth app control for text, animations, and pixel art</span></li><li><svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 10l4 4 8-9"/></svg><span>DIY programmable, no coding required</span></li><li><svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 10l4 4 8-9"/></svg><span>Powered by any standard USB port</span></li></ul>
+        <div class="tag-row"><span class="tag-pill">led display</span><span class="tag-pill">led matrix</span><span class="tag-pill">pixel art</span><span class="tag-pill">car accessory</span><span class="tag-pill">tech</span></div>
       </div>
-      <ul class="highlights-list"><li><svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 10l4 4 8-9"/></svg><span>Flexible 7&quot; x 3&quot; LED matrix panel</span></li><li><svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 10l4 4 8-9"/></svg><span>Bluetooth app control for text, animations, and pixel art</span></li><li><svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 10l4 4 8-9"/></svg><span>DIY programmable, no coding required</span></li><li><svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 10l4 4 8-9"/></svg><span>Powered by any standard USB port</span></li></ul>
-      <div class="tag-row"><span class="tag-pill">led display</span><span class="tag-pill">led matrix</span><span class="tag-pill">pixel art</span><span class="tag-pill">car accessory</span><span class="tag-pill">tech</span></div>
-      <div class="cta-panel">
-        <a class="btn btn--primary btn--full" data-affiliate-link data-product-slug="led-matrix-display">View Product <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
+      <div class="cta-panel pd-enter pd-enter--5">
+        <a class="btn btn--primary btn--full" data-affiliate-link data-product-slug="led-matrix-display">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
         <p class="cta-panel__disclaimer">You'll leave PRIME.FINDS to view this product on the retailer's site. This may be an affiliate link — see our <a href="/affiliate-disclosure.html" style="color:var(--color-gold-light);">Affiliate Disclosure</a>.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section container">
-  <div class="section-head"><div><span class="eyebrow">You Might Also Like</span><h2 class="section-title">More from Tech</h2></div></div>
-  <div class="grid-products">
+<section class="section">
+  <div class="container section-head--split" data-reveal="fade">
+    <div><span class="eyebrow">You Might Also Like</span><h2 class="section-title">More from Tech</h2></div>
+    <div class="rail-controls">
+      <button class="icon-btn" type="button" data-rail-prev="related-rail" aria-label="Scroll back"><svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M13 5l-6 5 6 5"/></svg></button>
+      <button class="icon-btn" type="button" data-rail-next="related-rail" aria-label="Scroll forward"><svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></button>
+    </div>
+  </div>
+  <div class="container">
+    <div class="rail" id="related-rail" data-rail><div class="rail__item">
 <article class="product-card" >
   <a class="product-card-link" href="/product/quotoo-3in1-magnetic-charging-station/" aria-label="View Quotoo 3-in-1 Magnetic Charging Station">
     <div class="product-card__media">
+      <span class="product-card__index tag-mono">No. 0031</span>
       <div class="product-card__badges"><span class="badge badge--gold">Trending</span></div>
-      <img src="/assets/images/products/quotoo-3in1-magnetic-charging-station.jpg" alt="Quotoo 3-in-1 Magnetic Charging Station" loading="lazy" width="800" height="800"
+      <img src="/assets/images/products/quotoo-3in1-magnetic-charging-station.jpg" alt="Quotoo 3-in-1 Magnetic Charging Station" loading="lazy" width="800" height="800" style="view-transition-name: product-photo-quotoo-3in1-magnetic-charging-station"
            onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
     </div>
     <div class="product-card__body">
@@ -135,16 +153,16 @@
     </div>
   </a>
   <div class="product-card__cta">
-    <span>View details</span>
-    <a class="btn--ghost" data-affiliate-link data-product-slug="quotoo-3in1-magnetic-charging-station">View Product <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
+    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="quotoo-3in1-magnetic-charging-station">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
   </div>
 </article>
-
+</div><div class="rail__item">
 <article class="product-card" >
   <a class="product-card-link" href="/product/iniu-fast-charge-power-bank/" aria-label="View INIU 10000mAh 45W Fast Charging Power Bank">
     <div class="product-card__media">
+      <span class="product-card__index tag-mono">No. 0032</span>
       <div class="product-card__badges"></div>
-      <img src="/assets/images/products/iniu-fast-charge-power-bank.jpg" alt="INIU 10000mAh 45W Fast Charging Power Bank" loading="lazy" width="800" height="800"
+      <img src="/assets/images/products/iniu-fast-charge-power-bank.jpg" alt="INIU 10000mAh 45W Fast Charging Power Bank" loading="lazy" width="800" height="800" style="view-transition-name: product-photo-iniu-fast-charge-power-bank"
            onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
     </div>
     <div class="product-card__body">
@@ -158,16 +176,16 @@
     </div>
   </a>
   <div class="product-card__cta">
-    <span>View details</span>
-    <a class="btn--ghost" data-affiliate-link data-product-slug="iniu-fast-charge-power-bank">View Product <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
+    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="iniu-fast-charge-power-bank">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
   </div>
 </article>
-
+</div><div class="rail__item">
 <article class="product-card" >
   <a class="product-card-link" href="/product/hiearcool-7in1-usbc-hub/" aria-label="View Hiearcool 7-in-1 USB-C Hub">
     <div class="product-card__media">
+      <span class="product-card__index tag-mono">No. 0033</span>
       <div class="product-card__badges"><span class="badge badge--gold">Trending</span></div>
-      <img src="/assets/images/products/hiearcool-7in1-usbc-hub.jpg" alt="Hiearcool 7-in-1 USB-C Hub" loading="lazy" width="800" height="800"
+      <img src="/assets/images/products/hiearcool-7in1-usbc-hub.jpg" alt="Hiearcool 7-in-1 USB-C Hub" loading="lazy" width="800" height="800" style="view-transition-name: product-photo-hiearcool-7in1-usbc-hub"
            onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
     </div>
     <div class="product-card__body">
@@ -181,16 +199,16 @@
     </div>
   </a>
   <div class="product-card__cta">
-    <span>View details</span>
-    <a class="btn--ghost" data-affiliate-link data-product-slug="hiearcool-7in1-usbc-hub">View Product <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
+    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="hiearcool-7in1-usbc-hub">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
   </div>
 </article>
-
+</div><div class="rail__item">
 <article class="product-card" >
   <a class="product-card-link" href="/product/mini-thermal-printer/" aria-label="View cudinham X6 Mini Sticker Printer">
     <div class="product-card__media">
+      <span class="product-card__index tag-mono">No. 0051</span>
       <div class="product-card__badges"></div>
-      <img src="/assets/images/products/mini-thermal-printer.jpg" alt="cudinham X6 Mini Sticker Printer" loading="lazy" width="800" height="800"
+      <img src="/assets/images/products/mini-thermal-printer.jpg" alt="cudinham X6 Mini Sticker Printer" loading="lazy" width="800" height="800" style="view-transition-name: product-photo-mini-thermal-printer"
            onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
     </div>
     <div class="product-card__body">
@@ -204,11 +222,11 @@
     </div>
   </a>
   <div class="product-card__cta">
-    <span>View details</span>
-    <a class="btn--ghost" data-affiliate-link data-product-slug="mini-thermal-printer">View Product <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
+    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="mini-thermal-printer">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
   </div>
 </article>
-</div>
+</div></div>
+  </div>
 </section>
 
 

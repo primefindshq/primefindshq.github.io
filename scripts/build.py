@@ -109,13 +109,10 @@ SEARCH_ICON = '<svg viewBox="0 0 20 20" width="18" height="18" fill="none" strok
 CLOSE_ICON = '<svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15"/></svg>'
 INSTAGRAM_ICON = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>'
 CHEVRON_ICON = '<svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg>'
+CHEVRON_LEFT_ICON = '<svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M13 5l-6 5 6 5"/></svg>'
 
 
 def render_header(site, active=None):
-    nav_items = "".join(
-        f'<li><a class="main-nav__link{" is-active" if active == link["label"].lower() else ""}" href="{link["href"]}">{esc(link["label"])}</a></li>'
-        for link in site["navLinks"]
-    )
     return f"""
 <a class="skip-link" href="#main-content">Skip to content</a>
 <header class="site-header">
@@ -123,13 +120,11 @@ def render_header(site, active=None):
     <a class="brand-logo" href="/" aria-label="{esc(site['siteName'])} home">
       <img src="/assets/logo/wordmark.png" alt="{esc(site['siteName'])}" width="1075" height="580" />
     </a>
-    <nav class="main-nav" aria-label="Primary">
-      <ul class="main-nav__list">{nav_items}</ul>
-    </nav>
     <div class="header-actions">
       <button class="icon-btn" type="button" data-search-open aria-label="Search products">{SEARCH_ICON}</button>
-      <button class="hamburger-btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
-        <span></span><span></span><span></span>
+      <button class="index-trigger" type="button" data-index-toggle aria-expanded="false" aria-controls="site-index" aria-label="Open site index">
+        <span class="index-trigger__glyph"><span></span><span></span></span>
+        Index
       </button>
     </div>
   </div>
@@ -137,19 +132,62 @@ def render_header(site, active=None):
 """
 
 
-def render_mobile_menu(site):
-    links = "".join(
-        f'<li><a class="mobile-menu__link" href="{link["href"]}">{esc(link["label"])}</a></li>'
+def render_site_index(site, categories, counts):
+    nav_links = "".join(
+        f'<li><a class="site-index__nav-link" href="{link["href"]}">{esc(link["label"])}</a></li>'
         for link in site["navLinks"]
     )
+    cat_items = "".join(
+        f'<a class="site-index__cat" href="/category/{c["slug"]}/">'
+        f'<span class="site-index__cat-name">{esc(c["name"])}</span>'
+        f'<span class="site-index__cat-count">{counts.get(c["slug"], 0):02d}</span></a>'
+        for c in categories
+    )
     return f"""
-<div class="mobile-menu" id="mobile-menu" data-mobile-menu>
-  <div class="mobile-menu__top">
+<div class="site-index" id="site-index" data-index-panel>
+  <div class="site-index__top">
     <a class="brand-logo" href="/" aria-label="{esc(site['siteName'])} home"><img src="/assets/logo/wordmark.png" alt="{esc(site['siteName'])}" width="1075" height="580" /></a>
-    <button class="icon-btn" type="button" data-menu-close aria-label="Close menu">{CLOSE_ICON}</button>
+    <button class="icon-btn" type="button" data-index-close aria-label="Close index">{CLOSE_ICON}</button>
   </div>
-  <ul class="mobile-menu__list">{links}</ul>
-  <p class="mobile-menu__footer">{esc(site['tagline'])}</p>
+  <div class="site-index__body">
+    <ul class="site-index__nav-list">{nav_links}</ul>
+    <div>
+      <span class="eyebrow site-index__cats-label">The Catalog</span>
+      <div class="site-index__cats">{cat_items}</div>
+    </div>
+  </div>
+  <p class="site-index__footer">{esc(site['tagline'])}</p>
+</div>
+"""
+
+
+def render_brand_intro():
+    # Deterministic scatter of drifting dust points -- server-rendered so
+    # there's no client-side randomness to cause a flash of layout, varied
+    # just enough that the dozen dots don't read as one repeated sprite.
+    dust = []
+    positions = [
+        (18, 70), (82, 65), (30, 25), (70, 20), (50, 82), (12, 40),
+        (88, 45), (44, 12), (60, 88), (25, 55),
+    ]
+    for i, (x, y) in enumerate(positions):
+        drift_x = 10 + (i % 5) * 4
+        drift_y = -(50 + (i % 4) * 18)
+        delay = (i % 6) * 380
+        style = (
+            f"left:{x}%; top:{y}%; animation-delay:{delay}ms; "
+            f"--dust-x:{drift_x}px; --dust-y:{drift_y}px;"
+        )
+        dust.append(f'<span style="{style}"></span>')
+
+    return f"""
+<div class="brand-intro" data-brand-intro aria-hidden="true">
+  <div class="brand-intro__atmosphere">{"".join(dust)}</div>
+  <div class="brand-intro__glow"></div>
+  <div class="brand-intro__ring"></div>
+  <div class="brand-intro__mark"><img src="/assets/logo/mark.png" alt="" width="374" height="419" /></div>
+  <div class="brand-intro__word"><img src="/assets/logo/wordmark.png" alt="" width="1075" height="580" /></div>
+  <div class="brand-intro__rule"></div>
 </div>
 """
 
@@ -216,19 +254,39 @@ def render_footer(site):
 # Product / category card markup (SSR mirror of the JS components)
 # --------------------------------------------------------------------------
 
-def render_product_card(product, reveal=True):
+def product_index_label(product):
+    """A specimen-catalog number derived from the product's own stable id
+    (e.g. "prd-0097" -> "No. 097") -- reused data, never invented."""
+    num = product["id"].split("-")[-1]
+    return f"No. {num}"
+
+
+def render_product_card(product, reveal=True, reveal_delay=0, morph=False):
     badges = ""
     if product.get("trending"):
         badges += '<span class="badge badge--gold">Trending</span>'
     if product.get("featured"):
         badges += '<span class="badge badge--outline-gold">Featured</span>'
-    reveal_attr = "data-reveal" if reveal else ""
+    reveal_attr = f'data-reveal data-reveal-delay="{reveal_delay}"' if reveal else ""
+    # `morph` opts a card into the shared-element image transition (see
+    # base.css) -- only safe where a product can appear at most once on the
+    # page, since view-transition-name must be unique per document. Skipped
+    # on the homepage, where a product can legitimately show up in both the
+    # trending rail and the latest grid at once.
+    # Only the photo gets a view-transition-name, not the title: the detail
+    # page's title already has its own pd-enter entrance animation, and a
+    # named element is hidden/restored around the browser's own transition
+    # timing -- stacking both would fight rather than compose. The photo
+    # morph alone is the dramatic part; the text can just fade with the rest
+    # of the root crossfade.
+    morph_style = f' style="view-transition-name: product-photo-{product["slug"]}"' if morph else ""
     return f"""
 <article class="product-card" {reveal_attr}>
   <a class="product-card-link" href="/product/{product['slug']}/" aria-label="View {esc(product['name'])}">
     <div class="product-card__media">
+      <span class="product-card__index tag-mono">{product_index_label(product)}</span>
       <div class="product-card__badges">{badges}</div>
-      <img src="{product['image']}" alt="{esc(product['name'])}" loading="lazy" width="800" height="800"
+      <img src="{product['image']}" alt="{esc(product['name'])}" loading="lazy" width="800" height="800"{morph_style}
            onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
     </div>
     <div class="product-card__body">
@@ -242,21 +300,33 @@ def render_product_card(product, reveal=True):
     </div>
   </a>
   <div class="product-card__cta">
-    <span>View details</span>
-    <a class="btn--ghost" data-affiliate-link data-product-slug="{product['slug']}">View Product {CHEVRON_ICON}</a>
+    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="{product['slug']}">View at Amazon {CHEVRON_ICON}</a>
   </div>
 </article>
 """
 
 
-def render_category_card(category, count):
+def inline_category_svg(slug):
+    """Read the category's generated art and embed it directly rather than
+    via <img src>, so its .category-tile__icon-path can be reached by CSS
+    for the hover stroke-draw -- an externally-referenced image is opaque
+    to CSS/JS, an inlined one isn't. Falls back to an <img> reference if the
+    file is ever missing so a category tile never renders broken."""
+    svg_path = os.path.join(PUBLIC_DIR, "assets", "images", "categories", f"{slug}.svg")
+    try:
+        with open(svg_path, encoding="utf-8") as f:
+            return f.read()
+    except OSError:
+        return f'<img src="/assets/images/categories/{slug}.svg" alt="" loading="lazy" width="1200" height="900" />'
+
+
+def render_category_tile(category, count):
     return f"""
-<a class="category-card" href="/category/{category['slug']}/" data-reveal>
-  <div class="category-card__media"><img src="/assets/images/categories/{category['slug']}.svg" alt="" loading="lazy" width="1200" height="900" /></div>
-  <div class="category-card__body">
-    <h3 class="category-card__name">{esc(category['name'])}</h3>
-    <p class="category-card__desc">{esc(category['shortDescription'])}</p>
-    <span class="category-card__count">{count} {'find' if count == 1 else 'finds'}</span>
+<a class="category-tile" href="/category/{category['slug']}/" data-reveal>
+  <div class="category-tile__media">{inline_category_svg(category['slug'])}</div>
+  <div class="category-tile__body">
+    <h3 class="category-tile__name" style="view-transition-name: category-name-{category['slug']}">{esc(category['name'])}</h3>
+    <span class="category-tile__count">{count:02d} {'find' if count == 1 else 'finds'}</span>
   </div>
 </a>
 """
@@ -266,11 +336,12 @@ def render_category_card(category, count):
 # Base HTML document
 # --------------------------------------------------------------------------
 
-def base_page(site, *, title, description, canonical_path, og_image=None, body_html, active_nav=None, page_scripts=None, extra_head=""):
+def base_page(site, *, title, description, canonical_path, og_image=None, body_html, active_nav=None, page_scripts=None, extra_head="", show_intro=False):
     css_links = "\n  ".join(f'<link rel="stylesheet" href="{href}" />' for href in CSS_FILES)
     canonical_url = site["url"].rstrip("/") + canonical_path
     og_image_url = site["url"].rstrip("/") + (og_image or "/assets/logo/og-image.jpg")
     scripts = "".join(f'<script type="module" src="{s}"></script>' for s in (page_scripts or []))
+    intro_html = render_brand_intro() if show_intro else ""
 
     return f"""<!doctype html>
 <html lang="{site.get('locale', 'en')}">
@@ -285,7 +356,7 @@ def base_page(site, *, title, description, canonical_path, og_image=None, body_h
   <link rel="icon" href="/assets/logo/favicon-192.png" type="image/png" sizes="192x192" />
   <link rel="apple-touch-icon" href="/assets/logo/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
-  <meta name="theme-color" content="#0a0a0b" />
+  <meta name="theme-color" content="#060607" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="{esc(site['siteName'])}" />
@@ -301,13 +372,14 @@ def base_page(site, *, title, description, canonical_path, og_image=None, body_h
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
   {css_links}
   {extra_head}
 </head>
 <body>
+  {intro_html}
   {render_header(site, active_nav)}
-  {render_mobile_menu(site)}
+  {render_site_index(site, _ALL_CATEGORIES, _ALL_COUNTS)}
   {render_search_overlay()}
   <main id="main-content">
   {body_html}
@@ -325,83 +397,100 @@ def base_page(site, *, title, description, canonical_path, og_image=None, body_h
 # --------------------------------------------------------------------------
 
 def render_homepage(site, categories, products, counts):
-    trending = [p for p in products if p.get("trending")][:8]
+    trending = [p for p in products if p.get("trending")][:10]
     latest = sorted(products, key=lambda p: p["createdAt"], reverse=True)[:8]
     featured = next((p for p in products if p.get("featured")), products[0] if products else None)
+    collage_source = trending if len(trending) >= 3 else products
+    collage = collage_source[:3]
 
+    collage_html = "".join(
+        f'<div class="hero-collage__item hero-collage__item--{i+1}"><img src="{p["image"]}" alt="{esc(p["name"])}" loading="eager" /></div>'
+        for i, p in enumerate(collage)
+    )
     hero = f"""
 <section class="hero">
-  <div class="hero__bg"><img src="/assets/images/hero/hero.svg" alt="" /></div>
-  <div class="container hero__content">
-    <span class="hero__eyebrow entrance-mark"><img src="/assets/logo/mark.png" alt="" width="374" height="419" style="height:18px;width:auto;" /> {esc(site['siteName'])}</span>
-    <h1 class="hero__title entrance-headline">DISCOVER WHAT'S <span class="accent">WORTH BUYING.</span></h1>
-    <p class="hero__sub entrance-sub">Curated products. Smart finds. No endless searching.</p>
-    <div class="hero__ctas entrance-cta">
-      <a class="btn btn--primary" href="#trending">Explore Finds</a>
-      <a class="btn btn--secondary" href="#categories">Explore Categories</a>
+  <div class="container hero__grid">
+    <div class="hero__intro">
+      <h1 class="hero__title hero-enter hero-enter--1">DISCOVER WHAT'S<br/><span class="accent">worth</span> buying.</h1>
+      <p class="hero__sub hero-enter hero-enter--2">No endless scrolling through search results. PRIME.FINDS curates the gadgets, gear and small good ideas actually worth your money.</p>
+      <div class="hero__ctas hero-enter hero-enter--3">
+        <a class="btn btn--primary" href="#trending">Enter the Catalog {CHEVRON_ICON}</a>
+        <span class="hero__ctas-note">{len(products):02d} finds, curated</span>
+      </div>
     </div>
+    <div class="hero__collage">{collage_html}</div>
   </div>
 </section>
 """
 
-    trending_cards = "".join(render_product_card(p) for p in trending)
+    trending_cards = "".join(render_product_card(p, reveal_delay=min(i, 3) * 70) for i, p in enumerate(trending))
     trending_section = f"""
-<section class="section container" id="trending">
-  <div class="section-head">
+<section class="section" id="trending">
+  <div class="container section-head--split" data-reveal="fade">
     <div>
       <span class="eyebrow">Trending Now</span>
       <h2 class="section-title">What everyone's clicking on</h2>
     </div>
+    <div class="rail-controls">
+      <button class="icon-btn" type="button" data-rail-prev="trending-rail" aria-label="Scroll trending back">{CHEVRON_LEFT_ICON}</button>
+      <button class="icon-btn" type="button" data-rail-next="trending-rail" aria-label="Scroll trending forward">{CHEVRON_ICON}</button>
+    </div>
   </div>
-  <div class="grid-products">{trending_cards}</div>
+  <div class="container">
+    <div class="rail" id="trending-rail" data-rail>
+      {"".join(f'<div class="rail__item">{card}</div>' for card in [render_product_card(p, reveal=False) for p in trending])}
+    </div>
+  </div>
 </section>
 """
 
-    category_cards = "".join(render_category_card(c, counts.get(c["slug"], 0)) for c in categories)
+    category_tiles = "".join(render_category_tile(c, counts.get(c["slug"], 0)) for c in categories)
     category_section = f"""
 <section class="section container" id="categories">
-  <div class="section-head">
+  <div class="section-head" data-reveal="fade">
     <div>
       <span class="eyebrow">Browse</span>
       <h2 class="section-title">Shop by category</h2>
-      <p class="section-desc">Seven ways into the catalog — more get added as we curate more.</p>
+      <p class="section-desc">Seven ways into the catalog, with more added as we curate further.</p>
     </div>
   </div>
-  <div class="grid-categories">{category_cards}</div>
+  <div class="category-bento">{category_tiles}</div>
 </section>
 """
 
-    latest_cards = "".join(render_product_card(p) for p in latest)
+    editorial_section = ""
+    if featured:
+        editorial_section = f"""
+<section class="section container">
+  <div class="editorial" data-reveal="scale">
+    <div class="editorial__media"><img src="{featured['image']}" alt="{esc(featured['name'])}" loading="lazy" /></div>
+    <div class="editorial__text">
+      <span class="editorial__label">Editorial Pick</span>
+      <p class="editorial__quote">&ldquo;{esc(featured['whyWeLikeIt'])}&rdquo;</p>
+      <span class="editorial__name">{esc(featured['name'])}</span>
+      <span class="editorial__price">{format_price(featured['price'], featured['currency'])}</span>
+      <div>
+        <a class="btn btn--primary" href="/product/{featured['slug']}/">See the Full Story {CHEVRON_ICON}</a>
+      </div>
+    </div>
+  </div>
+</section>
+"""
+
+    latest_cards = "".join(render_product_card(p, reveal_delay=min(i, 3) * 70) for i, p in enumerate(latest))
     latest_section = f"""
 <section class="section container" id="latest">
-  <div class="section-head">
+  <div class="section-head" data-reveal="fade">
     <div>
       <span class="eyebrow">Latest Finds</span>
-      <h2 class="section-title">Just added</h2>
+      <h2 class="section-title">Just added to the catalog</h2>
     </div>
   </div>
-  <div class="grid-products">{latest_cards}</div>
+  <div class="grid-products grid-products--feature">{latest_cards}</div>
 </section>
 """
 
-    featured_section = ""
-    if featured:
-        featured_section = f"""
-<section class="section container">
-  <div class="featured-product" data-reveal>
-    <div class="featured-product__media"><img src="{featured['image']}" alt="{esc(featured['name'])}" loading="lazy" /></div>
-    <div class="featured-product__text">
-      <span class="featured-product__label">Featured Find</span>
-      <h2 class="featured-product__title">{esc(featured['name'])}</h2>
-      <p class="featured-product__desc">{esc(featured['whyWeLikeIt'])}</p>
-      <div class="featured-product__price">{format_price(featured['price'], featured['currency'])}</div>
-      <a class="btn btn--primary" href="/product/{featured['slug']}/">View Product {CHEVRON_ICON}</a>
-    </div>
-  </div>
-</section>
-"""
-
-    body = hero + trending_section + category_section + latest_section + featured_section
+    body = hero + trending_section + category_section + editorial_section + latest_section
 
     ld_json = json.dumps({
         "@context": "https://schema.org",
@@ -422,6 +511,7 @@ def render_homepage(site, categories, products, counts):
         active_nav="home",
         page_scripts=["/js/pages/home.js"],
         extra_head=extra_head,
+        show_intro=True,
     )
 
 
@@ -431,7 +521,7 @@ def render_homepage(site, categories, products, counts):
 
 def render_category_page(site, category, all_categories, category_products):
     initial_sorted = sorted(category_products, key=lambda p: p.get("featured", False), reverse=True)
-    cards = "".join(render_product_card(p, reveal=False) for p in initial_sorted) if initial_sorted else ""
+    cards = "".join(render_product_card(p, reveal=False, morph=True) for p in initial_sorted) if initial_sorted else ""
 
     empty_state = """
 <div class="state-panel">
@@ -442,11 +532,14 @@ def render_category_page(site, category, all_categories, category_products):
 """
 
     body = f"""
-<section class="page-hero container">
-  <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">/</span><a href="/#categories">Categories</a><span class="sep">/</span><span aria-current="page">{esc(category['name'])}</span></nav>
-  <span class="eyebrow">Category</span>
-  <h1 class="section-title" style="font-size: var(--fs-display-lg);">{esc(category['name'])}</h1>
-  <p class="category-hero__desc">{esc(category['description'])}</p>
+<section class="page-hero category-hero">
+  <div class="category-hero__watermark"><img src="/assets/images/categories/{category['slug']}.svg" alt="" /></div>
+  <div class="container category-hero__content">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">/</span><a href="/#categories">Categories</a><span class="sep">/</span><span aria-current="page">{esc(category['name'])}</span></nav>
+    <span class="eyebrow">Category</span>
+    <h1 class="section-title" style="font-size: var(--fs-display-xl); view-transition-name: category-name-{category['slug']};">{esc(category['name'])}</h1>
+    <p class="category-hero__desc">{esc(category['description'])}</p>
+  </div>
 </section>
 <section class="section container">
   <div class="category-layout" data-category-app data-category-slug="{category['slug']}">
@@ -493,7 +586,7 @@ def render_category_page(site, category, all_categories, category_products):
           </div>
         </div>
       </div>
-      <div class="grid-products" data-category-grid>{cards if cards else ''}</div>
+      <div class="grid-products grid-products--feature" data-category-grid>{cards if cards else ''}</div>
       {'' if cards else empty_state}
     </div>
   </div>
@@ -532,13 +625,23 @@ def render_product_page(site, product, category, related_products):
     )
     tags = "".join(f'<span class="tag-pill">{esc(t)}</span>' for t in product.get("tags", []))
 
-    related_cards = "".join(render_product_card(p, reveal=False) for p in related_products)
     related_section = ""
     if related_products:
+        related_items = "".join(
+            f'<div class="rail__item">{render_product_card(p, reveal=False, morph=True)}</div>' for p in related_products
+        )
         related_section = f"""
-<section class="section container">
-  <div class="section-head"><div><span class="eyebrow">You Might Also Like</span><h2 class="section-title">More from {esc(category['name'])}</h2></div></div>
-  <div class="grid-products">{related_cards}</div>
+<section class="section">
+  <div class="container section-head--split" data-reveal="fade">
+    <div><span class="eyebrow">You Might Also Like</span><h2 class="section-title">More from {esc(category['name'])}</h2></div>
+    <div class="rail-controls">
+      <button class="icon-btn" type="button" data-rail-prev="related-rail" aria-label="Scroll back">{CHEVRON_LEFT_ICON}</button>
+      <button class="icon-btn" type="button" data-rail-next="related-rail" aria-label="Scroll forward">{CHEVRON_ICON}</button>
+    </div>
+  </div>
+  <div class="container">
+    <div class="rail" id="related-rail" data-rail>{related_items}</div>
+  </div>
 </section>
 """
 
@@ -550,27 +653,32 @@ def render_product_page(site, product, category, related_products):
     <span aria-current="page">{esc(product['name'])}</span>
   </nav>
   <div class="product-detail">
-    <div>
-      <div class="product-detail__gallery-main"><img src="{product['image']}" alt="{esc(product['name'])}" data-gallery-main loading="eager" /></div>
+    <div class="product-detail__gallery pd-gallery-enter">
+      <div class="product-detail__gallery-main"><img src="{product['image']}" alt="{esc(product['name'])}" data-gallery-main loading="eager" style="view-transition-name: product-photo-{product['slug']}" /></div>
       {thumbs_html}
     </div>
     <div>
-      <span class="product-detail__category">{esc(category_label(product['category']))}{' · ' + esc(product['subcategory']) if product.get('subcategory') else ''}</span>
-      <h1 class="product-detail__title">{esc(product['name'])}</h1>
-      <div class="product-detail__meta-row">
+      <div class="pd-enter pd-enter--1">
+        <span class="product-detail__index tag-mono">{product_index_label(product)}</span>
+        <span class="product-detail__category">{esc(category_label(product['category']))}{' · ' + esc(product['subcategory']) if product.get('subcategory') else ''}</span>
+      </div>
+      <h1 class="product-detail__title pd-enter pd-enter--2">{esc(product['name'])}</h1>
+      <div class="product-detail__meta-row pd-enter pd-enter--3">
         <span class="product-detail__price">{format_price(product['price'], product['currency'])}</span>
         {render_stars(product['rating'], product['reviewCount'])}
         {'<span class="badge badge--gold">Trending</span>' if product.get('trending') else ''}
       </div>
-      <p class="product-detail__desc">{esc(product['description'])}</p>
-      <div class="why-we-like-it">
-        <div class="why-we-like-it__label">Why We Like It</div>
-        <p>{esc(product['whyWeLikeIt'])}</p>
+      <div class="pd-enter pd-enter--4">
+        <p class="product-detail__desc">{esc(product['description'])}</p>
+        <div class="why-we-like-it">
+          <div class="why-we-like-it__label">Why We Like It</div>
+          <p>{esc(product['whyWeLikeIt'])}</p>
+        </div>
+        <ul class="highlights-list">{highlights}</ul>
+        <div class="tag-row">{tags}</div>
       </div>
-      <ul class="highlights-list">{highlights}</ul>
-      <div class="tag-row">{tags}</div>
-      <div class="cta-panel">
-        <a class="btn btn--primary btn--full" data-affiliate-link data-product-slug="{product['slug']}">View Product {CHEVRON_ICON}</a>
+      <div class="cta-panel pd-enter pd-enter--5">
+        <a class="btn btn--primary btn--full" data-affiliate-link data-product-slug="{product['slug']}">View at Amazon {CHEVRON_ICON}</a>
         <p class="cta-panel__disclaimer">You'll leave {esc(site['siteName'])} to view this product on the retailer's site. This may be an affiliate link — see our <a href="/affiliate-disclosure.html" style="color:var(--color-gold-light);">Affiliate Disclosure</a>.</p>
       </div>
     </div>
@@ -781,6 +889,7 @@ def render_404_page(site):
 # --------------------------------------------------------------------------
 
 _ALL_CATEGORIES = []
+_ALL_COUNTS = {}
 
 
 def write_file(path, content):
@@ -790,7 +899,7 @@ def write_file(path, content):
 
 
 def main():
-    global _ALL_CATEGORIES
+    global _ALL_CATEGORIES, _ALL_COUNTS
     site, categories, products = load_data()
     _ALL_CATEGORIES = categories
 
@@ -799,6 +908,7 @@ def main():
     for p in published:
         for slug in [p["category"], *p.get("secondaryCategories", [])]:
             counts[slug] = counts.get(slug, 0) + 1
+    _ALL_COUNTS = counts
 
     # ---- Client-side data snapshot (mirrors a future public API response) ----
     write_file(os.path.join(PUBLIC_DIR, "data", "products.json"), json.dumps(published, indent=2))

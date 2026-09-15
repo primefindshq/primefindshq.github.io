@@ -1,5 +1,5 @@
 /* =========================================================================
-   PRIME.FINDS — Layout (header, nav, footer, page shell)
+   PRIME.FINDS — Layout (header, index overlay, footer, page shell, grids)
    ========================================================================= */
 
 .site-header {
@@ -8,21 +8,25 @@
   z-index: var(--z-header);
   display: flex;
   align-items: center;
-  height: 76px;
-  background: rgba(10, 10, 11, 0.72);
+  height: 84px;
+  background: rgba(6, 6, 7, 0.7);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid transparent;
+  translate: 0 0;
   transition: border-color var(--duration-base) var(--ease-standard),
               background var(--duration-base) var(--ease-standard),
-              height var(--duration-base) var(--ease-standard);
+              height var(--duration-base) var(--ease-standard),
+              translate var(--duration-base) var(--ease-standard);
 }
-
 .site-header.is-scrolled {
   border-bottom-color: var(--color-border);
-  background: rgba(8, 8, 9, 0.92);
-  height: 64px;
+  background: rgba(5, 5, 6, 0.92);
+  height: 66px;
 }
+/* Gets out of the way while scrolling toward something, returns the
+   instant you scroll back up looking for it -- see js/components/nav.js. */
+.site-header.is-hidden { translate: 0 -100%; }
 
 .site-header__inner {
   width: 100%;
@@ -37,53 +41,11 @@
   align-items: center;
   gap: var(--space-2xs);
   flex-shrink: 0;
+  transition: opacity var(--duration-fast) var(--ease-standard);
 }
-
-.brand-logo img { height: 26px; width: auto; }
-.brand-logo .brand-logo__mark-only { display: none; height: 30px; }
-
-.main-nav {
-  display: none;
-}
-
-.main-nav__list {
-  display: flex;
-  align-items: center;
-  gap: var(--space-lg);
-}
-
-.main-nav__link {
-  position: relative;
-  font-size: var(--fs-body-sm);
-  font-weight: 500;
-  letter-spacing: var(--tracking-mid);
-  text-transform: uppercase;
-  color: var(--color-text-dim);
-  padding-block: var(--space-2xs);
-  transition: color var(--duration-fast) var(--ease-standard);
-}
-
-.main-nav__link::after {
-  content: '';
-  position: absolute;
-  left: 0; right: 0; bottom: -2px;
-  height: 1px;
-  background: var(--color-gold);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform var(--duration-base) var(--ease-standard);
-}
-
-.main-nav__link:hover,
-.main-nav__link:focus-visible,
-.main-nav__link.is-active {
-  color: var(--color-text);
-}
-.main-nav__link:hover::after,
-.main-nav__link:focus-visible::after,
-.main-nav__link.is-active::after {
-  transform: scaleX(1);
-}
+.brand-logo:hover { opacity: 0.82; }
+.brand-logo:active { opacity: 0.66; }
+.brand-logo img { height: 24px; width: auto; }
 
 .header-actions {
   display: flex;
@@ -103,45 +65,76 @@
   cursor: pointer;
   color: var(--color-text);
   transition: border-color var(--duration-fast) var(--ease-standard),
-              background var(--duration-fast) var(--ease-standard);
+              background var(--duration-fast) var(--ease-standard),
+              transform var(--duration-fast) var(--ease-standard);
 }
 .icon-btn:hover { border-color: var(--color-gold); background: var(--color-gold-wash); }
+.icon-btn:active { transform: scale(0.92); }
 .icon-btn svg { width: 18px; height: 18px; }
 
-.hamburger-btn {
+/* The single universal way to browse the site -- replaces a conventional
+   horizontal link bar. Deliberately rectangular (not a circle like the
+   search icon) so it reads as the primary action, with its own label:
+   this is "the index", not "the hamburger". */
+.index-trigger {
   display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 5px;
-  width: 40px;
+  gap: var(--space-xs);
   height: 40px;
-  border-radius: var(--radius-full);
+  padding-inline: var(--space-sm) var(--space-xs);
   border: 1px solid var(--color-border);
   background: transparent;
+  color: var(--color-text);
   cursor: pointer;
+  font-family: var(--font-body);
+  font-size: var(--fs-caption);
+  font-weight: 600;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  transition: border-color var(--duration-fast) var(--ease-standard),
+              background var(--duration-fast) var(--ease-standard),
+              transform var(--duration-fast) var(--ease-standard);
 }
-.hamburger-btn span {
-  width: 16px;
+.index-trigger:hover { border-color: var(--color-gold); background: var(--color-gold-wash); }
+.index-trigger:active { transform: scale(0.96); }
+.index-trigger__glyph {
+  position: relative;
+  display: inline-block;
+  width: 14px;
+  height: 10px;
+}
+.index-trigger__glyph span {
+  display: block;
+  position: absolute;
+  left: 0;
   height: 1.5px;
-  background: var(--color-text);
-  transition: transform var(--duration-base) var(--ease-standard), opacity var(--duration-fast);
+  background: currentColor;
+  rotate: 0deg;
+  transition: width var(--duration-base) var(--ease-standard),
+              top var(--duration-base) var(--ease-standard),
+              rotate var(--duration-base) var(--ease-standard);
 }
-.hamburger-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
-.hamburger-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
-.hamburger-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+.index-trigger__glyph span:nth-child(1) { top: 0; width: 14px; }
+.index-trigger__glyph span:nth-child(2) { top: 8.5px; width: 9px; }
+.index-trigger:hover .index-trigger__glyph span:nth-child(2) { width: 14px; }
+.index-trigger[aria-expanded="true"] { border-color: var(--color-gold); background: var(--color-gold-wash); color: var(--color-gold-light); }
+/* Open state: the two lines fold into an X instead of just sitting there
+   once the panel they control is already open. */
+.index-trigger[aria-expanded="true"] .index-trigger__glyph span { top: 4.5px; width: 14px; }
+.index-trigger[aria-expanded="true"] .index-trigger__glyph span:nth-child(1) { rotate: 45deg; }
+.index-trigger[aria-expanded="true"] .index-trigger__glyph span:nth-child(2) { rotate: -45deg; }
 
-@media (min-width: 900px) {
-  .main-nav { display: block; }
-  .hamburger-btn { display: none; }
-}
-
-/* ---- Mobile menu overlay ---- */
-.mobile-menu {
+/* ---- Site index overlay ----
+   The one place every page's navigation and full category list live. Not a
+   "mobile menu" scoped to small screens -- the same panel at every
+   breakpoint, so there is exactly one mental model for "how do I get
+   around PRIME.FINDS", not a desktop nav plus a separate mobile drawer. */
+.site-index {
   position: fixed;
   inset: 0;
   z-index: var(--z-overlay);
   background: var(--color-bg);
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   padding: var(--space-lg) var(--container-pad) var(--space-xl);
@@ -149,40 +142,102 @@
   transition: transform var(--duration-slow) var(--ease-standard);
   visibility: hidden;
 }
-.mobile-menu.is-open {
+.site-index.is-open {
   transform: translateY(0);
   visibility: visible;
 }
-.mobile-menu__top {
+.site-index__top {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: var(--space-2xl);
 }
-.mobile-menu__list {
+.site-index__body {
+  display: grid;
+  grid-template-columns: minmax(200px, 320px) 1fr;
+  gap: var(--space-3xl);
+  flex: 1;
+}
+@media (max-width: 860px) {
+  .site-index__body { grid-template-columns: 1fr; gap: var(--space-2xl); }
+}
+
+.site-index__nav-list {
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
 }
-.mobile-menu__link {
+.site-index__nav-link {
+  position: relative;
+  display: inline-block;
   font-family: var(--font-display);
   font-size: var(--fs-display-sm);
   color: var(--color-text);
   opacity: 0;
-  transform: translateY(12px);
-  transition: opacity var(--duration-slow) var(--ease-standard), transform var(--duration-slow) var(--ease-standard);
+  translate: 0 12px;
+  transition: opacity var(--duration-slow) var(--ease-standard),
+              translate var(--duration-slow) var(--ease-standard),
+              color var(--duration-fast) var(--ease-standard);
 }
-.mobile-menu.is-open .mobile-menu__link {
-  opacity: 1;
-  transform: translateY(0);
+.site-index__nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 2px;
+  height: 2px;
+  background: var(--color-gold);
+  scale: 0 1;
+  transform-origin: left;
+  transition: scale var(--duration-base) var(--ease-out-strong);
 }
-.mobile-menu__link:nth-child(1) { transition-delay: 60ms; }
-.mobile-menu__link:nth-child(2) { transition-delay: 110ms; }
-.mobile-menu__link:nth-child(3) { transition-delay: 160ms; }
-.mobile-menu__link:nth-child(4) { transition-delay: 210ms; }
-.mobile-menu__link:nth-child(5) { transition-delay: 260ms; }
+.site-index__nav-link:hover { color: var(--color-gold-light); }
+.site-index__nav-link:hover::after { scale: 1 1; }
+.site-index.is-open .site-index__nav-link { opacity: 1; translate: 0 0; }
+.site-index__nav-link:nth-child(1) { transition-delay: 60ms; }
+.site-index__nav-link:nth-child(2) { transition-delay: 100ms; }
+.site-index__nav-link:nth-child(3) { transition-delay: 140ms; }
+.site-index__nav-link:nth-child(4) { transition-delay: 180ms; }
 
-.mobile-menu__footer {
+.site-index__cats-label {
+  margin-bottom: var(--space-md);
+}
+.site-index__cats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--color-border);
+  border: 1px solid var(--color-border);
+}
+@media (max-width: 560px) {
+  .site-index__cats { grid-template-columns: 1fr; }
+}
+.site-index__cat {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  background: var(--color-bg);
+  color: var(--color-text);
+  opacity: 0;
+  translate: 0 12px;
+  transition: opacity var(--duration-slow) var(--ease-standard),
+              translate var(--duration-slow) var(--ease-standard),
+              background var(--duration-fast) var(--ease-standard);
+}
+.site-index.is-open .site-index__cat { opacity: 1; translate: 0 0; }
+.site-index__cat:hover { background: var(--color-bg-raised); }
+.site-index__cat-name {
+  font-family: var(--font-display);
+  font-size: var(--fs-body-lg);
+}
+.site-index__cat-count {
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  color: var(--color-text-faint);
+  white-space: nowrap;
+}
+
+.site-index__footer {
   margin-top: auto;
   padding-top: var(--space-lg);
   border-top: 1px solid var(--color-border);
@@ -190,7 +245,8 @@
   font-size: var(--fs-body-sm);
 }
 
-body.menu-open { overflow: hidden; }
+body.menu-open,
+body.intro-lock { overflow: hidden; }
 
 /* ---- Footer ---- */
 .site-footer {
@@ -233,11 +289,25 @@ body.menu-open { overflow: hidden; }
 
 .footer-links { display: flex; flex-direction: column; gap: var(--space-2xs); }
 .footer-links a {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
   color: var(--color-text-dim);
   font-size: var(--fs-body-sm);
   transition: color var(--duration-fast) var(--ease-standard);
 }
 .footer-links a:hover { color: var(--color-gold); }
+.footer-links a::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: -2px;
+  height: 1px;
+  background: var(--color-gold);
+  scale: 0 1;
+  transform-origin: left;
+  transition: scale var(--duration-base) var(--ease-out-strong);
+}
+.footer-links a:hover::after { scale: 1 1; }
 
 .footer-bottom {
   display: flex;
@@ -274,6 +344,12 @@ body.menu-open { overflow: hidden; }
   padding-block: var(--space-2xl) var(--space-xl);
   border-bottom: 1px solid var(--color-border);
 }
+/* The hero's own bottom padding plus the next section's top padding was
+   stacking into a near-empty 120px gap before any real content showed --
+   tighten just that one seam, everywhere a page-hero precedes a section. */
+.page-hero + .section {
+  padding-top: var(--space-lg);
+}
 .breadcrumbs {
   display: flex;
   align-items: center;
@@ -292,20 +368,31 @@ body.menu-open { overflow: hidden; }
 .grid-products {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-lg);
+  gap: 1px;
+  background: var(--color-border);
+  border: 1px solid var(--color-border);
 }
 @media (max-width: 1200px) { .grid-products { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 860px) { .grid-products { grid-template-columns: repeat(2, 1fr); gap: var(--space-md); } }
-@media (max-width: 480px) { .grid-products { grid-template-columns: 1fr 1fr; gap: var(--space-xs); } }
+@media (max-width: 860px) { .grid-products { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .grid-products { grid-template-columns: 1fr 1fr; } }
 
-.grid-categories {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-md);
+/* Every 7th tile (0-indexed 3rd, i.e. the 4th card) spans two columns on a
+   4-up grid -- an occasional larger frame so the grid reads as curated
+   rather than a uniform catalog wall. Only kicks in with room to spare. */
+@media (min-width: 861px) {
+  .grid-products--feature .product-card:nth-child(4n+1) {
+    grid-column: span 2;
+  }
+  .grid-products--feature .product-card:nth-child(4n+1) .product-card__media {
+    aspect-ratio: 16 / 10;
+  }
+  .grid-products--feature .product-card:nth-child(4n+1) .product-card__name {
+    font-size: 1.5rem;
+  }
+  .grid-products--feature .product-card:nth-child(4n+1) .product-card__price {
+    font-size: 1.6rem;
+  }
 }
-@media (max-width: 1100px) { .grid-categories { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 760px) { .grid-categories { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 480px) { .grid-categories { grid-template-columns: 1fr; } }
 
 .narrow {
   max-width: 860px;
