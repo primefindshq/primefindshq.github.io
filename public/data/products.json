@@ -3134,5 +3134,50 @@
     "published": true,
     "createdAt": "2026-09-19T00:00:00.000Z",
     "updatedAt": "2026-09-19T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0113",
+    "name": "Oasis Mini Kinetic Sand Art Table, Bamboo",
+    "slug": "oasis-mini-kinetic-sand-art-table-bamboo",
+    "category": "desk-setup",
+    "secondaryCategories": [
+      "home",
+      "gifts"
+    ],
+    "subcategory": "Decor",
+    "shortDescription": "A 9-inch kinetic desk sculpture that slowly carves patterns into a bed of sand, with app-controlled RGB lighting, in real bamboo and glass.",
+    "description": "A desk piece that draws itself. The Oasis Mini is a kinetic sand art table: it slowly carves patterns into a bed of sand, and you choose what it draws from the app, on iOS or Android, over Wi-Fi. The library holds hundreds of patterns, and you can also make your own with the included tools and tutorials. The app also controls the RGB lighting (100+ light modes), the drawing speed, and playlists. It is built with real glass and bamboo, measures about 9 x 9 x 3 inches, and the listing pitches it as a calming, mindful desk or living-room piece and as a gift. The box includes the Oasis Mini, a sand packet, a ball bearing, a sand smoothing card, a user manual, a power adapter, and a USB power cable.",
+    "whyWeLikeIt": "It is a piece of moving art rather than a gadget: a slow, hypnotic drawing that keeps redrawing itself in sand, and it looks good on a desk when nothing is happening on it.",
+    "image": "/assets/images/products/oasis-mini-kinetic-sand-art-table-bamboo.webp",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.4,
+    "reviewCount": 397,
+    "tags": [
+      "kinetic sand art",
+      "sand art table",
+      "kinetic desk sculpture",
+      "oasis mini",
+      "desk decor",
+      "led lighting",
+      "bamboo",
+      "zen",
+      "gift"
+    ],
+    "highlights": [
+      "Slowly carves patterns into sand, with hundreds of patterns to choose from",
+      "App control on iOS and Android over Wi-Fi: patterns, speed, playlists, and RGB lighting",
+      "100+ light modes",
+      "Real glass and bamboo construction, about 9 x 9 x 3 inches",
+      "Includes sand, ball bearing, smoothing card, manual, power adapter, and USB cable"
+    ],
+    "affiliateUrl": "https://link.amazon/B09vYYRC2",
+    "externalUrl": "https://link.amazon/B09vYYRC2",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-19T00:00:00.000Z",
+    "updatedAt": "2026-09-19T00:00:00.000Z"
   }
 ]
