@@ -3046,5 +3046,49 @@
     "published": true,
     "createdAt": "2026-09-19T00:00:00.000Z",
     "updatedAt": "2026-09-19T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0111",
+    "name": "Nextmug Temperature-Controlled Self-Heating Mug, 14 oz, Graphite",
+    "slug": "nextmug-self-heating-mug-graphite",
+    "category": "tech",
+    "secondaryCategories": [
+      "home",
+      "gifts"
+    ],
+    "subcategory": "Smart Drinkware",
+    "shortDescription": "A 14 oz mug that holds your drink at a temperature you choose (Warm, Hot, or Piping) for hours, with no app and a charging coaster included.",
+    "description": "Coffee has a habit of going cold before you finish it. The Nextmug fixes that by heating itself: pick Warm (130°F), Hot (140°F), or Piping (150°F) with the on-board control button, and it keeps your drink there for hours. The same button turns it on and off, LED lights show the battery level and the real-time temperature, and there is no app, password, or pairing involved. The lithium-ion battery charges on the included docking coaster with its 6-foot cord, and a spill-resistant lid is included too. It has a matte ceramic finish over a stainless steel body, a 14 oz (415 ml) capacity, and about 4.75 inches across by 4.5 inches tall, and it was designed and tested in Boulder, Colorado. This listing is the Graphite color.",
+    "whyWeLikeIt": "It is the quiet kind of clever: a mug that just stays the temperature you set, with no phone and no setup, so the last sip is as good as the first.",
+    "image": "/assets/images/products/nextmug-self-heating-mug-graphite.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.2,
+    "reviewCount": 7142,
+    "tags": [
+      "self-heating mug",
+      "temperature controlled mug",
+      "heated mug",
+      "coffee mug",
+      "smart mug",
+      "nextmug",
+      "desk gadget",
+      "gift"
+    ],
+    "highlights": [
+      "Holds your drink at Warm (130°F), Hot (140°F), or Piping (150°F) for hours",
+      "On-board control button, and no app required",
+      "LED lights show battery level and real-time temperature",
+      "Includes a docking charging coaster with 6-foot cord and a spill-resistant lid",
+      "14 oz capacity, ceramic matte finish over a stainless steel body, in Graphite"
+    ],
+    "affiliateUrl": "https://link.amazon/B0hj6wM8y",
+    "externalUrl": "https://link.amazon/B0hj6wM8y",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-19T00:00:00.000Z",
+    "updatedAt": "2026-09-19T00:00:00.000Z"
   }
 ]
