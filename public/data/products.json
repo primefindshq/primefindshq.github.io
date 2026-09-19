@@ -2956,5 +2956,49 @@
     "published": true,
     "createdAt": "2026-09-19T00:00:00.000Z",
     "updatedAt": "2026-09-19T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0109",
+    "name": "MITO Infinity Mirror Light Dodecahedron, RGBW Cube Light Decor",
+    "slug": "mito-infinity-mirror-dodecahedron-light",
+    "category": "home",
+    "secondaryCategories": [
+      "desk-setup",
+      "gifts"
+    ],
+    "subcategory": "Lighting",
+    "shortDescription": "A twelve-sided infinity-mirror light that turns its LEDs into deep, glowing 3D tunnels, with 258 lighting effects and music-reactive modes.",
+    "description": "At first glance it is hard to say what you are looking at. This is a dodecahedron, a twelve-faced geometric object, built as an infinity mirror: the listing describes its RGBW LEDs as creating deep 3D light tunnels that seem to recede endlessly into each face. It ships with 258 lighting effects, and you can adjust both the brightness and the speed at which the light changes. It can also react to the beat of music, movies, and game audio for a synced light show. It runs from a standard USB port, so it can sit on a desk or shelf, or travel with you, and it measures 7.5 x 7.5 x 6.3 inches and weighs about 0.41 kg, with an acrylic construction. The listing pitches it for gaming rooms, bedrooms, and parties, and as a gift for gamers and teenagers.",
+    "whyWeLikeIt": "It looks like a piece of futuristic set design rather than a lamp. Switch it on in a dark room and the light seems to fall away into the object, which is exactly the kind of thing people take out their phones to film.",
+    "image": "/assets/images/products/mito-infinity-mirror-dodecahedron-light.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.4,
+    "reviewCount": 504,
+    "tags": [
+      "infinity mirror",
+      "dodecahedron light",
+      "led light",
+      "rgbw light",
+      "music reactive light",
+      "desk decor",
+      "gaming room decor",
+      "gift"
+    ],
+    "highlights": [
+      "Infinity-mirror design that creates deep 3D light tunnels",
+      "258 lighting effects, with adjustable brightness and change speed",
+      "Music-reactive: light moves to the beat of music, movies, and game audio",
+      "Powered by a standard USB port",
+      "About 7.5 x 7.5 x 6.3 inches, acrylic construction"
+    ],
+    "affiliateUrl": "https://link.amazon/B0i9NYuFF",
+    "externalUrl": "https://link.amazon/B0i9NYuFF",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-19T00:00:00.000Z",
+    "updatedAt": "2026-09-19T00:00:00.000Z"
   }
 ]
