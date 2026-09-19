@@ -2733,5 +2733,49 @@
     "published": true,
     "createdAt": "2026-09-19T00:00:00.000Z",
     "updatedAt": "2026-09-19T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0104",
+    "name": "JAYEGT Motorized Rotating Display Stand, 360° Electric Turntable",
+    "slug": "jayegt-motorized-rotating-display-stand",
+    "category": "tech",
+    "secondaryCategories": [
+      "home",
+      "desk-setup"
+    ],
+    "subcategory": "Display & Photography",
+    "shortDescription": "A rechargeable electric turntable that slowly spins whatever you put on it through a smooth 360°, with adjustable speed and direction.",
+    "description": "Set a watch, a figurine, a bag, or a cake on this compact motorized turntable and it starts to turn, showing every side of the object in one slow, smooth 360° rotation. Press any button to start it, and use R/L to choose clockwise or counter-clockwise, SR to switch between two speeds (1 to 2 revolutions per minute), and ASA to make it sweep back and forth across a 90 to 180 degree arc, with one full turn taking 8, 15, or 30 seconds. It runs from a built-in rechargeable battery or a USB cable, so it can sit on a shelf or a desk without a socket nearby, and it is rated to carry up to 10 kg. At 14.6 cm across and 3.5 cm tall, it is small enough to leave out. The listing pitches it for product photography and live-video selling, jewelry, models, and collectibles.",
+    "whyWeLikeIt": "Almost nothing looks ordinary once it is slowly rotating. A watch, a figurine, or a favorite collectible suddenly gets the showroom treatment, and it costs a small, quiet gadget that is easy to leave running on a shelf or desk.",
+    "image": "/assets/images/products/jayegt-motorized-rotating-display-stand.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.4,
+    "reviewCount": 2614,
+    "tags": [
+      "rotating display stand",
+      "electric turntable",
+      "360 turntable",
+      "motorized turntable",
+      "product photography",
+      "collectible display",
+      "desk gadget",
+      "gift"
+    ],
+    "highlights": [
+      "Smooth 360° rotation, clockwise or counter-clockwise",
+      "Two speed settings and an auto back-and-forth sweep mode",
+      "Built-in rechargeable battery, or power it by USB cable",
+      "Carries up to 10 kg on a compact 14.6 cm platform",
+      "Suited to jewelry, watches, models, collectibles, and photography or live-video product shots"
+    ],
+    "affiliateUrl": "https://link.amazon/B04XO1hwT",
+    "externalUrl": "https://link.amazon/B04XO1hwT",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-19T00:00:00.000Z",
+    "updatedAt": "2026-09-19T00:00:00.000Z"
   }
 ]
