@@ -2910,5 +2910,51 @@
     "published": true,
     "createdAt": "2026-09-19T00:00:00.000Z",
     "updatedAt": "2026-09-19T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0108",
+    "name": "eLinkSmart Fingerprint Padlock, Keyless Biometric Smart Lock",
+    "slug": "elinksmart-fingerprint-smart-padlock",
+    "category": "tech",
+    "secondaryCategories": [
+      "travel",
+      "gifts"
+    ],
+    "subcategory": "Smart Locks",
+    "shortDescription": "A padlock with no key and no combination: touch the sensor with your finger and it opens in about 0.2 seconds, with app and Apple Watch unlocking too.",
+    "description": "You have probably never had a padlock that recognizes you. This one has a fingerprint sensor built into its face: touch it and, per the listing, it identifies you and unlocks in about 0.2 seconds, so there is no key to lose and no combination to forget. It stores up to 20 fingerprints, and through the eSmartLock app over Bluetooth you can add or delete them, check the unlock history, and share unlock permission with family and friends. The listing also lists unlocking from an Apple Watch, so it opens three ways: fingerprint, phone app, or watch. Until the first fingerprint is registered the lock is in an experience mode where any fingerprint opens it, so register yours first. It carries an IP67 waterproof rating, has a built-in rechargeable battery that charges over USB-C with a battery indicator, and measures about 3 x 1.7 x 0.7 inches, with an alloy steel and zinc alloy body and a hardened steel shackle. Sold in Black and pitched for gym lockers, gates, sheds, and storage units.",
+    "whyWeLikeIt": "It is a padlock that turns a fingertip into the key. Nothing to remember and nothing to carry, and the same little lock can be handed out to family through the app, which is a very different idea of what a padlock is for.",
+    "image": "/assets/images/products/elinksmart-fingerprint-smart-padlock.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.3,
+    "reviewCount": 528,
+    "tags": [
+      "fingerprint padlock",
+      "smart lock",
+      "biometric lock",
+      "keyless padlock",
+      "bluetooth lock",
+      "gym locker lock",
+      "travel lock",
+      "apple watch unlock",
+      "gift"
+    ],
+    "highlights": [
+      "Fingerprint unlock in about 0.2 seconds, with no key or combination",
+      "Stores up to 20 fingerprints, managed in the eSmartLock app over Bluetooth",
+      "Also unlocks from the app or an Apple Watch, and can share unlock permission",
+      "IP67 waterproof rating",
+      "Built-in rechargeable battery, USB-C charging, and a battery indicator",
+      "Compact: about 3 x 1.7 x 0.7 inches, in Black"
+    ],
+    "affiliateUrl": "https://link.amazon/B050rf445",
+    "externalUrl": "https://link.amazon/B050rf445",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-19T00:00:00.000Z",
+    "updatedAt": "2026-09-19T00:00:00.000Z"
   }
 ]
