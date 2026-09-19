@@ -2821,5 +2821,48 @@
     "published": true,
     "createdAt": "2026-09-19T00:00:00.000Z",
     "updatedAt": "2026-09-19T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0106",
+    "name": "EUHOMY Nugget Ice Maker Countertop, Pebble Ice Machine with Self-Cleaning",
+    "slug": "euhomy-nugget-pebble-ice-maker",
+    "category": "home",
+    "secondaryCategories": [
+      "gifts"
+    ],
+    "subcategory": "Kitchen",
+    "shortDescription": "A compact countertop machine that makes soft, chewable nugget ice at home, ready in about 7 minutes, with a self-cleaning cycle.",
+    "description": "Nugget ice is the soft, crunchy, slow-melting kind that people chew on and go looking for, and this countertop machine makes it at home. Press the ICE button and it starts producing pebble-style ice, with the first batch ready in about 7 minutes and a listed output of up to 35 pounds every 24 hours from a 1.1 L water tank. It cleans itself too: press and hold the CLEAN button for about 5 seconds to start the self-cleaning cycle. The stainless steel body measures 11 x 9.1 x 12.6 inches, so it fits on most countertops, and it comes with an ice scoop and basket.",
+    "whyWeLikeIt": "It turns the ice you usually have to go and find into something you can just make at home, in a shape that makes every drink feel a little more special. It is the sort of appliance people did not know they wanted until they hear the crunch.",
+    "image": "/assets/images/products/euhomy-nugget-pebble-ice-maker.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.0,
+    "reviewCount": 5020,
+    "tags": [
+      "nugget ice maker",
+      "pebble ice",
+      "countertop ice maker",
+      "chewable ice",
+      "pellet ice",
+      "kitchen appliance",
+      "home bar",
+      "gift"
+    ],
+    "highlights": [
+      "Soft, chewable nugget ice, first batch ready in about 7 minutes",
+      "Up to 35 lbs of ice per 24 hours from a 1.1 L water tank",
+      "Self-cleaning: hold the CLEAN button for about 5 seconds",
+      "Compact stainless steel body, 11 x 9.1 x 12.6 inches",
+      "Includes an ice scoop and basket"
+    ],
+    "affiliateUrl": "https://link.amazon/B093JVzLo",
+    "externalUrl": "https://link.amazon/B093JVzLo",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-19T00:00:00.000Z",
+    "updatedAt": "2026-09-19T00:00:00.000Z"
   }
 ]
