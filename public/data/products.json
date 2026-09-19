@@ -2864,5 +2864,51 @@
     "published": true,
     "createdAt": "2026-09-19T00:00:00.000Z",
     "updatedAt": "2026-09-19T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0107",
+    "name": "LOOI Robot, AI Desktop Companion with ChatGPT Voice Interaction",
+    "slug": "looi-robot-ai-desktop-companion",
+    "category": "tech",
+    "secondaryCategories": [
+      "desk-setup",
+      "gifts"
+    ],
+    "subcategory": "AI Companions",
+    "shortDescription": "A small desktop robot that talks with you through ChatGPT, sees what is in front of it, remembers you, and snaps on your phone for 10W MagSafe charging.",
+    "description": "Most desk accessories just sit there. LOOI is a small robot that lives on your desk and reacts to you. It holds spoken conversations through ChatGPT (English only for now), and a vision-language model lets it recognize objects, keep track of several people at once, and respond to gestures and facial cues. It remembers, too: short-term memory to follow a conversation, and long-term memory for things like family members' faces. Its animated expressions are meant to adapt to what is happening around it, and the listing describes an autonomous behavior system that makes spontaneous decisions, so its behavior is not fully predictable. It is also a practical desk companion, with reminders, weather, a standby clock, games, a face-tracking camera, and 10W MagSafe charging when you snap a phone on (the base must be plugged in, with a 9V/2A or better adapter). Behaviors update through the companion app. The listing offers it in Black.",
+    "whyWeLikeIt": "It is not a gadget that waits for a button press. It is a little character on your desk that talks back, notices what is going on, and has some ideas of its own, which is a genuinely different thing to have next to your keyboard.",
+    "image": "/assets/images/products/looi-robot-ai-desktop-companion.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 3.8,
+    "reviewCount": 382,
+    "tags": [
+      "ai robot",
+      "desktop companion",
+      "desk robot",
+      "chatgpt robot",
+      "voice assistant",
+      "wireless charging",
+      "electronic pet",
+      "gadget gift",
+      "desk gadget"
+    ],
+    "highlights": [
+      "Spoken conversations powered by ChatGPT (English only for now)",
+      "Vision-language model recognizes objects and people, and responds to gestures and facial cues",
+      "Short-term and long-term memory, including family members' faces",
+      "Autonomous behavior system: spontaneous, not fully predictable",
+      "Snap on a phone for 10W MagSafe charging (base must be plugged in)",
+      "Reminders, weather, standby clock, games, and a face-tracking camera"
+    ],
+    "affiliateUrl": "https://link.amazon/B0d9gHfYx",
+    "externalUrl": "https://link.amazon/B0d9gHfYx",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-19T00:00:00.000Z",
+    "updatedAt": "2026-09-19T00:00:00.000Z"
   }
 ]
