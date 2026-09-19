@@ -3359,5 +3359,51 @@
     "published": true,
     "createdAt": "2026-09-20T00:00:00.000Z",
     "updatedAt": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0118",
+    "name": "Carson MicroBrite Pro MM-350 Pocket Microscope with Smartphone Adapter Clip",
+    "slug": "carson-microbrite-pro-mm350-pocket-microscope",
+    "category": "tech",
+    "secondaryCategories": [
+      "gifts",
+      "travel"
+    ],
+    "subcategory": "Science & Optics",
+    "shortDescription": "A pocket-sized 60x-120x LED microscope with a smartphone adapter clip, so you can explore details the eye can't see and capture them with your phone.",
+    "description": "A whole hidden world that fits in a pocket. The Carson MicroBrite Pro (model MM-350) is a lightweight handheld microscope with 60x to 120x magnification and 2x optical zoom, lit by a built-in LED so you can see detail almost anywhere. Its precision-molded aspheric lenses are described in the listing as giving a bright, clear view, and it runs on one AA battery. The kit adds a smartphone adapter clip that attaches to most smartphones, so you can capture close-up photos and videos of insects, plants, minerals, fabrics, coins, and more through your phone's camera. It works with Carson's CarsonCam app, which the listing says gives correctly oriented images, and the listing describes the microscope itself as weighing 2.56 ounces and pitches it for STEM, nature, and collecting. The listing also refers to this model as the MicroBrite Plus in one bullet.",
+    "whyWeLikeIt": "It turns a leaf, a coin, or a scrap of fabric into something worth looking at twice. It is small enough to carry anywhere, and with your phone clipped on you can save what you find.",
+    "image": "/assets/images/products/carson-microbrite-pro-mm350-pocket-microscope.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.0,
+    "reviewCount": 1419,
+    "tags": [
+      "pocket microscope",
+      "microbrite plus",
+      "microbrite pro",
+      "carson microscope",
+      "led microscope",
+      "smartphone microscope",
+      "digiscoping",
+      "science kit",
+      "stem",
+      "gift"
+    ],
+    "highlights": [
+      "60x-120x magnification with 2x optical zoom",
+      "Built-in LED illumination in a compact, pocket-sized body",
+      "Smartphone adapter clip for capturing photos and videos through your phone",
+      "Works with the CarsonCam app, which the listing says gives correctly oriented images",
+      "Precision-molded aspheric lenses; runs on one AA battery"
+    ],
+    "affiliateUrl": "https://link.amazon/B061vNPxC",
+    "externalUrl": "https://link.amazon/B061vNPxC",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-20T00:00:00.000Z",
+    "updatedAt": "2026-09-20T00:00:00.000Z"
   }
 ]
