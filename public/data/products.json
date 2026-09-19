@@ -3179,5 +3179,51 @@
     "published": true,
     "createdAt": "2026-09-19T00:00:00.000Z",
     "updatedAt": "2026-09-19T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0114",
+    "name": "Mostarle Terminator M 3D Metal Puzzle, DIY Mechanical Robot Model Kit with LED Light",
+    "slug": "mostarle-terminator-m-3d-metal-puzzle",
+    "category": "desk-setup",
+    "secondaryCategories": [
+      "gaming",
+      "gifts"
+    ],
+    "subcategory": "Decor",
+    "shortDescription": "A metal DIY mechanical robot model you build yourself, with fully adjustable joints for action poses and an LED light with its own lighting modes.",
+    "description": "This is a build-it-yourself robot made of metal: a Mostarle 3D metal puzzle in a sci-fi mechanical design. Once assembled, the Terminator M has fully adjustable body joints, so it can stand, crouch, or hold a weapon, and you can set it into whatever pose you like. It has an LED light feature that you can turn on or off. Long-press the switch while the light is on to cycle its brightness from dim to bright and back, or double-tap it for a breathing-light mode where the glow fades in and out, and the listing describes three light color options. The listing gives its size as about 8 inches, its material as metal, and pitches it as a gift for adults and teenagers. The listing does not state a piece count for this model.",
+    "whyWeLikeIt": "Most desk figures arrive finished. This one is the project: you assemble a poseable metal robot piece by piece, and you end up with a lit, articulated sci-fi figure that you built yourself.",
+    "image": "/assets/images/products/mostarle-terminator-m-3d-metal-puzzle.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.2,
+    "reviewCount": 83,
+    "tags": [
+      "3d metal puzzle",
+      "metal model kit",
+      "diy robot",
+      "mechanical robot",
+      "robot model",
+      "mostarle",
+      "arcynix",
+      "led light",
+      "desk decor",
+      "gift"
+    ],
+    "highlights": [
+      "Metal 3D puzzle: you assemble a mechanical robot yourself",
+      "Fully adjustable body joints: stand, crouch, or hold a weapon",
+      "LED light feature with brightness and breathing-light modes",
+      "About 8 inches tall, in metal",
+      "Sold as a gift for adults and teenagers"
+    ],
+    "affiliateUrl": "https://link.amazon/B05g7Hp1s",
+    "externalUrl": "https://link.amazon/B05g7Hp1s",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-20T00:00:00.000Z",
+    "updatedAt": "2026-09-20T00:00:00.000Z"
   }
 ]
