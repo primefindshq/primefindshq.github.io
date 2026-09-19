@@ -3269,5 +3269,49 @@
     "published": true,
     "createdAt": "2026-09-20T00:00:00.000Z",
     "updatedAt": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0116",
+    "name": "HoMedics EnviraScape Silver Springs Tabletop Relaxation Fountain",
+    "slug": "homedics-envirascape-silver-springs-fountain",
+    "category": "home",
+    "secondaryCategories": [
+      "desk-setup",
+      "gifts"
+    ],
+    "subcategory": "Ambience",
+    "shortDescription": "A compact tabletop fountain with a 3-tier cascading waterfall, natural river rocks, a deep basin, a built-in quiet pump, and a soft illuminating glow.",
+    "description": "A small waterfall for a tabletop. The EnviraScape Silver Springs is an Asian-inspired fountain with three tiered leaves that water streams down, creating several gentle streams and the sound of a flowing spring. It sits in an extra-deep, open basin, and the natural river rocks that come with it can go on any of the three tiers or into the basin. A built-in submersible pump circulates the water, you simply fill the basin to the water fill line, and unlike many fountains it has an on/off switch. A lighting feature gives the flow a soft, illuminating glow. It measures about 8.1 x 7.25 x 8.25 inches and weighs 16 ounces, so the listing describes it as sized for a tabletop, bathroom vanity, or office desk. The box includes the fountain, a set of natural river rocks, the three leaf tiers, a power cord and adapter, the pump cover, water pump and fountain base, and an instruction manual.",
+    "whyWeLikeIt": "It brings moving water to a desk or shelf without a garden or a plumber. The layered cascade, the pebbles, and the warm glow make it feel like a small piece of landscape you can plug in.",
+    "image": "/assets/images/products/homedics-envirascape-silver-springs-fountain.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.1,
+    "reviewCount": 44381,
+    "tags": [
+      "tabletop fountain",
+      "water fountain",
+      "relaxation fountain",
+      "homedics",
+      "envirascape",
+      "zen decor",
+      "desk fountain",
+      "gift"
+    ],
+    "highlights": [
+      "3-tier cascading waterfall in an extra-deep basin",
+      "Includes a set of natural river rocks to arrange on the tiers or in the basin",
+      "Built-in submersible pump with an on/off switch",
+      "Lighting feature gives the flow a soft glow",
+      "About 8.1 x 7.25 x 8.25 inches, 16 oz, corded electric"
+    ],
+    "affiliateUrl": "https://link.amazon/B035iP1Xs",
+    "externalUrl": "https://link.amazon/B035iP1Xs",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-20T00:00:00.000Z",
+    "updatedAt": "2026-09-20T00:00:00.000Z"
   }
 ]
