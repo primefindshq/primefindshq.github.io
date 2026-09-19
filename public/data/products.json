@@ -3405,5 +3405,49 @@
     "published": true,
     "createdAt": "2026-09-20T00:00:00.000Z",
     "updatedAt": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0119",
+    "name": "BIGASUO 10.1-Inch Frameo WiFi Digital Picture Frame, 32GB, 1280x800 IPS Touchscreen",
+    "slug": "bigasuo-10-1-frameo-wifi-digital-picture-frame",
+    "category": "tech",
+    "secondaryCategories": [
+      "home",
+      "gifts"
+    ],
+    "subcategory": "Lighting & Displays",
+    "shortDescription": "A 10.1-inch WiFi picture frame that shows your photos and videos on a 1280x800 IPS touchscreen, and lets family send new ones from their phones through the Frameo app.",
+    "description": "A photo frame that keeps filling up. The BIGASUO is a 10.1-inch digital frame with a 1280 x 800 IPS touchscreen, and it connects over WiFi to the free Frameo app (iOS and Android), so you can send photos and videos to it from anywhere and invite family and friends to share theirs directly. It has 32GB of built-in memory, with support for Micro SD card expansion, and photos and videos can be imported or exported. The touchscreen controls include auto-rotate, slideshow, photo hiding, brightness adjustment, sleep mode, and album creation. It comes in Matte Black with a one-year warranty, and the listing pitches it as a gift for birthdays, weddings, graduations, and family occasions.",
+    "whyWeLikeIt": "It turns a photo frame into a shared one. Instead of printing and swapping pictures, the people you love can send new moments straight to it, and the frame keeps them on display.",
+    "image": "/assets/images/products/bigasuo-10-1-frameo-wifi-digital-picture-frame.webp",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.5,
+    "reviewCount": 11107,
+    "tags": [
+      "digital picture frame",
+      "digital photo frame",
+      "wifi photo frame",
+      "frameo",
+      "bigasuo",
+      "touchscreen frame",
+      "photo sharing",
+      "gift"
+    ],
+    "highlights": [
+      "10.1-inch IPS touchscreen at 1280 x 800",
+      "WiFi and the free Frameo app (iOS and Android) to send photos and videos from anywhere",
+      "32GB built-in memory, with Micro SD card expansion",
+      "Auto-rotate, slideshow, photo hiding, brightness, sleep mode, and albums",
+      "Matte Black, with a one-year warranty"
+    ],
+    "affiliateUrl": "https://link.amazon/B0dnCXMVF",
+    "externalUrl": "https://link.amazon/B0dnCXMVF",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-20T00:00:00.000Z",
+    "updatedAt": "2026-09-20T00:00:00.000Z"
   }
 ]
