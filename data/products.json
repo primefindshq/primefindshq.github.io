@@ -2689,5 +2689,49 @@
     "published": true,
     "createdAt": "2026-09-15T00:00:00.000Z",
     "updatedAt": "2026-09-15T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0103",
+    "name": "SenseRobot AI Chess Robot with Robotic Arm",
+    "slug": "senserobot-ai-chess-robot-robotic-arm",
+    "category": "gaming",
+    "secondaryCategories": [
+      "tech",
+      "gifts"
+    ],
+    "subcategory": "Smart Board Games",
+    "shortDescription": "An electronic chess board with a real robotic arm that physically moves the pieces for you, with 25 AI levels and 1,200+ training exercises.",
+    "description": "Most chess apps stop at a screen. This one reaches across the board: a robotic arm picks up and moves real chess pieces while you play, so a game against the AI feels like sitting across from an actual opponent. It offers 25 AI difficulty levels from first-timer to advanced, plus 1,200+ exercises, endgame training, classic game replay, hints, and undos. Voice coaching guides the practice, and the companion app adds Lichess play, PGN export, progress tracking, and multiple player profiles, with Wi-Fi OTA updates to keep features current. Because a physical arm does the moving, pieces travel at a natural, controlled pace rather than screen-speed animation, and the connected features need Wi-Fi and app setup.",
+    "whyWeLikeIt": "It turns chess back into a tabletop object. A robot arm that reaches out, lifts a knight, and sets it down is the kind of thing people stop mid-conversation to watch, and it happens to be a genuinely capable training partner underneath.",
+    "image": "/assets/images/products/senserobot-ai-chess-robot-robotic-arm.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.1,
+    "reviewCount": 145,
+    "tags": [
+      "chess robot",
+      "robotic arm",
+      "electronic chess board",
+      "ai chess",
+      "smart board game",
+      "chess trainer",
+      "gift"
+    ],
+    "highlights": [
+      "A robotic arm physically moves real chess pieces",
+      "25 AI difficulty levels, from beginner to advanced",
+      "1,200+ exercises, endgame training, and game replay",
+      "Voice coaching, hints, and undos",
+      "Companion app with Lichess play, PGN export, and progress tracking",
+      "Wi-Fi OTA updates (Wi-Fi and app setup required for connected features)"
+    ],
+    "affiliateUrl": "https://link.amazon/B00RnwFck",
+    "externalUrl": "https://link.amazon/B00RnwFck",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-19T00:00:00.000Z",
+    "updatedAt": "2026-09-19T00:00:00.000Z"
   }
 ]
