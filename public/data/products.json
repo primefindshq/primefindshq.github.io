@@ -3000,5 +3000,51 @@
     "published": true,
     "createdAt": "2026-09-19T00:00:00.000Z",
     "updatedAt": "2026-09-19T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0110",
+    "name": "Divoom Pixoo-Max 32x32 Programmable Pixel Art LED Display",
+    "slug": "divoom-pixoo-max-pixel-display",
+    "category": "tech",
+    "secondaryCategories": [
+      "gaming",
+      "desk-setup",
+      "gifts"
+    ],
+    "subcategory": "Lighting & Displays",
+    "shortDescription": "A 9.6-inch, 32x32 programmable LED screen you control from your phone: design your own pixel art, animations, and scrolling text in the Divoom app.",
+    "description": "A tiny screen that shows whatever you draw on it. The Pixoo-Max has a 32 x 32 pixel LED display on a 9.6-inch matte black square frame, and it is controlled from your phone through the Divoom app, where you can design your own images, animations, and scrolling text messages. The listing also describes a voice-control function for displaying images by voice command, and a pixel art community in the app where creations can be shared. It comes with a stand that attaches to the back, and it also has a hanging slot for mounting it on a wall. The listing pitches it as room and gaming-setup decor, and as a gift for retro-gaming and old-computer fans.",
+    "whyWeLikeIt": "It turns pixel art into a tiny living display for your desk or wall. Instead of a static poster, you get something you can redraw whenever you feel like it, from a retro game sprite to a scrolling message.",
+    "image": "/assets/images/products/divoom-pixoo-max-pixel-display.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.4,
+    "reviewCount": 1400,
+    "tags": [
+      "pixel display",
+      "pixel art",
+      "led display",
+      "programmable led",
+      "divoom",
+      "desk decor",
+      "gaming setup",
+      "retro gaming",
+      "gift"
+    ],
+    "highlights": [
+      "32 x 32 programmable LED screen, 9.6 inches across",
+      "Design pixel art, animations, and scrolling text in the Divoom app",
+      "Voice-control function for displaying images, per the listing",
+      "Includes a stand, plus a hanging slot for wall mounting",
+      "Sleek matte black square frame"
+    ],
+    "affiliateUrl": "https://link.amazon/B0d7wstGI",
+    "externalUrl": "https://link.amazon/B0d7wstGI",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-19T00:00:00.000Z",
+    "updatedAt": "2026-09-19T00:00:00.000Z"
   }
 ]
