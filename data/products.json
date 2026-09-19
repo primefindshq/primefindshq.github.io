@@ -3313,5 +3313,51 @@
     "published": true,
     "createdAt": "2026-09-20T00:00:00.000Z",
     "updatedAt": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0117",
+    "name": "Missyou 3DHologramFan MS50D2 19.7-Inch LED Holographic Fan",
+    "slug": "missyou-ms50d2-3d-hologram-fan",
+    "category": "tech",
+    "secondaryCategories": [
+      "home",
+      "desk-setup",
+      "gifts"
+    ],
+    "subcategory": "Lighting & Displays",
+    "shortDescription": "A 19.7-inch LED holographic fan that projects animated 3D visuals that appear to float in mid-air, with WiFi, Bluetooth, app control, and a remote.",
+    "description": "Animated images that seem to hang in mid-air. The Missyou MS50D2 is an LED holographic fan: its spinning 19.7-inch blade carries 528 high-brightness LED beads, and the listing says the result stays clear even in bright indoor light. It comes with a preloaded library of 3D video animations, which the listing title puts at 1500+, and you can add your own: it supports MP4 and AVI files, with video conversion tools included. WiFi and a mobile app let you upload, update, and manage content from a phone or tablet, Bluetooth supports synchronized sound when paired with external audio, and an included physical remote handles power, brightness, and playback. The blade is detachable and the unit is lightweight, and it comes with wall-mount brackets and bottom screw holes for mounting. The listing pitches it for store displays, exhibitions, and events, recommends it for indoor use, and suggests a compatible transparent protective cover, sold separately, for high-traffic areas.",
+    "whyWeLikeIt": "It is the closest thing to a real hologram you can hang on a wall: a dragon, a logo, or a spinning product appears to float in the air, and it is the kind of thing everyone in the room stops to look at.",
+    "image": "/assets/images/products/missyou-ms50d2-3d-hologram-fan.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.0,
+    "reviewCount": 1437,
+    "tags": [
+      "holographic fan",
+      "3d hologram fan",
+      "led hologram display",
+      "hologram projector",
+      "missyou",
+      "wifi bluetooth display",
+      "wall mount display",
+      "gift",
+      "led fan"
+    ],
+    "highlights": [
+      "19.7-inch LED holographic fan with 528 high-brightness LED beads",
+      "Preloaded 3D video library (the listing title cites 1500+)",
+      "WiFi, Bluetooth, and mobile app control, plus an included remote",
+      "Supports MP4 and AVI files, with video conversion tools included",
+      "Wall-mount brackets included; protective cover sold separately"
+    ],
+    "affiliateUrl": "https://link.amazon/B09GhzUt1",
+    "externalUrl": "https://link.amazon/B09GhzUt1",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-20T00:00:00.000Z",
+    "updatedAt": "2026-09-20T00:00:00.000Z"
   }
 ]
