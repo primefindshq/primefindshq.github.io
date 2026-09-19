@@ -2777,5 +2777,49 @@
     "published": true,
     "createdAt": "2026-09-19T00:00:00.000Z",
     "updatedAt": "2026-09-19T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0105",
+    "name": "ENSFTF 140W Smart Auto Stop Charging Adapter with Physical Cut-Off",
+    "slug": "ensftf-140w-smart-auto-stop-charging-adapter",
+    "category": "tech",
+    "secondaryCategories": [
+      "desk-setup",
+      "home"
+    ],
+    "subcategory": "Charging",
+    "shortDescription": "A 140W USB-C charging adapter that physically cuts the power once your device is full, instead of leaving it to software to decide.",
+    "description": "Most charge limiters are software: the device asks the charger to ease off and hopes for the best. This adapter takes the blunt, mechanical route. A built-in chip detects when the battery is full and then physically disconnects the power, so there is no trickle charging afterwards, and no timers or apps to set up. It is sold as a 140W adapter that supports USB-C Power Delivery as well as standard USB-A, and the listing names iPhones, Samsung Galaxy, Google Pixel, iPads, Kindles, power banks, and electric toothbrushes among the devices it works with. It comes in silver in a compact body.",
+    "whyWeLikeIt": "Charging is the one thing on your desk that never gets any attention, so a charger that simply knows when to stop and physically stops is a quietly clever idea. Plug in, walk away, and let the hardware do the switching off.",
+    "image": "/assets/images/products/ensftf-140w-smart-auto-stop-charging-adapter.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.3,
+    "reviewCount": 91,
+    "tags": [
+      "charging adapter",
+      "auto shut-off charger",
+      "usb-c charger",
+      "140w charger",
+      "physical cut-off",
+      "power delivery",
+      "desk gadget",
+      "gift"
+    ],
+    "highlights": [
+      "Physically cuts power once the battery is full, rather than relying on software",
+      "Built-in chip detects a full charge automatically; no app or timer needed",
+      "140W adapter supporting USB-C Power Delivery and standard USB-A",
+      "Listed as compatible with iPhone, Samsung Galaxy, Google Pixel, iPad, Kindle, and power banks",
+      "Compact body in silver"
+    ],
+    "affiliateUrl": "https://link.amazon/B08TcoVI8",
+    "externalUrl": "https://link.amazon/B08TcoVI8",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-19T00:00:00.000Z",
+    "updatedAt": "2026-09-19T00:00:00.000Z"
   }
 ]
