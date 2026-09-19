@@ -3225,5 +3225,49 @@
     "published": true,
     "createdAt": "2026-09-20T00:00:00.000Z",
     "updatedAt": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0115",
+    "name": "KIYOMING Levitating Hexagon Plant Pot, Floating Air Bonsai Planter",
+    "slug": "kiyoming-levitating-hexagon-plant-pot",
+    "category": "home",
+    "secondaryCategories": [
+      "desk-setup",
+      "gifts"
+    ],
+    "subcategory": "Ambience",
+    "shortDescription": "A magnetic levitation planter: the hexagon pot floats above its base and slowly rotates 360\u00b0 on its own while the power is on.",
+    "description": "A plant pot that hovers. The KIYOMING uses magnetic levitation, so the pot floats in the air above its hexagonal wood-look base and rotates 360\u00b0 automatically while the power is on. Setting it up takes a moment of patience: when you feel the magnetic force pull or push, adjust the plant toward the center of the base, and once the force disappears, hold it steady for 3 to 5 seconds and let go slowly until it stays on its own. The base measures 7.48 x 6.7 x 1.18 inches and the pot is 3.54 inches across and 1.78 inches tall. It is made of resin, supports a weight of up to 300 g, and the listing suggests bonsai, succulents, and similar small plants. The package includes the levitating base, the flower holder (the pot), a US power adapter with cable, and a user manual. The cable powers the base, and it will not float unless it is plugged in. A plant is not listed in the package. The listing describes it as suited to home and office.",
+    "whyWeLikeIt": "It makes a plant look like it is defying gravity. A small green plant floating and turning slowly above a wooden base is a hard thing to walk past without stopping to look.",
+    "image": "/assets/images/products/kiyoming-levitating-hexagon-plant-pot.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.4,
+    "reviewCount": 303,
+    "tags": [
+      "levitating planter",
+      "floating plant pot",
+      "air bonsai",
+      "magnetic levitation",
+      "hexagon planter",
+      "desk decor",
+      "home decor",
+      "gift"
+    ],
+    "highlights": [
+      "Magnetic levitation: the pot floats and rotates 360\u00b0 automatically while powered",
+      "Holds up to 300 g; suggested for bonsai and succulents",
+      "Base 7.48 x 6.7 x 1.18 in; pot 3.54 in across, 1.78 in tall; resin, wood-look",
+      "Includes the base, pot, US power adapter with cable, and manual",
+      "Needs to be plugged in to float (a plant is not listed in the package)"
+    ],
+    "affiliateUrl": "https://link.amazon/B0a3ochrB",
+    "externalUrl": "https://link.amazon/B0a3ochrB",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-20T00:00:00.000Z",
+    "updatedAt": "2026-09-20T00:00:00.000Z"
   }
 ]
