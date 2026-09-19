@@ -1,0 +1,70 @@
+/* =========================================================================
+   PRIME.FINDS -- entrance (WebGL "Portal") support styles.
+   Loaded on the homepage only. Everything about the entrance's visuals
+   lives in js/components/introScene.js; this file only owns the states
+   around it: the overlay being present before JS runs, the fallback paths,
+   and the homepage arriving through the portal.
+   ========================================================================= */
+
+/* The overlay is visible from the very first paint on the homepage (the
+   inline head script sets .intro-pending), so the page never flashes before
+   the entrance takes over. */
+html.intro-pending .brand-intro { display: flex; }
+
+/* If nothing has taken over the overlay after this long, JS failed --
+   release the page. (The head script has its own timed failsafe as well.) */
+.brand-intro:not(.is-live) { animation: intro-failsafe 500ms ease 5.5s forwards; }
+@keyframes intro-failsafe { to { opacity: 0; visibility: hidden; } }
+
+.brand-intro__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 0;
+}
+.brand-intro.is-gl .brand-intro__canvas { opacity: 1; }
+
+/* The WebGL entrance draws its own iris and its own dissolve; the CSS
+   fallback's clip-path wipe must not also apply to it. */
+.brand-intro.is-gl { clip-path: none; background: transparent; }
+
+/* The CSS-only entrance (the fallback) lives inside this wrapper so it stays
+   completely inert unless it is actually chosen. */
+.brand-intro__css { display: none; }
+.brand-intro.is-css .brand-intro__css { display: contents; }
+
+/* Reduced motion: opacity only, driven from JS (the global reduced-motion
+   rule flattens CSS animation durations, WAAPI is unaffected). */
+.brand-intro__still { display: none; opacity: 0; }
+.brand-intro.is-reduced .brand-intro__still { display: block; }
+.brand-intro__still img { height: clamp(120px, 26vh, 220px); width: auto; }
+
+/* While the entrance plays, the homepage's own entrance choreography waits:
+   otherwise the hero would finish rising unseen underneath the overlay. */
+html.intro-active .hero-enter,
+html.intro-active .hero-collage__item { animation-play-state: paused; }
+
+/* The homepage arrives through the aperture: it starts slightly pushed in
+   and dim, and settles to exactly its normal state. No fill-mode forwards,
+   so nothing (no transform, no filter) is left behind once it ends. */
+html.intro-reveal main {
+  transform-origin: 50% 45vh;
+  animation: intro-site-in var(--intro-reveal-dur, 1.2s) cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+html.intro-reveal .site-header {
+  animation: intro-head-in var(--intro-reveal-dur, 1.2s) ease-out backwards;
+}
+@keyframes intro-site-in {
+  from { scale: 1.07; filter: brightness(0.5); }
+  to { scale: 1; filter: brightness(1); }
+}
+@keyframes intro-head-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html.intro-reveal main,
+  html.intro-reveal .site-header { animation: none; }
+}

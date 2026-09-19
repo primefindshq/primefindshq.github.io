@@ -249,9 +249,8 @@
   to { clip-path: circle(0% at 50% 50%); }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .brand-intro { display: none !important; }
-}
+/* (Reduced motion no longer hides the entrance outright: brandIntro.js runs a
+   simple opacity-only variant for it -- see intro.css.) */
 
 /* ---- Homepage hero entrance ----
    One coordinated rise, not a checklist of separately-timed elements --

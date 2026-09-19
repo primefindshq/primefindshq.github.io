@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
   height: 84px;
-  background: rgba(6, 6, 7, 0.7);
+  background: rgba(var(--rgb-bg), 0.72);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid transparent;
@@ -21,7 +21,7 @@
 }
 .site-header.is-scrolled {
   border-bottom-color: var(--color-border);
-  background: rgba(5, 5, 6, 0.92);
+  background: rgba(var(--rgb-bg), 0.92);
   height: 66px;
 }
 /* Gets out of the way while scrolling toward something, returns the
@@ -397,3 +397,8 @@ body.intro-lock { overflow: hidden; }
 .narrow {
   max-width: 860px;
 }
+
+/* The wordmark artwork is gold + near-white, made for black. On ivory the white
+   lettering would disappear, so it is recoloured in CSS (the image file is not
+   touched): light -> dark, gold -> a deep antique gold. */
+.brand-logo img { filter: invert(1) hue-rotate(180deg) saturate(1.15); }

@@ -466,3 +466,13 @@
   font-size: clamp(4rem, 12vw, 8rem);
   color: var(--color-gold-dim);
 }
+
+/* Category hero watermark is an external dark-backdrop SVG image: flip it to the
+   light theme (dark -> light, gold hue preserved) and let it sit into the page. */
+.category-hero__watermark img {
+  filter: invert(1) hue-rotate(180deg);
+  mix-blend-mode: multiply;
+  /* feather the artwork's own backdrop so it dissolves into the page instead of showing an edge */
+  -webkit-mask-image: radial-gradient(60% 72% at 72% 50%, #000 42%, transparent 100%);
+  mask-image: radial-gradient(60% 72% at 72% 50%, #000 42%, transparent 100%);
+}

@@ -180,14 +180,22 @@ def render_brand_intro():
         )
         dust.append(f'<span style="{style}"></span>')
 
+    # The WebGL entrance draws into the canvas (js/components/introScene.js).
+    # The CSS entrance -- the fallback when WebGL is unavailable -- lives in
+    # the wrapper, inert unless brandIntro.js selects it. The still is the
+    # reduced-motion entrance (opacity only).
     return f"""
 <div class="brand-intro" data-brand-intro aria-hidden="true">
-  <div class="brand-intro__atmosphere">{"".join(dust)}</div>
-  <div class="brand-intro__glow"></div>
-  <div class="brand-intro__ring"></div>
-  <div class="brand-intro__mark"><img src="/assets/logo/mark.png" alt="" width="374" height="419" /></div>
-  <div class="brand-intro__word"><img src="/assets/logo/wordmark.png" alt="" width="1075" height="580" /></div>
-  <div class="brand-intro__rule"></div>
+  <canvas class="brand-intro__canvas"></canvas>
+  <div class="brand-intro__still"><img src="/assets/logo/wordmark.png" alt="" width="1075" height="580" /></div>
+  <div class="brand-intro__css">
+    <div class="brand-intro__atmosphere">{"".join(dust)}</div>
+    <div class="brand-intro__glow"></div>
+    <div class="brand-intro__ring"></div>
+    <div class="brand-intro__mark"><img src="/assets/logo/mark.png" alt="" width="374" height="419" /></div>
+    <div class="brand-intro__word"><img src="/assets/logo/wordmark.png" alt="" width="1075" height="580" /></div>
+    <div class="brand-intro__rule"></div>
+  </div>
 </div>
 """
 
@@ -500,7 +508,22 @@ def render_homepage(site, categories, products, counts):
         "logo": site["url"].rstrip("/") + "/assets/logo/wordmark.png",
         "description": site["description"],
     })
-    extra_head = f'<script type="application/ld+json">{ld_json}</script>'
+    # Entrance support (homepage only). The inline script runs before first
+    # paint so the black overlay is already up -- no flash of the homepage --
+    # and carries a timed failsafe so a JS failure can never leave the page
+    # covered. Skipped for same-session returns (internal navigation home).
+    intro_head = (
+        '<script>(function(){try{var d=document.documentElement,s=location.search;'
+        'var off=/[?&]intro=off/.test(s),forced=/[?&]intro=/.test(s);'
+        'var seen=!forced&&sessionStorage.getItem("pf-intro-session")==="1";'
+        'if(!off&&!seen){d.classList.add("intro-pending","intro-active");'
+        'window.__pfFs=setTimeout(function(){d.classList.remove("intro-pending","intro-active")},7000)}'
+        '}catch(e){}})();</script>'
+        '<link rel="stylesheet" href="/css/intro.css" />'
+        '<link rel="modulepreload" href="/js/components/introScene.js" />'
+        '<link rel="preload" as="image" href="/assets/logo/wordmark.png" />'
+    )
+    extra_head = f'<script type="application/ld+json">{ld_json}</script>' + intro_head
 
     return base_page(
         site,

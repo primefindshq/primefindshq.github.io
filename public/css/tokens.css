@@ -16,27 +16,35 @@
   /* ---- Color: surface ----
      True ink black (not dark-grey #0a0a0b) so gold and bone-white have
      something to actually cut against. */
-  --color-bg: #060607;
-  --color-bg-raised: #101012;
-  --color-bg-elevated: #17171a;
-  --color-bg-overlay: rgba(4, 4, 5, 0.94);
-  --color-border: #232326;
-  --color-border-strong: #37373b;
+  --color-bg: #f3f1ec;
+  --color-bg-raised: #faf9f6;
+  --color-bg-elevated: #fdfcfa;
+  --color-bg-overlay: rgba(243, 241, 236, 0.94);
+  --color-border: #e8e4da;
+  --color-border-strong: #d3cdc0;
+  /* The same two surfaces as raw channels, for translucent layers
+     (header, badges, image scrims) that need an alpha. */
+  --rgb-bg: 243, 241, 236;
+  --rgb-surface: 250, 249, 246;
 
   /* ---- Color: text ---- */
-  --color-text: #f6f2e9;
-  --color-text-dim: #a3a099;
-  --color-text-faint: #6b6863;
+  --color-text: #111111;
+  --color-text-dim: #5f5a50;
+  --color-text-faint: #78726a;
   --color-text-on-gold: #120f08;
 
   /* ---- Color: gold accent (metallic, not bright yellow) ----
      One accent, used sparingly: rule lines, a digit, a single CTA, a hover
      edge. Never a background wash across a whole section. */
-  --color-gold: #c9a24b;
-  --color-gold-light: #e8cf8a;
+  /* On ivory the gold has to be deeper to stay legible as text/lines
+     (antique gold, 4-5:1), so these three are the text-and-line golds. The
+     bright metallic gold is kept, unchanged, for filled surfaces via
+     --gradient-gold. */
+  --color-gold: #8a681b;
+  --color-gold-light: #7f5f17;
   --color-gold-dim: #8a6f34;
-  --color-gold-wash: rgba(201, 162, 75, 0.1);
-  --gradient-gold: linear-gradient(135deg, var(--color-gold-light), var(--color-gold) 55%, var(--color-gold-dim));
+  --color-gold-wash: rgba(201, 162, 75, 0.14);
+  --gradient-gold: linear-gradient(135deg, #e8cf8a, #c9a24b 55%, #8a6f34);
 
   /* ---- Color: state ---- */
   --color-success: #7fae83;
@@ -95,11 +103,11 @@
   --radius-full: 999px;
 
   /* ---- Shadow ---- */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
-  --shadow-lg: 0 24px 56px rgba(0, 0, 0, 0.6);
-  --shadow-gold: 0 8px 28px rgba(201, 162, 75, 0.16);
-  --shadow-card-hover: 0 24px 44px rgba(0, 0, 0, 0.55), 0 2px 0 rgba(201, 162, 75, 0.12);
+  --shadow-sm: 0 1px 2px rgba(70, 58, 30, 0.1);
+  --shadow-md: 0 8px 24px rgba(70, 58, 30, 0.1);
+  --shadow-lg: 0 24px 56px rgba(70, 58, 30, 0.14);
+  --shadow-gold: 0 8px 28px rgba(201, 162, 75, 0.3);
+  --shadow-card-hover: 0 24px 44px rgba(70, 58, 30, 0.16), 0 2px 0 rgba(201, 162, 75, 0.25);
 
   /* ---- Motion ----
      PRIME.FINDS's signature motion language, in four curves:
@@ -139,4 +147,23 @@
     --duration-intro: 0ms;
     --duration-intro-return: 0ms;
   }
+}
+
+/* ---- Entrance isolation ----
+   The cinematic entrance (and its CSS fallback) is designed on black + gold.
+   These are the original dark-theme values, scoped to the overlay only, so the
+   site-wide light theme does not reach into it. */
+.brand-intro {
+  --color-bg: #060607;
+  --color-bg-raised: #101012;
+  --color-bg-elevated: #17171a;
+  --color-border: #232326;
+  --color-border-strong: #37373b;
+  --color-text: #f6f2e9;
+  --color-text-dim: #a3a099;
+  --color-text-faint: #6b6863;
+  --color-gold: #c9a24b;
+  --color-gold-light: #e8cf8a;
+  --color-gold-dim: #8a6f34;
+  --color-gold-wash: rgba(201, 162, 75, 0.1);
 }

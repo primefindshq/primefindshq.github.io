@@ -98,7 +98,7 @@
   text-transform: uppercase;
   border: 1px solid var(--color-border-strong);
   color: var(--color-text-dim);
-  background: rgba(4, 4, 5, 0.7);
+  background: rgba(var(--rgb-surface), 0.85);
   backdrop-filter: blur(6px);
 }
 .badge--gold {
@@ -109,7 +109,7 @@
 .badge--outline-gold {
   border-color: var(--color-gold-dim);
   color: var(--color-gold-light);
-  background: rgba(5, 5, 6, 0.6);
+  background: rgba(var(--rgb-surface), 0.88);
 }
 
 /* ---- Inputs ---- */
@@ -376,7 +376,7 @@ a.product-card-link { display: block; }
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(6,6,7,0.1) 30%, rgba(6,6,7,0.9) 100%);
+  background: linear-gradient(180deg, rgba(var(--rgb-bg), 0.05) 30%, rgba(var(--rgb-bg), 0.94) 100%);
 }
 
 .category-tile__body {
@@ -552,3 +552,7 @@ a.product-card-link { display: block; }
   border-top: 1px solid var(--color-border);
   margin-block: var(--space-lg);
 }
+
+/* The category artwork is a dark-backdrop illustration inlined as SVG; give its
+   backdrop the light card surface (CSS wins over the SVG's own fill). */
+.category-tile__media svg rect:first-of-type { fill: var(--color-bg-raised); }

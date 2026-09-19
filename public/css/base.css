@@ -21,7 +21,13 @@ html {
 
 body {
   margin: 0;
-  background: var(--color-bg);
+  /* Warm ivory, with two barely-there pools of light so it reads as lit paper
+     rather than a flat fill: a faint gold warmth top-right, a soft white
+     bloom lower-left. Static, so it costs nothing while scrolling. */
+  background:
+    radial-gradient(1100px 640px at 90% -4%, rgba(201, 162, 75, 0.11), transparent 62%),
+    radial-gradient(900px 600px at 2% 58%, rgba(255, 255, 255, 0.55), transparent 65%),
+    var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-body);
   font-size: var(--fs-body);
@@ -42,8 +48,8 @@ body::before {
   inset: 0;
   z-index: 2;
   pointer-events: none;
-  opacity: 0.035;
-  mix-blend-mode: overlay;
+  opacity: 0.05;
+  mix-blend-mode: multiply;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
