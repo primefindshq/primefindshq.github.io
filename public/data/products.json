@@ -3090,5 +3090,49 @@
     "published": true,
     "createdAt": "2026-09-19T00:00:00.000Z",
     "updatedAt": "2026-09-19T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0112",
+    "name": "SCRIB3D P1 3D Printing Pen with Display",
+    "slug": "scrib3d-p1-3d-printing-pen",
+    "category": "tech",
+    "secondaryCategories": [
+      "gifts",
+      "gaming"
+    ],
+    "subcategory": "Creative Tools",
+    "shortDescription": "A 3D printing pen that lets you draw and build in three dimensions by hand, with a display, adjustable speed and temperature, and a starter kit in the box.",
+    "description": "Most 3D printing happens inside a machine. This pen puts it in your hand: plug it in, let it heat up, and you draw and build objects in three dimensions with PLA plastic filament. The P1 has a display and a stepless speed slider for anything from slow, intricate detail to faster infill, and its temperature is adjustable for PLA (160 to 210\u00b0C) or ABS (210 to 235\u00b0C) filament. A ceramic nozzle and a 2-minute auto sleep are built in, and warm-up takes about 2 to 3 minutes. The kit comes ready to use, with the 3D pen, three starter colors of PLA filament (30 feet in total), a stencil book with project guide, and a power adapter. The listing pitches it as a family and hobbyist gift, and for making handmade gifts and decorations.",
+    "whyWeLikeIt": "It flips 3D printing from something a machine does into something you do with your hand. A pen, a coil of filament, and a stencil book are all it takes to start drawing in three dimensions.",
+    "image": "/assets/images/products/scrib3d-p1-3d-printing-pen.webp",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.4,
+    "reviewCount": 24467,
+    "tags": [
+      "3d pen",
+      "3d printing pen",
+      "scrib3d",
+      "pla filament",
+      "creative gadget",
+      "maker tool",
+      "hobby",
+      "gift"
+    ],
+    "highlights": [
+      "Draw and build in three dimensions by hand, with PLA filament",
+      "Display and a stepless speed slider for detailed or fast work",
+      "Adjustable temperature for PLA (160-210\u00b0C) and ABS (210-235\u00b0C) filament",
+      "Ceramic nozzle and a 2-minute auto sleep",
+      "Kit includes 3 starter PLA colors (30 ft), a stencil book with project guide, and a power adapter"
+    ],
+    "affiliateUrl": "https://link.amazon/B06esZhWh",
+    "externalUrl": "https://link.amazon/B06esZhWh",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-19T00:00:00.000Z",
+    "updatedAt": "2026-09-19T00:00:00.000Z"
   }
 ]
