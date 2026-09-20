@@ -22,8 +22,12 @@ export function lockBackground(dialogEl) {
   return () => changed.forEach((el) => el.removeAttribute('inert'));
 }
 
-/** Focus `el` if it is still in the page and visible; otherwise fall back. */
+/**
+ * Focus `el` if it is still in the page; otherwise fall back. When nothing specific had
+ * focus (some browsers, notably Safari, do not focus a button on click, so the opener is
+ * <body>), the trigger control is used, so keyboard users never lose their place.
+ */
 export function restoreFocus(el, fallback) {
-  const target = el && document.contains(el) ? el : fallback;
+  const target = el && el !== document.body && document.contains(el) ? el : fallback;
   target?.focus?.({ preventScroll: true });
 }
