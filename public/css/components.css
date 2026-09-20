@@ -120,7 +120,7 @@
   height: 48px;
   padding-inline: var(--space-sm);
   border-radius: var(--radius-sm);
-  border: 1px solid var(--color-border-strong);
+  border: 1px solid var(--color-border-input);
   background: var(--color-bg-raised);
   transition: border-color var(--duration-fast) var(--ease-standard);
   min-width: 0;
@@ -255,6 +255,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2px var(--space-xs);
   margin-top: auto;
   padding-top: var(--space-xs);
 }
@@ -474,6 +476,8 @@ a.product-card-link { display: block; }
 .chip .chip-remove { font-size: 0.9em; opacity: 0.7; }
 
 .filter-group { margin-bottom: var(--space-lg); }
+.filter-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.filter-price { display: flex; gap: 8px; }
 .filter-group__title {
   font-size: var(--fs-caption);
   font-weight: 600;

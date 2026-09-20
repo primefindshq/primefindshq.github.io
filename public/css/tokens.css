@@ -22,6 +22,8 @@
   --color-bg-overlay: rgba(243, 241, 236, 0.94);
   --color-border: #e8e4da;
   --color-border-strong: #d3cdc0;
+  /* The outline of a form field must be visible on its own (WCAG 1.4.11, 3:1). */
+  --color-border-input: #8f897d;
   /* The same two surfaces as raw channels, for translucent layers
      (header, badges, image scrims) that need an alpha. */
   --rgb-bg: 243, 241, 236;
@@ -30,7 +32,8 @@
   /* ---- Color: text ---- */
   --color-text: #111111;
   --color-text-dim: #5f5a50;
-  --color-text-faint: #78726a;
+  /* Darkened from #78726a (4.2:1) so small captions meet the 4.5:1 text minimum. */
+  --color-text-faint: #6b665d;
   --color-text-on-gold: #120f08;
 
   /* ---- Color: gold accent (metallic, not bright yellow) ----
@@ -42,7 +45,8 @@
      --gradient-gold. */
   --color-gold: #8a681b;
   --color-gold-light: #7f5f17;
-  --color-gold-dim: #8a6f34;
+  /* Darkened from #8a6f34 (4.2:1): it is used for a few text numerals, which need 4.5:1. */
+  --color-gold-dim: #7f6529;
   --color-gold-wash: rgba(201, 162, 75, 0.14);
   --gradient-gold: linear-gradient(135deg, #e8cf8a, #c9a24b 55%, #8a6f34);
 

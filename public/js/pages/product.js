@@ -4,6 +4,7 @@ import { getProducts, getProductBySlug } from '../core/store.js';
 import { hydrateAffiliateLinks } from '../core/affiliate.js';
 import { track, EVENTS } from '../core/analytics.js';
 import { qs, qsa } from '../core/utils.js';
+import { prefersReducedMotion } from '../core/a11y.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
   const app = qs('[data-product-app]');
@@ -21,15 +22,18 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   const mainImg = qs('[data-gallery-main]', app);
   const thumbs = qsa('[data-gallery-thumb]', app);
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   thumbs.forEach((thumb) => {
     thumb.addEventListener('click', () => {
       if (thumb.classList.contains('is-active')) return;
-      thumbs.forEach((t) => t.classList.remove('is-active'));
+      thumbs.forEach((t) => {
+        t.classList.remove('is-active');
+        t.setAttribute('aria-pressed', 'false');
+      });
       thumb.classList.add('is-active');
+      thumb.setAttribute('aria-pressed', 'true');
       if (!mainImg) return;
       const nextSrc = thumb.dataset.fullSrc;
-      if (reduceMotion) {
+      if (prefersReducedMotion()) {
         mainImg.src = nextSrc;
         return;
       }

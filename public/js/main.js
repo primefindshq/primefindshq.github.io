@@ -8,10 +8,14 @@ import { initRails } from './components/rail.js';
 import { initCardTilt } from './components/cardTilt.js';
 import { initMagneticButtons } from './components/magneticButton.js';
 import { initCategoryIconDraw } from './components/categoryIconDraw.js';
+import { initA11yPanel } from './components/a11yPanel.js';
+import { watchTextScale } from './core/a11y.js';
 import { trackPageView } from './core/analytics.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initBrandIntro();
+  initA11yPanel();
+  watchTextScale();
   initHeader();
   initSearchOverlay();
   initScrollReveal();

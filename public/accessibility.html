@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script>(function(){try{var s=JSON.parse(localStorage.getItem("pf-a11y")||"{}"),d=document.documentElement;if(s.text>0&&s.text<5){d.setAttribute("data-text",String(s.text|0));if(s.text>1)d.classList.add("text-large")}if(s.contrast)d.setAttribute("data-contrast","high");if(s.motion)d.setAttribute("data-motion","reduce")}catch(e){}})();</script><noscript><style>[data-a11y-toggle]{display:none}</style></noscript>
-  <title>Page Not Found — PRIME.FINDS</title>
-  <meta name="description" content="This page doesn&#x27;t exist or has moved." />
-  <link rel="canonical" href="https://primefindshq.github.io/404.html" />
+  <title>Accessibility Statement — PRIME.FINDS</title>
+  <meta name="description" content="How PRIME.FINDS approaches accessibility, what has been tested, known limitations, and how to report a barrier." />
+  <link rel="canonical" href="https://primefindshq.github.io/accessibility.html" />
   <link rel="icon" href="/assets/logo/favicon.ico" sizes="any" />
   <link rel="icon" href="/assets/logo/favicon-32.png" type="image/png" sizes="32x32" />
   <link rel="icon" href="/assets/logo/favicon-192.png" type="image/png" sizes="192x192" />
@@ -16,14 +16,14 @@
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="PRIME.FINDS" />
-  <meta property="og:title" content="Page Not Found — PRIME.FINDS" />
-  <meta property="og:description" content="This page doesn&#x27;t exist or has moved." />
-  <meta property="og:url" content="https://primefindshq.github.io/404.html" />
+  <meta property="og:title" content="Accessibility Statement — PRIME.FINDS" />
+  <meta property="og:description" content="How PRIME.FINDS approaches accessibility, what has been tested, known limitations, and how to report a barrier." />
+  <meta property="og:url" content="https://primefindshq.github.io/accessibility.html" />
   <meta property="og:image" content="https://primefindshq.github.io/assets/logo/og-image.jpg" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Page Not Found — PRIME.FINDS" />
-  <meta name="twitter:description" content="This page doesn&#x27;t exist or has moved." />
+  <meta name="twitter:title" content="Accessibility Statement — PRIME.FINDS" />
+  <meta name="twitter:description" content="How PRIME.FINDS approaches accessibility, what has been tested, known limitations, and how to report a barrier." />
   <meta name="twitter:image" content="https://primefindshq.github.io/assets/logo/og-image.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -132,12 +132,77 @@
 
   <main id="main-content" tabindex="-1">
   
-<section class="container error-page">
-  <div>
-    <div class="error-page__code">404</div>
-    <h1 class="section-title" style="margin-top: var(--space-sm);">This find is gone.</h1>
-    <p class="section-desc" style="margin: var(--space-sm) auto var(--space-lg);">The page you're looking for doesn't exist or has moved.</p>
-    <a class="btn btn--primary" href="/">Back to Homepage</a>
+<section class="page-hero container">
+  <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep" aria-hidden="true">/</span><span aria-current="page">Accessibility Statement</span></nav>
+  <span class="eyebrow">Accessibility</span>
+  <h1 class="section-title" style="font-size: var(--fs-display-lg);">Accessibility Statement</h1>
+  <p class="legal-updated">Last updated: <time datetime="2026-09-20">20 September 2026</time></p>
+</section>
+<section class="section container narrow">
+  <div class="prose">
+    <p>PRIME.FINDS wants everyone to be able to browse the catalog, whether they use a keyboard, a screen reader, magnification, voice control or a touch screen. We treat accessibility as ongoing work, not something that is finished once.</p>
+    
+    <h2>The standard we are working toward</h2>
+    <p>We are working toward conformance with the Web Content Accessibility Guidelines (WCAG) 2.2 at Level AA, published by the World Wide Web Consortium (W3C).</p>
+
+    <h2>Current status</h2>
+    <p>PRIME.FINDS has not been independently audited or certified, and we do not claim that it fully conforms to WCAG 2.2 Level AA. What we can say accurately is this: on 20 September 2026 we reviewed the homepage, category pages, product pages, search, the site menu, filters, the entrance animation and the legal pages, and fixed the problems that review found. The review used:</p>
+    <ul>
+      <li>automated checks with the axe-core testing engine;</li>
+      <li>measured colour-contrast checks of text and interface components;</li>
+      <li>keyboard testing of tab order and visible focus, and of the Escape key and where focus lands after menus and dialogs close;</li>
+      <li>text enlarged to 175% and pages narrowed to a 320-pixel-wide screen, to check that nothing is cut off and nothing forces sideways scrolling;</li>
+      <li>checks of the entrance animation and the rest of the interface with the Reduce motion option switched on, and with the high-contrast option switched on.</li>
+    </ul>
+    <p>We have not yet tested with dedicated screen readers (such as NVDA, JAWS or VoiceOver), or with disabled users, so problems may remain that this kind of testing would reveal.</p>
+
+    <h2>What we have done</h2>
+    <ul>
+      <li>A "Skip to main content" link at the start of every page.</li>
+      <li>Every feature can be used with a keyboard, with visible focus outlines. The site menu, search and accessibility options open as dialogs that take focus, keep it inside while open, close with the Escape key, and return focus to the control that opened them.</li>
+      <li>Standard HTML headings, lists, landmarks, buttons and links. Product links are named after the product. Each "View at Amazon" button names the product it is for and says that it opens in a new tab.</li>
+      <li>Product photos have text alternatives that name the product. Purely decorative artwork is hidden from screen readers.</li>
+      <li>Search results, and the number of products left after you filter, are announced to screen readers. Filter buttons say whether they are switched on.</li>
+      <li>Text and interface colours were checked against the WCAG contrast minimums, and the pale gray text used for small captions was darkened to pass.</li>
+      <li>Layouts adapt down to 320 CSS pixels wide and to enlarged text, and browser zoom is never disabled.</li>
+      <li>Animation respects your device's reduced-motion setting, the site's content never depends on animation, and nothing in it flashes.</li>
+    </ul>
+
+    <h2>Accessibility options on this site</h2>
+    <p>The <strong>Accessibility options</strong> button in the page header (a circle with a person in it) opens a small panel with:</p>
+    <ul>
+      <li><strong>Text size:</strong> five steps, from the standard size up to 175%.</li>
+      <li><strong>High contrast:</strong> black text on white with stronger borders and focus outlines.</li>
+      <li><strong>Reduce motion:</strong> turns off transitions and the card tilt effect, and replaces the entrance animation with a simple fade.</li>
+      <li><strong>Reset all:</strong> returns everything to the defaults.</li>
+    </ul>
+    <p>Your choices are saved only in your own browser (see the <a href="/cookie-notice.html">Cookie Notice</a>); they are not sent to PRIME.FINDS or anyone else. These options add to, and do not replace, your browser's and device's own accessibility settings, which the site also respects. The site itself is built to be usable without them.</p>
+
+    <h2>The entrance animation</h2>
+    <p>The homepage opens with a short animated introduction: about four seconds on a first visit and shorter on later visits. It plays once per browsing session. You can skip it at any moment by pressing any key, clicking or tapping, or using the <strong>Skip intro</strong> button, and there is an Accessibility link on top of it so this page can be reached before you enter the site. If your device is set to reduce motion, or you switch on Reduce motion, you get a simple fade instead of the full animation. The animation does not contain flashing content and the site's content does not depend on it. We have not measured it with a dedicated photosensitivity analysis tool.</p>
+
+    <h2>Known limitations</h2>
+    <ul>
+      <li>Some product photos come from the retailer's listing and contain text or graphics inside the image, such as slogans or feature callouts. The photo's text alternative names the product, and the product description on the page carries the key details, but not everything shown inside an image is described.</li>
+      <li>The "View at Amazon" buttons receive their destination through a script after the page loads. If scripts are blocked or fail, those buttons will not work.</li>
+      <li>When you follow a link to Amazon or another retailer you leave PRIME.FINDS. The accessibility of those sites is outside our control.</li>
+      <li>The site loads its fonts from Google Fonts. If they are blocked, a fallback font is used and the text may look different.</li>
+      <li>The site is available in English only.</li>
+      <li>We have not yet tested with screen readers or with disabled users, as explained above.</li>
+      <li>Some effects, such as product cards tilting under the pointer, are pointer-only enhancements. They do not hide any information, and Reduce motion turns them off.</li>
+    </ul>
+
+    <h2 id="report">Report a barrier or ask for help</h2>
+    <p>If something on PRIME.FINDS is hard or impossible for you to use, or you need information from the site in a different form, please tell us. It helps to include the address of the page, what you were trying to do, what went wrong, and the browser and any assistive technology you use.</p>
+    <p>You can reach PRIME.FINDS through the site's <a href="https://github.com/primefindshq/primefindshq.github.io/issues" target="_blank" rel="noopener">public issue tracker on GitHub</a> (a free GitHub account is needed, and what you post there is public, so please do not include personal details). PRIME.FINDS does not currently publish an email address or phone number; this page will be updated if that changes.</p>
+    <p>We read reports as they come in and give priority to barriers that stop someone from finding a product or reaching a retailer. We cannot promise a specific response time. If you are not satisfied with how a concern is handled, you may be able to raise it with an accessibility or consumer authority in your own country.</p>
+
+    <h2>Technical information</h2>
+    <p>PRIME.FINDS is built with HTML, CSS and JavaScript, with WAI-ARIA used only where standard HTML does not give the right meaning. It is designed for current versions of the major desktop and mobile browsers.</p>
+
+    <h2>Review date</h2>
+    <p>This statement was last reviewed on <time datetime="2026-09-20">20 September 2026</time> and will be updated as the site changes and as we learn more.</p>
+
   </div>
 </section>
 

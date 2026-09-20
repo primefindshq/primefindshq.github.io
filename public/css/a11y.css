@@ -1,0 +1,318 @@
+/* =========================================================================
+   PRIME.FINDS — Accessibility & compliance layer
+   Loaded last, so it can refine what the other sheets set. Contents:
+     1. Focus visibility
+     2. Keeping controls clear of the sticky header
+     3. Text-size steps (html[data-text])
+     4. High-contrast mode (html[data-contrast="high"])
+     5. Reduced motion, mirroring prefers-reduced-motion (html[data-motion])
+     6. Forced-colors (Windows High Contrast) support
+     7. The accessibility options panel
+     8. Disclosure notes, legal-page components, small helpers
+   ========================================================================= */
+
+/* ---- 1. Focus visibility ---------------------------------------------- */
+/* Inputs hide their own outline (the field container carries the ring instead),
+   so the container must show a real, non-colour-only indicator. */
+.input-field:focus-within {
+  border-color: var(--color-gold);
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+.search-overlay__input-row:focus-within {
+  border-bottom-color: var(--color-gold);
+  box-shadow: 0 2px 0 0 var(--color-gold);
+}
+/* Cards clip their contents, so an outside outline would be cut off: draw it inside. */
+.product-card-link:focus-visible,
+.category-tile:focus-visible,
+.search-result:focus-visible,
+.site-index__cat:focus-visible {
+  outline-offset: -4px;
+}
+
+/* ---- 2. Sticky header ----------------------------------------------------- */
+/* The header slides away on scroll-down; it must never hide while focus is in it. */
+.site-header:focus-within { translate: 0 0; }
+/* Skip link: parked well off-screen even when text is enlarged. */
+.skip-link { top: -10rem; }
+main:focus { outline: none; }
+
+/* ---- 2b. Reflow: large text and narrow screens must never force sideways scrolling ---- */
+/* Buttons wrap their label instead of overflowing (they used a fixed height + nowrap). */
+.btn { height: auto; min-height: 52px; padding-block: 0.5rem; white-space: normal; text-align: center; max-width: 100%; }
+.btn--sm { min-height: 40px; }
+/* Grid children default to min-width:auto and refuse to shrink below their content. */
+.hero__grid > *, .product-detail > *, .footer-grid > *, .site-index__body > *,
+.editorial > *, .value-grid > *, .category-bento > *, .section-head > * { min-width: 0; }
+/* Flex inputs need min-width:0 or they refuse to shrink below their default width. */
+.search-overlay__input { min-width: 0; width: 100%; }
+.search-overlay__input-row { min-width: 0; }
+/* Container spacing is rem-based, so at large text on a phone the search panel's padding
+   and gaps swallowed the whole field. On narrow screens they are pinned in pixels. */
+@media (max-width: 560px) {
+  .search-overlay__panel { padding: 14px; }
+  .search-overlay__input-row { gap: 8px; }
+  .a11y-panel { padding: 14px; }
+}
+.search-result > span { min-width: 0; overflow-wrap: anywhere; }
+.search-overlay__panel { min-width: 0; }
+/* Long words in big display type break rather than run off the screen. */
+h1, h2, h3, .hero__title, .section-title, .product-detail__title, .category-tile__name,
+.product-card__name, .editorial__quote { overflow-wrap: break-word; hyphens: auto; }
+.product-detail__meta-row, .hero__ctas, .tag-row { flex-wrap: wrap; }
+/* The last breadcrumb is the full product name: let the row wrap and the name break. */
+.breadcrumbs { flex-wrap: wrap; }
+.breadcrumbs > * { min-width: 0; overflow-wrap: anywhere; }
+/* At larger-than-default text on a phone the header cannot hold a text label as well
+   as three controls: the "Index" word is hidden visually (its accessible name is
+   "Site index"), the menu glyph stays. */
+@media (max-width: 560px) {
+  html.text-large .index-trigger__label {
+    position: absolute; width: 1px; height: 1px; overflow: hidden;
+    clip: rect(0, 0, 0, 0); white-space: nowrap;
+  }
+  html.text-large .header-actions { gap: 4px; }
+  html.text-large .site-header__inner { gap: var(--space-xs); }
+}
+
+/* ---- 3. Text size --------------------------------------------------------- */
+/* Everything is rem-based, so scaling the root scales the whole page. */
+html[data-text="1"] { font-size: 112.5%; }
+html[data-text="2"] { font-size: 125%; }
+html[data-text="3"] { font-size: 150%; }
+html[data-text="4"] { font-size: 175%; }
+
+/* ---- 4. High contrast ------------------------------------------------------ */
+html[data-contrast="high"] {
+  --color-bg: #ffffff;
+  --color-bg-raised: #ffffff;
+  --color-bg-elevated: #ffffff;
+  --color-bg-overlay: rgba(255, 255, 255, 0.98);
+  --rgb-bg: 255, 255, 255;
+  --rgb-surface: 255, 255, 255;
+  --color-border: #595959;
+  --color-border-strong: #1a1a1a;
+  --color-border-input: #000000;
+  --color-text: #000000;
+  --color-text-dim: #1a1a1a;
+  --color-text-faint: #333333;
+  --color-text-on-gold: #000000;
+  --color-gold: #5c4200;
+  --color-gold-light: #4a3400;
+  --color-gold-dim: #5c4200;
+  --color-gold-wash: rgba(92, 66, 0, 0.14);
+  --gradient-gold: linear-gradient(#f2c23c, #f2c23c);
+}
+html[data-contrast="high"] body { background: #ffffff; }
+html[data-contrast="high"] body::before { display: none; }
+html[data-contrast="high"] :focus-visible {
+  outline: 3px solid #000000;
+  outline-offset: 3px;
+}
+html[data-contrast="high"] .prose a,
+html[data-contrast="high"] .footer-links a,
+html[data-contrast="high"] .breadcrumbs a,
+html[data-contrast="high"] .affiliate-note a,
+html[data-contrast="high"] .footer-disclosure a,
+html[data-contrast="high"] .cta-panel__disclaimer a,
+html[data-contrast="high"] .site-index__legal a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+html[data-contrast="high"] .product-card__media img { filter: none; }
+
+/* ---- 5. Reduced motion (mirrors the @media rules in base/tokens/animations/intro) ---- */
+html[data-motion="reduce"] {
+  scroll-behavior: auto;
+  --duration-instant: 0ms;
+  --duration-fast: 0ms;
+  --duration-base: 0ms;
+  --duration-slow: 0ms;
+  --duration-intro: 0ms;
+  --duration-intro-return: 0ms;
+}
+html[data-motion="reduce"] *,
+html[data-motion="reduce"] *::before,
+html[data-motion="reduce"] *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+html[data-motion="reduce"] [data-reveal] { opacity: 1; translate: 0 0; }
+html[data-motion="reduce"] .hero-enter,
+html[data-motion="reduce"] .hero-collage__item { animation: none; opacity: 1; translate: 0 0; }
+html[data-motion="reduce"] .pd-enter,
+html[data-motion="reduce"] .pd-gallery-enter { animation: none; opacity: 1; translate: 0 0; scale: 1; filter: none; }
+html[data-motion="reduce"] .hero__collage { animation: none; }
+/* The reduced-motion entrance is only ~1.4s long, so its controls are there from the start. */
+html[data-motion="reduce"] .brand-intro__tools { animation: none; opacity: 1; }
+html[data-motion="reduce"].intro-reveal main,
+html[data-motion="reduce"].intro-reveal .site-header { animation: none; }
+html[data-motion="reduce"]::view-transition-group(*),
+html[data-motion="reduce"]::view-transition-old(*),
+html[data-motion="reduce"]::view-transition-new(*) { animation: none !important; }
+
+/* ---- 6. Forced colors (Windows High Contrast) --------------------------------- */
+@media (forced-colors: active) {
+  :focus-visible { outline: 3px solid Highlight; outline-offset: 3px; }
+  .a11y-switch { border: 2px solid ButtonText; }
+  .a11y-switch[aria-checked="true"] { background: Highlight; border-color: Highlight; }
+  .a11y-switch__knob { background: ButtonText; forced-color-adjust: none; }
+  .a11y-switch[aria-checked="true"] .a11y-switch__knob { background: HighlightText; }
+  .chip.is-active { outline: 2px solid Highlight; }
+}
+
+/* ---- 7. Accessibility options panel ------------------------------------------- */
+.a11y-panel {
+  position: fixed;
+  top: 4.75rem;
+  right: var(--container-pad);
+  z-index: 210;
+  width: min(calc(100vw - 2 * var(--container-pad)), 23rem);
+  max-height: calc(100vh - 6rem);
+  overflow-y: auto;
+  padding: var(--space-md);
+  background: var(--color-bg-raised);
+  border: 1px solid var(--color-border-strong);
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity var(--duration-base) var(--ease-standard),
+              transform var(--duration-base) var(--ease-standard),
+              visibility 0s linear var(--duration-base);
+}
+.a11y-panel.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition-delay: 0s;
+}
+.a11y-panel:focus { outline: none; }
+.a11y-panel__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xs);
+}
+.a11y-panel__title { font-size: var(--fs-display-sm); }
+.a11y-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding: var(--space-sm) 0;
+  border-top: 1px solid var(--color-border);
+}
+.a11y-row__text { min-width: 0; }
+.a11y-row__label { display: block; font-weight: 600; }
+.a11y-row__hint { display: block; margin-top: 2px; color: var(--color-text-dim); font-size: var(--fs-body-sm); }
+.a11y-stepper { display: flex; flex-wrap: wrap; gap: var(--space-2xs); justify-content: flex-end; }
+.a11y-btn {
+  min-height: 44px;
+  padding: 0 var(--space-sm);
+  border: 1px solid var(--color-border-input);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: var(--fs-body-sm);
+  cursor: pointer;
+  transition: border-color var(--duration-fast) var(--ease-standard);
+}
+.a11y-btn:hover:not(:disabled) { border-color: var(--color-gold); }
+.a11y-btn:disabled { opacity: 0.45; cursor: default; }
+.a11y-switch {
+  position: relative;
+  flex: none;
+  width: 3.25rem;
+  height: 1.875rem;
+  padding: 0;
+  border: 1px solid var(--color-border-input);
+  border-radius: 999px;
+  background: var(--color-bg);
+  cursor: pointer;
+  transition: background var(--duration-fast) var(--ease-standard), border-color var(--duration-fast) var(--ease-standard);
+}
+.a11y-switch__knob {
+  position: absolute;
+  top: 0.1875rem;
+  left: 0.1875rem;
+  width: 1.375rem;
+  height: 1.375rem;
+  border-radius: 50%;
+  background: var(--color-text-faint);
+  transition: transform var(--duration-fast) var(--ease-standard);
+}
+.a11y-switch[aria-checked="true"] { background: var(--gradient-gold); border-color: var(--color-gold); }
+.a11y-switch[aria-checked="true"] .a11y-switch__knob { transform: translateX(1.375rem); background: var(--color-text); }
+.a11y-switch:disabled { opacity: 0.65; cursor: not-allowed; }
+.a11y-panel__foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--color-border);
+}
+.a11y-panel__link { color: var(--color-gold-light); text-decoration: underline; text-underline-offset: 3px; font-size: var(--fs-body-sm); }
+
+/* ---- 8. Disclosure notes, legal pages, helpers ------------------------------------ */
+.affiliate-note {
+  margin: 0 0 var(--space-lg);
+  padding: var(--space-sm) var(--space-md);
+  border-left: 2px solid var(--color-gold);
+  background: var(--color-bg-raised);
+  color: var(--color-text-dim);
+  font-size: var(--fs-body-sm);
+}
+.container > .affiliate-note { margin-top: var(--space-lg); }
+.affiliate-note p { max-width: 78ch; }
+.affiliate-note a,
+.footer-disclosure a,
+.cta-panel__disclaimer a {
+  color: var(--color-gold-light);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.footer-disclosure {
+  padding-block: var(--space-md);
+  border-top: 1px solid var(--color-border);
+}
+.footer-disclosure p { max-width: 78ch; color: var(--color-text-dim); font-size: var(--fs-body-sm); }
+/* The note beside the Amazon button: normal reading size, not fine print. */
+.cta-panel__disclaimer { color: var(--color-text-dim); font-size: var(--fs-body-sm); }
+
+.site-index__legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs) var(--space-md);
+  margin-top: var(--space-sm);
+}
+.site-index__legal a { color: var(--color-text-dim); text-decoration: underline; text-underline-offset: 3px; }
+.site-index__legal a:hover { color: var(--color-gold); }
+
+.legal-updated { margin-top: var(--space-sm); color: var(--color-text-dim); font-size: var(--fs-body-sm); }
+.callout {
+  margin-bottom: var(--space-lg);
+  padding: var(--space-md);
+  border-left: 3px solid var(--color-gold);
+  background: var(--color-bg-raised);
+}
+.callout p { margin: 0; color: var(--color-text); }
+.prose a { color: var(--color-gold-light); text-decoration: underline; text-underline-offset: 3px; }
+.prose ul { list-style: disc; padding-left: 1.4em; margin: 0 0 var(--space-md); }
+.prose li { margin-bottom: var(--space-2xs); }
+.prose code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  padding: 0.1em 0.35em;
+  background: var(--color-bg-raised);
+  border-radius: 3px;
+}
+.legal-list { margin: 0 0 var(--space-md); }
+.legal-list dt { margin-top: var(--space-sm); color: var(--color-text); font-weight: 600; }
+.legal-list dd { margin: 2px 0 0; }

@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>(function(){try{var s=JSON.parse(localStorage.getItem("pf-a11y")||"{}"),d=document.documentElement;if(s.text>0&&s.text<5){d.setAttribute("data-text",String(s.text|0));if(s.text>1)d.classList.add("text-large")}if(s.contrast)d.setAttribute("data-contrast","high");if(s.motion)d.setAttribute("data-motion","reduce")}catch(e){}})();</script><noscript><style>[data-a11y-toggle]{display:none}</style></noscript>
   <title>Desk Setup — PRIME.FINDS</title>
   <meta name="description" content="Monitor arms, lighting, cable management, and small details that turn a desk into a proper setup." />
   <link rel="canonical" href="https://primefindshq.github.io/category/desk-setup/" />
@@ -34,61 +35,107 @@
   <link rel="stylesheet" href="/css/components.css" />
   <link rel="stylesheet" href="/css/animations.css" />
   <link rel="stylesheet" href="/css/pages.css" />
+  <link rel="stylesheet" href="/css/a11y.css" />
   
 </head>
 <body>
   
   
-<a class="skip-link" href="#main-content">Skip to content</a>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="container site-header__inner">
     <a class="brand-logo" href="/" aria-label="PRIME.FINDS home">
       <img src="/assets/logo/wordmark.png" alt="PRIME.FINDS" width="1075" height="580" />
     </a>
     <div class="header-actions">
-      <button class="icon-btn" type="button" data-search-open aria-label="Search products"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="9" cy="9" r="6.5"/><path d="M18 18l-3.8-3.8"/></svg></button>
-      <button class="index-trigger" type="button" data-index-toggle aria-expanded="false" aria-controls="site-index" aria-label="Open site index">
-        <span class="index-trigger__glyph"><span></span><span></span></span>
-        Index
+      <button class="icon-btn" type="button" data-search-open aria-haspopup="dialog" aria-label="Search products"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="9" cy="9" r="6.5"/><path d="M18 18l-3.8-3.8"/></svg></button>
+      <button class="icon-btn" type="button" data-a11y-toggle aria-haspopup="dialog" aria-expanded="false" aria-controls="a11y-panel" aria-label="Accessibility options"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="8"/><circle cx="10" cy="5.9" r="1.1" fill="currentColor" stroke="none"/><path d="M5.6 8.3c3 .9 5.8.9 8.8 0M10 8.7v3.3M10 12l-2.1 3.5M10 12l2.1 3.5"/></svg></button>
+      <button class="index-trigger" type="button" data-index-toggle aria-expanded="false" aria-haspopup="dialog" aria-controls="site-index" aria-label="Site index">
+        <span class="index-trigger__glyph" aria-hidden="true"><span></span><span></span></span>
+        <span class="index-trigger__label">Index</span>
       </button>
     </div>
   </div>
 </header>
 
   
-<div class="site-index" id="site-index" data-index-panel>
+<div class="site-index" id="site-index" data-index-panel role="dialog" aria-modal="true" aria-label="Site index">
   <div class="site-index__top">
     <a class="brand-logo" href="/" aria-label="PRIME.FINDS home"><img src="/assets/logo/wordmark.png" alt="PRIME.FINDS" width="1075" height="580" /></a>
-    <button class="icon-btn" type="button" data-index-close aria-label="Close index"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15"/></svg></button>
+    <button class="icon-btn" type="button" data-index-close aria-label="Close site index"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15"/></svg></button>
   </div>
   <div class="site-index__body">
-    <ul class="site-index__nav-list"><li><a class="site-index__nav-link" href="/">Home</a></li><li><a class="site-index__nav-link" href="/#categories">Categories</a></li><li><a class="site-index__nav-link" href="/#trending">Trending</a></li><li><a class="site-index__nav-link" href="/#latest">Latest</a></li><li><a class="site-index__nav-link" href="/about.html">About</a></li></ul>
-    <div>
+    <nav aria-label="Pages"><ul class="site-index__nav-list"><li><a class="site-index__nav-link" href="/">Home</a></li><li><a class="site-index__nav-link" href="/#categories">Categories</a></li><li><a class="site-index__nav-link" href="/#trending">Trending</a></li><li><a class="site-index__nav-link" href="/#latest">Latest</a></li><li><a class="site-index__nav-link" href="/about.html">About</a></li></ul></nav>
+    <nav aria-label="Categories">
       <span class="eyebrow site-index__cats-label">The Catalog</span>
       <div class="site-index__cats"><a class="site-index__cat" href="/category/tech/"><span class="site-index__cat-name">Tech</span><span class="site-index__cat-count">24</span></a><a class="site-index__cat" href="/category/home/"><span class="site-index__cat-name">Home</span><span class="site-index__cat-count">37</span></a><a class="site-index__cat" href="/category/gaming/"><span class="site-index__cat-name">Gaming</span><span class="site-index__cat-count">13</span></a><a class="site-index__cat" href="/category/travel/"><span class="site-index__cat-name">Travel</span><span class="site-index__cat-count">21</span></a><a class="site-index__cat" href="/category/desk-setup/"><span class="site-index__cat-name">Desk Setup</span><span class="site-index__cat-count">25</span></a><a class="site-index__cat" href="/category/gifts/"><span class="site-index__cat-name">Gifts</span><span class="site-index__cat-count">39</span></a><a class="site-index__cat" href="/category/under-25/"><span class="site-index__cat-name">Under $25</span><span class="site-index__cat-count">07</span></a></div>
-    </div>
+    </nav>
   </div>
-  <p class="site-index__footer">Curated products. Smart finds.</p>
+  <div class="site-index__footer">
+    <p>Curated products. Smart finds.</p>
+    <nav aria-label="Legal and accessibility"><ul class="site-index__legal"><li><a href="/accessibility.html">Accessibility</a></li><li><a href="/privacy-policy.html">Privacy Policy</a></li><li><a href="/terms.html">Terms of Use</a></li><li><a href="/affiliate-disclosure.html">Affiliate Disclosure</a></li><li><a href="/cookie-notice.html">Cookie Notice</a></li><li><a href="/accessibility.html#report">Help &amp; feedback</a></li></ul></nav>
+  </div>
 </div>
 
   
-<div class="search-overlay" data-search-overlay role="dialog" aria-modal="true" aria-label="Search products">
+<div class="search-overlay" data-search-overlay role="dialog" aria-modal="true" aria-labelledby="search-overlay-title">
   <div class="search-overlay__panel">
+    <h2 class="sr-only" id="search-overlay-title">Search products</h2>
     <div class="search-overlay__input-row">
       <svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="9" cy="9" r="6.5"/><path d="M18 18l-3.8-3.8"/></svg>
-      <input class="search-overlay__input" type="search" placeholder="Search products, categories, tags…" data-search-input aria-label="Search products" />
+      <input class="search-overlay__input" type="search" placeholder="Search products, categories, tags…" data-search-input aria-label="Search products" autocomplete="off" enterkeyhint="search" spellcheck="false" />
       <button class="icon-btn" type="button" data-search-close aria-label="Close search"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15"/></svg></button>
     </div>
+    <p class="sr-only" role="status" aria-live="polite" data-search-status></p>
     <div data-search-results></div>
   </div>
 </div>
 
-  <main id="main-content">
+  
+<div class="a11y-panel" id="a11y-panel" data-a11y-panel role="dialog" aria-modal="true" aria-labelledby="a11y-panel-title" tabindex="-1">
+  <div class="a11y-panel__head">
+    <h2 class="a11y-panel__title" id="a11y-panel-title">Accessibility options</h2>
+    <button class="icon-btn" type="button" data-a11y-close aria-label="Close accessibility options"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15"/></svg></button>
+  </div>
+  <div class="a11y-panel__body">
+    <div class="a11y-row" role="group" aria-labelledby="a11y-text-label">
+      <div class="a11y-row__text">
+        <span class="a11y-row__label" id="a11y-text-label">Text size</span>
+        <span class="a11y-row__hint">Currently <span data-a11y-text-value>100%</span></span>
+      </div>
+      <div class="a11y-stepper">
+        <button type="button" class="a11y-btn" data-a11y-text-down>Smaller text</button>
+        <button type="button" class="a11y-btn" data-a11y-text-up>Larger text</button>
+      </div>
+    </div>
+    <div class="a11y-row">
+      <div class="a11y-row__text">
+        <span class="a11y-row__label" id="a11y-contrast-label">High contrast</span>
+        <span class="a11y-row__hint">Stronger text, borders and focus outlines.</span>
+      </div>
+      <button type="button" class="a11y-switch" role="switch" aria-checked="false" aria-labelledby="a11y-contrast-label" data-a11y-contrast><span class="a11y-switch__knob" aria-hidden="true"></span></button>
+    </div>
+    <div class="a11y-row">
+      <div class="a11y-row__text">
+        <span class="a11y-row__label" id="a11y-motion-label">Reduce motion</span>
+        <span class="a11y-row__hint" data-a11y-motion-hint>Calmer transitions and a simplified intro.</span>
+      </div>
+      <button type="button" class="a11y-switch" role="switch" aria-checked="false" aria-labelledby="a11y-motion-label" data-a11y-motion><span class="a11y-switch__knob" aria-hidden="true"></span></button>
+    </div>
+  </div>
+  <div class="a11y-panel__foot">
+    <button type="button" class="btn btn--secondary btn--sm" data-a11y-reset>Reset all</button>
+    <a class="a11y-panel__link" href="/accessibility.html">Accessibility statement</a>
+  </div>
+  <p class="sr-only" role="status" aria-live="polite" data-a11y-status></p>
+</div>
+
+  <main id="main-content" tabindex="-1">
   
 <section class="page-hero category-hero">
   <div class="category-hero__watermark"><img src="/assets/images/categories/desk-setup.svg" alt="" /></div>
   <div class="container category-hero__content">
-    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">/</span><a href="/#categories">Categories</a><span class="sep">/</span><span aria-current="page">Desk Setup</span></nav>
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep" aria-hidden="true">/</span><a href="/#categories">Categories</a><span class="sep" aria-hidden="true">/</span><span aria-current="page">Desk Setup</span></nav>
     <span class="eyebrow">Category</span>
     <h1 class="section-title" style="font-size: var(--fs-display-xl); view-transition-name: category-name-desk-setup;">Desk Setup</h1>
     <p class="category-hero__desc">Monitor arms, lighting, cable management, and small details that turn a desk into a proper setup.</p>
@@ -96,36 +143,36 @@
 </section>
 <section class="section container">
   <div class="category-layout" data-category-app data-category-slug="desk-setup">
-    <aside class="category-filters">
+    <div class="category-filters" role="group" aria-label="Filter products">
       <div class="input-field" style="margin-bottom: var(--space-lg);">
         <svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="9" cy="9" r="6.5"/><path d="M18 18l-3.8-3.8"/></svg>
-        <input type="search" placeholder="Search in Desk Setup…" data-category-search aria-label="Search in Desk Setup" />
+        <input type="search" placeholder="Search in Desk Setup…" data-category-search aria-label="Search in Desk Setup" autocomplete="off" enterkeyhint="search" spellcheck="false" />
       </div>
-      <div class="filter-group">
-        <h3 class="filter-group__title">Rating</h3>
-        <div style="display:flex; flex-wrap:wrap; gap:8px;">
-          <button type="button" class="chip" data-filter-rating="4.5">4.5+</button>
-          <button type="button" class="chip" data-filter-rating="4">4.0+</button>
-          <button type="button" class="chip" data-filter-rating="3.5">3.5+</button>
+      <div class="filter-group" role="group" aria-labelledby="filter-rating-title">
+        <h2 class="filter-group__title" id="filter-rating-title">Rating</h2>
+        <div class="filter-chips">
+          <button type="button" class="chip" data-filter-rating="4.5" aria-pressed="false">4.5+<span class="sr-only"> stars and up</span></button>
+          <button type="button" class="chip" data-filter-rating="4" aria-pressed="false">4.0+<span class="sr-only"> stars and up</span></button>
+          <button type="button" class="chip" data-filter-rating="3.5" aria-pressed="false">3.5+<span class="sr-only"> stars and up</span></button>
         </div>
       </div>
-      <div class="filter-group">
-        <h3 class="filter-group__title">Price</h3>
-        <div style="display:flex; gap:8px;">
-          <div class="input-field"><input type="number" min="0" placeholder="Min" data-filter-min-price aria-label="Minimum price" /></div>
-          <div class="input-field"><input type="number" min="0" placeholder="Max" data-filter-max-price aria-label="Maximum price" /></div>
+      <div class="filter-group" role="group" aria-labelledby="filter-price-title">
+        <h2 class="filter-group__title" id="filter-price-title">Price</h2>
+        <div class="filter-price">
+          <div class="input-field"><input type="number" min="0" step="any" inputmode="decimal" autocomplete="off" placeholder="Min" data-filter-min-price aria-label="Minimum price in US dollars" /></div>
+          <div class="input-field"><input type="number" min="0" step="any" inputmode="decimal" autocomplete="off" placeholder="Max" data-filter-max-price aria-label="Maximum price in US dollars" /></div>
         </div>
       </div>
-      <div class="filter-group">
-        <h3 class="filter-group__title">Show only</h3>
+      <div class="filter-group" role="group" aria-labelledby="filter-show-title">
+        <h2 class="filter-group__title" id="filter-show-title">Show only</h2>
         <label class="filter-checkbox"><input type="checkbox" data-filter-featured /> Featured</label>
         <label class="filter-checkbox"><input type="checkbox" data-filter-trending /> Trending</label>
       </div>
       <button type="button" class="btn btn--secondary btn--sm btn--full" data-filters-clear>Clear filters</button>
-    </aside>
+    </div>
     <div>
       <div class="toolbar">
-        <span class="toolbar__count" data-result-count>25 finds</span>
+        <span class="toolbar__count" data-result-count role="status" aria-live="polite">25 finds</span>
         <div class="toolbar__controls">
           <div class="input-field select-field">
             <select data-sort-select aria-label="Sort products">
@@ -139,579 +186,580 @@
           </div>
         </div>
       </div>
+      <div class="affiliate-note" role="note" aria-label="Affiliate disclosure"><p>Many links on PRIME.FINDS, including the &ldquo;View at Amazon&rdquo; buttons, are affiliate links. If you buy through them, PRIME.FINDS may earn a commission from qualifying purchases, at no extra cost to you. <a href="/affiliate-disclosure.html">Read the full affiliate disclosure</a>.</p></div>
       <div class="grid-products grid-products--feature" data-category-grid>
 <article class="product-card" >
-  <a class="product-card-link" href="/product/adjustable-laptop-stand/" aria-label="View Nulaxy Ergonomic Adjustable Laptop Stand">
+  <a class="product-card-link" href="/product/adjustable-laptop-stand/" aria-labelledby="pc120-name" aria-describedby="pc120-desc pc120-meta">
     <div class="product-card__media">
-      <span class="product-card__index tag-mono">No. 0044</span>
+      <span class="product-card__index tag-mono" aria-hidden="true">No. 0044</span>
       <div class="product-card__badges"></div>
       <img src="/assets/images/products/adjustable-laptop-stand.jpg" alt="Nulaxy Ergonomic Adjustable Laptop Stand" loading="lazy" width="800" height="800" style="view-transition-name: product-photo-adjustable-laptop-stand"
            onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
     </div>
     <div class="product-card__body">
       <span class="product-card__category">desk setup</span>
-      <h3 class="product-card__name">Nulaxy Ergonomic Adjustable Laptop Stand</h3>
-      <p class="product-card__desc visually-line-clamp-2">A sleek laptop stand that improves your desk setup with a cleaner, more comfortable workspace.</p>
-      <div class="product-card__meta">
+      <h3 class="product-card__name" id="pc120-name">Nulaxy Ergonomic Adjustable Laptop Stand</h3>
+      <p class="product-card__desc visually-line-clamp-2" id="pc120-desc">A sleek laptop stand that improves your desk setup with a cleaner, more comfortable workspace.</p>
+      <div class="product-card__meta" id="pc120-meta">
         <span class="product-card__price">Check price</span>
         <span class="rating" role="img" aria-label="Not yet rated"><span class="stars"><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg></span><span class="text-faint">New</span></span>
       </div>
     </div>
   </a>
   <div class="product-card__cta">
-    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="adjustable-laptop-stand">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
+    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="adjustable-laptop-stand" aria-label="View at Amazon: Nulaxy Ergonomic Adjustable Laptop Stand (opens in a new tab)">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
   </div>
 </article>
 
 <article class="product-card" >
-  <a class="product-card-link" href="/product/led-desk-lamp-light-bar/" aria-label="View Airlonv 17&quot; LED Desk Lamp with Clamp">
+  <a class="product-card-link" href="/product/led-desk-lamp-light-bar/" aria-labelledby="pc121-name" aria-describedby="pc121-desc pc121-meta">
     <div class="product-card__media">
-      <span class="product-card__index tag-mono">No. 0045</span>
+      <span class="product-card__index tag-mono" aria-hidden="true">No. 0045</span>
       <div class="product-card__badges"></div>
       <img src="/assets/images/products/led-desk-lamp-light-bar.jpg" alt="Airlonv 17&quot; LED Desk Lamp with Clamp" loading="lazy" width="800" height="800" style="view-transition-name: product-photo-led-desk-lamp-light-bar"
            onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
     </div>
     <div class="product-card__body">
       <span class="product-card__category">desk setup</span>
-      <h3 class="product-card__name">Airlonv 17&quot; LED Desk Lamp with Clamp</h3>
-      <p class="product-card__desc visually-line-clamp-2">A sleek monitor light bar that delivers focused illumination while keeping your setup clean and distraction-free.</p>
-      <div class="product-card__meta">
+      <h3 class="product-card__name" id="pc121-name">Airlonv 17&quot; LED Desk Lamp with Clamp</h3>
+      <p class="product-card__desc visually-line-clamp-2" id="pc121-desc">A sleek monitor light bar that delivers focused illumination while keeping your setup clean and distraction-free.</p>
+      <div class="product-card__meta" id="pc121-meta">
         <span class="product-card__price">Check price</span>
         <span class="rating" role="img" aria-label="Not yet rated"><span class="stars"><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg></span><span class="text-faint">New</span></span>
       </div>
     </div>
   </a>
   <div class="product-card__cta">
-    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="led-desk-lamp-light-bar">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
+    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="led-desk-lamp-light-bar" aria-label="View at Amazon: Airlonv 17&quot; LED Desk Lamp with Clamp (opens in a new tab)">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
   </div>
 </article>
 
 <article class="product-card" >
-  <a class="product-card-link" href="/product/leather-desk-mat/" aria-label="View Aothia PU Leather Desk Mat">
+  <a class="product-card-link" href="/product/leather-desk-mat/" aria-labelledby="pc122-name" aria-describedby="pc122-desc pc122-meta">
     <div class="product-card__media">
-      <span class="product-card__index tag-mono">No. 0046</span>
+      <span class="product-card__index tag-mono" aria-hidden="true">No. 0046</span>
       <div class="product-card__badges"><span class="badge badge--gold">Trending</span></div>
       <img src="/assets/images/products/leather-desk-mat.jpg" alt="Aothia PU Leather Desk Mat" loading="lazy" width="800" height="800" style="view-transition-name: product-photo-leather-desk-mat"
            onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
     </div>
     <div class="product-card__body">
       <span class="product-card__category">desk setup</span>
-      <h3 class="product-card__name">Aothia PU Leather Desk Mat</h3>
-      <p class="product-card__desc visually-line-clamp-2">A premium desk mat that brings a cleaner look and a polished finishing touch to your workspace.</p>
-      <div class="product-card__meta">
+      <h3 class="product-card__name" id="pc122-name">Aothia PU Leather Desk Mat</h3>
+      <p class="product-card__desc visually-line-clamp-2" id="pc122-desc">A premium desk mat that brings a cleaner look and a polished finishing touch to your workspace.</p>
+      <div class="product-card__meta" id="pc122-meta">
         <span class="product-card__price">Check price</span>
         <span class="rating" role="img" aria-label="Not yet rated"><span class="stars"><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg></span><span class="text-faint">New</span></span>
       </div>
     </div>
   </a>
   <div class="product-card__cta">
-    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="leather-desk-mat">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
+    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="leather-desk-mat" aria-label="View at Amazon: Aothia PU Leather Desk Mat (opens in a new tab)">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
   </div>
 </article>
 
 <article class="product-card" >
-  <a class="product-card-link" href="/product/divoom-ditoo-pixel-art-speaker/" aria-label="View Divoom Ditoo Retro Pixel Art Bluetooth Speaker">
+  <a class="product-card-link" href="/product/divoom-ditoo-pixel-art-speaker/" aria-labelledby="pc123-name" aria-describedby="pc123-desc pc123-meta">
     <div class="product-card__media">
-      <span class="product-card__index tag-mono">No. 0061</span>
+      <span class="product-card__index tag-mono" aria-hidden="true">No. 0061</span>
       <div class="product-card__badges"></div>
       <img src="/assets/images/products/divoom-ditoo-pixel-art-speaker.jpg" alt="Divoom Ditoo Retro Pixel Art Bluetooth Speaker" loading="lazy" width="800" height="800" style="view-transition-name: product-photo-divoom-ditoo-pixel-art-speaker"
            onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
     </div>
     <div class="product-card__body">
       <span class="product-card__category">desk setup</span>
-      <h3 class="product-card__name">Divoom Ditoo Retro Pixel Art Bluetooth Speaker</h3>
-      <p class="product-card__desc visually-line-clamp-2">A retro-styled Bluetooth speaker with an app-controlled 16x16 LED pixel art display and built-in mini games.</p>
-      <div class="product-card__meta">
+      <h3 class="product-card__name" id="pc123-name">Divoom Ditoo Retro Pixel Art Bluetooth Speaker</h3>
+      <p class="product-card__desc visually-line-clamp-2" id="pc123-desc">A retro-styled Bluetooth speaker with an app-controlled 16x16 LED pixel art display and built-in mini games.</p>
+      <div class="product-card__meta" id="pc123-meta">
         <span class="product-card__price">Check price</span>
         <span class="rating" role="img" aria-label="Not yet rated"><span class="stars"><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg></span><span class="text-faint">New</span></span>
       </div>
     </div>
   </a>
   <div class="product-card__cta">
-    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="divoom-ditoo-pixel-art-speaker">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
+    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="divoom-ditoo-pixel-art-speaker" aria-label="View at Amazon: Divoom Ditoo Retro Pixel Art Bluetooth Speaker (opens in a new tab)">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
   </div>
 </article>
 
 <article class="product-card" >
-  <a class="product-card-link" href="/product/odistar-mini-desk-vacuum/" aria-label="View ODISTAR Mini Desktop Vacuum Cleaner">
+  <a class="product-card-link" href="/product/odistar-mini-desk-vacuum/" aria-labelledby="pc124-name" aria-describedby="pc124-desc pc124-meta">
     <div class="product-card__media">
-      <span class="product-card__index tag-mono">No. 0062</span>
+      <span class="product-card__index tag-mono" aria-hidden="true">No. 0062</span>
       <div class="product-card__badges"></div>
       <img src="/assets/images/products/odistar-mini-desk-vacuum.jpg" alt="ODISTAR Mini Desktop Vacuum Cleaner" loading="lazy" width="800" height="800" style="view-transition-name: product-photo-odistar-mini-desk-vacuum"
            onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
     </div>
     <div class="product-card__body">
       <span class="product-card__category">desk setup</span>
-      <h3 class="product-card__name">ODISTAR Mini Desktop Vacuum Cleaner</h3>
-      <p class="product-card__desc visually-line-clamp-2">A compact, 360° rotatable mini vacuum for clearing dust and eraser crumbs off your desk.</p>
-      <div class="product-card__meta">
+      <h3 class="product-card__name" id="pc124-name">ODISTAR Mini Desktop Vacuum Cleaner</h3>
+      <p class="product-card__desc visually-line-clamp-2" id="pc124-desc">A compact, 360° rotatable mini vacuum for clearing dust and eraser crumbs off your desk.</p>
+      <div class="product-card__meta" id="pc124-meta">
         <span class="product-card__price">Check price</span>
         <span class="rating" role="img" aria-label="Not yet rated"><span class="stars"><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg></span><span class="text-faint">New</span></span>
       </div>
     </div>
   </a>
   <div class="product-card__cta">
-    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="odistar-mini-desk-vacuum">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
+    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="odistar-mini-desk-vacuum" aria-label="View at Amazon: ODISTAR Mini Desktop Vacuum Cleaner (opens in a new tab)">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
   </div>
 </article>
 
 <article class="product-card" >
-  <a class="product-card-link" href="/product/lisen-adjustable-phone-stand/" aria-label="View LISEN Height-Adjustable Aluminum Phone Stand">
+  <a class="product-card-link" href="/product/lisen-adjustable-phone-stand/" aria-labelledby="pc125-name" aria-describedby="pc125-desc pc125-meta">
     <div class="product-card__media">
-      <span class="product-card__index tag-mono">No. 0066</span>
+      <span class="product-card__index tag-mono" aria-hidden="true">No. 0066</span>
       <div class="product-card__badges"></div>
       <img src="/assets/images/products/lisen-adjustable-phone-stand.jpg" alt="LISEN Height-Adjustable Aluminum Phone Stand" loading="lazy" width="800" height="800" style="view-transition-name: product-photo-lisen-adjustable-phone-stand"
            onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
     </div>
     <div class="product-card__body">
       <span class="product-card__category">desk setup</span>
-      <h3 class="product-card__name">LISEN Height-Adjustable Aluminum Phone Stand</h3>
-      <p class="product-card__desc visually-line-clamp-2">An aluminum desk stand with adjustable height and angle, compatible with phones and tablets.</p>
-      <div class="product-card__meta">
+      <h3 class="product-card__name" id="pc125-name">LISEN Height-Adjustable Aluminum Phone Stand</h3>
+      <p class="product-card__desc visually-line-clamp-2" id="pc125-desc">An aluminum desk stand with adjustable height and angle, compatible with phones and tablets.</p>
+      <div class="product-card__meta" id="pc125-meta">
         <span class="product-card__price">Check price</span>
         <span class="rating" role="img" aria-label="Not yet rated"><span class="stars"><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg></span><span class="text-faint">New</span></span>
       </div>
     </div>
   </a>
   <div class="product-card__cta">
-    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="lisen-adjustable-phone-stand">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
+    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="lisen-adjustable-phone-stand" aria-label="View at Amazon: LISEN Height-Adjustable Aluminum Phone Stand (opens in a new tab)">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
   </div>
 </article>
 
 <article class="product-card" >
-  <a class="product-card-link" href="/product/ergear-dual-monitor-arm/" aria-label="View ErGear Dual Monitor Arm">
+  <a class="product-card-link" href="/product/ergear-dual-monitor-arm/" aria-labelledby="pc126-name" aria-describedby="pc126-desc pc126-meta">
     <div class="product-card__media">
-      <span class="product-card__index tag-mono">No. 0067</span>
+      <span class="product-card__index tag-mono" aria-hidden="true">No. 0067</span>
       <div class="product-card__badges"></div>
       <img src="/assets/images/products/ergear-dual-monitor-arm.jpg" alt="ErGear Dual Monitor Arm" loading="lazy" width="800" height="800" style="view-transition-name: product-photo-ergear-dual-monitor-arm"
            onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
     </div>
     <div class="product-card__body">
       <span class="product-card__category">desk setup</span>
-      <h3 class="product-card__name">ErGear Dual Monitor Arm</h3>
-      <p class="product-card__desc visually-line-clamp-2">A full-motion dual monitor arm with tool-free VESA mounting, fitting screens from 13 to 32 inches.</p>
-      <div class="product-card__meta">
+      <h3 class="product-card__name" id="pc126-name">ErGear Dual Monitor Arm</h3>
+      <p class="product-card__desc visually-line-clamp-2" id="pc126-desc">A full-motion dual monitor arm with tool-free VESA mounting, fitting screens from 13 to 32 inches.</p>
+      <div class="product-card__meta" id="pc126-meta">
         <span class="product-card__price">Check price</span>
         <span class="rating" role="img" aria-label="Not yet rated"><span class="stars"><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg></span><span class="text-faint">New</span></span>
       </div>
     </div>
   </a>
   <div class="product-card__cta">
-    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="ergear-dual-monitor-arm">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
+    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="ergear-dual-monitor-arm" aria-label="View at Amazon: ErGear Dual Monitor Arm (opens in a new tab)">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
   </div>
 </article>
 
 <article class="product-card" >
-  <a class="product-card-link" href="/product/under-desk-headphone-controller-hanger/" aria-label="View 3-in-1 Under Desk Headphone &amp; Controller Hanger">
+  <a class="product-card-link" href="/product/under-desk-headphone-controller-hanger/" aria-labelledby="pc127-name" aria-describedby="pc127-desc pc127-meta">
     <div class="product-card__media">
-      <span class="product-card__index tag-mono">No. 0074</span>
+      <span class="product-card__index tag-mono" aria-hidden="true">No. 0074</span>
       <div class="product-card__badges"></div>
       <img src="/assets/images/products/under-desk-headphone-controller-hanger.jpg" alt="3-in-1 Under Desk Headphone &amp; Controller Hanger" loading="lazy" width="800" height="800" style="view-transition-name: product-photo-under-desk-headphone-controller-hanger"
            onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
     </div>
     <div class="product-card__body">
       <span class="product-card__category">desk setup</span>
-      <h3 class="product-card__name">3-in-1 Under Desk Headphone &amp; Controller Hanger</h3>
-      <p class="product-card__desc visually-line-clamp-2">A clamp-mounted under-desk hanger with 2 controller slots, a headset holder, and a cable organizer.</p>
-      <div class="product-card__meta">
+      <h3 class="product-card__name" id="pc127-name">3-in-1 Under Desk Headphone &amp; Controller Hanger</h3>
+      <p class="product-card__desc visually-line-clamp-2" id="pc127-desc">A clamp-mounted under-desk hanger with 2 controller slots, a headset holder, and a cable organizer.</p>
+      <div class="product-card__meta" id="pc127-meta">
         <span class="product-card__price">Check price</span>
         <span class="rating" role="img" aria-label="Not yet rated"><span class="stars"><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg></span><span class="text-faint">New</span></span>
       </div>
     </div>
   </a>
   <div class="product-card__cta">
-    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="under-desk-headphone-controller-hanger">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
+    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="under-desk-headphone-controller-hanger" aria-label="View at Amazon: 3-in-1 Under Desk Headphone &amp; Controller Hanger (opens in a new tab)">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
   </div>
 </article>
 
 <article class="product-card" >
-  <a class="product-card-link" href="/product/daymeet-tv-led-backlight/" aria-label="View Daymeet RGB LED TV Backlight">
+  <a class="product-card-link" href="/product/daymeet-tv-led-backlight/" aria-labelledby="pc128-name" aria-describedby="pc128-desc pc128-meta">
     <div class="product-card__media">
-      <span class="product-card__index tag-mono">No. 0075</span>
+      <span class="product-card__index tag-mono" aria-hidden="true">No. 0075</span>
       <div class="product-card__badges"></div>
       <img src="/assets/images/products/daymeet-tv-led-backlight.jpg" alt="Daymeet RGB LED TV Backlight" loading="lazy" width="800" height="800" style="view-transition-name: product-photo-daymeet-tv-led-backlight"
            onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
     </div>
     <div class="product-card__body">
       <span class="product-card__category">home</span>
-      <h3 class="product-card__name">Daymeet RGB LED TV Backlight</h3>
-      <p class="product-card__desc visually-line-clamp-2">A 9.8ft RGB LED TV backlight with Bluetooth app control and music sync, for TVs 32-43 inches.</p>
-      <div class="product-card__meta">
+      <h3 class="product-card__name" id="pc128-name">Daymeet RGB LED TV Backlight</h3>
+      <p class="product-card__desc visually-line-clamp-2" id="pc128-desc">A 9.8ft RGB LED TV backlight with Bluetooth app control and music sync, for TVs 32-43 inches.</p>
+      <div class="product-card__meta" id="pc128-meta">
         <span class="product-card__price">Check price</span>
         <span class="rating" role="img" aria-label="Not yet rated"><span class="stars"><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg></span><span class="text-faint">New</span></span>
       </div>
     </div>
   </a>
   <div class="product-card__cta">
-    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="daymeet-tv-led-backlight">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
+    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="daymeet-tv-led-backlight" aria-label="View at Amazon: Daymeet RGB LED TV Backlight (opens in a new tab)">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
   </div>
 </article>
 
 <article class="product-card" >
-  <a class="product-card-link" href="/product/univivi-under-desk-cable-management-tray/" aria-label="View Univivi No-Drill Under Desk Cable Management Tray">
+  <a class="product-card-link" href="/product/univivi-under-desk-cable-management-tray/" aria-labelledby="pc129-name" aria-describedby="pc129-desc pc129-meta">
     <div class="product-card__media">
-      <span class="product-card__index tag-mono">No. 0076</span>
+      <span class="product-card__index tag-mono" aria-hidden="true">No. 0076</span>
       <div class="product-card__badges"></div>
       <img src="/assets/images/products/univivi-under-desk-cable-management-tray.jpg" alt="Univivi No-Drill Under Desk Cable Management Tray" loading="lazy" width="800" height="800" style="view-transition-name: product-photo-univivi-under-desk-cable-management-tray"
            onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
     </div>
     <div class="product-card__body">
       <span class="product-card__category">desk setup</span>
-      <h3 class="product-card__name">Univivi No-Drill Under Desk Cable Management Tray</h3>
-      <p class="product-card__desc visually-line-clamp-2">A 36-inch no-drill fabric cable tray that clamps under the desk to hide power strips and cords.</p>
-      <div class="product-card__meta">
+      <h3 class="product-card__name" id="pc129-name">Univivi No-Drill Under Desk Cable Management Tray</h3>
+      <p class="product-card__desc visually-line-clamp-2" id="pc129-desc">A 36-inch no-drill fabric cable tray that clamps under the desk to hide power strips and cords.</p>
+      <div class="product-card__meta" id="pc129-meta">
         <span class="product-card__price">Check price</span>
         <span class="rating" role="img" aria-label="Not yet rated"><span class="stars"><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg></span><span class="text-faint">New</span></span>
       </div>
     </div>
   </a>
   <div class="product-card__cta">
-    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="univivi-under-desk-cable-management-tray">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
+    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="univivi-under-desk-cable-management-tray" aria-label="View at Amazon: Univivi No-Drill Under Desk Cable Management Tray (opens in a new tab)">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
   </div>
 </article>
 
 <article class="product-card" >
-  <a class="product-card-link" href="/product/lenrue-g11-rgb-computer-speakers/" aria-label="View LENRUE G11 RGB Desktop Computer Speakers">
+  <a class="product-card-link" href="/product/lenrue-g11-rgb-computer-speakers/" aria-labelledby="pc130-name" aria-describedby="pc130-desc pc130-meta">
     <div class="product-card__media">
-      <span class="product-card__index tag-mono">No. 0092</span>
+      <span class="product-card__index tag-mono" aria-hidden="true">No. 0092</span>
       <div class="product-card__badges"></div>
       <img src="/assets/images/products/lenrue-g11-rgb-computer-speakers.jpg" alt="LENRUE G11 RGB Desktop Computer Speakers" loading="lazy" width="800" height="800" style="view-transition-name: product-photo-lenrue-g11-rgb-computer-speakers"
            onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
     </div>
     <div class="product-card__body">
       <span class="product-card__category">desk setup</span>
-      <h3 class="product-card__name">LENRUE G11 RGB Desktop Computer Speakers</h3>
-      <p class="product-card__desc visually-line-clamp-2">Compact USB-powered desktop speakers with touch-controlled RGB lighting and USB-C/AUX connectivity.</p>
-      <div class="product-card__meta">
+      <h3 class="product-card__name" id="pc130-name">LENRUE G11 RGB Desktop Computer Speakers</h3>
+      <p class="product-card__desc visually-line-clamp-2" id="pc130-desc">Compact USB-powered desktop speakers with touch-controlled RGB lighting and USB-C/AUX connectivity.</p>
+      <div class="product-card__meta" id="pc130-meta">
         <span class="product-card__price">Check price</span>
         <span class="rating" role="img" aria-label="4.2 out of 5 (5,892 reviews)"><span class="stars"><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg></span><span>4.2</span><span class="text-faint">(5,892)</span></span>
       </div>
     </div>
   </a>
   <div class="product-card__cta">
-    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="lenrue-g11-rgb-computer-speakers">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
+    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="lenrue-g11-rgb-computer-speakers" aria-label="View at Amazon: LENRUE G11 RGB Desktop Computer Speakers (opens in a new tab)">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
   </div>
 </article>
 
 <article class="product-card" >
-  <a class="product-card-link" href="/product/govee-rgbic-led-strip-lights/" aria-label="View Govee 16.4ft RGBIC LED Strip Lights">
+  <a class="product-card-link" href="/product/govee-rgbic-led-strip-lights/" aria-labelledby="pc131-name" aria-describedby="pc131-desc pc131-meta">
     <div class="product-card__media">
-      <span class="product-card__index tag-mono">No. 0095</span>
+      <span class="product-card__index tag-mono" aria-hidden="true">No. 0095</span>
       <div class="product-card__badges"></div>
       <img src="/assets/images/products/govee-rgbic-led-strip-lights.jpg" alt="Govee 16.4ft RGBIC LED Strip Lights" loading="lazy" width="800" height="800" style="view-transition-name: product-photo-govee-rgbic-led-strip-lights"
            onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
     </div>
     <div class="product-card__body">
       <span class="product-card__category">home</span>
-      <h3 class="product-card__name">Govee 16.4ft RGBIC LED Strip Lights</h3>
-      <p class="product-card__desc visually-line-clamp-2">16.4ft RGBIC LED strip lights with app control, 16 million colors, and music sync mode.</p>
-      <div class="product-card__meta">
+      <h3 class="product-card__name" id="pc131-name">Govee 16.4ft RGBIC LED Strip Lights</h3>
+      <p class="product-card__desc visually-line-clamp-2" id="pc131-desc">16.4ft RGBIC LED strip lights with app control, 16 million colors, and music sync mode.</p>
+      <div class="product-card__meta" id="pc131-meta">
         <span class="product-card__price">$11.99</span>
         <span class="rating" role="img" aria-label="4.4 out of 5 (26,347 reviews)"><span class="stars"><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg></span><span>4.4</span><span class="text-faint">(26,347)</span></span>
       </div>
     </div>
   </a>
   <div class="product-card__cta">
-    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="govee-rgbic-led-strip-lights">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
+    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="govee-rgbic-led-strip-lights" aria-label="View at Amazon: Govee 16.4ft RGBIC LED Strip Lights (opens in a new tab)">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
   </div>
 </article>
 
 <article class="product-card" >
-  <a class="product-card-link" href="/product/mokoqi-magnetic-levitating-globe/" aria-label="View MOKOQI Magnetic Levitating Globe with LED Light">
+  <a class="product-card-link" href="/product/mokoqi-magnetic-levitating-globe/" aria-labelledby="pc132-name" aria-describedby="pc132-desc pc132-meta">
     <div class="product-card__media">
-      <span class="product-card__index tag-mono">No. 0097</span>
+      <span class="product-card__index tag-mono" aria-hidden="true">No. 0097</span>
       <div class="product-card__badges"></div>
       <img src="/assets/images/products/mokoqi-magnetic-levitating-globe.jpg" alt="MOKOQI Magnetic Levitating Globe with LED Light" loading="lazy" width="800" height="800" style="view-transition-name: product-photo-mokoqi-magnetic-levitating-globe"
            onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
     </div>
     <div class="product-card__body">
       <span class="product-card__category">desk setup</span>
-      <h3 class="product-card__name">MOKOQI Magnetic Levitating Globe with LED Light</h3>
-      <p class="product-card__desc visually-line-clamp-2">A magnetically levitating, auto-spinning world globe with 7-color LED lighting.</p>
-      <div class="product-card__meta">
+      <h3 class="product-card__name" id="pc132-name">MOKOQI Magnetic Levitating Globe with LED Light</h3>
+      <p class="product-card__desc visually-line-clamp-2" id="pc132-desc">A magnetically levitating, auto-spinning world globe with 7-color LED lighting.</p>
+      <div class="product-card__meta" id="pc132-meta">
         <span class="product-card__price">$41.99</span>
         <span class="rating" role="img" aria-label="4.4 out of 5 (5,444 reviews)"><span class="stars"><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg></span><span>4.4</span><span class="text-faint">(5,444)</span></span>
       </div>
     </div>
   </a>
   <div class="product-card__cta">
-    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="mokoqi-magnetic-levitating-globe">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
+    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="mokoqi-magnetic-levitating-globe" aria-label="View at Amazon: MOKOQI Magnetic Levitating Globe with LED Light (opens in a new tab)">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
   </div>
 </article>
 
 <article class="product-card" >
-  <a class="product-card-link" href="/product/g-shape-wireless-charging-lamp-speaker/" aria-label="View 5-in-1 LED Table Lamp with Wireless Charging &amp; Bluetooth Speaker">
+  <a class="product-card-link" href="/product/g-shape-wireless-charging-lamp-speaker/" aria-labelledby="pc133-name" aria-describedby="pc133-desc pc133-meta">
     <div class="product-card__media">
-      <span class="product-card__index tag-mono">No. 0100</span>
+      <span class="product-card__index tag-mono" aria-hidden="true">No. 0100</span>
       <div class="product-card__badges"></div>
       <img src="/assets/images/products/g-shape-wireless-charging-lamp-speaker.jpg" alt="5-in-1 LED Table Lamp with Wireless Charging &amp; Bluetooth Speaker" loading="lazy" width="800" height="800" style="view-transition-name: product-photo-g-shape-wireless-charging-lamp-speaker"
            onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
     </div>
     <div class="product-card__body">
       <span class="product-card__category">tech</span>
-      <h3 class="product-card__name">5-in-1 LED Table Lamp with Wireless Charging &amp; Bluetooth Speaker</h3>
-      <p class="product-card__desc visually-line-clamp-2">A G-shaped smart lamp combining ambient LED lighting, wireless phone charging, a Bluetooth speaker, and an alarm clock.</p>
-      <div class="product-card__meta">
+      <h3 class="product-card__name" id="pc133-name">5-in-1 LED Table Lamp with Wireless Charging &amp; Bluetooth Speaker</h3>
+      <p class="product-card__desc visually-line-clamp-2" id="pc133-desc">A G-shaped smart lamp combining ambient LED lighting, wireless phone charging, a Bluetooth speaker, and an alarm clock.</p>
+      <div class="product-card__meta" id="pc133-meta">
         <span class="product-card__price">$44.99</span>
         <span class="rating" role="img" aria-label="4.0 out of 5 (1,337 reviews)"><span class="stars"><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg></span><span>4.0</span><span class="text-faint">(1,337)</span></span>
       </div>
     </div>
   </a>
   <div class="product-card__cta">
-    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="g-shape-wireless-charging-lamp-speaker">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
+    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="g-shape-wireless-charging-lamp-speaker" aria-label="View at Amazon: 5-in-1 LED Table Lamp with Wireless Charging &amp; Bluetooth Speaker (opens in a new tab)">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
   </div>
 </article>
 
 <article class="product-card" >
-  <a class="product-card-link" href="/product/blisstrends-under-desk-foot-hammock/" aria-label="View BlissTrends Under-Desk Foot Rest with 2 Adjustable Heights">
+  <a class="product-card-link" href="/product/blisstrends-under-desk-foot-hammock/" aria-labelledby="pc134-name" aria-describedby="pc134-desc pc134-meta">
     <div class="product-card__media">
-      <span class="product-card__index tag-mono">No. 0101</span>
+      <span class="product-card__index tag-mono" aria-hidden="true">No. 0101</span>
       <div class="product-card__badges"></div>
       <img src="/assets/images/products/blisstrends-under-desk-foot-hammock.jpg" alt="BlissTrends Under-Desk Foot Rest with 2 Adjustable Heights" loading="lazy" width="800" height="800" style="view-transition-name: product-photo-blisstrends-under-desk-foot-hammock"
            onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
     </div>
     <div class="product-card__body">
       <span class="product-card__category">desk setup</span>
-      <h3 class="product-card__name">BlissTrends Under-Desk Foot Rest with 2 Adjustable Heights</h3>
-      <p class="product-card__desc visually-line-clamp-2">A two-layer, height-adjustable foot rest with a washable cover to relieve back, lumbar, and knee pain while sitting.</p>
-      <div class="product-card__meta">
+      <h3 class="product-card__name" id="pc134-name">BlissTrends Under-Desk Foot Rest with 2 Adjustable Heights</h3>
+      <p class="product-card__desc visually-line-clamp-2" id="pc134-desc">A two-layer, height-adjustable foot rest with a washable cover to relieve back, lumbar, and knee pain while sitting.</p>
+      <div class="product-card__meta" id="pc134-meta">
         <span class="product-card__price">$24.99</span>
         <span class="rating" role="img" aria-label="4.4 out of 5 (9,102 reviews)"><span class="stars"><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg></span><span>4.4</span><span class="text-faint">(9,102)</span></span>
       </div>
     </div>
   </a>
   <div class="product-card__cta">
-    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="blisstrends-under-desk-foot-hammock">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
+    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="blisstrends-under-desk-foot-hammock" aria-label="View at Amazon: BlissTrends Under-Desk Foot Rest with 2 Adjustable Heights (opens in a new tab)">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
   </div>
 </article>
 
 <article class="product-card" >
-  <a class="product-card-link" href="/product/jayegt-motorized-rotating-display-stand/" aria-label="View JAYEGT Motorized Rotating Display Stand, 360° Electric Turntable">
+  <a class="product-card-link" href="/product/jayegt-motorized-rotating-display-stand/" aria-labelledby="pc135-name" aria-describedby="pc135-desc pc135-meta">
     <div class="product-card__media">
-      <span class="product-card__index tag-mono">No. 0104</span>
+      <span class="product-card__index tag-mono" aria-hidden="true">No. 0104</span>
       <div class="product-card__badges"></div>
       <img src="/assets/images/products/jayegt-motorized-rotating-display-stand.png" alt="JAYEGT Motorized Rotating Display Stand, 360° Electric Turntable" loading="lazy" width="800" height="800" style="view-transition-name: product-photo-jayegt-motorized-rotating-display-stand"
            onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
     </div>
     <div class="product-card__body">
       <span class="product-card__category">tech</span>
-      <h3 class="product-card__name">JAYEGT Motorized Rotating Display Stand, 360° Electric Turntable</h3>
-      <p class="product-card__desc visually-line-clamp-2">A rechargeable electric turntable that slowly spins whatever you put on it through a smooth 360°, with adjustable speed and direction.</p>
-      <div class="product-card__meta">
+      <h3 class="product-card__name" id="pc135-name">JAYEGT Motorized Rotating Display Stand, 360° Electric Turntable</h3>
+      <p class="product-card__desc visually-line-clamp-2" id="pc135-desc">A rechargeable electric turntable that slowly spins whatever you put on it through a smooth 360°, with adjustable speed and direction.</p>
+      <div class="product-card__meta" id="pc135-meta">
         <span class="product-card__price">Check price</span>
         <span class="rating" role="img" aria-label="4.4 out of 5 (2,614 reviews)"><span class="stars"><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg></span><span>4.4</span><span class="text-faint">(2,614)</span></span>
       </div>
     </div>
   </a>
   <div class="product-card__cta">
-    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="jayegt-motorized-rotating-display-stand">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
+    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="jayegt-motorized-rotating-display-stand" aria-label="View at Amazon: JAYEGT Motorized Rotating Display Stand, 360° Electric Turntable (opens in a new tab)">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
   </div>
 </article>
 
 <article class="product-card" >
-  <a class="product-card-link" href="/product/ensftf-140w-smart-auto-stop-charging-adapter/" aria-label="View ENSFTF 140W Smart Auto Stop Charging Adapter with Physical Cut-Off">
+  <a class="product-card-link" href="/product/ensftf-140w-smart-auto-stop-charging-adapter/" aria-labelledby="pc136-name" aria-describedby="pc136-desc pc136-meta">
     <div class="product-card__media">
-      <span class="product-card__index tag-mono">No. 0105</span>
+      <span class="product-card__index tag-mono" aria-hidden="true">No. 0105</span>
       <div class="product-card__badges"></div>
       <img src="/assets/images/products/ensftf-140w-smart-auto-stop-charging-adapter.png" alt="ENSFTF 140W Smart Auto Stop Charging Adapter with Physical Cut-Off" loading="lazy" width="800" height="800" style="view-transition-name: product-photo-ensftf-140w-smart-auto-stop-charging-adapter"
            onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
     </div>
     <div class="product-card__body">
       <span class="product-card__category">tech</span>
-      <h3 class="product-card__name">ENSFTF 140W Smart Auto Stop Charging Adapter with Physical Cut-Off</h3>
-      <p class="product-card__desc visually-line-clamp-2">A 140W USB-C charging adapter that physically cuts the power once your device is full, instead of leaving it to software to decide.</p>
-      <div class="product-card__meta">
+      <h3 class="product-card__name" id="pc136-name">ENSFTF 140W Smart Auto Stop Charging Adapter with Physical Cut-Off</h3>
+      <p class="product-card__desc visually-line-clamp-2" id="pc136-desc">A 140W USB-C charging adapter that physically cuts the power once your device is full, instead of leaving it to software to decide.</p>
+      <div class="product-card__meta" id="pc136-meta">
         <span class="product-card__price">Check price</span>
         <span class="rating" role="img" aria-label="4.3 out of 5 (91 reviews)"><span class="stars"><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg></span><span>4.3</span><span class="text-faint">(91)</span></span>
       </div>
     </div>
   </a>
   <div class="product-card__cta">
-    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="ensftf-140w-smart-auto-stop-charging-adapter">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
+    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="ensftf-140w-smart-auto-stop-charging-adapter" aria-label="View at Amazon: ENSFTF 140W Smart Auto Stop Charging Adapter with Physical Cut-Off (opens in a new tab)">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
   </div>
 </article>
 
 <article class="product-card" >
-  <a class="product-card-link" href="/product/looi-robot-ai-desktop-companion/" aria-label="View LOOI Robot, AI Desktop Companion with ChatGPT Voice Interaction">
+  <a class="product-card-link" href="/product/looi-robot-ai-desktop-companion/" aria-labelledby="pc137-name" aria-describedby="pc137-desc pc137-meta">
     <div class="product-card__media">
-      <span class="product-card__index tag-mono">No. 0107</span>
+      <span class="product-card__index tag-mono" aria-hidden="true">No. 0107</span>
       <div class="product-card__badges"></div>
       <img src="/assets/images/products/looi-robot-ai-desktop-companion.png" alt="LOOI Robot, AI Desktop Companion with ChatGPT Voice Interaction" loading="lazy" width="800" height="800" style="view-transition-name: product-photo-looi-robot-ai-desktop-companion"
            onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
     </div>
     <div class="product-card__body">
       <span class="product-card__category">tech</span>
-      <h3 class="product-card__name">LOOI Robot, AI Desktop Companion with ChatGPT Voice Interaction</h3>
-      <p class="product-card__desc visually-line-clamp-2">A small desktop robot that talks with you through ChatGPT, sees what is in front of it, remembers you, and snaps on your phone for 10W MagSafe charging.</p>
-      <div class="product-card__meta">
+      <h3 class="product-card__name" id="pc137-name">LOOI Robot, AI Desktop Companion with ChatGPT Voice Interaction</h3>
+      <p class="product-card__desc visually-line-clamp-2" id="pc137-desc">A small desktop robot that talks with you through ChatGPT, sees what is in front of it, remembers you, and snaps on your phone for 10W MagSafe charging.</p>
+      <div class="product-card__meta" id="pc137-meta">
         <span class="product-card__price">Check price</span>
         <span class="rating" role="img" aria-label="3.8 out of 5 (382 reviews)"><span class="stars"><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg></span><span>3.8</span><span class="text-faint">(382)</span></span>
       </div>
     </div>
   </a>
   <div class="product-card__cta">
-    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="looi-robot-ai-desktop-companion">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
+    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="looi-robot-ai-desktop-companion" aria-label="View at Amazon: LOOI Robot, AI Desktop Companion with ChatGPT Voice Interaction (opens in a new tab)">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
   </div>
 </article>
 
 <article class="product-card" >
-  <a class="product-card-link" href="/product/mito-infinity-mirror-dodecahedron-light/" aria-label="View MITO Infinity Mirror Light Dodecahedron, RGBW Cube Light Decor">
+  <a class="product-card-link" href="/product/mito-infinity-mirror-dodecahedron-light/" aria-labelledby="pc138-name" aria-describedby="pc138-desc pc138-meta">
     <div class="product-card__media">
-      <span class="product-card__index tag-mono">No. 0109</span>
+      <span class="product-card__index tag-mono" aria-hidden="true">No. 0109</span>
       <div class="product-card__badges"></div>
       <img src="/assets/images/products/mito-infinity-mirror-dodecahedron-light.png" alt="MITO Infinity Mirror Light Dodecahedron, RGBW Cube Light Decor" loading="lazy" width="800" height="800" style="view-transition-name: product-photo-mito-infinity-mirror-dodecahedron-light"
            onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
     </div>
     <div class="product-card__body">
       <span class="product-card__category">home</span>
-      <h3 class="product-card__name">MITO Infinity Mirror Light Dodecahedron, RGBW Cube Light Decor</h3>
-      <p class="product-card__desc visually-line-clamp-2">A twelve-sided infinity-mirror light that turns its LEDs into deep, glowing 3D tunnels, with 258 lighting effects and music-reactive modes.</p>
-      <div class="product-card__meta">
+      <h3 class="product-card__name" id="pc138-name">MITO Infinity Mirror Light Dodecahedron, RGBW Cube Light Decor</h3>
+      <p class="product-card__desc visually-line-clamp-2" id="pc138-desc">A twelve-sided infinity-mirror light that turns its LEDs into deep, glowing 3D tunnels, with 258 lighting effects and music-reactive modes.</p>
+      <div class="product-card__meta" id="pc138-meta">
         <span class="product-card__price">Check price</span>
         <span class="rating" role="img" aria-label="4.4 out of 5 (504 reviews)"><span class="stars"><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg></span><span>4.4</span><span class="text-faint">(504)</span></span>
       </div>
     </div>
   </a>
   <div class="product-card__cta">
-    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="mito-infinity-mirror-dodecahedron-light">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
+    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="mito-infinity-mirror-dodecahedron-light" aria-label="View at Amazon: MITO Infinity Mirror Light Dodecahedron, RGBW Cube Light Decor (opens in a new tab)">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
   </div>
 </article>
 
 <article class="product-card" >
-  <a class="product-card-link" href="/product/divoom-pixoo-max-pixel-display/" aria-label="View Divoom Pixoo-Max 32x32 Programmable Pixel Art LED Display">
+  <a class="product-card-link" href="/product/divoom-pixoo-max-pixel-display/" aria-labelledby="pc139-name" aria-describedby="pc139-desc pc139-meta">
     <div class="product-card__media">
-      <span class="product-card__index tag-mono">No. 0110</span>
+      <span class="product-card__index tag-mono" aria-hidden="true">No. 0110</span>
       <div class="product-card__badges"></div>
       <img src="/assets/images/products/divoom-pixoo-max-pixel-display.png" alt="Divoom Pixoo-Max 32x32 Programmable Pixel Art LED Display" loading="lazy" width="800" height="800" style="view-transition-name: product-photo-divoom-pixoo-max-pixel-display"
            onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
     </div>
     <div class="product-card__body">
       <span class="product-card__category">tech</span>
-      <h3 class="product-card__name">Divoom Pixoo-Max 32x32 Programmable Pixel Art LED Display</h3>
-      <p class="product-card__desc visually-line-clamp-2">A 9.6-inch, 32x32 programmable LED screen you control from your phone: design your own pixel art, animations, and scrolling text in the Divoom app.</p>
-      <div class="product-card__meta">
+      <h3 class="product-card__name" id="pc139-name">Divoom Pixoo-Max 32x32 Programmable Pixel Art LED Display</h3>
+      <p class="product-card__desc visually-line-clamp-2" id="pc139-desc">A 9.6-inch, 32x32 programmable LED screen you control from your phone: design your own pixel art, animations, and scrolling text in the Divoom app.</p>
+      <div class="product-card__meta" id="pc139-meta">
         <span class="product-card__price">Check price</span>
         <span class="rating" role="img" aria-label="4.4 out of 5 (1,400 reviews)"><span class="stars"><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg></span><span>4.4</span><span class="text-faint">(1,400)</span></span>
       </div>
     </div>
   </a>
   <div class="product-card__cta">
-    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="divoom-pixoo-max-pixel-display">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
+    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="divoom-pixoo-max-pixel-display" aria-label="View at Amazon: Divoom Pixoo-Max 32x32 Programmable Pixel Art LED Display (opens in a new tab)">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
   </div>
 </article>
 
 <article class="product-card" >
-  <a class="product-card-link" href="/product/oasis-mini-kinetic-sand-art-table-bamboo/" aria-label="View Oasis Mini Kinetic Sand Art Table, Bamboo">
+  <a class="product-card-link" href="/product/oasis-mini-kinetic-sand-art-table-bamboo/" aria-labelledby="pc140-name" aria-describedby="pc140-desc pc140-meta">
     <div class="product-card__media">
-      <span class="product-card__index tag-mono">No. 0113</span>
+      <span class="product-card__index tag-mono" aria-hidden="true">No. 0113</span>
       <div class="product-card__badges"></div>
       <img src="/assets/images/products/oasis-mini-kinetic-sand-art-table-bamboo.webp" alt="Oasis Mini Kinetic Sand Art Table, Bamboo" loading="lazy" width="800" height="800" style="view-transition-name: product-photo-oasis-mini-kinetic-sand-art-table-bamboo"
            onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
     </div>
     <div class="product-card__body">
       <span class="product-card__category">desk setup</span>
-      <h3 class="product-card__name">Oasis Mini Kinetic Sand Art Table, Bamboo</h3>
-      <p class="product-card__desc visually-line-clamp-2">A 9-inch kinetic desk sculpture that slowly carves patterns into a bed of sand, with app-controlled RGB lighting, in real bamboo and glass.</p>
-      <div class="product-card__meta">
+      <h3 class="product-card__name" id="pc140-name">Oasis Mini Kinetic Sand Art Table, Bamboo</h3>
+      <p class="product-card__desc visually-line-clamp-2" id="pc140-desc">A 9-inch kinetic desk sculpture that slowly carves patterns into a bed of sand, with app-controlled RGB lighting, in real bamboo and glass.</p>
+      <div class="product-card__meta" id="pc140-meta">
         <span class="product-card__price">Check price</span>
         <span class="rating" role="img" aria-label="4.4 out of 5 (397 reviews)"><span class="stars"><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg></span><span>4.4</span><span class="text-faint">(397)</span></span>
       </div>
     </div>
   </a>
   <div class="product-card__cta">
-    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="oasis-mini-kinetic-sand-art-table-bamboo">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
+    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="oasis-mini-kinetic-sand-art-table-bamboo" aria-label="View at Amazon: Oasis Mini Kinetic Sand Art Table, Bamboo (opens in a new tab)">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
   </div>
 </article>
 
 <article class="product-card" >
-  <a class="product-card-link" href="/product/mostarle-terminator-m-3d-metal-puzzle/" aria-label="View Mostarle Terminator M 3D Metal Puzzle, DIY Mechanical Robot Model Kit with LED Light">
+  <a class="product-card-link" href="/product/mostarle-terminator-m-3d-metal-puzzle/" aria-labelledby="pc141-name" aria-describedby="pc141-desc pc141-meta">
     <div class="product-card__media">
-      <span class="product-card__index tag-mono">No. 0114</span>
+      <span class="product-card__index tag-mono" aria-hidden="true">No. 0114</span>
       <div class="product-card__badges"></div>
       <img src="/assets/images/products/mostarle-terminator-m-3d-metal-puzzle.png" alt="Mostarle Terminator M 3D Metal Puzzle, DIY Mechanical Robot Model Kit with LED Light" loading="lazy" width="800" height="800" style="view-transition-name: product-photo-mostarle-terminator-m-3d-metal-puzzle"
            onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
     </div>
     <div class="product-card__body">
       <span class="product-card__category">desk setup</span>
-      <h3 class="product-card__name">Mostarle Terminator M 3D Metal Puzzle, DIY Mechanical Robot Model Kit with LED Light</h3>
-      <p class="product-card__desc visually-line-clamp-2">A metal DIY mechanical robot model you build yourself, with fully adjustable joints for action poses and an LED light with its own lighting modes.</p>
-      <div class="product-card__meta">
+      <h3 class="product-card__name" id="pc141-name">Mostarle Terminator M 3D Metal Puzzle, DIY Mechanical Robot Model Kit with LED Light</h3>
+      <p class="product-card__desc visually-line-clamp-2" id="pc141-desc">A metal DIY mechanical robot model you build yourself, with fully adjustable joints for action poses and an LED light with its own lighting modes.</p>
+      <div class="product-card__meta" id="pc141-meta">
         <span class="product-card__price">Check price</span>
         <span class="rating" role="img" aria-label="4.2 out of 5 (83 reviews)"><span class="stars"><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg></span><span>4.2</span><span class="text-faint">(83)</span></span>
       </div>
     </div>
   </a>
   <div class="product-card__cta">
-    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="mostarle-terminator-m-3d-metal-puzzle">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
+    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="mostarle-terminator-m-3d-metal-puzzle" aria-label="View at Amazon: Mostarle Terminator M 3D Metal Puzzle, DIY Mechanical Robot Model Kit with LED Light (opens in a new tab)">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
   </div>
 </article>
 
 <article class="product-card" >
-  <a class="product-card-link" href="/product/kiyoming-levitating-hexagon-plant-pot/" aria-label="View KIYOMING Levitating Hexagon Plant Pot, Floating Air Bonsai Planter">
+  <a class="product-card-link" href="/product/kiyoming-levitating-hexagon-plant-pot/" aria-labelledby="pc142-name" aria-describedby="pc142-desc pc142-meta">
     <div class="product-card__media">
-      <span class="product-card__index tag-mono">No. 0115</span>
+      <span class="product-card__index tag-mono" aria-hidden="true">No. 0115</span>
       <div class="product-card__badges"></div>
       <img src="/assets/images/products/kiyoming-levitating-hexagon-plant-pot.png" alt="KIYOMING Levitating Hexagon Plant Pot, Floating Air Bonsai Planter" loading="lazy" width="800" height="800" style="view-transition-name: product-photo-kiyoming-levitating-hexagon-plant-pot"
            onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
     </div>
     <div class="product-card__body">
       <span class="product-card__category">home</span>
-      <h3 class="product-card__name">KIYOMING Levitating Hexagon Plant Pot, Floating Air Bonsai Planter</h3>
-      <p class="product-card__desc visually-line-clamp-2">A magnetic levitation planter: the hexagon pot floats above its base and slowly rotates 360° on its own while the power is on.</p>
-      <div class="product-card__meta">
+      <h3 class="product-card__name" id="pc142-name">KIYOMING Levitating Hexagon Plant Pot, Floating Air Bonsai Planter</h3>
+      <p class="product-card__desc visually-line-clamp-2" id="pc142-desc">A magnetic levitation planter: the hexagon pot floats above its base and slowly rotates 360° on its own while the power is on.</p>
+      <div class="product-card__meta" id="pc142-meta">
         <span class="product-card__price">Check price</span>
         <span class="rating" role="img" aria-label="4.4 out of 5 (303 reviews)"><span class="stars"><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg></span><span>4.4</span><span class="text-faint">(303)</span></span>
       </div>
     </div>
   </a>
   <div class="product-card__cta">
-    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="kiyoming-levitating-hexagon-plant-pot">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
+    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="kiyoming-levitating-hexagon-plant-pot" aria-label="View at Amazon: KIYOMING Levitating Hexagon Plant Pot, Floating Air Bonsai Planter (opens in a new tab)">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
   </div>
 </article>
 
 <article class="product-card" >
-  <a class="product-card-link" href="/product/homedics-envirascape-silver-springs-fountain/" aria-label="View HoMedics EnviraScape Silver Springs Tabletop Relaxation Fountain">
+  <a class="product-card-link" href="/product/homedics-envirascape-silver-springs-fountain/" aria-labelledby="pc143-name" aria-describedby="pc143-desc pc143-meta">
     <div class="product-card__media">
-      <span class="product-card__index tag-mono">No. 0116</span>
+      <span class="product-card__index tag-mono" aria-hidden="true">No. 0116</span>
       <div class="product-card__badges"></div>
       <img src="/assets/images/products/homedics-envirascape-silver-springs-fountain.png" alt="HoMedics EnviraScape Silver Springs Tabletop Relaxation Fountain" loading="lazy" width="800" height="800" style="view-transition-name: product-photo-homedics-envirascape-silver-springs-fountain"
            onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
     </div>
     <div class="product-card__body">
       <span class="product-card__category">home</span>
-      <h3 class="product-card__name">HoMedics EnviraScape Silver Springs Tabletop Relaxation Fountain</h3>
-      <p class="product-card__desc visually-line-clamp-2">A compact tabletop fountain with a 3-tier cascading waterfall, natural river rocks, a deep basin, a built-in quiet pump, and a soft illuminating glow.</p>
-      <div class="product-card__meta">
+      <h3 class="product-card__name" id="pc143-name">HoMedics EnviraScape Silver Springs Tabletop Relaxation Fountain</h3>
+      <p class="product-card__desc visually-line-clamp-2" id="pc143-desc">A compact tabletop fountain with a 3-tier cascading waterfall, natural river rocks, a deep basin, a built-in quiet pump, and a soft illuminating glow.</p>
+      <div class="product-card__meta" id="pc143-meta">
         <span class="product-card__price">Check price</span>
         <span class="rating" role="img" aria-label="4.1 out of 5 (44,381 reviews)"><span class="stars"><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg></span><span>4.1</span><span class="text-faint">(44,381)</span></span>
       </div>
     </div>
   </a>
   <div class="product-card__cta">
-    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="homedics-envirascape-silver-springs-fountain">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
+    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="homedics-envirascape-silver-springs-fountain" aria-label="View at Amazon: HoMedics EnviraScape Silver Springs Tabletop Relaxation Fountain (opens in a new tab)">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
   </div>
 </article>
 
 <article class="product-card" >
-  <a class="product-card-link" href="/product/missyou-ms50d2-3d-hologram-fan/" aria-label="View Missyou 3DHologramFan MS50D2 19.7-Inch LED Holographic Fan">
+  <a class="product-card-link" href="/product/missyou-ms50d2-3d-hologram-fan/" aria-labelledby="pc144-name" aria-describedby="pc144-desc pc144-meta">
     <div class="product-card__media">
-      <span class="product-card__index tag-mono">No. 0117</span>
+      <span class="product-card__index tag-mono" aria-hidden="true">No. 0117</span>
       <div class="product-card__badges"></div>
       <img src="/assets/images/products/missyou-ms50d2-3d-hologram-fan.png" alt="Missyou 3DHologramFan MS50D2 19.7-Inch LED Holographic Fan" loading="lazy" width="800" height="800" style="view-transition-name: product-photo-missyou-ms50d2-3d-hologram-fan"
            onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
     </div>
     <div class="product-card__body">
       <span class="product-card__category">tech</span>
-      <h3 class="product-card__name">Missyou 3DHologramFan MS50D2 19.7-Inch LED Holographic Fan</h3>
-      <p class="product-card__desc visually-line-clamp-2">A 19.7-inch LED holographic fan that projects animated 3D visuals that appear to float in mid-air, with WiFi, Bluetooth, app control, and a remote.</p>
-      <div class="product-card__meta">
+      <h3 class="product-card__name" id="pc144-name">Missyou 3DHologramFan MS50D2 19.7-Inch LED Holographic Fan</h3>
+      <p class="product-card__desc visually-line-clamp-2" id="pc144-desc">A 19.7-inch LED holographic fan that projects animated 3D visuals that appear to float in mid-air, with WiFi, Bluetooth, app control, and a remote.</p>
+      <div class="product-card__meta" id="pc144-meta">
         <span class="product-card__price">Check price</span>
         <span class="rating" role="img" aria-label="4.0 out of 5 (1,437 reviews)"><span class="stars"><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="currentColor" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><svg viewBox="0 0 20 20" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg></span><span>4.0</span><span class="text-faint">(1,437)</span></span>
       </div>
     </div>
   </a>
   <div class="product-card__cta">
-    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="missyou-ms50d2-3d-hologram-fan">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
+    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="missyou-ms50d2-3d-hologram-fan" aria-label="View at Amazon: Missyou 3DHologramFan MS50D2 19.7-Inch LED Holographic Fan (opens in a new tab)">View at Amazon <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg></a>
   </div>
 </article>
 </div>
@@ -726,25 +774,26 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a class="brand-logo" href="/"><img src="/assets/logo/wordmark.png" alt="PRIME.FINDS" width="1075" height="580" /></a>
+        <a class="brand-logo" href="/"><img src="/assets/logo/wordmark.png" alt="PRIME.FINDS home" width="1075" height="580" /></a>
         <p class="footer-brand__tagline">Curated products. Smart finds.</p>
       </div>
       <div>
-        <h3 class="footer-heading">Explore</h3>
+        <h2 class="footer-heading">Explore</h2>
         <ul class="footer-links"><li><a href="/">Home</a></li><li><a href="/#categories">Categories</a></li><li><a href="/#trending">Trending</a></li><li><a href="/#latest">Latest</a></li><li><a href="/about.html">About</a></li></ul>
       </div>
       <div>
-        <h3 class="footer-heading">Categories</h3>
+        <h2 class="footer-heading">Categories</h2>
         <ul class="footer-links"><li><a href="/category/tech/">Tech</a></li><li><a href="/category/home/">Home</a></li><li><a href="/category/gaming/">Gaming</a></li><li><a href="/category/travel/">Travel</a></li><li><a href="/category/desk-setup/">Desk Setup</a></li><li><a href="/category/gifts/">Gifts</a></li><li><a href="/category/under-25/">Under $25</a></li></ul>
       </div>
       <div>
-        <h3 class="footer-heading">Legal</h3>
-        <ul class="footer-links"><li><a href="/privacy-policy.html">Privacy Policy</a></li><li><a href="/terms.html">Terms</a></li><li><a href="/affiliate-disclosure.html">Affiliate Disclosure</a></li></ul>
+        <h2 class="footer-heading">Legal &amp; help</h2>
+        <ul class="footer-links"><li><a href="/accessibility.html">Accessibility</a></li><li><a href="/privacy-policy.html">Privacy Policy</a></li><li><a href="/terms.html">Terms of Use</a></li><li><a href="/affiliate-disclosure.html">Affiliate Disclosure</a></li><li><a href="/cookie-notice.html">Cookie Notice</a></li><li><a href="/accessibility.html#report">Help &amp; feedback</a></li></ul>
       </div>
     </div>
+    <div class="footer-disclosure"><h2 class="footer-heading">Affiliate disclosure</h2><p>Many links on PRIME.FINDS, including the &ldquo;View at Amazon&rdquo; buttons, are affiliate links. If you buy through them, PRIME.FINDS may earn a commission from qualifying purchases, at no extra cost to you. <a href="/affiliate-disclosure.html">Read the full affiliate disclosure</a>.</p></div>
     <div class="footer-bottom">
       <span>&copy; 2026 PRIME.FINDS. All rights reserved.</span>
-      <div class="footer-social"><span aria-disabled="true" title="Instagram — coming soon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg></span></div>
+      <div class="footer-social"><span aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg></span></div>
     </div>
   </div>
 </footer>

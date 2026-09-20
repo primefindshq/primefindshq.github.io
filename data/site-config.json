@@ -14,13 +14,23 @@
     { "label": "About", "href": "/about.html" }
   ],
   "footerLegalLinks": [
+    { "label": "Accessibility", "href": "/accessibility.html" },
     { "label": "Privacy Policy", "href": "/privacy-policy.html" },
-    { "label": "Terms", "href": "/terms.html" },
-    { "label": "Affiliate Disclosure", "href": "/affiliate-disclosure.html" }
+    { "label": "Terms of Use", "href": "/terms.html" },
+    { "label": "Affiliate Disclosure", "href": "/affiliate-disclosure.html" },
+    { "label": "Cookie Notice", "href": "/cookie-notice.html" },
+    { "label": "Help & feedback", "href": "/accessibility.html#report" }
   ],
   "social": {
     "instagram": ""
   },
+  "contact": {
+    "email": "",
+    "issuesUrl": "https://github.com/primefindshq/primefindshq.github.io/issues",
+    "note": "No email address or phone number has been published for PRIME.FINDS. If contact.email is set, every legal page and the footer will offer it automatically; until then the public issue tracker of the site's repository is the only verified channel."
+  },
+  "legalUpdated": "2026-09-20",
+  "affiliateStatement": "",
   "analytics": {
     "provider": "none",
     "note": "Set NEXT_PUBLIC_ANALYTICS_PROVIDER / write key in your deployment environment. The analytics service abstraction in js/core/analytics.js reads window.__PRIME_FINDS_ANALYTICS_CONFIG and no-ops until configured."

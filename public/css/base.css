@@ -7,6 +7,8 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  /* Keeps a focused or targeted element clear of the sticky header. */
+  scroll-padding-top: 6rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -115,7 +117,8 @@ p { margin: 0; }
   position: absolute;
   left: var(--space-sm);
   top: -60px;
-  background: var(--color-gold);
+  /* The bright metallic gold (not the deep text gold) so the dark label reads at 8:1. */
+  background: #c9a24b;
   color: var(--color-text-on-gold);
   padding: var(--space-2xs) var(--space-sm);
   border-radius: var(--radius-sm);

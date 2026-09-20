@@ -6,13 +6,14 @@
 // wobble. transform-only pull region measured off the button itself, so no
 // extra listeners on ancestors and nothing to clean up on unrelated moves.
 
+import { prefersReducedMotion } from '../core/a11y.js';
+
 const PULL_RADIUS = 90;
 const MAX_PULL = 10;
 
 export function initMagneticButtons(root = document) {
   const supportsHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (!supportsHover || reduceMotion) return;
+  if (!supportsHover) return;
 
   root.querySelectorAll('.btn--primary').forEach((btn) => {
     let ticking = false;
@@ -27,6 +28,10 @@ export function initMagneticButtons(root = document) {
     };
 
     const onMove = (e) => {
+      if (prefersReducedMotion()) {
+        if (active) reset();
+        return;
+      }
       const rect = btn.getBoundingClientRect();
       const cx = rect.left + rect.width / 2;
       const cy = rect.top + rect.height / 2;

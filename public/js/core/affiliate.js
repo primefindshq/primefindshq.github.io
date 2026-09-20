@@ -11,6 +11,7 @@
 // ---------------------------------------------------------------------------
 
 import { track, EVENTS } from './analytics.js';
+import { escapeHtml } from './utils.js';
 
 /**
  * Resolve the URL a "View Product" click should open.
@@ -39,6 +40,12 @@ export function bindAffiliateLink(anchorEl, product, { source = 'unknown' } = {}
   anchorEl.href = url;
   anchorEl.target = '_blank';
   anchorEl.rel = 'noopener sponsored nofollow';
+  // Every "View at Amazon" button reads the same, so its accessible name adds the
+  // product and warns that it opens a new tab (server-rendered markup already has this).
+  if (!anchorEl.hasAttribute('aria-label')) {
+    const visible = anchorEl.textContent.replace(/\s+/g, ' ').trim() || 'View product';
+    anchorEl.setAttribute('aria-label', `${visible}: ${product.name} (opens in a new tab)`);
+  }
 
   anchorEl.addEventListener('click', () => {
     track(EVENTS.AFFILIATE_CLICK, {
@@ -55,7 +62,7 @@ export function bindAffiliateLink(anchorEl, product, { source = 'unknown' } = {}
 /** Builds the CTA markup used on cards / detail pages so it's never duplicated by hand. */
 export function affiliateLinkMarkup(product, { label = 'View Product', className = 'btn btn--primary' } = {}) {
   const disabled = !getProductUrl(product);
-  return `<a class="${className}" data-affiliate-link data-product-slug="${product.slug}" ${disabled ? 'aria-disabled="true"' : ''}>
+  return `<a class="${className}" data-affiliate-link data-product-slug="${product.slug}" aria-label="${escapeHtml(label)}: ${escapeHtml(product.name)} (opens in a new tab)" ${disabled ? 'aria-disabled="true"' : ''}>
     ${label}
     <svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg>
   </a>`;

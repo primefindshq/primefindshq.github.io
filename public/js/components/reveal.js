@@ -2,14 +2,20 @@
 // enters the viewport. Respects prefers-reduced-motion by doing nothing
 // (elements are already visible by default via CSS in that case).
 
+import { prefersReducedMotion } from '../core/a11y.js';
+
 export function initScrollReveal(root = document) {
   const els = root.querySelectorAll('[data-reveal]');
   if (!els.length) return;
 
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+  if (prefersReducedMotion() || !('IntersectionObserver' in window)) {
     els.forEach((el) => el.classList.add('is-visible'));
     return;
   }
+  // Switching "Reduce motion" on mid-visit reveals whatever is still waiting.
+  document.addEventListener('pf:a11y-change', () => {
+    if (prefersReducedMotion()) els.forEach((el) => el.classList.add('is-visible'));
+  });
 
   const observer = new IntersectionObserver(
     (entries) => {

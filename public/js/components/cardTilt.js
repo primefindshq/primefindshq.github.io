@@ -10,12 +10,13 @@
 // every time the cursor crossed from the image into the text area of the
 // SAME card, not just when it left the card entirely.
 
+import { prefersReducedMotion } from '../core/a11y.js';
+
 const MAX_DEG = 5;
 
 export function initCardTilt(root = document) {
   const supportsHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (!supportsHover || reduceMotion) return;
+  if (!supportsHover) return;
 
   root.querySelectorAll('.product-card').forEach((card) => {
     let ticking = false;
@@ -29,6 +30,8 @@ export function initCardTilt(root = document) {
     };
 
     card.addEventListener('pointermove', (e) => {
+      // Checked on every move so the in-page "Reduce motion" option takes effect immediately.
+      if (prefersReducedMotion()) return;
       const rect = card.getBoundingClientRect();
       pendingX = ((e.clientX - rect.left) / rect.width) * 2 - 1;
       pendingY = ((e.clientY - rect.top) / rect.height) * 2 - 1;

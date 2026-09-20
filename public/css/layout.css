@@ -367,14 +367,18 @@ body.intro-lock { overflow: hidden; }
 /* ---- Grids ---- */
 .grid-products {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1px;
   background: var(--color-border);
   border: 1px solid var(--color-border);
 }
-@media (max-width: 1200px) { .grid-products { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 860px) { .grid-products { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 480px) { .grid-products { grid-template-columns: 1fr 1fr; } }
+/* minmax(0, 1fr), not 1fr: a plain 1fr column will not shrink below its content, so
+   long card content pushed the page wider than a phone screen (WCAG 1.4.10 reflow). */
+@media (max-width: 1200px) { .grid-products { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 860px) { .grid-products { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 480px) { .grid-products { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 359px) { .grid-products { grid-template-columns: minmax(0, 1fr); } }
+.grid-products > * { min-width: 0; }
 
 /* Every 7th tile (0-indexed 3rd, i.e. the 4th card) spans two columns on a
    4-up grid -- an occasional larger frame so the grid reads as curated

@@ -301,6 +301,9 @@
 @media (max-width: 900px) {
   .category-layout { grid-template-columns: 1fr; }
 }
+/* Grid children default to min-width:auto, so the filter panel's inputs used to force
+   the whole page wider than a 320px screen. min-width:0 lets them shrink. */
+.category-layout > * { min-width: 0; }
 .category-filters {
   position: sticky;
   top: 96px;

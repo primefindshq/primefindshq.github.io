@@ -95,9 +95,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     chip.addEventListener('click', () => {
       const value = Number(chip.dataset.filterRating);
       const isActive = chip.classList.contains('is-active');
-      ratingChips.forEach((c) => c.classList.remove('is-active'));
+      ratingChips.forEach((c) => {
+        c.classList.remove('is-active');
+        c.setAttribute('aria-pressed', 'false');
+      });
       if (!isActive) {
         chip.classList.add('is-active');
+        chip.setAttribute('aria-pressed', 'true');
         state.minRating = value;
       } else {
         state.minRating = null;
@@ -135,7 +139,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     state.maxPrice = null;
     if (sortSelect) sortSelect.value = 'featured';
     if (searchInput) searchInput.value = '';
-    ratingChips.forEach((c) => c.classList.remove('is-active'));
+    ratingChips.forEach((c) => {
+      c.classList.remove('is-active');
+      c.setAttribute('aria-pressed', 'false');
+    });
     if (featuredCheckbox) featuredCheckbox.checked = false;
     if (trendingCheckbox) trendingCheckbox.checked = false;
     if (minPriceInput) minPriceInput.value = '';

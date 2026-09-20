@@ -11,8 +11,15 @@
 // the homepage before the entrance takes over. That script also carries a
 // timed failsafe, so a JS failure can never leave the page covered.
 //
+// Accessibility: the overlay carries a real "Skip intro" button and a link to the
+// Accessibility Statement (outside the hidden artwork). Any key, click or tap also
+// skips. The reduced-motion path honors both the device setting and the in-page
+// "Reduce motion" option. Nothing about the entrance's visuals or timing changed.
+//
 // Review helpers: ?intro=full | quick | off forces a variant, and
 // ?introT=2.4 freezes the WebGL scene on a single frame of its timeline.
+
+import { prefersReducedMotion } from '../core/a11y.js';
 
 const VISITED_KEY = 'pf-visited';
 const SESSION_KEY = 'pf-intro-session';
@@ -39,7 +46,8 @@ export async function initBrandIntro() {
     return;
   }
 
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // The device setting OR the in-page "Reduce motion" option (see core/a11y.js).
+  const reduceMotion = prefersReducedMotion();
   const returning = force === 'full' ? false : force === 'quick' ? true : read(localStorage, VISITED_KEY) === '1';
   write(localStorage, VISITED_KEY, '1');
   write(sessionStorage, SESSION_KEY, '1');
@@ -52,10 +60,14 @@ export async function initBrandIntro() {
   const end = () => {
     if (ended) return;
     ended = true;
+    // If keyboard focus was on the overlay's own controls (Skip intro / Accessibility),
+    // hand it to the page content so it is not lost when the overlay is removed.
+    const focusWasInside = el.contains(document.activeElement);
     document.body.classList.remove('intro-lock');
     clearRoot();
     root.style.removeProperty('--intro-reveal-dur');
     el.remove();
+    if (focusWasInside) document.getElementById('main-content')?.focus({ preventScroll: true });
   };
 
   // ---- Reduced motion: opacity only, no movement, still a considered entrance.
