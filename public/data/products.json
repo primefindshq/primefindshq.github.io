@@ -3770,5 +3770,53 @@
     "published": true,
     "createdAt": "2026-09-22T00:00:00.000Z",
     "updatedAt": "2026-09-22T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0127",
+    "name": "ROKR Magic Piano 3D Wooden Puzzle Music Box, 223 Pieces, 1:20 Scale",
+    "slug": "rokr-magic-piano-3d-wooden-puzzle-music-box",
+    "category": "desk-setup",
+    "secondaryCategories": [
+      "gifts",
+      "home"
+    ],
+    "subcategory": "Decor",
+    "shortDescription": "A 1:20 scale wooden grand piano you build yourself from 223 pieces, then wind up so its keys play \"Variations on the Canon\" on their own, no batteries needed.",
+    "description": "Build it, then watch it play. The ROKR Magic Piano is a 1:20 scale wooden grand piano kit, 223 pieces of laser-cut wood joined by mortise-and-tenon joints, so no glue is required. The listing puts the build at about 4.5 hours. Its base is styled like a book, and the transparent structure shows off the gears inside. Once it is finished you wind the spring key under the book, and gear transmission drives the keys to play the melody \"Variations on the Canon\" by themselves, with no batteries. The lid folds open and closed, a prop stick holds it up, and a key cover lowers to protect the keys. The kit comes with a step-by-step manual, pre-cut wood sheets, a music movement, wax and sandpaper. It is listed for ages 14 and up, carries a warning not to swallow small parts, and is pitched as a gift and as desk or shelf decor for home or office.",
+    "whyWeLikeIt": "Two rewards in one: the slow, satisfying build, and then a display piece that actually performs. Wind the key and the keys play on their own while you watch the gears turn through the transparent case.",
+    "image": "/assets/images/products/rokr-magic-piano-3d-wooden-puzzle-music-box.webp",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 988,
+    "tags": [
+      "3d wooden puzzle",
+      "3d puzzle",
+      "wooden music box",
+      "music box",
+      "piano model kit",
+      "piano",
+      "rokr",
+      "model kit",
+      "diy building kit",
+      "desk decor",
+      "mechanical model",
+      "gift"
+    ],
+    "highlights": [
+      "223 laser-cut wood pieces, 1:20 scale grand piano",
+      "No glue: mortise-and-tenon joints, about 4.5 hours to build",
+      "Wind-up spring key drives self-playing keys, no batteries",
+      "Plays \"Variations on the Canon\" through gear transmission",
+      "Folding lid, prop stick, key cover and see-through gear structure"
+    ],
+    "affiliateUrl": "https://link.amazon/B03K5mCxY",
+    "externalUrl": "https://link.amazon/B03K5mCxY",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-22T00:00:00.000Z",
+    "updatedAt": "2026-09-22T00:00:00.000Z"
   }
 ]
