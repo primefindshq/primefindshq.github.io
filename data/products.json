@@ -3449,5 +3449,49 @@
     "published": true,
     "createdAt": "2026-09-20T00:00:00.000Z",
     "updatedAt": "2026-09-20T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0120",
+    "name": "mooas Retro Flip Desk Clock, Auto-Flip Table Clock (Black)",
+    "slug": "mooas-retro-flip-desk-clock-black",
+    "category": "desk-setup",
+    "secondaryCategories": [
+      "home",
+      "gifts"
+    ],
+    "subcategory": "Decor",
+    "shortDescription": "A retro desk clock that tells time the old way: large number pads that flip over as the minutes and hours pass.",
+    "description": "A clock you can watch work. The mooas Flip Desk Clock is a classic retro design in which the number pads flip over as time passes, operated by internal gears rather than a lit display. The hour pad carries an AM/PM icon, so morning and afternoon are easy to tell apart at a glance. It is cordless and battery-powered, running on one D-type battery, which is not included and has to be bought separately. This Black version measures about 8.27 x 3.86 x 6.3 inches and weighs 0.83 lb, is made of metal and PVC, and comes with the clock and a manual. The listing describes it as an indoor clock suited to a home, office, bedroom or living room.",
+    "whyWeLikeIt": "It turns telling the time into a small mechanical moment. Every flip is a tiny piece of retro theater on the desk, and it looks the part with nothing lit up and nothing to plug in.",
+    "image": "/assets/images/products/mooas-retro-flip-desk-clock-black.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.4,
+    "reviewCount": 826,
+    "tags": [
+      "flip clock",
+      "retro clock",
+      "desk clock",
+      "vintage clock",
+      "mooas",
+      "analog clock",
+      "desk decor",
+      "gift"
+    ],
+    "highlights": [
+      "Number pads flip over as time passes",
+      "AM/PM icon on the hour pad",
+      "Cordless: runs on one D-type battery (not included)",
+      "About 8.27 x 3.86 x 6.3 in, 0.83 lb, metal and PVC",
+      "Black; includes the clock and a manual"
+    ],
+    "affiliateUrl": "https://link.amazon/B054XO4R4",
+    "externalUrl": "https://link.amazon/B054XO4R4",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-22T00:00:00.000Z",
+    "updatedAt": "2026-09-22T00:00:00.000Z"
   }
 ]
