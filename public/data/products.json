@@ -3956,5 +3956,53 @@
     "published": true,
     "createdAt": "2026-09-22T00:00:00.000Z",
     "updatedAt": "2026-09-22T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0131",
+    "name": "Diffuserlove CH06 Cloud Rain Humidifier, Mushroom Lamp with Rain Sounds & Remote",
+    "slug": "diffuserlove-ch06-cloud-rain-humidifier",
+    "category": "home",
+    "secondaryCategories": [
+      "desk-setup",
+      "gifts"
+    ],
+    "subcategory": "Ambience",
+    "shortDescription": "A mushroom-shaped cool-mist humidifier with a glowing cap and a rain-drip effect, 300 ml capacity, 7 light colors, rain sounds and a remote control.",
+    "description": "A tiny rain shower on your desk. The Diffuserlove CH06 is a mushroom-shaped cloud humidifier: water drips like rain from the glowing cap into a clear tank while cool mist rises around it. The listing describes it as a rain sounds humidifier with white noise, and its lamp has 7 colors in fixed, cycle and breathing-light modes with adjustable brightness. The included remote sets a 4-, 6- or 8-hour timer, the light color and brightness, the rainfall and the mist, and it takes 2 AAA batteries, which are not included. The tank holds 300 ml, and the listing says the big-mist mode runs up to 12 hours, with auto shut-off among its features. It is powered through a Type-C cord (the plug is not included; the listing says to connect the USB port to a 5V 2A power supply) and uses distilled water: do not add essential oils, which the listing says will clog the rain holes. It measures 6.3 by 6.3 by 9.95 inches, weighs 1.9 pounds and is made of ABS and polypropylene in white. The listing pitches it for a bedroom, living room or office desk, and as a gift.",
+    "whyWeLikeIt": "The rain-cloud trick is the whole appeal: a glowing mushroom cap with drops falling into a glass-clear tank, lit in seven colors and controlled from the remote. It is a small ambient centerpiece that fits a shelf or desk.",
+    "image": "/assets/images/products/diffuserlove-ch06-cloud-rain-humidifier.webp",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.0,
+    "reviewCount": 1209,
+    "tags": [
+      "rain cloud humidifier",
+      "cloud humidifier",
+      "mushroom humidifier",
+      "rain humidifier",
+      "water drip",
+      "mushroom lamp",
+      "night light",
+      "rain sounds",
+      "desk humidifier",
+      "remote control",
+      "diffuserlove",
+      "gift"
+    ],
+    "highlights": [
+      "Rain-drip effect with cool mist, 300 ml tank",
+      "7 light colors, 3 light modes and adjustable brightness",
+      "Rain sounds and white noise",
+      "Remote with 4/6/8-hour timer (2 AAA batteries not included)",
+      "Type-C powered, auto shut-off, distilled water only (no essential oils)"
+    ],
+    "affiliateUrl": "https://link.amazon/B05eaC25v",
+    "externalUrl": "https://link.amazon/B05eaC25v",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-22T00:00:00.000Z",
+    "updatedAt": "2026-09-22T00:00:00.000Z"
   }
 ]
