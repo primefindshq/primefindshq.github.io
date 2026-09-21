@@ -3630,5 +3630,51 @@
     "published": true,
     "createdAt": "2026-09-22T00:00:00.000Z",
     "updatedAt": "2026-09-22T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0124",
+    "name": "JOEYANK Infinity Cube Fidget Toy, Anodized Aluminum Alloy",
+    "slug": "joeyank-infinity-cube-fidget-toy",
+    "category": "gaming",
+    "secondaryCategories": [
+      "desk-setup",
+      "gifts"
+    ],
+    "subcategory": "Fidget Toys",
+    "shortDescription": "A pocket-sized fidget cube built from eight small cubes that rotate from any direction and fold into different shapes, in CNC-machined anodized aluminum alloy.",
+    "description": "A cube that never quite finishes changing shape. The JOEYANK Infinity Cube is made of eight small cubes joined so that each one can be rotated from any direction and angle, letting you flip and fold it in one hand into different shapes. The listing describes it as premium anodized aluminum alloy, CNC machined, in a gray finish, and as a lightweight pocket-size piece that is noiseless to play with. The cube measures 1.57 by 1.57 by 1.57 inches (4 cm). It comes with a matching pouch to store it and retail packaging, and the listing pitches it as a gift and a desk accessory for the office or home.",
+    "whyWeLikeIt": "It is a small mechanical object you can read at a glance: eight cubes, hinged so they turn endlessly, in a cool brushed-metal finish. Keep it on the desk between tasks or drop it in a pocket, and it comes with its own pouch.",
+    "image": "/assets/images/products/joeyank-infinity-cube-fidget-toy.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.5,
+    "reviewCount": 4281,
+    "tags": [
+      "infinity cube",
+      "fidget cube",
+      "fidget toy",
+      "fidget finger toy",
+      "metal fidget",
+      "aluminum",
+      "desk toy",
+      "pocket toy",
+      "joeyank",
+      "gift"
+    ],
+    "highlights": [
+      "Eight small cubes that rotate from any direction and angle",
+      "Flips and folds into different shapes in one hand",
+      "Anodized aluminum alloy, CNC machined",
+      "1.57-inch (4 cm) cube, pocket-sized and noiseless",
+      "Includes a matching storage pouch and retail packaging"
+    ],
+    "affiliateUrl": "https://link.amazon/B0cdluZMc",
+    "externalUrl": "https://link.amazon/B0cdluZMc",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-22T00:00:00.000Z",
+    "updatedAt": "2026-09-22T00:00:00.000Z"
   }
 ]
