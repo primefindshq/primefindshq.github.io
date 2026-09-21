@@ -3584,5 +3584,51 @@
     "published": true,
     "createdAt": "2026-09-22T00:00:00.000Z",
     "updatedAt": "2026-09-22T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0123",
+    "name": "Ruko 18011 Robot Dog with 30+ LED Faces, Gesture & Remote Control, Black & Gold",
+    "slug": "ruko-18011-robot-dog-black-gold",
+    "category": "tech",
+    "secondaryCategories": [
+      "gaming",
+      "gifts"
+    ],
+    "subcategory": "Robots",
+    "shortDescription": "A programmable robot dog that walks, spins, slides and dances, shows 30+ LED faces, and steers around obstacles, driven by gesture, touch or a 2.4GHz remote.",
+    "description": "The Ruko 18011 in Black & Gold is a programmable interactive robot dog with a glowing LED face. Its 70 LED beads show 30+ faces, and it walks, spins, slides and dances. You can drive it three ways: by gesture, by touching its head to trigger sounds and moves, or with the included 2.4GHz remote, which the listing gives a range of up to 98 feet. Obstacle avoidance steers it around things in its path, and you can program up to 50 custom actions. A built-in rechargeable lithium-ion battery is listed at up to 45 minutes of play per charge, charged with the included USB A-to-C cable (USB C-to-C is not compatible); the remote takes 2 AAA batteries, which are not included. The box holds the robot dog, remote control, user manual and USB charging cable. It measures 8.86 by 8.86 by 9.84 inches in high-gloss ABS. The listing recommends ages 3 to 8 and carries a small-parts warning: not for children under 3.",
+    "whyWeLikeIt": "It packs three ways to play into one compact robot: use gestures, tap its head, or drive it with the remote, then build your own routine of up to 50 actions. The glowing LED face is the star, and the black-and-gold finish looks sharp on a shelf between sessions.",
+    "image": "/assets/images/products/ruko-18011-robot-dog-black-gold.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.4,
+    "reviewCount": 371,
+    "tags": [
+      "robot dog",
+      "robot pet",
+      "interactive robot",
+      "programmable robot",
+      "remote control robot",
+      "gesture control",
+      "LED faces",
+      "robot toy",
+      "ruko",
+      "gift"
+    ],
+    "highlights": [
+      "30+ LED faces from 70 LED beads",
+      "Gesture, touch and 2.4GHz remote control (up to 98 ft)",
+      "Obstacle avoidance and up to 50 programmable actions",
+      "Built-in rechargeable lithium-ion battery, up to 45 minutes per charge",
+      "USB charging cable included; remote takes 2 AAA batteries (not included)"
+    ],
+    "affiliateUrl": "https://link.amazon/B0fOrgDjm",
+    "externalUrl": "https://link.amazon/B0fOrgDjm",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-22T00:00:00.000Z",
+    "updatedAt": "2026-09-22T00:00:00.000Z"
   }
 ]
