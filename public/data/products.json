@@ -4051,5 +4051,52 @@
     "published": true,
     "createdAt": "2026-09-22T00:00:00.000Z",
     "updatedAt": "2026-09-22T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0133",
+    "name": "Movdyka 3D Crystal DNA Model with Color-Changing LED Base",
+    "slug": "movdyka-3d-crystal-dna-model-led-base",
+    "category": "tech",
+    "secondaryCategories": [
+      "desk-setup",
+      "gifts"
+    ],
+    "subcategory": "Lighting & Displays",
+    "shortDescription": "A 3D double helix laser-engraved inside a clear K9 crystal block, lit from below by a black LED base with 6 light modes and a touch switch.",
+    "description": "A double helix floating inside glass. The Movdyka DNA model is a clear K9 crystal block with a 3D double-helix pattern laser-engraved inside it, so the pattern sits within the crystal without breaking its surface. It stands on a black plastic LED base with a touch switch and 6 light modes: the color can change automatically or stay on a fixed hue. The base runs on 3 AAA batteries or from a USB cable, which the listing says connects to a computer, car charger or power bank. The crystal measures 50 by 50 by 80 mm and weighs 0.52 kg; the base measures 68 by 68 by 28 mm. The listing's contents are the crystal, LED base, data cable, cleaning cloth, gift card and gift box. It is pitched as a gift for science teachers, biology lovers and graduates, and as desk decor or a night light; the listing mentions birthdays, Christmas, graduation and retirement, and also calls it a paperweight.",
+    "whyWeLikeIt": "It is a piece of desk sculpture with a clear subject: a glowing double helix that changes color on its own. Compact enough for a shelf or workstation, and it comes boxed with a gift card.",
+    "image": "/assets/images/products/movdyka-3d-crystal-dna-model-led-base.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.7,
+    "reviewCount": 321,
+    "tags": [
+      "dna model",
+      "crystal dna",
+      "3d crystal",
+      "laser engraved crystal",
+      "double helix",
+      "led base",
+      "desk decor",
+      "night light",
+      "paperweight",
+      "movdyka",
+      "gift"
+    ],
+    "highlights": [
+      "3D double helix laser-engraved inside a clear K9 crystal",
+      "Black LED base with 6 light modes and a touch switch",
+      "Runs on 3 AAA batteries or a USB cable",
+      "Crystal 50 x 50 x 80 mm, base 68 x 68 x 28 mm",
+      "Comes with cleaning cloth, gift card and gift box"
+    ],
+    "affiliateUrl": "https://link.amazon/B01jskjZU",
+    "externalUrl": "https://link.amazon/B01jskjZU",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-22T00:00:00.000Z",
+    "updatedAt": "2026-09-22T00:00:00.000Z"
   }
 ]
