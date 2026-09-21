@@ -3911,5 +3911,50 @@
     "published": true,
     "createdAt": "2026-09-22T00:00:00.000Z",
     "updatedAt": "2026-09-22T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0130",
+    "name": "TOSY Magnet Pyramid Stone, 12-Piece Magnetic Shape-Shifting Cube with Spinner",
+    "slug": "tosy-magnet-pyramid-stone",
+    "category": "gaming",
+    "secondaryCategories": [
+      "desk-setup",
+      "gifts"
+    ],
+    "subcategory": "Magnetic Puzzles",
+    "shortDescription": "A magnetic shape-shifting cube of 12 pyramid blocks and 243 rare earth magnets, with holographic stickers and a spinner accessory that opens up more ways to transform it.",
+    "description": "One cube, endless rearranging. The TOSY Magnet Pyramid Stone is a magnetic shape-shifting cube made of 12 plastic pyramid blocks with 243 rare earth magnets and holographic stickers, in the dark Stone color. You fold, twist and reconnect the pieces into new shapes, and the included spinner accessory adds more transformation options. The listing pitches it as transforming into 1 billion shapes, and says you can connect several blocks to build larger shapes, with an included booklet and videos for ideas. This is the Stone set: unlike the Glow version, it is not glow-in-the-dark and has no UV flashlight. It is listed for ages 6 and up, for kids, teenagers and adults, alone or with others. The listing carries a small-magnet warning: swallowed magnets can stick together across intestines and cause serious injury, and medical attention should be sought immediately if magnets are swallowed or inhaled.",
+    "whyWeLikeIt": "A whole puzzle in one cube: fold, twist and reconnect it into new shapes while the holographic surface catches the light. Buy one to keep on the desk, or add a second to build bigger shapes.",
+    "image": "/assets/images/products/tosy-magnet-pyramid-stone.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.5,
+    "reviewCount": 9523,
+    "tags": [
+      "magnetic pyramid",
+      "magnet pyramid",
+      "magnetic puzzle",
+      "shape shifting cube",
+      "magnet tiles",
+      "holographic",
+      "spinner",
+      "tosy",
+      "gift"
+    ],
+    "highlights": [
+      "12 pyramid blocks with 243 rare earth magnets",
+      "Holographic stickers and an included spinner accessory",
+      "Marketed as transforming into 1 billion shapes",
+      "Connect multiple blocks to build larger shapes",
+      "Stone set (no glow, no UV flashlight); ages 6 and up"
+    ],
+    "affiliateUrl": "https://link.amazon/B09bTB3Jv",
+    "externalUrl": "https://link.amazon/B09bTB3Jv",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-22T00:00:00.000Z",
+    "updatedAt": "2026-09-22T00:00:00.000Z"
   }
 ]
