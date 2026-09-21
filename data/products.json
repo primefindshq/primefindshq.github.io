@@ -3724,5 +3724,51 @@
     "published": true,
     "createdAt": "2026-09-22T00:00:00.000Z",
     "updatedAt": "2026-09-22T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0126",
+    "name": "Arcade1Up Ms. Pac-Man Class of '81 Deluxe Arcade Machine, 12 Retro Games",
+    "slug": "arcade1up-ms-pac-man-class-of-81-deluxe",
+    "category": "gaming",
+    "secondaryCategories": [
+      "gifts",
+      "home"
+    ],
+    "subcategory": "Retro Arcade",
+    "shortDescription": "A full-size, over-5-foot Ms. Pac-Man cabinet with 12 retro games from 1981, a 17-inch screen, real-feel joysticks and buttons, and a light-up marquee.",
+    "description": "A proper arcade cabinet for the living room. The Class of '81 Deluxe is a full-size, blue Ms. Pac-Man cabinet that stands over 5 feet tall and carries 12 retro games from 1981, with real-feel joysticks and buttons and authentic arcade-style controls. The screen is a 17-inch BOE LCD, backed by dual stereo speakers, and the cabinet has a light-up marquee and a faux coin door for the full nostalgic look. Connect it over Wi-Fi to post high scores on online leaderboards, with no subscription required. It measures 22.44 inches deep, 18.82 wide and 61 tall, weighs 81 pounds, is made of wood, and plugs into the wall. The listing covers it with a 90-day warranty against manufacturer defects and sells the cabinet on its own.",
+    "whyWeLikeIt": "It is the whole 1981 arcade in one piece of furniture: a bright blue cabinet, a marquee that lights up, and real-feel controls for standing-up-and-playing sessions. Add online high-score leaderboards and it earns a permanent corner of the game room.",
+    "image": "/assets/images/products/arcade1up-ms-pac-man-class-of-81-deluxe.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 980,
+    "tags": [
+      "arcade cabinet",
+      "arcade machine",
+      "retro arcade",
+      "arcade1up",
+      "ms pac-man",
+      "class of 81",
+      "retro games",
+      "gaming cabinet",
+      "game room",
+      "gift"
+    ],
+    "highlights": [
+      "12 retro games from 1981 on a full-size, over-5-foot cabinet",
+      "17-inch BOE LCD screen with dual stereo speakers",
+      "Real-feel joysticks and buttons, light-up marquee, faux coin door",
+      "Wi-Fi leaderboards for online high scores, no subscription required",
+      "22.44 x 18.82 x 61 inches, 81 pounds, corded electric"
+    ],
+    "affiliateUrl": "https://link.amazon/B04iqHzmk",
+    "externalUrl": "https://link.amazon/B04iqHzmk",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-22T00:00:00.000Z",
+    "updatedAt": "2026-09-22T00:00:00.000Z"
   }
 ]
