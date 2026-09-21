@@ -3818,5 +3818,52 @@
     "published": true,
     "createdAt": "2026-09-22T00:00:00.000Z",
     "updatedAt": "2026-09-22T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0128",
+    "name": "MISDENK Kinetic Art Electromagnetic Rolling-Ball Desk Gadget, Wood Grain",
+    "slug": "misdenk-kinetic-art-rolling-ball-desk-gadget",
+    "category": "tech",
+    "secondaryCategories": [
+      "desk-setup",
+      "home",
+      "gifts"
+    ],
+    "subcategory": "Desk Gadgets",
+    "shortDescription": "A physics-inspired desktop display where a metal ball is kept moving along a spiral track by electromagnetic induction and gravity, in a wood-grain finish.",
+    "description": "Drop a metal ball in at the top and watch it travel the spiral track. The listing says this kinetic art piece uses electromagnetic induction and the law of gravity to keep the ball in motion, and pitches it as a physics-themed desk gadget and decor for home or office. Despite the \"perpetual motion\" label, it is an electronic gadget: you switch it on with the touch-sensitive on/off button on the base, and an indicator light turns blue when it is working. Place one metal ball in from the top, since the listing notes not to put more than one in. It comes in a wood-grain finish, measures 6.5 by 3.9 by 5.5 inches and weighs 1.1 pounds. The listing describes it as suitable for adults and as a gift.",
+    "whyWeLikeIt": "It turns a bit of physics into a desk ornament: the ball's path is easy to follow, the spiral is sculptural even when it is switched off, and the wood-grain finish fits a home or office setup. A small conversation piece that does something.",
+    "image": "/assets/images/products/misdenk-kinetic-art-rolling-ball-desk-gadget.webp",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 3.7,
+    "reviewCount": 48,
+    "tags": [
+      "kinetic art",
+      "perpetual motion",
+      "rolling ball",
+      "desk toy",
+      "desk gadget",
+      "physics gadget",
+      "electromagnetic",
+      "desk decor",
+      "misdenk",
+      "gift"
+    ],
+    "highlights": [
+      "Electromagnetic induction and gravity keep the metal ball moving",
+      "Touch-sensitive on/off button on the base, blue indicator light",
+      "Use one metal ball at a time, dropped in from the top",
+      "Wood-grain finish, 6.5 x 3.9 x 5.5 inches, 1.1 pounds",
+      "Listed as a physics-themed desk decor piece and gift for adults"
+    ],
+    "affiliateUrl": "https://link.amazon/B0aAKQxY7",
+    "externalUrl": "https://link.amazon/B0aAKQxY7",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-22T00:00:00.000Z",
+    "updatedAt": "2026-09-22T00:00:00.000Z"
   }
 ]
