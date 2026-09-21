@@ -3538,5 +3538,51 @@
     "published": true,
     "createdAt": "2026-09-22T00:00:00.000Z",
     "updatedAt": "2026-09-22T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0122",
+    "name": "Rossetta 3D Galaxy Projector with Bluetooth Speaker, Remote & 60 Scenes",
+    "slug": "rossetta-3d-galaxy-projector-60-scenes",
+    "category": "home",
+    "secondaryCategories": [
+      "gaming",
+      "desk-setup",
+      "gifts"
+    ],
+    "subcategory": "Ambience",
+    "shortDescription": "A 4-in-1 projector, night light and Bluetooth speaker that fills a wall or ceiling with 60 animated 3D scenes across 12 themes, from nebulas to oceans.",
+    "description": "Turn a blank wall into a moving universe. The Rossetta is described in its listing as a 4-in-1: a 3D projector, ambient light, night light and Bluetooth speaker, using naked-eye 3D display technology to give its scenes depth. It carries 60 dynamic 3D scenes across 12 themes, including oceans, wildlife, cosmic wonders and festivals, and the sound can either be music you stream from your phone over Bluetooth or the built-in background tracks that match each theme. Brightness and focus are adjustable (there is a focus wheel), it has a 220-degree adjustable angle, and a built-in 1-hour or 2-hour timer switches it off for you. The listing says it projects from 10 to 20 feet away and covers 130 to 385 square feet, and it sits on an anti-slip base. Everything is controlled from the included remote. The box holds the projector, remote control, power adapter and user manual. It is Gray plastic, and the listing pitches it as a gift for kids and adults and for parties and celebrations.",
+    "whyWeLikeIt": "It does more than a star projector: the scenes have depth, they come with matching sound, and you can stream your own music through the same box. Switch it on in a dark room and a plain ceiling becomes something people stop to look at.",
+    "image": "/assets/images/products/rossetta-3d-galaxy-projector-60-scenes.webp",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.3,
+    "reviewCount": 4865,
+    "tags": [
+      "galaxy projector",
+      "3d projector",
+      "star projector",
+      "bluetooth speaker",
+      "night light",
+      "room decor",
+      "ambient lighting",
+      "remote control",
+      "gift"
+    ],
+    "highlights": [
+      "60 dynamic 3D scenes across 12 themes",
+      "Built-in Bluetooth speaker plus theme-matched background sounds",
+      "Adjustable brightness and focus, with a 220-degree adjustable angle",
+      "1-hour or 2-hour auto-off timer and an included remote",
+      "Box includes the projector, remote, power adapter and manual"
+    ],
+    "affiliateUrl": "https://link.amazon/B02ZfThS5",
+    "externalUrl": "https://link.amazon/B02ZfThS5",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-22T00:00:00.000Z",
+    "updatedAt": "2026-09-22T00:00:00.000Z"
   }
 ]
