@@ -3493,5 +3493,50 @@
     "published": true,
     "createdAt": "2026-09-22T00:00:00.000Z",
     "updatedAt": "2026-09-22T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0121",
+    "name": "Mubarek Crystal Glass Light Projector, 3-in-1 Sunset, Ocean Wave & Northern Lights Lamp",
+    "slug": "mubarek-crystal-light-projector-3in1",
+    "category": "home",
+    "secondaryCategories": [
+      "desk-setup",
+      "gifts"
+    ],
+    "subcategory": "Ambience",
+    "shortDescription": "A textured crystal-glass globe on a wood base that casts sunset, ocean-wave and northern-lights effects across a room, with a remote and USB power.",
+    "description": "One small lamp that changes how a room looks. The Mubarek is a textured real-glass globe on a solid wood base with a built-in LED, and it projects three styles of light across the walls and ceiling: a sunset glow, moving ocean waves, and northern lights. The listing describes 216 dynamic combinations across 16 colors, with adjustable brightness. You control it with the included remote or the USB cable's controls, a memory function brings back the last color and brightness when you switch it on, and a timer can turn it off after one hour. It is powered over USB, from any 5V 1A source (the adapter is not included), and measures about 4.13 x 4.53 inches, small enough for a nightstand, shelf or desk. The LED is not replaceable. The listing shows it in Yellow and pitches it as room decor and a gift.",
+    "whyWeLikeIt": "It does a lot for something you can hold in one hand. Switch it on in a dim room and the walls and ceiling fill with slowly moving light, and the glass globe and wood base look good even when it is off.",
+    "image": "/assets/images/products/mubarek-crystal-light-projector-3in1.webp",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.4,
+    "reviewCount": 2296,
+    "tags": [
+      "crystal lamp",
+      "light projector",
+      "sunset lamp",
+      "ocean wave projector",
+      "northern lights projector",
+      "ambient lighting",
+      "mood lighting",
+      "desk decor",
+      "gift"
+    ],
+    "highlights": [
+      "Projects sunset, ocean-wave and northern-lights effects",
+      "216 dynamic combinations across 16 colors, with adjustable brightness",
+      "Remote or USB control, a memory function, and a 1-hour auto-off timer",
+      "Textured real-glass globe on a solid wood base, about 4.13 x 4.53 in",
+      "USB-powered from a 5V 1A source (adapter not included)"
+    ],
+    "affiliateUrl": "https://link.amazon/B0i6QBOFG",
+    "externalUrl": "https://link.amazon/B0i6QBOFG",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-22T00:00:00.000Z",
+    "updatedAt": "2026-09-22T00:00:00.000Z"
   }
 ]
