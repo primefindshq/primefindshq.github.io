@@ -3865,5 +3865,51 @@
     "published": true,
     "createdAt": "2026-09-22T00:00:00.000Z",
     "updatedAt": "2026-09-22T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0129",
+    "name": "The Swinging Sticks Kinetic Energy Sculpture, Desktop Version",
+    "slug": "swinging-sticks-kinetic-energy-sculpture-desktop",
+    "category": "desk-setup",
+    "secondaryCategories": [
+      "home",
+      "gifts"
+    ],
+    "subcategory": "Decor",
+    "shortDescription": "A double-pendulum kinetic sculpture in polished aluminum whose arms swing and rotate in an unpredictable, ever-changing pattern, giving the illusion of perpetual motion.",
+    "description": "A desk sculpture that never seems to repeat itself. The Swinging Sticks is a double-pendulum kinetic sculpture with polished aluminum arms on a black base, designed to look as if it is changing speed and direction for no apparent reason while it keeps rotating. The listing is upfront that this is an illusion of perpetual motion, not the real thing: it is driven by electric current and electromagnetic fields, with sensors, a central coil and neodymium magnets in the arms nudging the motion along, and it takes 4 AA batteries, which are not included. The listing gives a battery duration of 6 months and says it runs nearly silent, with only a small tick that may be heard at very low volume. It measures 13.8 inches wide, 3.1 deep and 14.9 tall. Each unit is assembled by hand, tested for a minimum of 4 to 7 days, carries a laser-etched unique serial number and comes with 2 years of product support. Listed contents: the sculpture, in triple-boxed packaging.",
+    "whyWeLikeIt": "It looks like a piece of modern art before it even moves, and then the two arms start a slow, unpredictable dance that is hard to look away from. Explain the electromagnet trick or keep people guessing: either way it is the centerpiece of a desk or shelf.",
+    "image": "/assets/images/products/swinging-sticks-kinetic-energy-sculpture-desktop.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 1227,
+    "tags": [
+      "kinetic sculpture",
+      "kinetic art",
+      "swinging sticks",
+      "double pendulum",
+      "perpetual motion",
+      "desk sculpture",
+      "desk decor",
+      "desk toy",
+      "aluminum",
+      "gift"
+    ],
+    "highlights": [
+      "Double-pendulum motion with the illusion of perpetual motion",
+      "Polished aluminum arms on a black base",
+      "Electromagnetic drive, runs on 4 AA batteries (not included)",
+      "Nearly silent, with only a faint tick",
+      "13.8 x 3.1 x 14.9 inches, hand assembled, unique serial number"
+    ],
+    "affiliateUrl": "https://link.amazon/B06gF68A4",
+    "externalUrl": "https://link.amazon/B06gF68A4",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-22T00:00:00.000Z",
+    "updatedAt": "2026-09-22T00:00:00.000Z"
   }
 ]
