@@ -4235,5 +4235,50 @@
     "published": true,
     "createdAt": "2026-09-22T00:00:00.000Z",
     "updatedAt": "2026-09-22T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0137",
+    "name": "PicassoTiles 30-Piece Magnetic Race Track Toy Set",
+    "slug": "picassotiles-30pc-magnetic-race-track",
+    "category": "gaming",
+    "secondaryCategories": [
+      "gifts",
+      "home"
+    ],
+    "subcategory": "Smart Board Games",
+    "shortDescription": "A 30-piece magnetic construction set of track tiles, turns, columns and slopes that connect into custom elevated raceways, with two racecar toys included.",
+    "description": "Snap the pieces together and build your own raceway. The PicassoTiles set includes 30 pieces: 8 quarter-round turns, 12 square track tiles, 4 supporting columns, 2 rectangular track tiles, 2 slopes and 2 racecar toys, all magnetic and interlocking so you can lay out flat courses or build elevated, multi-level loops. The listing says these pieces connect with other PicassoTiles magnetic race track sets, so a track can be expanded with additional sets. It is made of BPA-free plastic, is listed for ages 3 and up, and measures 14.17 by 11.02 by 2.64 inches as packaged. The listing carries a small-magnets warning: swallowed magnets can stick together across intestines and cause serious injury, and medical attention should be sought immediately if magnets are swallowed or inhaled.",
+    "whyWeLikeIt": "It's a track kit, not a fixed loop: turns, straights, ramps and columns let you build a flat oval one day and a raised, twisting course the next, then send the two included racecars through it. It also plays nicely with other PicassoTiles race track sets if you want to go bigger.",
+    "image": "/assets/images/products/picassotiles-30pc-magnetic-race-track.webp",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.5,
+    "reviewCount": 2842,
+    "tags": [
+      "magnetic race track",
+      "race track toy",
+      "magnetic tiles",
+      "racecar track",
+      "picassotiles",
+      "construction toy",
+      "building toy",
+      "stem toy",
+      "gift"
+    ],
+    "highlights": [
+      "30 pieces: 8 quarter-round turns, 12 square tiles, 4 columns, 2 rectangular tiles, 2 slopes",
+      "2 racecar toys included",
+      "Magnetic, interlocking pieces build flat or elevated, multi-level tracks",
+      "Compatible with other PicassoTiles magnetic race track sets",
+      "BPA-free plastic; ages 3 and up"
+    ],
+    "affiliateUrl": "https://link.amazon/B0gj55fqW",
+    "externalUrl": "https://link.amazon/B0gj55fqW",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-22T00:00:00.000Z",
+    "updatedAt": "2026-09-22T00:00:00.000Z"
   }
 ]
