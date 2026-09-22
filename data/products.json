@@ -4145,5 +4145,50 @@
     "published": true,
     "createdAt": "2026-09-22T00:00:00.000Z",
     "updatedAt": "2026-09-22T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0135",
+    "name": "Lumiboard 16\" LED Drawing Board, 13 Light Effects, Rechargeable",
+    "slug": "lumiboard-16-led-drawing-board",
+    "category": "home",
+    "secondaryCategories": [
+      "desk-setup",
+      "gifts"
+    ],
+    "subcategory": "Ambience",
+    "shortDescription": "A rechargeable LED drawing board with a 13.7 x 11-inch acrylic panel, 8 RGB colors, 6 dynamic modes and 13 light effects, with a built-in stand and markers included.",
+    "description": "A drawing board that glows from inside the panel. The Lumiboard LED Drawing Board is built around a 13.7 by 11-inch ultra-hard acrylic panel, marketed as a 16-inch board, with 8 RGB colors and 6 dynamic modes across 13 light effects in total, switchable on the fly. It has a built-in rechargeable battery, charged over USB-C, which the listing rates at up to 8 hours at maximum brightness or 16 hours at minimum brightness, plus a brightness control and an integrated stand for tabletop use; it also supports wall mounting. In White, it is made of acrylic and plastic. The set comes with the board, a USB-C cable, 7 colored markers, tracing paper, a magnetic set, a cleaning cloth (flannelette) and a hanging kit, and the listing includes an 18-month free-replacement warranty.",
+    "whyWeLikeIt": "The panel itself is the light source, so every stroke glows instead of just sitting under a lamp. Eight colors and thirteen effects give it more range than a plain dry-erase board, and it comes ready to use out of the box with its own markers and stand.",
+    "image": "/assets/images/products/lumiboard-16-led-drawing-board.webp",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.4,
+    "reviewCount": 1993,
+    "tags": [
+      "led drawing board",
+      "glow board",
+      "light up drawing board",
+      "doodle board",
+      "neon drawing board",
+      "lumiboard",
+      "rechargeable led board",
+      "desk decor",
+      "gift"
+    ],
+    "highlights": [
+      "13.7 x 11-inch acrylic panel, 8 RGB colors, 6 modes, 13 light effects",
+      "Built-in rechargeable battery: up to 8 hours max brightness or 16 hours min",
+      "USB-C charging, brightness control, integrated stand, wall-mountable",
+      "Includes 7 markers, tracing paper, magnetic set, cleaning cloth and hanging kit",
+      "18-month free-replacement warranty"
+    ],
+    "affiliateUrl": "https://link.amazon/B00YwK7SO",
+    "externalUrl": "https://link.amazon/B00YwK7SO",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-22T00:00:00.000Z",
+    "updatedAt": "2026-09-22T00:00:00.000Z"
   }
 ]
