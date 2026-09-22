@@ -4463,5 +4463,50 @@
     "published": true,
     "createdAt": "2026-09-22T00:00:00.000Z",
     "updatedAt": "2026-09-22T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0142",
+    "name": "sovenomund Dancing Ferrofluid Sound Visualizer, Light Gray",
+    "slug": "sovenomund-ferrofluid-sound-visualizer",
+    "category": "tech",
+    "secondaryCategories": [
+      "desk-setup",
+      "gifts"
+    ],
+    "subcategory": "Ambience",
+    "shortDescription": "A dark ferrofluid sealed in a glass bottle that spikes, condenses and disperses into shifting shapes as its built-in microphone picks up nearby music, lit by a soft LED.",
+    "description": "A bottle of liquid that dances to whatever is playing nearby. The sovenomund Ferrofluid Sound Visualizer has a built-in, high-sensitivity microphone that listens to ambient sound and drives the ferrofluid inside its glass bottle into shifting spikes, waves and other shapes in time with the rhythm. The listing is explicit that this is a visualizer, not a speaker: it produces no sound of its own and is marked as such to avoid mistaken purchases. A soft LED lights the bottle from the base, in a gray, wood-grain-textured ABS housing. It runs on a built-in lithium battery rated for about 8 hours per charge, tops up over the included USB Type-C cable, and can keep running while plugged in and charging. A status LED shows blue for normal use, a blinking blue for low battery, and red or red-and-blue while charging. The listing describes the fluid as non-toxic, made of nano iron powder and purified water, and includes a magnet for manually reshaping or gathering the liquid. It measures 2.16 by 2.83 by 6.96 inches and weighs 1.6 pounds. Listed contents: the lamp, a Type-C charging cable, a magnet and a spec sheet. The listing warns to keep it away from heat and direct sun, since that can expand the liquid and crack the glass.",
+    "whyWeLikeIt": "It's less a lamp than a small performance: the dark fluid pulls into spikes and collapses back down as the music changes, with nothing to plug into your audio setup. A quiet, strange centerpiece for a desk.",
+    "image": "/assets/images/products/sovenomund-ferrofluid-sound-visualizer.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.2,
+    "reviewCount": 751,
+    "tags": [
+      "ferrofluid visualizer",
+      "ferrofluid lamp",
+      "sound visualizer",
+      "music visualizer",
+      "magnetic fluid",
+      "desk decor",
+      "led lamp",
+      "sovenomund",
+      "gift"
+    ],
+    "highlights": [
+      "Built-in microphone reacts to ambient music; no sound output (visualizer, not a speaker)",
+      "Ferrofluid spikes, condenses and disperses in a sealed glass bottle",
+      "Soft LED light; gray, wood-grain-textured ABS housing",
+      "~8-hour battery life, Type-C charging, can run while plugged in",
+      "Includes a magnet to manually reshape the fluid"
+    ],
+    "affiliateUrl": "https://link.amazon/B0diMvq6p",
+    "externalUrl": "https://link.amazon/B0diMvq6p",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-22T00:00:00.000Z",
+    "updatedAt": "2026-09-22T00:00:00.000Z"
   }
 ]
