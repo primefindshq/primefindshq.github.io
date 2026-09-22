@@ -4372,5 +4372,50 @@
     "published": true,
     "createdAt": "2026-09-22T00:00:00.000Z",
     "updatedAt": "2026-09-22T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0140",
+    "name": "Sharper Image LED Word Clock, Silver Finish",
+    "slug": "sharper-image-led-word-clock-silver",
+    "category": "desk-setup",
+    "secondaryCategories": [
+      "home",
+      "gifts"
+    ],
+    "subcategory": "Decor",
+    "shortDescription": "A 7.75-inch square LED clock that spells the time in illuminated words instead of numbers, in a silver finish, for a desk or a wall.",
+    "description": "Instead of numbers, this clock lights up the words for the time. The Sharper Image LED Word Clock displays the time in five-minute increments by illuminating words across its silver-finish face, an alternative to a conventional numeric display. It measures 7.75 by 7.75 inches (about 1 inch deep) and can sit flat on a desk or mount on a wall. It runs on corded electric power, with a USB power cord and USB power adapter included for setup; you set the time using the clock's advance and reverse buttons. Listed contents: the LED Word Clock, USB power cord and USB power adapter. The listing pitches it as decor for a home office, living room, kitchen or bedroom, and as a gift.",
+    "whyWeLikeIt": "It trades a conventional clock face for a wall of letters that light up to spell the time, so reading it becomes part of the fun. Small enough for a desk, striking enough for a wall.",
+    "image": "/assets/images/products/sharper-image-led-word-clock-silver.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.5,
+    "reviewCount": 10383,
+    "tags": [
+      "word clock",
+      "led clock",
+      "light up clock",
+      "desk clock",
+      "wall clock",
+      "silver clock",
+      "modern clock",
+      "sharper image",
+      "gift"
+    ],
+    "highlights": [
+      "Spells the time in illuminated words, five-minute increments",
+      "7.75 x 7.75 inches, silver finish, sits on a desk or mounts on a wall",
+      "USB power cord and adapter included",
+      "Time set with advance/reverse buttons",
+      "Corded electric power"
+    ],
+    "affiliateUrl": "https://link.amazon/B07YSCQsy",
+    "externalUrl": "https://link.amazon/B07YSCQsy",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-22T00:00:00.000Z",
+    "updatedAt": "2026-09-22T00:00:00.000Z"
   }
 ]
