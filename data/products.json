@@ -4326,5 +4326,51 @@
     "published": true,
     "createdAt": "2026-09-22T00:00:00.000Z",
     "updatedAt": "2026-09-22T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0139",
+    "name": "FAREVER Melting Clock, Rome Gold",
+    "slug": "farever-melting-clock-rome-gold",
+    "category": "desk-setup",
+    "secondaryCategories": [
+      "home",
+      "gifts"
+    ],
+    "subcategory": "Decor",
+    "shortDescription": "A gold desk clock cast in a melting, draping silhouette inspired by Salvador Dali's surrealist imagery, with a quartz movement and a silent, analog Roman-numeral face.",
+    "description": "A clock that looks like it's slipping off the shelf. The FAREVER Melting Clock takes its shape from Salvador Dali's surrealist melting-clock imagery, cast in a warped, draping silhouette rather than a plain round face. It has an analog quartz movement, a Roman-numeral dial, and the listing calls out a silent-clock feature. In Rome Gold, it is metal and measures 5 inches wide by 7 inches tall, weighing 4.32 ounces. It runs on 1 AA battery, not included, and the listing describes it as handcrafted. The listing pitches it as decor for a home, office, shelf or desk, and as a gift.",
+    "whyWeLikeIt": "It reads as a small art object first and a clock second: the warped case catches the eye on a shelf before anyone notices it tells time. A quiet, surreal alternative to a plain desk clock.",
+    "image": "/assets/images/products/farever-melting-clock-rome-gold.webp",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.5,
+    "reviewCount": 2505,
+    "tags": [
+      "melting clock",
+      "surreal clock",
+      "dali inspired clock",
+      "desk clock",
+      "gold clock",
+      "analog clock",
+      "art decor",
+      "desk decor",
+      "farever",
+      "gift"
+    ],
+    "highlights": [
+      "Melting, draping silhouette inspired by Salvador Dali's surrealist imagery",
+      "Analog quartz movement with a Roman-numeral dial",
+      "Silent clock",
+      "Rome Gold metal finish, 5 x 7 inches, 4.32 ounces",
+      "Runs on 1 AA battery (not included)"
+    ],
+    "affiliateUrl": "https://link.amazon/B077JnN8Z",
+    "externalUrl": "https://link.amazon/B077JnN8Z",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-22T00:00:00.000Z",
+    "updatedAt": "2026-09-22T00:00:00.000Z"
   }
 ]
