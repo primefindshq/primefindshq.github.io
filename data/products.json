@@ -4280,5 +4280,51 @@
     "published": true,
     "createdAt": "2026-09-22T00:00:00.000Z",
     "updatedAt": "2026-09-22T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0138",
+    "name": "Ruko 1088 Smart Robot, Gold, Programmable Interactive Robot",
+    "slug": "ruko-1088-smart-robot-gold",
+    "category": "tech",
+    "secondaryCategories": [
+      "gaming",
+      "gifts"
+    ],
+    "subcategory": "Robots",
+    "shortDescription": "A 15.8-inch tall programmable robot in gold and white, controlled by app, 2.4GHz remote, voice commands or a gravity sensor, with a touch-sensitive head and Bluetooth speaker.",
+    "description": "A large robot with four ways to run it. The Ruko 1088 stands 15.8 inches tall and can be controlled through the Ruko app, a 2.4GHz remote control, voice commands, or a gravity sensor. Its head has a touch sensor that responds when tapped. The listing lists 9 flexible joint motors, 10 songs, 4 stories and 10 expressions that can be programmed into it, and it doubles as a Bluetooth speaker once a phone is connected. It runs on a rechargeable lithium-ion battery, included, and the listing warns that only the included USB-C charging cable works: a USB-C to USB-C cable will not charge it. It is Gold, made of plastic, and measures 11 by 4.7 by 15.8 inches. Listed contents: the robot, remote control, USB charging cable, user manual and box. The listing recommends ages 4 to 9.",
+    "whyWeLikeIt": "Four control modes in one robot means there's always a new way to play with it: hand it the remote, talk to it, tilt it, or just tap its head. At 15.8 inches it has real presence on a shelf, and it plays music once paired over Bluetooth.",
+    "image": "/assets/images/products/ruko-1088-smart-robot-gold.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.5,
+    "reviewCount": 6965,
+    "tags": [
+      "ruko robot",
+      "programmable robot",
+      "interactive robot",
+      "remote control robot",
+      "robot toy",
+      "bluetooth speaker robot",
+      "app control robot",
+      "robot gift",
+      "gold robot",
+      "gift"
+    ],
+    "highlights": [
+      "4 control modes: app, 2.4GHz remote, voice commands, gravity sensor",
+      "Touch-sensitive head; 9 flexible joint motors",
+      "10 songs, 4 stories and 10 expressions programmable",
+      "Doubles as a Bluetooth speaker once paired",
+      "15.8 in tall; rechargeable lithium-ion battery (included)"
+    ],
+    "affiliateUrl": "https://link.amazon/B02g7eUhZ",
+    "externalUrl": "https://link.amazon/B02g7eUhZ",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-22T00:00:00.000Z",
+    "updatedAt": "2026-09-22T00:00:00.000Z"
   }
 ]
