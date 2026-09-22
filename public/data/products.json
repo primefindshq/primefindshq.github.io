@@ -4190,5 +4190,50 @@
     "published": true,
     "createdAt": "2026-09-22T00:00:00.000Z",
     "updatedAt": "2026-09-22T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0136",
+    "name": "Z ZICOME Magnetic Hourglass Sand Timer, Iron Base",
+    "slug": "zicome-magnetic-hourglass-sand-timer",
+    "category": "desk-setup",
+    "secondaryCategories": [
+      "home",
+      "gifts"
+    ],
+    "subcategory": "Decor",
+    "shortDescription": "A glass hourglass filled with iron filings instead of sand, which pile into spiky, craggy shapes over the magnet built into its iron base as it runs, about 25 seconds per flip.",
+    "description": "An hourglass with a trick: flip it, and instead of sand you get a slow-motion sculpture. The Z ZICOME Magnetic Hourglass replaces sand with magnetic iron filings, so as they fall onto the iron base below, the magnet inside pulls them into spiky, craggy formations that build into an ordered, spiked hemisphere by the time the timer runs out. The listing puts the run time at approximately 25 seconds. The hourglass itself measures 6 inches tall by 2.25 inches in diameter, and its black iron base measures 3 by 3 by 0.75 inches; the whole thing is glass and metal and weighs 6.4 ounces. The listing describes it as a desktop diversion and a mesmerizing tabletop distraction.",
+    "whyWeLikeIt": "Every flip builds something a little different: the filings climb the magnet into spiny little peaks instead of settling into a flat pile. It's a quick, 25-second show that earns its spot on a desk.",
+    "image": "/assets/images/products/zicome-magnetic-hourglass-sand-timer.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.3,
+    "reviewCount": 774,
+    "tags": [
+      "magnetic hourglass",
+      "sand timer",
+      "magnetic sand timer",
+      "iron filings",
+      "desk decor",
+      "desktop curio",
+      "sculptural timer",
+      "zicome",
+      "gift"
+    ],
+    "highlights": [
+      "Iron filings replace sand and form spiky formations over the base magnet",
+      "Approximately 25-second run time per flip",
+      "Hourglass: 6 in tall, 2.25 in diameter; iron base: 3 x 3 x 0.75 in",
+      "Glass and metal construction, 6.4 ounces",
+      "Black iron base"
+    ],
+    "affiliateUrl": "https://link.amazon/B0fhJznjv",
+    "externalUrl": "https://link.amazon/B0fhJznjv",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-22T00:00:00.000Z",
+    "updatedAt": "2026-09-22T00:00:00.000Z"
   }
 ]
