@@ -4098,5 +4098,52 @@
     "published": true,
     "createdAt": "2026-09-22T00:00:00.000Z",
     "updatedAt": "2026-09-22T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0134",
+    "name": "Divoom Times Gate, Cyberpunk 5-Screen Pixel Art Desk Display",
+    "slug": "divoom-times-gate-cyberpunk-desk-display",
+    "category": "tech",
+    "secondaryCategories": [
+      "desk-setup",
+      "gaming",
+      "gifts"
+    ],
+    "subcategory": "Lighting & Displays",
+    "shortDescription": "A cyberpunk-styled desk display with five full-color 128x128 LCD screens for pixel art, animated GIFs and live data, controlled over Wi-Fi through the Divoom app.",
+    "description": "Five screens, one cyberpunk gadget. The Divoom Times Gate is a digital desk display in a silver, art-deco-styled metal frame, built around five full-color LCD screens that each show 128x128 pixel art or animated GIFs. It connects over 2.4GHz Wi-Fi, not Bluetooth, and the listing says it has no built-in battery: it needs continuous USB power and is designed to stay on the desk rather than travel. Through the Divoom app you can display world clocks, real-time weather and holiday calendars, plus live data such as stock prices, social media follower counts and game stats. You can also create your own pixel art or pull from a community gallery of shared designs that updates daily, and personalize the display with animations, text and graphics. The listing describes it as a visual display, not built for touch input or audio output. Product size is listed as 283 x 47 x 97 mm, and it weighs 2 pounds.",
+    "whyWeLikeIt": "Five little screens turn into a control panel for your desk: weather on one, a stock ticker on another, and pixel art wherever you want it. It looks like it walked off a cyberpunk set and updates itself over Wi-Fi.",
+    "image": "/assets/images/products/divoom-times-gate-cyberpunk-desk-display.webp",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.4,
+    "reviewCount": 909,
+    "tags": [
+      "divoom",
+      "pixel art display",
+      "desk display",
+      "cyberpunk display",
+      "led display",
+      "wifi display",
+      "smart display",
+      "gaming desk decor",
+      "divoom app",
+      "gift"
+    ],
+    "highlights": [
+      "Five full-color 128x128 LCD screens for pixel art and animated GIFs",
+      "2.4GHz Wi-Fi control through the Divoom app, no Bluetooth",
+      "Displays world clocks, weather, holidays, stocks, social stats and game stats",
+      "Create your own pixel art or use daily community-shared designs",
+      "USB powered, no built-in battery; 283 x 47 x 97 mm, 2 lb"
+    ],
+    "affiliateUrl": "https://link.amazon/B0fooNKhI",
+    "externalUrl": "https://link.amazon/B0fooNKhI",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-22T00:00:00.000Z",
+    "updatedAt": "2026-09-22T00:00:00.000Z"
   }
 ]
