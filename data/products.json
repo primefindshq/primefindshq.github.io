@@ -4417,5 +4417,51 @@
     "published": true,
     "createdAt": "2026-09-22T00:00:00.000Z",
     "updatedAt": "2026-09-22T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0141",
+    "name": "AMERFIST Flying Orb Ball, Cosmic Globe Boomerang Hover Ball, Blue",
+    "slug": "amerfist-flying-orb-ball-blue",
+    "category": "gaming",
+    "secondaryCategories": [
+      "gifts",
+      "travel"
+    ],
+    "subcategory": "Handheld & Retro",
+    "shortDescription": "A hand-thrown, hand-controlled flying orb with RGB lighting that curves, hovers and boomerangs back to you depending on the angle you throw it at.",
+    "description": "Throw it right and it comes back. The AMERFIST Flying Orb Ball is a hand-controlled flying toy: the listing says different throwing angles and speeds create different flight lines and a boomerang effect, including a hover mode where it seems to float and follow your hand. It lights up with RGB color at night. It is lightweight and made of ABS plastic, and the listing says it is drop resistant and will stop automatically if it hits furniture or another object. It charges over USB, with about 20 minutes to a full charge and 8 to 10 minutes of flight time per charge, using a rechargeable lithium-polymer battery that's included; a charging indicator light shows status. In Blue, it measures about 3.54 by 3.54 by 3.54 inches and weighs 1.1 ounces. The listing recommends it for ages 6 and up and pitches it as a gift.",
+    "whyWeLikeIt": "It's a toy that rewards a bit of practice: the same orb can hover in place, curve outward and snap back, or boomerang home depending on how you throw it, all while lit up in RGB. Small enough to toss in a bag for the park or a trip.",
+    "image": "/assets/images/products/amerfist-flying-orb-ball-blue.webp",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.0,
+    "reviewCount": 18177,
+    "tags": [
+      "flying orb ball",
+      "hover ball",
+      "boomerang ball",
+      "cosmic globe",
+      "flying toy",
+      "rgb light toy",
+      "hand drone",
+      "outdoor toy",
+      "amerfist",
+      "gift"
+    ],
+    "highlights": [
+      "Hand-controlled flight: hover, curve and boomerang back depending on throw angle",
+      "RGB lighting for night play",
+      "USB rechargeable: ~20 min charge, 8-10 min flight time",
+      "Lightweight ABS, auto-stops on impact with furniture",
+      "About 3.54 x 3.54 x 3.54 in, 1.1 oz; ages 6+"
+    ],
+    "affiliateUrl": "https://link.amazon/B0byU02sf",
+    "externalUrl": "https://link.amazon/B0byU02sf",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-22T00:00:00.000Z",
+    "updatedAt": "2026-09-22T00:00:00.000Z"
   }
 ]
