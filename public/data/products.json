@@ -4694,5 +4694,53 @@
     "published": true,
     "createdAt": "2026-09-23T00:00:00.000Z",
     "updatedAt": "2026-09-23T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0147",
+    "name": "ClocTeck Nixie-Style Tube Clock, 5-Tube Wood Grain, RGB with Wi-Fi Sync",
+    "slug": "clocteck-nixie-style-tube-clock-5-tube-wood-grain",
+    "category": "desk-setup",
+    "secondaryCategories": [
+      "home",
+      "gifts",
+      "tech"
+    ],
+    "subcategory": "Decor",
+    "shortDescription": "A five-tube desk clock in a wood-grain finish that recreates the glowing look of classic Nixie tubes with LED tubes, in RGB color, with Wi-Fi time sync, alarm and timer.",
+    "description": "Retro glow, without the vacuum tubes. The ClocTeck CT-002 is a five-tube desk clock that recreates the look of classic IN-14 Nixie tubes using LED tubes; the listing is upfront about this, saying real glow tubes are mostly discontinued and that this design is an LED simulation. The glowing digits sit in an aluminum-alloy panel on a wood-grain base, and the tubes light in RGB: each tube can be set to its own color from 16 million, or all synced together, across 8 display modes including single color, breathing, rainbow flashing and water flowing. Beyond the time, it has a 12/24-hour display, an alarm, a timer up to 99 minutes, and 5 levels of brightness. It connects to Wi-Fi to sync the time and update its firmware, with automatic DST; settings are made from a phone through the clock's own control page, which supports English. No assembly is needed: it is powered through USB Type-C. It measures 10 by 2.4 by 3.2 inches and weighs about 1 lb, in ABS, acrylic and aluminum alloy. The listing pitches it as a retro gift for a desk or bedroom.",
+    "whyWeLikeIt": "It gives a plain everyday object an unexpected glow: five tall glass-style tubes with warm, layered digits over a wood-grain base, in any color you choose. A small retro-futuristic centerpiece for a desk or shelf that still tells the time.",
+    "image": "/assets/images/products/clocteck-nixie-style-tube-clock-5-tube-wood-grain.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.3,
+    "reviewCount": 818,
+    "tags": [
+      "nixie clock",
+      "nixie style clock",
+      "tube clock",
+      "led tube clock",
+      "digital clock",
+      "desk clock",
+      "retro clock",
+      "wifi clock",
+      "rgb clock",
+      "clocteck",
+      "gift"
+    ],
+    "highlights": [
+      "Five LED tubes recreating the Nixie-tube look (an LED simulation, not gas-discharge)",
+      "RGB: 16 million colors per tube, 8 display modes, 5 brightness levels",
+      "Wi-Fi time sync, 12/24-hour display, alarm, timer up to 99 minutes",
+      "No assembly; powered by USB Type-C",
+      "About 10 x 2.4 x 3.2 inches and 1 lb; aluminum-alloy panel, wood-grain finish"
+    ],
+    "affiliateUrl": "https://link.amazon/B0aszUhHc",
+    "externalUrl": "https://link.amazon/B0aszUhHc",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-23T00:00:00.000Z",
+    "updatedAt": "2026-09-23T00:00:00.000Z"
   }
 ]
