@@ -4508,5 +4508,51 @@
     "published": true,
     "createdAt": "2026-09-22T00:00:00.000Z",
     "updatedAt": "2026-09-22T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0143",
+    "name": "ROKR LGA01 Marble Night City, 3D Wooden Mechanical Marble Run",
+    "slug": "rokr-lga01-marble-night-city",
+    "category": "desk-setup",
+    "secondaryCategories": [
+      "gaming",
+      "gifts"
+    ],
+    "subcategory": "Decor",
+    "shortDescription": "A 294-piece wooden marble run kit you build yourself, then crank: large gears carry 10 marbles to the top and send them rolling down a maze of channels.",
+    "description": "Build the machine, turn the crank, watch the marbles race. The ROKR Marble Night City (LGA01) is a 3D wooden marble run model kit that goes together from 294 pieces and comes with 10 marbles. Once it is built, a hand crank drives large gears that lift the marbles to the top of the machine, where they roll down through different channels. The listing describes a black-grey look with a metal nameplate and acrylic pieces, so you can watch the balls in motion, and says it is a more advanced build than a typical wood puzzle. The listing puts assembly at around 7 hours, and includes an instruction booklet with large, detailed pictures and one spare parts sheet in case a piece breaks during assembly. It carries a 90-day warranty against manufacturer defects, is recommended for ages 14 and up, and the listing says it can sit on a bookshelf as a display piece.",
+    "whyWeLikeIt": "It's a build that turns into a show: after hours putting together the gears and channels, you get a working machine that keeps the marbles moving with a turn of the crank. The see-through acrylic sections let you follow every ball as it drops through the city.",
+    "image": "/assets/images/products/rokr-lga01-marble-night-city.webp",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.3,
+    "reviewCount": 3022,
+    "tags": [
+      "marble run",
+      "3d wooden puzzle",
+      "wooden marble run",
+      "model kit",
+      "mechanical model",
+      "diy building kit",
+      "desk decor",
+      "kinetic display",
+      "rokr",
+      "gift"
+    ],
+    "highlights": [
+      "294 wooden pieces and 10 marbles",
+      "Hand crank and large gears lift marbles to the top to roll down again",
+      "Black-grey wood look, metal nameplate and acrylic pieces to watch the marbles",
+      "About 7 hours to assemble; instruction booklet and a spare parts sheet",
+      "Recommended for ages 14 and up; 90-day warranty"
+    ],
+    "affiliateUrl": "https://link.amazon/B02dFehko",
+    "externalUrl": "https://link.amazon/B02dFehko",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-23T00:00:00.000Z",
+    "updatedAt": "2026-09-23T00:00:00.000Z"
   }
 ]
