@@ -4880,5 +4880,51 @@
     "published": true,
     "createdAt": "2026-09-23T00:00:00.000Z",
     "updatedAt": "2026-09-23T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0151",
+    "name": "NETVUE by Birdfy Smart Bird Feeder with 2K AI Camera, Blue",
+    "slug": "netvue-birdfy-smart-bird-feeder-2k-camera-blue",
+    "category": "home",
+    "secondaryCategories": [
+      "tech",
+      "gifts"
+    ],
+    "subcategory": "Outdoor",
+    "shortDescription": "A backyard bird feeder with a built-in 2K camera: it records visits, alerts your phone, streams live, and can name the species, all from the Birdfy app.",
+    "description": "Put a feeder outside and get a live feed of who shows up. The NETVUE by Birdfy Feeder (Birdfy 1 Series) holds 1.5 liters of seed and has a built-in 2K AI camera that automatically records each visit. The listing says it sends notifications to your phone, lets you watch live or replay clips on a phone, tablet or computer, and has color night vision for after-dark visitors. The Birdfy app can identify species: the listing cites about 11,000 species worldwide and says advanced AI features require a subscription, while free cloud storage and sharing with 20+ members are named in the title. It connects over Wi-Fi and works with Alexa. On power, the listing describes it as solar powered, mentions a solar panel and a built-in 5200 mAh battery, and its included-components line lists only the feeder with camera, so check the listing to confirm what comes in your configuration. It is ABS plastic in Blue, 8 by 7 by 11 inches and 3 pounds, mounts on a wall, pole or tree, and is listed as weatherproof.",
+    "whyWeLikeIt": "The trick is the swap: an ordinary feeder becomes a small piece of smart-home tech, with a camera watching the perch and your phone telling you who arrived. The bright cardinal in the product shot is the whole idea.",
+    "image": "/assets/images/products/netvue-birdfy-smart-bird-feeder-2k-camera-blue.webp",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.4,
+    "reviewCount": 1538,
+    "tags": [
+      "smart bird feeder",
+      "bird feeder camera",
+      "birdfy",
+      "netvue",
+      "ai bird camera",
+      "solar bird feeder",
+      "backyard camera",
+      "outdoor camera",
+      "alexa",
+      "gift"
+    ],
+    "highlights": [
+      "Built-in 2K AI camera with auto recording and phone notifications",
+      "Live view and replay clips in the Birdfy app; color night vision",
+      "AI species ID (about 11,000 species cited); advanced AI features need a subscription",
+      "1.5 L seed capacity; Wi-Fi; works with Alexa",
+      "Listed as solar powered with a 5200 mAh battery; wall, pole or tree mount"
+    ],
+    "affiliateUrl": "https://link.amazon/B014HqOHy",
+    "externalUrl": "https://link.amazon/B014HqOHy",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-23T00:00:00.000Z",
+    "updatedAt": "2026-09-23T00:00:00.000Z"
   }
 ]
