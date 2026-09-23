@@ -4742,5 +4742,51 @@
     "published": true,
     "createdAt": "2026-09-23T00:00:00.000Z",
     "updatedAt": "2026-09-23T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0148",
+    "name": "Vornado VFAN Mini Classic Vintage Metal Desk Fan, Vintage Green",
+    "slug": "vornado-vfan-mini-classic-vintage-green",
+    "category": "desk-setup",
+    "secondaryCategories": [
+      "home",
+      "gifts"
+    ],
+    "subcategory": "Accessories",
+    "shortDescription": "A compact, all-metal retro desk fan in glossy vintage green with a cream wire guard, a full-pivot head and 2 speeds, built around Vornado's Vortex Action air circulation.",
+    "description": "A desk fan that looks like it belongs in a design museum. The VFAN Mini Classic keeps Vornado's vintage styling in a small size: a glossy vintage-green metal body, a cream wire guard around the propeller, and a rounded, pivoting head. The head tilts for multi-directional airflow, and the fan has two speed settings. The listing credits Vornado's signature Vortex Action air circulation and lists 105 cfm of airflow, 21 watts and a noise level of 43 dB. It has plastic blades, measures 5.7 inches deep, 7.1 wide and 8.3 tall, and sits on a desk, nightstand or shelf on a 6 ft cord. It runs on 120 V and the listing notes it is built and warrantied for use in the U.S. only. The listing gives a 5-year limited warranty and includes the fan and an owner's guide.",
+    "whyWeLikeIt": "Most desk fans are forgettable plastic; this one is a small piece of mid-century industrial design. The green enamel, cream grille and rounded head make it look as good switched off as it does running, and it is small enough for a desk or bedside table.",
+    "image": "/assets/images/products/vornado-vfan-mini-classic-vintage-green.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.5,
+    "reviewCount": 10646,
+    "tags": [
+      "desk fan",
+      "vintage fan",
+      "retro fan",
+      "metal fan",
+      "air circulator",
+      "vornado",
+      "vfan",
+      "small fan",
+      "desk decor",
+      "gift"
+    ],
+    "highlights": [
+      "Vintage-green metal body with a cream wire guard, glossy finish",
+      "Full-pivot head for multi-directional airflow; 2 speed settings",
+      "Vornado Vortex Action air circulation; 105 cfm, 21 W, 43 dB (listed)",
+      "5.7 x 7.1 x 8.3 inches, 6 ft cord, 120 V (US use)",
+      "5-year limited warranty; owner's guide included"
+    ],
+    "affiliateUrl": "https://link.amazon/A0d349Th1",
+    "externalUrl": "https://link.amazon/A0d349Th1",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-23T00:00:00.000Z",
+    "updatedAt": "2026-09-23T00:00:00.000Z"
   }
 ]
