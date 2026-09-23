@@ -4788,5 +4788,51 @@
     "published": true,
     "createdAt": "2026-09-23T00:00:00.000Z",
     "updatedAt": "2026-09-23T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0149",
+    "name": "Tenikle PRO Flexible Tentacle Tripod, Volcano Red",
+    "slug": "tenikle-pro-flexible-tentacle-tripod-volcano-red",
+    "category": "tech",
+    "secondaryCategories": [
+      "travel",
+      "gifts"
+    ],
+    "subcategory": "Content Creation",
+    "shortDescription": "A bendable, tentacle-style tripod with suction-cup arms and a phone clip, made for mobile phones and action cameras, in Volcano Red.",
+    "description": "A tripod that looks like a sea creature. The Tenikle PRO is a flexible, tentacle-style mount: bendable arms tipped with suction cups hold a clip that grips a phone, so you can stick it, bend it or stand it wherever the shot or the screen needs to go. The listing describes it as a bendable suction-cup camera mount and holder for mobile phones and action cameras, naming GoPro, Insta360 and DJI Osmo, and lists it as compatible with iPhone and Android. Its own comparison table says it sticks to glass but not to car dashboards. Shown here in Volcano Red.",
+    "whyWeLikeIt": "It does not look or work like a conventional tripod: the arms bend, wrap and stick, so a phone can sit on a desk, hang on a window or lean at an angle no fixed leg would allow. A small, bright, playful piece of gear for a bag.",
+    "image": "/assets/images/products/tenikle-pro-flexible-tentacle-tripod-volcano-red.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 3.6,
+    "reviewCount": 312,
+    "tags": [
+      "flexible tripod",
+      "tentacle tripod",
+      "suction cup mount",
+      "phone tripod",
+      "phone mount",
+      "action camera mount",
+      "bendable tripod",
+      "tenikle",
+      "travel gadget",
+      "gift"
+    ],
+    "highlights": [
+      "Flexible, bendable tentacle-style arms with suction cups",
+      "Phone clip; for mobile phones and action cameras",
+      "Named for GoPro, Insta360 and DJI Osmo; iPhone and Android compatible",
+      "Sticks to glass; not to car dashboards (per the listing's table)",
+      "Volcano Red"
+    ],
+    "affiliateUrl": "https://link.amazon/B03CCJVS6",
+    "externalUrl": "https://link.amazon/B03CCJVS6",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-23T00:00:00.000Z",
+    "updatedAt": "2026-09-23T00:00:00.000Z"
   }
 ]
