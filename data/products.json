@@ -4646,5 +4646,53 @@
     "published": true,
     "createdAt": "2026-09-23T00:00:00.000Z",
     "updatedAt": "2026-09-23T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0146",
+    "name": "Lepro TB1 AI Smart Table Lamp, Planets",
+    "slug": "lepro-tb1-ai-smart-table-lamp-planets",
+    "category": "desk-setup",
+    "secondaryCategories": [
+      "home",
+      "gaming",
+      "gifts"
+    ],
+    "subcategory": "Lighting",
+    "shortDescription": "A table lamp built as three interlocking rings that resemble planetary orbits, lit by 196 individually addressable RGB+IC LEDs and controlled from the Lepro app, with music sync.",
+    "description": "A lamp that looks like an orrery. The Lepro TB1 Planets is a silver aluminum table lamp with three interlocking rings that resemble planetary orbits: a fixed outer ring, and middle and inner rings you can rotate by hand, forwards and backwards up to 300 degrees. Its 196 RGB+IC LEDs (88 on the outer ring, 62 on the middle and 46 on the inner) are individually addressable, so the app can set each segment to its own color and brightness, and the lamp can show more than one color at a time across 16 million colors, though the listing notes it has no pure white. Control is through the Lepro app over Wi-Fi (2.4 GHz only) or Bluetooth (about 5 m range), and the app includes a LightGPM AI lighting designer that can generate a design from a description or a photo. LightBeats music sync can pick up sound from the lamp base's microphone or your phone's. It works with Alexa and Google Assistant, but not IFTTT, HomeKit or Matter. There is no remote: a single button turns it on and off and resets pairing. It stands 13 inches tall, 11.8 wide and 9.6 deep unfolded, weighs 1.83 lb, and plugs in with a 5 V 3 A adapter (US plug, 5.9 ft cord). The listing gives a 2-year warranty.",
+    "whyWeLikeIt": "It reads as a sculpture first and a lamp second: two rings you can tilt into new orbits, each segment of light programmable from your phone. On a desk or shelf it does the job of a colored backdrop and a small piece of kinetic art.",
+    "image": "/assets/images/products/lepro-tb1-ai-smart-table-lamp-planets.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.5,
+    "reviewCount": 439,
+    "tags": [
+      "smart lamp",
+      "rgb lamp",
+      "rgbic lamp",
+      "table lamp",
+      "music sync lamp",
+      "addressable led",
+      "alexa lamp",
+      "planet lamp",
+      "desk lamp",
+      "lepro",
+      "gift"
+    ],
+    "highlights": [
+      "196 individually addressable RGB+IC LEDs across three interlocking rings",
+      "Middle and inner rings rotate by hand up to 300 degrees",
+      "Lepro app over Wi-Fi (2.4 GHz) or Bluetooth; LightGPM AI lighting designer",
+      "LightBeats music sync; works with Alexa and Google Assistant",
+      "13 x 11.8 x 9.6 in, 1.83 lb; no remote; 2-year warranty"
+    ],
+    "affiliateUrl": "https://link.amazon/B0a8kL3FZ",
+    "externalUrl": "https://link.amazon/B0a8kL3FZ",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-23T00:00:00.000Z",
+    "updatedAt": "2026-09-23T00:00:00.000Z"
   }
 ]
