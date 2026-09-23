@@ -4554,5 +4554,51 @@
     "published": true,
     "createdAt": "2026-09-23T00:00:00.000Z",
     "updatedAt": "2026-09-23T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0144",
+    "name": "novium Hoverpen Interstellar, Space Black Magnetic Hovering Ballpoint Pen",
+    "slug": "novium-hoverpen-interstellar-space-black",
+    "category": "desk-setup",
+    "secondaryCategories": [
+      "tech",
+      "gifts"
+    ],
+    "subcategory": "Accessories",
+    "shortDescription": "A ballpoint pen that hovers at a 23.5-degree angle above its magnetic pedestal and spins in place, in aluminum and zinc alloy with a Space Black finish.",
+    "description": "Wait, how is that floating? The novium Hoverpen Interstellar is a working ballpoint pen that hangs at a 23.5-degree angle in a ring of magnetic repulsion above its pedestal, no power source needed. Give it a twist and it spins; the listing says a spin can last up to 20 seconds. The body is machined from a single piece of aircraft-grade aluminum, the set is listed in aluminum and zinc alloy, and the finish is Space Black with a black pedestal and cap ring. The cap snaps onto the pen magnetically. It writes with a Schmidt ballpoint cartridge in black ink (0.8 mm line), and it is refillable: pull the cartridge with the included pincher tool and drop in any D1-size refill. The listing gives the pen as 5.65 inches long and 10 mm in diameter, with a listed weight of 218 g. Listed contents: the Hoverpen, an ink cartridge, an instruction guide and the pedestal, packed in a gift-ready box.",
+    "whyWeLikeIt": "It is an ordinary pen doing something a pen should not: suspended at an angle above a sculpted pedestal, no strings. On a desk it is a piece of small, dark, futuristic hardware that also signs your name.",
+    "image": "/assets/images/products/novium-hoverpen-interstellar-space-black.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 2482,
+    "tags": [
+      "hovering pen",
+      "magnetic pen",
+      "levitating pen",
+      "ballpoint pen",
+      "luxury pen",
+      "desk decor",
+      "desk accessory",
+      "novium",
+      "hoverpen",
+      "gift"
+    ],
+    "highlights": [
+      "Hovers at 23.5 degrees above a magnetic pedestal and can be spun",
+      "Aluminum and zinc alloy, Space Black finish; body machined from a single piece of aluminum",
+      "Magnetic cap; Schmidt ballpoint cartridge, black ink, 0.8 mm",
+      "Refillable with any D1-size refill using the included pincher tool",
+      "Gift-ready box with pen, pedestal, ink cartridge and instructions"
+    ],
+    "affiliateUrl": "https://link.amazon/B03yeUJVo",
+    "externalUrl": "https://link.amazon/B03yeUJVo",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-23T00:00:00.000Z",
+    "updatedAt": "2026-09-23T00:00:00.000Z"
   }
 ]
