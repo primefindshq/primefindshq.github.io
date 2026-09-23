@@ -4600,5 +4600,51 @@
     "published": true,
     "createdAt": "2026-09-23T00:00:00.000Z",
     "updatedAt": "2026-09-23T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0145",
+    "name": "Velieta 17\" Cyberpunk Beverage Refrigerator with LED Light-Up Glass Door",
+    "slug": "velieta-17-cyberpunk-beverage-refrigerator",
+    "category": "home",
+    "secondaryCategories": [
+      "gaming",
+      "gifts"
+    ],
+    "subcategory": "Appliances",
+    "shortDescription": "A freestanding 17-inch beverage refrigerator whose glass door lights up in a cyberpunk circuit-line pattern, with 4 removable shelves, digital touch controls and a keyed child safety lock.",
+    "description": "A fridge that looks like a gaming-room prop. The Velieta Cyberpunk Beverage Refrigerator has an illuminated glass door with a cyberpunk light pattern, so the drinks inside become part of the display. It is a freestanding, single-door compressor unit with 3.0 cubic feet of space that the listing says holds up to 128 standard 12 oz cans, arranged on 4 removable wire shelves that you can rearrange for cans or tall bottles. The temperature is adjustable from 34\u00b0F to 64\u00b0F with digital touch controls, and it has a built-in child safety lock with two keys. It stands 31.29 inches tall, 17.51 wide and 18.89 deep, in matte black, and it is frost free. It runs on 115 volts with a North American plug; the listing notes it may need a converter outside the United States. The listing gives a 1-year warranty and pitches it for gaming rooms, home bars, bedrooms, kitchens and offices.",
+    "whyWeLikeIt": "Most beverage fridges disappear into a room; this one is the centerpiece. The door glows in blue, cyan and orange circuit lines, so a shelf of cans turns into a backdrop for a gaming setup or home bar.",
+    "image": "/assets/images/products/velieta-17-cyberpunk-beverage-refrigerator.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.4,
+    "reviewCount": 328,
+    "tags": [
+      "beverage refrigerator",
+      "cyberpunk fridge",
+      "gaming fridge",
+      "led light up fridge",
+      "glass door fridge",
+      "drink fridge",
+      "home bar",
+      "gaming room",
+      "velieta",
+      "gift"
+    ],
+    "highlights": [
+      "LED light-up glass door with a cyberpunk light pattern",
+      "3.0 cu ft, up to 128 standard 12 oz cans, 4 removable wire shelves",
+      "34\u00b0F to 64\u00b0F adjustable range with digital touch controls",
+      "Child safety lock with 2 keys",
+      "Freestanding, 17.51 x 18.89 x 31.29 inches; 115 V"
+    ],
+    "affiliateUrl": "https://link.amazon/B0heY9eS5",
+    "externalUrl": "https://link.amazon/B0heY9eS5",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-23T00:00:00.000Z",
+    "updatedAt": "2026-09-23T00:00:00.000Z"
   }
 ]
