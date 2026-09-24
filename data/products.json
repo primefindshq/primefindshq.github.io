@@ -4926,5 +4926,52 @@
     "published": true,
     "createdAt": "2026-09-23T00:00:00.000Z",
     "updatedAt": "2026-09-23T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0152",
+    "name": "Mini Mic Pro Wireless Lavalier Microphone, 2-Pack (USB-C + Lightning)",
+    "slug": "mini-mic-pro-wireless-lavalier-microphone-2-pack",
+    "category": "tech",
+    "secondaryCategories": [
+      "travel",
+      "gifts",
+      "under-25"
+    ],
+    "subcategory": "Content Creation",
+    "shortDescription": "Two tiny clip-on wireless microphones and a plug-in receiver with USB-C and Lightning adapters, so a phone can record with the mic clipped close to the speaker.",
+    "description": "Clip it on, plug the receiver in, record. The Mini Mic Pro (model mini-mic-pro) is a wireless lavalier system with two clip-on microphones and one receiver. The listing says it works right out of the box with iPhone, Android, tablet or laptop, with both USB-C and Lightning adapters included, and with no app and no Bluetooth needed. Each mic clips to clothing, has 1-touch recording and a battery indicator light, and has an omnidirectional pickup; the listing describes it as noise-reducing and names TikTok, YouTube, interviews and voiceovers as uses. For wind it includes high-density sponge tips and furry dead-cat covers, two of each. The mics are rechargeable, with up to 6 hours per charge listed, using the included USB charging cable. Listed contents: 2 lavalier microphones, 1 receiver, 1 USB charging cable, 2 clips, 2 sponge tips and 2 dead-cat tips. This is the set with both connectors; the same listing family also sells Lightning-only and USB-C-only versions. The listing offers a 90-day refund guarantee and 6 months of free replacement or warranty.",
+    "whyWeLikeIt": "It fixes the simplest audio problem in phone video: the microphone is on the phone, far from the person talking. Clip one of these near the speaker and plug the little receiver in; there is no app to set up and no pairing menu.",
+    "image": "/assets/images/products/mini-mic-pro-wireless-lavalier-microphone-2-pack.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.3,
+    "reviewCount": 9496,
+    "tags": [
+      "wireless microphone",
+      "lavalier microphone",
+      "lav mic",
+      "clip on microphone",
+      "iphone microphone",
+      "android microphone",
+      "vlogging mic",
+      "creator gadget",
+      "mini mic pro",
+      "gift"
+    ],
+    "highlights": [
+      "2 clip-on wireless mics + 1 receiver; USB-C and Lightning adapters included",
+      "Plug and play: no app, no Bluetooth",
+      "1-touch recording, battery indicator light, omnidirectional; noise reduction as listed",
+      "Rechargeable, up to 6 hours per charge (listed)",
+      "Includes sponge tips and furry dead-cat wind covers"
+    ],
+    "affiliateUrl": "https://link.amazon/B01eZhKza",
+    "externalUrl": "https://link.amazon/B01eZhKza",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-25T00:00:00.000Z",
+    "updatedAt": "2026-09-25T00:00:00.000Z"
   }
 ]
