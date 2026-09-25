@@ -5070,5 +5070,53 @@
     "published": true,
     "createdAt": "2026-09-25T00:00:00.000Z",
     "updatedAt": "2026-09-25T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0155",
+    "name": "Fujifilm Instax Mini EVO Hybrid Instant Camera, Brown Bundle",
+    "slug": "fujifilm-instax-mini-evo-hybrid-instant-camera-brown-bundle",
+    "category": "tech",
+    "secondaryCategories": [
+      "travel",
+      "gifts"
+    ],
+    "subcategory": "Cameras",
+    "shortDescription": "A hybrid camera that shoots digitally and prints on Instax Mini film, so you see the photo first and print only the ones you want.",
+    "description": "Preview first, print the moments you actually want to keep. The Fujifilm Instax Mini EVO captures images digitally, lets you review them on the 3.0\" LCD, and then prints your picks on Instax Mini film with the print lever. Pick from 10 lens effects and 10 film effects (100 combinations), adjust exposure and white balance, use Macro Mode for close-ups, or frame selfies with the built-in mirror. The lens is a fixed 28mm-equivalent f/2, there is a built-in flash, and the listing gives about 45 images of internal memory plus a microSD slot. Bluetooth connects it to the INSTAX MINI EVO app for smartphone printing, remote shooting and image transfer. This listing is a bundle in Brown. According to its title and description, the bundle contains: the camera, a twin pack of Instax Mini film (20 sheets), a 32GB memory card, a vintage brown camera case, an SD card reader and a microfiber cleaning cloth. The listing does not say the camera is water resistant (it states it is not) and lists about 1.6 lb and 4.8 x 3.4 x 1.4 inches.",
+    "whyWeLikeIt": "Most instant cameras print every shot the moment you take it. This one lets you look first, so film goes to the photos worth holding, and the bundle already pairs the camera with film, a card and a case.",
+    "image": "/assets/images/products/fujifilm-instax-mini-evo-hybrid-instant-camera-brown-bundle.webp",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 438,
+    "tags": [
+      "fujifilm instax mini evo",
+      "instax mini evo",
+      "instax",
+      "instant camera",
+      "hybrid camera",
+      "hybrid instant camera",
+      "polaroid style camera",
+      "instant print camera",
+      "retro camera",
+      "travel camera",
+      "instax mini film",
+      "gift"
+    ],
+    "highlights": [
+      "Hybrid: digital capture with a 3.0\" LCD preview, prints on Instax Mini film",
+      "10 lens effects + 10 film effects; built-in selfie mirror and flash",
+      "Fixed 28mm-equivalent f/2 lens; microSD slot, about 45 images internal memory",
+      "Bluetooth and the INSTAX MINI EVO app for printing and remote shooting",
+      "Bundle: 20 sheets Instax Mini film, 32GB card, brown case, SD card reader, cleaning cloth"
+    ],
+    "affiliateUrl": "https://link.amazon/B06XYUxPx",
+    "externalUrl": "https://link.amazon/B06XYUxPx",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-25T00:00:00.000Z",
+    "updatedAt": "2026-09-25T00:00:00.000Z"
   }
 ]
