@@ -5022,5 +5022,53 @@
     "published": true,
     "createdAt": "2026-09-25T00:00:00.000Z",
     "updatedAt": "2026-09-25T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0154",
+    "name": "Camp Snap V105 8MP Compact Digital Camera, Brown",
+    "slug": "camp-snap-v105-8mp-screenless-digital-camera-brown",
+    "category": "tech",
+    "secondaryCategories": [
+      "travel",
+      "gifts"
+    ],
+    "subcategory": "Cameras",
+    "shortDescription": "A compact 8MP digital camera with no screen: look through the optical viewfinder, press the button, and move on.",
+    "description": "It's a digital camera... without a screen. The Camp Snap V105 is a compact 8MP point-and-shoot that the listing describes as a digital camera without a display. You frame the shot through the optical viewfinder, press the shutter, and that's it: exposure is automatic, there's a built-in flash, and digital image stabilization is listed. Photos are saved as JPEG (4:3), the listing mentions memory for 2,000 photos, and the rechargeable battery is listed at 500 photos. It also records 720p MP4 video. The Brown version pairs a black body with a textured brown wrap and a vintage-inspired look, and it weighs 6.4 oz at roughly 5.71 x 3.78 x 1.57 inches. The listing says it is not water resistant. The listing's included-components field shows the camera only, so we haven't assumed a memory card, cable or case in the box; check the listing before you buy.",
+    "whyWeLikeIt": "Most cameras now come with a screen to check every shot. This one doesn't, so shooting is reduced to framing through the viewfinder and pressing the button. It's a light, distinctive travel and everyday companion, and an easy gift for someone who likes gadgets with a bit of character.",
+    "image": "/assets/images/products/camp-snap-v105-8mp-screenless-digital-camera-brown.webp",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.4,
+    "reviewCount": 26,
+    "tags": [
+      "camp snap",
+      "campsnap",
+      "camp snap v105",
+      "screenless camera",
+      "camera without screen",
+      "digital camera",
+      "point and shoot",
+      "compact camera",
+      "retro camera",
+      "vintage camera",
+      "travel camera",
+      "gift"
+    ],
+    "highlights": [
+      "8MP compact digital camera with no screen",
+      "Optical viewfinder, automatic exposure, built-in flash",
+      "Digital image stabilization; JPEG photos",
+      "Listed: rechargeable battery, 500 photos per charge, memory for 2,000 photos",
+      "Brown; 6.4 oz; about 5.71 x 3.78 x 1.57 in"
+    ],
+    "affiliateUrl": "https://link.amazon/B05yctGYe",
+    "externalUrl": "https://link.amazon/B05yctGYe",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-25T00:00:00.000Z",
+    "updatedAt": "2026-09-25T00:00:00.000Z"
   }
 ]
