@@ -4973,5 +4973,54 @@
     "published": true,
     "createdAt": "2026-09-25T00:00:00.000Z",
     "updatedAt": "2026-09-25T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0153",
+    "name": "Insta360 X5 8K 360\u00b0 Action Camera with Replaceable Lenses",
+    "slug": "insta360-x5-8k-360-action-camera",
+    "category": "tech",
+    "secondaryCategories": [
+      "travel",
+      "gifts"
+    ],
+    "subcategory": "Cameras",
+    "shortDescription": "A waterproof 360\u00b0 action camera that records in every direction at once, up to 8K at 30 fps, so you can pick the angle after you shoot.",
+    "description": "Shoot now, choose the angle later. The Insta360 X5 records everything around it in 360\u00b0, up to 8K at 30 fps using dual 1/1.28\" sensors, and you decide where to point the frame afterward with AI-assisted reframing. Because the camera captures the whole scene, the invisible selfie stick effect makes the stick disappear, which opens up third-person views that are hard to get with a conventional camera. FlowState Stabilization and 360\u00b0 Horizon Lock keep footage level without a gimbal. If you want a ready-to-share clip right away, InstaFrame mode gives you a flat video instantly, with auto-framing or a fixed angle. The lenses are replaceable, the listing describes a triple AI chip design for low-light shooting, and a 4-mic array with a built-in wind guard handles audio. The comparison table on the listing shows PureVideo mode. It has a 2.5-inch touchscreen, a 2400mAh battery (the listing title says 3-hour battery), a microSD slot (card not included) and USB-C charging. The listing gives about 200 g, roughly 1.5 x 1.81 x 4.9 inches, and waterproof to 49 ft (15 m); the listing does not spell out the conditions for that rating, so check the manufacturer's guidance before getting it wet. This listing is the Midnight Black Standard Bundle: the camera, a lens cloth, a protective pouch, a USB-C cable and a user manual.",
+    "whyWeLikeIt": "A 360\u00b0 camera changes when you make the creative decisions. Instead of committing to one framing at the moment you press record, you keep the whole scene and reframe afterward, so a trip, a ride or a walk can become several different shots from a single take.",
+    "image": "/assets/images/products/insta360-x5-8k-360-action-camera.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 2582,
+    "tags": [
+      "insta360",
+      "insta360 x5",
+      "360 camera",
+      "360 action camera",
+      "action camera",
+      "8k camera",
+      "waterproof camera",
+      "vlogging camera",
+      "travel camera",
+      "invisible selfie stick",
+      "creator gadget",
+      "gift"
+    ],
+    "highlights": [
+      "8K 360\u00b0 video at 30 fps with dual 1/1.28\" sensors",
+      "Invisible selfie stick effect; reframe the angle after shooting",
+      "FlowState Stabilization and 360\u00b0 Horizon Lock",
+      "Replaceable lenses; triple AI chip design",
+      "Waterproof to 49 ft (15 m) as listed; about 200 g",
+      "Standard Bundle: camera, lens cloth, pouch, USB-C cable, manual"
+    ],
+    "affiliateUrl": "https://link.amazon/B03GJAnGH",
+    "externalUrl": "https://link.amazon/B03GJAnGH",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-25T00:00:00.000Z",
+    "updatedAt": "2026-09-25T00:00:00.000Z"
   }
 ]
