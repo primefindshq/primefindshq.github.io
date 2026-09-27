@@ -5408,5 +5408,51 @@
     "published": true,
     "createdAt": "2026-09-27T00:00:00.000Z",
     "updatedAt": "2026-09-27T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0162",
+    "name": "Twinkly Smart LED Christmas Tree Topper, RGB Star",
+    "slug": "twinkly-smart-led-christmas-tree-topper-rgb-star",
+    "category": "home",
+    "secondaryCategories": [
+      "gifts"
+    ],
+    "subcategory": "Decor",
+    "shortDescription": "A star tree topper with 76 RGB LEDs that turns the top of your tree into an app-controlled, customizable light display.",
+    "description": "Your tree already has lights. Now the star can have animations. The Twinkly Tree Topper is an indoor, star-shaped topper with 76 multi-color LEDs, and the listing describes it as acting like a single screen-like LED display. With the Twinkly app you can play presets, customize them and create your own effects and animations, in over 16 million colors as listed. The listing also says it syncs with any Christmas tree adorned with Twinkly lights, so it can work as part of a Twinkly-lit tree rather than on its own. It is USB-C powered, and the listing states the USB-C power supply is not included, so you need to provide your own. The listing gives approximate dimensions of 11.81 x 1.97 x 8.66 inches and describes it as an indoor product; we haven't assumed any outdoor use, smart-home assistant support or music sync, since the listing doesn't state them.",
+    "whyWeLikeIt": "Most tree toppers are a fixed shape that glows one way. This one is a small, controllable light display: a star whose colors and animations you change from your phone, and that can match the rest of a Twinkly tree.",
+    "image": "/assets/images/products/twinkly-smart-led-christmas-tree-topper-rgb-star.webp",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.5,
+    "reviewCount": 593,
+    "tags": [
+      "twinkly",
+      "twinkly tree topper",
+      "tree topper",
+      "christmas tree topper",
+      "led tree topper",
+      "star tree topper",
+      "smart tree topper",
+      "christmas lights",
+      "holiday decor",
+      "smart holiday lights",
+      "gift"
+    ],
+    "highlights": [
+      "Star tree topper with 76 multi-color RGB LEDs",
+      "Twinkly app: presets, custom effects and animations",
+      "Over 16 million colors as listed",
+      "Syncs with trees lit with Twinkly lights (per listing)",
+      "USB-C powered; USB-C power supply not included; indoor"
+    ],
+    "affiliateUrl": "https://link.amazon/B0dgVJPDk",
+    "externalUrl": "https://link.amazon/B0dgVJPDk",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-27T00:00:00.000Z",
+    "updatedAt": "2026-09-27T00:00:00.000Z"
   }
 ]
