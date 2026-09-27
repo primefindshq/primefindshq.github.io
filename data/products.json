@@ -5503,5 +5503,54 @@
     "published": true,
     "createdAt": "2026-09-27T00:00:00.000Z",
     "updatedAt": "2026-09-27T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0164",
+    "name": "Elgato Stream Deck +, Studio Controller",
+    "slug": "elgato-stream-deck-plus-studio-controller",
+    "category": "tech",
+    "secondaryCategories": [
+      "desk-setup",
+      "gaming"
+    ],
+    "subcategory": "Accessories",
+    "shortDescription": "A studio controller with 8 customizable LCD keys, a touch strip and 4 multifunction dials for controlling audio, video and apps with physical buttons.",
+    "description": "A miniature control console for your desk. The Elgato Stream Deck + has 8 customizable LCD keys, a touch strip and 4 multifunction dials (360-degree encoders with a push function), so you get tactile control with visual feedback instead of hunting through app menus. The listing describes using it as an audio mixer, studio controller or production console, with Multi Actions to trigger several steps at once and Smart Profiles that switch the layout automatically per app. It unlocks Elgato Wave Link mixing software, and the listing names plugins for Camera Hub, Control Center, OBS, Twitch, YouTube, Twitter, Discord, Spotify and Philips Hue, plus the Stream Deck Store for more plugins, icon packs and royalty-free audio. Listed specs: 140 x 138 x 110 mm (5.5 x 5.4 x 4.3 in), about 465-470 g, USB-C connectivity, and Windows 10 (64-bit) or macOS 10.13+ required. Listed contents: the device and a USB cable. It carries a 2-year manufacturer warranty as listed. This is the Stream Deck + (8 keys, 4 dials, touch strip), not the 15-key Stream Deck MK.2, Neo, XL or Studio.",
+    "whyWeLikeIt": "It turns a row of app menus into physical buttons and a dial you can reach without looking. Streamers and podcasters are the obvious fit, but anyone who juggles volume, lighting or app switching during calls will find a use for it.",
+    "image": "/assets/images/products/elgato-stream-deck-plus-studio-controller.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 4602,
+    "tags": [
+      "elgato",
+      "stream deck",
+      "stream deck plus",
+      "stream deck +",
+      "studio controller",
+      "streaming controller",
+      "macro keypad",
+      "audio mixer",
+      "podcast setup",
+      "desk setup",
+      "creator desk",
+      "gift"
+    ],
+    "highlights": [
+      "8 customizable LCD keys, a touch strip, 4 multifunction dials",
+      "Multi Actions and Smart Profiles that switch per app",
+      "Unlocks Elgato Wave Link mixing software",
+      "Plugins listed: OBS, Twitch, YouTube, Discord, Spotify, Philips Hue and more",
+      "USB-C; Windows 10 (64-bit) or macOS 10.13+; includes USB cable",
+      "Not the 15-key Stream Deck MK.2, Neo, XL or Studio"
+    ],
+    "affiliateUrl": "https://link.amazon/B04HBljeF",
+    "externalUrl": "https://link.amazon/B04HBljeF",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-27T00:00:00.000Z",
+    "updatedAt": "2026-09-27T00:00:00.000Z"
   }
 ]
