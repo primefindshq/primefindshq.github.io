@@ -5170,5 +5170,54 @@
     "published": true,
     "createdAt": "2026-09-27T00:00:00.000Z",
     "updatedAt": "2026-09-27T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0157",
+    "name": "Nanoleaf Elements Wood Look Hexagons Smarter Kit, 7 Panels",
+    "slug": "nanoleaf-elements-wood-look-hexagons-smarter-kit-7-panels",
+    "category": "home",
+    "secondaryCategories": [
+      "desk-setup",
+      "gaming"
+    ],
+    "subcategory": "Lighting & Displays",
+    "shortDescription": "Seven wood-look hexagon panels that read as textured wall art when off and become a modular, app-controlled lighting installation when on.",
+    "description": "Off, it looks like wall art. On, it becomes a lighting installation. Nanoleaf Elements is a wall-mounted modular lighting system, and this Smarter Kit brings seven hexagon panels with a wood-grain finish. Arrange them into your own layout on a wall and the wood-look surface reads as a geometric, decorative piece even before you switch anything on. Turn them on and the panels glow with warm and cool whites, with touch controls on the panels, and app and voice control listed for Bluetooth and Wi-Fi setups. The listing describes dynamic glowing effects and music sync. The listing also states the design is expandable with further panels, sold separately. Listed kit contents: 7 wood-look hexagons, 1 controller, a power supply, mounting plates and mounting tapes, and rigid linkers. It is for indoor use and not water resistant, with a 2-year limited manufacturer warranty listed. Compatibility depends on your setup; the listing title names Alexa, so check the listing for other platforms before you buy.",
+    "whyWeLikeIt": "Most smart lights are objects you notice only when they're on. This one is designed to be seen with the lights off too: a wall of wood-look hexagons you lay out yourself, then light up when you want the room to change.",
+    "image": "/assets/images/products/nanoleaf-elements-wood-look-hexagons-smarter-kit-7-panels.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.1,
+    "reviewCount": 400,
+    "tags": [
+      "nanoleaf",
+      "nanoleaf elements",
+      "wood hexagons",
+      "hexagon lights",
+      "hexagon wall lights",
+      "wall light panels",
+      "smart wall lights",
+      "wall decor",
+      "modular lighting",
+      "led panels",
+      "gaming room lights",
+      "smarter kit"
+    ],
+    "highlights": [
+      "7 wood-look hexagon panels, Smarter Kit",
+      "Wood-grain finish; modular layouts you design yourself",
+      "Warm and cool whites, touch controls, music sync as listed",
+      "App and voice control; Bluetooth and Wi-Fi",
+      "Kit: 7 hexagons, controller, power supply, mounting plates and tapes, rigid linkers",
+      "2-year limited manufacturer warranty (listed)"
+    ],
+    "affiliateUrl": "https://link.amazon/B05OXPHTa",
+    "externalUrl": "https://link.amazon/B05OXPHTa",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-27T00:00:00.000Z",
+    "updatedAt": "2026-09-27T00:00:00.000Z"
   }
 ]
