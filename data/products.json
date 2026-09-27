@@ -5312,5 +5312,53 @@
     "published": true,
     "createdAt": "2026-09-27T00:00:00.000Z",
     "updatedAt": "2026-09-27T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0160",
+    "name": "PETKIT PuraMax 2 Automatic Self-Cleaning Cat Litter Box, Basic Bundle",
+    "slug": "petkit-puramax-2-automatic-self-cleaning-litter-box-basic-bundle",
+    "category": "home",
+    "secondaryCategories": [
+      "tech",
+      "gifts"
+    ],
+    "subcategory": "Smart Home",
+    "shortDescription": "An enclosed, app-connected automatic litter box that cleans itself after each use and collects waste in a sealed bin.",
+    "description": "Your cat still uses a litter box. You just don't have to scoop it every time. The PETKIT PuraMax 2 (P9902) is an enclosed, rotating self-cleaning litter box: after your cat leaves, it runs a cleaning cycle and moves waste into a 7L waste bin, which you still need to empty. The PETKIT app, over 2.4GHz Wi-Fi, lets you check its working status, set the cleaning mode (auto, manual, timer or empty) and see usage records such as visit frequency and duration; that is usage data, not a medical tool. Safety is built around 7 infrared sensors and 4 weight sensors that pause the unit when a cat approaches, and an anti-pinch design that keeps the entrance open. The 76L interior has a 7.87-inch low entry and is listed for cats weighing 3.3 to 22 lb; the listing says not to use it for pets under 6 months. For odor control it pairs a sealed waste bin with the N50 2.0 odor remover, which reduces odors rather than removing them entirely. It works with clumping litter, comes with a 2-year warranty, and should sit on a flat floor, not on carpet or mats. Listed contents for this basic bundle: the litter box, N50 2.0 odor eliminator, one roll of trash bags (20 pcs), decorative stickers and a user manual; the listing text also mentions extra items, so check it for the full list.",
+    "whyWeLikeIt": "It takes an unglamorous chore and turns it into a small automated system: the cat uses it, the box cleans up, waste goes into a bin, and you can check in from the app. It feels less like a pet-supply item and more like a piece of smart-home gear.",
+    "image": "/assets/images/products/petkit-puramax-2-automatic-self-cleaning-litter-box-basic-bundle.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.2,
+    "reviewCount": 2596,
+    "tags": [
+      "petkit",
+      "petkit puramax 2",
+      "puramax 2",
+      "automatic litter box",
+      "self cleaning litter box",
+      "smart litter box",
+      "cat litter box",
+      "robotic litter box",
+      "cat gadget",
+      "pet tech",
+      "gift"
+    ],
+    "highlights": [
+      "Enclosed rotating self-cleaning litter box with a 7L waste bin",
+      "PETKIT app over 2.4GHz Wi-Fi: status, cleaning modes, usage records",
+      "7 infrared + 4 weight sensors; anti-pinch, always-open entrance",
+      "76L interior, 7.87 in low entry; cats 3.3-22 lb, not for pets under 6 months",
+      "N50 2.0 odor remover and sealed bin; 2-year warranty",
+      "Basic bundle: box, N50 2.0, trash bags (20 pcs), stickers, manual"
+    ],
+    "affiliateUrl": "https://link.amazon/B0f8skxkt",
+    "externalUrl": "https://link.amazon/B0f8skxkt",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-27T00:00:00.000Z",
+    "updatedAt": "2026-09-27T00:00:00.000Z"
   }
 ]
