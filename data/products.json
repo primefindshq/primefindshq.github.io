@@ -5552,5 +5552,54 @@
     "published": true,
     "createdAt": "2026-09-27T00:00:00.000Z",
     "updatedAt": "2026-09-27T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0165",
+    "name": "HOZO NeoRulerGO Digital Rolling Ruler",
+    "slug": "hozo-neorulergo-digital-rolling-ruler",
+    "category": "tech",
+    "secondaryCategories": [
+      "desk-setup",
+      "gifts",
+      "travel"
+    ],
+    "subcategory": "Accessories",
+    "shortDescription": "A pocket-sized digital rolling ruler: roll it across a surface and a measurement appears on its screen.",
+    "description": "This looks like a tiny remote. It measures things. The HOZO NeoRulerGO is a rechargeable digital measuring tool with a wheel you roll across a surface and an LCD screen that shows the reading as you go, instead of reading marks off a tape. The listing lists linear, circular, arbitrary curve, irregular surface and cylinder diameter measurement, with a precision of ±0.04 inch (±1 mm) on the digital screen, and a Class I laser (under 1 mW) for the laser line. It has 93 built-in scales (52 US standard, 41 metric) and switches between mm, cm, m, inch, ft, ft+inch, yard, mile and km, plus support for unlimited custom scales for things like unscaled or misprinted floor plans. There are left-hand and right-hand modes, a landscape/portrait LCD, and it shuts down automatically after a minute of inactivity. Over Bluetooth, the free MEAZOR app can transfer data, export to CAD files (DXF, PDF, JPG), build and sync custom scale lists, and calibrate the device. The listing's own bullets and spec table give different dimensions and weight for this same ASIN, so we're not stating either here; check the current listing before you buy. Warranty: 1-year limited, per the listing.",
+    "whyWeLikeIt": "It replaces the mental math of reading a tape measure with a straight digital number, and does it on curves and odd shapes a tape can't follow well. It's a small, unusual gadget that DIYers, makers and anyone who likes clever tools will get a kick out of.",
+    "image": "/assets/images/products/hozo-neorulergo-digital-rolling-ruler.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.2,
+    "reviewCount": 179,
+    "tags": [
+      "hozo",
+      "hozo neorulergo",
+      "neorulergo",
+      "digital rolling ruler",
+      "digital tape measure",
+      "smart measuring tool",
+      "rolling ruler",
+      "meazor",
+      "laser measure",
+      "gadget gift",
+      "maker tools"
+    ],
+    "highlights": [
+      "Roll it across a surface; the reading shows on its own LCD screen",
+      "Linear, circular, curve, irregular-surface and cylinder measurement (listed)",
+      "±0.04 in (±1 mm) precision; Class I laser (<1 mW)",
+      "93 built-in scales (52 US, 41 metric) plus unlimited custom scales",
+      "Bluetooth + free MEAZOR app: CAD export, custom scales, calibration",
+      "1-year limited warranty (listed)"
+    ],
+    "affiliateUrl": "https://link.amazon/B00zf7USP",
+    "externalUrl": "https://link.amazon/B00zf7USP",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-27T00:00:00.000Z",
+    "updatedAt": "2026-09-27T00:00:00.000Z"
   }
 ]
