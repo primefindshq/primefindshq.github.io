@@ -5454,5 +5454,54 @@
     "published": true,
     "createdAt": "2026-09-27T00:00:00.000Z",
     "updatedAt": "2026-09-27T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0163",
+    "name": "Logitech MX Creative Console, Graphite",
+    "slug": "logitech-mx-creative-console-graphite",
+    "category": "tech",
+    "secondaryCategories": [
+      "desk-setup",
+      "gaming"
+    ],
+    "subcategory": "Accessories",
+    "shortDescription": "A desk control panel with 9 customizable LCD keys and a tactile dial that turns your software's tools into physical controls.",
+    "description": "Your software controls, turned into something you can touch. The Logitech MX Creative Console pairs a keypad of 9 customizable LCD display keys with a separate dialpad: an aluminum low-friction dial for precise adjustments, a roller for navigating, and extra buttons. Instead of hunting through menus, you assign tools and actions to the keys, dial and roller, and the LCD keys show what each one does. The listing says you can set up to 15 keypad pages by profile, upload your own icons and create shortcuts and Smart Actions, with recommended profiles to get started. Named integrations in the listing include Adobe Photoshop, Premiere Pro, Illustrator, Lightroom and Lightroom Classic, Final Cut Pro, Figma, DaVinci Resolve, Spotify and Zoom, and more, so it suits editors, designers, photographers, streamers and anyone building a control-heavy desk setup, whether or not they work professionally. It needs the Logi Options+ app, listed as available for recent versions of Windows and macOS. The keypad connects by USB-C, and the listing shows a stand and a USB-C to USB-C cable in the box, plus 2 AAA batteries listed for the dialpad. It carries a 1-year limited hardware warranty. The listing also mentions an included 3-month Adobe Creative Cloud All Apps membership, but it doesn't show redemption terms or regional limits, so check current eligibility before counting on it.",
+    "whyWeLikeIt": "It looks like a miniature command center: little screens that change with the app you're in, and a real dial for the adjustments that feel awkward with a mouse. It's a distinctive addition to a creator desk, and useful to anyone who likes physical controls.",
+    "image": "/assets/images/products/logitech-mx-creative-console-graphite.webp",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.1,
+    "reviewCount": 443,
+    "tags": [
+      "logitech",
+      "logitech mx creative console",
+      "mx creative console",
+      "creative console",
+      "stream deck alternative",
+      "macro keypad",
+      "lcd keys",
+      "control dial",
+      "photoshop shortcuts",
+      "video editing console",
+      "desk setup",
+      "creator desk"
+    ],
+    "highlights": [
+      "9 customizable LCD keys plus a tactile control dial and roller",
+      "Up to 15 keypad pages by profile; upload your own icons (listed)",
+      "Integrations named in the listing: Photoshop, Premiere Pro, Lightroom, Figma, DaVinci Resolve, Spotify, Zoom and more",
+      "Requires Logi Options+ (recent Windows and macOS)",
+      "USB-C keypad; stand, USB-C cable and 2 AAA batteries listed",
+      "Listing mentions a 3-month Adobe Creative Cloud offer; check terms"
+    ],
+    "affiliateUrl": "https://link.amazon/B0h1RLqaD",
+    "externalUrl": "https://link.amazon/B0h1RLqaD",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-27T00:00:00.000Z",
+    "updatedAt": "2026-09-27T00:00:00.000Z"
   }
 ]
