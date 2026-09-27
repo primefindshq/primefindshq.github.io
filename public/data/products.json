@@ -5601,5 +5601,53 @@
     "published": true,
     "createdAt": "2026-09-27T00:00:00.000Z",
     "updatedAt": "2026-09-27T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0166",
+    "name": "SUBSOCCER S3 Edge Bench Soccer Game",
+    "slug": "subsoccer-s3-edge-bench-soccer-game",
+    "category": "gaming",
+    "secondaryCategories": [
+      "gifts",
+      "home"
+    ],
+    "subcategory": "Backyard & Outdoor Games",
+    "shortDescription": "A portable two-bench soccer table: players sit facing each other and control the ball with their feet to score.",
+    "description": "Soccer. But you never leave the bench. The SUBSOCCER S3 Edge is a portable bench soccer set: two enclosed benches face each other across a netted playing table, and each player controls the ball with their feet from a seated position to score into the opponent's net. The listing describes this as the next-generation version of the original S3, now with a dedicated gaming mat included, redesigned bench legs for added stability, and an anthracite grey finish over a powder-coated steel frame. It sets up with the included tools in minutes and packs away for home, office, beach or backyard use, and each bench is listed to support up to 150 kg. The listing recommends it for players aged 6 and up. Listed contents: the table, 2 benches with nets, an official SUBSOCCER game ball, assembly tools and a user manual. Listed dimensions are 15.74 x 7.67 x 47.24 in at about 40 lb; check the current listing if you need the assembled play footprint, since it isn't spelled out separately. As with any active game, keep an eye on how it's used and follow the included manual's setup and safety guidance.",
+    "whyWeLikeIt": "It's an easy game to understand and a strange one to picture until you see it: two people, seated, playing soccer with their feet across a table-sized pitch. It turns a spare bit of floor into a fast, competitive game that doesn't need a screen.",
+    "image": "/assets/images/products/subsoccer-s3-edge-bench-soccer-game.webp",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.4,
+    "reviewCount": 23,
+    "tags": [
+      "subsoccer",
+      "subsoccer s3",
+      "subsoccer s3 edge",
+      "bench soccer",
+      "tabletop soccer game",
+      "foosball alternative",
+      "backyard game",
+      "two player game",
+      "family game",
+      "indoor outdoor game",
+      "gift"
+    ],
+    "highlights": [
+      "Two enclosed benches face off across a netted soccer table",
+      "Players control the ball with their feet, seated, to score",
+      "Includes gaming mat, redesigned bench legs, anthracite grey finish (listed)",
+      "Sets up with included tools in minutes; portable for home, office, beach or backyard",
+      "Each bench listed to support up to 150 kg; recommended for ages 6+",
+      "Includes table, 2 benches with nets, official ball, tools, manual"
+    ],
+    "affiliateUrl": "https://link.amazon/B0068Ojkr",
+    "externalUrl": "https://link.amazon/B0068Ojkr",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-27T00:00:00.000Z",
+    "updatedAt": "2026-09-27T00:00:00.000Z"
   }
 ]
