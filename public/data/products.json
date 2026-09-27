@@ -5118,5 +5118,57 @@
     "published": true,
     "createdAt": "2026-09-25T00:00:00.000Z",
     "updatedAt": "2026-09-25T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0156",
+    "name": "Govee RGBIC Smart Table Lamp 2 (H6022), Touch Bedside Lamp",
+    "slug": "govee-rgbic-smart-table-lamp-2-h6022",
+    "category": "home",
+    "secondaryCategories": [
+      "desk-setup",
+      "tech",
+      "gifts"
+    ],
+    "subcategory": "Lighting",
+    "shortDescription": "A touch-control bedside lamp with animated RGBIC color, music-sync modes, Matter support and a pat-to-wake mode, all customizable in the Govee app.",
+    "description": "A bedside lamp you can actually interact with. The Govee Table Lamp 2 (H6022) uses RGBICWW lighting with multi-color displays, 500 lm brightness as listed, and adjustable whites from 2700K to 6500K. It has 64+ preset scenes and 8 music-syncing modes, and the app supports DIY custom lighting effects you can share. AI Lighting Bot 2.0 is described in the listing as a way to turn speech, text or a snap into personalized lighting effects and refine them through conversation; it is a lighting-customization feature only. For smart-home control, the listing names Alexa, Google Home and SmartThings, plus HomeKit via Matter; which controls work depends on the platform you use. Pat-to-Wake turns the lamp on with a pat, needs the \"Bedtime Switch\" turned on in the app first, and only supports turning the lamp on. There are also touch controls, timer and schedule settings. It is corded (power adapter and user manual included per the listing), cylindrical, indoor-only and not water resistant, at about 4.3 x 4.3 x 8.8 inches.",
+    "whyWeLikeIt": "Most bedside lamps do one thing. This one changes color in animated patterns, follows music, takes custom scenes from the app and wakes with a pat, so the same object can be a plain lamp one night and a small light show the next.",
+    "image": "/assets/images/products/govee-rgbic-smart-table-lamp-2-h6022.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.7,
+    "reviewCount": 2520,
+    "tags": [
+      "govee",
+      "govee table lamp 2",
+      "h6022",
+      "rgb lamp",
+      "rgbic lamp",
+      "smart lamp",
+      "smart table lamp",
+      "bedside lamp",
+      "touch lamp",
+      "matter lamp",
+      "music sync lamp",
+      "color changing lamp",
+      "nightstand lamp",
+      "gift"
+    ],
+    "highlights": [
+      "RGBICWW lighting, 500 lm as listed, 2700K-6500K whites",
+      "64+ preset scenes, 8 music-syncing modes, DIY effects in the app",
+      "AI Lighting Bot 2.0 for custom lighting effects",
+      "Matter (HomeKit), Alexa, Google Home and SmartThings",
+      "Pat-to-Wake (needs Bedtime Switch on in the app; turn-on only), touch controls, timer",
+      "Corded; about 4.3 x 4.3 x 8.8 in"
+    ],
+    "affiliateUrl": "https://link.amazon/B03fE2wiy",
+    "externalUrl": "https://link.amazon/B03fE2wiy",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-27T00:00:00.000Z",
+    "updatedAt": "2026-09-27T00:00:00.000Z"
   }
 ]
