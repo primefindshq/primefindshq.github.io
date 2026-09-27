@@ -5266,5 +5266,51 @@
     "published": true,
     "createdAt": "2026-09-27T00:00:00.000Z",
     "updatedAt": "2026-09-27T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0159",
+    "name": "Ninja CREAMi 7-in-1 Ice Cream Maker (NC299AMZ)",
+    "slug": "ninja-creami-7-in-1-ice-cream-maker-nc299amz",
+    "category": "home",
+    "secondaryCategories": [
+      "gifts"
+    ],
+    "subcategory": "Kitchen",
+    "shortDescription": "Freeze a base in a pint, press a button, and the CREAMi turns it into ice cream, gelato, sorbet, a milkshake and more.",
+    "description": "Freeze it. Spin it. Turn it into dessert. The Ninja CREAMi is not a blender and not a traditional churn-as-it-freezes ice cream maker: you prepare a base, freeze it in the pint for 24 hours, and the machine's Creamify Technology shaves through the uniformly frozen pint to turn it into a smooth, scoopable frozen dessert in minutes. It has 7 one-touch programs: Ice Cream, Gelato, Sorbet, Milkshake, Smoothie Bowl, Lite Ice Cream and Mix-In. The Mix-In program spreads chocolate chips, candy, nuts, fruit or cookies through the finished pint, and a Re-spin function lets you process the pint a second time for a softer texture. The listing describes making desserts from ingredients you choose, including dairy-free and vegan bases. This is the 1-pint set (Matte Black, 800W, 120V/60Hz), listed as including one 16 oz CREAMi pint with storage lid, the Creamerizer Paddle, the outer bowl with lid, and a recipe guide with 30 recipes. Pints, storage lids and the paddle are listed as top-rack dishwasher safe. Pint compatibility, per the listing: NC299 and NC300 series pints only. It measures about 12.07 x 6.52 x 15.95 inches and weighs about 13 lb.",
+    "whyWeLikeIt": "It changes what a freezer is for. A pint of frozen base goes in, and a few minutes later it comes out as whatever you picked: ice cream, sorbet, a shake, or a smoothie bowl. It's a playful machine that turns a simple base into something you customize, and an easy gift for someone who likes making things at home.",
+    "image": "/assets/images/products/ninja-creami-7-in-1-ice-cream-maker-nc299amz.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.5,
+    "reviewCount": 4248,
+    "tags": [
+      "ninja creami",
+      "creami",
+      "ninja creami nc299amz",
+      "ice cream maker",
+      "ice cream machine",
+      "gelato maker",
+      "sorbet maker",
+      "milkshake maker",
+      "frozen dessert maker",
+      "kitchen gadget",
+      "gift"
+    ],
+    "highlights": [
+      "7 one-touch programs: Ice Cream, Gelato, Sorbet, Milkshake, Smoothie Bowl, Lite Ice Cream, Mix-In",
+      "Creamify Technology; Re-spin function",
+      "Base is frozen for 24 hours, then processed in minutes",
+      "Includes one 16 oz pint with lid, Creamerizer Paddle, outer bowl, 30-recipe guide",
+      "Pints, lids and paddle top-rack dishwasher safe; NC299/NC300 series pints only"
+    ],
+    "affiliateUrl": "https://link.amazon/B0bFiqSN0",
+    "externalUrl": "https://link.amazon/B0bFiqSN0",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-27T00:00:00.000Z",
+    "updatedAt": "2026-09-27T00:00:00.000Z"
   }
 ]
