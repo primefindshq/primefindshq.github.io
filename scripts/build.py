@@ -54,6 +54,46 @@ def load_data():
     return site, categories, products
 
 
+def load_collections(published):
+    """Curated collections (data/collections.json). Each lists product slugs; slugs that are
+    not published are skipped, and a collection with fewer than 3 live products is dropped."""
+    path = os.path.join(DATA_DIR, "collections.json")
+    if not os.path.exists(path):
+        return []
+    with open(path, encoding="utf-8") as f:
+        raw = json.load(f)
+    by_slug = {p["slug"]: p for p in published}
+    out = []
+    for c in raw:
+        items = [by_slug[s] for s in c["products"] if s in by_slug]
+        if len(items) >= 3:
+            out.append({**c, "items": items})
+    return out
+
+
+def related_products(product, published, limit=4):
+    """Products most like this one: same subcategory, same category, shared secondary categories
+    and shared tags all add to the score (never the product itself); ties fall back to newest."""
+    def own_tags(p):
+        return {t.lower() for t in p.get("tags", []) if t.lower() != "gift"}
+    cats = {product["category"], *product.get("secondaryCategories", [])}
+    tags = own_tags(product)
+    scored = []
+    for p in published:
+        if p["slug"] == product["slug"]:
+            continue
+        score = 0
+        if product.get("subcategory") and p.get("subcategory") == product["subcategory"]:
+            score += 3
+        if p["category"] == product["category"]:
+            score += 2
+        score += len(cats & {p["category"], *p.get("secondaryCategories", [])})
+        score += 2 * len(tags & own_tags(p))
+        scored.append((score, p["id"], p))
+    scored.sort(key=lambda x: (x[0], x[1]), reverse=True)
+    return [p for _, _, p in scored[:limit]]
+
+
 # --------------------------------------------------------------------------
 # Small formatting helpers (mirrors of js/core/utils.js, server-side)
 # --------------------------------------------------------------------------
@@ -490,6 +530,24 @@ def render_category_tile(category, count):
 """
 
 
+def render_collection_tile(collection):
+    thumbs = "".join(
+        f'<span class="collection-tile__thumb"><img src="{p["image"]}" alt="" loading="lazy" width="200" height="200" /></span>'
+        for p in collection["items"][:3]
+    )
+    n = len(collection["items"])
+    return f"""
+<a class="collection-tile" href="/collection/{collection['slug']}/" data-reveal>
+  <span class="collection-tile__thumbs" aria-hidden="true">{thumbs}</span>
+  <span class="collection-tile__body">
+    <span class="collection-tile__count">{n:02d} finds</span>
+    <h3 class="collection-tile__name">{esc(collection['name'])}</h3>
+    <span class="collection-tile__blurb">{esc(collection['blurb'])}</span>
+  </span>
+</a>
+"""
+
+
 # --------------------------------------------------------------------------
 # Base HTML document
 # --------------------------------------------------------------------------
@@ -556,7 +614,7 @@ def base_page(site, *, title, description, canonical_path, og_image=None, body_h
 # Homepage
 # --------------------------------------------------------------------------
 
-def render_homepage(site, categories, products, counts):
+def render_homepage(site, categories, products, counts, collections=()):
     trending = [p for p in products if p.get("trending")][:10]
     latest = sorted(products, key=lambda p: p["createdAt"], reverse=True)[:8]
     featured = next((p for p in products if p.get("featured")), products[0] if products else None)
@@ -619,6 +677,22 @@ def render_homepage(site, categories, products, counts):
 </section>
 """
 
+    collections_section = ""
+    if collections:
+        tiles = "".join(render_collection_tile(c) for c in collections)
+        collections_section = f"""
+<section class="section container" id="collections">
+  <div class="section-head" data-reveal="fade">
+    <div>
+      <span class="eyebrow">Collections</span>
+      <h2 class="section-title">Hand-picked, by mood</h2>
+      <p class="section-desc">Not sure where to start? Follow a theme.</p>
+    </div>
+  </div>
+  <div class="collection-grid">{tiles}</div>
+</section>
+"""
+
     editorial_section = ""
     if featured:
         editorial_section = f"""
@@ -651,7 +725,7 @@ def render_homepage(site, categories, products, counts):
 </section>
 """
 
-    body = hero + trending_section + category_section + editorial_section + latest_section
+    body = hero + trending_section + category_section + collections_section + editorial_section + latest_section
 
     ld_json = json.dumps({
         "@context": "https://schema.org",
@@ -707,6 +781,24 @@ def render_category_page(site, category, all_categories, category_products):
 </div>
 """
 
+    sub_counts = {}
+    for p in category_products:
+        if p.get("subcategory"):
+            sub_counts[p["subcategory"]] = sub_counts.get(p["subcategory"], 0) + 1
+    top_subs = sorted(((k, v) for k, v in sub_counts.items() if v >= 2), key=lambda kv: (-kv[1], kv[0]))[:8]
+    subcategory_group = ""
+    if len(top_subs) >= 2:
+        chips = "".join(
+            f'<button type="button" class="chip" data-filter-sub="{esc(name)}" aria-pressed="false">{esc(name)}'
+            f'<span class="chip__count" aria-hidden="true">{n}</span><span class="sr-only"> ({n})</span></button>'
+            for name, n in top_subs
+        )
+        subcategory_group = (
+            '<div class="filter-group" role="group" aria-labelledby="filter-type-title">'
+            '<h2 class="filter-group__title" id="filter-type-title">Type</h2>'
+            f'<div class="filter-chips">{chips}</div></div>'
+        )
+
     body = f"""
 <section class="page-hero category-hero">
   <div class="category-hero__watermark"><img src="/assets/images/categories/{category['slug']}.svg" alt="" /></div>
@@ -724,6 +816,7 @@ def render_category_page(site, category, all_categories, category_products):
         {SEARCH_ICON}
         <input type="search" placeholder="Search in {esc(category['name'])}…" data-category-search aria-label="Search in {esc(category['name'])}" autocomplete="off" enterkeyhint="search" spellcheck="false" />
       </div>
+      {subcategory_group}
       <div class="filter-group" role="group" aria-labelledby="filter-rating-title">
         <h2 class="filter-group__title" id="filter-rating-title">Rating</h2>
         <div class="filter-chips">
@@ -781,6 +874,34 @@ def render_category_page(site, category, all_categories, category_products):
     )
 
 
+def render_collection_page(site, collection):
+    cards = "".join(render_product_card(p, reveal=False, morph=True) for p in collection["items"])
+    n = len(collection["items"])
+    body = f"""
+<section class="page-hero container">
+  {render_breadcrumbs([("Home", "/"), ("Collections", "/#collections"), (collection['name'], None)])}
+  <span class="eyebrow">Collection</span>
+  <h1 class="section-title" style="font-size: var(--fs-display-lg);">{esc(collection['name'])}</h1>
+  <p class="category-hero__desc">{esc(collection['blurb'])}</p>
+</section>
+<section class="section container">
+  <h2 class="sr-only">Products in this collection</h2>
+  <div class="toolbar"><span class="toolbar__count" role="status">{n} finds</span></div>
+  {render_affiliate_note(site)}
+  <div class="grid-products grid-products--feature" data-collection-grid>{cards}</div>
+</section>
+"""
+    return base_page(
+        site,
+        title=f"{collection['name']} — {site['siteName']}",
+        description=collection["blurb"],
+        canonical_path=f"/collection/{collection['slug']}/",
+        og_image=collection["items"][0]["image"],
+        body_html=body,
+        page_scripts=["/js/pages/collection.js"],
+    )
+
+
 # --------------------------------------------------------------------------
 # Product detail pages
 # --------------------------------------------------------------------------
@@ -811,7 +932,7 @@ def render_product_page(site, product, category, related_products):
         related_section = f"""
 <section class="section">
   <div class="container section-head--split" data-reveal="fade">
-    <div><span class="eyebrow">You Might Also Like</span><h2 class="section-title">More from {esc(category['name'])}</h2></div>
+    <div><span class="eyebrow">You Might Also Like</span><h2 class="section-title">More like this</h2></div>
     <div class="rail-controls">
       <button class="icon-btn" type="button" data-rail-prev="related-rail" aria-label="Scroll back">{CHEVRON_LEFT_ICON}</button>
       <button class="icon-btn" type="button" data-rail-next="related-rail" aria-label="Scroll forward">{CHEVRON_ICON}</button>
@@ -1146,7 +1267,8 @@ def render_privacy_page(site):
 
     <h2>What PRIME.FINDS collects</h2>
     <ul>
-      <li><strong>Nothing directly from you.</strong> There are no accounts, sign-ups, comment forms, newsletters or payment forms, so PRIME.FINDS does not ask for or store your name, email address or payment details.</li>
+      <li><strong>Nothing collected through the site.</strong> There are no accounts, sign-ups, comment forms, newsletters or payment forms, so PRIME.FINDS does not ask for or store your name, email address or payment details.</li>
+      <li><strong>If you email us.</strong> If you choose to write to the address on this site, PRIME.FINDS receives your email address and whatever you include in your message, and uses it only to reply to you. Please do not send payment or sensitive details.</li>
       <li><strong>Searches and filters stay in your browser.</strong> The search box and filters work on data your browser has already loaded; what you type is not sent to PRIME.FINDS.</li>
       <li><strong>No analytics or advertising trackers.</strong> The site's code includes a switched-off analytics hook, but no analytics or advertising service is running. If that changes, this policy will be updated first.</li>
       <li><strong>Small preferences on your device.</strong> The site keeps a few items in your browser's storage (whether you have seen the entrance animation, and your accessibility choices). They stay on your device. The <a href="/cookie-notice.html">Cookie Notice</a> lists each one.</li>
@@ -1163,7 +1285,7 @@ def render_privacy_page(site):
     <p>PRIME.FINDS is not directed at children, and it does not knowingly collect personal information from anyone, including children.</p>
 
     <h2>Visitors from different countries</h2>
-    <p>PRIME.FINDS can be visited from anywhere, and data-protection rules differ from country to country. Because PRIME.FINDS does not collect personal information directly, most of the rights you may have over your data relate to the third parties above rather than to PRIME.FINDS. If you have a question or request about anything PRIME.FINDS itself might hold, please get in touch and we will look into it.</p>
+    <p>PRIME.FINDS can be visited from anywhere, and data-protection rules differ from country to country. Because PRIME.FINDS collects no personal information through the site itself (only what you choose to send us by email), most of the rights you may have over your data relate to the third parties above rather than to PRIME.FINDS. If you have a question or request about anything PRIME.FINDS itself might hold, please get in touch and we will look into it.</p>
 
     <h2>Your choices</h2>
     <p>You can clear the items PRIME.FINDS stores in your browser at any time, block third-party requests in your browser settings (the site will fall back to system fonts), or simply not follow the links to retailers.</p>
@@ -1283,7 +1405,15 @@ def main():
     write_file(os.path.join(PUBLIC_DIR, "data", "categories.json"), json.dumps(categories, indent=2))
 
     # ---- Homepage ----
-    write_file(os.path.join(PUBLIC_DIR, "index.html"), render_homepage(site, categories, published, counts))
+    collections = load_collections(published)
+    write_file(os.path.join(PUBLIC_DIR, "index.html"), render_homepage(site, categories, published, counts, collections))
+
+    # ---- Collection pages ----
+    for collection in collections:
+        write_file(
+            os.path.join(PUBLIC_DIR, "collection", collection["slug"], "index.html"),
+            render_collection_page(site, collection),
+        )
 
     # ---- Category pages ----
     for category in categories:
@@ -1297,7 +1427,7 @@ def main():
     categories_by_slug = {c["slug"]: c for c in categories}
     for product in published:
         category = categories_by_slug[product["category"]]
-        related = [p for p in published if p["category"] == product["category"] and p["slug"] != product["slug"]][:4]
+        related = related_products(product, published)
         write_file(
             os.path.join(PUBLIC_DIR, "product", product["slug"], "index.html"),
             render_product_page(site, product, category, related),
@@ -1317,6 +1447,7 @@ def main():
     urls = ["/", "/about.html", "/affiliate-disclosure.html", "/privacy-policy.html", "/terms.html",
             "/accessibility.html", "/cookie-notice.html"]
     urls += [f"/category/{c['slug']}/" for c in categories]
+    urls += [f"/collection/{c['slug']}/" for c in collections]
     urls += [f"/product/{p['slug']}/" for p in published]
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     sitemap += "".join(f"  <url><loc>{base_url}{u}</loc></url>\n" for u in urls)

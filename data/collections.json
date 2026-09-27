@@ -1,0 +1,94 @@
+[
+  {
+    "slug": "desk-glow-up",
+    "name": "Desk Glow-Ups",
+    "blurb": "Lamps, pixel screens and light sculptures that make a desk look like a set.",
+    "products": [
+      "divoom-times-gate-cyberpunk-desk-display",
+      "divoom-pixoo-max-pixel-display",
+      "govee-rgbic-smart-table-lamp-2-h6022",
+      "lepro-tb1-ai-smart-table-lamp-planets",
+      "nanoleaf-elements-wood-look-hexagons-smarter-kit-7-panels",
+      "mito-infinity-mirror-dodecahedron-light",
+      "movdyka-3d-crystal-dna-model-led-base",
+      "sovenomund-ferrofluid-sound-visualizer",
+      "missyou-ms50d2-3d-hologram-fan",
+      "led-matrix-display"
+    ]
+  },
+  {
+    "slug": "watch-it-move",
+    "name": "Watch It Move",
+    "blurb": "Kinetic, magnetic and floating objects that are more fun to watch than to explain.",
+    "products": [
+      "misdenk-kinetic-art-rolling-ball-desk-gadget",
+      "swinging-sticks-kinetic-energy-sculpture-desktop",
+      "tosy-magnet-pyramid-stone",
+      "kiyoming-levitating-hexagon-plant-pot",
+      "mokoqi-magnetic-levitating-globe",
+      "oasis-mini-kinetic-sand-art-table-bamboo",
+      "zicome-magnetic-hourglass-sand-timer",
+      "amerfist-flying-orb-ball-blue",
+      "joeyank-infinity-cube-fidget-toy"
+    ]
+  },
+  {
+    "slug": "the-future-home",
+    "name": "The Future Home",
+    "blurb": "Machines that quietly take over a household chore.",
+    "products": [
+      "roborock-saros-10r-robot-vacuum-and-mop",
+      "petkit-puramax-2-automatic-self-cleaning-litter-box-basic-bundle",
+      "netvue-birdfy-smart-bird-feeder-2k-camera-blue",
+      "automatic-soap-dispenser",
+      "elinksmart-fingerprint-smart-padlock",
+      "velieta-17-cyberpunk-beverage-refrigerator",
+      "looi-robot-ai-desktop-companion"
+    ]
+  },
+  {
+    "slug": "kitchen-toys",
+    "name": "Kitchen Upgrades That Feel Like Toys",
+    "blurb": "Slush, ice cream, nugget ice and other things a kitchen doesn't usually do.",
+    "products": [
+      "ninja-slushi-fs301-frozen-drink-machine",
+      "ninja-creami-7-in-1-ice-cream-maker-nc299amz",
+      "euhomy-nugget-pebble-ice-maker",
+      "euhomy-countertop-ice-maker",
+      "nextmug-self-heating-mug-graphite",
+      "hamilton-beach-mini-food-processor",
+      "circle-joy-electric-salt-pepper-grinder",
+      "zulay-milk-frother"
+    ]
+  },
+  {
+    "slug": "creators-corner",
+    "name": "Creator's Corner",
+    "blurb": "Cameras, tripods, mics and controls for people who make things.",
+    "products": [
+      "insta360-x5-8k-360-action-camera",
+      "logitech-mx-creative-console-graphite",
+      "fujifilm-instax-mini-evo-hybrid-instant-camera-brown-bundle",
+      "camp-snap-v105-8mp-screenless-digital-camera-brown",
+      "mini-mic-pro-wireless-lavalier-microphone-2-pack",
+      "tenikle-pro-flexible-tentacle-tripod-volcano-red",
+      "acer-ai-face-tracking-tripod",
+      "plaud-ai-voice-recorder"
+    ]
+  },
+  {
+    "slug": "retro-and-nostalgic",
+    "name": "Retro & Nostalgic",
+    "blurb": "Old-school looks and formats, from flip clocks to arcade cabinets.",
+    "products": [
+      "clocteck-nixie-style-tube-clock-5-tube-wood-grain",
+      "mooas-retro-flip-desk-clock-black",
+      "arcade1up-ms-pac-man-class-of-81-deluxe",
+      "retro-handheld-game-console",
+      "vornado-vfan-mini-classic-vintage-green",
+      "camp-snap-v105-8mp-screenless-digital-camera-brown",
+      "fujifilm-instax-mini-evo-hybrid-instant-camera-brown-bundle",
+      "sharper-image-led-word-clock-silver"
+    ]
+  }
+]

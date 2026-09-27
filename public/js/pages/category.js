@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const sortSelect = qs('[data-sort-select]', app);
   const searchInput = qs('[data-category-search]', app);
   const ratingChips = qsa('[data-filter-rating]', app);
+  const subChips = qsa('[data-filter-sub]', app);
   const featuredCheckbox = qs('[data-filter-featured]', app);
   const trendingCheckbox = qs('[data-filter-trending]', app);
   const minPriceInput = qs('[data-filter-min-price]', app);
@@ -31,12 +32,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   track(EVENTS.CATEGORY_VIEW, { category: categorySlug, productCount: categoryProducts.length });
 
-  const state = { sort: 'featured', search: '', minRating: null, featuredOnly: false, trendingOnly: false, minPrice: null, maxPrice: null };
+  const state = { sort: 'featured', search: '', subcategory: null, minRating: null, featuredOnly: false, trendingOnly: false, minPrice: null, maxPrice: null };
 
   function render() {
     let list = categoryProducts;
     if (state.search) list = searchProducts(list, state.search);
     list = filterProducts(list, {
+      subcategory: state.subcategory,
       minRating: state.minRating,
       featuredOnly: state.featuredOnly,
       trendingOnly: state.trendingOnly,
@@ -110,6 +112,23 @@ document.addEventListener('DOMContentLoaded', async () => {
       render();
     })
   );
+  subChips.forEach((chip) =>
+    chip.addEventListener('click', () => {
+      const isActive = chip.classList.contains('is-active');
+      subChips.forEach((c) => {
+        c.classList.remove('is-active');
+        c.setAttribute('aria-pressed', 'false');
+      });
+      state.subcategory = null;
+      if (!isActive) {
+        chip.classList.add('is-active');
+        chip.setAttribute('aria-pressed', 'true');
+        state.subcategory = chip.dataset.filterSub;
+      }
+      track(EVENTS.FILTER_USED, { type: 'subcategory', value: state.subcategory, scope: categorySlug });
+      render();
+    })
+  );
   featuredCheckbox?.addEventListener('change', (e) => {
     state.featuredOnly = e.target.checked;
     track(EVENTS.FILTER_USED, { type: 'featured', value: state.featuredOnly, scope: categorySlug });
@@ -132,6 +151,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   clearBtn?.addEventListener('click', () => {
     state.sort = 'featured';
     state.search = '';
+    state.subcategory = null;
     state.minRating = null;
     state.featuredOnly = false;
     state.trendingOnly = false;
@@ -139,7 +159,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     state.maxPrice = null;
     if (sortSelect) sortSelect.value = 'featured';
     if (searchInput) searchInput.value = '';
-    ratingChips.forEach((c) => {
+    [...ratingChips, ...subChips].forEach((c) => {
       c.classList.remove('is-active');
       c.setAttribute('aria-pressed', 'false');
     });

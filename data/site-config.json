@@ -19,17 +19,18 @@
     { "label": "Terms of Use", "href": "/terms.html" },
     { "label": "Affiliate Disclosure", "href": "/affiliate-disclosure.html" },
     { "label": "Cookie Notice", "href": "/cookie-notice.html" },
+    { "label": "Contact", "href": "mailto:prime.finds.amazon.10@gmail.com" },
     { "label": "Help & feedback", "href": "/accessibility.html#report" }
   ],
   "social": {
     "instagram": ""
   },
   "contact": {
-    "email": "",
+    "email": "prime.finds.amazon.10@gmail.com",
     "issuesUrl": "https://github.com/primefindshq/primefindshq.github.io/issues",
-    "note": "No email address or phone number has been published for PRIME.FINDS. If contact.email is set, every legal page and the footer will offer it automatically; until then the public issue tracker of the site's repository is the only verified channel."
+    "note": "contact.email is offered automatically on every legal page and in the footer. The public issue tracker of the site's repository remains a second channel."
   },
-  "legalUpdated": "2026-09-20",
+  "legalUpdated": "2026-09-27",
   "affiliateStatement": "",
   "analytics": {
     "provider": "none",
