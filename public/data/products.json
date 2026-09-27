@@ -5219,5 +5219,52 @@
     "published": true,
     "createdAt": "2026-09-27T00:00:00.000Z",
     "updatedAt": "2026-09-27T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0158",
+    "name": "Ninja SLUSHi FS301 Frozen Drink & Slushie Machine",
+    "slug": "ninja-slushi-fs301-frozen-drink-machine",
+    "category": "home",
+    "secondaryCategories": [
+      "gifts"
+    ],
+    "subcategory": "Kitchen",
+    "shortDescription": "A countertop machine that turns liquids like juice, coffee or soda into frozen slush drinks at home, with no ice needed.",
+    "description": "A full-size frozen-drink machine, on your kitchen counter. Pour a liquid into the 88 oz vessel, pick one of the 5 preset programs, and the Ninja SLUSHi FS301 does the chilling: its RapidChill Technology spins an auger around a cooling cylinder, so the listing says no ice is needed and no blending is involved. The listing names juice, coffee, soda and chocolate milk as starting liquids, and a temperature control lets you make the result thicker or thinner than the preset. Some details from the listing: the vessel holds 88 oz with a 64-oz maximum liquid fill, drinks take about 15 to 60 minutes depending on ingredients, volume and starting temperature, and the mix needs sugar or a sugar substitute to slush. The vessel is described as easy to fill and remove, and the listing says the machine keeps drinks frozen for up to 12 hours. Parts are listed as dishwasher safe, with a detachable lid and drip tray. Listed contents: motor base with cooling system, 88 oz vessel with pour handle, drip tray, auger, anti-drip spout, and a 10-recipe inspiration guide. It weighs about 24 lb, so plan a spot for it.",
+    "whyWeLikeIt": "It's the surprise of it: an everyday drink goes in, and a frozen one comes out of a machine that looks like it belongs behind a counter. A dedicated slush machine at home is a fun object to show off, and an unusual gift for someone who likes making drinks.",
+    "image": "/assets/images/products/ninja-slushi-fs301-frozen-drink-machine.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 4616,
+    "tags": [
+      "ninja slushi",
+      "ninja slushi fs301",
+      "slushi machine",
+      "slush machine",
+      "slushie machine",
+      "frozen drink maker",
+      "frozen drink machine",
+      "slush maker",
+      "home slushie maker",
+      "kitchen gadget",
+      "gift"
+    ],
+    "highlights": [
+      "88 oz vessel (64 oz max liquid fill), 5 preset programs",
+      "RapidChill Technology; no ice needed as listed",
+      "Temperature control for thicker or thinner results",
+      "Drinks take about 15-60 minutes depending on ingredients; mix must include sugar or a substitute",
+      "Dishwasher-safe parts, detachable lid and drip tray",
+      "About 24 lb"
+    ],
+    "affiliateUrl": "https://link.amazon/B0dTnMGAg",
+    "externalUrl": "https://link.amazon/B0dTnMGAg",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-27T00:00:00.000Z",
+    "updatedAt": "2026-09-27T00:00:00.000Z"
   }
 ]
