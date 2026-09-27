@@ -5360,5 +5360,53 @@
     "published": true,
     "createdAt": "2026-09-27T00:00:00.000Z",
     "updatedAt": "2026-09-27T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0161",
+    "name": "Roborock Saros 10R Robot Vacuum and Mop",
+    "slug": "roborock-saros-10r-robot-vacuum-and-mop",
+    "category": "home",
+    "secondaryCategories": [
+      "tech",
+      "gifts"
+    ],
+    "subcategory": "Smart Home",
+    "shortDescription": "A slim robot vacuum and mop that leaves its dock, cleans the floor on its own and returns to a multifunction dock.",
+    "description": "Leave it on the floor. Let it handle the floor. The Roborock Saros 10R is a robot vacuum and mop with a 3.14-inch ultra-slim body: the listing says its StarSight Autonomous System 2.0 removes the need for a raised LDS unit, so it can slide under beds, sofas and cabinets. It navigates with 3D sensing and VertiBeam lateral obstacle avoidance, and the listing describes detecting 108 obstacle types. Suction is listed at up to 22,000 Pa, with a Zero-Tangling DuoDivide main brush, and a FlexiArm side brush and mop that extend toward corners and edges. The AdaptiLift chassis is listed as climbing obstacles up to 4 cm and lifting the mops over carpet. Its Multifunctional Dock 4.0 is described with 176°F hot-water mop washing, hot-air drying, automatic dust collection (listed as up to 60 days), automatic tank refilling and a detergent dispenser. Control is through the Roborock app and the built-in Hello Rocky voice assistant, with 2.4GHz Wi-Fi only. Listed battery life is 180 minutes. Listed contents: robot vacuum, multifunctional dock, dock base, rotating mop modules (2), a disposable dust bag, power cable and user manual. It is a big machine to house, at about 25.5 lb including the dock, so check your space.",
+    "whyWeLikeIt": "The appeal is the routine: the robot leaves its dock, works its way around furniture, vacuums and mops, then goes back, while the dock takes care of washing and drying the mops. It's an everyday chore turned into a small piece of home automation.",
+    "image": "/assets/images/products/roborock-saros-10r-robot-vacuum-and-mop.png",
+    "additionalImages": [],
+    "price": null,
+    "currency": "USD",
+    "rating": 4.0,
+    "reviewCount": 5114,
+    "tags": [
+      "roborock",
+      "roborock saros 10r",
+      "saros 10r",
+      "robot vacuum",
+      "robot vacuum and mop",
+      "robot mop",
+      "slim robot vacuum",
+      "smart vacuum",
+      "self cleaning dock",
+      "home tech",
+      "gift"
+    ],
+    "highlights": [
+      "3.14-inch ultra-slim robot vacuum and mop",
+      "Up to 22,000 Pa suction and Zero-Tangling brush, as listed",
+      "3D obstacle sensing and lateral obstacle avoidance",
+      "Dock with hot-water mop washing, hot-air drying, dust collection and auto refill",
+      "App and Hello Rocky voice control; 2.4GHz Wi-Fi only",
+      "Includes robot, dock, dock base, 2 mop modules, dust bag, cable, manual"
+    ],
+    "affiliateUrl": "https://link.amazon/B0hhlgBEu",
+    "externalUrl": "https://link.amazon/B0hhlgBEu",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-27T00:00:00.000Z",
+    "updatedAt": "2026-09-27T00:00:00.000Z"
   }
 ]
