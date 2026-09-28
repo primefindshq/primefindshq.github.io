@@ -7113,5 +7113,50 @@
     "published": true,
     "createdAt": "2026-09-27T00:00:00.000Z",
     "updatedAt": "2026-09-27T00:00:00.000Z"
+  },
+  {
+    "id": "prd-0201",
+    "name": "LEGO Botanicals Bonsai Tree (10281)",
+    "slug": "lego-botanicals-bonsai-tree-10281",
+    "category": "home",
+    "secondaryCategories": [
+      "gifts",
+      "desk-setup"
+    ],
+    "subcategory": "Decor",
+    "shortDescription": "An 878-piece LEGO build of a bonsai tree in a rectangular pot on a wood-effect stand, with swappable green leaves or pink cherry blossoms.",
+    "description": "Part of LEGO's adult Botanicals collection, this 878-piece set builds a bonsai tree model with a rectangular pot and a slatted wood-effect stand. It includes two sets of foliage, classic green leaves and pink cherry blossom blooms, and both can be custom arranged, so the finished tree can be restyled rather than staying one fixed display. The pink blossoms are built from tiny frog-shaped pieces. According to the listing, several elements in the collection are made from plant-based plastic produced from sustainably sourced sugarcane. Rated for ages 18+.",
+    "whyWeLikeIt": "It's a build first and a decoration second: an evening with the bricks, then a bonsai that never needs watering and can switch from green to cherry blossom whenever you like. An easy gift for anyone with a desk or shelf to fill.",
+    "image": "/assets/images/products/lego-botanicals-bonsai-tree-10281.jpg",
+    "additionalImages": [],
+    "price": 39.98,
+    "currency": "USD",
+    "rating": 4.9,
+    "reviewCount": 25103,
+    "tags": [
+      "lego",
+      "lego botanicals",
+      "bonsai",
+      "building set",
+      "adult lego",
+      "cherry blossom",
+      "desk decor",
+      "home decor",
+      "gift"
+    ],
+    "highlights": [
+      "878 pieces, ages 18+ (per the listing)",
+      "Bonsai with rectangular pot and slatted wood-effect stand",
+      "Two foliage options: green leaves or pink cherry blossoms",
+      "Cherry blossoms are built from tiny frog pieces",
+      "Some elements made from sugarcane-based plastic (listed)"
+    ],
+    "affiliateUrl": "https://link.amazon/B0e1rBc5j",
+    "externalUrl": "https://link.amazon/B0e1rBc5j",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-09-28T00:00:00.000Z",
+    "updatedAt": "2026-09-28T00:00:00.000Z"
   }
 ]
