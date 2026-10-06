@@ -71,6 +71,23 @@ def load_collections(published):
     return out
 
 
+def load_videos(published):
+    """Video landing pages (data/videos.json), newest first. Each lists the products
+    a video shows, under the same numbers the video uses; unpublished slugs are skipped."""
+    path = os.path.join(DATA_DIR, "videos.json")
+    if not os.path.exists(path):
+        return []
+    with open(path, encoding="utf-8") as f:
+        raw = json.load(f)
+    by_slug = {p["slug"]: p for p in published}
+    out = []
+    for v in raw:
+        items = [{**i, "product": by_slug[i["slug"]]} for i in v["items"] if i["slug"] in by_slug]
+        if items:
+            out.append({**v, "items": sorted(items, key=lambda i: i["n"])})
+    return out
+
+
 def related_products(product, published, limit=4):
     """Products most like this one: same subcategory, same category, shared secondary categories
     and shared tags all add to the score (never the product itself); ties fall back to newest."""
@@ -903,6 +920,76 @@ def render_collection_page(site, collection):
 
 
 # --------------------------------------------------------------------------
+# Video landing pages (/v/): the link-in-bio destination. Each page lists the
+# products of one video under the numbers the video shows, so a viewer who
+# wants "#3" taps 3 and lands on it.
+# --------------------------------------------------------------------------
+
+def render_video_list(videos, current_slug=None):
+    rows = "".join(
+        f'<li><a class="video-list__link{" is-current" if v["slug"] == current_slug else ""}" href="/v/{v["slug"]}/">'
+        f'<span class="video-list__title">{esc(v["title"])}</span>'
+        f'<span class="video-list__count tag-mono">{len(v["items"]):02d} finds</span></a></li>'
+        for v in videos
+    )
+    return f'<ul class="video-list">{rows}</ul>'
+
+
+def render_video_body(site, video, videos, eyebrow):
+    jump = "".join(f'<a class="video-jump__num" href="#n{i["n"]}">{i["n"]}</a>' for i in video["items"])
+    cards = "".join(
+        f"""
+<div class="video-item" id="n{i['n']}">
+  <div class="video-item__label"><span class="video-item__num">#{i['n']}</span> {esc(i['label'])}</div>
+  {render_product_card(i['product'], reveal=False)}
+</div>"""
+        for i in video["items"]
+    )
+    return f"""
+<section class="page-hero container video-hero">
+  <span class="eyebrow">{esc(eyebrow)}</span>
+  <h1 class="section-title" style="font-size: var(--fs-display-lg);">{esc(video['title'])}</h1>
+  <p class="category-hero__desc">{esc(video['blurb'])}</p>
+  <nav class="video-jump" aria-label="Jump to a number">{jump}</nav>
+</section>
+<section class="section container">
+  <h2 class="sr-only">Products in this video</h2>
+  {render_affiliate_note(site)}
+  <div class="video-grid">{cards}</div>
+</section>
+<section class="section container">
+  <h2 class="section-title">All videos</h2>
+  {render_video_list(videos, video['slug'])}
+</section>
+"""
+
+
+def render_video_page(site, video, videos):
+    return base_page(
+        site,
+        title=f"{video['title']} — {site['siteName']}",
+        description=f"The products from the PRIME.FINDS video “{video['title']}”, by number.",
+        canonical_path=f"/v/{video['slug']}/",
+        og_image=video["items"][0]["product"]["image"],
+        body_html=render_video_body(site, video, videos, "From the video"),
+        page_scripts=["/js/pages/video.js"],
+    )
+
+
+def render_videos_index(site, videos):
+    latest = videos[0]
+    return base_page(
+        site,
+        title=f"From the videos — {site['siteName']}",
+        description="Every product from the PRIME.FINDS videos, by number. The newest video is first.",
+        canonical_path="/v/",
+        og_image=latest["items"][0]["product"]["image"],
+        body_html=render_video_body(site, latest, videos, "Newest video"),
+        page_scripts=["/js/pages/video.js"],
+    )
+
+
+# --------------------------------------------------------------------------
 # Product detail pages
 # --------------------------------------------------------------------------
 
@@ -1415,6 +1502,16 @@ def main():
             render_collection_page(site, collection),
         )
 
+    # ---- Video landing pages ----
+    videos = load_videos(published)
+    if videos:
+        write_file(os.path.join(PUBLIC_DIR, "v", "index.html"), render_videos_index(site, videos))
+        for video in videos:
+            write_file(
+                os.path.join(PUBLIC_DIR, "v", video["slug"], "index.html"),
+                render_video_page(site, video, videos),
+            )
+
     # ---- Category pages ----
     for category in categories:
         cat_products = [p for p in published if product_in_category(p, category["slug"])]
@@ -1448,6 +1545,8 @@ def main():
             "/accessibility.html", "/cookie-notice.html"]
     urls += [f"/category/{c['slug']}/" for c in categories]
     urls += [f"/collection/{c['slug']}/" for c in collections]
+    if videos:
+        urls += ["/v/"] + [f"/v/{v['slug']}/" for v in videos]
     urls += [f"/product/{p['slug']}/" for p in published]
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     sitemap += "".join(f"  <url><loc>{base_url}{u}</loc></url>\n" for u in urls)

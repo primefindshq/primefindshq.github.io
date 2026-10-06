@@ -552,3 +552,62 @@
   .collection-tile__thumb img, .collection-tile__body { transition: none; }
   .collection-tile:hover .collection-tile__thumb img, .collection-tile:hover .collection-tile__body { transform: none; translate: none; }
 }
+
+/* ---------------------------------------------------------------------------
+   Video landing pages (/v/): products listed under the numbers the video shows
+   --------------------------------------------------------------------------- */
+.video-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs);
+  margin-top: var(--space-md);
+}
+.video-jump__num {
+  display: inline-grid;
+  place-items: center;
+  min-width: 44px;
+  height: 44px;
+  padding: 0 var(--space-xs);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-full);
+  color: var(--color-text);
+  font-weight: 600;
+  text-decoration: none;
+}
+.video-jump__num:hover,
+.video-jump__num:focus-visible { background: var(--color-gold); border-color: var(--color-gold); color: var(--color-text-on-gold); }
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-lg);
+}
+.video-item { scroll-margin-top: 96px; display: flex; flex-direction: column; gap: var(--space-xs); }
+.video-item .product-card { flex: 1; border: 1px solid var(--color-border); }
+.video-item__label { font-weight: 600; color: var(--color-text); }
+.video-item__num {
+  display: inline-block;
+  margin-right: var(--space-3xs);
+  color: var(--color-gold);
+  font-family: var(--font-display, inherit);
+  font-size: 1.6em;
+  line-height: 1;
+}
+.video-item:target .product-card { border-color: var(--color-gold); }
+@media (max-width: 600px) {
+  .video-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-md) var(--space-xs); }
+  .video-item__label { font-size: var(--fs-body-sm); }
+}
+.video-list { list-style: none; margin: var(--space-md) 0 0; padding: 0; border-top: 1px solid var(--color-border); }
+.video-list__link {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+  text-decoration: none;
+}
+.video-list__link:hover .video-list__title,
+.video-list__link.is-current .video-list__title { color: var(--color-gold); }
+.video-list__count { color: var(--color-text-dim); white-space: nowrap; }
