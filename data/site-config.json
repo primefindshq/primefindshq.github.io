@@ -9,8 +9,9 @@
   "navLinks": [
     { "label": "Home", "href": "/" },
     { "label": "Categories", "href": "/#categories" },
+    { "label": "Gift Guide", "href": "/category/gifts/" },
+    { "label": "Videos", "href": "/v/" },
     { "label": "Trending", "href": "/#trending" },
-    { "label": "Latest", "href": "/#latest" },
     { "label": "About", "href": "/about.html" }
   ],
   "footerLegalLinks": [

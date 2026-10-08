@@ -91,9 +91,17 @@ export async function getLatestProducts(limit = 8) {
 }
 
 /** Sort a product list. Supports the sort keys used across category pages / "Latest Finds". */
+function popularity(p) {
+  return (p.rating || 0) * Math.log10((p.reviewCount || 0) + 10);
+}
+
 export function sortProducts(products, sortKey) {
   const list = [...products];
   switch (sortKey) {
+    case 'popular':
+      // Rating weighted by review volume (mirrors popularity() in scripts/build.py),
+      // so a 4.8 with 50k reviews outranks a 5.0 with a dozen.
+      return list.sort((a, b) => popularity(b) - popularity(a));
     case 'newest':
       return list.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
     case 'price-asc':

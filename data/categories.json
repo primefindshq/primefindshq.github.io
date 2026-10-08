@@ -18,13 +18,49 @@
     "order": 2
   },
   {
+    "id": "cat-kitchen",
+    "slug": "kitchen",
+    "name": "Kitchen",
+    "shortDescription": "Tools that make cooking easier.",
+    "description": "Cookware, gadgets, small appliances and coffee gear that earn their counter space, from everyday tools to weekend projects.",
+    "icon": "kitchen",
+    "order": 3
+  },
+  {
     "id": "cat-gaming",
     "slug": "gaming",
     "name": "Gaming",
     "shortDescription": "Gear for players who notice the details.",
     "description": "Controllers, peripherals, and setup upgrades for people who take their play seriously — comfort, response time, and build quality first.",
     "icon": "gaming",
-    "order": 3
+    "order": 4
+  },
+  {
+    "id": "cat-kids",
+    "slug": "kids",
+    "name": "Kids & Baby",
+    "shortDescription": "Toys and gear for little ones.",
+    "description": "Toys, crafts, building sets and baby gear from trusted brands, picked for play that lasts beyond the first afternoon.",
+    "icon": "kids",
+    "order": 5
+  },
+  {
+    "id": "cat-outdoors",
+    "slug": "outdoors",
+    "name": "Outdoors & Sports",
+    "shortDescription": "Get outside and get moving.",
+    "description": "Camping gear, backyard games, sports equipment, fitness basics and garden tools for time spent outside or staying active.",
+    "icon": "outdoors",
+    "order": 6
+  },
+  {
+    "id": "cat-pets",
+    "slug": "pets",
+    "name": "Pets",
+    "shortDescription": "Finds for dogs and cats.",
+    "description": "Toys, feeders, grooming tools and travel gear for dogs and cats, chosen to make life with pets a little easier.",
+    "icon": "pets",
+    "order": 7
   },
   {
     "id": "cat-travel",
@@ -33,7 +69,7 @@
     "shortDescription": "Pack light. Move easy.",
     "description": "Bags, organizers, and travel tech built for people who move often and don't want to think twice about what's in their carry-on.",
     "icon": "travel",
-    "order": 4
+    "order": 8
   },
   {
     "id": "cat-desk-setup",
@@ -42,7 +78,7 @@
     "shortDescription": "Build a workspace worth showing up to.",
     "description": "Monitor arms, lighting, cable management, and small details that turn a desk into a proper setup.",
     "icon": "desk",
-    "order": 5
+    "order": 9
   },
   {
     "id": "cat-gifts",
@@ -51,7 +87,7 @@
     "shortDescription": "Something worth giving.",
     "description": "Curated picks for when you want to give a gift that doesn't feel like a last-minute decision.",
     "icon": "gift",
-    "order": 6
+    "order": 10
   },
   {
     "id": "cat-under-25",
@@ -60,6 +96,6 @@
     "shortDescription": "Small price. Still worth it.",
     "description": "Proof that genuinely good finds don't need a big budget. Everything here is under $25.",
     "icon": "value",
-    "order": 7
+    "order": 11
   }
 ]

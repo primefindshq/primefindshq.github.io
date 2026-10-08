@@ -10,6 +10,12 @@ import { affiliateLinkMarkup } from '../core/affiliate.js';
 // link can be named by the product title and described by the blurb, price and rating.
 let cardSeq = 0;
 
+const CATEGORY_NAMES = {
+  tech: 'Tech', home: 'Home', kitchen: 'Kitchen', gaming: 'Gaming', kids: 'Kids & Baby',
+  outdoors: 'Outdoors & Sports', pets: 'Pets', travel: 'Travel', 'desk-setup': 'Desk Setup',
+  gifts: 'Gifts', 'under-25': 'Under $25',
+};
+
 export function productCardMarkup(product) {
   const cid = `pcj${++cardSeq}`;
   const badges = [];
@@ -28,7 +34,7 @@ export function productCardMarkup(product) {
                onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
         </div>
         <div class="product-card__body">
-          <span class="product-card__category">${escapeHtml(product.category.replace('-', ' '))}</span>
+          <span class="product-card__category">${escapeHtml(CATEGORY_NAMES[product.category] || product.category.replace('-', ' '))}</span>
           <h3 class="product-card__name" id="${cid}-name">${escapeHtml(product.name)}</h3>
           <p class="product-card__desc visually-line-clamp-2" id="${cid}-desc">${escapeHtml(product.shortDescription)}</p>
           <div class="product-card__meta" id="${cid}-meta">

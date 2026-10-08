@@ -22,6 +22,7 @@ component, and data/*.json becomes the seed for a real database.
 """
 import html
 import json
+import math
 import os
 import shutil
 
@@ -149,6 +150,9 @@ def render_stars(rating, review_count=None):
 
 
 def category_label(slug):
+    for c in _ALL_CATEGORIES or []:
+        if c["slug"] == slug:
+            return c["name"]
     return slug.replace("-", " ")
 
 
@@ -631,7 +635,73 @@ def base_page(site, *, title, description, canonical_path, og_image=None, body_h
 # Homepage
 # --------------------------------------------------------------------------
 
-def render_homepage(site, categories, products, counts, collections=()):
+GIFT_BUDGETS = [("Under $25", 25), ("Under $50", 50), ("Under $100", 100)]
+GIFT_INTERESTS = [
+    ("For the cook", "kitchen"), ("For kids", "kids"), ("For pet lovers", "pets"),
+    ("For gamers", "gaming"), ("For tech lovers", "tech"), ("For the outdoorsy", "outdoors"),
+    ("For travelers", "travel"), ("For the home", "home"),
+]
+
+
+def render_gift_guide(heading_tag="h2", title="Find a gift fast"):
+    """Budget + interest shortcuts. Budgets open the Gifts grid pre-filtered by
+    max price (category.js reads ?max=); interests open the matching category."""
+    budgets = "".join(
+        f'<a class="gift-guide__budget" href="/category/gifts/?max={amount}">{esc(label)}</a>'
+        for label, amount in GIFT_BUDGETS
+    )
+    interests = "".join(
+        f'<a class="gift-guide__interest" href="/category/{slug}/">'
+        f'<span>{esc(label)}</span><span class="gift-guide__arrow" aria-hidden="true">&rarr;</span></a>'
+        for label, slug in GIFT_INTERESTS
+    )
+    return f"""
+<div class="gift-guide">
+  <{heading_tag} class="gift-guide__title">{esc(title)}</{heading_tag}>
+  <div class="gift-guide__row">
+    <span class="gift-guide__label">By budget</span>
+    <div class="gift-guide__budgets">{budgets}</div>
+  </div>
+  <div class="gift-guide__row">
+    <span class="gift-guide__label">By interest</span>
+    <div class="gift-guide__interests">{interests}</div>
+  </div>
+</div>
+"""
+
+
+def render_video_strip(videos):
+    """Homepage strip for the newest video: its products in video order, numbered."""
+    if not videos:
+        return ""
+    v = videos[0]
+    items = "".join(
+        f'<div class="rail__item"><div class="video-item" id="h{i["n"]}">'
+        f'<div class="video-item__label"><span class="video-item__num">#{i["n"]}</span> {esc(i["label"])}</div>'
+        f'{render_product_card(i["product"], reveal=False)}</div></div>'
+        for i in v["items"]
+    )
+    return f"""
+<section class="section" id="from-the-videos">
+  <div class="container section-head--split" data-reveal="fade">
+    <div>
+      <span class="eyebrow">From the videos</span>
+      <h2 class="section-title">{esc(v['title'])}</h2>
+      <p class="section-desc">Saw something in our latest video? Every product is here under the same number. <a href="/v/">All videos</a></p>
+    </div>
+    <div class="rail-controls">
+      <button class="icon-btn" type="button" data-rail-prev="video-rail" aria-label="Scroll video products back">{CHEVRON_LEFT_ICON}</button>
+      <button class="icon-btn" type="button" data-rail-next="video-rail" aria-label="Scroll video products forward">{CHEVRON_ICON}</button>
+    </div>
+  </div>
+  <div class="container">
+    <div class="rail" id="video-rail" data-rail role="region" aria-label="Products from the latest video">{items}</div>
+  </div>
+</section>
+"""
+
+
+def render_homepage(site, categories, products, counts, collections=(), videos=()):
     trending = [p for p in products if p.get("trending")][:10]
     latest = sorted(products, key=lambda p: p["createdAt"], reverse=True)[:8]
     featured = next((p for p in products if p.get("featured")), products[0] if products else None)
@@ -649,7 +719,8 @@ def render_homepage(site, categories, products, counts, collections=()):
       <h1 class="hero__title hero-enter hero-enter--1">DISCOVER WHAT'S<br/><span class="accent">worth</span> buying.</h1>
       <p class="hero__sub hero-enter hero-enter--2">No endless scrolling through search results. PRIME.FINDS curates the gadgets, gear and small good ideas actually worth your money.</p>
       <div class="hero__ctas hero-enter hero-enter--3">
-        <a class="btn btn--primary" href="#trending">Enter the Catalog {CHEVRON_ICON}</a>
+        <a class="btn btn--primary" href="#categories">Enter the Catalog {CHEVRON_ICON}</a>
+        <a class="btn btn--secondary" href="/v/">From our videos</a>
         <span class="hero__ctas-note">{len(products):02d} finds, curated</span>
       </div>
     </div>
@@ -687,10 +758,22 @@ def render_homepage(site, categories, products, counts, collections=()):
     <div>
       <span class="eyebrow">Browse</span>
       <h2 class="section-title">Shop by category</h2>
-      <p class="section-desc">Seven ways into the catalog, with more added as we curate further.</p>
+      <p class="section-desc">{len(categories)} ways into the catalog, with more added as we curate further.</p>
     </div>
   </div>
   <div class="category-bento">{category_tiles}</div>
+</section>
+"""
+    gift_section = f"""
+<section class="section container" id="gift-guide">
+  <div class="section-head" data-reveal="fade">
+    <div>
+      <span class="eyebrow">Gift Guide</span>
+      <h2 class="section-title">Shopping for someone?</h2>
+      <p class="section-desc">Start from a budget or from what they love.</p>
+    </div>
+  </div>
+  {render_gift_guide(heading_tag="h3", title="Pick a starting point")}
 </section>
 """
 
@@ -742,7 +825,8 @@ def render_homepage(site, categories, products, counts, collections=()):
 </section>
 """
 
-    body = hero + trending_section + category_section + collections_section + editorial_section + latest_section
+    body = (hero + render_video_strip(videos) + category_section + trending_section + gift_section
+            + collections_section + editorial_section + latest_section)
 
     ld_json = json.dumps({
         "@context": "https://schema.org",
@@ -786,9 +870,21 @@ def render_homepage(site, categories, products, counts, collections=()):
 # Category pages
 # --------------------------------------------------------------------------
 
+PAGE_SIZE = 24
+
+
+def popularity(p):
+    """Mirror of sortProducts('popular') in js/core/store.js: rating weighted by
+    how many reviews back it up, so a 4.8 with 50k reviews outranks a 5.0 with 12."""
+    return (p.get("rating") or 0) * math.log10((p.get("reviewCount") or 0) + 10)
+
+
 def render_category_page(site, category, all_categories, category_products):
-    initial_sorted = sorted(category_products, key=lambda p: p.get("featured", False), reverse=True)
-    cards = "".join(render_product_card(p, reveal=False, morph=True) for p in initial_sorted) if initial_sorted else ""
+    initial_sorted = sorted(category_products, key=popularity, reverse=True)
+    # Only the first page is server-rendered (keeps the HTML small on phones);
+    # js/pages/category.js renders the rest behind a "Show more" button.
+    cards = "".join(render_product_card(p, reveal=False, morph=True) for p in initial_sorted[:PAGE_SIZE]) if initial_sorted else ""
+    gift_block = render_gift_guide() if category["slug"] == "gifts" else ""
 
     empty_state = """
 <div class="state-panel">
@@ -826,6 +922,7 @@ def render_category_page(site, category, all_categories, category_products):
     <p class="category-hero__desc">{esc(category['description'])}</p>
   </div>
 </section>
+{f'<section class="container">{gift_block}</section>' if gift_block else ''}
 <section class="section container">
   <div class="category-layout" data-category-app data-category-slug="{category['slug']}">
     <div class="category-filters" role="group" aria-label="Filter products">
@@ -862,6 +959,7 @@ def render_category_page(site, category, all_categories, category_products):
         <div class="toolbar__controls">
           <div class="input-field select-field">
             <select data-sort-select aria-label="Sort products">
+              <option value="popular">Most popular</option>
               <option value="featured">Featured</option>
               <option value="trending">Trending</option>
               <option value="newest">Newest</option>
@@ -874,6 +972,10 @@ def render_category_page(site, category, all_categories, category_products):
       </div>
       {render_affiliate_note(site)}
       <div class="grid-products grid-products--feature" data-category-grid>{cards if cards else ''}</div>
+      <div class="load-more" data-load-more-wrap{'' if len(initial_sorted) > PAGE_SIZE else ' hidden'}>
+        <p class="load-more__status" data-load-more-status>Showing {min(PAGE_SIZE, len(initial_sorted))} of {len(initial_sorted)}</p>
+        <button type="button" class="btn btn--secondary" data-load-more>Show more</button>
+      </div>
       {'' if cards else empty_state}
     </div>
   </div>
@@ -1050,6 +1152,7 @@ def render_product_page(site, product, category, related_products):
         {render_stars(product['rating'], product['reviewCount'])}
         {'<span class="badge badge--gold">Trending</span>' if product.get('trending') else ''}
       </div>
+      {f'<p class="product-detail__price-note pd-enter pd-enter--3">Price checked {esc(format_date_long(product["updatedAt"][:10]))}. Amazon prices change often, so check the current price there.</p>' if product.get('price') is not None and product.get('updatedAt') else ''}
       <div class="pd-enter pd-enter--4">
         <h2 class="sr-only">About this product</h2>
         <p class="product-detail__desc">{esc(product['description'])}</p>
@@ -1066,6 +1169,10 @@ def render_product_page(site, product, category, related_products):
         <p class="cta-panel__disclaimer">You will leave {esc(site['siteName'])} to view this product on Amazon, where you can check the current price, availability and shipping before you buy. This is an affiliate link: {esc(site['siteName'])} may earn a commission from qualifying purchases, at no extra cost to you. <a href="/affiliate-disclosure.html">Affiliate disclosure</a>.</p>
       </div>
     </div>
+  </div>
+  <div class="mobile-cta" data-mobile-cta aria-hidden="true">
+    <span class="mobile-cta__price">{format_price(product['price'], product['currency'])}</span>
+    <a class="btn btn--primary" data-affiliate-link data-product-slug="{product['slug']}" tabindex="-1">View at Amazon {CHEVRON_ICON}</a>
   </div>
 </section>
 {related_section}
@@ -1493,7 +1600,8 @@ def main():
 
     # ---- Homepage ----
     collections = load_collections(published)
-    write_file(os.path.join(PUBLIC_DIR, "index.html"), render_homepage(site, categories, published, counts, collections))
+    videos = load_videos(published)
+    write_file(os.path.join(PUBLIC_DIR, "index.html"), render_homepage(site, categories, published, counts, collections, videos))
 
     # ---- Collection pages ----
     for collection in collections:
@@ -1503,7 +1611,6 @@ def main():
         )
 
     # ---- Video landing pages ----
-    videos = load_videos(published)
     if videos:
         write_file(os.path.join(PUBLIC_DIR, "v", "index.html"), render_videos_index(site, videos))
         for video in videos:

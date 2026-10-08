@@ -1,4 +1,5 @@
-// Category page interactivity: search-within-category, filters, sorting.
+// Category page interactivity: search-within-category, filters, sorting, and
+// paging (24 cards at a time behind a "Show more" button).
 // The initial grid markup is server-rendered (SEO baseline); this script
 // re-renders the grid client-side from the full in-memory product list
 // whenever the visitor changes a control.
@@ -25,6 +26,12 @@ document.addEventListener('DOMContentLoaded', async () => {
   const minPriceInput = qs('[data-filter-min-price]', app);
   const maxPriceInput = qs('[data-filter-max-price]', app);
   const clearBtn = qs('[data-filters-clear]', app);
+  const moreWrap = qs('[data-load-more-wrap]', app);
+  const moreBtn = qs('[data-load-more]', app);
+  const moreStatus = qs('[data-load-more-status]', app);
+  const PAGE = 24;
+  let currentList = [];
+  let shown = PAGE;
 
   const allProducts = await getProducts();
   const categoryProducts = await getProductsByCategory(categorySlug);
@@ -32,7 +39,56 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   track(EVENTS.CATEGORY_VIEW, { category: categorySlug, productCount: categoryProducts.length });
 
-  const state = { sort: 'featured', search: '', subcategory: null, minRating: null, featuredOnly: false, trendingOnly: false, minPrice: null, maxPrice: null };
+  const state = { sort: 'popular', search: '', subcategory: null, minRating: null, featuredOnly: false, trendingOnly: false, minPrice: null, maxPrice: null };
+
+  // Deep links like /category/gifts/?max=25 (used by the gift guide) pre-set filters.
+  const params = new URLSearchParams(location.search);
+  const num = (v) => (v !== null && v !== '' && !Number.isNaN(Number(v)) ? Number(v) : null);
+  state.maxPrice = num(params.get('max'));
+  state.minPrice = num(params.get('min'));
+  if (params.get('sort') && sortSelect && [...sortSelect.options].some((o) => o.value === params.get('sort'))) state.sort = params.get('sort');
+  if (params.get('q')) state.search = params.get('q');
+  if (maxPriceInput && state.maxPrice !== null) maxPriceInput.value = state.maxPrice;
+  if (minPriceInput && state.minPrice !== null) minPriceInput.value = state.minPrice;
+  if (sortSelect) sortSelect.value = state.sort;
+  if (searchInput && state.search) searchInput.value = state.search;
+
+  function updateMore() {
+    if (!moreWrap) return;
+    const remaining = currentList.length - shown;
+    moreWrap.hidden = remaining <= 0;
+    if (moreStatus) moreStatus.textContent = `Showing ${Math.min(shown, currentList.length)} of ${currentList.length}`;
+    if (moreBtn) moreBtn.textContent = `Show ${Math.min(PAGE, Math.max(remaining, 0))} more`;
+  }
+
+  function animateIn(cards) {
+    cards.forEach((el, i) => {
+      el.style.transitionDelay = `${Math.min(i, 3) * 45}ms`;
+      el.addEventListener('transitionend', () => { el.style.transitionDelay = ''; }, { once: true });
+    });
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        cards.forEach((el) => el.classList.add('is-visible'));
+      });
+    });
+  }
+
+  function showMore() {
+    const next = currentList.slice(shown, shown + PAGE);
+    if (!next.length) return;
+    const holder = document.createElement('div');
+    holder.innerHTML = next.map(productCardMarkup).join('');
+    const added = [...holder.children];
+    added.forEach((el) => grid.appendChild(el));
+    shown += next.length;
+    hydrateAffiliateLinks(grid, bySlug, `category:${categorySlug}`);
+    initCardTilt(grid);
+    animateIn(added.filter((el) => el.matches('[data-reveal]')));
+    // Move focus to the first new card so keyboard and screen-reader users land on it.
+    added[0]?.querySelector('a')?.focus({ preventScroll: true });
+    updateMore();
+  }
+  moreBtn?.addEventListener('click', showMore);
 
   function render() {
     let list = categoryProducts;
@@ -49,8 +105,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     countEl.textContent = `${list.length} ${list.length === 1 ? 'find' : 'finds'}`;
 
+    currentList = list;
+    shown = PAGE;
+    updateMore();
+
     const html = list.length
-      ? list.map(productCardMarkup).join('')
+      ? list.slice(0, PAGE).map(productCardMarkup).join('')
       : `
         <div class="state-panel" style="grid-column: 1/-1;">
           <svg class="state-panel__icon" viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
@@ -63,22 +123,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     hydrateAffiliateLinks(grid, bySlug, `category:${categorySlug}`);
     initCardTilt(grid);
-    const cards = grid.querySelectorAll('[data-reveal]');
-    cards.forEach((el, i) => {
-      el.style.transitionDelay = `${Math.min(i, 3) * 45}ms`;
-      // Clear the inline delay once the entrance has played so it never
-      // lingers and dulls this card's next hover transition.
-      el.addEventListener('transitionend', () => { el.style.transitionDelay = ''; }, { once: true });
-    });
-    // Two rAFs so the browser actually paints the opacity:0 starting style
-    // before .is-visible is added -- adding it in the same tick as the
-    // innerHTML swap collapses both states into one frame and the fade
-    // never plays, which is why this grid used to just snap.
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        cards.forEach((el) => el.classList.add('is-visible'));
-      });
-    });
+    // Two rAFs inside animateIn so the opacity:0 starting style is painted
+    // before .is-visible is added -- otherwise the fade collapses into one frame.
+    animateIn([...grid.querySelectorAll('[data-reveal]')]);
   }
 
   const debouncedSearch = debounce((value) => {
@@ -149,7 +196,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   maxPriceInput?.addEventListener('input', debouncedPrice);
 
   clearBtn?.addEventListener('click', () => {
-    state.sort = 'featured';
+    state.sort = 'popular';
     state.search = '';
     state.subcategory = null;
     state.minRating = null;
@@ -157,7 +204,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     state.trendingOnly = false;
     state.minPrice = null;
     state.maxPrice = null;
-    if (sortSelect) sortSelect.value = 'featured';
+    if (sortSelect) sortSelect.value = 'popular';
     if (searchInput) searchInput.value = '';
     [...ratingChips, ...subChips].forEach((c) => {
       c.classList.remove('is-active');
@@ -167,6 +214,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (trendingCheckbox) trendingCheckbox.checked = false;
     if (minPriceInput) minPriceInput.value = '';
     if (maxPriceInput) maxPriceInput.value = '';
+    if (location.search) history.replaceState(null, '', location.pathname);
     render();
   });
 

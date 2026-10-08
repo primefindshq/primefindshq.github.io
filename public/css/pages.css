@@ -611,3 +611,69 @@
 .video-list__link:hover .video-list__title,
 .video-list__link.is-current .video-list__title { color: var(--color-gold); }
 .video-list__count { color: var(--color-text-dim); white-space: nowrap; }
+
+/* ---------------------------------------------------------------------------
+   Gift guide: budget shortcuts + interest tiles (homepage and Gifts page)
+   --------------------------------------------------------------------------- */
+.gift-guide {
+  margin-top: var(--space-lg);
+  padding: var(--space-lg);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-raised);
+}
+.gift-guide__title { font-family: var(--font-display); font-size: var(--fs-display-sm); margin: 0 0 var(--space-md); }
+.gift-guide__row { display: grid; grid-template-columns: 140px 1fr; gap: var(--space-md); align-items: start; }
+.gift-guide__row + .gift-guide__row { margin-top: var(--space-md); }
+.gift-guide__label { font-size: var(--fs-caption); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-text-dim); padding-top: 10px; }
+.gift-guide__budgets { display: flex; flex-wrap: wrap; gap: var(--space-xs); }
+.gift-guide__budget {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0 var(--space-md);
+  border: 1px solid var(--color-gold); border-radius: var(--radius-full);
+  color: var(--color-text); font-weight: 600; text-decoration: none;
+}
+.gift-guide__budget:hover, .gift-guide__budget:focus-visible { background: var(--color-gold); color: var(--color-text-on-gold); }
+.gift-guide__interests { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-xs); }
+.gift-guide__interest {
+  display: flex; align-items: center; justify-content: space-between; gap: var(--space-xs);
+  min-height: 48px; padding: 8px var(--space-sm);
+  border: 1px solid var(--color-border-strong); color: var(--color-text); text-decoration: none; font-weight: 500;
+}
+.gift-guide__interest:hover, .gift-guide__interest:focus-visible { border-color: var(--color-gold); }
+.gift-guide__arrow { color: var(--color-gold); flex: 0 0 auto; }
+@media (max-width: 900px) { .gift-guide__interests { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) {
+  .gift-guide { padding: var(--space-md); }
+  .gift-guide__row { grid-template-columns: 1fr; gap: var(--space-xs); }
+  .gift-guide__label { padding-top: 0; }
+}
+
+/* Category grid paging ("Show more") */
+.load-more { display: flex; flex-direction: column; align-items: center; gap: var(--space-xs); margin-top: var(--space-xl); }
+.load-more[hidden] { display: none; }
+.load-more__status { color: var(--color-text-dim); font-size: var(--fs-body-sm); margin: 0; }
+.load-more .btn { min-width: 220px; }
+
+/* Product page: price freshness note */
+.product-detail__price-note { margin: var(--space-xs) 0 0; color: var(--color-text-dim); font-size: var(--fs-body-sm); }
+
+/* Product page: phone-only sticky buy bar (shown by product.js while the main CTA is off screen) */
+.mobile-cta { display: none; }
+@media (max-width: 760px) {
+  .mobile-cta {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: var(--z-header);
+    display: flex; align-items: center; justify-content: space-between; gap: var(--space-sm);
+    padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+    background: var(--color-bg-elevated); border-top: 1px solid var(--color-border-strong);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(110%); transition: transform var(--duration-fast, 200ms) var(--ease-standard, ease);
+  }
+  .mobile-cta.is-shown { transform: translateY(0); }
+  body:has(.mobile-cta) .site-footer { padding-bottom: calc(80px + env(safe-area-inset-bottom)); }
+  .mobile-cta__price { font-weight: 700; font-size: var(--fs-body-lg); }
+  .mobile-cta .btn { flex: 0 1 auto; }
+}
+@media (prefers-reduced-motion: reduce) { .mobile-cta { transition: none; } }
+
+/* Homepage "From the videos" strip reuses .video-item inside the rail */
+#from-the-videos .rail__item .video-item { height: 100%; }
+#from-the-videos .section-desc a { color: var(--color-gold); }

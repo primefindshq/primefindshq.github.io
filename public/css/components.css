@@ -344,8 +344,8 @@ a.product-card-link { display: block; }
    The homepage's showcase entry into categories: a dense, asymmetric grid
    (same hairline-grid language as the product catalog) rather than a row
    of identical rounded tiles. See layout.css for the span pattern. */
-/* 7 categories, one twice as wide as the rest: 2 + 1+1+1 + 1+1+1 = exactly
-   8 unit-cells, tiling two full 4-column rows with nothing left empty. */
+/* 11 categories, one twice as wide as the rest: 2 + 10 = exactly 12
+   unit-cells, tiling three full 4-column rows (six 2-column rows on phones). */
 .category-bento {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

@@ -20,6 +20,19 @@ document.addEventListener('DOMContentLoaded', async () => {
     track(EVENTS.PRODUCT_VIEW, { productId: product.id, productSlug: product.slug, productName: product.name, category: product.category });
   }
 
+  // Phone-only sticky "View at Amazon" bar: shown while the main CTA panel is
+  // off screen, hidden once the real button is in view (CSS limits it to small screens).
+  const mobileCta = qs('[data-mobile-cta]', app);
+  const ctaPanel = qs('.cta-panel', app);
+  if (mobileCta && ctaPanel && 'IntersectionObserver' in window) {
+    const setShown = (show) => {
+      mobileCta.classList.toggle('is-shown', show);
+      mobileCta.setAttribute('aria-hidden', show ? 'false' : 'true');
+      mobileCta.querySelector('a')?.setAttribute('tabindex', show ? '0' : '-1');
+    };
+    new IntersectionObserver(([entry]) => setShown(!entry.isIntersecting), { threshold: 0 }).observe(ctaPanel);
+  }
+
   const mainImg = qs('[data-gallery-main]', app);
   const thumbs = qsa('[data-gallery-thumb]', app);
   thumbs.forEach((thumb) => {
