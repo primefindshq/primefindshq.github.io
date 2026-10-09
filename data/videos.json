@@ -1,20 +1,292 @@
 [
   {
+    "slug": "didnt-know-existed-7",
+    "title": "Amazon Finds You Didn't Know Existed (Part 7)",
+    "blurb": "Every product from the video, by its number. Tap any one to see it on Amazon.",
+    "date": "2026-10-09",
+    "items": [
+      {
+        "n": 1,
+        "label": "Putting Green With Ball Return",
+        "slug": "dachenus-indoor-putting-green-mat"
+      },
+      {
+        "n": 2,
+        "label": "Cricut Joy Xtra",
+        "slug": "cricut-joy-xtra-cutting-machine"
+      },
+      {
+        "n": 3,
+        "label": "Cubii Under-Desk Elliptical",
+        "slug": "cubii-jr1-under-desk-elliptical"
+      },
+      {
+        "n": 4,
+        "label": "LED Bluetooth Beanie",
+        "slug": "wmcaps-bluetooth-led-beanie-grey"
+      },
+      {
+        "n": 5,
+        "label": "Twist-Fold Sunshade",
+        "slug": "econour-foldable-windshield-sun-shade"
+      },
+      {
+        "n": 6,
+        "label": "Light-Up Tracing Pad",
+        "slug": "crayola-light-up-tracing-pad-blue"
+      },
+      {
+        "n": 7,
+        "label": "Snap Circuits Jr.",
+        "slug": "snap-circuits-jr-sc-100-electronics-kit"
+      },
+      {
+        "n": 8,
+        "label": "Tegu Magnetic Blocks",
+        "slug": "tegu-pocket-pouch-magnetic-wooden-blocks"
+      },
+      {
+        "n": 9,
+        "label": "Kanoodle",
+        "slug": "educational-insights-kanoodle-puzzle"
+      },
+      {
+        "n": 10,
+        "label": "Water Wow",
+        "slug": "melissa-doug-water-wow-farm"
+      }
+    ]
+  },
+  {
+    "slug": "before-and-afters-6",
+    "title": "Amazon Finds With Crazy Before & Afters (Part 6)",
+    "blurb": "Every product from the video, by its number. Tap any one to see it on Amazon.",
+    "date": "2026-10-09",
+    "items": [
+      {
+        "n": 1,
+        "label": "Electric Pressure Washer",
+        "slug": "westinghouse-epx3500-electric-pressure-washer"
+      },
+      {
+        "n": 2,
+        "label": "Foam Gun Car Wash Kit",
+        "slug": "chemical-guys-10-piece-car-wash-kit"
+      },
+      {
+        "n": 3,
+        "label": "Rock Tumbler",
+        "slug": "national-geographic-hobby-rock-tumbler-kit"
+      },
+      {
+        "n": 4,
+        "label": "Pop-Up Beach Tent",
+        "slug": "easthills-instant-shader-deluxe-xl-beach-tent"
+      },
+      {
+        "n": 5,
+        "label": "Bunch O Balloons",
+        "slug": "bunch-o-balloons-tropical-party-330"
+      },
+      {
+        "n": 6,
+        "label": "Grooming Vacuum",
+        "slug": "oneisall-7-in-1-dog-grooming-vacuum-kit"
+      },
+      {
+        "n": 7,
+        "label": "Crystal Growing Kit",
+        "slug": "national-geographic-mega-crystal-growing-kit"
+      },
+      {
+        "n": 8,
+        "label": "OneBlade 360",
+        "slug": "philips-norelco-oneblade-360-face-body"
+      },
+      {
+        "n": 9,
+        "label": "CHI Flat Iron",
+        "slug": "chi-original-1-inch-ceramic-flat-iron"
+      },
+      {
+        "n": 10,
+        "label": "Spin Mop",
+        "slug": "o-cedar-easywring-spin-mop-bucket"
+      }
+    ]
+  },
+  {
+    "slug": "ten-that-made-the-cut",
+    "title": "10 Finds That Made the Cut",
+    "blurb": "Every product from the video, by its number. Tap any one to see it on Amazon.",
+    "date": "2026-10-08",
+    "items": [
+      {
+        "n": 1,
+        "label": "3-in-1 Avocado Tool",
+        "slug": "oxo-good-grips-3-in-1-avocado-slicer"
+      },
+      {
+        "n": 2,
+        "label": "Tabletop Griddle",
+        "slug": "blackstone-1666-22-inch-tabletop-griddle"
+      },
+      {
+        "n": 3,
+        "label": "Ultrasonic Cleaner",
+        "slug": "kunphy-46khz-ultrasonic-jewelry-cleaner-white"
+      },
+      {
+        "n": 4,
+        "label": "Sushi Bazooka",
+        "slug": "delamu-20-in-1-sushi-making-kit"
+      },
+      {
+        "n": 5,
+        "label": "Cocktail Smoker",
+        "slug": "combojoy-whiskey-cocktail-smoker-kit-torch"
+      },
+      {
+        "n": 6,
+        "label": "Rotating Pizza Oven",
+        "slug": "presto-pizzazz-plus-rotating-oven"
+      },
+      {
+        "n": 7,
+        "label": "Mushroom Grow Kit",
+        "slug": "back-to-the-roots-oyster-mushroom-grow-kit"
+      },
+      {
+        "n": 8,
+        "label": "Model Rocket Set",
+        "slug": "estes-tandem-x-model-rocket-launch-set"
+      },
+      {
+        "n": 9,
+        "label": "Bubble Machine",
+        "slug": "belemar-remote-control-bubble-machine"
+      },
+      {
+        "n": 10,
+        "label": "Air Lounger",
+        "slug": "wekapo-inflatable-air-lounger-couch-blue"
+      }
+    ]
+  },
+  {
+    "slug": "oddly-satisfying-5",
+    "title": "Oddly Satisfying Amazon Finds (Part 5)",
+    "blurb": "Every product from the video, by its number. Tap any one to see it on Amazon.",
+    "date": "2026-10-07",
+    "items": [
+      {
+        "n": 1,
+        "label": "Bubble Machine",
+        "slug": "belemar-remote-control-bubble-machine"
+      },
+      {
+        "n": 2,
+        "label": "Revlon One-Step Volumizer",
+        "slug": "revlon-one-step-volumizer-hair-dryer-brush"
+      },
+      {
+        "n": 3,
+        "label": "Chuckit! Ball Launcher",
+        "slug": "chuckit-classic-26m-dog-ball-launcher"
+      },
+      {
+        "n": 4,
+        "label": "Estes Rocket Launch Set",
+        "slug": "estes-tandem-x-model-rocket-launch-set"
+      },
+      {
+        "n": 5,
+        "label": "Stomp Rocket",
+        "slug": "stomp-rocket-ultra-launcher-4-rockets"
+      },
+      {
+        "n": 6,
+        "label": "Tie Dye Kit",
+        "slug": "tulip-one-step-tie-dye-party-kit"
+      },
+      {
+        "n": 7,
+        "label": "LickiMat",
+        "slug": "lickimat-classic-buddy-lick-mat"
+      },
+      {
+        "n": 8,
+        "label": "Stud Finder",
+        "slug": "franklin-sensors-prosensor-m210-stud-finder"
+      },
+      {
+        "n": 9,
+        "label": "ChomChom Roller",
+        "slug": "chomchom-roller-pet-hair-remover"
+      },
+      {
+        "n": 10,
+        "label": "Fabric Shaver",
+        "slug": "conair-fabric-shaver-lint-remover"
+      }
+    ]
+  },
+  {
     "slug": "guess-what-these-do-4",
     "title": "Can You Guess What These Do? (Part 4)",
     "blurb": "Every product from the video, by its number. Tap any one to see it on Amazon.",
     "date": "2026-10-05",
     "items": [
-      { "n": 1, "label": "Pet Feeder with Camera", "slug": "petlibro-automatic-cat-feeder-1080p-camera-5l" },
-      { "n": 2, "label": "Window Cleaning Robot", "slug": "ecovacs-winbot-w2-pro-omni-window-cleaning-robot" },
-      { "n": 3, "label": "Terrarium Kit", "slug": "pyef-crafts-diy-closed-terrarium-kit-34oz" },
-      { "n": 4, "label": "Black Diamond Headlamp", "slug": "black-diamond-spot-400-headlamp" },
-      { "n": 5, "label": "Cat Water Fountain", "slug": "veken-stainless-steel-cat-water-fountain-108oz" },
-      { "n": 6, "label": "Yoto Mini", "slug": "yoto-mini-2024-kids-audio-player" },
-      { "n": 7, "label": "Label Maker", "slug": "brother-p-touch-ptd220-label-maker" },
-      { "n": 8, "label": "Bike Phone Mount", "slug": "lamicall-lockable-bike-motorcycle-phone-mount" },
-      { "n": 9, "label": "Flip Timer Cube", "slug": "ticktime-t6-pomodoro-flip-timer-cube-silver" },
-      { "n": 10, "label": "Z Lite Sleeping Pad", "slug": "therm-a-rest-z-lite-original-sleeping-pad" }
+      {
+        "n": 1,
+        "label": "Pet Feeder with Camera",
+        "slug": "petlibro-automatic-cat-feeder-1080p-camera-5l"
+      },
+      {
+        "n": 2,
+        "label": "Window Cleaning Robot",
+        "slug": "ecovacs-winbot-w2-pro-omni-window-cleaning-robot"
+      },
+      {
+        "n": 3,
+        "label": "Terrarium Kit",
+        "slug": "pyef-crafts-diy-closed-terrarium-kit-34oz"
+      },
+      {
+        "n": 4,
+        "label": "Black Diamond Headlamp",
+        "slug": "black-diamond-spot-400-headlamp"
+      },
+      {
+        "n": 5,
+        "label": "Cat Water Fountain",
+        "slug": "veken-stainless-steel-cat-water-fountain-108oz"
+      },
+      {
+        "n": 6,
+        "label": "Yoto Mini",
+        "slug": "yoto-mini-2024-kids-audio-player"
+      },
+      {
+        "n": 7,
+        "label": "Label Maker",
+        "slug": "brother-p-touch-ptd220-label-maker"
+      },
+      {
+        "n": 8,
+        "label": "Bike Phone Mount",
+        "slug": "lamicall-lockable-bike-motorcycle-phone-mount"
+      },
+      {
+        "n": 9,
+        "label": "Flip Timer Cube",
+        "slug": "ticktime-t6-pomodoro-flip-timer-cube-silver"
+      },
+      {
+        "n": 10,
+        "label": "Z Lite Sleeping Pad",
+        "slug": "therm-a-rest-z-lite-original-sleeping-pad"
+      }
     ]
   },
   {
@@ -23,16 +295,56 @@
     "blurb": "Every product from the video, by its number. Tap any one to see it on Amazon.",
     "date": "2026-10-04",
     "items": [
-      { "n": 1, "label": "Furbo Dog Camera", "slug": "furbo-360-dog-camera-treat-toss" },
-      { "n": 2, "label": "Double Hammock", "slug": "wise-owl-outfitters-double-camping-hammock" },
-      { "n": 3, "label": "Globe Decanter", "slug": "ponpur-globe-whiskey-decanter-set" },
-      { "n": 4, "label": "Karaoke Microphone", "slug": "bonaok-bluetooth-karaoke-microphone-q37-rose-gold" },
-      { "n": 5, "label": "YETI Roadie 24", "slug": "yeti-roadie-24-hard-cooler-rescue-red" },
-      { "n": 6, "label": "Portable Monitor", "slug": "arzopa-16-1-portable-monitor-z1c" },
-      { "n": 7, "label": "Emergency Radio", "slug": "kaito-ka500-emergency-weather-radio" },
-      { "n": 8, "label": "Waterproof Dry Bag", "slug": "earth-pak-20l-waterproof-dry-bag" },
-      { "n": 9, "label": "OXO Salad Spinner", "slug": "oxo-good-grips-salad-spinner-large" },
-      { "n": 10, "label": "Handheld Fan", "slug": "jisulife-life7-portable-handheld-fan" }
+      {
+        "n": 1,
+        "label": "Furbo Dog Camera",
+        "slug": "furbo-360-dog-camera-treat-toss"
+      },
+      {
+        "n": 2,
+        "label": "Double Hammock",
+        "slug": "wise-owl-outfitters-double-camping-hammock"
+      },
+      {
+        "n": 3,
+        "label": "Globe Decanter",
+        "slug": "ponpur-globe-whiskey-decanter-set"
+      },
+      {
+        "n": 4,
+        "label": "Karaoke Microphone",
+        "slug": "bonaok-bluetooth-karaoke-microphone-q37-rose-gold"
+      },
+      {
+        "n": 5,
+        "label": "YETI Roadie 24",
+        "slug": "yeti-roadie-24-hard-cooler-rescue-red"
+      },
+      {
+        "n": 6,
+        "label": "Portable Monitor",
+        "slug": "arzopa-16-1-portable-monitor-z1c"
+      },
+      {
+        "n": 7,
+        "label": "Emergency Radio",
+        "slug": "kaito-ka500-emergency-weather-radio"
+      },
+      {
+        "n": 8,
+        "label": "Waterproof Dry Bag",
+        "slug": "earth-pak-20l-waterproof-dry-bag"
+      },
+      {
+        "n": 9,
+        "label": "OXO Salad Spinner",
+        "slug": "oxo-good-grips-salad-spinner-large"
+      },
+      {
+        "n": 10,
+        "label": "Handheld Fan",
+        "slug": "jisulife-life7-portable-handheld-fan"
+      }
     ]
   },
   {
@@ -41,11 +353,31 @@
     "blurb": "Every product from the video, by its number. Tap any one to see it on Amazon.",
     "date": "2026-10-03",
     "items": [
-      { "n": 1, "label": "Ninja Luxe Café", "slug": "ninja-luxe-cafe-premier-espresso-es601" },
-      { "n": 2, "label": "HyperX QuadCast 2 S", "slug": "hyperx-quadcast-2-s-usb-microphone-rgb" },
-      { "n": 3, "label": "Heated Lunch Box", "slug": "buddew-electric-heated-lunch-box-1-5l-green" },
-      { "n": 4, "label": "Cordless Tire Inflator", "slug": "astroai-l7-cordless-tire-inflator-150psi" },
-      { "n": 5, "label": "Nest 9 Prep Set", "slug": "joseph-joseph-nest-9-plus-food-prep-set" }
+      {
+        "n": 1,
+        "label": "Ninja Luxe Café",
+        "slug": "ninja-luxe-cafe-premier-espresso-es601"
+      },
+      {
+        "n": 2,
+        "label": "HyperX QuadCast 2 S",
+        "slug": "hyperx-quadcast-2-s-usb-microphone-rgb"
+      },
+      {
+        "n": 3,
+        "label": "Heated Lunch Box",
+        "slug": "buddew-electric-heated-lunch-box-1-5l-green"
+      },
+      {
+        "n": 4,
+        "label": "Cordless Tire Inflator",
+        "slug": "astroai-l7-cordless-tire-inflator-150psi"
+      },
+      {
+        "n": 5,
+        "label": "Nest 9 Prep Set",
+        "slug": "joseph-joseph-nest-9-plus-food-prep-set"
+      }
     ]
   },
   {
@@ -54,16 +386,56 @@
     "blurb": "Every product from the video, by its number. Tap any one to see it on Amazon.",
     "date": "2026-10-03",
     "items": [
-      { "n": 1, "label": "Tabletop Griddle", "slug": "blackstone-1666-22-inch-tabletop-griddle" },
-      { "n": 2, "label": "Book Nook Kit", "slug": "cutebee-book-nook-kit-owl-bookstore" },
-      { "n": 3, "label": "Picnic Backpack", "slug": "apollo-walker-4-person-picnic-backpack" },
-      { "n": 4, "label": "Logitech MX Keys S", "slug": "logitech-mx-keys-s-wireless-keyboard-graphite" },
-      { "n": 5, "label": "Rolling Knife Sharpener", "slug": "tumbler-rolling-knife-sharpener-wood" },
-      { "n": 6, "label": "Automatic Cat Laser", "slug": "yve-life-automatic-cat-laser-toy-white" },
-      { "n": 7, "label": "Garment Steamer", "slug": "conair-handheld-garment-steamer-1875w-white" },
-      { "n": 8, "label": "Laser Measure", "slug": "bosch-glm100-23-blaze-100ft-laser-measure" },
-      { "n": 9, "label": "Precision Screwdriver", "slug": "fanttik-e1-max-electric-precision-screwdriver" },
-      { "n": 10, "label": "Clear Ice Ball Maker", "slug": "tinana-crystal-clear-ice-ball-maker-4" }
+      {
+        "n": 1,
+        "label": "Tabletop Griddle",
+        "slug": "blackstone-1666-22-inch-tabletop-griddle"
+      },
+      {
+        "n": 2,
+        "label": "Book Nook Kit",
+        "slug": "cutebee-book-nook-kit-owl-bookstore"
+      },
+      {
+        "n": 3,
+        "label": "Picnic Backpack",
+        "slug": "apollo-walker-4-person-picnic-backpack"
+      },
+      {
+        "n": 4,
+        "label": "Logitech MX Keys S",
+        "slug": "logitech-mx-keys-s-wireless-keyboard-graphite"
+      },
+      {
+        "n": 5,
+        "label": "Rolling Knife Sharpener",
+        "slug": "tumbler-rolling-knife-sharpener-wood"
+      },
+      {
+        "n": 6,
+        "label": "Automatic Cat Laser",
+        "slug": "yve-life-automatic-cat-laser-toy-white"
+      },
+      {
+        "n": 7,
+        "label": "Garment Steamer",
+        "slug": "conair-handheld-garment-steamer-1875w-white"
+      },
+      {
+        "n": 8,
+        "label": "Laser Measure",
+        "slug": "bosch-glm100-23-blaze-100ft-laser-measure"
+      },
+      {
+        "n": 9,
+        "label": "Precision Screwdriver",
+        "slug": "fanttik-e1-max-electric-precision-screwdriver"
+      },
+      {
+        "n": 10,
+        "label": "Clear Ice Ball Maker",
+        "slug": "tinana-crystal-clear-ice-ball-maker-4"
+      }
     ]
   },
   {
@@ -72,16 +444,56 @@
     "blurb": "Every product from the video, by its number. Tap any one to see it on Amazon.",
     "date": "2026-10-02",
     "items": [
-      { "n": 1, "label": "Air Lounger", "slug": "wekapo-inflatable-air-lounger-couch-blue" },
-      { "n": 2, "label": "Ultrasonic Cleaner", "slug": "kunphy-46khz-ultrasonic-jewelry-cleaner-white" },
-      { "n": 3, "label": "Rotating Pizza Oven", "slug": "presto-pizzazz-plus-rotating-oven" },
-      { "n": 4, "label": "Sushi Bazooka", "slug": "delamu-20-in-1-sushi-making-kit" },
-      { "n": 5, "label": "Mushroom Grow Kit", "slug": "back-to-the-roots-oyster-mushroom-grow-kit" },
-      { "n": 6, "label": "Cocktail Smoker", "slug": "combojoy-whiskey-cocktail-smoker-kit-torch" },
-      { "n": 7, "label": "Scratch-Off Map", "slug": "scratch-the-world-travel-map-poster-23x33" },
-      { "n": 8, "label": "Toilet Night Light", "slug": "chunace-motion-sensor-toilet-bowl-night-light-2-pack" },
-      { "n": 9, "label": "Hot Dog Toaster", "slug": "nostalgia-retro-hot-dog-bun-toaster" },
-      { "n": 10, "label": "Avocado Tool", "slug": "oxo-good-grips-3-in-1-avocado-slicer" }
+      {
+        "n": 1,
+        "label": "Air Lounger",
+        "slug": "wekapo-inflatable-air-lounger-couch-blue"
+      },
+      {
+        "n": 2,
+        "label": "Ultrasonic Cleaner",
+        "slug": "kunphy-46khz-ultrasonic-jewelry-cleaner-white"
+      },
+      {
+        "n": 3,
+        "label": "Rotating Pizza Oven",
+        "slug": "presto-pizzazz-plus-rotating-oven"
+      },
+      {
+        "n": 4,
+        "label": "Sushi Bazooka",
+        "slug": "delamu-20-in-1-sushi-making-kit"
+      },
+      {
+        "n": 5,
+        "label": "Mushroom Grow Kit",
+        "slug": "back-to-the-roots-oyster-mushroom-grow-kit"
+      },
+      {
+        "n": 6,
+        "label": "Cocktail Smoker",
+        "slug": "combojoy-whiskey-cocktail-smoker-kit-torch"
+      },
+      {
+        "n": 7,
+        "label": "Scratch-Off Map",
+        "slug": "scratch-the-world-travel-map-poster-23x33"
+      },
+      {
+        "n": 8,
+        "label": "Toilet Night Light",
+        "slug": "chunace-motion-sensor-toilet-bowl-night-light-2-pack"
+      },
+      {
+        "n": 9,
+        "label": "Hot Dog Toaster",
+        "slug": "nostalgia-retro-hot-dog-bun-toaster"
+      },
+      {
+        "n": 10,
+        "label": "Avocado Tool",
+        "slug": "oxo-good-grips-3-in-1-avocado-slicer"
+      }
     ]
   },
   {
@@ -90,16 +502,56 @@
     "blurb": "Every product from the video, by its number. Tap any one to see it on Amazon.",
     "date": "2026-10-02",
     "items": [
-      { "n": 1, "label": "Hot Dog Toaster", "slug": "nostalgia-retro-hot-dog-bun-toaster" },
-      { "n": 2, "label": "3-in-1 Avocado Tool", "slug": "oxo-good-grips-3-in-1-avocado-slicer" },
-      { "n": 3, "label": "OXO Salad Spinner", "slug": "oxo-good-grips-salad-spinner-large" },
-      { "n": 4, "label": "Rotating Pizza Oven", "slug": "presto-pizzazz-plus-rotating-oven" },
-      { "n": 5, "label": "XL Ice Cube Tray", "slug": "wp-peak-extra-large-ice-cube-tray" },
-      { "n": 6, "label": "Breakfast Sandwich Maker", "slug": "hamilton-beach-breakfast-sandwich-maker" },
-      { "n": 7, "label": "Nest 9 Prep Set", "slug": "joseph-joseph-nest-9-plus-food-prep-set" },
-      { "n": 8, "label": "Braun Hand Blender", "slug": "braun-multiquick-5-hand-blender" },
-      { "n": 9, "label": "Blackstone Tabletop Griddle", "slug": "blackstone-1666-22-inch-tabletop-griddle" },
-      { "n": 10, "label": "Ninja Luxe Café", "slug": "ninja-luxe-cafe-premier-espresso-es601" }
+      {
+        "n": 1,
+        "label": "Hot Dog Toaster",
+        "slug": "nostalgia-retro-hot-dog-bun-toaster"
+      },
+      {
+        "n": 2,
+        "label": "3-in-1 Avocado Tool",
+        "slug": "oxo-good-grips-3-in-1-avocado-slicer"
+      },
+      {
+        "n": 3,
+        "label": "OXO Salad Spinner",
+        "slug": "oxo-good-grips-salad-spinner-large"
+      },
+      {
+        "n": 4,
+        "label": "Rotating Pizza Oven",
+        "slug": "presto-pizzazz-plus-rotating-oven"
+      },
+      {
+        "n": 5,
+        "label": "XL Ice Cube Tray",
+        "slug": "wp-peak-extra-large-ice-cube-tray"
+      },
+      {
+        "n": 6,
+        "label": "Breakfast Sandwich Maker",
+        "slug": "hamilton-beach-breakfast-sandwich-maker"
+      },
+      {
+        "n": 7,
+        "label": "Nest 9 Prep Set",
+        "slug": "joseph-joseph-nest-9-plus-food-prep-set"
+      },
+      {
+        "n": 8,
+        "label": "Braun Hand Blender",
+        "slug": "braun-multiquick-5-hand-blender"
+      },
+      {
+        "n": 9,
+        "label": "Blackstone Tabletop Griddle",
+        "slug": "blackstone-1666-22-inch-tabletop-griddle"
+      },
+      {
+        "n": 10,
+        "label": "Ninja Luxe Café",
+        "slug": "ninja-luxe-cafe-premier-espresso-es601"
+      }
     ]
   },
   {
@@ -108,16 +560,56 @@
     "blurb": "Every product from the video, by its number. Tap any one to see it on Amazon.",
     "date": "2026-09-30",
     "items": [
-      { "n": 1, "label": "Double Camping Hammock", "slug": "wise-owl-outfitters-double-camping-hammock" },
-      { "n": 2, "label": "Handheld Fan", "slug": "jisulife-life7-portable-handheld-fan" },
-      { "n": 3, "label": "YETI Roadie 24", "slug": "yeti-roadie-24-hard-cooler-rescue-red" },
-      { "n": 4, "label": "Waterproof Binoculars", "slug": "bushnell-h2o-10x42-binoculars" },
-      { "n": 5, "label": "Waterproof Dry Bag", "slug": "earth-pak-20l-waterproof-dry-bag" },
-      { "n": 6, "label": "Emergency Weather Radio", "slug": "kaito-ka500-emergency-weather-radio" },
-      { "n": 7, "label": "Samsonite Carry-On", "slug": "samsonite-freeform-carry-on-spinner-navy" },
-      { "n": 8, "label": "Black Diamond Headlamp", "slug": "black-diamond-spot-400-headlamp" },
-      { "n": 9, "label": "Z Lite Sleeping Pad", "slug": "therm-a-rest-z-lite-original-sleeping-pad" },
-      { "n": 10, "label": "Picnic Backpack for 4", "slug": "apollo-walker-4-person-picnic-backpack" }
+      {
+        "n": 1,
+        "label": "Double Camping Hammock",
+        "slug": "wise-owl-outfitters-double-camping-hammock"
+      },
+      {
+        "n": 2,
+        "label": "Handheld Fan",
+        "slug": "jisulife-life7-portable-handheld-fan"
+      },
+      {
+        "n": 3,
+        "label": "YETI Roadie 24",
+        "slug": "yeti-roadie-24-hard-cooler-rescue-red"
+      },
+      {
+        "n": 4,
+        "label": "Waterproof Binoculars",
+        "slug": "bushnell-h2o-10x42-binoculars"
+      },
+      {
+        "n": 5,
+        "label": "Waterproof Dry Bag",
+        "slug": "earth-pak-20l-waterproof-dry-bag"
+      },
+      {
+        "n": 6,
+        "label": "Emergency Weather Radio",
+        "slug": "kaito-ka500-emergency-weather-radio"
+      },
+      {
+        "n": 7,
+        "label": "Samsonite Carry-On",
+        "slug": "samsonite-freeform-carry-on-spinner-navy"
+      },
+      {
+        "n": 8,
+        "label": "Black Diamond Headlamp",
+        "slug": "black-diamond-spot-400-headlamp"
+      },
+      {
+        "n": 9,
+        "label": "Z Lite Sleeping Pad",
+        "slug": "therm-a-rest-z-lite-original-sleeping-pad"
+      },
+      {
+        "n": 10,
+        "label": "Picnic Backpack for 4",
+        "slug": "apollo-walker-4-person-picnic-backpack"
+      }
     ]
   },
   {
@@ -126,11 +618,31 @@
     "blurb": "Every product from the video, by its number. Tap any one to see it on Amazon.",
     "date": "2026-09-30",
     "items": [
-      { "n": 1, "label": "HyperX QuadCast 2 S", "slug": "hyperx-quadcast-2-s-usb-microphone-rgb" },
-      { "n": 2, "label": "Sony WH-1000XM5", "slug": "sony-wh-1000xm5-noise-canceling-headphones-black" },
-      { "n": 3, "label": "Bosch Laser Measure", "slug": "bosch-glm100-23-blaze-100ft-laser-measure" },
-      { "n": 4, "label": "Logitech MX Keys S", "slug": "logitech-mx-keys-s-wireless-keyboard-graphite" },
-      { "n": 5, "label": "Yoto Mini", "slug": "yoto-mini-2024-kids-audio-player" }
+      {
+        "n": 1,
+        "label": "HyperX QuadCast 2 S",
+        "slug": "hyperx-quadcast-2-s-usb-microphone-rgb"
+      },
+      {
+        "n": 2,
+        "label": "Sony WH-1000XM5",
+        "slug": "sony-wh-1000xm5-noise-canceling-headphones-black"
+      },
+      {
+        "n": 3,
+        "label": "Bosch Laser Measure",
+        "slug": "bosch-glm100-23-blaze-100ft-laser-measure"
+      },
+      {
+        "n": 4,
+        "label": "Logitech MX Keys S",
+        "slug": "logitech-mx-keys-s-wireless-keyboard-graphite"
+      },
+      {
+        "n": 5,
+        "label": "Yoto Mini",
+        "slug": "yoto-mini-2024-kids-audio-player"
+      }
     ]
   },
   {
@@ -139,11 +651,31 @@
     "blurb": "Every product from the video, by its number. Tap any one to see it on Amazon.",
     "date": "2026-09-30",
     "items": [
-      { "n": 1, "label": "Scratch-Off World Map", "slug": "scratch-the-world-travel-map-poster-23x33" },
-      { "n": 2, "label": "Handheld Garment Steamer", "slug": "conair-handheld-garment-steamer-1875w-white" },
-      { "n": 3, "label": "Over-the-Door Mini Hoop", "slug": "sklz-pro-mini-over-the-door-basketball-hoop" },
-      { "n": 4, "label": "Portable Monitor", "slug": "arzopa-16-1-portable-monitor-z1c" },
-      { "n": 5, "label": "DIY Terrarium Kit", "slug": "pyef-crafts-diy-closed-terrarium-kit-34oz" }
+      {
+        "n": 1,
+        "label": "Scratch-Off World Map",
+        "slug": "scratch-the-world-travel-map-poster-23x33"
+      },
+      {
+        "n": 2,
+        "label": "Handheld Garment Steamer",
+        "slug": "conair-handheld-garment-steamer-1875w-white"
+      },
+      {
+        "n": 3,
+        "label": "Over-the-Door Mini Hoop",
+        "slug": "sklz-pro-mini-over-the-door-basketball-hoop"
+      },
+      {
+        "n": 4,
+        "label": "Portable Monitor",
+        "slug": "arzopa-16-1-portable-monitor-z1c"
+      },
+      {
+        "n": 5,
+        "label": "DIY Terrarium Kit",
+        "slug": "pyef-crafts-diy-closed-terrarium-kit-34oz"
+      }
     ]
   },
   {
@@ -152,16 +684,56 @@
     "blurb": "Every product from the video, by its number. Tap any one to see it on Amazon.",
     "date": "2026-09-29",
     "items": [
-      { "n": 1, "label": "Whiskey Smoker Kit", "slug": "combojoy-whiskey-cocktail-smoker-kit-torch" },
-      { "n": 2, "label": "Furbo Dog Camera", "slug": "furbo-360-dog-camera-treat-toss" },
-      { "n": 3, "label": "Book Nook Kit", "slug": "cutebee-book-nook-kit-owl-bookstore" },
-      { "n": 4, "label": "Ultrasonic Jewelry Cleaner", "slug": "kunphy-46khz-ultrasonic-jewelry-cleaner-white" },
-      { "n": 5, "label": "Vintage Popcorn Cart", "slug": "nostalgia-vintage-popcorn-cart-8oz-red" },
-      { "n": 6, "label": "Rolling Knife Sharpener", "slug": "tumbler-rolling-knife-sharpener-wood" },
-      { "n": 7, "label": "Inflatable Air Lounger", "slug": "wekapo-inflatable-air-lounger-couch-blue" },
-      { "n": 8, "label": "Clear Ice Ball Maker", "slug": "tinana-crystal-clear-ice-ball-maker-4" },
-      { "n": 9, "label": "Precision Electric Screwdriver", "slug": "fanttik-e1-max-electric-precision-screwdriver" },
-      { "n": 10, "label": "Globe Whiskey Decanter", "slug": "ponpur-globe-whiskey-decanter-set" }
+      {
+        "n": 1,
+        "label": "Whiskey Smoker Kit",
+        "slug": "combojoy-whiskey-cocktail-smoker-kit-torch"
+      },
+      {
+        "n": 2,
+        "label": "Furbo Dog Camera",
+        "slug": "furbo-360-dog-camera-treat-toss"
+      },
+      {
+        "n": 3,
+        "label": "Book Nook Kit",
+        "slug": "cutebee-book-nook-kit-owl-bookstore"
+      },
+      {
+        "n": 4,
+        "label": "Ultrasonic Jewelry Cleaner",
+        "slug": "kunphy-46khz-ultrasonic-jewelry-cleaner-white"
+      },
+      {
+        "n": 5,
+        "label": "Vintage Popcorn Cart",
+        "slug": "nostalgia-vintage-popcorn-cart-8oz-red"
+      },
+      {
+        "n": 6,
+        "label": "Rolling Knife Sharpener",
+        "slug": "tumbler-rolling-knife-sharpener-wood"
+      },
+      {
+        "n": 7,
+        "label": "Inflatable Air Lounger",
+        "slug": "wekapo-inflatable-air-lounger-couch-blue"
+      },
+      {
+        "n": 8,
+        "label": "Clear Ice Ball Maker",
+        "slug": "tinana-crystal-clear-ice-ball-maker-4"
+      },
+      {
+        "n": 9,
+        "label": "Precision Electric Screwdriver",
+        "slug": "fanttik-e1-max-electric-precision-screwdriver"
+      },
+      {
+        "n": 10,
+        "label": "Globe Whiskey Decanter",
+        "slug": "ponpur-globe-whiskey-decanter-set"
+      }
     ]
   },
   {
@@ -170,16 +742,56 @@
     "blurb": "Every product from the video, by its number. Prices change on Amazon, so check the current price there.",
     "date": "2026-09-29",
     "items": [
-      { "n": 1, "label": "Toilet Night Light", "slug": "chunace-motion-sensor-toilet-bowl-night-light-2-pack" },
-      { "n": 2, "label": "Sushi Bazooka Kit", "slug": "delamu-20-in-1-sushi-making-kit" },
-      { "n": 3, "label": "Cordless Tire Inflator", "slug": "astroai-l7-cordless-tire-inflator-150psi" },
-      { "n": 4, "label": "Automatic Cat Laser", "slug": "yve-life-automatic-cat-laser-toy-white" },
-      { "n": 5, "label": "Neck Reading Light", "slug": "glocusent-rechargeable-neck-reading-light-gray" },
-      { "n": 6, "label": "Mushroom Grow Kit", "slug": "back-to-the-roots-oyster-mushroom-grow-kit" },
-      { "n": 7, "label": "Heated Lunch Box", "slug": "buddew-electric-heated-lunch-box-1-5l-green" },
-      { "n": 8, "label": "Bike Phone Mount", "slug": "lamicall-lockable-bike-motorcycle-phone-mount" },
-      { "n": 9, "label": "Electric Wine Opener", "slug": "oster-cordless-electric-wine-opener-silver" },
-      { "n": 10, "label": "Karaoke Microphone", "slug": "bonaok-bluetooth-karaoke-microphone-q37-rose-gold" }
+      {
+        "n": 1,
+        "label": "Toilet Night Light",
+        "slug": "chunace-motion-sensor-toilet-bowl-night-light-2-pack"
+      },
+      {
+        "n": 2,
+        "label": "Sushi Bazooka Kit",
+        "slug": "delamu-20-in-1-sushi-making-kit"
+      },
+      {
+        "n": 3,
+        "label": "Cordless Tire Inflator",
+        "slug": "astroai-l7-cordless-tire-inflator-150psi"
+      },
+      {
+        "n": 4,
+        "label": "Automatic Cat Laser",
+        "slug": "yve-life-automatic-cat-laser-toy-white"
+      },
+      {
+        "n": 5,
+        "label": "Neck Reading Light",
+        "slug": "glocusent-rechargeable-neck-reading-light-gray"
+      },
+      {
+        "n": 6,
+        "label": "Mushroom Grow Kit",
+        "slug": "back-to-the-roots-oyster-mushroom-grow-kit"
+      },
+      {
+        "n": 7,
+        "label": "Heated Lunch Box",
+        "slug": "buddew-electric-heated-lunch-box-1-5l-green"
+      },
+      {
+        "n": 8,
+        "label": "Bike Phone Mount",
+        "slug": "lamicall-lockable-bike-motorcycle-phone-mount"
+      },
+      {
+        "n": 9,
+        "label": "Electric Wine Opener",
+        "slug": "oster-cordless-electric-wine-opener-silver"
+      },
+      {
+        "n": 10,
+        "label": "Karaoke Microphone",
+        "slug": "bonaok-bluetooth-karaoke-microphone-q37-rose-gold"
+      }
     ]
   }
 ]
