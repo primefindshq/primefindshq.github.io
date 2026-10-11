@@ -1,5 +1,63 @@
 [
   {
+    "slug": "just-make-sense-9",
+    "title": "Amazon Finds That Just Make Sense (Part 9)",
+    "blurb": "Every product from the video, by its number. Tap any one to see it on Amazon.",
+    "date": "2026-10-11",
+    "items": [
+      {
+        "n": 1,
+        "label": "LifeStraw Personal Water Filter",
+        "slug": "lifestraw-personal-water-filter-blue"
+      },
+      {
+        "n": 2,
+        "label": "SCRIB3D P1 3D Pen",
+        "slug": "scrib3d-p1-3d-printing-pen"
+      },
+      {
+        "n": 3,
+        "label": "PIZZA BOSS 3000",
+        "slug": "genuine-fred-pizza-boss-3000-pizza-cutter"
+      },
+      {
+        "n": 4,
+        "label": "Dexas MudBuster",
+        "slug": "dexas-mudbuster-dog-paw-cleaner-large"
+      },
+      {
+        "n": 5,
+        "label": "BISSELL Little Green",
+        "slug": "bissell-little-green-mini-portable-carpet-cleaner"
+      },
+      {
+        "n": 6,
+        "label": "Brieftons Spiralizer",
+        "slug": "brieftons-5-blade-vegetable-spiralizer"
+      },
+      {
+        "n": 7,
+        "label": "Dog Brick Puzzle",
+        "slug": "outward-hound-nina-ottosson-dog-brick-puzzle"
+      },
+      {
+        "n": 8,
+        "label": "Korcci Popcorn Popper",
+        "slug": "korcci-silicone-microwave-popcorn-popper"
+      },
+      {
+        "n": 9,
+        "label": "Battery Daddy",
+        "slug": "ontel-battery-daddy-organizer-tester"
+      },
+      {
+        "n": 10,
+        "label": "Souper Cubes",
+        "slug": "souper-cubes-1-cup-freezer-molds-2-pack"
+      }
+    ]
+  },
+  {
     "slug": "annoying-problems-8",
     "title": "Amazon Finds That Fix Annoying Problems (Part 8)",
     "blurb": "Every product from the video, by its number. Tap any one to see it on Amazon.",
