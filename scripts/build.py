@@ -585,6 +585,7 @@ def base_page(site, *, title, description, canonical_path, og_image=None, body_h
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="p:domain_verify" content="b39d8ea156a82de56d39bfc2ed4cd607" />
   {A11Y_HEAD}
   <title>{esc(title)}</title>
   <meta name="description" content="{esc(description)}" />
