@@ -1,5 +1,179 @@
 [
   {
+    "slug": "annoying-problems-8",
+    "title": "Amazon Finds That Fix Annoying Problems (Part 8)",
+    "blurb": "Every product from the video, by its number. Tap any one to see it on Amazon.",
+    "date": "2026-10-10",
+    "items": [
+      {
+        "n": 1,
+        "label": "FlexiSnake Drain Weasel",
+        "slug": "flexisnake-drain-weasel-hair-clog-remover"
+      },
+      {
+        "n": 2,
+        "label": "Fullstar Pro XL Chopper",
+        "slug": "fullstar-pro-xl-vegetable-chopper-mandoline"
+      },
+      {
+        "n": 3,
+        "label": "WORX Pegasus Workbench",
+        "slug": "worx-pegasus-folding-workbench-wx051"
+      },
+      {
+        "n": 4,
+        "label": "Redi Shade Blackout Shades",
+        "slug": "redi-shade-blackout-paper-shades-6-pack"
+      },
+      {
+        "n": 5,
+        "label": "Bissell Featherweight Vacuum",
+        "slug": "bissell-featherweight-stick-vacuum-2033m"
+      },
+      {
+        "n": 6,
+        "label": "Expandable Under Sink Organizer",
+        "slug": "simple-houseware-expandable-under-sink-organizer"
+      },
+      {
+        "n": 7,
+        "label": "Anker 621 MagGo Battery",
+        "slug": "anker-621-maggo-magnetic-power-bank-5000"
+      },
+      {
+        "n": 8,
+        "label": "Nite Ize Gear Tie",
+        "slug": "nite-ize-gear-tie-original-12-inch-propack"
+      },
+      {
+        "n": 9,
+        "label": "OXO Upright Sweep Set",
+        "slug": "oxo-good-grips-upright-sweep-set"
+      },
+      {
+        "n": 10,
+        "label": "OXO Egg Separator",
+        "slug": "oxo-good-grips-3-in-1-egg-separator"
+      }
+    ]
+  },
+  {
+    "slug": "one-day",
+    "title": "One Day. Ten New Finds.",
+    "blurb": "Every product from the video, in the order of the day. Tap any one to see it on Amazon.",
+    "date": "2026-10-09",
+    "items": [
+      {
+        "n": 1,
+        "label": "06:00 SmartSleep Wake-Up Light",
+        "slug": "philips-smartsleep-wake-up-light-hf3650"
+      },
+      {
+        "n": 2,
+        "label": "06:45 Curtain Opener 3",
+        "slug": "switchbot-curtain-opener-3-2-pack"
+      },
+      {
+        "n": 3,
+        "label": "07:10 Whistling Kettle",
+        "slug": "le-creuset-whistling-kettle-1-7qt-cerise"
+      },
+      {
+        "n": 4,
+        "label": "07:30 Pavina Double-Wall Glasses",
+        "slug": "bodum-pavina-double-wall-glasses-15oz-2"
+      },
+      {
+        "n": 5,
+        "label": "09:00 MX Master 4 Mouse",
+        "slug": "logitech-mx-master-4-wireless-mouse-graphite"
+      },
+      {
+        "n": 6,
+        "label": "12:30 HERO13 Black",
+        "slug": "gopro-hero13-black-action-camera"
+      },
+      {
+        "n": 7,
+        "label": "15:30 Candi GRL Lucy Skates",
+        "slug": "candi-grl-lucy-adjustable-roller-skates"
+      },
+      {
+        "n": 8,
+        "label": "17:30 Starlancer Club Ball",
+        "slug": "adidas-starlancer-club-soccer-ball"
+      },
+      {
+        "n": 9,
+        "label": "19:15 Woodfire Grill & Smoker",
+        "slug": "ninja-woodfire-outdoor-grill-smoker-og301"
+      },
+      {
+        "n": 10,
+        "label": "22:00 Original Puffy Blanket",
+        "slug": "rumpl-original-puffy-blanket-1-person-black"
+      }
+    ]
+  },
+  {
+    "slug": "ten-objects-that-look-impossible",
+    "title": "Ten Objects That Look Impossible",
+    "blurb": "Every product from the book, by its plate number. Tap any one to see it on Amazon.",
+    "date": "2026-10-09",
+    "items": [
+      {
+        "n": 1,
+        "label": "Mini Sand Art Table",
+        "slug": "oasis-mini-kinetic-sand-art-table-bamboo"
+      },
+      {
+        "n": 2,
+        "label": "Kinetic Energy Sculpture",
+        "slug": "swinging-sticks-kinetic-energy-sculpture-desktop"
+      },
+      {
+        "n": 3,
+        "label": "Rolling-Ball Desk Gadget",
+        "slug": "misdenk-kinetic-art-rolling-ball-desk-gadget"
+      },
+      {
+        "n": 4,
+        "label": "Magnetic Hourglass",
+        "slug": "zicome-magnetic-hourglass-sand-timer"
+      },
+      {
+        "n": 5,
+        "label": "Hoverpen Interstellar",
+        "slug": "novium-hoverpen-interstellar-space-black"
+      },
+      {
+        "n": 6,
+        "label": "Levitating Plant Pot",
+        "slug": "kiyoming-levitating-hexagon-plant-pot"
+      },
+      {
+        "n": 7,
+        "label": "Levitating Bulb Lamp",
+        "slug": "moocci-levitating-bulb-lamp"
+      },
+      {
+        "n": 8,
+        "label": "Levitating Globe",
+        "slug": "mokoqi-magnetic-levitating-globe"
+      },
+      {
+        "n": 9,
+        "label": "Volcano Lamp",
+        "slug": "tnoie-volcano-lamp-eruption-night-light"
+      },
+      {
+        "n": 10,
+        "label": "3D Galaxy Projector",
+        "slug": "rossetta-3d-galaxy-projector-60-scenes"
+      }
+    ]
+  },
+  {
     "slug": "didnt-know-existed-7",
     "title": "Amazon Finds You Didn't Know Existed (Part 7)",
     "blurb": "Every product from the video, by its number. Tap any one to see it on Amazon.",
