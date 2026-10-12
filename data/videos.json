@@ -1,5 +1,53 @@
 [
   {
+    "slug": "viral-gadgets-tier-list",
+    "title": "I Ranked 8 Viral Amazon Gadgets (Tier List)",
+    "blurb": "Every gadget from the tier list, from S down to C. Tap any one to see it on Amazon.",
+    "date": "2026-10-12",
+    "items": [
+      {
+        "n": 1,
+        "label": "S · Spikeball",
+        "slug": "spikeball-original-roundnet-3-ball-set"
+      },
+      {
+        "n": 2,
+        "label": "A · Squatty Potty",
+        "slug": "squatty-potty-original-toilet-stool-9-inch"
+      },
+      {
+        "n": 3,
+        "label": "A · The Ridge Wallet",
+        "slug": "the-ridge-wallet-money-clip-forest-green"
+      },
+      {
+        "n": 4,
+        "label": "A · SKIL 360° Laser Level",
+        "slug": "skil-360-self-leveling-cross-line-laser-level"
+      },
+      {
+        "n": 5,
+        "label": "B · Dash Mini Waffle Maker",
+        "slug": "dash-mini-waffle-maker-red"
+      },
+      {
+        "n": 6,
+        "label": "B · PhoneSoap 3",
+        "slug": "phonesoap-3-uv-phone-sanitizer-charger"
+      },
+      {
+        "n": 7,
+        "label": "B · Joseph Joseph Extend",
+        "slug": "joseph-joseph-extend-expandable-dish-rack"
+      },
+      {
+        "n": 8,
+        "label": "C · OXO Salad Chopper",
+        "slug": "oxo-good-grips-salad-chopper-with-bowl"
+      }
+    ]
+  },
+  {
     "slug": "just-make-sense-9",
     "title": "Amazon Finds That Just Make Sense (Part 9)",
     "blurb": "Every product from the video, by its number. Tap any one to see it on Amazon.",
