@@ -1,5 +1,53 @@
 [
   {
+    "slug": "kitchen-gadgets-tier-list",
+    "title": "I Ranked 8 Viral Kitchen Gadgets (Tier List)",
+    "blurb": "Every kitchen gadget from the tier list, from S down to C. Tap any one to see it on Amazon.",
+    "date": "2026-10-15",
+    "items": [
+      {
+        "n": 1,
+        "label": "S · Ninja Foodi Grill",
+        "slug": "ninja-foodi-5-in-1-xl-indoor-grill-air-fryer-ag301"
+      },
+      {
+        "n": 2,
+        "label": "A · TempPro Thermometer",
+        "slug": "temppro-tempswift-instant-read-thermometer"
+      },
+      {
+        "n": 3,
+        "label": "A · AeroPress",
+        "slug": "aeropress-original-coffee-press"
+      },
+      {
+        "n": 4,
+        "label": "A · Instant Pot Duo",
+        "slug": "instant-pot-duo-7-in-1-pressure-cooker-6qt"
+      },
+      {
+        "n": 5,
+        "label": "B · Zulay Lemon Squeezer",
+        "slug": "zulay-kitchen-2-in-1-lemon-lime-squeezer"
+      },
+      {
+        "n": 6,
+        "label": "B · Cosori Air Fryer",
+        "slug": "cosori-air-fryer-pro-le-5-qt"
+      },
+      {
+        "n": 7,
+        "label": "B · Takeya Cold Brew",
+        "slug": "takeya-deluxe-cold-brew-coffee-maker-2-quart"
+      },
+      {
+        "n": 8,
+        "label": "C · Microplane Zester",
+        "slug": "microplane-classic-zester-grater"
+      }
+    ]
+  },
+  {
     "slug": "viral-gadgets-tier-list",
     "title": "I Ranked 8 Viral Amazon Gadgets (Tier List)",
     "blurb": "Every gadget from the tier list, from S down to C. Tap any one to see it on Amazon.",
