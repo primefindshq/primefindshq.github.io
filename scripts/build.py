@@ -473,7 +473,7 @@ def product_index_label(product):
 _CARD_SEQ = 0
 
 
-def render_product_card(product, reveal=True, reveal_delay=0, morph=False):
+def render_product_card(product, reveal=True, reveal_delay=0, morph=False, eager=False):
     # Every card gets unique ids so its link can be named by the product title and
     # described by the blurb, price and rating (a product can appear twice on the
     # homepage, so ids are per-render, not per-product). js/components/productCard.js
@@ -498,7 +498,7 @@ def render_product_card(product, reveal=True, reveal_delay=0, morph=False):
 <article class="product-card" {reveal_attr}>
   <a class="product-card-link" href="/product/{product['slug']}/" aria-labelledby="{cid}-name" aria-describedby="{cid}-desc {cid}-meta">
     <div class="product-card__media">
-      <img src="{product['image']}" alt="{esc(product['name'])}" loading="lazy" width="800" height="800"{morph_style}
+      <img src="{product['image']}" alt="{esc(product['name'])}" loading="{'eager' if eager else 'lazy'}" width="800" height="800"{morph_style}
            onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
     </div>
     <div class="product-card__body">
@@ -672,7 +672,7 @@ def render_video_strip(videos):
     items = "".join(
         f'<div class="rail__item"><div class="video-item" id="h{i["n"]}">'
         f'<div class="video-item__label"><span class="video-item__num">#{i["n"]}</span> {esc(i["label"])}</div>'
-        f'{render_product_card(i["product"], reveal=False)}</div></div>'
+        f'{render_product_card(i["product"], reveal=False, eager=True)}</div></div>'
         for i in v["items"]
     )
     return f"""
@@ -877,6 +877,8 @@ def render_category_page(site, category, all_categories, category_products):
         {SEARCH_ICON}
         <input type="search" placeholder="Search in {esc(category['name'])}…" data-category-search aria-label="Search in {esc(category['name'])}" autocomplete="off" enterkeyhint="search" spellcheck="false" />
       </div>
+      <details class="filters-more" open data-filters-more>
+      <summary class="filters-more__toggle">Filters</summary>
       {subcategory_group}
       <div class="filter-group" role="group" aria-labelledby="filter-rating-title">
         <h2 class="filter-group__title" id="filter-rating-title">Rating</h2>
@@ -899,6 +901,8 @@ def render_category_page(site, category, all_categories, category_products):
         <label class="filter-checkbox"><input type="checkbox" data-filter-trending /> Trending</label>
       </div>
       <button type="button" class="btn btn--secondary btn--sm btn--full" data-filters-clear>Clear filters</button>
+      </details>
+      <script>(function(){{var d=document.querySelector('[data-filters-more]');if(d&&matchMedia('(max-width: 900px)').matches)d.removeAttribute('open');}})();</script>
     </div>
     <div>
       <div class="toolbar">

@@ -150,6 +150,8 @@
         <svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="9" cy="9" r="6.5"/><path d="M18 18l-3.8-3.8"/></svg>
         <input type="search" placeholder="Search in Under $25…" data-category-search aria-label="Search in Under $25" autocomplete="off" enterkeyhint="search" spellcheck="false" />
       </div>
+      <details class="filters-more" open data-filters-more>
+      <summary class="filters-more__toggle">Filters</summary>
       <div class="filter-group" role="group" aria-labelledby="filter-type-title"><h2 class="filter-group__title" id="filter-type-title">Type</h2><div class="filter-chips"><button type="button" class="chip" data-filter-sub="Tabletop Games" aria-pressed="false">Tabletop Games<span class="chip__count" aria-hidden="true">56</span><span class="sr-only"> (56)</span></button><button type="button" class="chip" data-filter-sub="Kitchen Tools" aria-pressed="false">Kitchen Tools<span class="chip__count" aria-hidden="true">52</span><span class="sr-only"> (52)</span></button><button type="button" class="chip" data-filter-sub="Pets" aria-pressed="false">Pets<span class="chip__count" aria-hidden="true">45</span><span class="sr-only"> (45)</span></button><button type="button" class="chip" data-filter-sub="Toys" aria-pressed="false">Toys<span class="chip__count" aria-hidden="true">37</span><span class="sr-only"> (37)</span></button><button type="button" class="chip" data-filter-sub="Organization" aria-pressed="false">Organization<span class="chip__count" aria-hidden="true">15</span><span class="sr-only"> (15)</span></button><button type="button" class="chip" data-filter-sub="Decor" aria-pressed="false">Decor<span class="chip__count" aria-hidden="true">13</span><span class="sr-only"> (13)</span></button><button type="button" class="chip" data-filter-sub="Office Supplies" aria-pressed="false">Office Supplies<span class="chip__count" aria-hidden="true">13</span><span class="sr-only"> (13)</span></button><button type="button" class="chip" data-filter-sub="Accessories" aria-pressed="false">Accessories<span class="chip__count" aria-hidden="true">12</span><span class="sr-only"> (12)</span></button></div></div>
       <div class="filter-group" role="group" aria-labelledby="filter-rating-title">
         <h2 class="filter-group__title" id="filter-rating-title">Rating</h2>
@@ -172,6 +174,8 @@
         <label class="filter-checkbox"><input type="checkbox" data-filter-trending /> Trending</label>
       </div>
       <button type="button" class="btn btn--secondary btn--sm btn--full" data-filters-clear>Clear filters</button>
+      </details>
+      <script>(function(){var d=document.querySelector('[data-filters-more]');if(d&&matchMedia('(max-width: 900px)').matches)d.removeAttribute('open');})();</script>
     </div>
     <div>
       <div class="toolbar">

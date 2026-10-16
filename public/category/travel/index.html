@@ -150,6 +150,8 @@
         <svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="9" cy="9" r="6.5"/><path d="M18 18l-3.8-3.8"/></svg>
         <input type="search" placeholder="Search in Travel…" data-category-search aria-label="Search in Travel" autocomplete="off" enterkeyhint="search" spellcheck="false" />
       </div>
+      <details class="filters-more" open data-filters-more>
+      <summary class="filters-more__toggle">Filters</summary>
       <div class="filter-group" role="group" aria-labelledby="filter-type-title"><h2 class="filter-group__title" id="filter-type-title">Type</h2><div class="filter-chips"><button type="button" class="chip" data-filter-sub="Camping" aria-pressed="false">Camping<span class="chip__count" aria-hidden="true">38</span><span class="sr-only"> (38)</span></button><button type="button" class="chip" data-filter-sub="Tabletop Games" aria-pressed="false">Tabletop Games<span class="chip__count" aria-hidden="true">26</span><span class="sr-only"> (26)</span></button><button type="button" class="chip" data-filter-sub="Travel Essentials" aria-pressed="false">Travel Essentials<span class="chip__count" aria-hidden="true">18</span><span class="sr-only"> (18)</span></button><button type="button" class="chip" data-filter-sub="Car Accessories" aria-pressed="false">Car Accessories<span class="chip__count" aria-hidden="true">16</span><span class="sr-only"> (16)</span></button><button type="button" class="chip" data-filter-sub="Audio" aria-pressed="false">Audio<span class="chip__count" aria-hidden="true">15</span><span class="sr-only"> (15)</span></button><button type="button" class="chip" data-filter-sub="Travel Tech" aria-pressed="false">Travel Tech<span class="chip__count" aria-hidden="true">13</span><span class="sr-only"> (13)</span></button><button type="button" class="chip" data-filter-sub="Everyday Carry" aria-pressed="false">Everyday Carry<span class="chip__count" aria-hidden="true">11</span><span class="sr-only"> (11)</span></button><button type="button" class="chip" data-filter-sub="Cameras &amp; Photo" aria-pressed="false">Cameras &amp; Photo<span class="chip__count" aria-hidden="true">8</span><span class="sr-only"> (8)</span></button></div></div>
       <div class="filter-group" role="group" aria-labelledby="filter-rating-title">
         <h2 class="filter-group__title" id="filter-rating-title">Rating</h2>
@@ -172,6 +174,8 @@
         <label class="filter-checkbox"><input type="checkbox" data-filter-trending /> Trending</label>
       </div>
       <button type="button" class="btn btn--secondary btn--sm btn--full" data-filters-clear>Clear filters</button>
+      </details>
+      <script>(function(){var d=document.querySelector('[data-filters-more]');if(d&&matchMedia('(max-width: 900px)').matches)d.removeAttribute('open');})();</script>
     </div>
     <div>
       <div class="toolbar">

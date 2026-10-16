@@ -679,3 +679,25 @@
 /* Homepage "From the videos" strip reuses .video-item inside the rail */
 #from-the-videos .rail__item .video-item { height: 100%; }
 #from-the-videos .section-desc a { color: var(--color-gold); }
+
+/* Filters fold behind one "Filters" toggle on narrow screens so the first
+   products show up without scrolling past every chip. Desktop keeps it open. */
+.filters-more__toggle { display: none; }
+@media (max-width: 900px) {
+  .filters-more__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-xs) 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: var(--fs-body-sm);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    list-style: none;
+  }
+  .filters-more__toggle::-webkit-details-marker { display: none; }
+  .filters-more__toggle::after { content: '+'; font-size: 1.1rem; }
+  .filters-more[open] > .filters-more__toggle { margin-bottom: var(--space-md); }
+  .filters-more[open] > .filters-more__toggle::after { content: '\2212'; }
+}

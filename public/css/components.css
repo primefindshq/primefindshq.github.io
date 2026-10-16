@@ -246,9 +246,10 @@
   color: var(--color-text);
 }
 
+/* Kept for screen readers (the card link is described by it) but not shown:
+   the card stays photo, name, price. */
 .product-card__desc {
-  font-size: var(--fs-body-sm);
-  color: var(--color-text-dim);
+  display: none;
 }
 
 .product-card__meta {
