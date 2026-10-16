@@ -481,11 +481,6 @@ def render_product_card(product, reveal=True, reveal_delay=0, morph=False):
     global _CARD_SEQ
     _CARD_SEQ += 1
     cid = f"pc{_CARD_SEQ}"
-    badges = ""
-    if product.get("trending"):
-        badges += '<span class="badge badge--gold">Trending</span>'
-    if product.get("featured"):
-        badges += '<span class="badge badge--outline-gold">Featured</span>'
     reveal_attr = f'data-reveal data-reveal-delay="{reveal_delay}"' if reveal else ""
     # `morph` opts a card into the shared-element image transition (see
     # base.css) -- only safe where a product can appear at most once on the
@@ -503,8 +498,6 @@ def render_product_card(product, reveal=True, reveal_delay=0, morph=False):
 <article class="product-card" {reveal_attr}>
   <a class="product-card-link" href="/product/{product['slug']}/" aria-labelledby="{cid}-name" aria-describedby="{cid}-desc {cid}-meta">
     <div class="product-card__media">
-      <span class="product-card__index tag-mono" aria-hidden="true">{product_index_label(product)}</span>
-      <div class="product-card__badges">{badges}</div>
       <img src="{product['image']}" alt="{esc(product['name'])}" loading="lazy" width="800" height="800"{morph_style}
            onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
     </div>
@@ -705,7 +698,6 @@ def render_video_strip(videos):
 def render_homepage(site, categories, products, counts, collections=(), videos=()):
     trending = [p for p in products if p.get("trending")][:10]
     latest = sorted(products, key=lambda p: p["createdAt"], reverse=True)[:8]
-    featured = next((p for p in products if p.get("featured")), products[0] if products else None)
     collage_source = trending if len(trending) >= 3 else products
     collage = collage_source[:3]
 
@@ -765,19 +757,6 @@ def render_homepage(site, categories, products, counts, collections=(), videos=(
   <div class="category-bento">{category_tiles}</div>
 </section>
 """
-    gift_section = f"""
-<section class="section container" id="gift-guide">
-  <div class="section-head" data-reveal="fade">
-    <div>
-      <span class="eyebrow">Gift Guide</span>
-      <h2 class="section-title">Shopping for someone?</h2>
-      <p class="section-desc">Start from a budget or from what they love.</p>
-    </div>
-  </div>
-  {render_gift_guide(heading_tag="h3", title="Pick a starting point")}
-</section>
-"""
-
     collections_section = ""
     if collections:
         tiles = "".join(render_collection_tile(c) for c in collections)
@@ -794,25 +773,6 @@ def render_homepage(site, categories, products, counts, collections=(), videos=(
 </section>
 """
 
-    editorial_section = ""
-    if featured:
-        editorial_section = f"""
-<section class="section container">
-  <div class="editorial" data-reveal="scale">
-    <div class="editorial__media"><img src="{featured['image']}" alt="{esc(featured['name'])}" loading="lazy" /></div>
-    <div class="editorial__text">
-      <span class="editorial__label">Editorial Pick</span>
-      <p class="editorial__quote">&ldquo;{esc(featured['whyWeLikeIt'])}&rdquo;</p>
-      <span class="editorial__name">{esc(featured['name'])}</span>
-      <span class="editorial__price">{format_price(featured['price'], featured['currency'])}</span>
-      <div>
-        <a class="btn btn--primary" href="/product/{featured['slug']}/">See the Full Story {CHEVRON_ICON}</a>
-      </div>
-    </div>
-  </div>
-</section>
-"""
-
     latest_cards = "".join(render_product_card(p, reveal_delay=min(i, 3) * 70) for i, p in enumerate(latest))
     latest_section = f"""
 <section class="section container" id="latest">
@@ -826,8 +786,9 @@ def render_homepage(site, categories, products, counts, collections=(), videos=(
 </section>
 """
 
-    body = (hero + render_video_strip(videos) + category_section + trending_section + gift_section
-            + collections_section + editorial_section + latest_section)
+    # Fewer, calmer sections: the products are the focus, not the page chrome.
+    body = (hero + render_video_strip(videos) + category_section + trending_section
+            + collections_section + latest_section)
 
     ld_json = json.dumps({
         "@context": "https://schema.org",
@@ -837,22 +798,7 @@ def render_homepage(site, categories, products, counts, collections=(), videos=(
         "logo": site["url"].rstrip("/") + "/assets/logo/wordmark.png",
         "description": site["description"],
     })
-    # Entrance support (homepage only). The inline script runs before first
-    # paint so the black overlay is already up -- no flash of the homepage --
-    # and carries a timed failsafe so a JS failure can never leave the page
-    # covered. Skipped for same-session returns (internal navigation home).
-    intro_head = (
-        '<script>(function(){try{var d=document.documentElement,s=location.search;'
-        'var off=/[?&]intro=off/.test(s),forced=/[?&]intro=/.test(s);'
-        'var seen=!forced&&sessionStorage.getItem("pf-intro-session")==="1";'
-        'if(!off&&!seen){d.classList.add("intro-pending","intro-active");'
-        'window.__pfFs=setTimeout(function(){d.classList.remove("intro-pending","intro-active")},7000)}'
-        '}catch(e){}})();</script>'
-        '<link rel="stylesheet" href="/css/intro.css" />'
-        '<link rel="modulepreload" href="/js/components/introScene.js" />'
-        '<link rel="preload" as="image" href="/assets/logo/wordmark.png" />'
-    )
-    extra_head = f'<script type="application/ld+json">{ld_json}</script>' + intro_head
+    extra_head = f'<script type="application/ld+json">{ld_json}</script>'
 
     return base_page(
         site,
@@ -863,7 +809,7 @@ def render_homepage(site, categories, products, counts, collections=(), videos=(
         active_nav="home",
         page_scripts=["/js/pages/home.js"],
         extra_head=extra_head,
-        show_intro=True,
+        show_intro=False,
     )
 
 
@@ -1112,7 +1058,6 @@ def render_product_page(site, product, category, related_products):
         f'<li><svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 10l4 4 8-9"/></svg><span>{esc(h)}</span></li>'
         for h in product.get("highlights", [])
     )
-    tags = "".join(f'<span class="tag-pill">{esc(t)}</span>' for t in product.get("tags", []))
 
     related_section = ""
     if related_products:
@@ -1144,14 +1089,12 @@ def render_product_page(site, product, category, related_products):
     </div>
     <div>
       <div class="pd-enter pd-enter--1">
-        <span class="product-detail__index tag-mono">{product_index_label(product)}</span>
         <span class="product-detail__category">{esc(category_label(product['category']))}{' · ' + esc(product['subcategory']) if product.get('subcategory') else ''}</span>
       </div>
       <h1 class="product-detail__title pd-enter pd-enter--2">{esc(product['name'])}</h1>
       <div class="product-detail__meta-row pd-enter pd-enter--3">
         <span class="product-detail__price">{format_price(product['price'], product['currency'])}</span>
         {render_stars(product['rating'], product['reviewCount'])}
-        {'<span class="badge badge--gold">Trending</span>' if product.get('trending') else ''}
       </div>
       {f'<p class="product-detail__price-note pd-enter pd-enter--3">Price checked {esc(format_date_long(product["updatedAt"][:10]))}. Amazon prices change often, so check the current price there.</p>' if product.get('price') is not None and product.get('updatedAt') else ''}
       <div class="pd-enter pd-enter--4">
@@ -1163,11 +1106,10 @@ def render_product_page(site, product, category, related_products):
         </div>
         <h2 class="sr-only">Highlights</h2>
         <ul class="highlights-list">{highlights}</ul>
-        <div class="tag-row">{tags}</div>
       </div>
       <div class="cta-panel pd-enter pd-enter--5">
         <a class="btn btn--primary btn--full" data-affiliate-link data-product-slug="{product['slug']}" aria-label="View at Amazon: {esc(product['name'])} (opens in a new tab)">View at Amazon {CHEVRON_ICON}</a>
-        <p class="cta-panel__disclaimer">You will leave {esc(site['siteName'])} to view this product on Amazon, where you can check the current price, availability and shipping before you buy. This is an affiliate link: {esc(site['siteName'])} may earn a commission from qualifying purchases, at no extra cost to you. <a href="/affiliate-disclosure.html">Affiliate disclosure</a>.</p>
+        <p class="cta-panel__disclaimer">Opens Amazon in a new tab. Affiliate link: {esc(site['siteName'])} may earn a commission, at no extra cost to you. <a href="/affiliate-disclosure.html">Disclosure</a>.</p>
       </div>
     </div>
   </div>

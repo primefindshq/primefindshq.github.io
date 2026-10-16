@@ -18,17 +18,11 @@ const CATEGORY_NAMES = {
 
 export function productCardMarkup(product) {
   const cid = `pcj${++cardSeq}`;
-  const badges = [];
-  if (product.trending) badges.push('<span class="badge badge--gold">Trending</span>');
-  if (product.featured) badges.push('<span class="badge badge--outline-gold">Featured</span>');
-  const indexLabel = `No. ${String(product.id).split('-').pop()}`;
 
   return `
     <article class="product-card" data-reveal>
       <a class="product-card-link" href="/product/${product.slug}/" aria-labelledby="${cid}-name" aria-describedby="${cid}-desc ${cid}-meta">
         <div class="product-card__media">
-          <span class="product-card__index tag-mono" aria-hidden="true">${escapeHtml(indexLabel)}</span>
-          <div class="product-card__badges">${badges.join('')}</div>
           <img src="${product.image}" alt="${escapeHtml(product.name)}" loading="lazy" width="800" height="800"
                style="view-transition-name: product-photo-${product.slug}"
                onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
