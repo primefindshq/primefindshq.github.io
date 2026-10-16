@@ -31,10 +31,11 @@
     "issuesUrl": "https://github.com/primefindshq/primefindshq.github.io/issues",
     "note": "contact.email is offered automatically on every legal page and in the footer. The public issue tracker of the site's repository remains a second channel."
   },
-  "legalUpdated": "2026-09-27",
+  "legalUpdated": "2026-10-16",
   "affiliateStatement": "",
   "analytics": {
-    "provider": "none",
-    "note": "Set NEXT_PUBLIC_ANALYTICS_PROVIDER / write key in your deployment environment. The analytics service abstraction in js/core/analytics.js reads window.__PRIME_FINDS_ANALYTICS_CONFIG and no-ops until configured."
+    "provider": "umami",
+    "umami": "d0dd99c8-66db-4a7c-adf4-2bdd83b90df2",
+    "note": "Cookieless Umami Cloud (cloud.umami.is). build.py injects the script and sets window.__PRIME_FINDS_ANALYTICS_CONFIG; js/core/analytics.js sends each Amazon click as an event named after the product."
   }
 }

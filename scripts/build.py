@@ -45,6 +45,17 @@ CSS_FILES = [
 # Data loading
 # --------------------------------------------------------------------------
 
+def render_analytics_head(site):
+    """Cookieless Umami analytics, switched on by "analytics": {"umami": "<website id>"}
+    in site-config.json. data-domains keeps local previews out of the numbers."""
+    website_id = (site.get("analytics") or {}).get("umami")
+    if not website_id:
+        return ""
+    host = site["url"].split("//", 1)[-1].strip("/")
+    return ('<script>window.__PRIME_FINDS_ANALYTICS_CONFIG={provider:"umami"};</script>'
+            f'<script defer src="https://cloud.umami.is/script.js" data-website-id="{esc(website_id)}" data-domains="{esc(host)}"></script>')
+
+
 def load_data():
     with open(os.path.join(DATA_DIR, "site-config.json"), encoding="utf-8") as f:
         site = json.load(f)
@@ -579,6 +590,7 @@ def base_page(site, *, title, description, canonical_path, og_image=None, body_h
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="p:domain_verify" content="b39d8ea156a82de56d39bfc2ed4cd607" />
+  {render_analytics_head(site)}
   {A11Y_HEAD}
   <title>{esc(title)}</title>
   <meta name="description" content="{esc(description)}" />
@@ -1322,22 +1334,19 @@ def render_cookie_page(site):
     )
     sections = f"""
     <h2>The short version</h2>
-    <p>PRIME.FINDS does not set cookies of its own, and it does not use advertising or analytics cookies or trackers. It keeps a few small preferences in your browser's storage. Because there are no non-essential cookies, the site does not show a cookie-consent banner. If that changes, this notice will be updated first and choices will be offered where required.</p>
+    <p>PRIME.FINDS does not set cookies of its own, and it does not use advertising cookies or trackers. It counts visits and clicks with Umami, a privacy-focused analytics service that does not use cookies or identify you (see below). It keeps a small preference in your browser's storage. Because there are no non-essential cookies, the site does not show a cookie-consent banner. If that changes, this notice will be updated first and choices will be offered where required.</p>
 
     <h2>What PRIME.FINDS stores in your browser</h2>
     <dl class="legal-list">
-      <dt><code>pf-visited</code> &middot; local storage</dt>
-      <dd>Remembers that you have seen the entrance animation, so returning visitors get a shorter version. It stays until you clear your browser data.</dd>
-      <dt><code>pf-intro-session</code> &middot; session storage</dt>
-      <dd>Stops the entrance animation replaying while you move around the site in the same browsing session. It is cleared when you close the tab.</dd>
       <dt><code>pf-a11y</code> &middot; local storage</dt>
       <dd>Remembers your accessibility choices (text size, high contrast, reduce motion). It is created only if you change one of them, and removed when you use Reset all or clear your browser data.</dd>
     </dl>
-    <p>None of these is sent to PRIME.FINDS or to any third party.</p>
+    <p>This is not sent to PRIME.FINDS or to any third party.</p>
 
     <h2>Third parties</h2>
     <ul>
       <li><strong>Google Fonts.</strong> The site's fonts are loaded from Google's servers (fonts.googleapis.com and fonts.gstatic.com). Requests to those servers necessarily include your IP address and browser details. See Google's own privacy information for how it handles them.</li>
+      <li><strong>Umami analytics.</strong> The site loads a script from cloud.umami.is that counts page views and clicks on &ldquo;View at Amazon&rdquo; buttons (which product, from which page). Umami does not set cookies or store anything in your browser, and it does not build a profile of you; your IP address is used only to estimate a country and is not stored. See Umami's privacy policy.</li>
       <li><strong>GitHub Pages.</strong> The site is hosted by GitHub Pages. As with any web host, GitHub receives standard request information (such as your IP address) when a page loads. See GitHub's privacy statement.</li>
       <li><strong>Amazon and other retailers.</strong> When you click a link to a retailer you leave PRIME.FINDS. Retailers and affiliate programs may use cookies and similar technologies, including to record that a purchase came from PRIME.FINDS. Those are governed by their own cookie policies.</li>
     </ul>
@@ -1411,13 +1420,14 @@ def render_privacy_page(site):
       <li><strong>Nothing collected through the site.</strong> There are no accounts, sign-ups, comment forms, newsletters or payment forms, so PRIME.FINDS does not ask for or store your name, email address or payment details.</li>
       <li><strong>If you email us.</strong> If you choose to write to the address on this site, PRIME.FINDS receives your email address and whatever you include in your message, and uses it only to reply to you. Please do not send payment or sensitive details.</li>
       <li><strong>Searches and filters stay in your browser.</strong> The search box and filters work on data your browser has already loaded; what you type is not sent to PRIME.FINDS.</li>
-      <li><strong>No analytics or advertising trackers.</strong> The site's code includes a switched-off analytics hook, but no analytics or advertising service is running. If that changes, this policy will be updated first.</li>
-      <li><strong>Small preferences on your device.</strong> The site keeps a few items in your browser's storage (whether you have seen the entrance animation, and your accessibility choices). They stay on your device. The <a href="/cookie-notice.html">Cookie Notice</a> lists each one.</li>
+      <li><strong>Anonymous visit and click counts.</strong> PRIME.FINDS uses Umami, a cookieless analytics service, to count page views and clicks on &ldquo;View at Amazon&rdquo; buttons, along with general details such as page, referring site, country, device type and browser. It does not identify individual visitors, set cookies or track you across other sites. There are no advertising trackers.</li>
+      <li><strong>Small preferences on your device.</strong> If you change an accessibility option, the site remembers your choice in your browser's storage. It stays on your device. The <a href="/cookie-notice.html">Cookie Notice</a> explains it.</li>
     </ul>
 
     <h2>Third parties involved when you use the site</h2>
     <ul>
       <li><strong>GitHub Pages</strong> hosts the site. As with any web host, GitHub receives standard request information, such as your IP address and browser details, when a page loads, and may log it. PRIME.FINDS does not use that data. See GitHub's privacy statement.</li>
+      <li><strong>Umami</strong> (cloud.umami.is) provides the anonymous visit and click counts described above. See Umami's privacy policy.</li>
       <li><strong>Google Fonts</strong> supplies the site's typefaces. Your browser requests them from Google's servers, so Google receives your IP address and browser details. See Google's privacy information.</li>
       <li><strong>Amazon and other retailers.</strong> When you select a &ldquo;View at Amazon&rdquo; or similar button you leave PRIME.FINDS. The retailer, and any link shortener or affiliate program involved, handles your data under its own policies, and may use cookies to attribute a purchase to PRIME.FINDS. We do not receive your account, order or payment details.</li>
     </ul>

@@ -28,6 +28,18 @@ function dispatch(eventName, payload) {
         window.gtag('event', eventName, payload);
       }
       break;
+    case 'umami':
+      // Umami counts page views on its own. Each Amazon click is sent as its own
+      // event named after the product, so the dashboard's Events list reads as
+      // "most-clicked products" with no extra setup.
+      if (eventName === EVENTS.AFFILIATE_CLICK && window.umami && typeof window.umami.track === 'function') {
+        window.umami.track(`Amazon: ${payload.productName || payload.productSlug}`.slice(0, 50), {
+          product: payload.productSlug,
+          category: payload.category,
+          source: payload.source,
+        });
+      }
+      break;
     case 'plausible':
       if (typeof window.plausible === 'function') {
         window.plausible(eventName, { props: payload });

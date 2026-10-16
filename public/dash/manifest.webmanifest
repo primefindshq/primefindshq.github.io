@@ -1,0 +1,13 @@
+{
+  "name": "PRIME.FINDS Stats",
+  "short_name": "PF Stats",
+  "start_url": "/dash/",
+  "scope": "/dash/",
+  "display": "standalone",
+  "background_color": "#0b0b0c",
+  "theme_color": "#0b0b0c",
+  "icons": [
+    { "src": "/assets/logo/favicon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/logo/favicon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
