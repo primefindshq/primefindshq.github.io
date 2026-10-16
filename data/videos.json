@@ -1,5 +1,43 @@
 [
   {
+    "slug": "satisfying-amazon-finds-shatter",
+    "title": "6 Satisfying Amazon Finds",
+    "blurb": "Every product from the video, by its number. Tap any one to see it on Amazon.",
+    "date": "2026-10-16",
+    "items": [
+      {
+        "n": 1,
+        "label": "Rubbermaid FastTrack Garage System",
+        "slug": "rubbermaid-fasttrack-garage-storage-24-piece"
+      },
+      {
+        "n": 2,
+        "label": "Cuisinart Air Fryer Toaster Oven",
+        "slug": "cuisinart-air-fryer-toaster-oven-toa-70"
+      },
+      {
+        "n": 3,
+        "label": "Keurig K-Express",
+        "slug": "keurig-k-express-coffee-maker-black"
+      },
+      {
+        "n": 4,
+        "label": "Nordic Ware Microwave Bacon Tray",
+        "slug": "nordic-ware-microwave-bacon-tray"
+      },
+      {
+        "n": 5,
+        "label": "UGREEN 3-in-1 HDMI Switch",
+        "slug": "ugreen-3-in-1-hdmi-switch-4k60"
+      },
+      {
+        "n": 6,
+        "label": "Nite Ize DoohicKey",
+        "slug": "nite-ize-doohickey-key-tool"
+      }
+    ]
+  },
+  {
     "slug": "kitchen-gadgets-tier-list",
     "title": "I Ranked 8 Viral Kitchen Gadgets (Tier List)",
     "blurb": "Every kitchen gadget from the tier list, from S down to C. Tap any one to see it on Amazon.",
