@@ -1113,6 +1113,7 @@ def render_product_page(site, product, category, related_products):
         {render_stars(product['rating'], product['reviewCount'])}
       </div>
       {f'<p class="product-detail__price-note pd-enter pd-enter--3">Price checked {esc(format_date_long(product["updatedAt"][:10]))}. Amazon prices change often, so check the current price there.</p>' if product.get('price') is not None and product.get('updatedAt') else ''}
+      {'<p class="product-detail__stock-note pd-enter pd-enter--3">Currently hard to find new on Amazon. Similar picks are below.</p>' if product.get('availability') == 'unavailable' else ''}
       <div class="pd-enter pd-enter--4">
         <h2 class="sr-only">About this product</h2>
         <p class="product-detail__desc">{esc(product['description'])}</p>
@@ -1143,21 +1144,19 @@ def render_product_page(site, product, category, related_products):
         "name": product["name"],
         "description": product["shortDescription"],
         "image": site["url"].rstrip("/") + product["image"],
-        "brand": {"@type": "Brand", "name": site["siteName"]},
     }
+    # The maker's brand, as Amazon lists it (data/products.json "brand"); omitted when unknown
+    # rather than guessed. Star ratings are Amazon's, not reviews collected here, so they are
+    # shown on the page but not marked up as this site's aggregateRating.
+    if product.get("brand"):
+        ld_json["brand"] = {"@type": "Brand", "name": product["brand"]}
     if product.get("price") is not None:
         ld_json["offers"] = {
             "@type": "Offer",
             "price": product["price"],
             "priceCurrency": product["currency"],
-            "availability": "https://schema.org/InStock",
-            "url": product.get("externalUrl") or "",
-        }
-    if product.get("rating") and product.get("reviewCount"):
-        ld_json["aggregateRating"] = {
-            "@type": "AggregateRating",
-            "ratingValue": product["rating"],
-            "reviewCount": product["reviewCount"],
+            "availability": "https://schema.org/OutOfStock" if product.get("availability") == "unavailable" else "https://schema.org/InStock",
+            "url": site["url"].rstrip("/") + f"/product/{product['slug']}/",
         }
     extra_head = f'<script type="application/ld+json">{json.dumps(ld_json)}</script>'
 
@@ -1552,7 +1551,13 @@ def main():
     _ALL_COUNTS = counts
 
     # ---- Client-side data snapshot (mirrors a future public API response) ----
-    write_file(os.path.join(PUBLIC_DIR, "data", "products.json"), json.dumps(published, indent=2))
+    # Only the fields the browser uses (cards, search, filters, sorting), minified:
+    # the full records are ~4x larger and every page loads this file.
+    client_fields = ("id", "name", "slug", "category", "subcategory", "secondaryCategories", "shortDescription",
+                     "tags", "image", "price", "currency", "rating", "reviewCount", "affiliateUrl",
+                     "featured", "trending", "published", "createdAt")
+    snapshot = [{k: p[k] for k in client_fields if k in p} for p in published]
+    write_file(os.path.join(PUBLIC_DIR, "data", "products.json"), json.dumps(snapshot, ensure_ascii=False, separators=(",", ":")))
     write_file(os.path.join(PUBLIC_DIR, "data", "categories.json"), json.dumps(categories, indent=2))
 
     # ---- Homepage ----

@@ -657,6 +657,7 @@
 
 /* Product page: price freshness note */
 .product-detail__price-note { margin: var(--space-xs) 0 0; color: var(--color-text-dim); font-size: var(--fs-body-sm); }
+.product-detail__stock-note { margin: var(--space-xs) 0 0; color: var(--color-gold, #b08d3c); font-size: var(--fs-body-sm); }
 
 /* Product page: phone-only sticky buy bar (shown by product.js while the main CTA is off screen) */
 .mobile-cta { display: none; }

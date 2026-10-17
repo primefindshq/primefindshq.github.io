@@ -1,5 +1,43 @@
 [
   {
+    "slug": "internet-obsessed-amazon-finds",
+    "title": "6 Amazon Finds the Internet Is Obsessed With",
+    "blurb": "Every product from the video, by its number. Tap any one to see it on Amazon.",
+    "date": "2026-10-17",
+    "items": [
+      {
+        "n": 1,
+        "label": "POP MART Labubu",
+        "slug": "pop-mart-labubu-big-into-energy-blind-box"
+      },
+      {
+        "n": 2,
+        "label": "Stanley Quencher H2.0",
+        "slug": "stanley-quencher-h2-flowstate-40-oz-dark-navy"
+      },
+      {
+        "n": 3,
+        "label": "Shark FlexStyle",
+        "slug": "shark-flexstyle-air-styler-hd430"
+      },
+      {
+        "n": 4,
+        "label": "Govee RGBIC Floor Lamp",
+        "slug": "govee-rgbic-floor-lamp-basic"
+      },
+      {
+        "n": 5,
+        "label": "TubShroom Ultra",
+        "slug": "tubshroom-ultra-stainless-tub-drain-hair-catcher"
+      },
+      {
+        "n": 6,
+        "label": "Crayola Globbles",
+        "slug": "crayola-globbles-sticky-fidget-6"
+      }
+    ]
+  },
+  {
     "slug": "satisfying-amazon-finds-shatter",
     "title": "6 Satisfying Amazon Finds",
     "blurb": "Every product from the video, by its number. Tap any one to see it on Amazon.",
