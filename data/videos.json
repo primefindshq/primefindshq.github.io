@@ -1,5 +1,76 @@
 [
   {
+    "slug": "pov-problem-fixed",
+    "title": "POV: 4 Annoying Problems, Fixed by Amazon Finds",
+    "blurb": "Every product from the video, by its number. Tap any one to see it on Amazon.",
+    "date": "2026-10-18",
+    "items": [
+      {
+        "n": 1,
+        "label": "Keyboard cleaning gel",
+        "slug": "colorcoral-universal-cleaning-gel"
+      },
+      {
+        "n": 2,
+        "label": "Laundry Turtle basket",
+        "slug": "laundry-turtle-collapsible-laundry-basket"
+      },
+      {
+        "n": 3,
+        "label": "OBD2 code reader",
+        "slug": "ancel-ad310-obd2-code-reader"
+      },
+      {
+        "n": 4,
+        "label": "Book safe with a key lock",
+        "slug": "amazon-basics-diversion-book-safe"
+      }
+    ]
+  },
+  {
+    "slug": "amazon-finds-people-are-buying",
+    "title": "7 Amazon Finds People Are Actually Buying",
+    "blurb": "Every product from the video, by its number. Tap any one to see it on Amazon.",
+    "date": "2026-10-17",
+    "items": [
+      {
+        "n": 1,
+        "label": "RGBIC LED strip lights",
+        "slug": "govee-rgbic-led-strip-lights"
+      },
+      {
+        "n": 2,
+        "label": "JLab Go Air Pop+ earbuds",
+        "slug": "jlab-go-air-pop-plus-earbuds"
+      },
+      {
+        "n": 3,
+        "label": "Owala FreeSip",
+        "slug": "owala-freesip-insulated-water-bottle-24oz-denim"
+      },
+      {
+        "n": 4,
+        "label": "HydroJug Traveler 40 oz",
+        "slug": "hydrojug-traveler-40-oz-french-vanilla"
+      },
+      {
+        "n": 5,
+        "label": "PS5 DualSense, Galactic Purple",
+        "slug": "playstation-dualsense-galactic-purple"
+      },
+      {
+        "n": 6,
+        "label": "AirPods Pro 3",
+        "slug": "apple-airpods-pro-3"
+      },
+      {
+        "n": 7,
+        "label": "Emotional support Cheez-Its",
+        "slug": "relatable-emotional-support-pals-cheez-it"
+      }
+    ]
+  },
+  {
     "slug": "internet-obsessed-amazon-finds",
     "title": "6 Amazon Finds the Internet Is Obsessed With",
     "blurb": "Every product from the video, by its number. Tap any one to see it on Amazon.",
