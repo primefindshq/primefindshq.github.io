@@ -1,5 +1,43 @@
 [
   {
+    "slug": "ranking-amazon-gadgets",
+    "title": "Ranking Amazon Gadgets (Boxy Did Not Agree)",
+    "blurb": "The final ranking from the video, by number. Tap any one to see it on Amazon.",
+    "date": "2026-10-21",
+    "items": [
+      {
+        "n": 1,
+        "label": "Keyboard cleaning gel",
+        "slug": "colorcoral-universal-cleaning-gel"
+      },
+      {
+        "n": 2,
+        "label": "TubShroom drain catcher",
+        "slug": "tubshroom-ultra-stainless-tub-drain-hair-catcher"
+      },
+      {
+        "n": 3,
+        "label": "Crayola Globbles",
+        "slug": "crayola-globbles-sticky-fidget-6"
+      },
+      {
+        "n": 4,
+        "label": "DoohicKey key tool",
+        "slug": "nite-ize-doohickey-key-tool"
+      },
+      {
+        "n": 5,
+        "label": "Microwave bacon tray",
+        "slug": "nordic-ware-microwave-bacon-tray"
+      },
+      {
+        "n": 6,
+        "label": "Emotional support Cheez-Its",
+        "slug": "relatable-emotional-support-pals-cheez-it"
+      }
+    ]
+  },
+  {
     "slug": "check-engine-light",
     "title": "Check Engine Light On? Read the Code Yourself",
     "blurb": "The product from the video. Tap it to see it on Amazon.",
