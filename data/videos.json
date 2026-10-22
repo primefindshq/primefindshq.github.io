@@ -1,5 +1,71 @@
 [
   {
+    "slug": "boxy-ranks-viral-finds",
+    "title": "Boxy Ranks Viral Amazon Finds (Ep. 2)",
+    "blurb": "The products from the video, by their number. Tap any one to see it on Amazon.",
+    "date": "2026-10-23",
+    "items": [
+      {
+        "n": 1,
+        "label": "7-egg cooker",
+        "slug": "elite-gourmet-7-egg-cooker"
+      },
+      {
+        "n": 2,
+        "label": "Heatless curls set",
+        "slug": "kitsch-satin-heatless-curls-set"
+      },
+      {
+        "n": 3,
+        "label": "Collagen wrapping mask",
+        "slug": "medicube-collagen-wrapping-mask"
+      },
+      {
+        "n": 4,
+        "label": "Handheld milk frother",
+        "slug": "zulay-kitchen-handheld-milk-frother"
+      },
+      {
+        "n": 5,
+        "label": "LEGO mini orchid",
+        "slug": "lego-botanicals-mini-orchid"
+      }
+    ]
+  },
+  {
+    "slug": "viral-amazon-finds-bought",
+    "title": "5 Viral Amazon Finds People Bought Last Month",
+    "blurb": "The products from the video, by their number. Tap any one to see it on Amazon.",
+    "date": "2026-10-23",
+    "items": [
+      {
+        "n": 1,
+        "label": "Collagen wrapping mask",
+        "slug": "medicube-collagen-wrapping-mask"
+      },
+      {
+        "n": 2,
+        "label": "Fullstar veggie chopper",
+        "slug": "fullstar-pro-vegetable-chopper-spiralizer"
+      },
+      {
+        "n": 3,
+        "label": "2-in-1 olive oil sprayer",
+        "slug": "trendplain-glass-olive-oil-sprayer"
+      },
+      {
+        "n": 4,
+        "label": "Stanley IceFlow 2.0",
+        "slug": "stanley-iceflow-2-flip-straw-30oz"
+      },
+      {
+        "n": 5,
+        "label": "Mini skincare fridge",
+        "slug": "crownful-mini-fridge-4-liter"
+      }
+    ]
+  },
+  {
     "slug": "ranking-amazon-gadgets",
     "title": "Ranking Amazon Gadgets (Boxy Did Not Agree)",
     "blurb": "The final ranking from the video, by number. Tap any one to see it on Amazon.",
