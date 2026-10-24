@@ -1,5 +1,33 @@
 [
   {
+    "slug": "amazon-to-israel-free-shipping",
+    "title": "מאמזון לישראל במשלוח חינם: 4 דברים שבדקתי",
+    "blurb": "המוצרים מהסרטון, לפי המספרים. כל אחד נבדק מכתובת בישראל: משלוח חינם לישראל בהזמנה מעל 49$. לחצו כדי לראות באמזון.",
+    "date": "2026-10-24",
+    "items": [
+      {
+        "n": 1,
+        "label": "כוס סטנלי IceFlow",
+        "slug": "stanley-iceflow-2-flip-straw-30oz"
+      },
+      {
+        "n": 2,
+        "label": "מעמד מגנטי לאייפון",
+        "slug": "kaistyle-magsafe-car-mount"
+      },
+      {
+        "n": 3,
+        "label": "קורא תקלות לרכב (ANCEL)",
+        "slug": "ancel-ad310-obd2-code-reader"
+      },
+      {
+        "n": 4,
+        "label": "סט תלתלים בלי חום",
+        "slug": "kitsch-satin-heatless-curls-set"
+      }
+    ]
+  },
+  {
     "slug": "boxy-ranks-car-finds",
     "title": "Boxy Ranks Car Finds From Amazon (Ep. 3)",
     "blurb": "The car finds from the video, by their number. Tap any one to see it on Amazon.",
