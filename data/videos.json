@@ -1,5 +1,33 @@
 [
   {
+    "slug": "amazon-most-bought-right-now",
+    "title": "Amazon's Most-Bought Finds Right Now",
+    "blurb": "Ranked by how many people bought each one last month (Amazon's own numbers, checked Oct 25, 2026). Same numbers as the video. Tap any one to see it on Amazon.",
+    "date": "2026-10-25",
+    "items": [
+      {
+        "n": 1,
+        "label": "Collagen wrapping mask (90K+ last month)",
+        "slug": "medicube-collagen-wrapping-mask"
+      },
+      {
+        "n": 2,
+        "label": "Windshield cleaner wand (30K+ last month)",
+        "slug": "astroai-windshield-cleaner-tool"
+      },
+      {
+        "n": 3,
+        "label": "2-in-1 oil sprayer (20K+ last month)",
+        "slug": "trendplain-glass-olive-oil-sprayer"
+      },
+      {
+        "n": 4,
+        "label": "Milk frother (10K+ last month)",
+        "slug": "zulay-kitchen-handheld-milk-frother"
+      }
+    ]
+  },
+  {
     "slug": "amazon-to-israel-free-shipping",
     "title": "מאמזון לישראל במשלוח חינם: 4 דברים שבדקתי",
     "blurb": "המוצרים מהסרטון, לפי המספרים. כל אחד נבדק מכתובת בישראל: משלוח חינם לישראל בהזמנה מעל 49$. לחצו כדי לראות באמזון.",
