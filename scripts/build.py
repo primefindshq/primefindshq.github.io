@@ -100,6 +100,23 @@ def load_videos(published):
     return out
 
 
+def load_guides(published):
+    """Gift guides (data/guides.json): an editorial intro, an ordered list of product slugs
+    and a short FAQ. Unpublished slugs are skipped; a guide with fewer than 5 live picks is dropped."""
+    path = os.path.join(DATA_DIR, "guides.json")
+    if not os.path.exists(path):
+        return []
+    with open(path, encoding="utf-8") as f:
+        raw = json.load(f)
+    by_slug = {p["slug"]: p for p in published if p.get("availability") != "unavailable"}
+    out = []
+    for g in raw:
+        items = [by_slug[s] for s in g["items"] if s in by_slug]
+        if len(items) >= 5:
+            out.append({**g, "items": items})
+    return out
+
+
 def related_products(product, published, limit=4):
     """Products most like this one: same subcategory, same category, shared secondary categories
     and shared tags all add to the score (never the product itself); ties fall back to newest."""
@@ -242,7 +259,22 @@ A11Y_HEAD = (
 )
 
 
+# Always-visible header links. The first one stays visible on phones as a pill; the
+# rest show from tablet width up (the full menu stays behind "Index").
+HEADER_NAV = [
+    ("guides", "Gift Guides", "/guides/"),
+    ("under-25", "Under $25", "/category/under-25/"),
+    ("categories", "Categories", "/#categories"),
+    ("videos", "Videos", "/v/"),
+]
+
+
 def render_header(site, active=None):
+    header_links = "".join(
+        f'<a class="header-nav__link" href="{href}" aria-current="page">{esc(label)}</a>' if active == key
+        else f'<a class="header-nav__link" href="{href}">{esc(label)}</a>'
+        for key, label, href in HEADER_NAV
+    )
     return f"""
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
@@ -250,6 +282,9 @@ def render_header(site, active=None):
     <a class="brand-logo" href="/" aria-label="{esc(site['siteName'])} home">
       <img src="/assets/logo/wordmark.png" alt="{esc(site['siteName'])}" width="1075" height="580" />
     </a>
+    <nav class="header-nav" aria-label="Main">
+      {header_links}
+    </nav>
     <div class="header-actions">
       <button class="icon-btn" type="button" data-search-open aria-haspopup="dialog" aria-label="Search products">{SEARCH_ICON}</button>
       <button class="icon-btn" type="button" data-a11y-toggle aria-haspopup="dialog" aria-expanded="false" aria-controls="a11y-panel" aria-label="Accessibility options">{A11Y_ICON}</button>
@@ -577,19 +612,24 @@ def render_collection_tile(collection):
 # Base HTML document
 # --------------------------------------------------------------------------
 
-def base_page(site, *, title, description, canonical_path, og_image=None, body_html, active_nav=None, page_scripts=None, extra_head="", show_intro=False):
+def base_page(site, *, title, description, canonical_path, og_image=None, body_html, active_nav=None, page_scripts=None, extra_head="", show_intro=False, lang=None):
     css_links = "\n  ".join(f'<link rel="stylesheet" href="{href}" />' for href in CSS_FILES)
     canonical_url = site["url"].rstrip("/") + canonical_path
     og_image_url = site["url"].rstrip("/") + (og_image or "/assets/logo/og-image.jpg")
     scripts = "".join(f'<script type="module" src="{s}"></script>' for s in (page_scripts or []))
     intro_html = render_brand_intro() if show_intro else ""
+    # Search-console ownership tags, e.g. {"google-site-verification": "...", "msvalidate.01": "..."}
+    verification_meta = "".join(
+        f'<meta name="{esc(name)}" content="{esc(value)}" />' for name, value in (site.get("verification") or {}).items() if value
+    )
 
     return f"""<!doctype html>
-<html lang="{site.get('locale', 'en')}">
+<html lang="{lang or site.get('locale', 'en')}">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="p:domain_verify" content="b39d8ea156a82de56d39bfc2ed4cd607" />
+  {verification_meta}
   {render_analytics_head(site)}
   {A11Y_HEAD}
   <title>{esc(title)}</title>
@@ -707,7 +747,27 @@ def render_video_strip(videos):
 """
 
 
-def render_homepage(site, categories, products, counts, collections=(), videos=()):
+def render_guides_strip(guides):
+    """Homepage section for the gift guides: the season's main way into the catalog."""
+    if not guides:
+        return ""
+    tiles = "".join(render_guide_tile(g) for g in guides[:9])
+    return f"""
+<section class="section container" id="gift-guides">
+  <div class="section-head section-head--split" data-reveal="fade">
+    <div>
+      <span class="eyebrow">Holiday 2026</span>
+      <h2 class="section-title">Gift guides for everyone on your list</h2>
+      <p class="section-desc">Short, hand-picked lists by person and budget. Start here if you're shopping for someone else.</p>
+    </div>
+    <a class="btn btn--secondary" href="/guides/">All {len(guides)} guides {CHEVRON_ICON}</a>
+  </div>
+  <div class="collection-grid">{tiles}</div>
+</section>
+"""
+
+
+def render_homepage(site, categories, products, counts, collections=(), videos=(), guides=()):
     trending = [p for p in products if p.get("trending")][:10]
     latest = sorted(products, key=lambda p: p["createdAt"], reverse=True)[:8]
     collage_source = trending if len(trending) >= 3 else products
@@ -722,10 +782,10 @@ def render_homepage(site, categories, products, counts, collections=(), videos=(
   <div class="container hero__grid">
     <div class="hero__intro">
       <h1 class="hero__title hero-enter hero-enter--1">DISCOVER WHAT'S<br/><span class="accent">worth</span> buying.</h1>
-      <p class="hero__sub hero-enter hero-enter--2">No endless scrolling through search results. PRIME.FINDS curates the gadgets, gear and small good ideas actually worth your money.</p>
+      <p class="hero__sub hero-enter hero-enter--2">No endless scrolling through search results. PRIME.FINDS hand-picks the gadgets, gifts and small good ideas actually worth your money, with real ratings and checked prices.</p>
       <div class="hero__ctas hero-enter hero-enter--3">
-        <a class="btn btn--primary" href="#categories">Enter the Catalog {CHEVRON_ICON}</a>
-        <a class="btn btn--secondary" href="/v/">From our videos</a>
+        <a class="btn btn--primary" href="{'/guides/' if guides else '#categories'}">{'Holiday Gift Guides' if guides else 'Enter the Catalog'} {CHEVRON_ICON}</a>
+        <a class="btn btn--secondary" href="#categories">Browse the catalog</a>
         <span class="hero__ctas-note">{len(products):02d} finds, curated</span>
       </div>
     </div>
@@ -741,7 +801,7 @@ def render_homepage(site, categories, products, counts, collections=(), videos=(
   <div class="container section-head--split" data-reveal="fade">
     <div>
       <span class="eyebrow">Trending Now</span>
-      <h2 class="section-title">What everyone's clicking on</h2>
+      <h2 class="section-title">Popular right now</h2>
     </div>
     <div class="rail-controls">
       <button class="icon-btn" type="button" data-rail-prev="trending-rail" aria-label="Scroll trending back">{CHEVRON_LEFT_ICON}</button>
@@ -799,7 +859,7 @@ def render_homepage(site, categories, products, counts, collections=(), videos=(
 """
 
     # Fewer, calmer sections: the products are the focus, not the page chrome.
-    body = (hero + render_video_strip(videos) + category_section + trending_section
+    body = (hero + render_guides_strip(guides) + render_video_strip(videos) + category_section + trending_section
             + collections_section + latest_section)
 
     ld_json = json.dumps({
@@ -814,8 +874,8 @@ def render_homepage(site, categories, products, counts, collections=(), videos=(
 
     return base_page(
         site,
-        title=f"{site['siteName']} — {site['tagline']}",
-        description=site["description"],
+        title=f"{site['siteName']} — Amazon Finds & Gift Ideas Worth Buying (2026)",
+        description=f"Hand-picked Amazon finds and gift ideas: {len(products):,} products with real ratings and checked prices, plus 2026 gift guides for teens, him, her, kids, gamers and more.",
         canonical_path="/",
         body_html=body,
         active_nav="home",
@@ -830,6 +890,21 @@ def render_homepage(site, categories, products, counts, collections=(), videos=(
 # --------------------------------------------------------------------------
 
 PAGE_SIZE = 24
+
+# <title> per category: the phrase people actually search, not just the label.
+CATEGORY_TITLES = {
+    "tech": "Best Tech Gadgets on Amazon (2026)",
+    "home": "Best Home Finds on Amazon (2026)",
+    "kitchen": "Best Kitchen Gadgets on Amazon (2026)",
+    "gaming": "Best Gaming Gear & Board Games (2026)",
+    "kids": "Best Toys & Kids' Gifts on Amazon (2026)",
+    "outdoors": "Best Outdoor & Fitness Gear on Amazon (2026)",
+    "pets": "Best Pet Products on Amazon (2026)",
+    "travel": "Best Travel Gear & Car Accessories (2026)",
+    "desk-setup": "Best Desk Setup Accessories (2026)",
+    "gifts": "Gift Ideas on Amazon for Everyone (2026)",
+    "under-25": "Best Amazon Finds Under $25 (2026)",
+}
 
 
 def popularity(p):
@@ -947,12 +1022,14 @@ def render_category_page(site, category, all_categories, category_products):
 
     return base_page(
         site,
-        title=f"{category['name']} — {site['siteName']}",
+        title=CATEGORY_TITLES.get(category["slug"], f"Best {category['name']} Finds on Amazon (2026)") + f" — {site['siteName']}",
         description=category["description"],
         canonical_path=f"/category/{category['slug']}/",
-        og_image=f"/assets/images/categories/{category['slug']}.svg",
+        # Social cards can't show SVG, so the category's most popular product photo is used.
+        og_image=initial_sorted[0]["image"] if initial_sorted else None,
         body_html=body,
         page_scripts=["/js/pages/category.js"],
+        active_nav=category["slug"],
     )
 
 
@@ -981,6 +1058,198 @@ def render_collection_page(site, collection):
         og_image=collection["items"][0]["image"],
         body_html=body,
         page_scripts=["/js/pages/collection.js"],
+    )
+
+
+# --------------------------------------------------------------------------
+# Gift guides (/guides/): the search- and Pinterest-facing pages. Each is a numbered
+# list of picks with a short editorial intro and FAQ, built from data/guides.json.
+# --------------------------------------------------------------------------
+
+def guide_updated(guide):
+    """The newest price check among a guide's picks, as 'Month YYYY'."""
+    newest = max((p.get("updatedAt") or p.get("createdAt") or "")[:10] for p in guide["items"])
+    y, m, _ = newest.split("-")
+    return f"{_MONTHS[int(m) - 1]} {y}"
+
+
+def render_guide_tile(guide):
+    thumbs = "".join(
+        f'<span class="collection-tile__thumb"><img src="{p["image"]}" alt="" loading="lazy" width="200" height="200" /></span>'
+        for p in guide["items"][:3]
+    )
+    return f"""
+<a class="collection-tile guide-tile" href="/guides/{guide['slug']}/">
+  <span class="collection-tile__thumbs" aria-hidden="true">{thumbs}</span>
+  <span class="collection-tile__body">
+    <span class="collection-tile__count">{len(guide['items']):02d} picks</span>
+    <h3 class="collection-tile__name">{esc(guide['title'].replace('The Best ', '').replace(' in 2026', '').replace(' (2026)', ''))}</h3>
+    <span class="collection-tile__blurb">{esc(guide['card'])}</span>
+  </span>
+</a>
+"""
+
+
+def render_guide_item(n, p, site):
+    price = format_price(p["price"], p["currency"])
+    return f"""
+<li class="guide-item" id="pick-{n}">
+  <a class="guide-item__media" href="/product/{p['slug']}/" tabindex="-1" aria-hidden="true">
+    <img src="{p['image']}" alt="" loading="{'eager' if n <= 2 else 'lazy'}" width="800" height="800" onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
+  </a>
+  <div class="guide-item__body">
+    <span class="guide-item__num">{n:02d}</span>
+    <span class="product-card__category">{esc(category_label(p['category']))}{' · ' + esc(p['subcategory']) if p.get('subcategory') else ''}</span>
+    <h2 class="guide-item__name"><a href="/product/{p['slug']}/">{esc(p['name'])}</a></h2>
+    <div class="guide-item__meta"><span class="product-card__price">{price}</span>{render_stars(p['rating'], p['reviewCount'])}</div>
+    <p class="guide-item__why"><strong>Why it's here:</strong> {esc(p['whyWeLikeIt'])} {esc(p['shortDescription'])}</p>
+    <div class="guide-item__cta">
+      <a class="btn btn--primary" data-affiliate-link data-product-slug="{p['slug']}" aria-label="Check price on Amazon: {esc(p['name'])} (opens in a new tab)">Check price on Amazon {CHEVRON_ICON}</a>
+      <a class="guide-item__more" href="/product/{p['slug']}/">Details</a>
+    </div>
+  </div>
+</li>
+"""
+
+
+def render_guide_page(site, guide, guides):
+    items = guide["items"]
+    prices = [p["price"] for p in items if p.get("price") is not None]
+    intro = "".join(f"<p>{esc(par)}</p>" for par in guide["intro"])
+    jump = "".join(f'<a class="video-jump__num" href="#pick-{i}">{i}</a>' for i in range(1, len(items) + 1))
+    picks = "".join(render_guide_item(i, p, site) for i, p in enumerate(items, 1))
+    faqs = "".join(
+        f'<details class="guide-faq__item"><summary>{esc(q)}</summary><p>{esc(a)}</p></details>' for q, a in guide.get("faqs", [])
+    )
+    by_slug = {g["slug"]: g for g in guides}
+    related = [by_slug[s] for s in guide.get("related", []) if s in by_slug]
+    related_html = "".join(render_guide_tile(g) for g in related)
+    updated = guide_updated(guide)
+    price_range = f"${min(prices):,.0f} to ${max(prices):,.0f}" if prices else ""
+    body = f"""
+<section class="page-hero container guide-hero">
+  {render_breadcrumbs([("Home", "/"), ("Gift Guides", "/guides/"), (guide['title'], None)])}
+  <span class="eyebrow">Gift Guide · Updated {esc(updated)}</span>
+  <h1 class="section-title guide-hero__title">{esc(guide['title'])}</h1>
+  <div class="guide-hero__intro">{intro}</div>
+  <p class="guide-hero__facts tag-mono">{len(items)} picks · {esc(price_range)} · Prices checked on Amazon US</p>
+  <nav class="video-jump" aria-label="Jump to a pick">{jump}</nav>
+</section>
+<section class="section container">
+  {render_affiliate_note(site)}
+  <ol class="guide-list">{picks}</ol>
+</section>
+<section class="section container guide-faq">
+  <h2 class="section-title">Questions people ask</h2>
+  {faqs}
+</section>
+<section class="section container">
+  <span class="eyebrow">Keep browsing</span>
+  <h2 class="section-title">More gift guides</h2>
+  <div class="collection-grid">{related_html}</div>
+  <p class="guide-all"><a class="btn btn--secondary" href="/guides/">All gift guides {CHEVRON_ICON}</a></p>
+</section>
+"""
+    base = site["url"].rstrip("/")
+    ld = [
+        {"@context": "https://schema.org", "@type": "ItemList", "name": guide["title"],
+         "itemListElement": [{"@type": "ListItem", "position": i, "url": f"{base}/product/{p['slug']}/", "name": p["name"]}
+                             for i, p in enumerate(items, 1)]},
+        {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": base + "/"},
+            {"@type": "ListItem", "position": 2, "name": "Gift Guides", "item": base + "/guides/"},
+            {"@type": "ListItem", "position": 3, "name": guide["title"], "item": f"{base}/guides/{guide['slug']}/"}]},
+    ]
+    if guide.get("faqs"):
+        ld.append({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+            {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in guide["faqs"]]})
+    extra_head = "".join(f'<script type="application/ld+json">{json.dumps(x)}</script>' for x in ld)
+    return base_page(
+        site,
+        title=guide["metaTitle"],
+        description=guide["metaDescription"],
+        canonical_path=f"/guides/{guide['slug']}/",
+        og_image=items[0]["image"],
+        body_html=body,
+        active_nav="guides",
+        page_scripts=["/js/pages/collection.js"],
+        extra_head=extra_head,
+    )
+
+
+def render_guides_index(site, guides):
+    tiles = "".join(render_guide_tile(g) for g in guides)
+    body = f"""
+<section class="page-hero container">
+  {render_breadcrumbs([("Home", "/"), ("Gift Guides", None)])}
+  <span class="eyebrow">Holiday 2026</span>
+  <h1 class="section-title" style="font-size: var(--fs-display-lg);">Gift Guides 2026</h1>
+  <p class="category-hero__desc">Short, hand-picked lists for every person on your list and every budget. Each pick is a real Amazon listing with a strong rating, and prices are checked on Amazon US.</p>
+  {render_gift_guide(heading_tag="h2", title="Shop by budget or interest")}
+</section>
+<section class="section container">
+  <h2 class="sr-only">All gift guides</h2>
+  <div class="collection-grid">{tiles}</div>
+</section>
+"""
+    return base_page(
+        site,
+        title="Gift Guides 2026: Best Gift Ideas for Everyone — PRIME.FINDS",
+        description="Holiday gift guides for 2026: gifts for teens, him, her, kids, gamers, coffee lovers, travelers and pet lovers, plus stocking stuffers and white elephant gifts under $35.",
+        canonical_path="/guides/",
+        og_image=guides[0]["items"][0]["image"],
+        body_html=body,
+        active_nav="guides",
+    )
+
+
+HE_GUIDE_TITLES = {
+    "gifts-for-teens": "מתנות לנוער", "gifts-for-gamers": "מתנות לגיימרים", "gifts-for-coffee-lovers": "מתנות לאוהבי קפה",
+    "stocking-stuffers": "מתנות קטנות עד $25", "white-elephant-gifts": "מתנות לחילופי מתנות", "gifts-under-50": "מתנות עד $50",
+    "tech-gifts": "מתנות טכנולוגיה", "gifts-for-her": "מתנות לה", "gifts-for-him": "מתנות לו", "gifts-for-kids": "מתנות לילדים",
+    "gifts-for-pet-lovers": "מתנות לבעלי כלבים וחתולים", "gifts-for-travelers": "מתנות למטיילים", "desk-setup-gifts": "שדרוגים לשולחן העבודה",
+    "gifts-for-home-cooks": "מתנות לאוהבי בישול", "beauty-gifts": "מתנות טיפוח ויופי",
+}
+
+
+def render_hebrew_page(site, guides):
+    """/he/: a Hebrew entry point for viewers of the Hebrew videos. The catalog itself
+    stays in English (Amazon US listings); this page explains how buying works and
+    points into the guides."""
+    links = "".join(
+        f'<a class="he-guide" href="/guides/{g["slug"]}/"><span>{esc(HE_GUIDE_TITLES.get(g["slug"], g["title"]))}</span>'
+        f'<span class="he-guide__count">{len(g["items"])} מוצרים</span></a>'
+        for g in guides
+    )
+    body = f"""
+<section class="page-hero container he-page" dir="rtl">
+  <span class="eyebrow">PRIME.FINDS בעברית</span>
+  <h1 class="section-title" style="font-size: var(--fs-display-lg);">המוצרים מהסרטונים, ומדריכי מתנות מאמזון</h1>
+  <p class="category-hero__desc">ראיתם מוצר באחד הסרטונים שלנו? כל המוצרים מכל סרטון מחכים לכם לפי המספר שלהם בעמוד הסרטונים. רוצים רעיון למתנה? בחרו מדריך למטה. כל מוצר באתר הוא מוצר אמיתי מאמזון ארה״ב עם דירוג גבוה, והמחירים נבדקים בדולרים.</p>
+  <p><a class="btn btn--primary" href="/v/">למוצרים מהסרטונים {CHEVRON_LEFT_ICON}</a></p>
+</section>
+<section class="section container he-page" dir="rtl">
+  <h2 class="section-title">מדריכי מתנות 2026</h2>
+  <div class="he-guides">{links}</div>
+</section>
+<section class="section container he-page" dir="rtl">
+  <h2 class="section-title">איך קונים מאמזון לישראל</h2>
+  <ol class="he-steps">
+    <li>לוחצים על הכפתור <strong>Check price on Amazon</strong> ליד המוצר. הקישור פותח את עמוד המוצר באמזון בלשונית חדשה.</li>
+    <li>באמזון בודקים את המחיר העדכני ואת עלות המשלוח לישראל. אמזון מציעה משלוח חינם לישראל על מוצרים מסוימים בהזמנה מעל $49, וזה מופיע בעמוד המוצר כשהם זכאים.</li>
+    <li>משלמים ישירות באמזון. אנחנו לא מוכרים כלום בעצמנו ולא רואים את פרטי ההזמנה.</li>
+  </ol>
+  <p class="he-note">הקישורים באתר הם קישורי שותפים: אם קונים דרכם, PRIME.FINDS עשוי לקבל עמלה מאמזון, בלי עלות נוספת עבורכם. <a href="/affiliate-disclosure.html">גילוי נאות (באנגלית)</a>.</p>
+</section>
+"""
+    return base_page(
+        site,
+        title="מוצרים מאמזון ומדריכי מתנות 2026 | PRIME.FINDS בעברית",
+        description="המוצרים מהסרטונים של PRIME.FINDS, מדריכי מתנות מאמזון לכל אחד ולכל תקציב, והסבר קצר איך קונים מאמזון לישראל.",
+        canonical_path="/he/",
+        og_image=guides[0]["items"][0]["image"] if guides else None,
+        body_html=body,
+        lang="he",
     )
 
 
@@ -1016,6 +1285,7 @@ def render_video_body(site, video, videos, eyebrow):
   <h1 class="section-title" style="font-size: var(--fs-display-lg);">{esc(video['title'])}</h1>
   <p class="category-hero__desc">{esc(video['blurb'])}</p>
   <nav class="video-jump" aria-label="Jump to a number">{jump}</nav>
+  <p class="video-links"><a href="/guides/">Holiday gift guides</a> · <a href="/he/" lang="he" dir="rtl">בעברית: איך קונים מאמזון לישראל</a></p>
 </section>
 <section class="section container">
   <h2 class="sr-only">Products in this video</h2>
@@ -1058,8 +1328,12 @@ def render_videos_index(site, videos):
 # Product detail pages
 # --------------------------------------------------------------------------
 
-def render_product_page(site, product, category, related_products):
+def render_product_page(site, product, category, related_products, featured_in=()):
     images = [product["image"]] + product.get("additionalImages", [])
+    featured_html = ""
+    if featured_in:
+        links = "".join(f'<li><a href="/guides/{g["slug"]}/">{esc(g["title"])}</a></li>' for g in featured_in)
+        featured_html = f'<div class="featured-in"><h2 class="featured-in__title">Featured in</h2><ul>{links}</ul></div>'
     thumbs_html = ""
     if len(images) > 1:
         thumbs = "".join(
@@ -1114,6 +1388,10 @@ def render_product_page(site, product, category, related_products):
       </div>
       {f'<p class="product-detail__price-note pd-enter pd-enter--3">Price checked {esc(format_date_long(product["updatedAt"][:10]))}. Amazon prices change often, so check the current price there.</p>' if product.get('price') is not None and product.get('updatedAt') else ''}
       {'<p class="product-detail__stock-note pd-enter pd-enter--3">Currently hard to find new on Amazon. Similar picks are below.</p>' if product.get('availability') == 'unavailable' else ''}
+      <div class="cta-panel pd-enter pd-enter--3">
+        <a class="btn btn--primary btn--full" data-affiliate-link data-product-slug="{product['slug']}" aria-label="Check price on Amazon: {esc(product['name'])} (opens in a new tab)">Check price on Amazon {CHEVRON_ICON}</a>
+        <p class="cta-panel__disclaimer">Opens Amazon in a new tab. Affiliate link: {esc(site['siteName'])} may earn a commission, at no extra cost to you. <a href="/affiliate-disclosure.html">Disclosure</a>.</p>
+      </div>
       <div class="pd-enter pd-enter--4">
         <h2 class="sr-only">About this product</h2>
         <p class="product-detail__desc">{esc(product['description'])}</p>
@@ -1123,16 +1401,13 @@ def render_product_page(site, product, category, related_products):
         </div>
         <h2 class="sr-only">Highlights</h2>
         <ul class="highlights-list">{highlights}</ul>
-      </div>
-      <div class="cta-panel pd-enter pd-enter--5">
-        <a class="btn btn--primary btn--full" data-affiliate-link data-product-slug="{product['slug']}" aria-label="View at Amazon: {esc(product['name'])} (opens in a new tab)">View at Amazon {CHEVRON_ICON}</a>
-        <p class="cta-panel__disclaimer">Opens Amazon in a new tab. Affiliate link: {esc(site['siteName'])} may earn a commission, at no extra cost to you. <a href="/affiliate-disclosure.html">Disclosure</a>.</p>
+        {featured_html}
       </div>
     </div>
   </div>
   <div class="mobile-cta" data-mobile-cta aria-hidden="true">
     <span class="mobile-cta__price">{format_price(product['price'], product['currency'])}</span>
-    <a class="btn btn--primary" data-affiliate-link data-product-slug="{product['slug']}" tabindex="-1">View at Amazon {CHEVRON_ICON}</a>
+    <a class="btn btn--primary" data-affiliate-link data-product-slug="{product['slug']}" tabindex="-1">Check price {CHEVRON_ICON}</a>
   </div>
 </section>
 {related_section}
@@ -1160,10 +1435,18 @@ def render_product_page(site, product, category, related_products):
         }
     extra_head = f'<script type="application/ld+json">{json.dumps(ld_json)}</script>'
 
+    # The snippet Google shows: what it is, then the checked price and Amazon rating.
+    meta_bits = [product["shortDescription"].rstrip(".") + "."]
+    if product.get("price") is not None:
+        meta_bits.append(f"{format_price(product['price'], product['currency'])} on Amazon")
+    if product.get("rating") and product.get("reviewCount"):
+        meta_bits.append(f"rated {product['rating']:.1f}/5 from {product['reviewCount']:,} reviews")
+    meta_desc = meta_bits[0] + (" " + ", ".join(meta_bits[1:]) + "." if len(meta_bits) > 1 else "")
+
     return base_page(
         site,
         title=f"{product['name']} — {site['siteName']}",
-        description=product["shortDescription"],
+        description=meta_desc,
         canonical_path=f"/product/{product['slug']}/",
         og_image=product["image"],
         body_html=body,
@@ -1563,7 +1846,19 @@ def main():
     # ---- Homepage ----
     collections = load_collections(published)
     videos = load_videos(published)
-    write_file(os.path.join(PUBLIC_DIR, "index.html"), render_homepage(site, categories, published, counts, collections, videos))
+    guides = load_guides(published)
+    write_file(os.path.join(PUBLIC_DIR, "index.html"), render_homepage(site, categories, published, counts, collections, videos, guides))
+
+    # ---- Gift guides ----
+    if guides:
+        write_file(os.path.join(PUBLIC_DIR, "guides", "index.html"), render_guides_index(site, guides))
+        for guide in guides:
+            write_file(os.path.join(PUBLIC_DIR, "guides", guide["slug"], "index.html"), render_guide_page(site, guide, guides))
+        write_file(os.path.join(PUBLIC_DIR, "he", "index.html"), render_hebrew_page(site, guides))
+    guides_by_product = {}
+    for guide in guides:
+        for p in guide["items"]:
+            guides_by_product.setdefault(p["slug"], []).append(guide)
 
     # ---- Collection pages ----
     for collection in collections:
@@ -1596,7 +1891,7 @@ def main():
         related = related_products(product, published)
         write_file(
             os.path.join(PUBLIC_DIR, "product", product["slug"], "index.html"),
-            render_product_page(site, product, category, related),
+            render_product_page(site, product, category, related, guides_by_product.get(product["slug"], [])[:3]),
         )
 
     # ---- Static pages ----
@@ -1612,15 +1907,24 @@ def main():
     base_url = site["url"].rstrip("/")
     urls = ["/", "/about.html", "/affiliate-disclosure.html", "/privacy-policy.html", "/terms.html",
             "/accessibility.html", "/cookie-notice.html"]
+    if guides:
+        urls += ["/guides/"] + [f"/guides/{g['slug']}/" for g in guides] + ["/he/"]
     urls += [f"/category/{c['slug']}/" for c in categories]
     urls += [f"/collection/{c['slug']}/" for c in collections]
     if videos:
         urls += ["/v/"] + [f"/v/{v['slug']}/" for v in videos]
     urls += [f"/product/{p['slug']}/" for p in published]
+    # lastmod from the data itself (newest price check), so it only moves when content does.
+    newest = max((p.get("updatedAt") or p.get("createdAt") or "")[:10] for p in published)
+    product_dates = {f"/product/{p['slug']}/": (p.get("updatedAt") or p.get("createdAt") or newest)[:10] for p in published}
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-    sitemap += "".join(f"  <url><loc>{base_url}{u}</loc></url>\n" for u in urls)
+    sitemap += "".join(f"  <url><loc>{base_url}{u}</loc><lastmod>{product_dates.get(u, newest)}</lastmod></url>\n" for u in urls)
     sitemap += "</urlset>\n"
     write_file(os.path.join(PUBLIC_DIR, "sitemap.xml"), sitemap)
+    # IndexNow (Bing, Yandex, Seznam, Naver): the key file proves we own the host when
+    # scripts/indexnow.py submits changed URLs.
+    if site.get("indexNowKey"):
+        write_file(os.path.join(PUBLIC_DIR, f"{site['indexNowKey']}.txt"), site["indexNowKey"])
 
     write_file(os.path.join(PUBLIC_DIR, "robots.txt"), f"User-agent: *\nAllow: /\n\nSitemap: {base_url}/sitemap.xml\n")
 

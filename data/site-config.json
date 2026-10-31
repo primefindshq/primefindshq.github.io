@@ -1,27 +1,62 @@
 {
   "siteName": "PRIME.FINDS",
-  "tagline": "Curated products. Smart finds.",
+  "tagline": "Amazon finds & gift ideas worth buying.",
   "shortPitch": "We find interesting products so you don't have to spend hours searching.",
   "description": "PRIME.FINDS is an international product discovery brand curating interesting, useful, and stylish products worth knowing about.",
   "url": "https://primefindshq.github.io",
   "locale": "en",
   "currencyDefault": "USD",
   "navLinks": [
-    { "label": "Home", "href": "/" },
-    { "label": "Categories", "href": "/#categories" },
-    { "label": "Gift Guide", "href": "/category/gifts/" },
-    { "label": "Videos", "href": "/v/" },
-    { "label": "Trending", "href": "/#trending" },
-    { "label": "About", "href": "/about.html" }
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Categories",
+      "href": "/#categories"
+    },
+    {
+      "label": "Gift Guides",
+      "href": "/guides/"
+    },
+    {
+      "label": "Videos",
+      "href": "/v/"
+    },
+    {
+      "label": "About",
+      "href": "/about.html"
+    }
   ],
   "footerLegalLinks": [
-    { "label": "Accessibility", "href": "/accessibility.html" },
-    { "label": "Privacy Policy", "href": "/privacy-policy.html" },
-    { "label": "Terms of Use", "href": "/terms.html" },
-    { "label": "Affiliate Disclosure", "href": "/affiliate-disclosure.html" },
-    { "label": "Cookie Notice", "href": "/cookie-notice.html" },
-    { "label": "Contact", "href": "mailto:prime.finds.amazon.10@gmail.com" },
-    { "label": "Help & feedback", "href": "/accessibility.html#report" }
+    {
+      "label": "Accessibility",
+      "href": "/accessibility.html"
+    },
+    {
+      "label": "Privacy Policy",
+      "href": "/privacy-policy.html"
+    },
+    {
+      "label": "Terms of Use",
+      "href": "/terms.html"
+    },
+    {
+      "label": "Affiliate Disclosure",
+      "href": "/affiliate-disclosure.html"
+    },
+    {
+      "label": "Cookie Notice",
+      "href": "/cookie-notice.html"
+    },
+    {
+      "label": "Contact",
+      "href": "mailto:prime.finds.amazon.10@gmail.com"
+    },
+    {
+      "label": "Help & feedback",
+      "href": "/accessibility.html#report"
+    }
   ],
   "social": {
     "instagram": ""
@@ -37,5 +72,6 @@
     "provider": "umami",
     "umami": "d0dd99c8-66db-4a7c-adf4-2bdd83b90df2",
     "note": "Cookieless Umami Cloud (cloud.umami.is). build.py injects the script and sets window.__PRIME_FINDS_ANALYTICS_CONFIG; js/core/analytics.js sends each Amazon click as an event named after the product."
-  }
+  },
+  "indexNowKey": "f7be1e705cb8e07055e35e7fd8c5e1bf"
 }

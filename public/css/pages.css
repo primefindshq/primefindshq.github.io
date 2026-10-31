@@ -702,3 +702,84 @@
   .filters-more[open] > .filters-more__toggle { margin-bottom: var(--space-md); }
   .filters-more[open] > .filters-more__toggle::after { content: '\2212'; }
 }
+
+/* ---------------------------------------------------------------------------
+   Header links (always visible; only "Gift Guides" stays on phones, as a pill)
+   --------------------------------------------------------------------------- */
+.header-nav { display: flex; align-items: center; gap: var(--space-md); margin-inline: auto var(--space-sm); }
+.header-nav__link {
+  font-size: var(--fs-body-sm); font-weight: 500; color: var(--color-text-dim);
+  padding: 6px 2px; border-bottom: 1px solid transparent;
+  transition: color var(--duration-fast) var(--ease-standard), border-color var(--duration-fast) var(--ease-standard);
+}
+.header-nav__link:hover, .header-nav__link[aria-current="page"] { color: var(--color-text); border-bottom-color: var(--color-gold); }
+@media (max-width: 760px) {
+  .header-nav { gap: 0; margin-inline: auto var(--space-2xs); }
+  .header-nav__link:not(:first-child) { display: none; }
+  .header-nav__link:first-child {
+    padding: 6px 12px; border: 1px solid var(--color-gold); border-radius: var(--radius-full);
+    color: var(--color-text); font-size: var(--fs-caption); white-space: nowrap;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Gift guides
+   --------------------------------------------------------------------------- */
+.guide-hero__title { font-size: var(--fs-display-lg); max-width: 22ch; }
+.guide-hero__intro { max-width: 68ch; color: var(--color-text-dim); font-size: var(--fs-body-lg); line-height: var(--lh-normal); }
+.guide-hero__intro p + p { margin-top: var(--space-xs); }
+.guide-hero__facts { margin: var(--space-md) 0 var(--space-xs); color: var(--color-text-faint); font-size: var(--fs-caption); letter-spacing: var(--tracking-mid); text-transform: uppercase; }
+
+.guide-list { list-style: none; padding: 0; margin: var(--space-lg) 0 0; display: grid; gap: var(--space-lg); counter-reset: none; }
+.guide-item {
+  display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: var(--space-lg);
+  padding: var(--space-lg); background: var(--color-bg-raised); border: 1px solid var(--color-border); border-radius: var(--radius-lg);
+  scroll-margin-top: 90px;
+}
+.guide-item__media { display: block; aspect-ratio: 1; background: #fff; border-radius: var(--radius-md); overflow: hidden; }
+.guide-item__media img { width: 100%; height: 100%; object-fit: contain; }
+.guide-item__body { display: flex; flex-direction: column; gap: var(--space-2xs); min-width: 0; }
+.guide-item__num { font-family: var(--font-display); font-size: var(--fs-display-md); color: var(--color-gold); line-height: 1; }
+.guide-item__name { font-family: var(--font-display); font-size: var(--fs-display-sm); line-height: var(--lh-snug); font-weight: 500; }
+.guide-item__name a:hover { color: var(--color-gold); }
+.guide-item__meta { display: flex; align-items: center; gap: var(--space-sm); flex-wrap: wrap; }
+.guide-item__why { color: var(--color-text-dim); line-height: var(--lh-normal); max-width: 62ch; }
+.guide-item__why strong { color: var(--color-text); font-weight: 600; }
+.guide-item__cta { display: flex; align-items: center; gap: var(--space-md); margin-top: var(--space-xs); flex-wrap: wrap; }
+.guide-item__more { font-size: var(--fs-body-sm); color: var(--color-text-dim); text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 700px) {
+  .guide-item { grid-template-columns: minmax(0, 1fr); padding: var(--space-md); gap: var(--space-sm); }
+  .guide-item__media { max-width: 320px; width: 100%; margin-inline: auto; }
+  .guide-item__cta .btn { width: 100%; justify-content: center; }
+}
+
+.guide-faq { max-width: 860px; }
+.guide-faq__item { border-top: 1px solid var(--color-border); padding: var(--space-sm) 0; }
+.guide-faq__item:last-child { border-bottom: 1px solid var(--color-border); }
+.guide-faq__item summary { cursor: pointer; font-weight: 600; font-size: var(--fs-body-lg); }
+.guide-faq__item p { margin-top: var(--space-2xs); color: var(--color-text-dim); line-height: var(--lh-normal); }
+.guide-all { margin-top: var(--space-lg); }
+
+/* Product page: which guides a product appears in */
+.featured-in { margin-top: var(--space-md); padding-top: var(--space-sm); border-top: 1px solid var(--color-border); }
+.featured-in__title { font-family: var(--font-mono); font-size: var(--fs-micro); letter-spacing: var(--tracking-wide); text-transform: uppercase; color: var(--color-gold-dim); margin-bottom: var(--space-2xs); }
+.featured-in ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
+.featured-in a { text-decoration: underline; text-underline-offset: 3px; }
+.featured-in a:hover { color: var(--color-gold); }
+@media (max-width: 760px) {
+  .site-header__inner { gap: var(--space-2xs); }
+  .header-actions { gap: 4px; }
+  .index-trigger__label { display: none; }
+}
+
+/* Hebrew entry page (/he/) */
+.he-page { text-align: right; }
+.he-page .eyebrow::before { display: none; }
+.he-guides { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: var(--space-xs); margin-top: var(--space-md); }
+.he-guide { display: flex; justify-content: space-between; align-items: center; gap: var(--space-xs); padding: var(--space-sm) var(--space-md); border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-bg-raised); font-weight: 600; }
+.he-guide:hover { border-color: var(--color-gold); }
+.he-guide__count { font-weight: 400; font-size: var(--fs-caption); color: var(--color-text-faint); white-space: nowrap; }
+.he-steps { padding-inline-start: 1.25rem; display: grid; gap: var(--space-xs); line-height: var(--lh-normal); max-width: 70ch; margin-top: var(--space-sm); }
+.he-note { margin-top: var(--space-md); color: var(--color-text-dim); font-size: var(--fs-body-sm); }
+.video-links { margin-top: var(--space-sm); font-size: var(--fs-body-sm); color: var(--color-text-dim); }
+.video-links a { text-decoration: underline; text-underline-offset: 3px; }
