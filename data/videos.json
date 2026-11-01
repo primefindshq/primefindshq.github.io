@@ -1,5 +1,44 @@
 [
   {
+    "slug": "pet-hair-eraser",
+    "title": "My Dog vs. My Couch: the Bissell Pet Hair Eraser",
+    "blurb": "The cordless hand vacuum from the video (4.6 stars, 38,344 ratings on Amazon per our listing). Tap it to see it on Amazon.",
+    "date": "2026-11-01",
+    "items": [
+      {
+        "n": 1,
+        "label": "Bissell Pet Hair Eraser cordless hand vacuum",
+        "slug": "bissell-pet-hair-eraser-cordless-hand-vacuum"
+      }
+    ]
+  },
+  {
+    "slug": "vacuum-storage-bags",
+    "title": "4 Pillows, 1 Bag: Spacesaver Vacuum Storage Bags",
+    "blurb": "The vacuum storage bags from the video (4.4 stars, 28,545 ratings on Amazon per our listing). Tap it to see it on Amazon.",
+    "date": "2026-11-01",
+    "items": [
+      {
+        "n": 1,
+        "label": "Spacesaver vacuum storage bags with hand pump, 15-pack",
+        "slug": "spacesaver-vacuum-storage-bags-15-pack"
+      }
+    ]
+  },
+  {
+    "slug": "fabric-shaver",
+    "title": "Don't Throw That Sweater Out Yet: the Conair Fabric Shaver",
+    "blurb": "The fabric shaver from the video (4.4 stars, 94,610 ratings on Amazon per our listing). Tap it to see it on Amazon.",
+    "date": "2026-11-01",
+    "items": [
+      {
+        "n": 1,
+        "label": "Conair fabric shaver and lint remover",
+        "slug": "conair-fabric-shaver-lint-remover"
+      }
+    ]
+  },
+  {
     "slug": "gifts-under-25",
     "title": "Gift Ideas Under $25 (2026): 5 Amazon Gifts People Actually Bought",
     "blurb": "Five gifts under $25, ranked by how many people bought each one on Amazon last month (Amazon's own numbers and prices, checked Oct 31, 2026; prices can change). Same numbers as the video. Tap any one to see it on Amazon.",
