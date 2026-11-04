@@ -1209,6 +1209,7 @@ HE_GUIDE_TITLES = {
     "tech-gifts": "מתנות טכנולוגיה", "gifts-for-her": "מתנות לה", "gifts-for-him": "מתנות לו", "gifts-for-kids": "מתנות לילדים",
     "gifts-for-pet-lovers": "מתנות לבעלי כלבים וחתולים", "gifts-for-travelers": "מתנות למטיילים", "desk-setup-gifts": "שדרוגים לשולחן העבודה",
     "gifts-for-home-cooks": "מתנות לאוהבי בישול", "beauty-gifts": "מתנות טיפוח ויופי",
+    "amazon-black-friday-best-sellers": "בלאק פריידיי באמזון 2026: 20 רבי-מכר", "gifts-under-25": "מתנות עד $25",
 }
 
 
