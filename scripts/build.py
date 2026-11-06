@@ -1922,12 +1922,25 @@ def main():
     sitemap += "".join(f"  <url><loc>{base_url}{u}</loc><lastmod>{product_dates.get(u, newest)}</lastmod></url>\n" for u in urls)
     sitemap += "</urlset>\n"
     write_file(os.path.join(PUBLIC_DIR, "sitemap.xml"), sitemap)
+    # Split sitemaps + an index under fresh names (GSC kept "couldn't fetch" on the first sitemap.xml of this
+    # new property). sitemap-pages: guides, videos, categories; sitemap-products: the catalog.
+    def _urlset(us):
+        return ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+                + "".join(f"  <url><loc>{base_url}{u}</loc><lastmod>{product_dates.get(u, newest)}</lastmod></url>\n" for u in us)
+                + "</urlset>\n")
+    write_file(os.path.join(PUBLIC_DIR, "sitemap-pages.xml"), _urlset([u for u in urls if not u.startswith("/product/")]))
+    write_file(os.path.join(PUBLIC_DIR, "sitemap-products.xml"), _urlset([u for u in urls if u.startswith("/product/")]))
+    write_file(os.path.join(PUBLIC_DIR, "sitemap_index.xml"),
+               '<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+               + "".join(f"  <sitemap><loc>{base_url}/{n}</loc><lastmod>{newest}</lastmod></sitemap>\n"
+                         for n in ("sitemap-pages.xml", "sitemap-products.xml"))
+               + "</sitemapindex>\n")
     # IndexNow (Bing, Yandex, Seznam, Naver): the key file proves we own the host when
     # scripts/indexnow.py submits changed URLs.
     if site.get("indexNowKey"):
         write_file(os.path.join(PUBLIC_DIR, f"{site['indexNowKey']}.txt"), site["indexNowKey"])
 
-    write_file(os.path.join(PUBLIC_DIR, "robots.txt"), f"User-agent: *\nAllow: /\n\nSitemap: {base_url}/sitemap.xml\n")
+    write_file(os.path.join(PUBLIC_DIR, "robots.txt"), f"User-agent: *\nAllow: /\n\nSitemap: {base_url}/sitemap.xml\nSitemap: {base_url}/sitemap_index.xml\n")
 
     manifest = {
         "name": site["siteName"],
