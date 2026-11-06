@@ -45167,7 +45167,13 @@
     "trending": false,
     "published": true,
     "createdAt": "2026-10-16T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z"
+    "updatedAt": "2026-10-16T00:00:00.000Z",
+    "youtube": {
+      "id": "KjuKayRrCrw",
+      "title": "ANCEL AD310 OBD2 Code Reader: What to Know Before You Buy (2026)",
+      "uploadDate": "2026-11-06",
+      "duration": "PT53S"
+    }
   },
   {
     "id": "prd-1108",
