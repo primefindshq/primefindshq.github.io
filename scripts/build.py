@@ -1370,6 +1370,19 @@ def render_product_page(site, product, category, related_products, featured_in=(
 </section>
 """
 
+    # Our own YouTube explainer for this product (data/products.json "youtube": {id, title, uploadDate, duration}),
+    # embedded and marked up as a VideoObject so the page can show as a video result.
+    yt = product.get("youtube")
+    video_html = ""
+    if yt:
+        video_html = (
+            f'<div class="product-video" style="margin-top:1.5rem"><h2 class="featured-in__title">Watch: what to know before you buy</h2>'
+            f'<div style="position:relative;padding-top:56.25%;border-radius:14px;overflow:hidden;background:#000">'
+            f'<iframe src="https://www.youtube-nocookie.com/embed/{yt["id"]}" title="{esc(yt["title"])}" loading="lazy" '
+            f'allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen '
+            f'style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe></div></div>'
+        )
+
     body = f"""
 <section class="section container" data-product-app data-product-slug="{product['slug']}">
   {render_breadcrumbs([("Home", "/"), (category['name'], f"/category/{category['slug']}/"), (product['name'], None)])}
@@ -1402,6 +1415,7 @@ def render_product_page(site, product, category, related_products, featured_in=(
         </div>
         <h2 class="sr-only">Highlights</h2>
         <ul class="highlights-list">{highlights}</ul>
+        {video_html}
         {featured_html}
       </div>
     </div>
@@ -1435,6 +1449,15 @@ def render_product_page(site, product, category, related_products, featured_in=(
             "url": site["url"].rstrip("/") + f"/product/{product['slug']}/",
         }
     extra_head = f'<script type="application/ld+json">{json.dumps(ld_json)}</script>'
+    if yt:
+        video_ld = {
+            "@context": "https://schema.org", "@type": "VideoObject", "name": yt["title"],
+            "description": f"What the Amazon listing says about the {product['name']}, its rating and price.",
+            "thumbnailUrl": f"https://i.ytimg.com/vi/{yt['id']}/hqdefault.jpg", "uploadDate": yt["uploadDate"],
+            "duration": yt["duration"], "embedUrl": f"https://www.youtube.com/embed/{yt['id']}",
+            "contentUrl": f"https://www.youtube.com/watch?v={yt['id']}",
+        }
+        extra_head += f'<script type="application/ld+json">{json.dumps(video_ld)}</script>'
 
     # The snippet Google shows: what it is, then the checked price and Amazon rating.
     meta_bits = [product["shortDescription"].rstrip(".") + "."]

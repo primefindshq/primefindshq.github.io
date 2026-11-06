@@ -2277,7 +2277,13 @@
     "trending": false,
     "published": true,
     "createdAt": "2026-09-11T00:00:00.000Z",
-    "updatedAt": "2026-11-01T00:00:00.000Z"
+    "updatedAt": "2026-11-01T00:00:00.000Z",
+    "youtube": {
+      "id": "Go3DdkLK8bo",
+      "title": "Northern Galaxy Aurora Projector: What to Know Before You Buy (2026)",
+      "uploadDate": "2026-11-06",
+      "duration": "PT51S"
+    }
   },
   {
     "id": "prd-0090",
@@ -7591,7 +7597,13 @@
     "published": true,
     "createdAt": "2026-09-28T00:00:00.000Z",
     "updatedAt": "2026-11-01T00:00:00.000Z",
-    "brand": "DASH"
+    "brand": "DASH",
+    "youtube": {
+      "id": "B9raoyoCFsU",
+      "title": "DASH Mini Waffle Maker: What to Know Before You Buy (2026)",
+      "uploadDate": "2026-11-06",
+      "duration": "PT43S"
+    }
   },
   {
     "id": "prd-0209",
@@ -10345,7 +10357,13 @@
     "trending": false,
     "published": true,
     "createdAt": "2026-09-28T00:00:00.000Z",
-    "updatedAt": "2026-11-01T00:00:00.000Z"
+    "updatedAt": "2026-11-01T00:00:00.000Z",
+    "youtube": {
+      "id": "_7wefxnWL90",
+      "title": "Glocusent Neck Reading Light: What to Know Before You Buy (2026)",
+      "uploadDate": "2026-11-06",
+      "duration": "PT58S"
+    }
   },
   {
     "id": "prd-0274",
