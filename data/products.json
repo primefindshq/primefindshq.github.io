@@ -10077,8 +10077,8 @@
     "additionalImages": [],
     "price": 25.99,
     "currency": "USD",
-    "rating": 4.4,
-    "reviewCount": 18715,
+    "rating": 4.3,
+    "reviewCount": 20594,
     "tags": [
       "astroai",
       "tire inflator",
@@ -10100,7 +10100,13 @@
     "trending": false,
     "published": true,
     "createdAt": "2026-09-28T00:00:00.000Z",
-    "updatedAt": "2026-11-01T00:00:00.000Z"
+    "updatedAt": "2026-11-07T00:00:00.000Z",
+    "youtube": {
+      "id": "P1-0WzWNwtA",
+      "title": "AstroAI L7 Cordless Tire Inflator: What to Know Before You Buy (2026)",
+      "uploadDate": "2026-11-07",
+      "duration": "PT55S"
+    }
   },
   {
     "id": "prd-0268",
@@ -21319,7 +21325,7 @@
     "price": 37.2,
     "currency": "USD",
     "rating": 4.6,
-    "reviewCount": 196385,
+    "reviewCount": 197240,
     "tags": [
       "o-cedar",
       "spin mop",
@@ -21341,7 +21347,13 @@
     "trending": false,
     "published": true,
     "createdAt": "2026-10-02T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z"
+    "updatedAt": "2026-11-07T00:00:00.000Z",
+    "youtube": {
+      "id": "ZZCyJ2lgHlI",
+      "title": "O-Cedar EasyWring Spin Mop: What to Know Before You Buy (2026)",
+      "uploadDate": "2026-11-07",
+      "duration": "PT57S"
+    }
   },
   {
     "id": "prd-0535",
@@ -51201,10 +51213,10 @@
     "whyWeLikeIt": "The air-fryer accessory everyone bought this year.",
     "image": "/assets/images/products/trendplain-glass-olive-oil-sprayer.jpg",
     "additionalImages": [],
-    "price": 7.99,
+    "price": 8.99,
     "currency": "USD",
     "rating": 4.6,
-    "reviewCount": 48809,
+    "reviewCount": 49698,
     "tags": [
       "trendplain",
       "oil sprayer",
@@ -51226,8 +51238,14 @@
     "trending": false,
     "published": true,
     "createdAt": "2026-10-21T00:00:00.000Z",
-    "updatedAt": "2026-10-21T00:00:00.000Z",
-    "brand": "TrendPlain"
+    "updatedAt": "2026-11-07T00:00:00.000Z",
+    "brand": "TrendPlain",
+    "youtube": {
+      "id": "wMbNDKjmUHw",
+      "title": "TrendPlain Olive Oil Sprayer: What to Know Before You Buy (2026)",
+      "uploadDate": "2026-11-07",
+      "duration": "PT52S"
+    }
   },
   {
     "id": "prd-1252",
