@@ -1204,7 +1204,7 @@ def render_guides_index(site, guides):
 
 
 HE_GUIDE_TITLES = {
-    "gifts-for-mom": "מתנות לאמא", "gifts-for-teens": "מתנות לנוער", "gifts-for-gamers": "מתנות לגיימרים", "gifts-for-coffee-lovers": "מתנות לאוהבי קפה",
+    "gifts-for-dad": "מתנות לאבא", "gifts-for-mom": "מתנות לאמא", "gifts-for-teens": "מתנות לנוער", "gifts-for-gamers": "מתנות לגיימרים", "gifts-for-coffee-lovers": "מתנות לאוהבי קפה",
     "stocking-stuffers": "מתנות קטנות עד $25", "white-elephant-gifts": "מתנות לחילופי מתנות", "gifts-under-50": "מתנות עד $50",
     "tech-gifts": "מתנות טכנולוגיה", "gifts-for-her": "מתנות לה", "gifts-for-him": "מתנות לו", "gifts-for-kids": "מתנות לילדים",
     "gifts-for-pet-lovers": "מתנות לבעלי כלבים וחתולים", "gifts-for-travelers": "מתנות למטיילים", "desk-setup-gifts": "שדרוגים לשולחן העבודה",
