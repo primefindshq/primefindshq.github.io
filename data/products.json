@@ -64504,5 +64504,42 @@
     "createdAt": "2026-11-03T00:00:00.000Z",
     "updatedAt": "2026-11-03T00:00:00.000Z",
     "brand": "Vacu Vin"
+  },
+  {
+    "id": "prd-1565",
+    "name": "Crocs Unisex-Adult Classic Clog, White",
+    "slug": "crocs-classic-clog-white",
+    "category": "gifts",
+    "secondaryCategories": [],
+    "subcategory": "Shoes",
+    "shortDescription": "The original Crocs clog: lightweight foam with a pivoting heel strap.",
+    "description": "The Crocs Classic Clog is the original lightweight foam clog with ventilation ports and a pivoting heel strap, per the listing. This is the White colorway; the price on Amazon depends on size and color.",
+    "whyWeLikeIt": "With 487,700+ ratings, it's one of the most-rated shoes on Amazon.",
+    "image": "/assets/images/products/crocs-classic-clog-white.jpg",
+    "additionalImages": [],
+    "price": 40.0,
+    "currency": "USD",
+    "rating": 4.8,
+    "reviewCount": 487700,
+    "tags": [
+      "crocs",
+      "clogs",
+      "shoes",
+      "gift"
+    ],
+    "highlights": [
+      "Lightweight foam",
+      "Pivoting heel strap",
+      "Ventilation ports",
+      "Classic White"
+    ],
+    "affiliateUrl": "https://www.amazon.com/dp/B001526RFY?tag=070411-20",
+    "externalUrl": "https://www.amazon.com/dp/B001526RFY?tag=070411-20",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-11-07T00:00:00.000Z",
+    "updatedAt": "2026-11-07T00:00:00.000Z",
+    "brand": "Crocs"
   }
 ]
