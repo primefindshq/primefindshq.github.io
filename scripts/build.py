@@ -263,6 +263,7 @@ A11Y_HEAD = (
 # rest show from tablet width up (the full menu stays behind "Index").
 HEADER_NAV = [
     ("guides", "מדריכי מתנות", "/guides/"),
+    ("videos", "סרטונים", "/v/"),
     ("under-25", "עד 25 דולר", "/category/under-25/"),
     ("categories", "קטגוריות", "/#categories"),
 ]
@@ -1796,7 +1797,7 @@ def main():
 
     # ---- Homepage ----
     collections = []
-    videos = []
+    videos = load_videos(published)
     guides = load_guides(published)
     write_file(os.path.join(PUBLIC_DIR, "index.html"), render_homepage(site, categories, published, counts, collections, videos, guides))
 
