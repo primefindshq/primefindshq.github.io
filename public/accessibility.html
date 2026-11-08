@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="he" dir="rtl">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,8 +7,8 @@
   
   <script>window.__PRIME_FINDS_ANALYTICS_CONFIG={provider:"umami"};</script><script defer src="https://cloud.umami.is/script.js" data-website-id="d0dd99c8-66db-4a7c-adf4-2bdd83b90df2" data-domains="primefindshq.github.io"></script>
   <script>(function(){try{var s=JSON.parse(localStorage.getItem("pf-a11y")||"{}"),d=document.documentElement;if(s.text>0&&s.text<5){d.setAttribute("data-text",String(s.text|0));if(s.text>1)d.classList.add("text-large")}if(s.contrast)d.setAttribute("data-contrast","high");if(s.motion)d.setAttribute("data-motion","reduce")}catch(e){}})();</script><noscript><style>[data-a11y-toggle]{display:none}</style></noscript>
-  <title>Accessibility Statement — PRIME.FINDS</title>
-  <meta name="description" content="How PRIME.FINDS approaches accessibility, what has been tested, known limitations, and how to report a barrier." />
+  <title>הצהרת נגישות | שודדים את אמזון</title>
+  <meta name="description" content="איך אנחנו מטפלים בנגישות, מה נבדק, מגבלות ידועות ואיך מדווחים על בעיה." />
   <link rel="canonical" href="https://primefindshq.github.io/accessibility.html" />
   <link rel="icon" href="/assets/logo/favicon.ico" sizes="any" />
   <link rel="icon" href="/assets/logo/favicon-32.png" type="image/png" sizes="32x32" />
@@ -18,20 +18,21 @@
   <meta name="theme-color" content="#14213d" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="PRIME.FINDS" />
-  <meta property="og:title" content="Accessibility Statement — PRIME.FINDS" />
-  <meta property="og:description" content="How PRIME.FINDS approaches accessibility, what has been tested, known limitations, and how to report a barrier." />
+  <meta property="og:locale" content="he_IL" />
+  <meta property="og:site_name" content="שודדים את אמזון" />
+  <meta property="og:title" content="הצהרת נגישות | שודדים את אמזון" />
+  <meta property="og:description" content="איך אנחנו מטפלים בנגישות, מה נבדק, מגבלות ידועות ואיך מדווחים על בעיה." />
   <meta property="og:url" content="https://primefindshq.github.io/accessibility.html" />
   <meta property="og:image" content="https://primefindshq.github.io/assets/logo/og-image.jpg" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Accessibility Statement — PRIME.FINDS" />
-  <meta name="twitter:description" content="How PRIME.FINDS approaches accessibility, what has been tested, known limitations, and how to report a barrier." />
+  <meta name="twitter:title" content="הצהרת נגישות | שודדים את אמזון" />
+  <meta name="twitter:description" content="איך אנחנו מטפלים בנגישות, מה נבדק, מגבלות ידועות ואיך מדווחים על בעיה." />
   <meta name="twitter:image" content="https://primefindshq.github.io/assets/logo/og-image.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700;900&family=Heebo:wght@400;500;600;700&display=swap" />
   <link rel="stylesheet" href="/css/tokens.css" />
   <link rel="stylesheet" href="/css/base.css" />
   <link rel="stylesheet" href="/css/layout.css" />
@@ -44,53 +45,51 @@
 <body>
   
   
-<a class="skip-link" href="#main-content">Skip to main content</a>
+<a class="skip-link" href="#main-content">דילוג לתוכן הראשי</a>
 <header class="site-header">
   <div class="container site-header__inner">
-    <a class="brand-logo" href="/" aria-label="PRIME.FINDS home">
-      <img src="/assets/logo/wordmark.png" alt="PRIME.FINDS" width="1075" height="580" />
-    </a>
-    <nav class="header-nav" aria-label="Main">
-      <a class="header-nav__link" href="/guides/">Gift Guides</a><a class="header-nav__link" href="/category/under-25/">Under $25</a><a class="header-nav__link" href="/#categories">Categories</a><a class="header-nav__link" href="/v/">Videos</a>
+    <a class="brand-logo" href="/" aria-label="שודדים את אמזון, דף הבית"><span class="brand-wordmark">שודדים את אמזון</span></a>
+    <nav class="header-nav" aria-label="ראשי">
+      <a class="header-nav__link" href="/guides/">מדריכי מתנות</a><a class="header-nav__link" href="/category/under-25/">עד 25 דולר</a><a class="header-nav__link" href="/#categories">קטגוריות</a>
     </nav>
     <div class="header-actions">
-      <button class="icon-btn" type="button" data-search-open aria-haspopup="dialog" aria-label="Search products"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="9" cy="9" r="6.5"/><path d="M18 18l-3.8-3.8"/></svg></button>
-      <button class="icon-btn" type="button" data-a11y-toggle aria-haspopup="dialog" aria-expanded="false" aria-controls="a11y-panel" aria-label="Accessibility options"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="8"/><circle cx="10" cy="5.9" r="1.1" fill="currentColor" stroke="none"/><path d="M5.6 8.3c3 .9 5.8.9 8.8 0M10 8.7v3.3M10 12l-2.1 3.5M10 12l2.1 3.5"/></svg></button>
-      <button class="index-trigger" type="button" data-index-toggle aria-expanded="false" aria-haspopup="dialog" aria-controls="site-index" aria-label="Site index">
+      <button class="icon-btn" type="button" data-search-open aria-haspopup="dialog" aria-label="חיפוש מוצרים"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="9" cy="9" r="6.5"/><path d="M18 18l-3.8-3.8"/></svg></button>
+      <button class="icon-btn" type="button" data-a11y-toggle aria-haspopup="dialog" aria-expanded="false" aria-controls="a11y-panel" aria-label="אפשרויות נגישות"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="8"/><circle cx="10" cy="5.9" r="1.1" fill="currentColor" stroke="none"/><path d="M5.6 8.3c3 .9 5.8.9 8.8 0M10 8.7v3.3M10 12l-2.1 3.5M10 12l2.1 3.5"/></svg></button>
+      <button class="index-trigger" type="button" data-index-toggle aria-expanded="false" aria-haspopup="dialog" aria-controls="site-index" aria-label="תפריט האתר">
         <span class="index-trigger__glyph" aria-hidden="true"><span></span><span></span></span>
-        <span class="index-trigger__label">Index</span>
+        <span class="index-trigger__label">תפריט</span>
       </button>
     </div>
   </div>
 </header>
 
   
-<div class="site-index" id="site-index" data-index-panel role="dialog" aria-modal="true" aria-label="Site index">
+<div class="site-index" id="site-index" data-index-panel role="dialog" aria-modal="true" aria-label="תפריט האתר">
   <div class="site-index__top">
-    <a class="brand-logo" href="/" aria-label="PRIME.FINDS home"><img src="/assets/logo/wordmark.png" alt="PRIME.FINDS" width="1075" height="580" /></a>
-    <button class="icon-btn" type="button" data-index-close aria-label="Close site index"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15"/></svg></button>
+    <a class="brand-logo" href="/" aria-label="שודדים את אמזון, דף הבית"><span class="brand-wordmark">שודדים את אמזון</span></a>
+    <button class="icon-btn" type="button" data-index-close aria-label="סגירת התפריט"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15"/></svg></button>
   </div>
   <div class="site-index__body">
-    <nav aria-label="Pages"><ul class="site-index__nav-list"><li><a class="site-index__nav-link" href="/">Home</a></li><li><a class="site-index__nav-link" href="/#categories">Categories</a></li><li><a class="site-index__nav-link" href="/guides/">Gift Guides</a></li><li><a class="site-index__nav-link" href="/v/">Videos</a></li><li><a class="site-index__nav-link" href="/about.html">About</a></li></ul></nav>
-    <nav aria-label="Categories">
-      <span class="eyebrow site-index__cats-label">The Catalog</span>
-      <div class="site-index__cats"><a class="site-index__cat" href="/category/tech/"><span class="site-index__cat-name">Tech</span><span class="site-index__cat-count">285</span></a><a class="site-index__cat" href="/category/home/"><span class="site-index__cat-name">Home</span><span class="site-index__cat-count">460</span></a><a class="site-index__cat" href="/category/kitchen/"><span class="site-index__cat-name">Kitchen</span><span class="site-index__cat-count">222</span></a><a class="site-index__cat" href="/category/gaming/"><span class="site-index__cat-name">Gaming</span><span class="site-index__cat-count">246</span></a><a class="site-index__cat" href="/category/kids/"><span class="site-index__cat-name">Kids &amp; Baby</span><span class="site-index__cat-count">201</span></a><a class="site-index__cat" href="/category/outdoors/"><span class="site-index__cat-name">Outdoors &amp; Sports</span><span class="site-index__cat-count">175</span></a><a class="site-index__cat" href="/category/pets/"><span class="site-index__cat-name">Pets</span><span class="site-index__cat-count">68</span></a><a class="site-index__cat" href="/category/travel/"><span class="site-index__cat-name">Travel</span><span class="site-index__cat-count">327</span></a><a class="site-index__cat" href="/category/desk-setup/"><span class="site-index__cat-name">Desk Setup</span><span class="site-index__cat-count">211</span></a><a class="site-index__cat" href="/category/gifts/"><span class="site-index__cat-name">Gifts</span><span class="site-index__cat-count">933</span></a><a class="site-index__cat" href="/category/under-25/"><span class="site-index__cat-name">Under $25</span><span class="site-index__cat-count">629</span></a></div>
+    <nav aria-label="עמודים"><ul class="site-index__nav-list"><li><a class="site-index__nav-link" href="/">דף הבית</a></li><li><a class="site-index__nav-link" href="/#categories">קטגוריות</a></li><li><a class="site-index__nav-link" href="/guides/">מדריכי מתנות</a></li><li><a class="site-index__nav-link" href="/he/">איך קונים לישראל</a></li><li><a class="site-index__nav-link" href="/about.html">אודות</a></li></ul></nav>
+    <nav aria-label="קטגוריות">
+      <span class="eyebrow site-index__cats-label">הקטלוג</span>
+      <div class="site-index__cats"><a class="site-index__cat" href="/category/tech/"><span class="site-index__cat-name">טכנולוגיה</span><span class="site-index__cat-count">51</span></a><a class="site-index__cat" href="/category/home/"><span class="site-index__cat-name">לבית</span><span class="site-index__cat-count">91</span></a><a class="site-index__cat" href="/category/kitchen/"><span class="site-index__cat-name">מטבח</span><span class="site-index__cat-count">27</span></a><a class="site-index__cat" href="/category/gaming/"><span class="site-index__cat-name">גיימינג</span><span class="site-index__cat-count">43</span></a><a class="site-index__cat" href="/category/kids/"><span class="site-index__cat-name">ילדים ותינוקות</span><span class="site-index__cat-count">36</span></a><a class="site-index__cat" href="/category/outdoors/"><span class="site-index__cat-name">טיולים וספורט</span><span class="site-index__cat-count">18</span></a><a class="site-index__cat" href="/category/pets/"><span class="site-index__cat-name">חיות מחמד</span><span class="site-index__cat-count">18</span></a><a class="site-index__cat" href="/category/travel/"><span class="site-index__cat-name">נסיעות</span><span class="site-index__cat-count">82</span></a><a class="site-index__cat" href="/category/desk-setup/"><span class="site-index__cat-name">שולחן עבודה</span><span class="site-index__cat-count">36</span></a><a class="site-index__cat" href="/category/gifts/"><span class="site-index__cat-name">מתנות</span><span class="site-index__cat-count">190</span></a><a class="site-index__cat" href="/category/under-25/"><span class="site-index__cat-name">עד 25 דולר</span><span class="site-index__cat-count">147</span></a></div>
     </nav>
   </div>
   <div class="site-index__footer">
-    <p>Amazon finds &amp; gift ideas worth buying.</p>
-    <nav aria-label="Legal and accessibility"><ul class="site-index__legal"><li><a href="/accessibility.html">Accessibility</a></li><li><a href="/privacy-policy.html">Privacy Policy</a></li><li><a href="/terms.html">Terms of Use</a></li><li><a href="/affiliate-disclosure.html">Affiliate Disclosure</a></li><li><a href="/cookie-notice.html">Cookie Notice</a></li><li><a href="mailto:prime.finds.amazon.10@gmail.com">Contact</a></li><li><a href="/accessibility.html#report">Help &amp; feedback</a></li></ul></nav>
+    <p>מוצרים מאמזון ורעיונות למתנה ששווה לקנות.</p>
+    <nav aria-label="מידע משפטי ונגישות"><ul class="site-index__legal"><li><a href="/accessibility.html">נגישות</a></li><li><a href="/privacy-policy.html">מדיניות פרטיות</a></li><li><a href="/terms.html">תנאי שימוש</a></li><li><a href="/affiliate-disclosure.html">גילוי נאות</a></li><li><a href="/cookie-notice.html">מדיניות עוגיות</a></li><li><a href="mailto:prime.finds.amazon.10@gmail.com">יצירת קשר</a></li><li><a href="/accessibility.html#report">עזרה ומשוב</a></li></ul></nav>
   </div>
 </div>
 
   
 <div class="search-overlay" data-search-overlay role="dialog" aria-modal="true" aria-labelledby="search-overlay-title">
   <div class="search-overlay__panel">
-    <h2 class="sr-only" id="search-overlay-title">Search products</h2>
+    <h2 class="sr-only" id="search-overlay-title">חיפוש מוצרים</h2>
     <div class="search-overlay__input-row">
       <svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="9" cy="9" r="6.5"/><path d="M18 18l-3.8-3.8"/></svg>
-      <input class="search-overlay__input" type="search" placeholder="Search products, categories, tags…" data-search-input aria-label="Search products" autocomplete="off" enterkeyhint="search" spellcheck="false" />
-      <button class="icon-btn" type="button" data-search-close aria-label="Close search"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15"/></svg></button>
+      <input class="search-overlay__input" type="search" placeholder="חיפוש מוצרים וקטגוריות…" data-search-input aria-label="חיפוש מוצרים" autocomplete="off" enterkeyhint="search" spellcheck="false" />
+      <button class="icon-btn" type="button" data-search-close aria-label="סגירת החיפוש"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15"/></svg></button>
     </div>
     <p class="sr-only" role="status" aria-live="polite" data-search-status></p>
     <div data-search-results></div>
@@ -100,38 +99,38 @@
   
 <div class="a11y-panel" id="a11y-panel" data-a11y-panel role="dialog" aria-modal="true" aria-labelledby="a11y-panel-title" tabindex="-1">
   <div class="a11y-panel__head">
-    <h2 class="a11y-panel__title" id="a11y-panel-title">Accessibility options</h2>
-    <button class="icon-btn" type="button" data-a11y-close aria-label="Close accessibility options"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15"/></svg></button>
+    <h2 class="a11y-panel__title" id="a11y-panel-title">אפשרויות נגישות</h2>
+    <button class="icon-btn" type="button" data-a11y-close aria-label="סגירת אפשרויות הנגישות"><svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15"/></svg></button>
   </div>
   <div class="a11y-panel__body">
     <div class="a11y-row" role="group" aria-labelledby="a11y-text-label">
       <div class="a11y-row__text">
-        <span class="a11y-row__label" id="a11y-text-label">Text size</span>
-        <span class="a11y-row__hint">Currently <span data-a11y-text-value>100%</span></span>
+        <span class="a11y-row__label" id="a11y-text-label">גודל טקסט</span>
+        <span class="a11y-row__hint">כרגע <span data-a11y-text-value>100%</span></span>
       </div>
       <div class="a11y-stepper">
-        <button type="button" class="a11y-btn" data-a11y-text-down>Smaller text</button>
-        <button type="button" class="a11y-btn" data-a11y-text-up>Larger text</button>
+        <button type="button" class="a11y-btn" data-a11y-text-down>הקטנת טקסט</button>
+        <button type="button" class="a11y-btn" data-a11y-text-up>הגדלת טקסט</button>
       </div>
     </div>
     <div class="a11y-row">
       <div class="a11y-row__text">
-        <span class="a11y-row__label" id="a11y-contrast-label">High contrast</span>
-        <span class="a11y-row__hint">Stronger text, borders and focus outlines.</span>
+        <span class="a11y-row__label" id="a11y-contrast-label">ניגודיות גבוהה</span>
+        <span class="a11y-row__hint">טקסט, גבולות ומסגרות מיקוד חזקים יותר.</span>
       </div>
       <button type="button" class="a11y-switch" role="switch" aria-checked="false" aria-labelledby="a11y-contrast-label" data-a11y-contrast><span class="a11y-switch__knob" aria-hidden="true"></span></button>
     </div>
     <div class="a11y-row">
       <div class="a11y-row__text">
-        <span class="a11y-row__label" id="a11y-motion-label">Reduce motion</span>
-        <span class="a11y-row__hint" data-a11y-motion-hint>Calmer transitions and a simplified intro.</span>
+        <span class="a11y-row__label" id="a11y-motion-label">הפחתת תנועה</span>
+        <span class="a11y-row__hint" data-a11y-motion-hint>מעברים רגועים יותר.</span>
       </div>
       <button type="button" class="a11y-switch" role="switch" aria-checked="false" aria-labelledby="a11y-motion-label" data-a11y-motion><span class="a11y-switch__knob" aria-hidden="true"></span></button>
     </div>
   </div>
   <div class="a11y-panel__foot">
-    <button type="button" class="btn btn--secondary btn--sm" data-a11y-reset>Reset all</button>
-    <a class="a11y-panel__link" href="/accessibility.html">Accessibility statement</a>
+    <button type="button" class="btn btn--secondary btn--sm" data-a11y-reset>איפוס הכול</button>
+    <a class="a11y-panel__link" href="/accessibility.html">הצהרת נגישות</a>
   </div>
   <p class="sr-only" role="status" aria-live="polite" data-a11y-status></p>
 </div>
@@ -139,75 +138,55 @@
   <main id="main-content" tabindex="-1">
   
 <section class="page-hero container">
-  <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep" aria-hidden="true">/</span><span aria-current="page">Accessibility Statement</span></nav>
-  <span class="eyebrow">Accessibility</span>
-  <h1 class="section-title" style="font-size: var(--fs-display-lg);">Accessibility Statement</h1>
-  <p class="legal-updated">Last updated: <time datetime="2026-10-16">16 October 2026</time></p>
+  <nav class="breadcrumbs" aria-label="מיקום באתר"><a href="/">דף הבית</a><span class="sep" aria-hidden="true">/</span><span aria-current="page">הצהרת נגישות</span></nav>
+  <span class="eyebrow">נגישות</span>
+  <h1 class="section-title" style="font-size: var(--fs-display-lg);">הצהרת נגישות</h1>
+  <p class="legal-updated">עודכן לאחרונה: <time datetime="2026-10-16">16 באוקטובר 2026</time></p>
 </section>
 <section class="section container narrow">
   <div class="prose">
-    <p>PRIME.FINDS wants everyone to be able to browse the catalog, whether they use a keyboard, a screen reader, magnification, voice control or a touch screen. We treat accessibility as ongoing work, not something that is finished once.</p>
+    <p>שודדים את אמזון רוצה שכל אחד יוכל לגלוש בקטלוג, גם בעזרת מקלדת, קורא מסך, הגדלה, שליטה קולית או מסך מגע. אנחנו רואים בנגישות עבודה מתמשכת.</p>
     
-    <h2>The standard we are working toward</h2>
-    <p>We are working toward conformance with the Web Content Accessibility Guidelines (WCAG) 2.2 at Level AA, published by the World Wide Web Consortium (W3C).</p>
+    <h2>התקן שאליו אנחנו שואפים</h2>
+    <p>אנחנו פועלים להתאמה להנחיות הנגישות לתכני אינטרנט (WCAG) 2.2 ברמה AA ולתקן הישראלי ת״י 5568.</p>
 
-    <h2>Current status</h2>
-    <p>PRIME.FINDS has not been independently audited or certified, and we do not claim that it fully conforms to WCAG 2.2 Level AA. What we can say accurately is this: on 16 October 2026 we reviewed the homepage, category pages, product pages, search, the site menu, filters, the entrance animation and the legal pages, and fixed the problems that review found. The review used:</p>
-    <ul>
-      <li>automated checks with the axe-core testing engine;</li>
-      <li>measured colour-contrast checks of text and interface components;</li>
-      <li>keyboard testing of tab order and visible focus, and of the Escape key and where focus lands after menus and dialogs close;</li>
-      <li>text enlarged to 175% and pages narrowed to a 320-pixel-wide screen, to check that nothing is cut off and nothing forces sideways scrolling;</li>
-      <li>checks of the entrance animation and the rest of the interface with the Reduce motion option switched on, and with the high-contrast option switched on.</li>
-    </ul>
-    <p>We have not yet tested with dedicated screen readers (such as NVDA, JAWS or VoiceOver), or with disabled users, so problems may remain that this kind of testing would reveal.</p>
+    <h2>מצב נוכחי</h2>
+    <p>האתר לא עבר ביקורת או הסמכה חיצונית, ואיננו טוענים להתאמה מלאה. האתר עבר לאחרונה לעברית ולכיוון כתיבה מימין לשמאל, ובדיקות הנגישות שנעשו לפני המעבר טרם חזרו על עצמן במלואן על הגרסה הזו. לא בדקנו עדיין עם קוראי מסך ייעודיים או עם משתמשים עם מוגבלות, ולכן ייתכן שנותרו בעיות.</p>
 
-    <h2>What we have done</h2>
+    <h2>מה עשינו</h2>
     <ul>
-      <li>A "Skip to main content" link at the start of every page.</li>
-      <li>Every feature can be used with a keyboard, with visible focus outlines. The site menu, search and accessibility options open as dialogs that take focus, keep it inside while open, close with the Escape key, and return focus to the control that opened them.</li>
-      <li>Standard HTML headings, lists, landmarks, buttons and links. Product links are named after the product. Each "View at Amazon" button names the product it is for and says that it opens in a new tab.</li>
-      <li>Product photos have text alternatives that name the product. Purely decorative artwork is hidden from screen readers.</li>
-      <li>Search results, and the number of products left after you filter, are announced to screen readers. Filter buttons say whether they are switched on.</li>
-      <li>Text and interface colours were checked against the WCAG contrast minimums, and the pale gray text used for small captions was darkened to pass.</li>
-      <li>Layouts adapt down to 320 CSS pixels wide and to enlarged text, and browser zoom is never disabled.</li>
-      <li>Animation respects your device's reduced-motion setting, the site's content never depends on animation, and nothing in it flashes.</li>
+      <li>קישור ״דילוג לתוכן הראשי״ בתחילת כל עמוד.</li>
+      <li>כל האפשרויות זמינות במקלדת עם מסגרת מיקוד גלויה. התפריט, החיפוש ואפשרויות הנגישות נסגרים במקש Escape ומחזירים את המיקוד לכפתור שפתח אותם.</li>
+      <li>כותרות, רשימות, כפתורים וקישורים בקוד HTML תקני. תמונות מוצרים כוללות טקסט חלופי, ואיורים דקורטיביים מוסתרים מקוראי מסך.</li>
+      <li>צבעי הטקסט נבחרו בהתאם לדרישות הניגודיות של WCAG.</li>
+      <li>העמודים מתאימים את עצמם למסכים צרים ולטקסט מוגדל, והגדלת הדפדפן לעולם לא חסומה.</li>
+      <li>האנימציות מכבדות את הגדרת הפחתת התנועה במכשיר, והתוכן לא תלוי בהן.</li>
     </ul>
 
-    <h2>Accessibility options on this site</h2>
-    <p>The <strong>Accessibility options</strong> button in the page header (a circle with a person in it) opens a small panel with:</p>
+    <h2>אפשרויות הנגישות באתר</h2>
+    <p>הכפתור <strong>אפשרויות נגישות</strong> בראש העמוד פותח חלונית עם:</p>
     <ul>
-      <li><strong>Text size:</strong> five steps, from the standard size up to 175%.</li>
-      <li><strong>High contrast:</strong> black text on white with stronger borders and focus outlines.</li>
-      <li><strong>Reduce motion:</strong> turns off transitions and the card tilt effect, and replaces the entrance animation with a simple fade.</li>
-      <li><strong>Reset all:</strong> returns everything to the defaults.</li>
+      <li><strong>גודל טקסט:</strong> חמש דרגות, עד 175%.</li>
+      <li><strong>ניגודיות גבוהה:</strong> טקסט שחור על לבן עם גבולות חזקים יותר.</li>
+      <li><strong>הפחתת תנועה:</strong> מכבה מעברים ואפקטים.</li>
+      <li><strong>איפוס הכול:</strong> חזרה לברירת המחדל.</li>
     </ul>
-    <p>Your choices are saved only in your own browser (see the <a href="/cookie-notice.html">Cookie Notice</a>); they are not sent to PRIME.FINDS or anyone else. These options add to, and do not replace, your browser's and device's own accessibility settings, which the site also respects. The site itself is built to be usable without them.</p>
+    <p>הבחירות נשמרות רק בדפדפן שלכם (ראו <a href="/cookie-notice.html">מדיניות עוגיות</a>) ולא נשלחות אלינו.</p>
 
-    <h2>The entrance animation</h2>
-    <p>The homepage opens with a short animated introduction: about four seconds on a first visit and shorter on later visits. It plays once per browsing session. You can skip it at any moment by pressing any key, clicking or tapping, or using the <strong>Skip intro</strong> button, and there is an Accessibility link on top of it so this page can be reached before you enter the site. If your device is set to reduce motion, or you switch on Reduce motion, you get a simple fade instead of the full animation. The animation does not contain flashing content and the site's content does not depend on it. We have not measured it with a dedicated photosensitivity analysis tool.</p>
-
-    <h2>Known limitations</h2>
+    <h2>מגבלות ידועות</h2>
     <ul>
-      <li>Some product photos come from the retailer's listing and contain text or graphics inside the image, such as slogans or feature callouts. The photo's text alternative names the product, and the product description on the page carries the key details, but not everything shown inside an image is described.</li>
-      <li>The "View at Amazon" buttons receive their destination through a script after the page loads. If scripts are blocked or fail, those buttons will not work.</li>
-      <li>When you follow a link to Amazon or another retailer you leave PRIME.FINDS. The accessibility of those sites is outside our control.</li>
-      <li>The site loads its fonts from Google Fonts. If they are blocked, a fallback font is used and the text may look different.</li>
-      <li>The site is available in English only.</li>
-      <li>We have not yet tested with screen readers or with disabled users, as explained above.</li>
-      <li>Some effects, such as product cards tilting under the pointer, are pointer-only enhancements. They do not hide any information, and Reduce motion turns them off.</li>
+      <li>חלק מתמונות המוצרים מגיעות מאמזון וכוללות טקסט באנגלית בתוך התמונה. שמות המותגים והדגמים מופיעים באנגלית.</li>
+      <li>הכפתורים לאמזון מקבלים את היעד שלהם באמצעות סקריפט. אם סקריפטים חסומים, הכפתורים לא יעבדו.</li>
+      <li>כשעוברים לאמזון יוצאים מהאתר, ונגישות האתר שם אינה בשליטתנו. עמודי המוצר באמזון אינם בעברית.</li>
+      <li>הגופנים נטענים מ-Google Fonts. אם הם חסומים, יוצג גופן חלופי.</li>
     </ul>
 
-    <h2 id="report">Report a barrier or ask for help</h2>
-    <p>If something on PRIME.FINDS is hard or impossible for you to use, or you need information from the site in a different form, please tell us. It helps to include the address of the page, what you were trying to do, what went wrong, and the browser and any assistive technology you use.</p>
-    <p>You can reach PRIME.FINDS by email at <a href="mailto:prime.finds.amazon.10@gmail.com">prime.finds.amazon.10@gmail.com</a> or through the site's <a href="https://github.com/primefindshq/primefindshq.github.io/issues" target="_blank" rel="noopener">public issue tracker on GitHub</a> (a free GitHub account is needed, and what you post there is public, so please do not include personal details).</p>
-    <p>We read reports as they come in and give priority to barriers that stop someone from finding a product or reaching a retailer. We cannot promise a specific response time. If you are not satisfied with how a concern is handled, you may be able to raise it with an accessibility or consumer authority in your own country.</p>
+    <h2 id="report">דיווח על בעיית נגישות</h2>
+    <p>אם משהו באתר קשה או בלתי אפשרי לשימוש, או שאתם צריכים מידע בפורמט אחר, ספרו לנו. כדאי לציין את כתובת העמוד, מה ניסיתם לעשות, מה השתבש, ובאיזה דפדפן וטכנולוגיה מסייעת השתמשתם.</p>
+    <p>אפשר ליצור איתנו קשר במייל <a href="mailto:prime.finds.amazon.10@gmail.com">prime.finds.amazon.10@gmail.com</a> או דרך <a href="https://github.com/primefindshq/primefindshq.github.io/issues" target="_blank" rel="noopener">מערכת הפניות הציבורית שלנו ב-GitHub</a> (נדרש חשבון GitHub חינמי, ומה שנכתב שם גלוי לכולם, לכן אין לכלול פרטים אישיים).</p>
 
-    <h2>Technical information</h2>
-    <p>PRIME.FINDS is built with HTML, CSS and JavaScript, with WAI-ARIA used only where standard HTML does not give the right meaning. It is designed for current versions of the major desktop and mobile browsers.</p>
-
-    <h2>Review date</h2>
-    <p>This statement was last reviewed on <time datetime="2026-10-16">16 October 2026</time> and will be updated as the site changes and as we learn more.</p>
+    <h2>תאריך עדכון</h2>
+    <p>ההצהרה עודכנה לאחרונה ב-<time datetime="2026-10-16">16 באוקטובר 2026</time>.</p>
 
   </div>
 </section>
@@ -218,25 +197,25 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a class="brand-logo" href="/"><img src="/assets/logo/wordmark.png" alt="PRIME.FINDS home" width="1075" height="580" /></a>
-        <p class="footer-brand__tagline">Amazon finds &amp; gift ideas worth buying.</p>
+        <a class="brand-logo" href="/"><span class="brand-wordmark">שודדים את אמזון</span></a>
+        <p class="footer-brand__tagline">מוצרים מאמזון ורעיונות למתנה ששווה לקנות.</p>
       </div>
       <div>
-        <h2 class="footer-heading">Explore</h2>
-        <ul class="footer-links"><li><a href="/">Home</a></li><li><a href="/#categories">Categories</a></li><li><a href="/guides/">Gift Guides</a></li><li><a href="/v/">Videos</a></li><li><a href="/about.html">About</a></li></ul>
+        <h2 class="footer-heading">ניווט</h2>
+        <ul class="footer-links"><li><a href="/">דף הבית</a></li><li><a href="/#categories">קטגוריות</a></li><li><a href="/guides/">מדריכי מתנות</a></li><li><a href="/he/">איך קונים לישראל</a></li><li><a href="/about.html">אודות</a></li></ul>
       </div>
       <div>
-        <h2 class="footer-heading">Categories</h2>
-        <ul class="footer-links"><li><a href="/category/tech/">Tech</a></li><li><a href="/category/home/">Home</a></li><li><a href="/category/kitchen/">Kitchen</a></li><li><a href="/category/gaming/">Gaming</a></li><li><a href="/category/kids/">Kids &amp; Baby</a></li><li><a href="/category/outdoors/">Outdoors &amp; Sports</a></li><li><a href="/category/pets/">Pets</a></li><li><a href="/category/travel/">Travel</a></li><li><a href="/category/desk-setup/">Desk Setup</a></li><li><a href="/category/gifts/">Gifts</a></li><li><a href="/category/under-25/">Under $25</a></li></ul>
+        <h2 class="footer-heading">קטגוריות</h2>
+        <ul class="footer-links"><li><a href="/category/tech/">טכנולוגיה</a></li><li><a href="/category/home/">לבית</a></li><li><a href="/category/kitchen/">מטבח</a></li><li><a href="/category/gaming/">גיימינג</a></li><li><a href="/category/kids/">ילדים ותינוקות</a></li><li><a href="/category/outdoors/">טיולים וספורט</a></li><li><a href="/category/pets/">חיות מחמד</a></li><li><a href="/category/travel/">נסיעות</a></li><li><a href="/category/desk-setup/">שולחן עבודה</a></li><li><a href="/category/gifts/">מתנות</a></li><li><a href="/category/under-25/">עד 25 דולר</a></li></ul>
       </div>
       <div>
-        <h2 class="footer-heading">Legal &amp; help</h2>
-        <ul class="footer-links"><li><a href="/accessibility.html">Accessibility</a></li><li><a href="/privacy-policy.html">Privacy Policy</a></li><li><a href="/terms.html">Terms of Use</a></li><li><a href="/affiliate-disclosure.html">Affiliate Disclosure</a></li><li><a href="/cookie-notice.html">Cookie Notice</a></li><li><a href="mailto:prime.finds.amazon.10@gmail.com">Contact</a></li><li><a href="/accessibility.html#report">Help &amp; feedback</a></li></ul>
+        <h2 class="footer-heading">מידע ועזרה</h2>
+        <ul class="footer-links"><li><a href="/accessibility.html">נגישות</a></li><li><a href="/privacy-policy.html">מדיניות פרטיות</a></li><li><a href="/terms.html">תנאי שימוש</a></li><li><a href="/affiliate-disclosure.html">גילוי נאות</a></li><li><a href="/cookie-notice.html">מדיניות עוגיות</a></li><li><a href="mailto:prime.finds.amazon.10@gmail.com">יצירת קשר</a></li><li><a href="/accessibility.html#report">עזרה ומשוב</a></li></ul>
       </div>
     </div>
-    <div class="footer-disclosure"><h2 class="footer-heading">Affiliate disclosure</h2><p>Many links on PRIME.FINDS, including the &ldquo;View at Amazon&rdquo; buttons, are affiliate links. If you buy through them, PRIME.FINDS may earn a commission from qualifying purchases, at no extra cost to you. <a href="/affiliate-disclosure.html">Read the full affiliate disclosure</a>.</p></div>
+    <div class="footer-disclosure"><h2 class="footer-heading">גילוי נאות</h2><p>הרבה מהקישורים באתר, כולל הכפתורים שמובילים לאמזון, הם קישורי שותפים. כשותפי אמזון, אנחנו מרוויחים עמלה מרכישות מזכות, בלי עלות נוספת עבורכם. האתר אינו קשור לאמזון ואינו מטעמה. <a href="/affiliate-disclosure.html">לגילוי הנאות המלא</a>.</p></div>
     <div class="footer-bottom">
-      <span>&copy; 2026 PRIME.FINDS. All rights reserved.</span>
+      <span>&copy; 2026 שודדים את אמזון. כל הזכויות שמורות.</span>
       <div class="footer-social"><span aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg></span></div>
     </div>
   </div>

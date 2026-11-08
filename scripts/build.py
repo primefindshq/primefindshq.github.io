@@ -265,7 +265,6 @@ HEADER_NAV = [
     ("guides", "מדריכי מתנות", "/guides/"),
     ("under-25", "עד 25 דולר", "/category/under-25/"),
     ("categories", "קטגוריות", "/#categories"),
-    ("videos", "סרטונים", "/v/"),
 ]
 
 
@@ -1796,8 +1795,8 @@ def main():
     write_file(os.path.join(PUBLIC_DIR, "data", "categories.json"), json.dumps(categories, indent=2, ensure_ascii=False))
 
     # ---- Homepage ----
-    collections = load_collections(published)
-    videos = load_videos(published)
+    collections = []
+    videos = []
     guides = load_guides(published)
     write_file(os.path.join(PUBLIC_DIR, "index.html"), render_homepage(site, categories, published, counts, collections, videos, guides))
 

@@ -1,7 +1,7 @@
 {
-  "name": "PRIME.FINDS",
-  "short_name": "PRIME",
-  "description": "PRIME.FINDS is an international product discovery brand curating interesting, useful, and stylish products worth knowing about.",
+  "name": "שודדים את אמזון",
+  "short_name": "שודדים את אמזון",
+  "description": "אתר ישראלי לגילוי מוצרים מעניינים ושימושיים מאמזון. האתר עצמאי ואינו קשור לאמזון.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#14213d",
