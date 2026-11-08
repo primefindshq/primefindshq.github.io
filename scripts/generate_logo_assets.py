@@ -15,7 +15,9 @@ from PIL import Image, ImageFilter
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "scripts", "logo-source", "prime-finds-logo-master.png")
 LOGO_DIR = os.path.join(ROOT, "public", "assets", "logo")
-BRAND_BG = (10, 10, 11)  # matches --color-bg: #0a0a0b
+BRAND_BG = (20, 33, 61)  # navy, matches the navy --color-bg in tokens.css
+CORAL = (255, 111, 97)
+CREAM = (251, 245, 230)
 
 # Luminance band the background (solid near-black) fades to transparent
 # over. Kept low so real dark-gold shadow tones in the artwork survive.
@@ -40,6 +42,29 @@ def cutout_from_black(rgb_img):
     )
     alpha = alpha.filter(ImageFilter.MinFilter(5)).filter(ImageFilter.MaxFilter(5))
     return Image.merge("RGBA", (*rgb_img.split(), alpha))
+
+
+def recolor_brand(cut):
+    """The master is gold + white; repaint it coral + cream, keeping its shading.
+    Saturated pixels take coral and neutral ones cream, blended by saturation so
+    anti-aliased edges stay smooth."""
+    out = cut.copy()
+    px = out.load()
+    w, h = out.size
+    for y in range(h):
+        for x in range(w):
+            r, g, b, a = px[x, y]
+            hi = max(r, g, b)
+            if not a or not hi:
+                continue
+            sat = (hi - min(r, g, b)) / hi
+            t = min(1.0, max(0.0, (sat - 0.15) / 0.2))
+            coral = min(1.15, hi / 215)
+            cream = hi / 255
+            px[x, y] = tuple(
+                min(255, round(t * c * coral + (1 - t) * n * cream)) for c, n in zip(CORAL, CREAM)
+            ) + (a,)
+    return out
 
 
 def bbox_in_band(cut, y0, y1, alpha_thresh=120):
@@ -81,7 +106,7 @@ def square_canvas(im, size, margin_frac=0.12, bg=None):
 def main():
     os.makedirs(LOGO_DIR, exist_ok=True)
     source = Image.open(SRC).convert("RGB")
-    cut = cutout_from_black(source)
+    cut = recolor_brand(cutout_from_black(source))
 
     mark_box = bbox_in_band(cut, *MARK_BAND)
     mark = crop_padded(cut, mark_box, 18)

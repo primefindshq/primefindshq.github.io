@@ -24,10 +24,10 @@ html {
 body {
   margin: 0;
   /* Warm ivory, with two barely-there pools of light so it reads as lit paper
-     rather than a flat fill: a faint gold warmth top-right, a soft white
+     rather than a flat fill: a faint coral warmth top-right, a soft white
      bloom lower-left. Static, so it costs nothing while scrolling. */
   background:
-    radial-gradient(1100px 640px at 90% -4%, rgba(201, 162, 75, 0.11), transparent 62%),
+    radial-gradient(1100px 640px at 90% -4%, rgba(255, 111, 97, 0.11), transparent 62%),
     radial-gradient(900px 600px at 2% 58%, rgba(255, 255, 255, 0.55), transparent 65%),
     var(--color-bg);
   color: var(--color-text);
@@ -107,7 +107,7 @@ p { margin: 0; }
 /* ---- Focus visibility (accessibility) ---- */
 :focus { outline: none; }
 :focus-visible {
-  outline: 2px solid var(--color-gold);
+  outline: 2px solid var(--color-coral);
   outline-offset: 3px;
   border-radius: var(--radius-sm);
 }
@@ -117,9 +117,9 @@ p { margin: 0; }
   position: absolute;
   left: var(--space-sm);
   top: -60px;
-  /* The bright metallic gold (not the deep text gold) so the dark label reads at 8:1. */
-  background: #c9a24b;
-  color: var(--color-text-on-gold);
+  /* The bright coral (not the deep text coral) so the dark label reads at 8:1. */
+  background: #ff6f61;
+  color: var(--color-text-on-coral);
   padding: var(--space-2xs) var(--space-sm);
   border-radius: var(--radius-sm);
   font-weight: 600;
@@ -169,14 +169,14 @@ p { margin: 0; }
   font-weight: 600;
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
-  color: var(--color-gold);
+  color: var(--color-coral);
 }
 
 .eyebrow::before {
   content: '';
   width: 20px;
   height: 1px;
-  background: var(--color-gold);
+  background: var(--color-coral);
 }
 
 .section-title {
@@ -213,11 +213,11 @@ p { margin: 0; }
   color: var(--color-text-faint);
 }
 
-/* A single hairline rule in gold -- the brand's recurring "cut here"
+/* A single hairline rule in coral -- the brand's recurring "cut here"
    device, used far more sparingly than the old boxed-callout pattern. */
-.rule-gold {
+.rule-coral {
   width: 48px;
   height: 1px;
-  background: var(--color-gold);
+  background: var(--color-coral);
   border: none;
 }

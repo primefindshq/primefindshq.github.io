@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
   height: 84px;
-  background: rgba(var(--rgb-bg), 0.72);
+  background: rgba(var(--rgb-bg), 0.97);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid transparent;
@@ -21,7 +21,7 @@
 }
 .site-header.is-scrolled {
   border-bottom-color: var(--color-border);
-  background: rgba(var(--rgb-bg), 0.92);
+  background: rgba(var(--rgb-bg), 0.98);
   height: 66px;
 }
 /* Gets out of the way while scrolling toward something, returns the
@@ -68,7 +68,7 @@
               background var(--duration-fast) var(--ease-standard),
               transform var(--duration-fast) var(--ease-standard);
 }
-.icon-btn:hover { border-color: var(--color-gold); background: var(--color-gold-wash); }
+.icon-btn:hover { border-color: var(--color-coral); background: var(--color-coral-wash); }
 .icon-btn:active { transform: scale(0.92); }
 .icon-btn svg { width: 18px; height: 18px; }
 
@@ -95,7 +95,7 @@
               background var(--duration-fast) var(--ease-standard),
               transform var(--duration-fast) var(--ease-standard);
 }
-.index-trigger:hover { border-color: var(--color-gold); background: var(--color-gold-wash); }
+.index-trigger:hover { border-color: var(--color-coral); background: var(--color-coral-wash); }
 .index-trigger:active { transform: scale(0.96); }
 .index-trigger__glyph {
   position: relative;
@@ -117,7 +117,7 @@
 .index-trigger__glyph span:nth-child(1) { top: 0; width: 14px; }
 .index-trigger__glyph span:nth-child(2) { top: 8.5px; width: 9px; }
 .index-trigger:hover .index-trigger__glyph span:nth-child(2) { width: 14px; }
-.index-trigger[aria-expanded="true"] { border-color: var(--color-gold); background: var(--color-gold-wash); color: var(--color-gold-light); }
+.index-trigger[aria-expanded="true"] { border-color: var(--color-coral); background: var(--color-coral-wash); color: var(--color-coral-light); }
 /* Open state: the two lines fold into an X instead of just sitting there
    once the panel they control is already open. */
 .index-trigger[aria-expanded="true"] .index-trigger__glyph span { top: 4.5px; width: 14px; }
@@ -184,12 +184,12 @@
   position: absolute;
   left: 0; right: 0; bottom: 2px;
   height: 2px;
-  background: var(--color-gold);
+  background: var(--color-coral);
   scale: 0 1;
   transform-origin: left;
   transition: scale var(--duration-base) var(--ease-out-strong);
 }
-.site-index__nav-link:hover { color: var(--color-gold-light); }
+.site-index__nav-link:hover { color: var(--color-coral-light); }
 .site-index__nav-link:hover::after { scale: 1 1; }
 .site-index.is-open .site-index__nav-link { opacity: 1; translate: 0 0; }
 .site-index__nav-link:nth-child(1) { transition-delay: 60ms; }
@@ -296,13 +296,13 @@ body.intro-lock { overflow: hidden; }
   font-size: var(--fs-body-sm);
   transition: color var(--duration-fast) var(--ease-standard);
 }
-.footer-links a:hover { color: var(--color-gold); }
+.footer-links a:hover { color: var(--color-coral); }
 .footer-links a::after {
   content: '';
   position: absolute;
   left: 0; right: 0; bottom: -2px;
   height: 1px;
-  background: var(--color-gold);
+  background: var(--color-coral);
   scale: 0 1;
   transform-origin: left;
   transition: scale var(--duration-base) var(--ease-out-strong);
@@ -335,7 +335,7 @@ body.intro-lock { overflow: hidden; }
   border: 1px solid var(--color-border);
   transition: border-color var(--duration-fast) var(--ease-standard), color var(--duration-fast);
 }
-.footer-social a:hover { border-color: var(--color-gold); color: var(--color-gold); }
+.footer-social a:hover { border-color: var(--color-coral); color: var(--color-coral); }
 .footer-social span[aria-disabled="true"] { color: var(--color-text-faint); cursor: default; }
 .footer-social svg { width: 16px; height: 16px; }
 
@@ -361,7 +361,7 @@ body.intro-lock { overflow: hidden; }
   letter-spacing: var(--tracking-mid);
 }
 .breadcrumbs a { color: var(--color-text-faint); }
-.breadcrumbs a:hover { color: var(--color-gold); }
+.breadcrumbs a:hover { color: var(--color-coral); }
 .breadcrumbs .sep { opacity: 0.5; }
 
 /* ---- Grids ---- */
@@ -402,7 +402,3 @@ body.intro-lock { overflow: hidden; }
   max-width: 860px;
 }
 
-/* The wordmark artwork is gold + near-white, made for black. On ivory the white
-   lettering would disappear, so it is recoloured in CSS (the image file is not
-   touched): light -> dark, gold -> a deep antique gold. */
-.brand-logo img { filter: invert(1) hue-rotate(180deg) saturate(1.15); }

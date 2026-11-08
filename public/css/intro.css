@@ -120,7 +120,7 @@ html.intro-reveal .site-header {
 .brand-intro__skip:focus-visible,
 .brand-intro__link:focus-visible {
   color: var(--color-text);
-  outline: 2px solid var(--color-gold-light);
+  outline: 2px solid var(--color-coral-light);
   outline-offset: 4px;
 }
 @media (prefers-reduced-motion: reduce) {

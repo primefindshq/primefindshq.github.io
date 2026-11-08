@@ -2,7 +2,7 @@
    PRIME.FINDS — Components
    Shape system: pills/chips are full-round (the only rounded things on the
    site); everything else -- cards, media, inputs, buttons -- is sharp or
-   near-sharp (radius-sm/md). Color system: gold is reserved for exactly one
+   near-sharp (radius-sm/md). Color system: coral is reserved for exactly one
    accent per component (a price, a hover edge, a rule line), never a wash
    across a whole surface.
    ========================================================================= */
@@ -38,11 +38,11 @@
 .btn--primary {
   position: relative;
   overflow: hidden;
-  background: var(--gradient-gold);
-  color: var(--color-text-on-gold);
+  background: var(--gradient-coral);
+  color: var(--color-text-on-coral);
 }
-.btn--primary:hover { filter: brightness(1.08); box-shadow: var(--shadow-gold); }
-/* A single sweep of light on hover -- the gold surface catching light
+.btn--primary:hover { filter: brightness(1.08); box-shadow: var(--shadow-coral); }
+/* A single sweep of light on hover -- the coral surface catching light
    rather than just brightening, the same restrained trick as the card and
    gallery sheens elsewhere, sized for a button instead of a photo. */
 .btn--primary::after {
@@ -63,7 +63,7 @@
   border-color: var(--color-border-strong);
   color: var(--color-text);
 }
-.btn--secondary:hover { border-color: var(--color-gold); color: var(--color-gold-light); }
+.btn--secondary:hover { border-color: var(--color-coral); color: var(--color-coral-light); }
 
 .btn--ghost {
   background: transparent;
@@ -74,7 +74,7 @@
   letter-spacing: normal;
   font-weight: 500;
 }
-.btn--ghost:hover { color: var(--color-gold); }
+.btn--ghost:hover { color: var(--color-coral); }
 
 .btn--sm { height: 42px; padding-inline: var(--space-md); font-size: var(--fs-caption); }
 .btn--full { width: 100%; }
@@ -101,14 +101,14 @@
   background: rgba(var(--rgb-surface), 0.85);
   backdrop-filter: blur(6px);
 }
-.badge--gold {
+.badge--coral {
   border-color: transparent;
-  background: var(--gradient-gold);
-  color: var(--color-text-on-gold);
+  background: var(--gradient-coral);
+  color: var(--color-text-on-coral);
 }
-.badge--outline-gold {
-  border-color: var(--color-gold-dim);
-  color: var(--color-gold-light);
+.badge--outline-coral {
+  border-color: var(--color-coral-dim);
+  color: var(--color-coral-light);
   background: rgba(var(--rgb-surface), 0.88);
 }
 
@@ -125,7 +125,7 @@
   transition: border-color var(--duration-fast) var(--ease-standard);
   min-width: 0;
 }
-.input-field:focus-within { border-color: var(--color-gold); }
+.input-field:focus-within { border-color: var(--color-coral); }
 .input-field svg { width: 16px; height: 16px; color: var(--color-text-faint); flex-shrink: 0; }
 .input-field input,
 .input-field select {
@@ -149,7 +149,7 @@
    Cells in a hairline specimen grid (see .grid-products in layout.css --
    the 1px gaps between cards are the grid's own background color showing
    through, not individual card borders). Portrait media, Fraunces for the
-   product name so it reads as a catalog entry, mono metadata, and gold
+   product name so it reads as a catalog entry, mono metadata, and coral
    spent on exactly one element: the price. */
 .product-card {
   --tilt-x: 0deg;
@@ -198,7 +198,7 @@
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  background: linear-gradient(115deg, transparent 42%, rgba(232, 207, 138, 0.1) 50%, transparent 58%);
+  background: linear-gradient(115deg, transparent 42%, rgba(255, 141, 128, 0.1) 50%, transparent 58%);
   translate: -140% 0;
   transition: translate 900ms var(--ease-in-out);
 }
@@ -266,7 +266,7 @@
   display: inline-block;
   font-family: var(--font-display);
   font-size: 1.2rem;
-  color: var(--color-gold-light);
+  color: var(--color-coral-light);
   transform-origin: left center;
   transition: scale var(--duration-base) var(--ease-out-strong);
 }
@@ -280,10 +280,10 @@
   font-size: var(--fs-caption);
   color: var(--color-text-dim);
 }
-.rating svg { width: 13px; height: 13px; color: var(--color-gold); }
+.rating svg { width: 13px; height: 13px; color: var(--color-coral); }
 
 /* A hairline, not a boxed button -- the CTA stays quiet at rest and only
-   picks up gold when the card is actually being considered. */
+   picks up coral when the card is actually being considered. */
 .product-card__cta { padding: 0 var(--space-md) var(--space-md); }
 .product-card__cta .btn--ghost {
   position: relative;
@@ -300,8 +300,8 @@
   color: var(--color-text-faint);
   transition: color var(--duration-base) var(--ease-standard);
 }
-/* The gold rule draws in from the left instead of the whole hairline just
-   changing color -- the same "cut here" device as .rule-gold, playing out
+/* The coral rule draws in from the left instead of the whole hairline just
+   changing color -- the same "cut here" device as .rule-coral, playing out
    as a hover reveal instead of sitting static. */
 .product-card__cta .btn--ghost::before {
   content: '';
@@ -309,13 +309,13 @@
   top: -1px; left: 0;
   width: 100%;
   height: 1px;
-  background: var(--color-gold-dim);
+  background: var(--color-coral-dim);
   scale: 0 1;
   transform-origin: left;
   transition: scale var(--duration-slow) var(--ease-out-strong);
 }
 .product-card:hover .product-card__cta .btn--ghost::before { scale: 1 1; }
-.product-card:hover .product-card__cta .btn--ghost { color: var(--color-gold-light); }
+.product-card:hover .product-card__cta .btn--ghost { color: var(--color-coral-light); }
 .product-card__cta svg {
   width: 12px; height: 12px;
   transition: transform var(--duration-base) var(--ease-standard);
@@ -395,7 +395,7 @@ a.product-card-link { display: block; }
   margin-bottom: 3px;
   transition: color var(--duration-fast) var(--ease-standard);
 }
-.category-tile:hover .category-tile__name { color: var(--color-gold-light); }
+.category-tile:hover .category-tile__name { color: var(--color-coral-light); }
 .category-tile__count {
   font-family: var(--font-mono);
   font-size: var(--fs-micro);
@@ -440,7 +440,7 @@ a.product-card-link { display: block; }
   scroll-snap-align: start;
 }
 .rail .product-card { height: 100%; background: var(--color-bg-raised); border: 1px solid var(--color-border); }
-.rail .product-card:hover { border-color: var(--color-gold-dim); }
+.rail .product-card:hover { border-color: var(--color-coral-dim); }
 
 .rail-controls {
   display: flex;
@@ -467,12 +467,12 @@ a.product-card-link { display: block; }
               transform var(--duration-fast) var(--ease-standard);
   background: transparent;
 }
-.chip:hover { border-color: var(--color-gold); color: var(--color-text); }
+.chip:hover { border-color: var(--color-coral); color: var(--color-text); }
 .chip:active { transform: scale(0.96); }
 .chip.is-active {
   border-color: transparent;
-  background: var(--gradient-gold);
-  color: var(--color-text-on-gold);
+  background: var(--gradient-coral);
+  color: var(--color-text-on-coral);
 }
 .chip .chip-remove { font-size: 0.9em; opacity: 0.7; }
 
@@ -498,7 +498,7 @@ a.product-card-link { display: block; }
 }
 .filter-checkbox input {
   width: 16px; height: 16px;
-  accent-color: var(--color-gold);
+  accent-color: var(--color-coral);
 }
 .filter-checkbox:hover { color: var(--color-text); }
 
@@ -528,7 +528,7 @@ a.product-card-link { display: block; }
 }
 .state-panel__icon {
   width: 56px; height: 56px;
-  color: var(--color-gold-dim);
+  color: var(--color-coral-dim);
 }
 .state-panel__title {
   font-family: var(--font-display);

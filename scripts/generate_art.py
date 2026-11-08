@@ -21,13 +21,13 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(ROOT, "data")
 IMAGES_DIR = os.path.join(ROOT, "public", "assets", "images")
 
-GOLD = "#c9a24b"
-GOLD_LIGHT = "#e8cf8a"
-GOLD_DIM = "#8a6f34"
-INK = "#0a0a0b"
-GRAPHITE = "#17181a"
-GRAPHITE_2 = "#222325"
-LINE = "#3a3a3d"
+GOLD = "#ff6f61"
+GOLD_LIGHT = "#ff8d80"
+GOLD_DIM = "#c13f2e"
+INK = "#14213d"
+GRAPHITE = "#1c2c4e"
+GRAPHITE_2 = "#24365c"
+LINE = "#4a5f88"
 
 
 def seeded_rand(seed_str, index):

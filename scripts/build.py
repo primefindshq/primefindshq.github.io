@@ -640,7 +640,7 @@ def base_page(site, *, title, description, canonical_path, og_image=None, body_h
   <link rel="icon" href="/assets/logo/favicon-192.png" type="image/png" sizes="192x192" />
   <link rel="apple-touch-icon" href="/assets/logo/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
-  <meta name="theme-color" content="#060607" />
+  <meta name="theme-color" content="#14213d" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="{esc(site['siteName'])}" />
@@ -1971,8 +1971,8 @@ def main():
         "description": site["description"],
         "start_url": "/",
         "display": "standalone",
-        "background_color": "#0a0a0b",
-        "theme_color": "#0a0a0b",
+        "background_color": "#14213d",
+        "theme_color": "#14213d",
         "icons": [
             {"src": "/assets/logo/favicon-192.png", "sizes": "192x192", "type": "image/png"},
             {"src": "/assets/logo/favicon-512.png", "sizes": "512x512", "type": "image/png"},

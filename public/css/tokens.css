@@ -4,55 +4,47 @@
    Every other stylesheet should read these variables rather than hardcode
    raw values, so the whole visual system can be retuned from one file.
 
-   Direction: "The Archive" — PRIME.FINDS reads like a collector's catalog,
-   not a storefront. Confident oversized serif type, near-black ink instead
-   of soft dark-mode grey, sharp/near-sharp corners instead of rounded app
-   chrome, gold used as a rare accent (rule lines, single digits, one CTA)
-   rather than a wash over everything. Everything traces back to these
+   Palette: navy + cream carry the brand; coral is the secondary colour, used
+   on buttons and small background accents. Everything traces back to these
    tokens so the system stays coherent as it's applied across the site.
    ========================================================================= */
 
 :root {
-  /* ---- Color: surface ----
-     True ink black (not dark-grey #0a0a0b) so gold and bone-white have
-     something to actually cut against. */
-  --color-bg: #f3f1ec;
-  --color-bg-raised: #faf9f6;
-  --color-bg-elevated: #fdfcfa;
-  --color-bg-overlay: rgba(243, 241, 236, 0.94);
-  --color-border: #e8e4da;
-  --color-border-strong: #d3cdc0;
+  /* ---- Color: surface (cream) ---- */
+  --color-bg: #fbf5e6;
+  --color-bg-raised: #fffaf0;
+  --color-bg-elevated: #fffdf7;
+  --color-bg-overlay: rgba(251, 245, 230, 0.94);
+  --color-border: #e9e0ca;
+  --color-border-strong: #d2c8ae;
   /* The outline of a form field must be visible on its own (WCAG 1.4.11, 3:1). */
-  --color-border-input: #8f897d;
+  --color-border-input: #7f8598;
   /* The same two surfaces as raw channels, for translucent layers
      (header, badges, image scrims) that need an alpha. */
-  --rgb-bg: 243, 241, 236;
-  --rgb-surface: 250, 249, 246;
+  --rgb-bg: 251, 245, 230;
+  --rgb-surface: 255, 250, 240;
 
   /* ---- Color: text ---- */
-  --color-text: #111111;
-  --color-text-dim: #5f5a50;
+  --color-text: #14213d;
+  --color-text-dim: #4a5573;
   /* Darkened from #78726a (4.2:1) so small captions meet the 4.5:1 text minimum. */
-  --color-text-faint: #6b665d;
-  --color-text-on-gold: #120f08;
+  --color-text-faint: #5a6480;
+  --color-text-on-coral: #14213d;
 
-  /* ---- Color: gold accent (metallic, not bright yellow) ----
-     One accent, used sparingly: rule lines, a digit, a single CTA, a hover
-     edge. Never a background wash across a whole section. */
-  /* On ivory the gold has to be deeper to stay legible as text/lines
-     (antique gold, 4-5:1), so these three are the text-and-line golds. The
-     bright metallic gold is kept, unchanged, for filled surfaces via
-     --gradient-gold. */
-  --color-gold: #8a681b;
-  --color-gold-light: #7f5f17;
+  /* ---- Color: coral accent ----
+     The first three are deepened so coral text and lines stay legible on cream
+     (4.5:1). Filled surfaces use the bright coral through --gradient-coral,
+     with navy labels on top. */
+  --color-coral: #b93a2a;
+  --color-coral-light: #b93a2a;
   /* Darkened from #8a6f34 (4.2:1): it is used for a few text numerals, which need 4.5:1. */
-  --color-gold-dim: #7f6529;
-  --color-gold-wash: rgba(201, 162, 75, 0.14);
-  --gradient-gold: linear-gradient(135deg, #e8cf8a, #c9a24b 55%, #8a6f34);
+  --color-coral-dim: #c13f2e;
+  --color-coral-wash: rgba(255, 111, 97, 0.14);
+  --gradient-coral: linear-gradient(135deg, #ff8d80, #ff6f61 60%, #f65f51);
 
   /* ---- Color: state ---- */
   --color-success: #7fae83;
-  --color-error: #c96a5a;
+  --color-error: #b3261e;
 
   /* ---- Typography ----
      Fraunces carries the brand voice at real scale (this is an editorial
@@ -107,11 +99,11 @@
   --radius-full: 999px;
 
   /* ---- Shadow ---- */
-  --shadow-sm: 0 1px 2px rgba(70, 58, 30, 0.1);
-  --shadow-md: 0 8px 24px rgba(70, 58, 30, 0.1);
-  --shadow-lg: 0 24px 56px rgba(70, 58, 30, 0.14);
-  --shadow-gold: 0 8px 28px rgba(201, 162, 75, 0.3);
-  --shadow-card-hover: 0 24px 44px rgba(70, 58, 30, 0.16), 0 2px 0 rgba(201, 162, 75, 0.25);
+  --shadow-sm: 0 1px 2px rgba(20, 33, 61, 0.1);
+  --shadow-md: 0 8px 24px rgba(20, 33, 61, 0.1);
+  --shadow-lg: 0 24px 56px rgba(20, 33, 61, 0.14);
+  --shadow-coral: 0 8px 28px rgba(255, 111, 97, 0.3);
+  --shadow-card-hover: 0 24px 44px rgba(20, 33, 61, 0.16), 0 2px 0 rgba(255, 111, 97, 0.25);
 
   /* ---- Motion ----
      PRIME.FINDS's signature motion language, in four curves:
@@ -153,21 +145,29 @@
   }
 }
 
-/* ---- Entrance isolation ----
-   The cinematic entrance (and its CSS fallback) is designed on black + gold.
-   These are the original dark-theme values, scoped to the overlay only, so the
-   site-wide light theme does not reach into it. */
+/* ---- Navy surfaces ----
+   The header, the index overlay, the footer and the entrance sit on navy, so
+   they get the light-on-dark values of the same tokens. */
+.site-header,
+.site-index,
+.site-footer,
 .brand-intro {
-  --color-bg: #060607;
-  --color-bg-raised: #101012;
-  --color-bg-elevated: #17171a;
-  --color-border: #232326;
-  --color-border-strong: #37373b;
-  --color-text: #f6f2e9;
-  --color-text-dim: #a3a099;
-  --color-text-faint: #6b6863;
-  --color-gold: #c9a24b;
-  --color-gold-light: #e8cf8a;
-  --color-gold-dim: #8a6f34;
-  --color-gold-wash: rgba(201, 162, 75, 0.1);
+  --color-bg: #14213d;
+  --color-bg-raised: #1c2c4e;
+  --color-bg-elevated: #24365c;
+  --color-bg-overlay: rgba(20, 33, 61, 0.97);
+  --color-border: #2f4268;
+  --color-border-strong: #4a5f88;
+  --color-border-input: #7f8fb0;
+  --rgb-bg: 20, 33, 61;
+  --rgb-surface: 28, 44, 78;
+  --color-text: #fbf5e6;
+  --color-text-dim: #d2d6e0;
+  --color-text-faint: #b9bfcf;
+  --color-coral: #ff8d80;
+  --color-coral-light: #ff8d80;
+  --color-coral-dim: #ff8d80;
+  --color-coral-wash: rgba(255, 111, 97, 0.16);
 }
+.site-header, .site-footer { color: var(--color-text); }
+.site-footer { background: var(--color-bg); }
