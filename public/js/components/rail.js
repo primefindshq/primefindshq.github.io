@@ -14,13 +14,13 @@ export function initRails(root = document) {
       return item ? item.getBoundingClientRect().width + 16 : rail.clientWidth * 0.8;
     };
 
-    prevBtn?.addEventListener('click', () => rail.scrollBy({ left: -step(), behavior: 'smooth' }));
-    nextBtn?.addEventListener('click', () => rail.scrollBy({ left: step(), behavior: 'smooth' }));
+    prevBtn?.addEventListener('click', () => rail.scrollBy({ left: step(), behavior: 'smooth' }));
+    nextBtn?.addEventListener('click', () => rail.scrollBy({ left: -step(), behavior: 'smooth' }));
 
     const updateDisabled = () => {
       const max = rail.scrollWidth - rail.clientWidth;
-      if (prevBtn) prevBtn.disabled = rail.scrollLeft <= 4;
-      if (nextBtn) nextBtn.disabled = rail.scrollLeft >= max - 4;
+      if (prevBtn) prevBtn.disabled = Math.abs(rail.scrollLeft) <= 4;
+      if (nextBtn) nextBtn.disabled = Math.abs(rail.scrollLeft) >= max - 4;
     };
     rail.addEventListener('scroll', updateDisabled, { passive: true });
     updateDisabled();

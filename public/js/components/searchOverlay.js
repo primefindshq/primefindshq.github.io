@@ -15,7 +15,7 @@ function categoryChipsMarkup(categories, counts) {
     )
     .join('');
   return `
-    <p class="search-overlay__hint">Or jump straight into a category</p>
+    <p class="search-overlay__hint">או קפצו ישר לקטגוריה</p>
     <div class="search-suggest">${chips}</div>`;
 }
 
@@ -86,16 +86,16 @@ export function initSearchOverlay() {
     track(EVENTS.SEARCH, { query, resultCount: matches.length });
 
     if (!matches.length) {
-      say(`No results for ${query}.`);
+      say(`אין תוצאות עבור ${query}.`);
       resultsEl.innerHTML = `
         <div class="state-panel" style="padding: var(--space-lg) 0;">
-          <p class="state-panel__title">No finds match "${escapeHtml(query)}"</p>
-          <p class="text-dim">Try a different word, or browse by category instead.</p>
+          <p class="state-panel__title">לא נמצאו מוצרים עבור "${escapeHtml(query)}"</p>
+          <p class="text-dim">נסו מילה אחרת, או עיינו לפי קטגוריה.</p>
         </div>`;
       return;
     }
 
-    say(`${matches.length} ${matches.length === 1 ? 'result' : 'results'} for ${query}.`);
+    say(`${matches.length} תוצאות עבור ${query}.`);
     resultsEl.innerHTML = matches
       .map(
         (p, i) => `

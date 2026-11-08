@@ -11,9 +11,9 @@ import { affiliateLinkMarkup } from '../core/affiliate.js';
 let cardSeq = 0;
 
 const CATEGORY_NAMES = {
-  tech: 'Tech', home: 'Home', kitchen: 'Kitchen', gaming: 'Gaming', kids: 'Kids & Baby',
-  outdoors: 'Outdoors & Sports', pets: 'Pets', travel: 'Travel', 'desk-setup': 'Desk Setup',
-  gifts: 'Gifts', 'under-25': 'Under $25',
+  tech: 'טכנולוגיה', home: 'לבית', kitchen: 'מטבח', gaming: 'גיימינג', kids: 'ילדים ותינוקות',
+  outdoors: 'טיולים וספורט', pets: 'חיות מחמד', travel: 'נסיעות', 'desk-setup': 'שולחן עבודה',
+  gifts: 'מתנות', 'under-25': 'עד 25 דולר',
 };
 
 export function productCardMarkup(product) {
@@ -38,7 +38,7 @@ export function productCardMarkup(product) {
         </div>
       </a>
       <div class="product-card__cta">
-        ${affiliateLinkMarkup(product, { label: 'View at Amazon', className: 'btn--ghost btn--icon-trail' })}
+        ${affiliateLinkMarkup(product, { label: 'לצפייה באמזון', className: 'btn--ghost btn--icon-trail' })}
       </div>
     </article>
   `;

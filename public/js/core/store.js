@@ -129,7 +129,7 @@ function normalise(text) {
     .replace(/wi-?\s?fi/g, 'wifi')
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-z0-9]+/g, ' ')
+    .replace(/[^a-z0-9\u05d0-\u05ea]+/g, ' ')
     .trim();
 }
 

@@ -168,7 +168,7 @@ html[data-motion="reduce"]::view-transition-new(*) { animation: none !important;
 .a11y-panel {
   position: fixed;
   top: 4.75rem;
-  right: var(--container-pad);
+  inset-inline-end: var(--container-pad);
   z-index: 210;
   width: min(calc(100vw - 2 * var(--container-pad)), 23rem);
   max-height: calc(100vh - 6rem);
@@ -239,7 +239,7 @@ html[data-motion="reduce"]::view-transition-new(*) { animation: none !important;
 .a11y-switch__knob {
   position: absolute;
   top: 0.1875rem;
-  left: 0.1875rem;
+  inset-inline-start: 0.1875rem;
   width: 1.375rem;
   height: 1.375rem;
   border-radius: 50%;
@@ -247,7 +247,7 @@ html[data-motion="reduce"]::view-transition-new(*) { animation: none !important;
   transition: transform var(--duration-fast) var(--ease-standard);
 }
 .a11y-switch[aria-checked="true"] { background: var(--gradient-coral); border-color: var(--color-coral); }
-.a11y-switch[aria-checked="true"] .a11y-switch__knob { transform: translateX(1.375rem); background: var(--color-text); }
+.a11y-switch[aria-checked="true"] .a11y-switch__knob { transform: translateX(-1.375rem); background: var(--color-text); }
 .a11y-switch:disabled { opacity: 0.65; cursor: not-allowed; }
 .a11y-panel__foot {
   display: flex;
@@ -264,7 +264,7 @@ html[data-motion="reduce"]::view-transition-new(*) { animation: none !important;
 .affiliate-note {
   margin: 0 0 var(--space-lg);
   padding: var(--space-sm) var(--space-md);
-  border-left: 2px solid var(--color-coral);
+  border-inline-start: 2px solid var(--color-coral);
   background: var(--color-bg-raised);
   color: var(--color-text-dim);
   font-size: var(--fs-body-sm);
@@ -299,12 +299,12 @@ html[data-motion="reduce"]::view-transition-new(*) { animation: none !important;
 .callout {
   margin-bottom: var(--space-lg);
   padding: var(--space-md);
-  border-left: 3px solid var(--color-coral);
+  border-inline-start: 3px solid var(--color-coral);
   background: var(--color-bg-raised);
 }
 .callout p { margin: 0; color: var(--color-text); }
 .prose a { color: var(--color-coral-light); text-decoration: underline; text-underline-offset: 3px; }
-.prose ul { list-style: disc; padding-left: 1.4em; margin: 0 0 var(--space-md); }
+.prose ul { list-style: disc; padding-inline-start: 1.4em; margin: 0 0 var(--space-md); }
 .prose li { margin-bottom: var(--space-2xs); }
 .prose code {
   font-family: var(--font-mono);

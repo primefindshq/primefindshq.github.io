@@ -77,8 +77,8 @@ html.intro-reveal .site-header {
    artwork, so assistive technology can find them immediately. */
 .brand-intro__tools {
   position: absolute;
-  left: 0;
-  right: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
   bottom: max(1.25rem, env(safe-area-inset-bottom));
   z-index: 3;
   display: flex;

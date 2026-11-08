@@ -1,60 +1,64 @@
 {
-  "siteName": "PRIME.FINDS",
-  "tagline": "Amazon finds & gift ideas worth buying.",
-  "shortPitch": "We find interesting products so you don't have to spend hours searching.",
-  "description": "PRIME.FINDS is an international product discovery brand curating interesting, useful, and stylish products worth knowing about.",
+  "siteName": "שודדים את אמזון",
+  "tagline": "מוצרים מאמזון ורעיונות למתנה ששווה לקנות.",
+  "shortPitch": "אנחנו מוצאים מוצרים מעניינים כדי שלא תצטרכו לחפש שעות.",
+  "description": "אתר ישראלי לגילוי מוצרים מעניינים ושימושיים מאמזון. האתר עצמאי ואינו קשור לאמזון.",
   "url": "https://primefindshq.github.io",
-  "locale": "en",
+  "locale": "he",
   "currencyDefault": "USD",
   "navLinks": [
     {
-      "label": "Home",
+      "label": "דף הבית",
       "href": "/"
     },
     {
-      "label": "Categories",
+      "label": "קטגוריות",
       "href": "/#categories"
     },
     {
-      "label": "Gift Guides",
+      "label": "מדריכי מתנות",
       "href": "/guides/"
     },
     {
-      "label": "Videos",
+      "label": "סרטונים",
       "href": "/v/"
     },
     {
-      "label": "About",
+      "label": "איך קונים לישראל",
+      "href": "/he/"
+    },
+    {
+      "label": "אודות",
       "href": "/about.html"
     }
   ],
   "footerLegalLinks": [
     {
-      "label": "Accessibility",
+      "label": "נגישות",
       "href": "/accessibility.html"
     },
     {
-      "label": "Privacy Policy",
+      "label": "מדיניות פרטיות",
       "href": "/privacy-policy.html"
     },
     {
-      "label": "Terms of Use",
+      "label": "תנאי שימוש",
       "href": "/terms.html"
     },
     {
-      "label": "Affiliate Disclosure",
+      "label": "גילוי נאות",
       "href": "/affiliate-disclosure.html"
     },
     {
-      "label": "Cookie Notice",
+      "label": "מדיניות עוגיות",
       "href": "/cookie-notice.html"
     },
     {
-      "label": "Contact",
+      "label": "יצירת קשר",
       "href": "mailto:prime.finds.amazon.10@gmail.com"
     },
     {
-      "label": "Help & feedback",
+      "label": "עזרה ומשוב",
       "href": "/accessibility.html#report"
     }
   ],

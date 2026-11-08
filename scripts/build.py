@@ -150,7 +150,7 @@ def esc(value):
 
 def format_price(price, currency="USD"):
     if price is None:
-        return "Check price"
+        return "לבדיקת מחיר"
     symbol = {"USD": "$", "EUR": "€", "GBP": "£"}.get(currency, currency + " ")
     return f"{symbol}{price:,.2f}"
 
@@ -167,13 +167,13 @@ def render_stars(rating, review_count=None):
             f'<path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg>'
         )
     if rating > 0:
-        label = f"{rating:.1f} out of 5" + (f" ({review_count:,} reviews)" if review_count else "")
+        label = f"{rating:.1f} מתוך 5" + (f" ({review_count:,} ביקורות)" if review_count else "")
         extra = f'<span>{rating:.1f}</span>'
         if review_count:
             extra += f'<span class="text-faint">({review_count:,})</span>'
     else:
-        label = "Not yet rated"
-        extra = '<span class="text-faint">New</span>'
+        label = "עדיין ללא דירוג"
+        extra = '<span class="text-faint">חדש</span>'
     return f'<span class="rating" role="img" aria-label="{esc(label)}"><span class="stars">{stars}</span>{extra}</span>'
 
 
@@ -184,14 +184,14 @@ def category_label(slug):
     return slug.replace("-", " ")
 
 
-_MONTHS = ["January", "February", "March", "April", "May", "June", "July",
-           "August", "September", "October", "November", "December"]
+_MONTHS = ["ינואר", "פברואר", "מרץ", "אפריל", "מאי", "יוני", "יולי",
+           "אוגוסט", "ספטמבר", "אוקטובר", "נובמבר", "דצמבר"]
 
 
 def format_date_long(iso):
     """'2026-09-20' -> '20 September 2026' (unambiguous for an international audience)."""
     y, m, d = (int(part) for part in iso.split("-"))
-    return f"{d} {_MONTHS[m - 1]} {y}"
+    return f"{d} ב{_MONTHS[m - 1]} {y}"
 
 
 def render_breadcrumbs(items):
@@ -204,7 +204,7 @@ def render_breadcrumbs(items):
             parts.append(f'<span aria-current="page">{esc(label)}</span>')
         else:
             parts.append(f'<a href="{href}">{esc(label)}</a><span class="sep" aria-hidden="true">/</span>')
-    return f'<nav class="breadcrumbs" aria-label="Breadcrumb">{"".join(parts)}</nav>'
+    return f'<nav class="breadcrumbs" aria-label="מיקום באתר">{"".join(parts)}</nav>'
 
 
 def render_contact_paragraph(site, lead=""):
@@ -216,17 +216,16 @@ def render_contact_paragraph(site, lead=""):
     issues = contact.get("issuesUrl", "").strip()
     bits = []
     if email:
-        bits.append(f'by email at <a href="mailto:{esc(email)}">{esc(email)}</a>')
+        bits.append(f'במייל <a href="mailto:{esc(email)}">{esc(email)}</a>')
     if issues:
         bits.append(
-            f'through the site\'s <a href="{esc(issues)}" target="_blank" rel="noopener">public issue tracker on GitHub</a> '
-            f'(a free GitHub account is needed, and what you post there is public, so please do not include personal details)'
+            f'דרך <a href="{esc(issues)}" target="_blank" rel="noopener">מערכת הפניות הציבורית שלנו ב-GitHub</a> '
+            f'(נדרש חשבון GitHub חינמי, ומה שנכתב שם גלוי לכולם, לכן אין לכלול פרטים אישיים)'
         )
     if not bits:
         return ""
-    joined = " or ".join(bits)
-    note = "" if email else " PRIME.FINDS does not currently publish an email address or phone number; this page will be updated if that changes."
-    return f"<p>{lead}You can reach PRIME.FINDS {joined}.{note}</p>"
+    joined = " או ".join(bits)
+    return f"<p>{lead}אפשר ליצור איתנו קשר {joined}.</p>"
 
 
 def product_in_category(product, category_slug):
@@ -243,8 +242,9 @@ def product_in_category(product, category_slug):
 SEARCH_ICON = '<svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="9" cy="9" r="6.5"/><path d="M18 18l-3.8-3.8"/></svg>'
 CLOSE_ICON = '<svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15"/></svg>'
 INSTAGRAM_ICON = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>'
-CHEVRON_ICON = '<svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg>'
-CHEVRON_LEFT_ICON = '<svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M13 5l-6 5 6 5"/></svg>'
+# The site is right-to-left, so "forward" points left.
+CHEVRON_ICON = '<svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M13 5l-6 5 6 5"/></svg>'
+CHEVRON_LEFT_ICON = '<svg viewBox="0 0 20 20" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 5l6 5-6 5"/></svg>'
 A11Y_ICON = '<svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="8"/><circle cx="10" cy="5.9" r="1.1" fill="currentColor" stroke="none"/><path d="M5.6 8.3c3 .9 5.8.9 8.8 0M10 8.7v3.3M10 12l-2.1 3.5M10 12l2.1 3.5"/></svg>'
 
 # Applies the visitor's saved accessibility choices (text size / high contrast /
@@ -262,10 +262,10 @@ A11Y_HEAD = (
 # Always-visible header links. The first one stays visible on phones as a pill; the
 # rest show from tablet width up (the full menu stays behind "Index").
 HEADER_NAV = [
-    ("guides", "Gift Guides", "/guides/"),
-    ("under-25", "Under $25", "/category/under-25/"),
-    ("categories", "Categories", "/#categories"),
-    ("videos", "Videos", "/v/"),
+    ("guides", "מדריכי מתנות", "/guides/"),
+    ("under-25", "עד 25 דולר", "/category/under-25/"),
+    ("categories", "קטגוריות", "/#categories"),
+    ("videos", "סרטונים", "/v/"),
 ]
 
 
@@ -276,21 +276,19 @@ def render_header(site, active=None):
         for key, label, href in HEADER_NAV
     )
     return f"""
-<a class="skip-link" href="#main-content">Skip to main content</a>
+<a class="skip-link" href="#main-content">דילוג לתוכן הראשי</a>
 <header class="site-header">
   <div class="container site-header__inner">
-    <a class="brand-logo" href="/" aria-label="{esc(site['siteName'])} home">
-      <img src="/assets/logo/wordmark.png" alt="{esc(site['siteName'])}" width="1075" height="580" />
-    </a>
-    <nav class="header-nav" aria-label="Main">
+    <a class="brand-logo" href="/" aria-label="{esc(site['siteName'])}, דף הבית"><span class="brand-wordmark">{esc(site['siteName'])}</span></a>
+    <nav class="header-nav" aria-label="ראשי">
       {header_links}
     </nav>
     <div class="header-actions">
-      <button class="icon-btn" type="button" data-search-open aria-haspopup="dialog" aria-label="Search products">{SEARCH_ICON}</button>
-      <button class="icon-btn" type="button" data-a11y-toggle aria-haspopup="dialog" aria-expanded="false" aria-controls="a11y-panel" aria-label="Accessibility options">{A11Y_ICON}</button>
-      <button class="index-trigger" type="button" data-index-toggle aria-expanded="false" aria-haspopup="dialog" aria-controls="site-index" aria-label="Site index">
+      <button class="icon-btn" type="button" data-search-open aria-haspopup="dialog" aria-label="חיפוש מוצרים">{SEARCH_ICON}</button>
+      <button class="icon-btn" type="button" data-a11y-toggle aria-haspopup="dialog" aria-expanded="false" aria-controls="a11y-panel" aria-label="אפשרויות נגישות">{A11Y_ICON}</button>
+      <button class="index-trigger" type="button" data-index-toggle aria-expanded="false" aria-haspopup="dialog" aria-controls="site-index" aria-label="תפריט האתר">
         <span class="index-trigger__glyph" aria-hidden="true"><span></span><span></span></span>
-        <span class="index-trigger__label">Index</span>
+        <span class="index-trigger__label">תפריט</span>
       </button>
     </div>
   </div>
@@ -313,21 +311,21 @@ def render_site_index(site, categories, counts):
         f'<li><a href="{l["href"]}">{esc(l["label"])}</a></li>' for l in site["footerLegalLinks"]
     )
     return f"""
-<div class="site-index" id="site-index" data-index-panel role="dialog" aria-modal="true" aria-label="Site index">
+<div class="site-index" id="site-index" data-index-panel role="dialog" aria-modal="true" aria-label="תפריט האתר">
   <div class="site-index__top">
-    <a class="brand-logo" href="/" aria-label="{esc(site['siteName'])} home"><img src="/assets/logo/wordmark.png" alt="{esc(site['siteName'])}" width="1075" height="580" /></a>
-    <button class="icon-btn" type="button" data-index-close aria-label="Close site index">{CLOSE_ICON}</button>
+    <a class="brand-logo" href="/" aria-label="{esc(site['siteName'])}, דף הבית"><span class="brand-wordmark">{esc(site['siteName'])}</span></a>
+    <button class="icon-btn" type="button" data-index-close aria-label="סגירת התפריט">{CLOSE_ICON}</button>
   </div>
   <div class="site-index__body">
-    <nav aria-label="Pages"><ul class="site-index__nav-list">{nav_links}</ul></nav>
-    <nav aria-label="Categories">
-      <span class="eyebrow site-index__cats-label">The Catalog</span>
+    <nav aria-label="עמודים"><ul class="site-index__nav-list">{nav_links}</ul></nav>
+    <nav aria-label="קטגוריות">
+      <span class="eyebrow site-index__cats-label">הקטלוג</span>
       <div class="site-index__cats">{cat_items}</div>
     </nav>
   </div>
   <div class="site-index__footer">
     <p>{esc(site['tagline'])}</p>
-    <nav aria-label="Legal and accessibility"><ul class="site-index__legal">{legal_items}</ul></nav>
+    <nav aria-label="מידע משפטי ונגישות"><ul class="site-index__legal">{legal_items}</ul></nav>
   </div>
 </div>
 """
@@ -360,7 +358,7 @@ def render_brand_intro():
     # controls (skip, and a route to the accessibility statement) are real, focusable
     # elements outside the hidden art, so the entrance can never be a barrier.
     return f"""
-<div class="brand-intro" data-brand-intro role="group" aria-label="PRIME.FINDS introduction">
+<div class="brand-intro" data-brand-intro role="group" aria-label="פתיח">
   <canvas class="brand-intro__canvas" aria-hidden="true"></canvas>
   <div class="brand-intro__still" aria-hidden="true"><img src="/assets/logo/wordmark.png" alt="" width="1075" height="580" /></div>
   <div class="brand-intro__css" aria-hidden="true">
@@ -372,8 +370,8 @@ def render_brand_intro():
     <div class="brand-intro__rule"></div>
   </div>
   <div class="brand-intro__tools">
-    <button type="button" class="brand-intro__skip" data-intro-skip>Skip intro</button>
-    <a class="brand-intro__link" href="/accessibility.html">Accessibility</a>
+    <button type="button" class="brand-intro__skip" data-intro-skip>דילוג על הפתיח</button>
+    <a class="brand-intro__link" href="/accessibility.html">נגישות</a>
   </div>
 </div>
 """
@@ -383,11 +381,11 @@ def render_search_overlay():
     return f"""
 <div class="search-overlay" data-search-overlay role="dialog" aria-modal="true" aria-labelledby="search-overlay-title">
   <div class="search-overlay__panel">
-    <h2 class="sr-only" id="search-overlay-title">Search products</h2>
+    <h2 class="sr-only" id="search-overlay-title">חיפוש מוצרים</h2>
     <div class="search-overlay__input-row">
       {SEARCH_ICON}
-      <input class="search-overlay__input" type="search" placeholder="Search products, categories, tags…" data-search-input aria-label="Search products" autocomplete="off" enterkeyhint="search" spellcheck="false" />
-      <button class="icon-btn" type="button" data-search-close aria-label="Close search">{CLOSE_ICON}</button>
+      <input class="search-overlay__input" type="search" placeholder="חיפוש מוצרים וקטגוריות…" data-search-input aria-label="חיפוש מוצרים" autocomplete="off" enterkeyhint="search" spellcheck="false" />
+      <button class="icon-btn" type="button" data-search-close aria-label="סגירת החיפוש">{CLOSE_ICON}</button>
     </div>
     <p class="sr-only" role="status" aria-live="polite" data-search-status></p>
     <div data-search-results></div>
@@ -404,38 +402,38 @@ def render_a11y_panel():
     return f"""
 <div class="a11y-panel" id="a11y-panel" data-a11y-panel role="dialog" aria-modal="true" aria-labelledby="a11y-panel-title" tabindex="-1">
   <div class="a11y-panel__head">
-    <h2 class="a11y-panel__title" id="a11y-panel-title">Accessibility options</h2>
-    <button class="icon-btn" type="button" data-a11y-close aria-label="Close accessibility options">{CLOSE_ICON}</button>
+    <h2 class="a11y-panel__title" id="a11y-panel-title">אפשרויות נגישות</h2>
+    <button class="icon-btn" type="button" data-a11y-close aria-label="סגירת אפשרויות הנגישות">{CLOSE_ICON}</button>
   </div>
   <div class="a11y-panel__body">
     <div class="a11y-row" role="group" aria-labelledby="a11y-text-label">
       <div class="a11y-row__text">
-        <span class="a11y-row__label" id="a11y-text-label">Text size</span>
-        <span class="a11y-row__hint">Currently <span data-a11y-text-value>100%</span></span>
+        <span class="a11y-row__label" id="a11y-text-label">גודל טקסט</span>
+        <span class="a11y-row__hint">כרגע <span data-a11y-text-value>100%</span></span>
       </div>
       <div class="a11y-stepper">
-        <button type="button" class="a11y-btn" data-a11y-text-down>Smaller text</button>
-        <button type="button" class="a11y-btn" data-a11y-text-up>Larger text</button>
+        <button type="button" class="a11y-btn" data-a11y-text-down>הקטנת טקסט</button>
+        <button type="button" class="a11y-btn" data-a11y-text-up>הגדלת טקסט</button>
       </div>
     </div>
     <div class="a11y-row">
       <div class="a11y-row__text">
-        <span class="a11y-row__label" id="a11y-contrast-label">High contrast</span>
-        <span class="a11y-row__hint">Stronger text, borders and focus outlines.</span>
+        <span class="a11y-row__label" id="a11y-contrast-label">ניגודיות גבוהה</span>
+        <span class="a11y-row__hint">טקסט, גבולות ומסגרות מיקוד חזקים יותר.</span>
       </div>
       <button type="button" class="a11y-switch" role="switch" aria-checked="false" aria-labelledby="a11y-contrast-label" data-a11y-contrast><span class="a11y-switch__knob" aria-hidden="true"></span></button>
     </div>
     <div class="a11y-row">
       <div class="a11y-row__text">
-        <span class="a11y-row__label" id="a11y-motion-label">Reduce motion</span>
-        <span class="a11y-row__hint" data-a11y-motion-hint>Calmer transitions and a simplified intro.</span>
+        <span class="a11y-row__label" id="a11y-motion-label">הפחתת תנועה</span>
+        <span class="a11y-row__hint" data-a11y-motion-hint>מעברים רגועים יותר.</span>
       </div>
       <button type="button" class="a11y-switch" role="switch" aria-checked="false" aria-labelledby="a11y-motion-label" data-a11y-motion><span class="a11y-switch__knob" aria-hidden="true"></span></button>
     </div>
   </div>
   <div class="a11y-panel__foot">
-    <button type="button" class="btn btn--secondary btn--sm" data-a11y-reset>Reset all</button>
-    <a class="a11y-panel__link" href="/accessibility.html">Accessibility statement</a>
+    <button type="button" class="btn btn--secondary btn--sm" data-a11y-reset>איפוס הכול</button>
+    <a class="a11y-panel__link" href="/accessibility.html">הצהרת נגישות</a>
   </div>
   <p class="sr-only" role="status" aria-live="polite" data-a11y-status></p>
 </div>
@@ -453,7 +451,7 @@ def render_footer(site):
     # (and only explained itself in a hover tooltip), so it is left out of the
     # accessibility tree entirely rather than presented as a disabled control.
     social_html = (
-        f'<a href="{esc(instagram)}" target="_blank" rel="noopener" aria-label="PRIME.FINDS on Instagram (opens in a new tab)">{INSTAGRAM_ICON}</a>'
+        f'<a href="{esc(instagram)}" target="_blank" rel="noopener" aria-label="{esc(site['siteName'])} באינסטגרם (נפתח בלשונית חדשה)">{INSTAGRAM_ICON}</a>'
         if instagram
         else f'<span aria-hidden="true">{INSTAGRAM_ICON}</span>'
     )
@@ -463,25 +461,25 @@ def render_footer(site):
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a class="brand-logo" href="/"><img src="/assets/logo/wordmark.png" alt="{esc(site['siteName'])} home" width="1075" height="580" /></a>
+        <a class="brand-logo" href="/"><span class="brand-wordmark">{esc(site['siteName'])}</span></a>
         <p class="footer-brand__tagline">{esc(site['tagline'])}</p>
       </div>
       <div>
-        <h2 class="footer-heading">Explore</h2>
+        <h2 class="footer-heading">ניווט</h2>
         <ul class="footer-links">{nav_links}</ul>
       </div>
       <div>
-        <h2 class="footer-heading">Categories</h2>
+        <h2 class="footer-heading">קטגוריות</h2>
         <ul class="footer-links">{categories_links}</ul>
       </div>
       <div>
-        <h2 class="footer-heading">Legal &amp; help</h2>
+        <h2 class="footer-heading">מידע ועזרה</h2>
         <ul class="footer-links">{legal_links}</ul>
       </div>
     </div>
     {render_affiliate_note(site, variant="footer")}
     <div class="footer-bottom">
-      <span>&copy; {year} {esc(site['siteName'])}. All rights reserved.</span>
+      <span>&copy; {year} {esc(site['siteName'])}. כל הזכויות שמורות.</span>
       <div class="footer-social">{social_html}</div>
     </div>
   </div>
@@ -495,14 +493,14 @@ def render_affiliate_note(site, variant="inline"):
     extra = site.get("affiliateStatement", "").strip()
     extra_html = f" {esc(extra)}" if extra else ""
     text = (
-        "Many links on PRIME.FINDS, including the &ldquo;View at Amazon&rdquo; buttons, are affiliate links. "
-        "If you buy through them, PRIME.FINDS may earn a commission from qualifying purchases, at no extra cost to you."
+        "הרבה מהקישורים באתר, כולל הכפתורים שמובילים לאמזון, הם קישורי שותפים. "
+        "כשותפי אמזון, אנחנו מרוויחים עמלה מרכישות מזכות, בלי עלות נוספת עבורכם. האתר אינו קשור לאמזון ואינו מטעמה."
         f"{extra_html}"
     )
-    link = '<a href="/affiliate-disclosure.html">Read the full affiliate disclosure</a>.'
+    link = '<a href="/affiliate-disclosure.html">לגילוי הנאות המלא</a>.'
     if variant == "footer":
-        return f'<div class="footer-disclosure"><h2 class="footer-heading">Affiliate disclosure</h2><p>{text} {link}</p></div>'
-    return f'<div class="affiliate-note" role="note" aria-label="Affiliate disclosure"><p>{text} {link}</p></div>'
+        return f'<div class="footer-disclosure"><h2 class="footer-heading">גילוי נאות</h2><p>{text} {link}</p></div>'
+    return f'<div class="affiliate-note" role="note" aria-label="גילוי נאות"><p>{text} {link}</p></div>'
 
 
 # --------------------------------------------------------------------------
@@ -513,7 +511,7 @@ def product_index_label(product):
     """A specimen-catalog number derived from the product's own stable id
     (e.g. "prd-0097" -> "No. 097") -- reused data, never invented."""
     num = product["id"].split("-")[-1]
-    return f"No. {num}"
+    return f"מס' {num}"
 
 
 _CARD_SEQ = 0
@@ -558,7 +556,7 @@ def render_product_card(product, reveal=True, reveal_delay=0, morph=False, eager
     </div>
   </a>
   <div class="product-card__cta">
-    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="{product['slug']}" aria-label="View at Amazon: {esc(product['name'])} (opens in a new tab)">View at Amazon {CHEVRON_ICON}</a>
+    <a class="btn--ghost btn--icon-trail" data-affiliate-link data-product-slug="{product['slug']}" aria-label="לצפייה באמזון: {esc(product['name'])} (נפתח בלשונית חדשה)">לצפייה באמזון {CHEVRON_ICON}</a>
   </div>
 </article>
 """
@@ -584,7 +582,7 @@ def render_category_tile(category, count):
   <div class="category-tile__media">{inline_category_svg(category['slug'])}</div>
   <div class="category-tile__body">
     <h3 class="category-tile__name" style="view-transition-name: category-name-{category['slug']}">{esc(category['name'])}</h3>
-    <span class="category-tile__count">{count:02d} {'find' if count == 1 else 'finds'}</span>
+    <span class="category-tile__count">{count} מוצרים</span>
   </div>
 </a>
 """
@@ -600,7 +598,7 @@ def render_collection_tile(collection):
 <a class="collection-tile" href="/collection/{collection['slug']}/" data-reveal>
   <span class="collection-tile__thumbs" aria-hidden="true">{thumbs}</span>
   <span class="collection-tile__body">
-    <span class="collection-tile__count">{n:02d} finds</span>
+    <span class="collection-tile__count">{n} מוצרים</span>
     <h3 class="collection-tile__name">{esc(collection['name'])}</h3>
     <span class="collection-tile__blurb">{esc(collection['blurb'])}</span>
   </span>
@@ -624,7 +622,7 @@ def base_page(site, *, title, description, canonical_path, og_image=None, body_h
     )
 
     return f"""<!doctype html>
-<html lang="{lang or site.get('locale', 'en')}">
+<html lang="{lang or site.get('locale', 'he')}" dir="rtl">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -643,6 +641,7 @@ def base_page(site, *, title, description, canonical_path, og_image=None, body_h
   <meta name="theme-color" content="#14213d" />
 
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="he_IL" />
   <meta property="og:site_name" content="{esc(site['siteName'])}" />
   <meta property="og:title" content="{esc(title)}" />
   <meta property="og:description" content="{esc(description)}" />
@@ -656,7 +655,7 @@ def base_page(site, *, title, description, canonical_path, og_image=None, body_h
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700;900&family=Heebo:wght@400;500;600;700&display=swap" />
   {css_links}
   {extra_head}
 </head>
@@ -681,15 +680,15 @@ def base_page(site, *, title, description, canonical_path, og_image=None, body_h
 # Homepage
 # --------------------------------------------------------------------------
 
-GIFT_BUDGETS = [("Under $25", 25), ("Under $50", 50), ("Under $100", 100)]
+GIFT_BUDGETS = [("עד 25 דולר", 25), ("עד 50 דולר", 50), ("עד 100 דולר", 100)]
 GIFT_INTERESTS = [
-    ("For the cook", "kitchen"), ("For kids", "kids"), ("For pet lovers", "pets"),
-    ("For gamers", "gaming"), ("For tech lovers", "tech"), ("For the outdoorsy", "outdoors"),
-    ("For travelers", "travel"), ("For the home", "home"),
+    ("לאוהבי בישול", "kitchen"), ("לילדים", "kids"), ("לבעלי חיות", "pets"),
+    ("לגיימרים", "gaming"), ("לחובבי טכנולוגיה", "tech"), ("לאוהבי טבע וספורט", "outdoors"),
+    ("למטיילים", "travel"), ("לבית", "home"),
 ]
 
 
-def render_gift_guide(heading_tag="h2", title="Find a gift fast"):
+def render_gift_guide(heading_tag="h2", title="מוצאים מתנה מהר"):
     """Budget + interest shortcuts. Budgets open the Gifts grid pre-filtered by
     max price (category.js reads ?max=); interests open the matching category."""
     budgets = "".join(
@@ -698,18 +697,18 @@ def render_gift_guide(heading_tag="h2", title="Find a gift fast"):
     )
     interests = "".join(
         f'<a class="gift-guide__interest" href="/category/{slug}/">'
-        f'<span>{esc(label)}</span><span class="gift-guide__arrow" aria-hidden="true">&rarr;</span></a>'
+        f'<span>{esc(label)}</span><span class="gift-guide__arrow" aria-hidden="true">&larr;</span></a>'
         for label, slug in GIFT_INTERESTS
     )
     return f"""
 <div class="gift-guide">
   <{heading_tag} class="gift-guide__title">{esc(title)}</{heading_tag}>
   <div class="gift-guide__row">
-    <span class="gift-guide__label">By budget</span>
+    <span class="gift-guide__label">לפי תקציב</span>
     <div class="gift-guide__budgets">{budgets}</div>
   </div>
   <div class="gift-guide__row">
-    <span class="gift-guide__label">By interest</span>
+    <span class="gift-guide__label">לפי תחום עניין</span>
     <div class="gift-guide__interests">{interests}</div>
   </div>
 </div>
@@ -731,17 +730,17 @@ def render_video_strip(videos):
 <section class="section" id="from-the-videos">
   <div class="container section-head--split" data-reveal="fade">
     <div>
-      <span class="eyebrow">From the videos</span>
+      <span class="eyebrow">מהסרטונים</span>
       <h2 class="section-title">{esc(v['title'])}</h2>
-      <p class="section-desc">Saw something in our latest video? Every product is here under the same number. <a href="/v/">All videos</a></p>
+      <p class="section-desc">ראיתם משהו בסרטון האחרון? כל מוצר מחכה כאן תחת אותו מספר. <a href="/v/">לכל הסרטונים</a></p>
     </div>
     <div class="rail-controls">
-      <button class="icon-btn" type="button" data-rail-prev="video-rail" aria-label="Scroll video products back">{CHEVRON_LEFT_ICON}</button>
-      <button class="icon-btn" type="button" data-rail-next="video-rail" aria-label="Scroll video products forward">{CHEVRON_ICON}</button>
+      <button class="icon-btn" type="button" data-rail-prev="video-rail" aria-label="גלילה אחורה">{CHEVRON_LEFT_ICON}</button>
+      <button class="icon-btn" type="button" data-rail-next="video-rail" aria-label="גלילה קדימה">{CHEVRON_ICON}</button>
     </div>
   </div>
   <div class="container">
-    <div class="rail" id="video-rail" data-rail role="region" aria-label="Products from the latest video">{items}</div>
+    <div class="rail" id="video-rail" data-rail role="region" aria-label="מוצרים מהסרטון האחרון">{items}</div>
   </div>
 </section>
 """
@@ -756,11 +755,11 @@ def render_guides_strip(guides):
 <section class="section container" id="gift-guides">
   <div class="section-head section-head--split" data-reveal="fade">
     <div>
-      <span class="eyebrow">Holiday 2026</span>
-      <h2 class="section-title">Gift guides for everyone on your list</h2>
-      <p class="section-desc">Short, hand-picked lists by person and budget. Start here if you're shopping for someone else.</p>
+      <span class="eyebrow">רעיונות למתנה</span>
+      <h2 class="section-title">מדריכי מתנות לכל אחד</h2>
+      <p class="section-desc">רשימות קצרות ונבחרות לפי אדם ותקציב. כדאי להתחיל כאן אם קונים למישהו אחר.</p>
     </div>
-    <a class="btn btn--secondary" href="/guides/">All {len(guides)} guides {CHEVRON_ICON}</a>
+    <a class="btn btn--secondary" href="/guides/">כל {len(guides)} המדריכים {CHEVRON_ICON}</a>
   </div>
   <div class="collection-grid">{tiles}</div>
 </section>
@@ -781,12 +780,12 @@ def render_homepage(site, categories, products, counts, collections=(), videos=(
 <section class="hero">
   <div class="container hero__grid">
     <div class="hero__intro">
-      <h1 class="hero__title hero-enter hero-enter--1">DISCOVER WHAT'S<br/><span class="accent">worth</span> buying.</h1>
-      <p class="hero__sub hero-enter hero-enter--2">No endless scrolling through search results. PRIME.FINDS hand-picks the gadgets, gifts and small good ideas actually worth your money, with real ratings and checked prices.</p>
+      <h1 class="hero__title hero-enter hero-enter--1"><span class="accent">שודדים</span> רק את<br/>מה ששווה לקנות.</h1>
+      <p class="hero__sub hero-enter hero-enter--2">בלי לגלול שעות בתוצאות חיפוש. אנחנו בוחרים ידנית את הגאדג׳טים, המתנות והרעיונות הקטנים והטובים מאמזון שבאמת שווים את הכסף, עם דירוגים אמיתיים ומחירים שנבדקו.</p>
       <div class="hero__ctas hero-enter hero-enter--3">
-        <a class="btn btn--primary" href="{'/guides/' if guides else '#categories'}">{'Holiday Gift Guides' if guides else 'Enter the Catalog'} {CHEVRON_ICON}</a>
-        <a class="btn btn--secondary" href="#categories">Browse the catalog</a>
-        <span class="hero__ctas-note">{len(products):02d} finds, curated</span>
+        <a class="btn btn--primary" href="{'/guides/' if guides else '#categories'}">{'למדריכי המתנות' if guides else 'לקטלוג'} {CHEVRON_ICON}</a>
+        <a class="btn btn--secondary" href="#categories">לכל הקטלוג</a>
+        <span class="hero__ctas-note">{len(products):,} מוצרים נבחרים</span>
       </div>
     </div>
     <div class="hero__collage">{collage_html}</div>
@@ -800,16 +799,16 @@ def render_homepage(site, categories, products, counts, collections=(), videos=(
 <section class="section" id="trending">
   <div class="container section-head--split" data-reveal="fade">
     <div>
-      <span class="eyebrow">Trending Now</span>
-      <h2 class="section-title">Popular right now</h2>
+      <span class="eyebrow">חם עכשיו</span>
+      <h2 class="section-title">הכי פופולריים כרגע</h2>
     </div>
     <div class="rail-controls">
-      <button class="icon-btn" type="button" data-rail-prev="trending-rail" aria-label="Scroll trending back">{CHEVRON_LEFT_ICON}</button>
-      <button class="icon-btn" type="button" data-rail-next="trending-rail" aria-label="Scroll trending forward">{CHEVRON_ICON}</button>
+      <button class="icon-btn" type="button" data-rail-prev="trending-rail" aria-label="גלילה אחורה">{CHEVRON_LEFT_ICON}</button>
+      <button class="icon-btn" type="button" data-rail-next="trending-rail" aria-label="גלילה קדימה">{CHEVRON_ICON}</button>
     </div>
   </div>
   <div class="container">
-    <div class="rail" id="trending-rail" data-rail role="region" aria-label="Trending products">
+    <div class="rail" id="trending-rail" data-rail role="region" aria-label="מוצרים חמים">
       {"".join(f'<div class="rail__item">{card}</div>' for card in [render_product_card(p, reveal=False) for p in trending])}
     </div>
   </div>
@@ -821,9 +820,9 @@ def render_homepage(site, categories, products, counts, collections=(), videos=(
 <section class="section container" id="categories">
   <div class="section-head" data-reveal="fade">
     <div>
-      <span class="eyebrow">Browse</span>
-      <h2 class="section-title">Shop by category</h2>
-      <p class="section-desc">{len(categories)} ways into the catalog, with more added as we curate further.</p>
+      <span class="eyebrow">עיון</span>
+      <h2 class="section-title">קונים לפי קטגוריה</h2>
+      <p class="section-desc">{len(categories)} דרכים להיכנס לקטלוג.</p>
     </div>
   </div>
   <div class="category-bento">{category_tiles}</div>
@@ -836,9 +835,9 @@ def render_homepage(site, categories, products, counts, collections=(), videos=(
 <section class="section container" id="collections">
   <div class="section-head" data-reveal="fade">
     <div>
-      <span class="eyebrow">Collections</span>
-      <h2 class="section-title">Hand-picked, by mood</h2>
-      <p class="section-desc">Not sure where to start? Follow a theme.</p>
+      <span class="eyebrow">אוספים</span>
+      <h2 class="section-title">נבחרים לפי נושא</h2>
+      <p class="section-desc">לא בטוחים מאיפה להתחיל? בחרו נושא.</p>
     </div>
   </div>
   <div class="collection-grid">{tiles}</div>
@@ -850,8 +849,8 @@ def render_homepage(site, categories, products, counts, collections=(), videos=(
 <section class="section container" id="latest">
   <div class="section-head" data-reveal="fade">
     <div>
-      <span class="eyebrow">Latest Finds</span>
-      <h2 class="section-title">Just added to the catalog</h2>
+      <span class="eyebrow">חדש באתר</span>
+      <h2 class="section-title">הצטרפו עכשיו לקטלוג</h2>
     </div>
   </div>
   <div class="grid-products grid-products--feature">{latest_cards}</div>
@@ -874,8 +873,8 @@ def render_homepage(site, categories, products, counts, collections=(), videos=(
 
     return base_page(
         site,
-        title=f"{site['siteName']} — Amazon Finds & Gift Ideas Worth Buying (2026)",
-        description=f"Hand-picked Amazon finds and gift ideas: {len(products):,} products with real ratings and checked prices, plus 2026 gift guides for teens, him, her, kids, gamers and more.",
+        title=f"{site['siteName']} | מוצרים שווים מאמזון ורעיונות למתנה",
+        description=f"{len(products):,} מוצרים נבחרים מאמזון עם דירוגים אמיתיים ומחירים שנבדקו, ומדריכי מתנות לכל אחד ולכל תקציב.",
         canonical_path="/",
         body_html=body,
         active_nav="home",
@@ -893,17 +892,17 @@ PAGE_SIZE = 24
 
 # <title> per category: the phrase people actually search, not just the label.
 CATEGORY_TITLES = {
-    "tech": "Best Tech Gadgets on Amazon (2026)",
-    "home": "Best Home Finds on Amazon (2026)",
-    "kitchen": "Best Kitchen Gadgets on Amazon (2026)",
-    "gaming": "Best Gaming Gear & Board Games (2026)",
-    "kids": "Best Toys & Kids' Gifts on Amazon (2026)",
-    "outdoors": "Best Outdoor & Fitness Gear on Amazon (2026)",
-    "pets": "Best Pet Products on Amazon (2026)",
-    "travel": "Best Travel Gear & Car Accessories (2026)",
-    "desk-setup": "Best Desk Setup Accessories (2026)",
-    "gifts": "Gift Ideas on Amazon for Everyone (2026)",
-    "under-25": "Best Amazon Finds Under $25 (2026)",
+    "tech": "גאדג׳טים וטכנולוגיה מאמזון",
+    "home": "מוצרים לבית מאמזון",
+    "kitchen": "גאדג׳טים למטבח מאמזון",
+    "gaming": "ציוד גיימינג ומשחקי קופסה מאמזון",
+    "kids": "צעצועים ומתנות לילדים מאמזון",
+    "outdoors": "ציוד לטיולים ולספורט מאמזון",
+    "pets": "מוצרים לכלבים וחתולים מאמזון",
+    "travel": "ציוד לנסיעות ולרכב מאמזון",
+    "desk-setup": "אביזרים לשולחן העבודה מאמזון",
+    "gifts": "רעיונות למתנה מאמזון",
+    "under-25": "מוצרים מאמזון עד 25 דולר",
 }
 
 
@@ -923,8 +922,8 @@ def render_category_page(site, category, all_categories, category_products):
     empty_state = """
 <div class="state-panel">
   <svg class="state-panel__icon" viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M4 7l1-3h14l1 3M4 7h16M4 7l1 13h14l1-13"/></svg>
-  <p class="state-panel__title">Nothing published here yet</p>
-  <p>New finds in this category are on the way — check back soon.</p>
+  <p class="state-panel__title">עדיין אין כאן מוצרים</p>
+  <p>מוצרים חדשים בדרך, כדאי לחזור בקרוב.</p>
 </div>
 """
 
@@ -942,7 +941,7 @@ def render_category_page(site, category, all_categories, category_products):
         )
         subcategory_group = (
             '<div class="filter-group" role="group" aria-labelledby="filter-type-title">'
-            '<h2 class="filter-group__title" id="filter-type-title">Type</h2>'
+            '<h2 class="filter-group__title" id="filter-type-title">סוג</h2>'
             f'<div class="filter-chips">{chips}</div></div>'
         )
 
@@ -950,8 +949,8 @@ def render_category_page(site, category, all_categories, category_products):
 <section class="page-hero category-hero">
   <div class="category-hero__watermark"><img src="/assets/images/categories/{category['slug']}.svg" alt="" /></div>
   <div class="container category-hero__content">
-    {render_breadcrumbs([("Home", "/"), ("Categories", "/#categories"), (category['name'], None)])}
-    <span class="eyebrow">Category</span>
+    {render_breadcrumbs([("דף הבית", "/"), ("קטגוריות", "/#categories"), (category['name'], None)])}
+    <span class="eyebrow">קטגוריה</span>
     <h1 class="section-title" style="font-size: var(--fs-display-xl); view-transition-name: category-name-{category['slug']};">{esc(category['name'])}</h1>
     <p class="category-hero__desc">{esc(category['description'])}</p>
   </div>
@@ -959,51 +958,51 @@ def render_category_page(site, category, all_categories, category_products):
 {f'<section class="container">{gift_block}</section>' if gift_block else ''}
 <section class="section container">
   <div class="category-layout" data-category-app data-category-slug="{category['slug']}">
-    <div class="category-filters" role="group" aria-label="Filter products">
+    <div class="category-filters" role="group" aria-label="סינון מוצרים">
       <div class="input-field" style="margin-bottom: var(--space-lg);">
         {SEARCH_ICON}
-        <input type="search" placeholder="Search in {esc(category['name'])}…" data-category-search aria-label="Search in {esc(category['name'])}" autocomplete="off" enterkeyhint="search" spellcheck="false" />
+        <input type="search" placeholder="חיפוש ב{esc(category['name'])}…" data-category-search aria-label="חיפוש ב{esc(category['name'])}" autocomplete="off" enterkeyhint="search" spellcheck="false" />
       </div>
       <details class="filters-more" open data-filters-more>
-      <summary class="filters-more__toggle">Filters</summary>
+      <summary class="filters-more__toggle">סינון</summary>
       {subcategory_group}
       <div class="filter-group" role="group" aria-labelledby="filter-rating-title">
-        <h2 class="filter-group__title" id="filter-rating-title">Rating</h2>
+        <h2 class="filter-group__title" id="filter-rating-title">דירוג</h2>
         <div class="filter-chips">
-          <button type="button" class="chip" data-filter-rating="4.5" aria-pressed="false">4.5+<span class="sr-only"> stars and up</span></button>
-          <button type="button" class="chip" data-filter-rating="4" aria-pressed="false">4.0+<span class="sr-only"> stars and up</span></button>
-          <button type="button" class="chip" data-filter-rating="3.5" aria-pressed="false">3.5+<span class="sr-only"> stars and up</span></button>
+          <button type="button" class="chip" data-filter-rating="4.5" aria-pressed="false">4.5+<span class="sr-only"> כוכבים ומעלה</span></button>
+          <button type="button" class="chip" data-filter-rating="4" aria-pressed="false">4.0+<span class="sr-only"> כוכבים ומעלה</span></button>
+          <button type="button" class="chip" data-filter-rating="3.5" aria-pressed="false">3.5+<span class="sr-only"> כוכבים ומעלה</span></button>
         </div>
       </div>
       <div class="filter-group" role="group" aria-labelledby="filter-price-title">
-        <h2 class="filter-group__title" id="filter-price-title">Price</h2>
+        <h2 class="filter-group__title" id="filter-price-title">מחיר (דולר)</h2>
         <div class="filter-price">
-          <div class="input-field"><input type="number" min="0" step="any" inputmode="decimal" autocomplete="off" placeholder="Min" data-filter-min-price aria-label="Minimum price in US dollars" /></div>
-          <div class="input-field"><input type="number" min="0" step="any" inputmode="decimal" autocomplete="off" placeholder="Max" data-filter-max-price aria-label="Maximum price in US dollars" /></div>
+          <div class="input-field"><input type="number" min="0" step="any" inputmode="decimal" autocomplete="off" placeholder="מ-" data-filter-min-price aria-label="מחיר מינימלי בדולרים" /></div>
+          <div class="input-field"><input type="number" min="0" step="any" inputmode="decimal" autocomplete="off" placeholder="עד" data-filter-max-price aria-label="מחיר מקסימלי בדולרים" /></div>
         </div>
       </div>
       <div class="filter-group" role="group" aria-labelledby="filter-show-title">
-        <h2 class="filter-group__title" id="filter-show-title">Show only</h2>
-        <label class="filter-checkbox"><input type="checkbox" data-filter-featured /> Featured</label>
-        <label class="filter-checkbox"><input type="checkbox" data-filter-trending /> Trending</label>
+        <h2 class="filter-group__title" id="filter-show-title">הצגה בלבד</h2>
+        <label class="filter-checkbox"><input type="checkbox" data-filter-featured /> מומלצים</label>
+        <label class="filter-checkbox"><input type="checkbox" data-filter-trending /> חמים</label>
       </div>
-      <button type="button" class="btn btn--secondary btn--sm btn--full" data-filters-clear>Clear filters</button>
+      <button type="button" class="btn btn--secondary btn--sm btn--full" data-filters-clear>ניקוי הסינון</button>
       </details>
       <script>(function(){{var d=document.querySelector('[data-filters-more]');if(d&&matchMedia('(max-width: 900px)').matches)d.removeAttribute('open');}})();</script>
     </div>
     <div>
       <div class="toolbar">
-        <span class="toolbar__count" data-result-count role="status" aria-live="polite">{len(initial_sorted)} {'find' if len(initial_sorted) == 1 else 'finds'}</span>
+        <span class="toolbar__count" data-result-count role="status" aria-live="polite">{len(initial_sorted)} מוצרים</span>
         <div class="toolbar__controls">
           <div class="input-field select-field">
-            <select data-sort-select aria-label="Sort products">
-              <option value="popular">Most popular</option>
-              <option value="featured">Featured</option>
-              <option value="trending">Trending</option>
-              <option value="newest">Newest</option>
-              <option value="price-asc">Price: Low to High</option>
-              <option value="price-desc">Price: High to Low</option>
-              <option value="rating">Rating</option>
+            <select data-sort-select aria-label="מיון מוצרים">
+              <option value="popular">הכי פופולריים</option>
+              <option value="featured">מומלצים</option>
+              <option value="trending">חמים</option>
+              <option value="newest">החדשים ביותר</option>
+              <option value="price-asc">מחיר: מהנמוך לגבוה</option>
+              <option value="price-desc">מחיר: מהגבוה לנמוך</option>
+              <option value="rating">דירוג</option>
             </select>
           </div>
         </div>
@@ -1011,8 +1010,8 @@ def render_category_page(site, category, all_categories, category_products):
       {render_affiliate_note(site)}
       <div class="grid-products grid-products--feature" data-category-grid>{cards if cards else ''}</div>
       <div class="load-more" data-load-more-wrap{'' if len(initial_sorted) > PAGE_SIZE else ' hidden'}>
-        <p class="load-more__status" data-load-more-status>Showing {min(PAGE_SIZE, len(initial_sorted))} of {len(initial_sorted)}</p>
-        <button type="button" class="btn btn--secondary" data-load-more>Show more</button>
+        <p class="load-more__status" data-load-more-status>מוצגים {min(PAGE_SIZE, len(initial_sorted))} מתוך {len(initial_sorted)}</p>
+        <button type="button" class="btn btn--secondary" data-load-more>להציג עוד</button>
       </div>
       {'' if cards else empty_state}
     </div>
@@ -1022,7 +1021,7 @@ def render_category_page(site, category, all_categories, category_products):
 
     return base_page(
         site,
-        title=CATEGORY_TITLES.get(category["slug"], f"Best {category['name']} Finds on Amazon (2026)") + f" — {site['siteName']}",
+        title=CATEGORY_TITLES.get(category["slug"], f"{category['name']} מאמזון") + f" | {site['siteName']}",
         description=category["description"],
         canonical_path=f"/category/{category['slug']}/",
         # Social cards can't show SVG, so the category's most popular product photo is used.
@@ -1038,21 +1037,21 @@ def render_collection_page(site, collection):
     n = len(collection["items"])
     body = f"""
 <section class="page-hero container">
-  {render_breadcrumbs([("Home", "/"), ("Collections", "/#collections"), (collection['name'], None)])}
-  <span class="eyebrow">Collection</span>
+  {render_breadcrumbs([("דף הבית", "/"), ("אוספים", "/#collections"), (collection['name'], None)])}
+  <span class="eyebrow">אוסף</span>
   <h1 class="section-title" style="font-size: var(--fs-display-lg);">{esc(collection['name'])}</h1>
   <p class="category-hero__desc">{esc(collection['blurb'])}</p>
 </section>
 <section class="section container">
-  <h2 class="sr-only">Products in this collection</h2>
-  <div class="toolbar"><span class="toolbar__count" role="status">{n} finds</span></div>
+  <h2 class="sr-only">המוצרים באוסף</h2>
+  <div class="toolbar"><span class="toolbar__count" role="status">{n} מוצרים</span></div>
   {render_affiliate_note(site)}
   <div class="grid-products grid-products--feature" data-collection-grid>{cards}</div>
 </section>
 """
     return base_page(
         site,
-        title=f"{collection['name']} — {site['siteName']}",
+        title=f"{collection['name']} | {site['siteName']}",
         description=collection["blurb"],
         canonical_path=f"/collection/{collection['slug']}/",
         og_image=collection["items"][0]["image"],
@@ -1082,8 +1081,8 @@ def render_guide_tile(guide):
 <a class="collection-tile guide-tile" href="/guides/{guide['slug']}/">
   <span class="collection-tile__thumbs" aria-hidden="true">{thumbs}</span>
   <span class="collection-tile__body">
-    <span class="collection-tile__count">{len(guide['items']):02d} picks</span>
-    <h3 class="collection-tile__name">{esc(guide['title'].replace('The Best ', '').replace(' in 2026', '').replace(' (2026)', ''))}</h3>
+    <span class="collection-tile__count">{len(guide['items'])} מוצרים</span>
+    <h3 class="collection-tile__name">{esc(guide['title'])}</h3>
     <span class="collection-tile__blurb">{esc(guide['card'])}</span>
   </span>
 </a>
@@ -1102,10 +1101,10 @@ def render_guide_item(n, p, site):
     <span class="product-card__category">{esc(category_label(p['category']))}{' · ' + esc(p['subcategory']) if p.get('subcategory') else ''}</span>
     <h2 class="guide-item__name"><a href="/product/{p['slug']}/">{esc(p['name'])}</a></h2>
     <div class="guide-item__meta"><span class="product-card__price">{price}</span>{render_stars(p['rating'], p['reviewCount'])}</div>
-    <p class="guide-item__why"><strong>Why it's here:</strong> {esc(p['whyWeLikeIt'])} {esc(p['shortDescription'])}</p>
+    <p class="guide-item__why"><strong>למה זה כאן:</strong> {esc(p['whyWeLikeIt'])} {esc(p['shortDescription'])}</p>
     <div class="guide-item__cta">
-      <a class="btn btn--primary" data-affiliate-link data-product-slug="{p['slug']}" aria-label="Check price on Amazon: {esc(p['name'])} (opens in a new tab)">Check price on Amazon {CHEVRON_ICON}</a>
-      <a class="guide-item__more" href="/product/{p['slug']}/">Details</a>
+      <a class="btn btn--primary" data-affiliate-link data-product-slug="{p['slug']}" aria-label="בדיקת מחיר באמזון: {esc(p['name'])} (נפתח בלשונית חדשה)">בדיקת מחיר באמזון {CHEVRON_ICON}</a>
+      <a class="guide-item__more" href="/product/{p['slug']}/">פרטים</a>
     </div>
   </div>
 </li>
@@ -1125,29 +1124,29 @@ def render_guide_page(site, guide, guides):
     related = [by_slug[s] for s in guide.get("related", []) if s in by_slug]
     related_html = "".join(render_guide_tile(g) for g in related)
     updated = guide_updated(guide)
-    price_range = f"${min(prices):,.0f} to ${max(prices):,.0f}" if prices else ""
+    price_range = f"${min(prices):,.0f} עד ${max(prices):,.0f}" if prices else ""
     body = f"""
 <section class="page-hero container guide-hero">
-  {render_breadcrumbs([("Home", "/"), ("Gift Guides", "/guides/"), (guide['title'], None)])}
-  <span class="eyebrow">Gift Guide · Updated {esc(updated)}</span>
+  {render_breadcrumbs([("דף הבית", "/"), ("מדריכי מתנות", "/guides/"), (guide['title'], None)])}
+  <span class="eyebrow">מדריך מתנות · עודכן {esc(updated)}</span>
   <h1 class="section-title guide-hero__title">{esc(guide['title'])}</h1>
   <div class="guide-hero__intro">{intro}</div>
-  <p class="guide-hero__facts tag-mono">{len(items)} picks · {esc(price_range)} · Prices checked on Amazon US</p>
-  <nav class="video-jump" aria-label="Jump to a pick">{jump}</nav>
+  <p class="guide-hero__facts tag-mono">{len(items)} מוצרים · {esc(price_range)} · המחירים נבדקו באמזון ארה״ב</p>
+  <nav class="video-jump" aria-label="מעבר למוצר">{jump}</nav>
 </section>
 <section class="section container">
   {render_affiliate_note(site)}
   <ol class="guide-list">{picks}</ol>
 </section>
 <section class="section container guide-faq">
-  <h2 class="section-title">Questions people ask</h2>
+  <h2 class="section-title">שאלות נפוצות</h2>
   {faqs}
 </section>
 <section class="section container">
-  <span class="eyebrow">Keep browsing</span>
-  <h2 class="section-title">More gift guides</h2>
+  <span class="eyebrow">עוד רעיונות</span>
+  <h2 class="section-title">עוד מדריכי מתנות</h2>
   <div class="collection-grid">{related_html}</div>
-  <p class="guide-all"><a class="btn btn--secondary" href="/guides/">All gift guides {CHEVRON_ICON}</a></p>
+  <p class="guide-all"><a class="btn btn--secondary" href="/guides/">כל מדריכי המתנות {CHEVRON_ICON}</a></p>
 </section>
 """
     base = site["url"].rstrip("/")
@@ -1156,14 +1155,14 @@ def render_guide_page(site, guide, guides):
          "itemListElement": [{"@type": "ListItem", "position": i, "url": f"{base}/product/{p['slug']}/", "name": p["name"]}
                              for i, p in enumerate(items, 1)]},
         {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Home", "item": base + "/"},
-            {"@type": "ListItem", "position": 2, "name": "Gift Guides", "item": base + "/guides/"},
+            {"@type": "ListItem", "position": 1, "name": "דף הבית", "item": base + "/"},
+            {"@type": "ListItem", "position": 2, "name": "מדריכי מתנות", "item": base + "/guides/"},
             {"@type": "ListItem", "position": 3, "name": guide["title"], "item": f"{base}/guides/{guide['slug']}/"}]},
     ]
     if guide.get("faqs"):
         ld.append({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
             {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in guide["faqs"]]})
-    extra_head = "".join(f'<script type="application/ld+json">{json.dumps(x)}</script>' for x in ld)
+    extra_head = "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in ld)
     return base_page(
         site,
         title=guide["metaTitle"],
@@ -1181,21 +1180,21 @@ def render_guides_index(site, guides):
     tiles = "".join(render_guide_tile(g) for g in guides)
     body = f"""
 <section class="page-hero container">
-  {render_breadcrumbs([("Home", "/"), ("Gift Guides", None)])}
-  <span class="eyebrow">Holiday 2026</span>
-  <h1 class="section-title" style="font-size: var(--fs-display-lg);">Gift Guides 2026</h1>
-  <p class="category-hero__desc">Short, hand-picked lists for every person on your list and every budget. Each pick is a real Amazon listing with a strong rating, and prices are checked on Amazon US.</p>
-  {render_gift_guide(heading_tag="h2", title="Shop by budget or interest")}
+  {render_breadcrumbs([("דף הבית", "/"), ("מדריכי מתנות", None)])}
+  <span class="eyebrow">רעיונות למתנה</span>
+  <h1 class="section-title" style="font-size: var(--fs-display-lg);">מדריכי מתנות</h1>
+  <p class="category-hero__desc">רשימות קצרות ונבחרות לכל אדם ולכל תקציב. כל מוצר הוא מוצר אמיתי מאמזון עם דירוג גבוה, והמחירים נבדקים באמזון ארה״ב.</p>
+  {render_gift_guide(heading_tag="h2", title="קונים לפי תקציב או תחום עניין")}
 </section>
 <section class="section container">
-  <h2 class="sr-only">All gift guides</h2>
+  <h2 class="sr-only">כל מדריכי המתנות</h2>
   <div class="collection-grid">{tiles}</div>
 </section>
 """
     return base_page(
         site,
-        title="Gift Guides 2026: Best Gift Ideas for Everyone — PRIME.FINDS",
-        description="Holiday gift guides for 2026: gifts for teens, him, her, kids, gamers, coffee lovers, travelers and pet lovers, plus stocking stuffers and white elephant gifts under $35.",
+        title=f"מדריכי מתנות: רעיונות למתנה לכל אחד | {site['siteName']}",
+        description="מדריכי מתנות מאמזון: מתנות לו, לה, לילדים, לנוער, לגיימרים, לאוהבי קפה ולמטיילים, בכל תקציב.",
         canonical_path="/guides/",
         og_image=guides[0]["items"][0]["image"],
         body_html=body,
@@ -1203,54 +1202,40 @@ def render_guides_index(site, guides):
     )
 
 
-HE_GUIDE_TITLES = {
-    "gifts-for-grandparents": "מתנות לסבא וסבתא", "gifts-for-dad": "מתנות לאבא", "gifts-for-mom": "מתנות לאמא", "gifts-for-teens": "מתנות לנוער", "gifts-for-gamers": "מתנות לגיימרים", "gifts-for-coffee-lovers": "מתנות לאוהבי קפה",
-    "stocking-stuffers": "מתנות קטנות עד $25", "white-elephant-gifts": "מתנות לחילופי מתנות", "gifts-under-50": "מתנות עד $50",
-    "tech-gifts": "מתנות טכנולוגיה", "gifts-for-her": "מתנות לה", "gifts-for-him": "מתנות לו", "gifts-for-kids": "מתנות לילדים",
-    "gifts-for-pet-lovers": "מתנות לבעלי כלבים וחתולים", "gifts-for-travelers": "מתנות למטיילים", "desk-setup-gifts": "שדרוגים לשולחן העבודה",
-    "gifts-for-home-cooks": "מתנות לאוהבי בישול", "beauty-gifts": "מתנות טיפוח ויופי",
-    "amazon-black-friday-best-sellers": "בלאק פריידיי באמזון 2026: 20 רבי-מכר", "gifts-under-25": "מתנות עד $25",
-}
-
-
 def render_hebrew_page(site, guides):
-    """/he/: a Hebrew entry point for viewers of the Hebrew videos. The catalog itself
-    stays in English (Amazon US listings); this page explains how buying works and
-    points into the guides."""
+    """/he/: how buying from Amazon to Israel works."""
     links = "".join(
-        f'<a class="he-guide" href="/guides/{g["slug"]}/"><span>{esc(HE_GUIDE_TITLES.get(g["slug"], g["title"]))}</span>'
+        f'<a class="he-guide" href="/guides/{g["slug"]}/"><span>{esc(g["title"])}</span>'
         f'<span class="he-guide__count">{len(g["items"])} מוצרים</span></a>'
         for g in guides
     )
     body = f"""
-<section class="page-hero container he-page" dir="rtl">
-  <span class="eyebrow">PRIME.FINDS בעברית</span>
-  <h1 class="section-title" style="font-size: var(--fs-display-lg);">המוצרים מהסרטונים, ומדריכי מתנות מאמזון</h1>
-  <p class="category-hero__desc">ראיתם מוצר באחד הסרטונים שלנו? כל המוצרים מכל סרטון מחכים לכם לפי המספר שלהם בעמוד הסרטונים. רוצים רעיון למתנה? בחרו מדריך למטה. כל מוצר באתר הוא מוצר אמיתי מאמזון ארה״ב עם דירוג גבוה, והמחירים נבדקים בדולרים.</p>
-  <p><a class="btn btn--primary" href="/v/">למוצרים מהסרטונים {CHEVRON_LEFT_ICON}</a></p>
+<section class="page-hero container he-page">
+  <span class="eyebrow">מדריך קצר</span>
+  <h1 class="section-title" style="font-size: var(--fs-display-lg);">איך קונים מאמזון לישראל</h1>
+  <p class="category-hero__desc">כל מוצר באתר הוא מוצר אמיתי מאמזון ארה״ב עם דירוג גבוה, והמחירים מוצגים בדולרים. כך זה עובד:</p>
 </section>
-<section class="section container he-page" dir="rtl">
-  <h2 class="section-title">מדריכי מתנות 2026</h2>
-  <div class="he-guides">{links}</div>
-</section>
-<section class="section container he-page" dir="rtl">
-  <h2 class="section-title">איך קונים מאמזון לישראל</h2>
+<section class="section container he-page">
   <ol class="he-steps">
-    <li>לוחצים על הכפתור <strong>Check price on Amazon</strong> ליד המוצר. הקישור פותח את עמוד המוצר באמזון בלשונית חדשה.</li>
-    <li>באמזון בודקים את המחיר העדכני ואת עלות המשלוח לישראל. אמזון מציעה משלוח חינם לישראל על מוצרים מסוימים בהזמנה מעל $49, וזה מופיע בעמוד המוצר כשהם זכאים.</li>
-    <li>משלמים ישירות באמזון. אנחנו לא מוכרים כלום בעצמנו ולא רואים את פרטי ההזמנה.</li>
+    <li>לוחצים על הכפתור <strong>בדיקת מחיר באמזון</strong> ליד המוצר. הקישור פותח את עמוד המוצר באמזון בלשונית חדשה.</li>
+    <li>באמזון בודקים את המחיר העדכני, אם המוצר נשלח לישראל ומה עלות המשלוח. לא כל מוצר נשלח לישראל. אמזון מציעה משלוח חינם לישראל על מוצרים מסוימים בהזמנה מעל $49, וזה מופיע בעמוד המוצר כשהם זכאים.</li>
+    <li>מוצרים חשמליים מארה״ב מיועדים בדרך כלל למתח של 120 וולט, ובישראל המתח הוא 230 וולט. כדאי לבדוק זאת לפני שקונים.</li>
+    <li>משלמים ישירות באמזון. אנחנו לא מוכרים כלום בעצמנו ולא רואים את פרטי ההזמנה. ייתכנו מע״מ ומכס לפי הכללים בישראל.</li>
   </ol>
-  <p class="he-note">הקישורים באתר הם קישורי שותפים: אם קונים דרכם, PRIME.FINDS עשוי לקבל עמלה מאמזון, בלי עלות נוספת עבורכם. <a href="/affiliate-disclosure.html">גילוי נאות (באנגלית)</a>.</p>
+  <p class="he-note">הקישורים באתר הם קישורי שותפים: אם קונים דרכם, ייתכן שנקבל עמלה מאמזון, בלי עלות נוספת עבורכם. <a href="/affiliate-disclosure.html">לגילוי הנאות</a>.</p>
+</section>
+<section class="section container he-page">
+  <h2 class="section-title">מדריכי מתנות</h2>
+  <div class="he-guides">{links}</div>
 </section>
 """
     return base_page(
         site,
-        title="מוצרים מאמזון ומדריכי מתנות 2026 | PRIME.FINDS בעברית",
-        description="המוצרים מהסרטונים של PRIME.FINDS, מדריכי מתנות מאמזון לכל אחד ולכל תקציב, והסבר קצר איך קונים מאמזון לישראל.",
+        title=f"איך קונים מאמזון לישראל | {site['siteName']}",
+        description="מדריך קצר: איך קונים מאמזון לישראל, מה לבדוק לפני ההזמנה ומה עם משלוח, מתח חשמל ומיסים.",
         canonical_path="/he/",
         og_image=guides[0]["items"][0]["image"] if guides else None,
         body_html=body,
-        lang="he",
     )
 
 
@@ -1264,7 +1249,7 @@ def render_video_list(videos, current_slug=None):
     rows = "".join(
         f'<li><a class="video-list__link{" is-current" if v["slug"] == current_slug else ""}" href="/v/{v["slug"]}/">'
         f'<span class="video-list__title">{esc(v["title"])}</span>'
-        f'<span class="video-list__count tag-mono">{len(v["items"]):02d} finds</span></a></li>'
+        f'<span class="video-list__count tag-mono">{len(v["items"])} מוצרים</span></a></li>'
         for v in videos
     )
     return f'<ul class="video-list">{rows}</ul>'
@@ -1285,16 +1270,16 @@ def render_video_body(site, video, videos, eyebrow):
   <span class="eyebrow">{esc(eyebrow)}</span>
   <h1 class="section-title" style="font-size: var(--fs-display-lg);">{esc(video['title'])}</h1>
   <p class="category-hero__desc">{esc(video['blurb'])}</p>
-  <nav class="video-jump" aria-label="Jump to a number">{jump}</nav>
-  <p class="video-links"><a href="/guides/">Holiday gift guides</a> · <a href="/he/" lang="he" dir="rtl">בעברית: איך קונים מאמזון לישראל</a></p>
+  <nav class="video-jump" aria-label="מעבר למספר">{jump}</nav>
+  <p class="video-links"><a href="/guides/">מדריכי מתנות</a> · <a href="/he/">איך קונים מאמזון לישראל</a></p>
 </section>
 <section class="section container">
-  <h2 class="sr-only">Products in this video</h2>
+  <h2 class="sr-only">המוצרים בסרטון</h2>
   {render_affiliate_note(site)}
   <div class="video-grid">{cards}</div>
 </section>
 <section class="section container">
-  <h2 class="section-title">All videos</h2>
+  <h2 class="section-title">כל הסרטונים</h2>
   {render_video_list(videos, video['slug'])}
 </section>
 """
@@ -1303,11 +1288,11 @@ def render_video_body(site, video, videos, eyebrow):
 def render_video_page(site, video, videos):
     return base_page(
         site,
-        title=f"{video['title']} — {site['siteName']}",
-        description=f"The products from the PRIME.FINDS video “{video['title']}”, by number.",
+        title=f"{video['title']} | {site['siteName']}",
+        description=f"המוצרים מהסרטון “{video['title']}”, לפי המספר.",
         canonical_path=f"/v/{video['slug']}/",
         og_image=video["items"][0]["product"]["image"],
-        body_html=render_video_body(site, video, videos, "From the video"),
+        body_html=render_video_body(site, video, videos, "מהסרטון"),
         page_scripts=["/js/pages/video.js"],
     )
 
@@ -1316,11 +1301,11 @@ def render_videos_index(site, videos):
     latest = videos[0]
     return base_page(
         site,
-        title=f"From the videos — {site['siteName']}",
-        description="Every product from the PRIME.FINDS videos, by number. The newest video is first.",
+        title=f"מהסרטונים | {site['siteName']}",
+        description="כל המוצרים מהסרטונים שלנו, לפי המספר. הסרטון החדש ראשון.",
         canonical_path="/v/",
         og_image=latest["items"][0]["product"]["image"],
-        body_html=render_video_body(site, latest, videos, "Newest video"),
+        body_html=render_video_body(site, latest, videos, "הסרטון החדש"),
         page_scripts=["/js/pages/video.js"],
     )
 
@@ -1334,13 +1319,13 @@ def render_product_page(site, product, category, related_products, featured_in=(
     featured_html = ""
     if featured_in:
         links = "".join(f'<li><a href="/guides/{g["slug"]}/">{esc(g["title"])}</a></li>' for g in featured_in)
-        featured_html = f'<div class="featured-in"><h2 class="featured-in__title">Featured in</h2><ul>{links}</ul></div>'
+        featured_html = f'<div class="featured-in"><h2 class="featured-in__title">מופיע במדריכים</h2><ul>{links}</ul></div>'
     thumbs_html = ""
     if len(images) > 1:
         thumbs = "".join(
             f'<button type="button" class="product-detail__thumb{" is-active" if i == 0 else ""}" '
             f'data-gallery-thumb data-full-src="{img}" aria-pressed="{"true" if i == 0 else "false"}" '
-            f'aria-label="Show photo {i+1} of {len(images)}"><img src="{img}" alt="" loading="lazy" width="72" height="72" /></button>'
+            f'aria-label="תמונה {i+1} מתוך {len(images)}"><img src="{img}" alt="" loading="lazy" width="72" height="72" /></button>'
             for i, img in enumerate(images)
         )
         thumbs_html = f'<div class="product-detail__thumbs">{thumbs}</div>'
@@ -1358,10 +1343,10 @@ def render_product_page(site, product, category, related_products, featured_in=(
         related_section = f"""
 <section class="section">
   <div class="container section-head--split" data-reveal="fade">
-    <div><span class="eyebrow">You Might Also Like</span><h2 class="section-title">More like this</h2></div>
+    <div><span class="eyebrow">אולי יעניין אתכם</span><h2 class="section-title">עוד בסגנון</h2></div>
     <div class="rail-controls">
-      <button class="icon-btn" type="button" data-rail-prev="related-rail" aria-label="Scroll back">{CHEVRON_LEFT_ICON}</button>
-      <button class="icon-btn" type="button" data-rail-next="related-rail" aria-label="Scroll forward">{CHEVRON_ICON}</button>
+      <button class="icon-btn" type="button" data-rail-prev="related-rail" aria-label="גלילה אחורה">{CHEVRON_LEFT_ICON}</button>
+      <button class="icon-btn" type="button" data-rail-next="related-rail" aria-label="גלילה קדימה">{CHEVRON_ICON}</button>
     </div>
   </div>
   <div class="container">
@@ -1376,7 +1361,7 @@ def render_product_page(site, product, category, related_products, featured_in=(
     video_html = ""
     if yt:
         video_html = (
-            f'<div class="product-video" style="margin-top:1.5rem"><h2 class="featured-in__title">Watch: what to know before you buy</h2>'
+            f'<div class="product-video" style="margin-top:1.5rem"><h2 class="featured-in__title">צפו: מה כדאי לדעת לפני שקונים</h2>'
             f'<div style="position:relative;padding-top:56.25%;border-radius:14px;overflow:hidden;background:#000">'
             f'<iframe src="https://www.youtube-nocookie.com/embed/{yt["id"]}" title="{esc(yt["title"])}" loading="lazy" '
             f'allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen '
@@ -1385,7 +1370,7 @@ def render_product_page(site, product, category, related_products, featured_in=(
 
     body = f"""
 <section class="section container" data-product-app data-product-slug="{product['slug']}">
-  {render_breadcrumbs([("Home", "/"), (category['name'], f"/category/{category['slug']}/"), (product['name'], None)])}
+  {render_breadcrumbs([("דף הבית", "/"), (category['name'], f"/category/{category['slug']}/"), (product['name'], None)])}
   <div class="product-detail">
     <div class="product-detail__gallery pd-gallery-enter">
       <div class="product-detail__gallery-main"><img src="{product['image']}" alt="{esc(product['name'])}" data-gallery-main loading="eager" style="view-transition-name: product-photo-{product['slug']}" /></div>
@@ -1400,20 +1385,20 @@ def render_product_page(site, product, category, related_products, featured_in=(
         <span class="product-detail__price">{format_price(product['price'], product['currency'])}</span>
         {render_stars(product['rating'], product['reviewCount'])}
       </div>
-      {f'<p class="product-detail__price-note pd-enter pd-enter--3">Price checked {esc(format_date_long(product["updatedAt"][:10]))}. Amazon prices change often, so check the current price there.</p>' if product.get('price') is not None and product.get('updatedAt') else ''}
-      {'<p class="product-detail__stock-note pd-enter pd-enter--3">Currently hard to find new on Amazon. Similar picks are below.</p>' if product.get('availability') == 'unavailable' else ''}
+      {f'<p class="product-detail__price-note pd-enter pd-enter--3">המחיר נבדק ב-{esc(format_date_long(product["updatedAt"][:10]))} באמזון ארה״ב, לפני משלוח ומיסים לישראל. המחירים משתנים, אז כדאי לבדוק את המחיר העדכני באמזון.</p>' if product.get('price') is not None and product.get('updatedAt') else ''}
+      {'<p class="product-detail__stock-note pd-enter pd-enter--3">כרגע קשה למצוא אותו חדש באמזון. מוצרים דומים למטה.</p>' if product.get('availability') == 'unavailable' else ''}
       <div class="cta-panel pd-enter pd-enter--3">
-        <a class="btn btn--primary btn--full" data-affiliate-link data-product-slug="{product['slug']}" aria-label="Check price on Amazon: {esc(product['name'])} (opens in a new tab)">Check price on Amazon {CHEVRON_ICON}</a>
-        <p class="cta-panel__disclaimer">Opens Amazon in a new tab. Affiliate link: {esc(site['siteName'])} may earn a commission, at no extra cost to you. <a href="/affiliate-disclosure.html">Disclosure</a>.</p>
+        <a class="btn btn--primary btn--full" data-affiliate-link data-product-slug="{product['slug']}" aria-label="בדיקת מחיר באמזון: {esc(product['name'])} (נפתח בלשונית חדשה)">בדיקת מחיר באמזון {CHEVRON_ICON}</a>
+        <p class="cta-panel__disclaimer"><strong>לפני ההזמנה, בדקו באמזון שהמוצר נשלח לישראל ומה עלות המשלוח.</strong> נפתח בלשונית חדשה. קישור שותפים: ייתכן שנקבל עמלה, בלי עלות נוספת עבורכם. <a href="/affiliate-disclosure.html">גילוי נאות</a>.</p>
       </div>
       <div class="pd-enter pd-enter--4">
-        <h2 class="sr-only">About this product</h2>
+        <h2 class="sr-only">על המוצר</h2>
         <p class="product-detail__desc">{esc(product['description'])}</p>
         <div class="why-we-like-it">
-          <div class="why-we-like-it__label">Why We Like It</div>
+          <div class="why-we-like-it__label">למה אהבנו</div>
           <p>{esc(product['whyWeLikeIt'])}</p>
         </div>
-        <h2 class="sr-only">Highlights</h2>
+        <h2 class="sr-only">עיקרי המוצר</h2>
         <ul class="highlights-list">{highlights}</ul>
         {video_html}
         {featured_html}
@@ -1422,7 +1407,7 @@ def render_product_page(site, product, category, related_products, featured_in=(
   </div>
   <div class="mobile-cta" data-mobile-cta aria-hidden="true">
     <span class="mobile-cta__price">{format_price(product['price'], product['currency'])}</span>
-    <a class="btn btn--primary" data-affiliate-link data-product-slug="{product['slug']}" tabindex="-1">Check price {CHEVRON_ICON}</a>
+    <a class="btn btn--primary" data-affiliate-link data-product-slug="{product['slug']}" tabindex="-1">בדיקת מחיר {CHEVRON_ICON}</a>
   </div>
 </section>
 {related_section}
@@ -1448,11 +1433,11 @@ def render_product_page(site, product, category, related_products, featured_in=(
             "availability": "https://schema.org/OutOfStock" if product.get("availability") == "unavailable" else "https://schema.org/InStock",
             "url": site["url"].rstrip("/") + f"/product/{product['slug']}/",
         }
-    extra_head = f'<script type="application/ld+json">{json.dumps(ld_json)}</script>'
+    extra_head = f'<script type="application/ld+json">{json.dumps(ld_json, ensure_ascii=False)}</script>'
     if yt:
         video_ld = {
             "@context": "https://schema.org", "@type": "VideoObject", "name": yt["title"],
-            "description": f"What the Amazon listing says about the {product['name']}, its rating and price.",
+            "description": f"מה כתוב באמזון על {product['name']}, הדירוג והמחיר.",
             "thumbnailUrl": f"https://i.ytimg.com/vi/{yt['id']}/hqdefault.jpg", "uploadDate": yt["uploadDate"],
             "duration": yt["duration"], "embedUrl": f"https://www.youtube.com/embed/{yt['id']}",
             "contentUrl": f"https://www.youtube.com/watch?v={yt['id']}",
@@ -1462,14 +1447,14 @@ def render_product_page(site, product, category, related_products, featured_in=(
     # The snippet Google shows: what it is, then the checked price and Amazon rating.
     meta_bits = [product["shortDescription"].rstrip(".") + "."]
     if product.get("price") is not None:
-        meta_bits.append(f"{format_price(product['price'], product['currency'])} on Amazon")
+        meta_bits.append(f"{format_price(product['price'], product['currency'])} באמזון")
     if product.get("rating") and product.get("reviewCount"):
-        meta_bits.append(f"rated {product['rating']:.1f}/5 from {product['reviewCount']:,} reviews")
+        meta_bits.append(f"דירוג {product['rating']:.1f}/5 מתוך {product['reviewCount']:,} ביקורות")
     meta_desc = meta_bits[0] + (" " + ", ".join(meta_bits[1:]) + "." if len(meta_bits) > 1 else "")
 
     return base_page(
         site,
-        title=f"{product['name']} — {site['siteName']}",
+        title=f"{product['name']} | {site['siteName']}",
         description=meta_desc,
         canonical_path=f"/product/{product['slug']}/",
         og_image=product["image"],
@@ -1484,42 +1469,43 @@ def render_product_page(site, product, category, related_products, featured_in=(
 # --------------------------------------------------------------------------
 
 def render_about_page(site):
+    n = esc(site["siteName"])
     body = f"""
 <section class="page-hero container">
-  {render_breadcrumbs([("Home", "/"), ("About", None)])}
-  <span class="eyebrow">About</span>
-  <h1 class="section-title" style="font-size: var(--fs-display-lg);">We find the interesting stuff first.</h1>
-  <p class="about-hero__lede">PRIME.FINDS discovers interesting products, useful gadgets, stylish items, and things worth knowing about — then saves you the hours it'd take to find them yourself.</p>
+  {render_breadcrumbs([("דף הבית", "/"), ("אודות", None)])}
+  <span class="eyebrow">אודות</span>
+  <h1 class="section-title" style="font-size: var(--fs-display-lg);">אנחנו מוצאים את הדברים המעניינים קודם.</h1>
+  <p class="about-hero__lede">{n} מאתר מוצרים מעניינים, גאדג׳טים שימושיים ודברים ששווה להכיר, וחוסך לכם את השעות שהיה לוקח למצוא אותם לבד.</p>
 </section>
 <section class="section container narrow">
   <div class="prose">
-    <p>Somewhere between "I need this" and "I'll never find it" is where PRIME.FINDS lives. We look through the endless stream of new products so you don't have to — filtering out the noise, the gimmicks, and the things that look good in a thumbnail but fall apart in real use.</p>
-    <p>We're not a marketplace and we don't manufacture anything. When something earns a spot here, we point you to where you can actually get it. That's the whole model: discovery first, honestly presented, no pressure to buy.</p>
+    <p>אנחנו עוברים על הזרם האינסופי של מוצרים חדשים כדי שאתם לא תצטרכו, ומסננים את הרעש ואת מה שנראה טוב רק בתמונה.</p>
+    <p>אנחנו לא חנות ולא מייצרים כלום. כשמוצר מרוויח מקום אצלנו, אנחנו מפנים אתכם למקום שבו אפשר לקנות אותו. זה כל המודל: גילוי, הצגה ישרה, בלי לחץ לקנות.</p>
   </div>
   <hr class="hr" />
   <div class="value-grid">
     <div data-reveal>
       <div class="value-item__num">01</div>
-      <div class="value-item__title">Curated, not crowdsourced</div>
-      <div class="value-item__desc">Every product here was chosen on purpose — not auto-imported from a feed.</div>
+      <div class="value-item__title">נבחר ידנית</div>
+      <div class="value-item__desc">כל מוצר כאן נבחר בכוונה, ולא יובא אוטומטית מרשימה.</div>
     </div>
     <div data-reveal>
       <div class="value-item__num">02</div>
-      <div class="value-item__title">Built for a quick look</div>
-      <div class="value-item__desc">Come from a reel, see something good, move on. No account required, no friction.</div>
+      <div class="value-item__title">בנוי למבט מהיר</div>
+      <div class="value-item__desc">הגעתם מסרטון, ראיתם משהו טוב, המשכתם הלאה. בלי הרשמה ובלי חיכוך.</div>
     </div>
     <div data-reveal>
       <div class="value-item__num">03</div>
-      <div class="value-item__title">Honest about the model</div>
-      <div class="value-item__desc">We may earn a commission on some links. It never decides what gets featured. <a href="/affiliate-disclosure.html">Read the affiliate disclosure</a>.</div>
+      <div class="value-item__title">שקופים לגבי המודל</div>
+      <div class="value-item__desc">ייתכן שנקבל עמלה על חלק מהקישורים. זה לא קובע מה מופיע כאן. <a href="/affiliate-disclosure.html">לגילוי הנאות</a>.</div>
     </div>
   </div>
 </section>
 """
     return base_page(
         site,
-        title=f"About — {site['siteName']}",
-        description="PRIME.FINDS curates interesting, useful, and stylish products so you don't have to spend hours searching for them yourself.",
+        title=f"אודות | {site['siteName']}",
+        description=f"{site['siteName']} בוחר מוצרים מעניינים ושימושיים מאמזון, כדי שלא תצטרכו לחפש אותם שעות.",
         canonical_path="/about.html",
         body_html=body,
         active_nav="about",
@@ -1533,10 +1519,10 @@ def render_legal_page(site, *, eyebrow, title, slug, description, lead_html, sec
     updated = site["legalUpdated"]
     body = f"""
 <section class="page-hero container">
-  {render_breadcrumbs([("Home", "/"), (title, None)])}
+  {render_breadcrumbs([("דף הבית", "/"), (title, None)])}
   <span class="eyebrow">{esc(eyebrow)}</span>
   <h1 class="section-title" style="font-size: var(--fs-display-lg);">{esc(title)}</h1>
-  <p class="legal-updated">Last updated: <time datetime="{updated}">{format_date_long(updated)}</time></p>
+  <p class="legal-updated">עודכן לאחרונה: <time datetime="{updated}">{format_date_long(updated)}</time></p>
 </section>
 <section class="section container narrow">
   <div class="prose">
@@ -1547,7 +1533,7 @@ def render_legal_page(site, *, eyebrow, title, slug, description, lead_html, sec
 """
     return base_page(
         site,
-        title=f"{title} — {site['siteName']}",
+        title=f"{title} | {site['siteName']}",
         description=description,
         canonical_path=f"/{slug}",
         body_html=body,
@@ -1555,259 +1541,201 @@ def render_legal_page(site, *, eyebrow, title, slug, description, lead_html, sec
 
 
 def render_accessibility_page(site):
+    n = esc(site["siteName"])
     d = format_date_long(site["legalUpdated"])
-    lead = (
-        "<p>PRIME.FINDS wants everyone to be able to browse the catalog, whether they use a keyboard, a screen reader, "
-        "magnification, voice control or a touch screen. We treat accessibility as ongoing work, not something that is "
-        "finished once.</p>"
-    )
+    lead = f"<p>{n} רוצה שכל אחד יוכל לגלוש בקטלוג, גם בעזרת מקלדת, קורא מסך, הגדלה, שליטה קולית או מסך מגע. אנחנו רואים בנגישות עבודה מתמשכת.</p>"
     sections = f"""
-    <h2>The standard we are working toward</h2>
-    <p>We are working toward conformance with the Web Content Accessibility Guidelines (WCAG) 2.2 at Level AA, published by the World Wide Web Consortium (W3C).</p>
+    <h2>התקן שאליו אנחנו שואפים</h2>
+    <p>אנחנו פועלים להתאמה להנחיות הנגישות לתכני אינטרנט (WCAG) 2.2 ברמה AA ולתקן הישראלי ת״י 5568.</p>
 
-    <h2>Current status</h2>
-    <p>PRIME.FINDS has not been independently audited or certified, and we do not claim that it fully conforms to WCAG 2.2 Level AA. What we can say accurately is this: on {d} we reviewed the homepage, category pages, product pages, search, the site menu, filters, the entrance animation and the legal pages, and fixed the problems that review found. The review used:</p>
-    <ul>
-      <li>automated checks with the axe-core testing engine;</li>
-      <li>measured colour-contrast checks of text and interface components;</li>
-      <li>keyboard testing of tab order and visible focus, and of the Escape key and where focus lands after menus and dialogs close;</li>
-      <li>text enlarged to 175% and pages narrowed to a 320-pixel-wide screen, to check that nothing is cut off and nothing forces sideways scrolling;</li>
-      <li>checks of the entrance animation and the rest of the interface with the Reduce motion option switched on, and with the high-contrast option switched on.</li>
-    </ul>
-    <p>We have not yet tested with dedicated screen readers (such as NVDA, JAWS or VoiceOver), or with disabled users, so problems may remain that this kind of testing would reveal.</p>
+    <h2>מצב נוכחי</h2>
+    <p>האתר לא עבר ביקורת או הסמכה חיצונית, ואיננו טוענים להתאמה מלאה. האתר עבר לאחרונה לעברית ולכיוון כתיבה מימין לשמאל, ובדיקות הנגישות שנעשו לפני המעבר טרם חזרו על עצמן במלואן על הגרסה הזו. לא בדקנו עדיין עם קוראי מסך ייעודיים או עם משתמשים עם מוגבלות, ולכן ייתכן שנותרו בעיות.</p>
 
-    <h2>What we have done</h2>
+    <h2>מה עשינו</h2>
     <ul>
-      <li>A "Skip to main content" link at the start of every page.</li>
-      <li>Every feature can be used with a keyboard, with visible focus outlines. The site menu, search and accessibility options open as dialogs that take focus, keep it inside while open, close with the Escape key, and return focus to the control that opened them.</li>
-      <li>Standard HTML headings, lists, landmarks, buttons and links. Product links are named after the product. Each "View at Amazon" button names the product it is for and says that it opens in a new tab.</li>
-      <li>Product photos have text alternatives that name the product. Purely decorative artwork is hidden from screen readers.</li>
-      <li>Search results, and the number of products left after you filter, are announced to screen readers. Filter buttons say whether they are switched on.</li>
-      <li>Text and interface colours were checked against the WCAG contrast minimums, and the pale gray text used for small captions was darkened to pass.</li>
-      <li>Layouts adapt down to 320 CSS pixels wide and to enlarged text, and browser zoom is never disabled.</li>
-      <li>Animation respects your device's reduced-motion setting, the site's content never depends on animation, and nothing in it flashes.</li>
+      <li>קישור ״דילוג לתוכן הראשי״ בתחילת כל עמוד.</li>
+      <li>כל האפשרויות זמינות במקלדת עם מסגרת מיקוד גלויה. התפריט, החיפוש ואפשרויות הנגישות נסגרים במקש Escape ומחזירים את המיקוד לכפתור שפתח אותם.</li>
+      <li>כותרות, רשימות, כפתורים וקישורים בקוד HTML תקני. תמונות מוצרים כוללות טקסט חלופי, ואיורים דקורטיביים מוסתרים מקוראי מסך.</li>
+      <li>צבעי הטקסט נבחרו בהתאם לדרישות הניגודיות של WCAG.</li>
+      <li>העמודים מתאימים את עצמם למסכים צרים ולטקסט מוגדל, והגדלת הדפדפן לעולם לא חסומה.</li>
+      <li>האנימציות מכבדות את הגדרת הפחתת התנועה במכשיר, והתוכן לא תלוי בהן.</li>
     </ul>
 
-    <h2>Accessibility options on this site</h2>
-    <p>The <strong>Accessibility options</strong> button in the page header (a circle with a person in it) opens a small panel with:</p>
+    <h2>אפשרויות הנגישות באתר</h2>
+    <p>הכפתור <strong>אפשרויות נגישות</strong> בראש העמוד פותח חלונית עם:</p>
     <ul>
-      <li><strong>Text size:</strong> five steps, from the standard size up to 175%.</li>
-      <li><strong>High contrast:</strong> black text on white with stronger borders and focus outlines.</li>
-      <li><strong>Reduce motion:</strong> turns off transitions and the card tilt effect, and replaces the entrance animation with a simple fade.</li>
-      <li><strong>Reset all:</strong> returns everything to the defaults.</li>
+      <li><strong>גודל טקסט:</strong> חמש דרגות, עד 175%.</li>
+      <li><strong>ניגודיות גבוהה:</strong> טקסט שחור על לבן עם גבולות חזקים יותר.</li>
+      <li><strong>הפחתת תנועה:</strong> מכבה מעברים ואפקטים.</li>
+      <li><strong>איפוס הכול:</strong> חזרה לברירת המחדל.</li>
     </ul>
-    <p>Your choices are saved only in your own browser (see the <a href="/cookie-notice.html">Cookie Notice</a>); they are not sent to PRIME.FINDS or anyone else. These options add to, and do not replace, your browser's and device's own accessibility settings, which the site also respects. The site itself is built to be usable without them.</p>
+    <p>הבחירות נשמרות רק בדפדפן שלכם (ראו <a href="/cookie-notice.html">מדיניות עוגיות</a>) ולא נשלחות אלינו.</p>
 
-    <h2>The entrance animation</h2>
-    <p>The homepage opens with a short animated introduction: about four seconds on a first visit and shorter on later visits. It plays once per browsing session. You can skip it at any moment by pressing any key, clicking or tapping, or using the <strong>Skip intro</strong> button, and there is an Accessibility link on top of it so this page can be reached before you enter the site. If your device is set to reduce motion, or you switch on Reduce motion, you get a simple fade instead of the full animation. The animation does not contain flashing content and the site's content does not depend on it. We have not measured it with a dedicated photosensitivity analysis tool.</p>
-
-    <h2>Known limitations</h2>
+    <h2>מגבלות ידועות</h2>
     <ul>
-      <li>Some product photos come from the retailer's listing and contain text or graphics inside the image, such as slogans or feature callouts. The photo's text alternative names the product, and the product description on the page carries the key details, but not everything shown inside an image is described.</li>
-      <li>The "View at Amazon" buttons receive their destination through a script after the page loads. If scripts are blocked or fail, those buttons will not work.</li>
-      <li>When you follow a link to Amazon or another retailer you leave PRIME.FINDS. The accessibility of those sites is outside our control.</li>
-      <li>The site loads its fonts from Google Fonts. If they are blocked, a fallback font is used and the text may look different.</li>
-      <li>The site is available in English only.</li>
-      <li>We have not yet tested with screen readers or with disabled users, as explained above.</li>
-      <li>Some effects, such as product cards tilting under the pointer, are pointer-only enhancements. They do not hide any information, and Reduce motion turns them off.</li>
+      <li>חלק מתמונות המוצרים מגיעות מאמזון וכוללות טקסט באנגלית בתוך התמונה. שמות המותגים והדגמים מופיעים באנגלית.</li>
+      <li>הכפתורים לאמזון מקבלים את היעד שלהם באמצעות סקריפט. אם סקריפטים חסומים, הכפתורים לא יעבדו.</li>
+      <li>כשעוברים לאמזון יוצאים מהאתר, ונגישות האתר שם אינה בשליטתנו. עמודי המוצר באמזון אינם בעברית.</li>
+      <li>הגופנים נטענים מ-Google Fonts. אם הם חסומים, יוצג גופן חלופי.</li>
     </ul>
 
-    <h2 id="report">Report a barrier or ask for help</h2>
-    <p>If something on PRIME.FINDS is hard or impossible for you to use, or you need information from the site in a different form, please tell us. It helps to include the address of the page, what you were trying to do, what went wrong, and the browser and any assistive technology you use.</p>
+    <h2 id="report">דיווח על בעיית נגישות</h2>
+    <p>אם משהו באתר קשה או בלתי אפשרי לשימוש, או שאתם צריכים מידע בפורמט אחר, ספרו לנו. כדאי לציין את כתובת העמוד, מה ניסיתם לעשות, מה השתבש, ובאיזה דפדפן וטכנולוגיה מסייעת השתמשתם.</p>
     {render_contact_paragraph(site)}
-    <p>We read reports as they come in and give priority to barriers that stop someone from finding a product or reaching a retailer. We cannot promise a specific response time. If you are not satisfied with how a concern is handled, you may be able to raise it with an accessibility or consumer authority in your own country.</p>
 
-    <h2>Technical information</h2>
-    <p>PRIME.FINDS is built with HTML, CSS and JavaScript, with WAI-ARIA used only where standard HTML does not give the right meaning. It is designed for current versions of the major desktop and mobile browsers.</p>
-
-    <h2>Review date</h2>
-    <p>This statement was last reviewed on <time datetime="{site['legalUpdated']}">{d}</time> and will be updated as the site changes and as we learn more.</p>
+    <h2>תאריך עדכון</h2>
+    <p>ההצהרה עודכנה לאחרונה ב-<time datetime="{site['legalUpdated']}">{d}</time>.</p>
 """
     return render_legal_page(
-        site,
-        eyebrow="Accessibility",
-        title="Accessibility Statement",
-        slug="accessibility.html",
-        description="How PRIME.FINDS approaches accessibility, what has been tested, known limitations, and how to report a barrier.",
-        lead_html=lead,
-        sections_html=sections,
+        site, eyebrow="נגישות", title="הצהרת נגישות", slug="accessibility.html",
+        description="איך אנחנו מטפלים בנגישות, מה נבדק, מגבלות ידועות ואיך מדווחים על בעיה.",
+        lead_html=lead, sections_html=sections,
     )
 
 
 def render_cookie_page(site):
-    lead = (
-        "<p>This page explains what PRIME.FINDS stores on your device and which third parties are involved when you use the site.</p>"
-    )
+    n = esc(site["siteName"])
+    lead = f"<p>העמוד הזה מסביר מה {n} שומר במכשיר שלכם ואילו צדדים שלישיים מעורבים כשאתם משתמשים באתר.</p>"
     sections = f"""
-    <h2>The short version</h2>
-    <p>PRIME.FINDS does not set cookies of its own, and it does not use advertising cookies or trackers. It counts visits and clicks with Umami, a privacy-focused analytics service that does not use cookies or identify you (see below). It keeps a small preference in your browser's storage. Because there are no non-essential cookies, the site does not show a cookie-consent banner. If that changes, this notice will be updated first and choices will be offered where required.</p>
+    <h2>בקצרה</h2>
+    <p>האתר לא מגדיר עוגיות משלו ולא משתמש בעוגיות פרסום או במעקב פרסומי. ספירת הביקורים והקליקים נעשית ב-Umami, שירות אנליטיקה שלא משתמש בעוגיות ולא מזהה אתכם. בדפדפן נשמרת העדפה קטנה בלבד, ולכן אין באנר הסכמה לעוגיות.</p>
 
-    <h2>What PRIME.FINDS stores in your browser</h2>
+    <h2>מה נשמר בדפדפן</h2>
     <dl class="legal-list">
       <dt><code>pf-a11y</code> &middot; local storage</dt>
-      <dd>Remembers your accessibility choices (text size, high contrast, reduce motion). It is created only if you change one of them, and removed when you use Reset all or clear your browser data.</dd>
+      <dd>זוכר את בחירות הנגישות שלכם. נוצר רק אם שיניתם אחת מהן, ונמחק באיפוס או בניקוי נתוני הדפדפן. המידע לא נשלח אלינו או לצד שלישי.</dd>
     </dl>
-    <p>This is not sent to PRIME.FINDS or to any third party.</p>
 
-    <h2>Third parties</h2>
+    <h2>צדדים שלישיים</h2>
     <ul>
-      <li><strong>Google Fonts.</strong> The site's fonts are loaded from Google's servers (fonts.googleapis.com and fonts.gstatic.com). Requests to those servers necessarily include your IP address and browser details. See Google's own privacy information for how it handles them.</li>
-      <li><strong>Umami analytics.</strong> The site loads a script from cloud.umami.is that counts page views and clicks on &ldquo;View at Amazon&rdquo; buttons (which product, from which page). Umami does not set cookies or store anything in your browser, and it does not build a profile of you; your IP address is used only to estimate a country and is not stored. See Umami's privacy policy.</li>
-      <li><strong>GitHub Pages.</strong> The site is hosted by GitHub Pages. As with any web host, GitHub receives standard request information (such as your IP address) when a page loads. See GitHub's privacy statement.</li>
-      <li><strong>Amazon and other retailers.</strong> When you click a link to a retailer you leave PRIME.FINDS. Retailers and affiliate programs may use cookies and similar technologies, including to record that a purchase came from PRIME.FINDS. Those are governed by their own cookie policies.</li>
+      <li><strong>Google Fonts.</strong> הגופנים נטענים משרתי Google, שמקבלים את כתובת ה-IP ופרטי הדפדפן שלכם.</li>
+      <li><strong>Umami.</strong> סקריפט מ-cloud.umami.is סופר צפיות בעמודים וקליקים על הכפתורים לאמזון. הוא לא שומר עוגיות ולא בונה עליכם פרופיל.</li>
+      <li><strong>GitHub Pages.</strong> האתר מתארח שם, ו-GitHub מקבלת מידע בקשה רגיל כמו כתובת IP.</li>
+      <li><strong>אמזון.</strong> כשעוברים לאמזון יוצאים מהאתר. אמזון ותוכנית השותפים עשויות להשתמש בעוגיות, כולל כדי לתעד שרכישה הגיעה דרכנו, לפי המדיניות שלהן.</li>
     </ul>
 
-    <h2>Managing your data</h2>
-    <p>You can clear the items above in your browser's settings, or use <strong>Reset all</strong> in the accessibility options to remove <code>pf-a11y</code>. Most browsers can also block third-party requests and cookies; if the Google Fonts requests are blocked, the site falls back to your system fonts.</p>
-    {render_contact_paragraph(site, "Questions about this notice? ")}
+    <h2>ניהול הנתונים</h2>
+    <p>אפשר למחוק את המידע בהגדרות הדפדפן, או להשתמש ב<strong>איפוס הכול</strong> באפשרויות הנגישות.</p>
+    {render_contact_paragraph(site, "שאלות על העמוד הזה? ")}
 """
     return render_legal_page(
-        site,
-        eyebrow="Legal",
-        title="Cookie Notice",
-        slug="cookie-notice.html",
-        description="What PRIME.FINDS stores in your browser, and the third parties involved when you use the site.",
-        lead_html=lead,
-        sections_html=sections,
+        site, eyebrow="מידע משפטי", title="מדיניות עוגיות", slug="cookie-notice.html",
+        description="מה נשמר בדפדפן שלכם ואילו צדדים שלישיים מעורבים בשימוש באתר.",
+        lead_html=lead, sections_html=sections,
     )
 
 
 def render_affiliate_disclosure_page(site):
+    n = esc(site["siteName"])
     extra = site.get("affiliateStatement", "").strip()
     extra_html = f"<p>{esc(extra)}</p>" if extra else ""
     lead = (
-        '<div class="callout"><p><strong>In short:</strong> many links on PRIME.FINDS, including the &ldquo;View at Amazon&rdquo; buttons, '
-        "are affiliate links. If you buy through them, PRIME.FINDS may earn a commission from qualifying purchases, "
-        "at no extra cost to you.</p></div>"
+        '<div class="callout"><p><strong>בקצרה:</strong> הרבה מהקישורים באתר, כולל הכפתורים שמובילים לאמזון, הם קישורי שותפים. '
+        "כשותפי אמזון, אנחנו מרוויחים עמלה מרכישות מזכות, בלי עלות נוספת עבורכם.</p></div>"
     )
     sections = f"""
     {extra_html}
-    <h2>What PRIME.FINDS is</h2>
-    <p>PRIME.FINDS is an independent product-discovery website. We choose products we think are interesting, useful or well made, describe them, and link to the retailer, mostly Amazon, where you can buy them.</p>
+    <h2>מה זה האתר</h2>
+    <p>{n} הוא אתר עצמאי לגילוי מוצרים. אנחנו בוחרים מוצרים שנראים לנו מעניינים או שימושיים, מתארים אותם ומקשרים לחנות שבה אפשר לקנות אותם, בעיקר אמזון.</p>
 
-    <h2>How the links work</h2>
-    <p>When you select &ldquo;View at Amazon&rdquo;, you leave PRIME.FINDS and land on Amazon, sometimes after passing through a short link such as <code>link.amazon</code> or <code>amzn.to</code>. Amazon may use cookies or similar technology to record that you came from PRIME.FINDS. If you then buy, PRIME.FINDS may earn a commission under the terms of the affiliate program. You pay the same price either way.</p>
+    <h2>איך הקישורים עובדים</h2>
+    <p>כשלוחצים על כפתור לאמזון יוצאים מהאתר ומגיעים לאמזון, לפעמים דרך קישור מקוצר כמו <code>link.amazon</code>. אמזון עשויה להשתמש בעוגיות כדי לתעד שהגעתם דרכנו. אם תקנו, ייתכן שנקבל עמלה לפי תנאי התוכנית. המחיר שלכם זהה בכל מקרה.</p>
 
-    <h2>What happens on the retailer's site</h2>
-    <p>PRIME.FINDS does not sell anything and does not process your purchase. Payment, delivery, returns, warranty and customer service are handled entirely by Amazon or whichever retailer you buy from, under their terms. We never see your payment details or your order.</p>
+    <h2>מה קורה באתר של אמזון</h2>
+    <p>אנחנו לא מוכרים כלום ולא מעבדים רכישות. תשלום, משלוח, החזרות, אחריות ושירות לקוחות מטופלים על ידי אמזון או המוכר, לפי התנאים שלהם. אנחנו לא רואים את פרטי התשלום או ההזמנה.</p>
 
-    <h2>What this does not change</h2>
-    <p>Products are chosen because we think they are worth knowing about, not because of the commission they may generate. Whether a link earns money has no bearing on whether a product is featured, and it does not change the price you pay. PRIME.FINDS is independent and is not endorsed by, sponsored by or affiliated with Amazon or any brand mentioned on the site, unless a page says so explicitly.</p>
+    <h2>מה זה לא משנה</h2>
+    <p>{n} הוא אתר עצמאי, <strong>אינו קשור לאמזון, אינו מטעמה ואינו ממומן על ידה</strong> או על ידי מותג אחר שמוזכר באתר, אלא אם נכתב אחרת במפורש. עמלה לא משנה את המחיר שאתם משלמים.</p>
 
-    <h2>Prices, ratings and product details</h2>
-    <p>Prices, availability, specifications, shipping options and reviews on retailer sites change, and sellers can change or withdraw a listing at any time. Where a price is shown as &ldquo;Check price&rdquo;, we do not display one because it varies by location, seller or option. Star ratings and review counts shown on PRIME.FINDS come from the retailer's listing when the product was added and may no longer match. Please check the current details on the retailer's website before you buy.</p>
-
-    <h2>Other programs</h2>
-    <p>If PRIME.FINDS joins other affiliate programs, this page will be updated to say so.</p>
-    {render_contact_paragraph(site, "Questions about a link or this disclosure? ")}
+    <h2>מחירים, דירוגים ומשלוח לישראל</h2>
+    <p>המחירים מוצגים בדולרים לפי אמזון ארה״ב ואינם כוללים משלוח, מע״מ או מכס. מחירים, זמינות, משלוחים וביקורות משתנים. לא כל מוצר נשלח לישראל, ומוצרים חשמליים עשויים להתאים למתח 120 וולט בלבד. הדירוגים נלקחו מאמזון כשהמוצר נוסף לאתר וייתכן שהשתנו. יש לבדוק את הפרטים העדכניים באמזון לפני קנייה.</p>
+    {render_contact_paragraph(site, "שאלות על קישור או על הגילוי הזה? ")}
 """
     return render_legal_page(
-        site,
-        eyebrow="Legal",
-        title="Affiliate Disclosure",
-        slug="affiliate-disclosure.html",
-        description="How PRIME.FINDS uses affiliate links, what happens when you click one, and what it does and does not change.",
-        lead_html=lead,
-        sections_html=sections,
+        site, eyebrow="מידע משפטי", title="גילוי נאות", slug="affiliate-disclosure.html",
+        description="איך האתר משתמש בקישורי שותפים, מה קורה כשלוחצים עליהם ומה זה לא משנה.",
+        lead_html=lead, sections_html=sections,
     )
 
 
 def render_privacy_page(site):
-    lead = (
-        "<p>PRIME.FINDS is a product-discovery website that is designed to collect as little about you as possible. "
-        "This page explains, in plain language, what that means in practice.</p>"
-    )
+    n = esc(site["siteName"])
+    lead = f"<p>{n} בנוי כך שייאסף עליכם כמה שפחות מידע. העמוד הזה מסביר בשפה פשוטה מה זה אומר בפועל.</p>"
     sections = f"""
-    <h2>Who is responsible</h2>
-    <p>PRIME.FINDS is an independent website. It does not currently publish a company name or postal address. For questions about this policy, use the contact options at the end of this page.</p>
+    <h2>מי אחראי</h2>
+    <p>{n} הוא אתר עצמאי. לשאלות על המדיניות אפשר להשתמש בפרטי הקשר בסוף העמוד.</p>
 
-    <h2>What PRIME.FINDS collects</h2>
+    <h2>מה נאסף</h2>
     <ul>
-      <li><strong>Nothing collected through the site.</strong> There are no accounts, sign-ups, comment forms, newsletters or payment forms, so PRIME.FINDS does not ask for or store your name, email address or payment details.</li>
-      <li><strong>If you email us.</strong> If you choose to write to the address on this site, PRIME.FINDS receives your email address and whatever you include in your message, and uses it only to reply to you. Please do not send payment or sensitive details.</li>
-      <li><strong>Searches and filters stay in your browser.</strong> The search box and filters work on data your browser has already loaded; what you type is not sent to PRIME.FINDS.</li>
-      <li><strong>Anonymous visit and click counts.</strong> PRIME.FINDS uses Umami, a cookieless analytics service, to count page views and clicks on &ldquo;View at Amazon&rdquo; buttons, along with general details such as page, referring site, country, device type and browser. It does not identify individual visitors, set cookies or track you across other sites. There are no advertising trackers.</li>
-      <li><strong>Small preferences on your device.</strong> If you change an accessibility option, the site remembers your choice in your browser's storage. It stays on your device. The <a href="/cookie-notice.html">Cookie Notice</a> explains it.</li>
+      <li><strong>כלום דרך האתר עצמו.</strong> אין חשבונות, הרשמה, טפסים או תשלומים, ולכן איננו מבקשים שם, מייל או פרטי תשלום.</li>
+      <li><strong>אם תכתבו לנו במייל</strong> נקבל את הכתובת שלכם ואת תוכן ההודעה, ונשתמש בהם רק כדי להשיב.</li>
+      <li><strong>חיפושים וסינון נשארים בדפדפן.</strong> מה שאתם מקלידים לא נשלח אלינו.</li>
+      <li><strong>ספירת ביקורים וקליקים אנונימית</strong> באמצעות Umami, כולל פרטים כלליים כמו עמוד, אתר מפנה, מדינה וסוג מכשיר. אין זיהוי של מבקרים, עוגיות או מעקב פרסומי.</li>
+      <li><strong>העדפות קטנות במכשיר.</strong> בחירות נגישות נשמרות בדפדפן. ראו <a href="/cookie-notice.html">מדיניות עוגיות</a>.</li>
     </ul>
 
-    <h2>Third parties involved when you use the site</h2>
+    <h2>צדדים שלישיים</h2>
     <ul>
-      <li><strong>GitHub Pages</strong> hosts the site. As with any web host, GitHub receives standard request information, such as your IP address and browser details, when a page loads, and may log it. PRIME.FINDS does not use that data. See GitHub's privacy statement.</li>
-      <li><strong>Umami</strong> (cloud.umami.is) provides the anonymous visit and click counts described above. See Umami's privacy policy.</li>
-      <li><strong>Google Fonts</strong> supplies the site's typefaces. Your browser requests them from Google's servers, so Google receives your IP address and browser details. See Google's privacy information.</li>
-      <li><strong>Amazon and other retailers.</strong> When you select a &ldquo;View at Amazon&rdquo; or similar button you leave PRIME.FINDS. The retailer, and any link shortener or affiliate program involved, handles your data under its own policies, and may use cookies to attribute a purchase to PRIME.FINDS. We do not receive your account, order or payment details.</li>
+      <li><strong>GitHub Pages</strong> מארח את האתר ומקבל מידע בקשה רגיל כמו כתובת IP.</li>
+      <li><strong>Umami</strong> (cloud.umami.is) מספק את הספירה האנונימית.</li>
+      <li><strong>Google Fonts</strong> מספק את הגופנים ומקבל את כתובת ה-IP ופרטי הדפדפן.</li>
+      <li><strong>אמזון.</strong> כשעוברים לאמזון, אמזון ותוכנית השותפים מטפלות במידע לפי המדיניות שלהן. איננו מקבלים פרטי חשבון, הזמנה או תשלום.</li>
     </ul>
 
-    <h2>Children</h2>
-    <p>PRIME.FINDS is not directed at children, and it does not knowingly collect personal information from anyone, including children.</p>
+    <h2>ילדים</h2>
+    <p>האתר אינו מיועד לילדים ואינו אוסף ביודעין מידע אישי מאף אחד.</p>
 
-    <h2>Visitors from different countries</h2>
-    <p>PRIME.FINDS can be visited from anywhere, and data-protection rules differ from country to country. Because PRIME.FINDS collects no personal information through the site itself (only what you choose to send us by email), most of the rights you may have over your data relate to the third parties above rather than to PRIME.FINDS. If you have a question or request about anything PRIME.FINDS itself might hold, please get in touch and we will look into it.</p>
+    <h2>הזכויות שלכם</h2>
+    <p>לפי חוק הגנת הפרטיות, התשמ״א-1981, ניתן לפנות אלינו בכל בקשה בנוגע למידע שאולי מוחזק אצלנו, כמו התכתבות במייל. אפשר גם למחוק את מה שנשמר בדפדפן ולחסום בקשות לצדדים שלישיים.</p>
 
-    <h2>Your choices</h2>
-    <p>You can clear the items PRIME.FINDS stores in your browser at any time, block third-party requests in your browser settings (the site will fall back to system fonts), or simply not follow the links to retailers.</p>
+    <h2>שינויים במדיניות</h2>
+    <p>אם נתחיל לאסוף משהו חדש, העמוד יעודכן לפני כן והתאריך למעלה ישתנה.</p>
 
-    <h2>Changes to this policy</h2>
-    <p>If PRIME.FINDS starts collecting anything new, such as introducing analytics or an account system, this page will be updated before that happens, and the date at the top will change.</p>
-
-    <h2>Contact</h2>
+    <h2>יצירת קשר</h2>
     {render_contact_paragraph(site)}
 """
     return render_legal_page(
-        site,
-        eyebrow="Legal",
-        title="Privacy Policy",
-        slug="privacy-policy.html",
-        description="What PRIME.FINDS collects (very little), the third parties involved when you use the site, and your choices.",
-        lead_html=lead,
-        sections_html=sections,
+        site, eyebrow="מידע משפטי", title="מדיניות פרטיות", slug="privacy-policy.html",
+        description="מה נאסף (מעט מאוד), אילו צדדים שלישיים מעורבים ומה האפשרויות שלכם.",
+        lead_html=lead, sections_html=sections,
     )
 
 
 def render_terms_page(site):
-    lead = (
-        "<p>These terms describe how PRIME.FINDS may be used and what it is, and is not, responsible for. "
-        "If you do not agree with them, please do not use the site.</p>"
-    )
+    n = esc(site["siteName"])
+    lead = f"<p>התנאים האלה מתארים איך אפשר להשתמש ב{n} ועל מה האתר אחראי. אם אינכם מסכימים להם, נא לא להשתמש באתר.</p>"
     sections = f"""
-    <h2>What PRIME.FINDS is</h2>
-    <p>PRIME.FINDS is an independent, editorial product-discovery website. It is not a store, a marketplace or a retailer. It does not sell products, take payments, ship goods, or handle returns, warranties or customer service. Any purchase is made on the retailer's own website, most often Amazon, and is a matter between you and that retailer.</p>
+    <h2>מה זה האתר</h2>
+    <p>{n} הוא אתר עצמאי לגילוי מוצרים. הוא לא חנות ולא מוכר. הוא לא מוכר מוצרים, לא גובה תשלום, לא שולח סחורה ולא מטפל בהחזרות, אחריות או שירות לקוחות. כל רכישה נעשית באתר של המוכר, בדרך כלל אמזון, והיא עניין בינכם לבינו. האתר אינו קשור לאמזון ואינו מטעמה.</p>
 
-    <h2>Product information</h2>
-    <p>Product names, descriptions, ratings, review counts, images and links on PRIME.FINDS are provided for information. Prices, availability, specifications, shipping, compatibility and reviews are set by retailers and sellers and can change or be withdrawn at any time without notice. Some prices are shown as &ldquo;Check price&rdquo; because they vary. We try to describe products accurately from the retailer's listing when we add them, but we cannot guarantee that everything shown is complete, correct or current. Always verify the details on the retailer's website before you buy.</p>
+    <h2>מידע על מוצרים</h2>
+    <p>שמות, תיאורים, דירוגים, תמונות וקישורים מוצגים לצורך מידע, והתיאורים תורגמו ונכתבו על בסיס הדף באמזון. מחירים, זמינות, מפרטים, משלוחים ותאימות, כולל משלוח לישראל והתאמה למתח החשמל בישראל, נקבעים על ידי המוכרים ועשויים להשתנות. יש לוודא את הפרטים באתר המוכר לפני קנייה.</p>
 
-    <h2>Affiliate links</h2>
-    <p>Many links on PRIME.FINDS are affiliate links, and PRIME.FINDS may earn a commission if you buy through them, at no extra cost to you. See the <a href="/affiliate-disclosure.html">Affiliate Disclosure</a>.</p>
+    <h2>קישורי שותפים</h2>
+    <p>הרבה מהקישורים הם קישורי שותפים, וייתכן שנקבל עמלה אם תקנו דרכם, בלי עלות נוספת עבורכם. ראו <a href="/affiliate-disclosure.html">גילוי נאות</a>.</p>
 
-    <h2>Third-party sites</h2>
-    <p>Links take you to websites that PRIME.FINDS does not own or control. We are not responsible for their content, their policies, or their accessibility, and following a link is your choice.</p>
+    <h2>אתרים של צד שלישי</h2>
+    <p>הקישורים מובילים לאתרים שאינם בבעלותנו, ואיננו אחראים לתוכן, למדיניות או לנגישות שלהם.</p>
 
-    <h2>Not professional advice</h2>
-    <p>Content on PRIME.FINDS is general information and personal curation. It is not professional, safety, medical, financial or legal advice. Follow the manufacturer's instructions and warnings for any product you buy.</p>
+    <h2>לא ייעוץ מקצועי</h2>
+    <p>התוכן באתר הוא מידע כללי. הוא אינו ייעוץ מקצועי, בטיחותי, רפואי, פיננסי או משפטי. יש לפעול לפי הוראות היצרן.</p>
 
-    <h2>Content and ownership</h2>
-    <p>The editorial writing, curation, design and the PRIME.FINDS name and logo belong to PRIME.FINDS. Product names, brands, trademarks and product images belong to their respective owners and are shown to identify the products being discussed. If you own rights in something on the site and believe it is being used incorrectly, please get in touch and we will look at it.</p>
+    <h2>תוכן ובעלות</h2>
+    <p>הכתיבה, הבחירה והעיצוב שייכים ל{n}. שמות מוצרים, מותגים, סימני מסחר ותמונות מוצרים שייכים לבעליהם ומוצגים כדי לזהות את המוצרים. אם אתם בעלי זכויות במשהו באתר וחושבים שנעשה בו שימוש שגוי, פנו אלינו.</p>
 
-    <h2>Using the site</h2>
-    <p>Please use PRIME.FINDS in good faith: do not misuse it, interfere with how it works, or try to access it in ways it is not meant to be accessed.</p>
+    <h2>זמינות ואחריות</h2>
+    <p>האתר מסופק כפי שהוא, בלי התחייבות לזמינות או לדיוק. במידה שהחוק מתיר, איננו אחראים לנזקים שנובעים מהחלטות על מוצרים או מוכרים. אין בתנאים אלה כדי לגרוע מזכויות שלא ניתן להתנות עליהן לפי הדין בישראל.</p>
 
-    <h2>Availability and liability</h2>
-    <p>PRIME.FINDS is provided &ldquo;as is&rdquo;, without promises about uptime, accuracy or fitness for a particular purpose. To the extent the law allows, PRIME.FINDS is not responsible for losses that arise from decisions you make about products or retailers, or from problems with a retailer's site or service. Nothing in these terms limits any rights you have under the laws of your country that cannot be excluded or limited.</p>
+    <h2>שינויים בתנאים</h2>
+    <p>התנאים עשויים להתעדכן. התאריך למעלה מציין מתי עודכנו לאחרונה.</p>
 
-    <h2>Changes to these terms</h2>
-    <p>These terms may be updated as PRIME.FINDS changes. The date at the top shows when they were last revised.</p>
-
-    <h2>Contact</h2>
+    <h2>יצירת קשר</h2>
     {render_contact_paragraph(site)}
 """
     return render_legal_page(
-        site,
-        eyebrow="Legal",
-        title="Terms of Use",
-        slug="terms.html",
-        description="Terms of use for PRIME.FINDS: what the site is, how product information and affiliate links work, and its limits.",
-        lead_html=lead,
-        sections_html=sections,
+        site, eyebrow="מידע משפטי", title="תנאי שימוש", slug="terms.html",
+        description="תנאי השימוש באתר: מה האתר, איך עובדים מידע על מוצרים וקישורי שותפים, ומה הגבולות.",
+        lead_html=lead, sections_html=sections,
     )
 
 
@@ -1816,16 +1744,16 @@ def render_404_page(site):
 <section class="container error-page">
   <div>
     <div class="error-page__code">404</div>
-    <h1 class="section-title" style="margin-top: var(--space-sm);">This find is gone.</h1>
-    <p class="section-desc" style="margin: var(--space-sm) auto var(--space-lg);">The page you're looking for doesn't exist or has moved.</p>
-    <a class="btn btn--primary" href="/">Back to Homepage</a>
+    <h1 class="section-title" style="margin-top: var(--space-sm);">הדף הזה נשדד.</h1>
+    <p class="section-desc" style="margin: var(--space-sm) auto var(--space-lg);">הדף שחיפשתם לא קיים או שעבר למקום אחר.</p>
+    <a class="btn btn--primary" href="/">חזרה לדף הבית</a>
   </div>
 </section>
 """
     return base_page(
         site,
-        title=f"Page Not Found — {site['siteName']}",
-        description="This page doesn't exist or has moved.",
+        title=f"הדף לא נמצא | {site['siteName']}",
+        description="הדף לא קיים או שעבר למקום אחר.",
         canonical_path="/404.html",
         body_html=body,
     )
@@ -1865,7 +1793,7 @@ def main():
                      "featured", "trending", "published", "createdAt")
     snapshot = [{k: p[k] for k in client_fields if k in p} for p in published]
     write_file(os.path.join(PUBLIC_DIR, "data", "products.json"), json.dumps(snapshot, ensure_ascii=False, separators=(",", ":")))
-    write_file(os.path.join(PUBLIC_DIR, "data", "categories.json"), json.dumps(categories, indent=2))
+    write_file(os.path.join(PUBLIC_DIR, "data", "categories.json"), json.dumps(categories, indent=2, ensure_ascii=False))
 
     # ---- Homepage ----
     collections = load_collections(published)
@@ -1967,7 +1895,7 @@ def main():
 
     manifest = {
         "name": site["siteName"],
-        "short_name": site["siteName"].split(".")[0],
+        "short_name": site["siteName"],
         "description": site["description"],
         "start_url": "/",
         "display": "standalone",
@@ -1979,7 +1907,7 @@ def main():
             {"src": "/assets/logo/maskable-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"},
         ],
     }
-    write_file(os.path.join(PUBLIC_DIR, "site.webmanifest"), json.dumps(manifest, indent=2))
+    write_file(os.path.join(PUBLIC_DIR, "site.webmanifest"), json.dumps(manifest, indent=2, ensure_ascii=False))
 
     print(f"Built {len(urls)} pages ({len(published)} products across {len(categories)} categories, "
           f"{len(products) - len(published)} unpublished/hidden).")

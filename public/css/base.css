@@ -115,7 +115,7 @@ p { margin: 0; }
 /* ---- Skip link ---- */
 .skip-link {
   position: absolute;
-  left: var(--space-sm);
+  inset-inline-start: var(--space-sm);
   top: -60px;
   /* The bright coral (not the deep text coral) so the dark label reads at 8:1. */
   background: #ff6f61;

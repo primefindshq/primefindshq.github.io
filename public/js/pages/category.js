@@ -57,8 +57,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (!moreWrap) return;
     const remaining = currentList.length - shown;
     moreWrap.hidden = remaining <= 0;
-    if (moreStatus) moreStatus.textContent = `Showing ${Math.min(shown, currentList.length)} of ${currentList.length}`;
-    if (moreBtn) moreBtn.textContent = `Show ${Math.min(PAGE, Math.max(remaining, 0))} more`;
+    if (moreStatus) moreStatus.textContent = `מוצגים ${Math.min(shown, currentList.length)} מתוך ${currentList.length}`;
+    if (moreBtn) moreBtn.textContent = `להציג עוד ${Math.min(PAGE, Math.max(remaining, 0))}`;
   }
 
   function animateIn(cards) {
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
     list = sortProducts(list, state.sort);
 
-    countEl.textContent = `${list.length} ${list.length === 1 ? 'find' : 'finds'}`;
+    countEl.textContent = `${list.length} מוצרים`;
 
     currentList = list;
     shown = PAGE;
@@ -114,8 +114,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       : `
         <div class="state-panel" style="grid-column: 1/-1;">
           <svg class="state-panel__icon" viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
-          <p class="state-panel__title">No finds match those filters</p>
-          <p>Try widening your price range or clearing a filter.</p>
+          <p class="state-panel__title">לא נמצאו מוצרים בסינון הזה</p>
+          <p>נסו להרחיב את טווח המחירים או לנקות סינון.</p>
         </div>`;
 
     grid.innerHTML = html;

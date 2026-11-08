@@ -53,8 +53,8 @@ export function initA11yPanel() {
     motionSwitch.disabled = deviceReduces;
     if (motionHint) {
       motionHint.textContent = deviceReduces
-        ? 'Your device is already set to reduce motion, so this is on.'
-        : 'Calmer transitions and a simplified intro.';
+        ? 'המכשיר שלכם כבר מוגדר להפחתת תנועה, ולכן האפשרות פעילה.'
+        : 'מעברים רגועים יותר.';
     }
   };
 
@@ -111,29 +111,29 @@ export function initA11yPanel() {
   downBtn.addEventListener('click', () => {
     if (settings.text > 0) {
       settings.text -= 1;
-      commit(`Text size ${TEXT_SCALES[settings.text]} percent`);
+      commit(`גודל טקסט ${TEXT_SCALES[settings.text]} אחוז`);
     }
   });
   upBtn.addEventListener('click', () => {
     if (settings.text < TEXT_SCALES.length - 1) {
       settings.text += 1;
-      commit(`Text size ${TEXT_SCALES[settings.text]} percent`);
+      commit(`גודל טקסט ${TEXT_SCALES[settings.text]} אחוז`);
     }
   });
   contrastSwitch.addEventListener('click', () => {
     settings.contrast = !settings.contrast;
-    commit(`High contrast ${settings.contrast ? 'on' : 'off'}`);
+    commit(`ניגודיות גבוהה ${settings.contrast ? 'פעילה' : 'כבויה'}`);
   });
   motionSwitch.addEventListener('click', () => {
     if (motionSwitch.disabled) return;
     settings.motion = !settings.motion;
-    commit(`Reduce motion ${settings.motion ? 'on' : 'off'}`);
+    commit(`הפחתת תנועה ${settings.motion ? 'פעילה' : 'כבויה'}`);
   });
   resetBtn.addEventListener('click', () => {
     settings.text = 0;
     settings.contrast = false;
     settings.motion = false;
-    commit('All accessibility options reset');
+    commit('כל אפשרויות הנגישות אופסו');
   });
 
   applySettings(settings);

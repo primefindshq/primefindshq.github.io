@@ -1,7 +1,7 @@
 // Small, dependency-free helpers shared across the site.
 
 export function formatPrice(price, currency = 'USD') {
-  if (price == null) return 'Check price';
+  if (price == null) return 'לבדיקת מחיר';
   try {
     return new Intl.NumberFormat('en-US', { style: 'currency', currency }).format(price);
   } catch {
@@ -63,10 +63,10 @@ export function renderStars(rating = 0, reviewCount = null) {
     stars += `<svg viewBox="0 0 20 20" width="13" height="13" fill="${filled ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg>`;
   }
   const label = rating > 0
-    ? `${rating.toFixed(1)} out of 5${reviewCount ? ` (${reviewCount.toLocaleString()} reviews)` : ''}`
-    : 'Not yet rated';
+    ? `${rating.toFixed(1)} מתוך 5${reviewCount ? ` (${reviewCount.toLocaleString()} ביקורות)` : ''}`
+    : 'עדיין ללא דירוג';
   const extra = rating > 0
     ? `<span>${rating.toFixed(1)}</span>${reviewCount ? `<span class="text-faint">(${reviewCount.toLocaleString()})</span>` : ''}`
-    : '<span class="text-faint">New</span>';
+    : '<span class="text-faint">חדש</span>';
   return `<span class="rating" role="img" aria-label="${label}"><span class="stars">${stars}</span>${extra}</span>`;
 }

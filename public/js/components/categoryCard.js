@@ -9,7 +9,7 @@ export function categoryCardMarkup(category, count) {
       <div class="category-card__body">
         <h3 class="category-card__name">${escapeHtml(category.name)}</h3>
         <p class="category-card__desc">${escapeHtml(category.shortDescription)}</p>
-        <span class="category-card__count">${count} ${count === 1 ? 'find' : 'finds'}</span>
+        <span class="category-card__count">${count} מוצרים</span>
       </div>
     </a>
   `;
