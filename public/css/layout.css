@@ -45,7 +45,10 @@
 }
 .brand-logo:hover { opacity: 0.82; }
 .brand-logo:active { opacity: 0.66; }
-.brand-logo img { height: 24px; width: auto; }
+.brand-logo img { height: 26px; width: auto; max-width: 100%; }
+@media (max-width: 640px) { .brand-logo picture img { height: 46px; } }
+/* Small phones can't fit the logo, the guides pill and three buttons; the menu still links to guides. */
+@media (max-width: 400px) { .site-header__inner .header-nav { display: none; } }
 
 .header-actions {
   display: flex;
@@ -402,12 +405,3 @@ body.intro-lock { overflow: hidden; }
   max-width: 860px;
 }
 
-/* Text wordmark until the Hebrew logo artwork exists. */
-.brand-wordmark {
-  font-family: var(--font-display);
-  font-weight: 900;
-  font-size: clamp(1.1rem, 2.4vw, 1.5rem);
-  line-height: 1.1;
-  color: var(--color-text);
-  white-space: nowrap;
-}

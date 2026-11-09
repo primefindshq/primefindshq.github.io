@@ -1,162 +1,138 @@
 """
-Derives every logo/icon asset the site uses from the single official source
-render at scripts/logo-source/prime-finds-logo-master.png (gold "P/F"
-monogram + "PRIME.FINDS" wordmark + tagline, on a black square).
+Builds every logo and icon for "שודדים את אמזון": a coral bandit mask plus the
+Hebrew name set in Frank Ruhl Libre (the site's display font).
 
-Run this only when the master source image changes. Output goes straight to
-public/assets/logo/ -- re-run scripts/build.py afterwards to be safe (the
-generated HTML references these by fixed filename, so nothing else changes).
+The artwork is drawn as HTML/SVG and rendered by headless Chrome, because
+Chrome shapes Hebrew correctly and loads the web font. Pillow then trims and
+resizes the results. Needs Chrome, Pillow and an internet connection.
 
     py scripts/generate_logo_assets.py
+
+Output goes to public/assets/logo/. The site references these fixed filenames.
 """
 import os
-from PIL import Image, ImageFilter
+import subprocess
+import tempfile
+
+from PIL import Image
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SRC = os.path.join(ROOT, "scripts", "logo-source", "prime-finds-logo-master.png")
 LOGO_DIR = os.path.join(ROOT, "public", "assets", "logo")
-BRAND_BG = (20, 33, 61)  # navy, matches the navy --color-bg in tokens.css
-CORAL = (255, 111, 97)
-CREAM = (251, 245, 230)
+CHROME = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
 
-# Luminance band the background (solid near-black) fades to transparent
-# over. Kept low so real dark-gold shadow tones in the artwork survive.
-ALPHA_LOW, ALPHA_HIGH = 20, 70
+NAVY = "#14213d"
+CREAM = "#fbf5e6"
+CORAL = "#ff6f61"
+NAVY_RGB = (20, 33, 61)
 
-# Vertical bands (in source-image px) each lockup element sits in. Re-measure
-# these (e.g. with a quick min/max-alpha-row scan) if the source is replaced
-# with a differently laid-out render.
-MARK_BAND = (270, 665)
-TEXT_BAND = (720, 822)
-TAGLINE_BAND = (840, 975)
+MASK_PATH = (
+    "M150 30C175 20 215 16 250 24C258 26 262 34 260 42C254 78 232 104 196 104"
+    "C174 104 160 92 150 78C140 92 126 104 104 104C68 104 46 78 40 42"
+    "C38 34 42 26 50 24C85 16 125 20 150 30Z"
+    "M168 62L228 46C226 70 208 84 190 82C178 81 170 73 168 62Z"
+    "M132 62L72 46C74 70 92 84 110 82C122 81 130 73 132 62Z"
+)
+KNOT_PATH = (
+    "M42 30C28 16 14 10 2 14C10 24 12 32 10 42C20 38 32 38 42 44Z"
+    "M42 40C30 48 22 64 6 74C20 78 36 72 44 52Z"
+)
 
 
-def cutout_from_black(rgb_img):
-    """Alpha-key a render-on-solid-black image without rescaling color
-    (rescaling by coverage washes gold out toward pale yellow), then remove
-    isolated compression-noise specks with a morphological open."""
-    gray = rgb_img.convert("L")
-    alpha = gray.point(
-        lambda m: 0 if m <= ALPHA_LOW
-        else (255 if m >= ALPHA_HIGH else round((m - ALPHA_LOW) / (ALPHA_HIGH - ALPHA_LOW) * 255))
+def mask_svg(color=CORAL, pupil=CREAM, style=""):
+    return (
+        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 110" style="{style}">'
+        f'<path fill="{color}" d="{KNOT_PATH}"/>'
+        f'<path fill="{color}" fill-rule="evenodd" d="{MASK_PATH}"/>'
+        f'<circle fill="{pupil}" cx="199" cy="65" r="8"/><circle fill="{pupil}" cx="115" cy="65" r="8"/></svg>'
     )
-    alpha = alpha.filter(ImageFilter.MinFilter(5)).filter(ImageFilter.MaxFilter(5))
-    return Image.merge("RGBA", (*rgb_img.split(), alpha))
 
 
-def recolor_brand(cut):
-    """The master is gold + white; repaint it coral + cream, keeping its shading.
-    Saturated pixels take coral and neutral ones cream, blended by saturation so
-    anti-aliased edges stay smooth."""
-    out = cut.copy()
-    px = out.load()
-    w, h = out.size
-    for y in range(h):
-        for x in range(w):
-            r, g, b, a = px[x, y]
-            hi = max(r, g, b)
-            if not a or not hi:
-                continue
-            sat = (hi - min(r, g, b)) / hi
-            t = min(1.0, max(0.0, (sat - 0.15) / 0.2))
-            coral = min(1.15, hi / 215)
-            cream = hi / 255
-            px[x, y] = tuple(
-                min(255, round(t * c * coral + (1 - t) * n * cream)) for c, n in zip(CORAL, CREAM)
-            ) + (a,)
-    return out
+def name_html(first=CREAM, second=CORAL):
+    return f'<span style="color:{first}">שודדים את</span> <span style="color:{second}">אמזון</span>'
 
 
-def bbox_in_band(cut, y0, y1, alpha_thresh=120):
-    w, h = cut.size
-    px = cut.load()
-    min_x, max_x, min_y, max_y = w, 0, h, 0
-    found = False
-    for y in range(y0, min(y1, h - 1) + 1):
-        for x in range(w):
-            if px[x, y][3] > alpha_thresh:
-                found = True
-                if x < min_x: min_x = x
-                if x > max_x: max_x = x
-                if y < min_y: min_y = y
-                if y > max_y: max_y = y
-    if not found:
-        raise RuntimeError(f"no content found in band {y0}-{y1}")
-    return (min_x, min_y, max_x, max_y)
+def page(body, bg="transparent"):
+    return f"""<!doctype html><html dir="rtl" lang="he"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@900&display=block" rel="stylesheet">
+<style>html,body{{margin:0;width:100%;height:100%;background:{bg};overflow:hidden}}
+body{{display:flex;align-items:center;justify-content:center;font-family:'Frank Ruhl Libre',serif;font-weight:900}}
+</style></head><body>{body}</body></html>"""
 
 
-def crop_padded(cut, box, pad):
-    w, h = cut.size
-    x0, y0, x1, y1 = box
-    x0, y0 = max(0, x0 - pad), max(0, y0 - pad)
-    x1, y1 = min(w - 1, x1 + pad), min(h - 1, y1 + pad)
-    return cut.crop((x0, y0, x1 + 1, y1 + 1))
+def horizontal(first, second, pupil=CREAM):
+    return page(
+        f'<div style="display:flex;align-items:center;gap:44px;white-space:nowrap;line-height:1">'
+        f'{mask_svg(pupil=pupil, style="width:340px;display:block")}'
+        f'<div style="font-size:200px">{name_html(first, second)}</div></div>'
+    )
 
 
-def square_canvas(im, size, margin_frac=0.12, bg=None):
-    canvas = Image.new("RGBA", (size, size), (bg + (255,)) if bg else (0, 0, 0, 0))
-    avail = size * (1 - margin_frac * 2)
-    scale = min(avail / im.width, avail / im.height)
-    nw, nh = max(1, round(im.width * scale)), max(1, round(im.height * scale))
-    resized = im.resize((nw, nh), Image.LANCZOS)
-    canvas.alpha_composite(resized, ((size - nw) // 2, (size - nh) // 2))
-    return canvas
+def stacked(size_mask, size_text, gap, bg=NAVY):
+    return page(
+        f'<div style="display:flex;flex-direction:column;align-items:center;gap:{gap}px;line-height:1.05;text-align:center">'
+        f'{mask_svg(style=f"width:{size_mask}px;display:block")}'
+        f'<div style="font-size:{size_text}px;white-space:nowrap">{name_html()}</div></div>',
+        bg,
+    )
+
+
+def render(html, w, h, tmp, name):
+    src = os.path.join(tmp, name + ".html")
+    out = os.path.join(tmp, name + ".png")
+    with open(src, "w", encoding="utf-8") as f:
+        f.write(html)
+    subprocess.run(
+        [CHROME, "--headless=new", "--disable-gpu", "--hide-scrollbars",
+         f"--user-data-dir={os.path.join(tmp, 'profile')}",
+         "--default-background-color=00000000", "--virtual-time-budget=8000",
+         f"--window-size={w},{h}", f"--screenshot={out}", "file:///" + src.replace("\\", "/")],
+        check=True, capture_output=True, timeout=120,
+    )
+    return Image.open(out).convert("RGBA")
+
+
+def trim(im, pad=8):
+    x0, y0, x1, y1 = im.getchannel("A").getbbox()
+    return im.crop((max(0, x0 - pad), max(0, y0 - pad), min(im.width, x1 + pad), min(im.height, y1 + pad)))
 
 
 def main():
     os.makedirs(LOGO_DIR, exist_ok=True)
-    source = Image.open(SRC).convert("RGB")
-    cut = recolor_brand(cutout_from_black(source))
+    save = lambda im, name, **kw: im.save(os.path.join(LOGO_DIR, name), **kw)
+    with open(os.path.join(LOGO_DIR, "mark.svg"), "w", encoding="utf-8") as f:
+        f.write(mask_svg())
 
-    mark_box = bbox_in_band(cut, *MARK_BAND)
-    mark = crop_padded(cut, mark_box, 18)
+    with tempfile.TemporaryDirectory() as tmp:
+        on_dark = trim(render(horizontal(CREAM, CORAL), 2200, 500, tmp, "dark"))
+        on_light = trim(render(horizontal(NAVY, "#b93a2a", NAVY), 2200, 500, tmp, "light"))
+        compact = trim(render(stacked(520, 150, 14, "transparent"), 1300, 700, tmp, "compact"))
+        mark = trim(render(page(mask_svg(style="width:960px;display:block")), 1024, 620, tmp, "mark"))
+        tile = render(page(mask_svg(style="width:930px;display:block"), NAVY), 1024, 1024, tmp, "tile")
+        safe = render(page(mask_svg(style="width:680px;display:block"), NAVY), 1024, 1024, tmp, "safe")
+        profile = render(stacked(620, 132, 40), 1080, 1080, tmp, "profile")
+        og = render(stacked(380, 112, 34), 1200, 630, tmp, "og")
 
-    text_box = bbox_in_band(cut, *TEXT_BAND)
-    x0 = min(mark_box[0], text_box[0]); x1 = max(mark_box[2], text_box[2])
-    wordmark = crop_padded(cut, (x0, mark_box[1], x1, text_box[3]), 20)
+    save(on_dark, "wordmark.png")
+    save(compact, "wordmark-compact.png")
+    save(on_light, "wordmark-on-light.png")
+    save(mark, "mark.png")
+    save(profile.convert("RGB"), "profile-1080.png")
+    save(og.convert("RGB"), "og-image.jpg", quality=92)
 
-    tagline_box = bbox_in_band(cut, *TAGLINE_BAND)
-    fx0 = min(x0, tagline_box[0]); fx1 = max(x1, tagline_box[2])
-    full_lockup = crop_padded(cut, (fx0, mark_box[1], fx1, tagline_box[3]), 24)
+    # Rounded navy tile, so the icon stands out on light and dark browser tabs.
+    corners = Image.new("L", (4096, 4096), 0)
+    from PIL import ImageDraw
+    ImageDraw.Draw(corners).rounded_rectangle((0, 0, 4095, 4095), 880, fill=255)
+    rounded = tile.copy()
+    rounded.putalpha(corners.resize(tile.size, Image.LANCZOS))
 
-    mark.save(os.path.join(LOGO_DIR, "mark.png"))
-    wordmark.save(os.path.join(LOGO_DIR, "wordmark.png"))
-    full_lockup.save(os.path.join(LOGO_DIR, "full-lockup.png"))
-
-    # Favicons / app icons: transparent, mark-only, square.
-    favicon_imgs = {}
+    sizes = {s: rounded.resize((s, s), Image.LANCZOS) for s in (512, 192, 48, 32, 16)}
     for s in (512, 192, 32, 16):
-        im = square_canvas(mark, s, margin_frac=0.1)
-        favicon_imgs[s] = im
-        im.save(os.path.join(LOGO_DIR, f"favicon-{s}.png"))
-    ico_48 = square_canvas(mark, 48, margin_frac=0.1)
-    favicon_imgs[16].save(
-        os.path.join(LOGO_DIR, "favicon.ico"),
-        format="ICO",
-        sizes=[(16, 16), (32, 32), (48, 48)],
-        append_images=[favicon_imgs[32], ico_48],
-    )
-
-    # apple-touch-icon / maskable icon need an opaque background.
-    square_canvas(mark, 180, margin_frac=0.16, bg=BRAND_BG).convert("RGB").save(
-        os.path.join(LOGO_DIR, "apple-touch-icon.png")
-    )
-    square_canvas(mark, 512, margin_frac=0.22, bg=BRAND_BG).convert("RGB").save(
-        os.path.join(LOGO_DIR, "maskable-icon-512.png")
-    )
-
-    # Social/OG share image (1200x630, opaque) -- uses the mark+wordmark
-    # lockup, not the full lockup, since the tagline turns to mush at this
-    # output size once downscaled.
-    og_w, og_h = 1200, 630
-    og = Image.new("RGB", (og_w, og_h), BRAND_BG)
-    scale = (og_w * 0.6) / wordmark.width
-    fw, fh = round(wordmark.width * scale), round(wordmark.height * scale)
-    resized = wordmark.resize((fw, fh), Image.LANCZOS)
-    og.paste(resized, ((og_w - fw) // 2, (og_h - fh) // 2), resized)
-    og.save(os.path.join(LOGO_DIR, "og-image.jpg"), quality=92)
-
-    print("Wrote logo assets to", LOGO_DIR)
+        save(sizes[s], f"favicon-{s}.png")
+    sizes[48].save(os.path.join(LOGO_DIR, "favicon.ico"), format="ICO", sizes=[(16, 16), (32, 32), (48, 48)])
+    save(tile.convert("RGB").resize((180, 180), Image.LANCZOS), "apple-touch-icon.png")
+    save(safe.convert("RGB").resize((512, 512), Image.LANCZOS), "maskable-icon-512.png")
+    print("wordmark", on_dark.size, "compact", compact.size, "mark", mark.size)
 
 
 if __name__ == "__main__":

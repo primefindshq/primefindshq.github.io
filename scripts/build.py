@@ -279,7 +279,7 @@ def render_header(site, active=None):
 <a class="skip-link" href="#main-content">דילוג לתוכן הראשי</a>
 <header class="site-header">
   <div class="container site-header__inner">
-    <a class="brand-logo" href="/" aria-label="{esc(site['siteName'])}, דף הבית"><span class="brand-wordmark">{esc(site['siteName'])}</span></a>
+    <a class="brand-logo" href="/" aria-label="{esc(site['siteName'])}, דף הבית"><picture><source media="(max-width: 640px)" srcset="/assets/logo/wordmark-compact.png" width="972" height="371" /><img src="/assets/logo/wordmark.png" alt="{esc(site['siteName'])}" width="1676" height="168" /></picture></a>
     <nav class="header-nav" aria-label="ראשי">
       {header_links}
     </nav>
@@ -313,7 +313,7 @@ def render_site_index(site, categories, counts):
     return f"""
 <div class="site-index" id="site-index" data-index-panel role="dialog" aria-modal="true" aria-label="תפריט האתר">
   <div class="site-index__top">
-    <a class="brand-logo" href="/" aria-label="{esc(site['siteName'])}, דף הבית"><span class="brand-wordmark">{esc(site['siteName'])}</span></a>
+    <a class="brand-logo" href="/" aria-label="{esc(site['siteName'])}, דף הבית"><img src="/assets/logo/wordmark.png" alt="{esc(site['siteName'])}" width="1676" height="168" /></a>
     <button class="icon-btn" type="button" data-index-close aria-label="סגירת התפריט">{CLOSE_ICON}</button>
   </div>
   <div class="site-index__body">
@@ -461,7 +461,7 @@ def render_footer(site):
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a class="brand-logo" href="/"><span class="brand-wordmark">{esc(site['siteName'])}</span></a>
+        <a class="brand-logo" href="/"><img src="/assets/logo/wordmark.png" alt="{esc(site['siteName'])}" width="1676" height="168" /></a>
         <p class="footer-brand__tagline">{esc(site['tagline'])}</p>
       </div>
       <div>
@@ -866,7 +866,7 @@ def render_homepage(site, categories, products, counts, collections=(), videos=(
         "@type": "Organization",
         "name": site["siteName"],
         "url": site["url"],
-        "logo": site["url"].rstrip("/") + "/assets/logo/wordmark.png",
+        "logo": site["url"].rstrip("/") + "/assets/logo/favicon-512.png",
         "description": site["description"],
     })
     extra_head = f'<script type="application/ld+json">{ld_json}</script>'
