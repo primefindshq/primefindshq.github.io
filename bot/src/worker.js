@@ -159,6 +159,15 @@ async function refreshToken(env) {
   } else console.log("token refresh failed", JSON.stringify(j).slice(0, 200));
 }
 
+// Called on webhook traffic: refresh when the last refresh is over 7 days old.
+async function maybeRefreshToken(env) {
+  if (!env.BOT_KV) return;
+  const last = Number((await env.BOT_KV.get("ig_token_refreshed_at")) || 0);
+  if (Date.now() - last < 7 * 86400 * 1000) return;
+  await env.BOT_KV.put("ig_token_refreshed_at", String(Date.now()));
+  await refreshToken(env).catch((e) => console.log("refresh error", String(e)));
+}
+
 const json = (obj, status = 200) =>
   new Response(JSON.stringify(obj, null, 2), { status, headers: { "content-type": "application/json; charset=utf-8" } });
 
@@ -183,6 +192,7 @@ export default {
         return new Response("bad json", { status: 400 });
       }
       ctx.waitUntil(handleWebhook(env, payload)); // answer Meta fast, work in the background
+      ctx.waitUntil(maybeRefreshToken(env));
       return new Response("EVENT_RECEIVED");
     }
 

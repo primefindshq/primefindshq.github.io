@@ -2,9 +2,8 @@ name = "shodedim-bot"
 main = "src/worker.js"
 compatibility_date = "2026-10-01"
 
-# Refresh the Instagram token every Monday at 06:00 UTC (only works with BOT_KV below)
-[triggers]
-crons = ["0 6 * * 1"]
+# No cron trigger: the free plan's 5 cron slots are used by other projects.
+# The token is refreshed from the webhook handler instead, at most once a week (needs BOT_KV).
 
 [vars]
 # Your Instagram professional account ID (step 4 in README.he.md)
@@ -17,6 +16,6 @@ MEDIA_MAP = "{}"
 # Optional but recommended: storage for dedup, cooldowns and the auto-refreshed token.
 # Create it with:  npx wrangler kv namespace create BOT_KV
 # then uncomment and paste the id it prints:
-# [[kv_namespaces]]
-# binding = "BOT_KV"
-# id = "PASTE_ID_HERE"
+[[kv_namespaces]]
+binding = "BOT_KV"
+id = "39a5e425948b46eaa0886bede6af40b8"
