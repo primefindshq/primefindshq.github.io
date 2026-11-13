@@ -1,0 +1,15 @@
+{
+  "name": "shodedim-bot",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node test/test.mjs",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "logs": "wrangler tail",
+    "tiktok": "py tiktok/make_replies.py"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

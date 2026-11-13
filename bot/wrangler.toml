@@ -1,0 +1,22 @@
+name = "shodedim-bot"
+main = "src/worker.js"
+compatibility_date = "2026-10-01"
+
+# Refresh the Instagram token every Monday at 06:00 UTC (only works with BOT_KV below)
+[triggers]
+crons = ["0 6 * * 1"]
+
+[vars]
+# Your Instagram professional account ID (step 4 in README.he.md)
+IG_USER_ID = "PUT_YOUR_IG_USER_ID_HERE"
+GRAPH_VERSION = "v23.0"
+# Optional: tie a reel to a video page by its media ID, if the caption has no code word.
+# MEDIA_MAP = '{"17900000000000000": "vilon"}'
+MEDIA_MAP = "{}"
+
+# Optional but recommended: storage for dedup, cooldowns and the auto-refreshed token.
+# Create it with:  npx wrangler kv namespace create BOT_KV
+# then uncomment and paste the id it prints:
+# [[kv_namespaces]]
+# binding = "BOT_KV"
+# id = "PASTE_ID_HERE"
