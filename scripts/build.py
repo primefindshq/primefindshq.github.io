@@ -38,6 +38,7 @@ CSS_FILES = [
     "/css/animations.css",
     "/css/pages.css",
     "/css/a11y.css",
+    "/css/premium.css",
 ]
 
 
@@ -716,23 +717,24 @@ def render_gift_guide(heading_tag="h2", title="מוצאים מתנה מהר"):
 
 
 def render_video_strip(videos):
-    """Homepage strip for the newest video: its products in video order, numbered."""
+    """Homepage rail of the newest videos: one card per video, opening its page."""
     if not videos:
         return ""
-    v = videos[0]
-    items = "".join(
-        f'<div class="rail__item"><div class="video-item" id="h{i["n"]}">'
-        f'<div class="video-item__label"><span class="video-item__num">#{i["n"]}</span> {esc(i["label"])}</div>'
-        f'{render_product_card(i["product"], reveal=False, eager=True)}</div></div>'
-        for i in v["items"]
+    cards = "".join(
+        f'<div class="rail__item"><a class="video-card" href="/v/{v["slug"]}/">'
+        f'<span class="video-card__media"><img src="{v["items"][0]["product"]["image"]}" alt="" loading="lazy" width="400" height="400" />'
+        f'<span class="video-card__count">{len(v["items"])} {"מוצר" if len(v["items"]) == 1 else "מוצרים"}</span></span>'
+        f'<span class="video-card__title">{esc(v["title"])}</span>'
+        f'<span class="video-card__go">לעמוד הסרטון {CHEVRON_ICON}</span></a></div>'
+        for v in videos[:12]
     )
     return f"""
 <section class="section" id="from-the-videos">
   <div class="container section-head--split" data-reveal="fade">
     <div>
       <span class="eyebrow">מהסרטונים</span>
-      <h2 class="section-title">{esc(v['title'])}</h2>
-      <p class="section-desc">ראיתם משהו בסרטון האחרון? כל מוצר מחכה כאן תחת אותו מספר. <a href="/v/">לכל הסרטונים</a></p>
+      <h2 class="section-title">ראיתם בטיקטוק? זה כאן</h2>
+      <p class="section-desc">לכל סרטון יש עמוד עם המוצרים שבו, באותו מספר שראיתם. <a href="/v/">לכל הסרטונים</a></p>
     </div>
     <div class="rail-controls">
       <button class="icon-btn" type="button" data-rail-prev="video-rail" aria-label="גלילה אחורה">{CHEVRON_LEFT_ICON}</button>
@@ -740,7 +742,7 @@ def render_video_strip(videos):
     </div>
   </div>
   <div class="container">
-    <div class="rail" id="video-rail" data-rail role="region" aria-label="מוצרים מהסרטון האחרון">{items}</div>
+    <div class="rail rail--videos" id="video-rail" data-rail role="region" aria-label="הסרטונים האחרונים">{cards}</div>
   </div>
 </section>
 """
@@ -750,14 +752,14 @@ def render_guides_strip(guides):
     """Homepage section for the gift guides: the season's main way into the catalog."""
     if not guides:
         return ""
-    tiles = "".join(render_guide_tile(g) for g in guides[:9])
+    tiles = "".join(render_guide_tile(g) for g in guides[:6])
     return f"""
 <section class="section container" id="gift-guides">
   <div class="section-head section-head--split" data-reveal="fade">
     <div>
-      <span class="eyebrow">רעיונות למתנה</span>
-      <h2 class="section-title">מדריכי מתנות לכל אחד</h2>
-      <p class="section-desc">רשימות קצרות ונבחרות לפי אדם ותקציב. כדאי להתחיל כאן אם קונים למישהו אחר.</p>
+      <span class="eyebrow">מדריכי מתנות</span>
+      <h2 class="section-title">קונים למישהו אחר?</h2>
+      <p class="section-desc">רשימות קצרות לפי אדם ולפי תקציב, כדי שלא תצטרכו לנחש.</p>
     </div>
     <a class="btn btn--secondary" href="/guides/">כל {len(guides)} המדריכים {CHEVRON_ICON}</a>
   </div>
@@ -769,29 +771,52 @@ def render_guides_strip(guides):
 def render_homepage(site, categories, products, counts, collections=(), videos=(), guides=()):
     trending = [p for p in products if p.get("trending")][:10]
     latest = sorted(products, key=lambda p: p["createdAt"], reverse=True)[:8]
-    collage_source = trending if len(trending) >= 3 else products
-    collage = collage_source[:3]
+    # Hero reel: two slow columns of real product photos. The second copy of
+    # each column exists only so the loop is seamless, so it is hidden from
+    # assistive tech and the keyboard.
+    reel_pool = (trending + [p for p in products if p not in trending])[:16]
+    def reel_col(items, mod):
+        tiles = "".join(
+            f'<a class="hero-reel__tile" href="/product/{p["slug"]}/"{" tabindex=\"-1\" aria-hidden=\"true\"" if dup else ""}>'
+            f'<img src="{p["image"]}" alt="{"" if dup else esc(p["name"])}" loading="{"eager" if i < 3 and not dup else "lazy"}" width="400" height="400" /></a>'
+            for dup in (False, True) for i, p in enumerate(items)
+        )
+        return f'<div class="hero-reel__col hero-reel__col--{mod}"><div class="hero-reel__track">{tiles}</div></div>'
+    reel_html = reel_col(reel_pool[0::2], "a") + reel_col(reel_pool[1::2], "b")
 
-    collage_html = "".join(
-        f'<div class="hero-collage__item hero-collage__item--{i+1}"><img src="{p["image"]}" alt="{esc(p["name"])}" loading="eager" /></div>'
-        for i, p in enumerate(collage)
-    )
+    title_words = [("שודדים", True), ("רק", False), ("את", False), (None, False), ("מה", False), ("ששווה", False), ("לקנות.", False)]
+    title_html, wi = [], 0
+    for w, accent in title_words:
+        if w is None:
+            title_html.append("<br/>")
+            continue
+        cls = "w w--accent" if accent else "w"
+        title_html.append(f'<span class="{cls}" style="--i:{wi}"><span>{w}</span></span>')
+        wi += 1
+    avg_rating = sum(p["rating"] for p in products if p.get("rating")) / max(1, sum(1 for p in products if p.get("rating")))
+
     hero = f"""
-<section class="hero">
+<section class="hero hero--stage">
+  <div class="hero__glow" aria-hidden="true"></div>
   <div class="container hero__grid">
     <div class="hero__intro">
-      <h1 class="hero__title hero-enter hero-enter--1"><span class="accent">שודדים</span> רק את<br/>מה ששווה לקנות.</h1>
-      <p class="hero__sub hero-enter hero-enter--2">בלי לגלול שעות בתוצאות חיפוש. אנחנו בוחרים ידנית את הגאדג׳טים, המתנות והרעיונות הקטנים והטובים מאמזון שבאמת שווים את הכסף, עם דירוגים אמיתיים ומחירים שנבדקו.</p>
+      <span class="hero__eyebrow hero-enter hero-enter--1">שלל נבחר מאמזון</span>
+      <h1 class="hero__title">{" ".join(title_html)}</h1>
+      <p class="hero__sub hero-enter hero-enter--2">עוברים על רבי המכר של אמזון ומשאירים רק מוצרים עם דירוג גבוה ואלפי ביקורות. כל השאר נשאר על המדף.</p>
       <div class="hero__ctas hero-enter hero-enter--3">
         <a class="btn btn--primary" href="{'/guides/' if guides else '#categories'}">{'למדריכי המתנות' if guides else 'לקטלוג'} {CHEVRON_ICON}</a>
-        <a class="btn btn--secondary" href="#categories">לכל הקטלוג</a>
-        <span class="hero__ctas-note">{len(products):,} מוצרים נבחרים</span>
+        <a class="btn btn--on-dark" href="#categories">כל הקטגוריות</a>
       </div>
+      <dl class="hero__stats hero-enter hero-enter--4">
+        <div><dt>מוצרים בקטלוג</dt><dd>{len(products):,}</dd></div>
+        <div><dt>מדריכי מתנות</dt><dd>{len(guides)}</dd></div>
+        <div><dt>דירוג ממוצע</dt><dd>{avg_rating:.1f}<span aria-hidden="true">★</span></dd></div>
+      </dl>
     </div>
-    <div class="hero__collage">{collage_html}</div>
+    <div class="hero-reel" aria-label="מוצרים מהקטלוג">{reel_html}</div>
   </div>
+  <p class="hero__note container">קישורי שותפים: כשקונים דרכנו, אנחנו עשויים לקבל עמלה מאמזון, בלי תוספת למחיר. האתר אינו קשור לאמזון. <a href="/affiliate-disclosure.html">גילוי נאות</a></p>
 </section>
-<div class="container">{render_affiliate_note(site)}</div>
 """
 
     trending_cards = "".join(render_product_card(p, reveal_delay=min(i, 3) * 70) for i, p in enumerate(trending))
@@ -800,7 +825,8 @@ def render_homepage(site, categories, products, counts, collections=(), videos=(
   <div class="container section-head--split" data-reveal="fade">
     <div>
       <span class="eyebrow">חם עכשיו</span>
-      <h2 class="section-title">הכי פופולריים כרגע</h2>
+      <h2 class="section-title">השלל החם</h2>
+      <p class="section-desc">המוצרים עם הכי הרבה ביקורות טובות בקטלוג.</p>
     </div>
     <div class="rail-controls">
       <button class="icon-btn" type="button" data-rail-prev="trending-rail" aria-label="גלילה אחורה">{CHEVRON_LEFT_ICON}</button>
@@ -820,9 +846,9 @@ def render_homepage(site, categories, products, counts, collections=(), videos=(
 <section class="section container" id="categories">
   <div class="section-head" data-reveal="fade">
     <div>
-      <span class="eyebrow">עיון</span>
-      <h2 class="section-title">קונים לפי קטגוריה</h2>
-      <p class="section-desc">{len(categories)} דרכים להיכנס לקטלוג.</p>
+      <span class="eyebrow">קטגוריות</span>
+      <h2 class="section-title">מה מחפשים היום?</h2>
+      <p class="section-desc">{len(categories)} מדפים, מסודרים לפי מה שבאמת קונים.</p>
     </div>
   </div>
   <div class="category-bento">{category_tiles}</div>
@@ -849,8 +875,8 @@ def render_homepage(site, categories, products, counts, collections=(), videos=(
 <section class="section container" id="latest">
   <div class="section-head" data-reveal="fade">
     <div>
-      <span class="eyebrow">חדש באתר</span>
-      <h2 class="section-title">הצטרפו עכשיו לקטלוג</h2>
+      <span class="eyebrow">חדש בקטלוג</span>
+      <h2 class="section-title">נכנסו לאחרונה</h2>
     </div>
   </div>
   <div class="grid-products grid-products--feature">{latest_cards}</div>
