@@ -23,7 +23,7 @@ export function productCardMarkup(product) {
     <article class="product-card" data-reveal>
       <a class="product-card-link" href="/product/${product.slug}/" aria-labelledby="${cid}-name" aria-describedby="${cid}-desc ${cid}-meta">
         <div class="product-card__media">
-          <img src="${product.image}" alt="${escapeHtml(product.name)}" loading="lazy" width="800" height="800"
+          <img src="${product.thumb || product.image}" alt="${escapeHtml(product.name)}" loading="lazy" width="800" height="800"
                style="view-transition-name: product-photo-${product.slug}"
                onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
         </div>

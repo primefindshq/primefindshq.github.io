@@ -8660,17 +8660,17 @@
   },
   {
     "id": "prd-0230",
-    "name": "Codenames Board Game (2nd Edition)",
+    "name": "משחק הקופסה Codenames, מהדורה שנייה (באנגלית)",
     "slug": "codenames-board-game-2nd-edition",
     "category": "gaming",
     "secondaryCategories": [
       "gifts",
       "under-25"
     ],
-    "subcategory": "Tabletop Games",
-    "shortDescription": "The word-association party game where two teams' spymasters give one-word clues to find their agents on a 5x5 grid, in its new second edition.",
-    "description": "In Codenames, two teams race to find their agents in a 5x5 grid of words. Each team's spymaster knows which words belong to whom and gives one-word clues plus a number. Teammates guess while avoiding the other team's agents, bystanders and the assassin, which ends the game instantly. The 2nd Edition includes revised words, refreshed art, a better insert and a streamlined rulebook, per the listing. Contents include 200 cards with 400 codenames, 40 key cards, agent tiles, bystanders, an assassin tile and a card stand.",
-    "whyWeLikeIt": "It works for four people or a whole party and gets people talking immediately. The second edition is the one to buy now.",
+    "subcategory": "משחקי קופסה",
+    "shortDescription": "משחק אסוציאציות קבוצתי עם רמזים של מילה אחת.",
+    "description": "שתי קבוצות מתחרות על מציאת הסוכנים שלהן בלוח של 5 על 5 מילים. ראש הריגול של כל קבוצה יודע אילו מילים שייכות למי, ונותן רמז של מילה אחת ומספר. חברי הקבוצה מנחשים ונזהרים מהסוכנים של היריבים, מעוברי אורח ומהמתנקש, שמסיים את המשחק מיד. במהדורה השנייה מילים מעודכנות, איורים חדשים, מגש מסודר יותר וחוברת חוקים פשוטה יותר. בקופסה 200 קלפים עם 400 מילים, 40 קלפי מפתח, אריחי סוכנים, עוברי אורח, מתנקש ומעמד לקלפים. המשחק באנגלית.",
+    "whyWeLikeIt": "עובד גם בארבעה וגם במסיבה שלמה.",
     "image": "/assets/images/products/codenames-board-game-2nd-edition.jpg",
     "additionalImages": [],
     "price": 24.97,
@@ -8688,20 +8688,19 @@
       "gift"
     ],
     "highlights": [
-      "Two teams, spymasters give one-word clues",
-      "5x5 word grid; avoid the assassin",
-      "200 cards with 400 codenames",
-      "2nd Edition: revised words, new art, better insert",
-      "Party-friendly"
+      "שתי קבוצות, רמז של מילה אחת",
+      "לוח של 5x5 מילים",
+      "200 קלפים, 400 מילים",
+      "מהדורה שנייה",
+      "באנגלית"
     ],
     "affiliateUrl": "https://link.amazon/B0fJm9HM4",
     "externalUrl": "https://link.amazon/B0fJm9HM4",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-09-28T00:00:00.000Z",
-    "updatedAt": "2026-11-01T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z"
   },
   {
     "id": "prd-0231",
@@ -8876,17 +8875,17 @@
   },
   {
     "id": "prd-0235",
-    "name": "Lily's Home 14-Inch Glass Galileo Thermometer",
+    "name": "מדחום גלילאו מזכוכית Lily's Home, גובה 35 ס\"מ",
     "slug": "lilys-home-14-inch-glass-galileo-thermometer",
     "category": "home",
     "secondaryCategories": [
       "desk-setup",
       "gifts"
     ],
-    "subcategory": "Decor",
-    "shortDescription": "A hand-blown glass Galileo thermometer whose colored floats rise and sink with room temperature, with gold-tagged readings from 64°F to 80°F.",
-    "description": "This 14-inch Galileo thermometer from Lily's Home is a hand-blown glass cylinder holding five colored glass floats. As the room temperature changes, the floats rise or sink, and the lowest floating tag shows the temperature, per the classic Galileo design. The tags are engraved and gold-plated, reading from 64°F to 80°F. The liquid inside the cylinder and floats is described as a non-toxic inert oil-hydrocarbon mixture similar to mineral oil.",
-    "whyWeLikeIt": "It's a working bit of 17th-century physics that doubles as a slow, colorful display on a shelf or desk. People always ask how it works.",
+    "subcategory": "עיצוב",
+    "shortDescription": "גליל זכוכית עם כדורים צבעוניים שעולים ויורדים לפי הטמפרטורה.",
+    "description": "גליל מזכוכית מנופחת ביד, בגובה 35 ס\"מ (14 אינץ'), ובתוכו חמישה כדורי זכוכית צבעוניים. כשהטמפרטורה בחדר משתנה הכדורים עולים או שוקעים, והתווית של הכדור הנמוך מבין הצפים מראה את הטמפרטורה. התוויות חרוטות ומצופות זהב, וכתובות במעלות פרנהייט, מ-64 עד 80 (בערך 18 עד 27 מעלות צלזיוס). הנוזל בפנים מתואר כתערובת שמן לא רעילה, בדומה לשמן מינרלי.",
+    "whyWeLikeIt": "חפץ נוי ישן וטוב שגם מודד משהו.",
     "image": "/assets/images/products/lilys-home-14-inch-glass-galileo-thermometer.jpg",
     "additionalImages": [],
     "price": 32.99,
@@ -8902,21 +8901,20 @@
       "gift"
     ],
     "highlights": [
-      "14 in. hand-blown glass cylinder",
-      "5 colored floats with gold-plated tags",
-      "Reads 64°F to 80°F",
-      "Floats rise and sink with temperature",
-      "Non-toxic inert fluid (listed)"
+      "גליל זכוכית 35 ס\"מ",
+      "5 כדורים עם תוויות מוזהבות",
+      "64-80 מעלות פרנהייט",
+      "כדורים עולים ויורדים",
+      "נוזל לא רעיל"
     ],
     "affiliateUrl": "https://link.amazon/B0cWms5Rj",
     "externalUrl": "https://link.amazon/B0cWms5Rj",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-09-28T00:00:00.000Z",
-    "updatedAt": "2026-11-01T00:00:00.000Z",
-    "brand": "Lily's Home",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z",
+    "brand": "Lily's Home"
   },
   {
     "id": "prd-0236",
@@ -9303,20 +9301,20 @@
   },
   {
     "id": "prd-0245",
-    "name": "Jetboil Flash 1.0L Fast Boil Stove, Carbon",
+    "name": "גזייה Jetboil Flash עם כוס 1 ליטר, Carbon",
     "slug": "jetboil-flash-1l-fast-boil-stove-carbon",
     "category": "outdoors",
     "secondaryCategories": [
       "gifts",
       "travel"
     ],
-    "subcategory": "Camping",
-    "shortDescription": "A compact backpacking stove system with push-button ignition that boils 16 oz of water in about 2 minutes, packing into its own 1-liter cup.",
-    "description": "The Jetboil Flash is an integrated camp stove and 1-liter insulated cooking cup. A turn-and-click igniter lights the burner without a match, and the listing gives a boil time of 16 oz of water in about 2 minutes. The cup has a color-coded, rubberized safe-touch grip, an insulated cozy, and a three-point locking connection to the burner. The stove and a 100 g JetPower fuel canister (sold separately) pack inside the cup, and the bottom cup doubles as a measuring cup or bowl. It weighs 13.12 oz. This is the carbon color.",
-    "whyWeLikeIt": "Coffee or a hot meal in two minutes anywhere, from a single object that packs into itself. It's the camping upgrade people rave about after the first trip.",
+    "subcategory": "קמפינג",
+    "shortDescription": "גזייה וכוס בישול מבודדת במערכת אחת שנכנסת לתיק.",
+    "description": "גזייה משולבת עם כוס בישול מבודדת של ליטר. מצית בסיבוב ולחיצה מדליק את המבער בלי גפרור, ולפי היצרן חצי ליטר מים רותחים בערך תוך 2 דקות. לכוס ידית גומי עם סימון צבע, עטיפה מבודדת וחיבור נעילה למבער. המבער ומיכל גז של 100 גרם נכנסים לתוך הכוס, והמכסה התחתון משמש גם ככוס מדידה או קערה. משקל 372 גרם. מיכל הגז נמכר בנפרד.",
+    "whyWeLikeIt": "קפה בשטח בשתי דקות, בלי לסחוב סיר.",
     "image": "/assets/images/products/jetboil-flash-1l-fast-boil-stove-carbon.jpg",
     "additionalImages": [],
-    "price": 144.99,
+    "price": 144.95,
     "currency": "USD",
     "rating": 4.8,
     "reviewCount": 612,
@@ -9329,20 +9327,19 @@
       "gift"
     ],
     "highlights": [
-      "Boils 16 oz in ~2 minutes (listed)",
-      "Turn-and-click auto ignition",
-      "1 L insulated cup with safe-touch grip",
-      "Packs stove + 100 g canister inside",
-      "Fuel sold separately; 13.12 oz"
+      "חצי ליטר רותח בכ-2 דקות",
+      "הצתה אוטומטית",
+      "כוס מבודדת 1 ליטר",
+      "המערכת נארזת לתוך הכוס",
+      "גז לא כלול, 372 גרם"
     ],
     "affiliateUrl": "https://link.amazon/B09f05oeA",
     "externalUrl": "https://link.amazon/B09f05oeA",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-09-28T00:00:00.000Z",
-    "updatedAt": "2026-11-01T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z"
   },
   {
     "id": "prd-0246",
@@ -10868,16 +10865,16 @@
   },
   {
     "id": "prd-0282",
-    "name": "National Geographic Mega Crystal Growing Kit",
+    "name": "ערכת גידול גבישים National Geographic Mega",
     "slug": "national-geographic-mega-crystal-growing-kit",
     "category": "kids",
     "secondaryCategories": [
       "gifts"
     ],
-    "subcategory": "Toys",
-    "shortDescription": "A kids' science kit for growing six colored crystals in 3-4 days, including a glow-in-the-dark crystal, a light-up display and four real gemstone specimens.",
-    "description": "This National Geographic kit from Blue Marble grows six crystals in blue, red, purple, green, yellow and glow-in-the-dark, with crystals forming in about 3-4 days, per the listing. Two silicone growing chambers make the process easier. A USB-powered light-up stand (cable included) displays five finished crystals. It also includes four real specimens (rose quartz, fluorite, blue calcite and a quartz geode) and a full-color learning guide. It's an Amazon exclusive for ages 8 and up.",
-    "whyWeLikeIt": "Kids get a science experiment with a result they can keep and show off, and the light-up display turns it into a night light for their room.",
+    "subcategory": "צעצועים",
+    "shortDescription": "מגדלים שישה גבישים צבעוניים ומציגים אותם על מעמד מואר.",
+    "description": "ערכה לגידול שישה גבישים בכחול, אדום, סגול, ירוק, צהוב ואחד שזוהר בחושך. לפי היצרן הגבישים נוצרים תוך 3-4 ימים, בשני תאי גידול מסיליקון. מעמד מואר שעובד דרך USB (כבל כלול) מציג חמישה גבישים מוכנים. בערכה גם ארבע דוגמאות אמיתיות: רוז קוורץ, פלואוריט, קלציט כחול וגאודה של קוורץ, וחוברת הסברים צבעונית. מגיל 8.",
+    "whyWeLikeIt": "ניסוי מדעי שנגמר בקישוט לחדר.",
     "image": "/assets/images/products/national-geographic-mega-crystal-growing-kit.jpg",
     "additionalImages": [],
     "price": 29.99,
@@ -10892,21 +10889,20 @@
       "kids gift"
     ],
     "highlights": [
-      "Grow 6 colored crystals incl. glow-in-the-dark",
-      "Crystals grow in ~3-4 days (listed)",
-      "USB light-up display stand",
-      "4 real gemstone specimens",
-      "Ages 8+"
+      "6 גבישים, אחד זוהר בחושך",
+      "גדלים תוך 3-4 ימים",
+      "מעמד מואר ב-USB",
+      "4 אבנים אמיתיות",
+      "מגיל 8"
     ],
     "affiliateUrl": "https://link.amazon/B02jPV581",
     "externalUrl": "https://link.amazon/B02jPV581",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-09-28T00:00:00.000Z",
-    "updatedAt": "2026-11-01T00:00:00.000Z",
-    "brand": "National Geographic",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z",
+    "brand": "National Geographic"
   },
   {
     "id": "prd-0283",
@@ -11870,20 +11866,20 @@
   },
   {
     "id": "prd-0306",
-    "name": "Delamu 20-in-1 Sushi Making Kit with Bazooka Roller",
+    "name": "ערכת הכנת סושי Delamu עם בזוקה, 20 חלקים",
     "slug": "delamu-20-in-1-sushi-making-kit",
     "category": "kitchen",
     "secondaryCategories": [
       "gifts",
       "under-25"
     ],
-    "subcategory": "Kitchen Tools",
-    "shortDescription": "A complete home sushi kit with bamboo mats, a bazooka roller, temaki rollers, rice mold, sushi knife, chopsticks and a step-by-step guide.",
-    "description": "The Delamu kit covers rolls, hand rolls (temaki), nigiri and gunkan. It includes 2 bamboo sushi mats, 1 bazooka roller, 2 temaki rollers, 1 rice mold, 1 sushi knife, 5 pairs of chopsticks, 2 chopstick holders, a rice paddle, a rice spreader and 2 sauce dishes, per the listing, plus a guide book with rice preparation, rolling techniques and six recipes. Parts are food-safe and BPA-free.",
-    "whyWeLikeIt": "It turns sushi into a fun group activity at home, and the bazooka roller makes perfect rolls easy even for beginners. A great gift under $25.",
+    "subcategory": "כלי מטבח",
+    "shortDescription": "כל מה שצריך לרולים, ניגירי וטמאקי בבית.",
+    "description": "ערכה לרולים, טמאקי, ניגירי וגונקן. בפנים 2 מחצלות במבוק, בזוקה לגלגול, 2 גלגלות טמאקי, תבנית לאורז, סכין סושי, 5 זוגות צ'ופסטיקס, 2 מעמדים לצ'ופסטיקס, כף אורז, מרית לפיזור אורז ו-2 קעריות לרוטב. מצורפת חוברת עם הכנת אורז, טכניקות גלגול ושישה מתכונים. החלקים בטוחים למזון וללא BPA.",
+    "whyWeLikeIt": "ערב סושי משפחתי בלי להזמין משלוח.",
     "image": "/assets/images/products/delamu-20-in-1-sushi-making-kit.jpg",
     "additionalImages": [],
-    "price": 19.78,
+    "price": 21.99,
     "currency": "USD",
     "rating": 4.7,
     "reviewCount": 6708,
@@ -11896,20 +11892,19 @@
       "under 25"
     ],
     "highlights": [
-      "20 pieces",
-      "Bamboo mats + bazooka roller",
-      "Temaki rollers + rice mold",
-      "Sushi knife, chopsticks, sauce dishes",
-      "Guide book with 6 recipes"
+      "20 חלקים",
+      "מחצלות במבוק ובזוקה",
+      "גלגלות טמאקי ותבנית אורז",
+      "סכין, צ'ופסטיקס וקעריות",
+      "חוברת עם 6 מתכונים"
     ],
     "affiliateUrl": "https://link.amazon/B095rTqtf",
     "externalUrl": "https://link.amazon/B095rTqtf",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-09-28T00:00:00.000Z",
-    "updatedAt": "2026-11-01T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z"
   },
   {
     "id": "prd-0307",
@@ -12247,20 +12242,20 @@
   },
   {
     "id": "prd-0315",
-    "name": "HyperX QuadCast 2 S USB Microphone with RGB",
+    "name": "מיקרופון USB‏ HyperX QuadCast 2 S עם תאורת RGB",
     "slug": "hyperx-quadcast-2-s-usb-microphone-rgb",
     "category": "tech",
     "secondaryCategories": [
       "gaming",
       "desk-setup"
     ],
-    "subcategory": "Content Creation",
-    "shortDescription": "A USB-C streaming microphone with 100+ customizable RGB LEDs, tap-to-mute, four polar patterns, a multifunction knob and a detachable shock mount.",
-    "description": "The HyperX QuadCast 2 S is a USB-C microphone for streaming, podcasting and gaming. It has over 100 individually customizable aRGB LEDs, a tap-to-mute sensor on top, and a multifunction knob for gain, headphone volume, monitor mix and polar pattern, per the listing. It offers four polar patterns: cardioid, omnidirectional, bi-directional and stereo. The shock mount detaches via spring-loaded pins and fits 3/8 in. and 5/8 in. threads. An LED VU meter shows levels and status. It includes USB-C to USB-C and USB-C to USB-A cables/adapters.",
-    "whyWeLikeIt": "It's the mic that makes a streaming setup look the part while sounding clean, and tap-to-mute is exactly where your hand wants it to be.",
+    "subcategory": "יצירת תוכן",
+    "shortDescription": "מיקרופון לסטרימינג, פודקאסטים וגיימינג עם השתקה במגע.",
+    "description": "מיקרופון USB-C לסטרימינג, פודקאסטים ומשחקים. יותר מ-100 נורות RGB שאפשר להגדיר כל אחת בנפרד, חיישן השתקה בנגיעה בחלק העליון, וכפתור אחד לשליטה בהגבר, בעוצמת האוזניות, במיקס ובדפוס הקליטה. ארבעה דפוסי קליטה: קרדיואידי, כל-כיווני, דו-כיווני וסטריאו. בולם הזעזועים מתנתק בקלות ומתאים להברגות 3/8 ו-5/8 אינץ'. מד עוצמה מראה את רמות הקול. מגיע עם כבל USB-C ל-USB-C ומתאם ל-USB-A.",
+    "whyWeLikeIt": "סאונד ברור ושליטה בכל דבר מכפתור אחד.",
     "image": "/assets/images/products/hyperx-quadcast-2-s-usb-microphone-rgb.jpg",
     "additionalImages": [],
-    "price": 149.99,
+    "price": 149.0,
     "currency": "USD",
     "rating": 4.6,
     "reviewCount": 774,
@@ -12274,20 +12269,19 @@
       "gaming"
     ],
     "highlights": [
-      "100+ customizable RGB LEDs",
-      "Tap-to-mute sensor",
-      "4 polar patterns",
-      "Multifunction knob",
-      "Detachable shock mount; USB-C"
+      "100+ נורות RGB",
+      "השתקה בנגיעה",
+      "4 דפוסי קליטה",
+      "כפתור שליטה רב-תכליתי",
+      "בולם זעזועים, USB-C"
     ],
     "affiliateUrl": "https://link.amazon/B0d0w6jHi",
     "externalUrl": "https://link.amazon/B0d0w6jHi",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-09-28T00:00:00.000Z",
-    "updatedAt": "2026-11-01T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z"
   },
   {
     "id": "prd-0316",
@@ -12543,16 +12537,16 @@
   },
   {
     "id": "prd-0322",
-    "name": "PONPUR Globe Whiskey Decanter Set with Glasses & Chilling Balls",
+    "name": "סט קנקן גלובוס לוויסקי PONPUR עם כוסות",
     "slug": "ponpur-globe-whiskey-decanter-set",
     "category": "kitchen",
     "secondaryCategories": [
       "gifts"
     ],
-    "subcategory": "Kitchen Tools",
-    "shortDescription": "An 850 ml hand-blown globe decanter with an etched world map and a tiny ship inside, on a wooden stand, with two map glasses and two chilling balls.",
-    "description": "This PONPUR set centers on an 850 ml (28 oz) lead-free glass globe decanter with an etched world map and a detailed antique ship inside, which rotates on its axis on a wooden tray, per the listing. It includes a bottle stopper, a pouring funnel, two 230 ml engraved world-map glasses and two reusable stainless chilling balls for drinks without diluting ice. The set measures about 10 x 4 x 6 in.",
-    "whyWeLikeIt": "It's a statement piece on a home bar: the tiny ship inside the globe gets noticed by every guest. One of the most popular whiskey gifts for a reason.",
+    "subcategory": "כלי מטבח",
+    "shortDescription": "קנקן זכוכית בצורת גלובוס עם ספינה בפנים, על מגש עץ.",
+    "description": "קנקן זכוכית נטולת עופרת בנפח 850 מ\"ל, עם מפת עולם חרוטה ודגם של ספינה עתיקה בתוכו. הקנקן מסתובב על צירו על גבי מגש עץ. בסט גם פקק, משפך, שתי כוסות של 230 מ\"ל עם מפת עולם חרוטה ושני כדורי קירור מנירוסטה שמקררים בלי לדלל את המשקה. מידות הסט כ-25 על 10 על 15 ס\"מ.",
+    "whyWeLikeIt": "מתנה מרשימה לאבא או לבוס.",
     "image": "/assets/images/products/ponpur-globe-whiskey-decanter-set.jpg",
     "additionalImages": [],
     "price": 59.95,
@@ -12568,20 +12562,19 @@
       "gift"
     ],
     "highlights": [
-      "850 ml globe decanter, lead-free",
-      "Etched world map + ship inside",
-      "Rotates on wooden tray",
-      "2 map-etched glasses",
-      "2 chilling balls, stopper, funnel"
+      "קנקן 850 מ\"ל, ללא עופרת",
+      "מפה חרוטה וספינה בפנים",
+      "מסתובב על מגש עץ",
+      "2 כוסות חרוטות",
+      "2 כדורי קירור, פקק ומשפך"
     ],
     "affiliateUrl": "https://link.amazon/B00udY8MZ",
     "externalUrl": "https://link.amazon/B00udY8MZ",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-09-28T00:00:00.000Z",
-    "updatedAt": "2026-11-01T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z"
   },
   {
     "id": "prd-0323",
@@ -14355,17 +14348,17 @@
   },
   {
     "id": "prd-0365",
-    "name": "Brightech Ambience Pro Solar Outdoor String Lights, 27 ft",
+    "name": "שרשרת נורות סולארית לחצר Brightech Ambience Pro, ‏8 מטר",
     "slug": "brightech-ambience-pro-solar-string-lights",
     "category": "outdoors",
     "secondaryCategories": [
       "gifts",
       "under-25"
     ],
-    "subcategory": "Patio & Grilling",
-    "shortDescription": "Weatherproof solar patio string lights with 12 shatterproof Edison-style LED bulbs on a 27 ft line and a detachable solar panel.",
-    "description": "Brightech's Ambience Pro solar string lights run 27 ft with 12 LED S14 bulbs spaced 20 inches apart, and the lit section is about 20 ft, per the listing. The shatterproof bulbs and WeatherTite construction are described as withstanding wind up to 50 MPH, rain and snow. The detachable solar panel has an on/off switch and mounts with the included stake or clip, so no outlet is needed. Brightech offers a 2-year limited warranty.",
-    "whyWeLikeIt": "Warm Edison-style lights instantly make a patio or balcony feel cozier, and solar power means no extension cords.",
+    "subcategory": "מנגל וחצר",
+    "shortDescription": "12 נורות לד למרפסת או לגינה, בלי שקע חשמל.",
+    "description": "שרשרת באורך כ-8 מטר (27 רגל) עם 12 נורות לד מדגם S14, במרווח של כ-50 ס\"מ, והחלק המואר כ-6 מטר. הנורות לא נשברות, ולפי היצרן השרשרת עומדת ברוח עד 80 קמ\"ש, בגשם ובשלג. הפאנל הסולארי מתנתק, יש לו מתג הפעלה, והוא מתחבר עם יתד או תפס שכלולים, כך שלא צריך שקע. אחריות יצרן לשנתיים.",
+    "whyWeLikeIt": "אווירה במרפסת בלי לחפש שקע.",
     "image": "/assets/images/products/brightech-ambience-pro-solar-string-lights.jpg",
     "additionalImages": [],
     "price": 21.99,
@@ -14381,20 +14374,19 @@
       "edison bulbs"
     ],
     "highlights": [
-      "27 ft, 12 LED bulbs",
-      "Solar panel, no outlet needed",
-      "Shatterproof S14 bulbs",
-      "Weatherproof",
-      "2-year warranty"
+      "8 מטר, 12 נורות לד",
+      "פאנל סולארי, בלי שקע",
+      "נורות שלא נשברות",
+      "עמידה בגשם",
+      "אחריות לשנתיים"
     ],
     "affiliateUrl": "https://link.amazon/B0bAU92iz",
     "externalUrl": "https://link.amazon/B0bAU92iz",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z"
   },
   {
     "id": "prd-0366",
@@ -14736,7 +14728,7 @@
   },
   {
     "id": "prd-0374",
-    "name": "Flyott Kalimba 17-Key Thumb Piano, Mahogany",
+    "name": "קלימבה Flyott עם 17 קלידים, מהגוני",
     "slug": "flyott-kalimba-17-key-thumb-piano",
     "category": "home",
     "secondaryCategories": [
@@ -14744,13 +14736,13 @@
       "travel",
       "under-25"
     ],
-    "subcategory": "Audio",
-    "shortDescription": "A 17-key mahogany kalimba thumb piano with a gift box, carry bag, tuning hammer, songbook, stickers and finger covers.",
-    "description": "Flyott's kalimba is a 17-key thumb piano with a mahogany body and steel keys, per the listing. It comes in a gift box with a cloth bag, instruction book, music scores, a tuning hammer, finger cots, note stickers and a cleaning cloth. It measures about 7.1 x 5.1 x 1.2 inches, so it's easy to carry anywhere.",
-    "whyWeLikeIt": "It's one of the easiest instruments to pick up and play something pretty right away, which makes it a charming gift for any age.",
+    "subcategory": "אודיו",
+    "shortDescription": "פסנתר אגודלים קטן עם כל מה שצריך כדי להתחיל לנגן.",
+    "description": "קלימבה עם 17 קלידי פלדה וגוף מעץ מהגוני. מגיעה בקופסת מתנה עם שקית בד, חוברת הדרכה, תווים, פטיש כיוון, כיסויי אצבעות, מדבקות תווים ומטלית ניקוי. מידות כ-18 על 13 על 3 ס\"מ, קלה לקחת לכל מקום.",
+    "whyWeLikeIt": "כלי נגינה שלומדים לבד בערב אחד.",
     "image": "/assets/images/products/flyott-kalimba-17-key-thumb-piano.jpg",
     "additionalImages": [],
-    "price": 15.99,
+    "price": 14.99,
     "currency": "USD",
     "rating": 4.7,
     "reviewCount": 268,
@@ -14763,20 +14755,19 @@
       "gift"
     ],
     "highlights": [
-      "17 keys",
-      "Mahogany body",
-      "Tuning hammer + songbook",
-      "Gift box + carry bag",
-      "Pocket-friendly size"
+      "17 קלידים",
+      "גוף מהגוני",
+      "פטיש כיוון וחוברת שירים",
+      "קופסת מתנה ושקית",
+      "קטנה ונוחה לנשיאה"
     ],
     "affiliateUrl": "https://link.amazon/B052vMCMt",
     "externalUrl": "https://link.amazon/B052vMCMt",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z"
   },
   {
     "id": "prd-0375",
@@ -15117,17 +15108,17 @@
   },
   {
     "id": "prd-0383",
-    "name": "Wegiel Handmade Ambassador Wooden Chess Set, 21 Inch",
+    "name": "סט שחמט מעץ בעבודת יד Wegiel Ambassador, ‏53 ס\"מ",
     "slug": "wegiel-handmade-ambassador-chess-set",
     "category": "gaming",
     "secondaryCategories": [
       "gifts",
       "home"
     ],
-    "subcategory": "Tabletop Games",
-    "shortDescription": "A handmade European chess set with a 21-inch folding beech and birch board, felt base and carved hornbeam and sycamore pieces.",
-    "description": "Wegiel's Ambassador set pairs a 21-inch board made of beech and birch wood with hand-carved hornbeam and sycamore chess pieces, per the listing. The board has a felt base and folds into a case with slotted compartments that hold each piece securely for travel. This is the brown Ambassador version.",
-    "whyWeLikeIt": "A handmade wooden set looks beautiful left out on a table and turns a casual game into a small ritual.",
+    "subcategory": "משחקי קופסה",
+    "shortDescription": "לוח מתקפל מעץ וכלים מגולפים ביד, עם מקום אחסון לכל כלי.",
+    "description": "לוח בגודל 53 ס\"מ (21 אינץ') מעץ אשור וליבנה, וכלים מגולפים ביד מעץ קרפינוס ואדר. לבסיס הלוח לבד, והוא מתקפל לקופסה עם חריצים שמחזיקים כל כלי במקומו, נוח גם לנסיעות. זו גרסת Ambassador בצבע חום.",
+    "whyWeLikeIt": "סט שנשאר על השולחן גם כשלא משחקים.",
     "image": "/assets/images/products/wegiel-handmade-ambassador-chess-set.jpg",
     "additionalImages": [],
     "price": 89.99,
@@ -15143,35 +15134,34 @@
       "gift"
     ],
     "highlights": [
-      "21-inch folding board",
-      "Beech + birch board",
-      "Carved hornbeam + sycamore pieces",
-      "Slotted storage inside",
-      "Felt base"
+      "לוח מתקפל 53 ס\"מ",
+      "עץ אשור וליבנה",
+      "כלים מגולפים ביד",
+      "חריצי אחסון בפנים",
+      "בסיס לבד"
     ],
     "affiliateUrl": "https://link.amazon/B06gSj1Ls",
     "externalUrl": "https://link.amazon/B06gSj1Ls",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "brand": "Wegiel",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z",
+    "brand": "Wegiel"
   },
   {
     "id": "prd-0384",
-    "name": "Belemar Remote Control Bubble Machine with RGB Lights",
+    "name": "מכונת בועות Belemar עם שלט ותאורת RGB",
     "slug": "belemar-remote-control-bubble-machine",
     "category": "outdoors",
     "secondaryCategories": [
       "gifts",
       "gaming"
     ],
-    "subcategory": "Lawn & Backyard Games",
-    "shortDescription": "A rechargeable bubble machine with a remote control, 3 adjustable angles, color-changing RGB lights and a 370 ml tank.",
-    "description": "Belemar's bubble machine turns on and off with a one-click remote and has 3 vertical angle settings for wide bubble coverage, per the listing. Built-in 7-color RGB lights offer single-color or auto-changing modes for evening parties. The built-in battery charges over USB-C and runs up to 90 minutes, and the 370 ml tank reduces refills. This is the black version.",
-    "whyWeLikeIt": "Bubbles are an instant hit at kids' parties and backyard evenings, and the lights make it just as fun after dark.",
+    "subcategory": "משחקי חצר",
+    "shortDescription": "מכונת בועות נטענת עם שלט, שלוש זוויות ואורות צבעוניים.",
+    "description": "מכונת בועות שנדלקת ונכבית בלחיצה על השלט, עם 3 זוויות הטיה לפיזור רחב של בועות. תאורת RGB בשבעה צבעים, בצבע קבוע או מתחלף, למסיבות ערב. הסוללה המובנית נטענת ב-USB-C ומחזיקה עד 90 דקות, והמיכל של 370 מ\"ל חוסך מילוי חוזר. בצבע שחור.",
+    "whyWeLikeIt": "ילדים רצים אחרי בועות, ההורים יושבים.",
     "image": "/assets/images/products/belemar-remote-control-bubble-machine.jpg",
     "additionalImages": [],
     "price": 34.99,
@@ -15187,20 +15177,19 @@
       "backyard fun"
     ],
     "highlights": [
-      "Remote control",
-      "3 adjustable angles",
-      "7-color RGB lights",
-      "USB-C, up to 90 min",
-      "370 ml tank"
+      "שלט רחוק",
+      "3 זוויות",
+      "תאורה ב-7 צבעים",
+      "USB-C, עד 90 דקות",
+      "מיכל 370 מ\"ל"
     ],
     "affiliateUrl": "https://link.amazon/B09kDK4yj",
     "externalUrl": "https://link.amazon/B09kDK4yj",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z"
   },
   {
     "id": "prd-0385",
@@ -15333,19 +15322,19 @@
   },
   {
     "id": "prd-0388",
-    "name": "Kryptonite Evolution Mini-7 Bike U-Lock with 4 ft Cable",
+    "name": "מנעול U לאופניים Kryptonite Evolution Mini-7 עם כבל",
     "slug": "kryptonite-evolution-mini-7-u-lock",
     "category": "travel",
     "secondaryCategories": [
       "gifts"
     ],
-    "subcategory": "Everyday Carry",
-    "shortDescription": "A compact 13 mm hardened steel bike U-lock with a double-deadbolt design, a 4 ft looped cable, a frame bracket and 3 keys.",
-    "description": "The Kryptonite Evolution Mini-7 has a 13 mm hardened Max-Performance steel shackle and a double-deadbolt design that locks both sides of the crossbar, and it's Sold Secure Gold certified, per the listing. The interior measures 3.25 x 7 inches and the lock weighs 3.55 lbs. It includes a 4 ft double-loop cable for the front wheel or accessories, a FlexFrame-U mounting bracket and 3 stainless steel keys. It's eligible for Kryptonite's Anti-Theft Protection Offer.",
-    "whyWeLikeIt": "A compact, well-rated U-lock is the most important accessory for any city bike, and the bracket keeps it easy to carry.",
+    "subcategory": "יום-יום",
+    "shortDescription": "מנעול פלדה קשיחה עם נעילה כפולה וכבל לגלגל הקדמי.",
+    "description": "מנעול עם קשת פלדה מוקשית בעובי 13 מ\"מ ונעילה כפולה שנועלת את שני צדי המוט, עם תו התקן הבריטי Sold Secure Gold. המידות הפנימיות כ-8 על 18 ס\"מ, והמשקל כ-1.6 ק\"ג. מגיע עם כבל לולאה כפולה באורך 1.2 מטר לגלגל הקדמי או לאביזרים, תושבת FlexFrame-U לשלדה ו-3 מפתחות נירוסטה.",
+    "whyWeLikeIt": "מנעול רציני לאופניים או לקורקינט חשמלי.",
     "image": "/assets/images/products/kryptonite-evolution-mini-7-u-lock.jpg",
     "additionalImages": [],
-    "price": 105.05,
+    "price": 92.8,
     "currency": "USD",
     "rating": 4.5,
     "reviewCount": 14196,
@@ -15358,20 +15347,19 @@
       "bike accessories"
     ],
     "highlights": [
-      "13 mm hardened steel shackle",
-      "Double deadbolt",
-      "4 ft looped cable",
-      "FlexFrame-U bracket",
-      "Sold Secure Gold"
+      "קשת פלדה 13 מ\"מ",
+      "נעילה כפולה",
+      "כבל 1.2 מטר",
+      "תושבת לשלדה",
+      "תקן Sold Secure Gold"
     ],
     "affiliateUrl": "https://link.amazon/B01zatH2t",
     "externalUrl": "https://link.amazon/B01zatH2t",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z"
   },
   {
     "id": "prd-0389",
@@ -15543,16 +15531,16 @@
   },
   {
     "id": "prd-0393",
-    "name": "Franklin Sensors ProSensor M210 Stud Finder",
+    "name": "גלאי קורות וחוטי חשמל Franklin Sensors ProSensor M210",
     "slug": "franklin-sensors-prosensor-m210-stud-finder",
     "category": "home",
     "secondaryCategories": [
       "gifts"
     ],
-    "subcategory": "Tools",
-    "shortDescription": "A 13-sensor stud finder that shows the full width of studs on an LED display, with live wire detection and a built-in level.",
-    "description": "The ProSensor M210 uses 13 sensors instead of the usual one or two, and needs no calibration: press and hold to scan, per the listing. Its LEDs show the full width of studs, including double studs, and deep scanning reaches up to 1.7 inches to find wood and metal studs. It adds a bubble level, live wire detection and a pencil caddy, and runs on two AA batteries (not included).",
-    "whyWeLikeIt": "Seeing the whole stud at once takes the guesswork out of hanging TVs, shelves and heavy art.",
+    "subcategory": "כלי עבודה",
+    "shortDescription": "13 חיישנים שמראים בדיוק איפה הקורה בקיר לפני שקודחים.",
+    "description": "גלאי עם 13 חיישנים במקום אחד או שניים כרגיל, בלי כיול: לוחצים ומחזיקים כדי לסרוק. נוריות מראות את כל רוחב הקורה, גם קורה כפולה, והסריקה מגיעה לעומק של כ-4 ס\"מ ומזהה קורות עץ ומתכת. יש גם פלס מים, זיהוי חוטי חשמל חיים ומקום לעיפרון. עובד על 2 סוללות AA שלא כלולות.",
+    "whyWeLikeIt": "פחות חורים מיותרים בקיר הגבס.",
     "image": "/assets/images/products/franklin-sensors-prosensor-m210-stud-finder.jpg",
     "additionalImages": [],
     "price": 59.97,
@@ -15568,37 +15556,36 @@
       "diy"
     ],
     "highlights": [
-      "13 sensors",
-      "Shows full stud width",
-      "Up to 1.7 in deep",
-      "Live wire detection",
-      "Built-in level"
+      "13 חיישנים",
+      "מראה את כל רוחב הקורה",
+      "עומק עד 4 ס\"מ",
+      "זיהוי חוטי חשמל",
+      "פלס מובנה"
     ],
     "affiliateUrl": "https://link.amazon/B0giWurQ4",
     "externalUrl": "https://link.amazon/B0giWurQ4",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z"
   },
   {
     "id": "prd-0394",
-    "name": "flybold 57 ft Slackline Kit with Training Line",
+    "name": "ערכת סלאקליין flybold באורך 17 מטר",
     "slug": "flybold-57-ft-slackline-kit",
     "category": "outdoors",
     "secondaryCategories": [
       "gifts",
       "gaming"
     ],
-    "subcategory": "Lawn & Backyard Games",
-    "shortDescription": "A complete 57 ft backyard slackline kit with a training line, arm trainer, twin ratchets, tree protectors and a carry bag.",
-    "description": "The flybold kit includes a 57 ft main line, a training line, twin gear ratchets with a ratchet cover, an overhead arm trainer, wide tree protectors and a carry bag, per the listing. It's rated for up to 300 lbs with a 5-ton break load and installs between two trees, adjusting for kids or adults.",
-    "whyWeLikeIt": "Slacklining is a fun backyard challenge for the whole family, and the arm trainer helps first-timers actually stay on the line.",
+    "subcategory": "משחקי חצר",
+    "shortDescription": "חבל הליכה בין שני עצים, עם חבל עזר לאימון.",
+    "description": "בערכה חבל ראשי באורך כ-17 מטר (57 רגל), חבל עזר עליון לאחיזה, שני מותחני רצ'ט עם כיסוי, מגני עץ רחבים ותיק נשיאה. החבל עומד בעד 136 ק\"ג, עם עומס שבירה של 5 טון, ומותקן בין שני עצים בגובה שמתאים לילדים או למבוגרים.",
+    "whyWeLikeIt": "שעות של איזון ונפילות בפארק.",
     "image": "/assets/images/products/flybold-57-ft-slackline-kit.jpg",
     "additionalImages": [],
-    "price": 49.95,
+    "price": 39.95,
     "currency": "USD",
     "rating": 4.7,
     "reviewCount": 2387,
@@ -15611,20 +15598,19 @@
       "balance"
     ],
     "highlights": [
-      "57 ft main line",
-      "Training line + arm trainer",
-      "Twin ratchets",
-      "Tree protectors",
-      "Up to 300 lbs"
+      "חבל 17 מטר",
+      "חבל עזר לאחיזה",
+      "שני מותחנים",
+      "מגני עץ",
+      "עד 136 ק\"ג"
     ],
     "affiliateUrl": "https://link.amazon/B0edcnElU",
     "externalUrl": "https://link.amazon/B0edcnElU",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z"
   },
   {
     "id": "prd-0395",
@@ -15752,17 +15738,17 @@
   },
   {
     "id": "prd-0398",
-    "name": "Thermacell E-ZoneGuard Patio+ Mosquito Repeller",
+    "name": "מרחיק יתושים נטען Thermacell E-ZoneGuard Patio+",
     "slug": "thermacell-e-zoneguard-patio-plus",
     "category": "outdoors",
     "secondaryCategories": [
       "travel",
       "gifts"
     ],
-    "subcategory": "Patio & Grilling",
-    "shortDescription": "A rechargeable, spray-free patio mosquito repeller with a 20 ft zone, a 6.5-hour battery, a charging dock and a 36-hour refill.",
-    "description": "The Thermacell E-ZoneGuard Patio+ creates a 20 ft mosquito-repellent zone, per the listing, and starts with the push of a button, reaching full coverage in about 15 minutes with no spray or lotion needed. It's EPA reviewed. This version includes a 6.5-hour rechargeable battery, a charging dock and a 36-hour repellent refill, and measures about 4 x 7.25 x 4 inches.",
-    "whyWeLikeIt": "It lets you enjoy an evening on the patio or at a campsite without spraying anything on yourself.",
+    "subcategory": "מנגל וחצר",
+    "shortDescription": "יוצר אזור מוגן מיתושים במרפסת בלחיצת כפתור, בלי ספריי.",
+    "description": "המכשיר יוצר אזור של כ-6 מטר (20 רגל) שמרחיק יתושים, ולפי היצרן מגיע לכיסוי מלא בתוך כ-15 דקות, בלי ספריי או קרם. בגרסה הזו סוללה נטענת שמחזיקה 6.5 שעות, עמדת טעינה ומילוי דוחה ל-36 שעות. מידות כ-10 על 18 על 10 ס\"מ.",
+    "whyWeLikeIt": "ערבי קיץ במרפסת בלי עקיצות.",
     "image": "/assets/images/products/thermacell-e-zoneguard-patio-plus.jpg",
     "additionalImages": [],
     "price": 39.99,
@@ -15778,20 +15764,19 @@
       "backyard"
     ],
     "highlights": [
-      "20 ft zone",
-      "No spray needed",
-      "6.5-hr rechargeable battery",
-      "Charging dock",
-      "36-hr refill included"
+      "אזור של כ-6 מטר",
+      "בלי ספריי",
+      "סוללה ל-6.5 שעות",
+      "עמדת טעינה",
+      "מילוי ל-36 שעות כלול"
     ],
     "affiliateUrl": "https://link.amazon/B03xqigOX",
     "externalUrl": "https://link.amazon/B03xqigOX",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z"
   },
   {
     "id": "prd-0399",
@@ -16732,20 +16717,20 @@
   },
   {
     "id": "prd-0421",
-    "name": "PLUSINNO Telescopic Fishing Rod and Reel Combo Kit",
+    "name": "ערכת חכה טלסקופית עם סליל PLUSINNO",
     "slug": "plusinno-telescopic-fishing-rod-reel-kit",
     "category": "outdoors",
     "secondaryCategories": [
       "gifts",
       "travel"
     ],
-    "subcategory": "Camping",
-    "shortDescription": "A beginner fishing kit with a telescopic carbon fiber rod, a spinning reel, line, lures, hooks and a carrier case.",
-    "description": "PLUSINNO's full kit includes a telescopic fishing rod, a spinning reel, fishing line, assorted lures, hooks and accessories in a carrier bag, per the listing. The rod is 24-ton carbon fiber reinforced with fiberglass, and the HA 3000 reel has a collapsible CNC-machined handle that switches between left and right hand with 12+1 corrosion-resistant ball bearings. The rod extends to about 8.86 feet.",
-    "whyWeLikeIt": "It packs small enough for a car trunk or camping trip, and a first-timer has everything needed to start fishing.",
+    "subcategory": "קמפינג",
+    "shortDescription": "חכה מתקפלת, סליל, חוט ופיתיונות בתיק אחד.",
+    "description": "ערכה מלאה עם חכה טלסקופית, סליל ספינינג, חוט דיג, פיתיונות מגוונים, קרסים ואביזרים בתיק נשיאה. החכה עשויה סיבי פחמן מחוזקים בפיברגלס ונפתחת לאורך כ-2.7 מטר. לסליל HA 3000 ידית מתקפלת שעוברת בין יד ימין לשמאל ו-12+1 מסבים עמידים בקורוזיה.",
+    "whyWeLikeIt": "ערכה מוכנה לטיול דיג ראשון.",
     "image": "/assets/images/products/plusinno-telescopic-fishing-rod-reel-kit.jpg",
     "additionalImages": [],
-    "price": 44.95,
+    "price": 44.99,
     "currency": "USD",
     "rating": 4.3,
     "reviewCount": 2151,
@@ -16758,20 +16743,19 @@
       "outdoor"
     ],
     "highlights": [
-      "Telescopic carbon fiber rod",
-      "HA 3000 spinning reel",
-      "Line, lures + hooks",
-      "Carrier case",
-      "Beginner-ready kit"
+      "חכה טלסקופית 2.7 מטר",
+      "סליל HA 3000",
+      "חוט, פיתיונות וקרסים",
+      "תיק נשיאה",
+      "מתאים למתחילים"
     ],
     "affiliateUrl": "https://link.amazon/B0bF67rlH",
     "externalUrl": "https://link.amazon/B0bF67rlH",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z"
   },
   {
     "id": "prd-0422",
@@ -17700,20 +17684,20 @@
   },
   {
     "id": "prd-0444",
-    "name": "Coleman Heritage Big & Tall 10°F Flannel Sleeping Bag",
+    "name": "שק שינה רחב Coleman Heritage עם בטנת פלנל",
     "slug": "coleman-heritage-big-tall-flannel-sleeping-bag",
     "category": "outdoors",
     "secondaryCategories": [
       "gifts",
       "travel"
     ],
-    "subcategory": "Camping",
-    "shortDescription": "An extra-large 84 x 40 inch rectangular sleeping bag rated to 10°F, with a cotton cover, flannel liner and 5 lbs of Holofill insulation.",
-    "description": "Coleman's Heritage Big & Tall sleeping bag measures 84 x 40 inches and is rated to 10°F, per the listing. It's filled with 5 pounds of Holofill 808 insulation, uses FiberLock to keep the fill from shifting, and has a heavy-duty cotton cover with a synthetic flannel liner. A no-snag zipper and the Wrap 'N' Roll system make it easy to use and pack, and it's machine washable.",
-    "whyWeLikeIt": "Roomy, warm and cozy, it's just as useful for cold campsites as it is for guests sleeping over.",
+    "subcategory": "קמפינג",
+    "shortDescription": "שק שינה גדול במיוחד וחם, עם בטנה רכה.",
+    "description": "שק שינה במידות כ-213 על 102 ס\"מ, מדורג עד מינוס 12 מעלות צלזיוס (10 פרנהייט). מילוי של 2.3 ק\"ג Holofill 808, טכנולוגיית FiberLock שמונעת מהמילוי לזוז, כיסוי כותנה עבה ובטנת פלנל סינתטית. רוכסן שלא נתקע ומערכת גלגול וקשירה מקלים על השימוש והאריזה. אפשר לכבס במכונה.",
+    "whyWeLikeIt": "לגבוהים שתמיד צפוף להם בשק.",
     "image": "/assets/images/products/coleman-heritage-big-tall-flannel-sleeping-bag.jpg",
     "additionalImages": [],
-    "price": 101.99,
+    "price": 90.13,
     "currency": "USD",
     "rating": 4.7,
     "reviewCount": 3835,
@@ -17726,21 +17710,20 @@
       "cold weather"
     ],
     "highlights": [
-      "84 x 40 in, big & tall",
-      "Rated to 10°F",
-      "5 lbs Holofill insulation",
-      "Flannel liner",
-      "Machine washable"
+      "213x102 ס\"מ, רחב וארוך",
+      "עד מינוס 12 מעלות",
+      "מילוי 2.3 ק\"ג",
+      "בטנת פלנל",
+      "כביסה במכונה"
     ],
     "affiliateUrl": "https://link.amazon/B08xdTbPm",
     "externalUrl": "https://link.amazon/B08xdTbPm",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "brand": "Coleman",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z",
+    "brand": "Coleman"
   },
   {
     "id": "prd-0445",
@@ -18425,17 +18408,17 @@
   },
   {
     "id": "prd-0461",
-    "name": "GoSports 90mm Resin Bocce Ball Set",
+    "name": "סט כדורי באצ'י GoSports ‏90 מ\"מ",
     "slug": "gosports-90mm-resin-bocce-set",
     "category": "outdoors",
     "secondaryCategories": [
       "gifts",
       "gaming"
     ],
-    "subcategory": "Lawn & Backyard Games",
-    "shortDescription": "A full backyard bocce set with 8 high-gloss resin balls, a pallino, a measuring rope and a carry case.",
-    "description": "GoSports' bocce set uses 90 mm high-grade resin balls that weigh about 1 lb 10 oz each, close to regulation size, per the listing. It includes 8 balls, a pallino, a measuring rope, a carry case and rules, and can be played on grass, sand or bocce courts.",
-    "whyWeLikeIt": "Bocce is easy for any age to pick up, which makes it a perfect game for parties, picnics and beach days.",
+    "subcategory": "משחקי חצר",
+    "shortDescription": "8 כדורים, כדור מטרה ותיק, למשחק על דשא או חול.",
+    "description": "סט עם כדורי רזין בקוטר 90 מ\"מ, כמעט בגודל תחרותי, כל אחד שוקל כ-740 גרם. בסט 8 כדורים, כדור מטרה (פלינו), חבל מדידה, תיק נשיאה וחוקי המשחק. משחקים על דשא, חול או מגרש באצ'י.",
+    "whyWeLikeIt": "משחק לכל המשפחה בפיקניק או בחוף.",
     "image": "/assets/images/products/gosports-90mm-resin-bocce-set.jpg",
     "additionalImages": [],
     "price": 39.99,
@@ -18451,21 +18434,20 @@
       "beach"
     ],
     "highlights": [
-      "8 resin balls, 90 mm",
-      "Pallino included",
-      "Measuring rope",
-      "Carry case",
-      "Grass, sand or court"
+      "8 כדורים 90 מ\"מ",
+      "כדור מטרה",
+      "חבל מדידה",
+      "תיק נשיאה",
+      "דשא, חול או מגרש"
     ],
     "affiliateUrl": "https://link.amazon/B034wa44P",
     "externalUrl": "https://link.amazon/B034wa44P",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "brand": "GoSports",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z",
+    "brand": "GoSports"
   },
   {
     "id": "prd-0462",
@@ -18510,7 +18492,7 @@
   },
   {
     "id": "prd-0463",
-    "name": "Dachenus Indoor Putting Green Mat with Ball Return",
+    "name": "שטיח גולף לפוטינג בבית Dachenus עם החזרת כדור",
     "slug": "dachenus-indoor-putting-green-mat",
     "category": "outdoors",
     "secondaryCategories": [
@@ -18518,13 +18500,13 @@
       "home",
       "gaming"
     ],
-    "subcategory": "Sports",
-    "shortDescription": "A roll-out velvet putting green with two practice holes, distance markings and an automatic ball return in a solid wood frame.",
-    "description": "The Dachenus putting mat rolls out quickly and snaps together with a magnetic ball-return track, per the listing. It's marked at 2, 4, 6 and 9.5 feet and has two holes, including a smaller 2.5-inch hole for precision practice. The solid wood frame is hand-polished, and the wrinkle-free velvet surface rolls up for storage. This is the light green version.",
-    "whyWeLikeIt": "It lets golfers sneak in putting practice at home or in the office, and it makes a great gift for any golf fan.",
+    "subcategory": "ספורט",
+    "shortDescription": "שטיח אימון לגולף עם שני חורים ומסילה שמחזירה את הכדור.",
+    "description": "שטיח שנפרש מהר ומתחבר למסילה מגנטית שמחזירה את הכדור. יש סימוני מרחק של 0.6, 1.2, 1.8 ו-2.9 מטר ושני חורים, אחד מהם קטן יותר (6.4 ס\"מ) לאימון דיוק. מסגרת מעץ מלא מלוטשת ביד, ומשטח קטיפה שלא מתקמט ומתגלגל לאחסון. בצבע ירוק בהיר.",
+    "whyWeLikeIt": "אימון גולף בסלון בזמן ההפסקה.",
     "image": "/assets/images/products/dachenus-indoor-putting-green-mat.jpg",
     "additionalImages": [],
-    "price": 75.97,
+    "price": 75.89,
     "currency": "USD",
     "rating": 4.7,
     "reviewCount": 620,
@@ -18537,20 +18519,19 @@
       "dachenus"
     ],
     "highlights": [
-      "Automatic ball return",
-      "2 practice holes",
-      "Distance markings",
-      "Solid wood frame",
-      "Rolls up for storage"
+      "החזרת כדור אוטומטית",
+      "2 חורים",
+      "סימוני מרחק",
+      "מסגרת עץ מלא",
+      "מתגלגל לאחסון"
     ],
     "affiliateUrl": "https://link.amazon/B08TW4X0s",
     "externalUrl": "https://link.amazon/B08TW4X0s",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z"
   },
   {
     "id": "prd-0464",
@@ -18637,7 +18618,7 @@
   },
   {
     "id": "prd-0466",
-    "name": "Discraft Ultra-Star 175g Sport Disc",
+    "name": "דיסק אולטימייט Discraft Ultra-Star ‏175 גרם",
     "slug": "discraft-ultra-star-175g-disc",
     "category": "outdoors",
     "secondaryCategories": [
@@ -18646,13 +18627,13 @@
       "under-25",
       "gaming"
     ],
-    "subcategory": "Lawn & Backyard Games",
-    "shortDescription": "The official 175-gram disc of USA Ultimate competition, with stable flight, good glide and a textured rim.",
-    "description": "The Discraft Ultra-Star is the official disc of USA Ultimate-sanctioned competition and meets the official 175-gram standard, per the listing. It's engineered for stable, consistent flight and glide, holds its shape through hard play, and has a comfortable textured rim. It's white with a decorative foil stamp whose color varies.",
-    "whyWeLikeIt": "It's the real thing for backyard, park and beach games, with a stable flight that makes throws easy to catch.",
+    "subcategory": "משחקי חצר",
+    "shortDescription": "הדיסק הרשמי של תחרויות אולטימייט בארה\"ב, במשקל התקני.",
+    "description": "הדיסק הרשמי של תחרויות אולטימייט שמאושרות על ידי USA Ultimate, במשקל התקני של 175 גרם. בנוי למעוף יציב ואחיד, שומר על הצורה גם במשחק קשוח, ויש לו שפה מחוספסת ונוחה לאחיזה. בצבע לבן, עם הדפס מתכתי שצבעו משתנה.",
+    "whyWeLikeIt": "הדיסק שאיתו באמת משחקים אולטימייט.",
     "image": "/assets/images/products/discraft-ultra-star-175g-disc.jpg",
     "additionalImages": [],
-    "price": 13.45,
+    "price": 14.03,
     "currency": "USD",
     "rating": 4.8,
     "reviewCount": 912,
@@ -18665,20 +18646,19 @@
       "beach"
     ],
     "highlights": [
-      "175 g official weight",
-      "USA Ultimate official disc",
-      "Stable flight + glide",
-      "Textured rim",
-      "Durable"
+      "175 גרם, משקל תקני",
+      "דיסק רשמי של USA Ultimate",
+      "מעוף יציב",
+      "שפה מחוספסת",
+      "עמיד"
     ],
     "affiliateUrl": "https://link.amazon/B01cJDWXY",
     "externalUrl": "https://link.amazon/B01cJDWXY",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z"
   },
   {
     "id": "prd-0467",
@@ -19277,7 +19257,7 @@
   },
   {
     "id": "prd-0481",
-    "name": "AstroAI DM130B Digital Multimeter",
+    "name": "מולטימטר דיגיטלי AstroAI DM130B",
     "slug": "astroai-dm130b-digital-multimeter",
     "category": "home",
     "secondaryCategories": [
@@ -19285,10 +19265,10 @@
       "gifts",
       "under-25"
     ],
-    "subcategory": "Tools",
-    "shortDescription": "An auto-ranging 4000-count multimeter for AC/DC voltage, current, resistance, continuity, capacitance and battery tests, with a backlit screen.",
-    "description": "The AstroAI DM130B measures AC/DC voltage and current, resistance, continuity and capacitance, and tests diodes and batteries, per the listing. It's auto-ranging with 4000 counts, has non-contact voltage detection, data hold, a large backlit LCD, a kickstand and a low-battery indicator. Two fuses (F500mA/600V and F10A/600V) and protection circuits are built in. This is the red version.",
-    "whyWeLikeIt": "A multimeter is the first tool for troubleshooting outlets, batteries and car electrics, and this one is simple for beginners.",
+    "subcategory": "כלי עבודה",
+    "shortDescription": "מודד מתח, זרם והתנגדות, עם בחירת טווח אוטומטית.",
+    "description": "מולטימטר שמודד מתח וזרם חילופין וישר, התנגדות, רציפות וקיבול, ובודק דיודות וסוללות. בחירת טווח אוטומטית עם 4000 ספרות, זיהוי מתח בלי מגע, החזקת קריאה, מסך גדול עם תאורה, רגלית עמידה וחיווי סוללה חלשה. שני נתיכים מובנים (F500mA/600V ו-F10A/600V) ומעגלי הגנה. בצבע אדום.",
+    "whyWeLikeIt": "כלי בסיסי לכל מי שמתקן דברים בבית.",
     "image": "/assets/images/products/astroai-dm130b-digital-multimeter.jpg",
     "additionalImages": [],
     "price": 20.99,
@@ -19304,34 +19284,33 @@
       "tools"
     ],
     "highlights": [
-      "Auto-ranging, 4000 counts",
-      "Voltage, current, resistance",
-      "Non-contact voltage detect",
-      "Backlit LCD + kickstand",
-      "Dual fuses"
+      "טווח אוטומטי, 4000 ספרות",
+      "מתח, זרם והתנגדות",
+      "זיהוי מתח בלי מגע",
+      "מסך מואר ורגלית",
+      "שני נתיכים"
     ],
     "affiliateUrl": "https://link.amazon/B0gfS1gjm",
     "externalUrl": "https://link.amazon/B0gfS1gjm",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z"
   },
   {
     "id": "prd-0482",
-    "name": "Stasher Reusable Silicone Storage Bags, 4-Pack, Clear",
+    "name": "4 שקיות סיליקון רב-פעמיות Stasher, שקופות",
     "slug": "stasher-reusable-silicone-bags-4-pack",
     "category": "kitchen",
     "secondaryCategories": [
       "travel",
       "gifts"
     ],
-    "subcategory": "Kitchen Tools",
-    "shortDescription": "A 4-pack of platinum food-grade silicone storage bags with a leak-free Pinch-Loc seal: one half gallon, two sandwich and one snack size.",
-    "description": "This Stasher set includes one half-gallon (64 fl oz), two sandwich (28 fl oz) and one snack (12 fl oz) bag, per the listing. They're made of platinum food-grade silicone with a leak-free Pinch-Loc seal and are free of lead, latex and phthalates. The bags are dishwasher safe and can be used for meal prep, travel and more, and Stasher covers them with a lifetime warranty. This is the clear set.",
-    "whyWeLikeIt": "They replace a drawer full of single-use bags, and the sturdy seal makes them great for snacks, leftovers and travel toiletries.",
+    "subcategory": "כלי מטבח",
+    "shortDescription": "שקיות אחסון אטומות מסיליקון שנכנסות למדיח.",
+    "description": "בסט שקית אחת של כ-1.9 ליטר, שתי שקיות סנדוויץ' של כ-830 מ\"ל ושקית חטיפים של כ-350 מ\"ל. עשויות סיליקון פלטינה בדרגת מזון עם סגירת Pinch-Loc אטומה לנזילות, ללא עופרת, לטקס ופתלטים. נכנסות למדיח, ומתאימות להכנת אוכל מראש, לנסיעות ועוד. Stasher נותנת עליהן אחריות לכל החיים.",
+    "whyWeLikeIt": "פחות שקיות ניילון בכל שבוע.",
     "image": "/assets/images/products/stasher-reusable-silicone-bags-4-pack.jpg",
     "additionalImages": [],
     "price": 46.96,
@@ -19347,20 +19326,19 @@
       "zero waste"
     ],
     "highlights": [
-      "4 bags, 3 sizes",
-      "Platinum food-grade silicone",
-      "Leak-free Pinch-Loc seal",
-      "Dishwasher safe",
-      "Lifetime warranty"
+      "4 שקיות, 3 גדלים",
+      "סיליקון בדרגת מזון",
+      "סגירה אטומה",
+      "נכנסות למדיח",
+      "אחריות לכל החיים"
     ],
     "affiliateUrl": "https://link.amazon/B0i5mnH7x",
     "externalUrl": "https://link.amazon/B0i5mnH7x",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z"
   },
   {
     "id": "prd-0483",
@@ -19824,16 +19802,16 @@
   },
   {
     "id": "prd-0494",
-    "name": "The Woobles Beginner Crochet Kit, Fred the Dinosaur",
+    "name": "ערכת סריגה למתחילים The Woobles, הדינוזאור פרד",
     "slug": "the-woobles-crochet-kit-fred-dinosaur",
     "category": "home",
     "secondaryCategories": [
       "gifts"
     ],
-    "subcategory": "Crafts & Hobbies",
-    "shortDescription": "An all-in-one beginner crochet kit to make Fred the Dinosaur, with pre-started yarn, hook, needle, safety eyes, stuffing and video tutorials.",
-    "description": "The Woobles kit includes everything to crochet Fred the Dinosaur: Easy Peasy Yarn custom-made for beginners, a pre-started piece, a hook, a needle, safety eyes, stuffing and step-by-step video tutorials, per the listing. The yarn is designed to make stitches easy to see. It's recommended for ages 12+.",
-    "whyWeLikeIt": "It takes a total beginner to a finished cute plushie, which is a very satisfying first craft project.",
+    "subcategory": "יצירה ותחביבים",
+    "shortDescription": "כל מה שצריך כדי לסרוג דינוזאור ראשון, עם סרטוני הדרכה.",
+    "description": "בערכה כל מה שצריך כדי לסרוג את פרד הדינוזאור: חוט Easy Peasy שנעשה במיוחד למתחילים, חלק שכבר התחילו לסרוג בשבילכם, מסרגה, מחט, עיני ביטחון, מילוי וסרטוני הדרכה שלב אחרי שלב (באנגלית). החוט בנוי כך שקל לראות את העיניים של הסריגה. מומלץ מגיל 12.",
+    "whyWeLikeIt": "תחביב חדש שמתחיל בערב אחד.",
     "image": "/assets/images/products/the-woobles-crochet-kit-fred-dinosaur.jpg",
     "additionalImages": [],
     "price": 29.96,
@@ -19849,20 +19827,19 @@
       "gift"
     ],
     "highlights": [
-      "Beginner-friendly",
-      "Pre-started yarn",
-      "Hook, eyes, stuffing",
-      "Video tutorials",
-      "Makes Fred the Dinosaur"
+      "מתאים למתחילים",
+      "סריגה כבר התחילה",
+      "מסרגה, עיניים ומילוי",
+      "סרטוני הדרכה",
+      "יוצא דינוזאור"
     ],
     "affiliateUrl": "https://link.amazon/B0ab2gZe6",
     "externalUrl": "https://link.amazon/B0ab2gZe6",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z"
   },
   {
     "id": "prd-0495",
@@ -20079,17 +20056,17 @@
   },
   {
     "id": "prd-0500",
-    "name": "Lusso Gear Backseat Car Organizer, Black",
+    "name": "ארגונית למושב האחורי ברכב Lusso Gear, שחורה",
     "slug": "lusso-gear-backseat-car-organizer",
     "category": "travel",
     "secondaryCategories": [
       "gifts",
       "under-25"
     ],
-    "subcategory": "Car Accessories",
-    "shortDescription": "A back-of-seat organizer and kick mat with 12 large pockets, a tablet holder and water bottle holders.",
-    "description": "The Lusso Gear backseat organizer hangs on the back of a front seat and doubles as a kick mat against kids' feet, per the listing. It has 12 large storage pockets, including a clear tablet/iPad holder and bottle holders, with reinforced material to hold toys, books and road-trip essentials. It's made of waterproof, scratchproof Oxford fabric. This is the black version.",
-    "whyWeLikeIt": "It keeps road-trip clutter off the floor and saves the back of the seats from muddy shoes.",
+    "subcategory": "אביזרי רכב",
+    "shortDescription": "12 כיסים ומקום לטאבלט, שגם מגינים על המושב מבעיטות.",
+    "description": "ארגונית שנתלית על גב המושב הקדמי ומשמשת גם כמגן מפני רגליים של ילדים. יש בה 12 כיסים גדולים, כולל כיס שקוף לטאבלט ומחזיקי בקבוקים, מחומר מחוזק שמחזיק צעצועים, ספרים וכל מה שצריך לנסיעה. עשויה בד אוקספורד עמיד במים ובשריטות. בצבע שחור.",
+    "whyWeLikeIt": "סדר במושב האחורי בנסיעות משפחתיות.",
     "image": "/assets/images/products/lusso-gear-backseat-car-organizer.jpg",
     "additionalImages": [],
     "price": 19.99,
@@ -20105,20 +20082,19 @@
       "car accessories"
     ],
     "highlights": [
-      "12 storage pockets",
-      "Tablet holder",
-      "Kick mat protection",
-      "Waterproof Oxford fabric",
-      "Reinforced design"
+      "12 כיסים",
+      "כיס לטאבלט",
+      "מגן מבעיטות",
+      "בד עמיד במים",
+      "מבנה מחוזק"
     ],
     "affiliateUrl": "https://link.amazon/B0iCGDJlA",
     "externalUrl": "https://link.amazon/B0iCGDJlA",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z"
   },
   {
     "id": "prd-0501",
@@ -20207,17 +20183,17 @@
   },
   {
     "id": "prd-0503",
-    "name": "Fancii Taylor Lighted Travel Makeup Mirror, 10x/1x",
+    "name": "מראת איפור מוארת לנסיעות Fancii Taylor, הגדלה פי 10",
     "slug": "fancii-taylor-lighted-travel-makeup-mirror",
     "category": "home",
     "secondaryCategories": [
       "travel",
       "gifts"
     ],
-    "subcategory": "Bathroom",
-    "shortDescription": "A slim 5-inch rechargeable compact mirror with 1x and 10x magnification and 3 dimmable LED light settings.",
-    "description": "The Fancii Taylor has a double-sided 1x and 10x magnifying mirror with a 5-inch distortion-free view, per the listing. Its LED lighting offers 3 dimmable settings (warm, neutral and natural daylight), and the rechargeable battery lasts up to 30 days per charge. It's slim enough for a purse. This is the Marble Rose version.",
-    "whyWeLikeIt": "Good, adjustable light makes makeup easy anywhere, from a hotel bathroom to a car.",
+    "subcategory": "אמבטיה",
+    "shortDescription": "מראה דו-צדדית עם תאורת לד נטענת, דקה לתיק.",
+    "description": "מראה דו-צדדית, רגילה ובהגדלה פי 10, בקוטר כ-13 ס\"מ בלי עיוות. לתאורת הלד שלוש הגדרות עם עמעום: חמה, ניטרלית ואור יום. הסוללה נטענת ומחזיקה עד 30 יום לטעינה. דקה מספיק כדי להיכנס לתיק. בגרסת Marble Rose.",
+    "whyWeLikeIt": "תאורה טובה לאיפור גם במלון.",
     "image": "/assets/images/products/fancii-taylor-lighted-travel-makeup-mirror.jpg",
     "additionalImages": [],
     "price": 49.99,
@@ -20233,20 +20209,19 @@
       "beauty"
     ],
     "highlights": [
-      "1x + 10x magnification",
-      "5-inch mirror",
-      "3 light settings",
-      "Rechargeable, up to 30 days",
-      "Slim, portable"
+      "הגדלה פי 1 ופי 10",
+      "מראה 13 ס\"מ",
+      "3 גווני תאורה",
+      "נטענת, עד 30 יום",
+      "דקה וניידת"
     ],
     "affiliateUrl": "https://link.amazon/B04O4NwR4",
     "externalUrl": "https://link.amazon/B04O4NwR4",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z"
   },
   {
     "id": "prd-0504",
@@ -20596,20 +20571,20 @@
   },
   {
     "id": "prd-0512",
-    "name": "ApudArmis Six Player Croquet Set, 28-Inch Mallets",
+    "name": "סט קרוקט לשישה שחקנים ApudArmis",
     "slug": "apudarmis-six-player-croquet-set",
     "category": "outdoors",
     "secondaryCategories": [
       "gifts",
       "gaming"
     ],
-    "subcategory": "Lawn & Backyard Games",
-    "shortDescription": "A complete 6-player backyard croquet set with 28-inch rubberwood mallets, colored balls, wickets, stakes and a zip-up carry bag.",
-    "description": "The ApudArmis croquet set includes six 28-inch mallets, six colored balls, wickets and stakes, per the listing. The mallet heads are made of rubberwood, the set is quick to set up and learn, and everything packs into a nylon zip-up carry bag. It works on lawns, backyards and beaches.",
-    "whyWeLikeIt": "Croquet is a relaxed, all-ages lawn game that makes any backyard gathering feel like an event.",
+    "subcategory": "משחקי חצר",
+    "shortDescription": "שש מקלות, כדורים ושערים בתיק אחד, לדשא או לחוף.",
+    "description": "בסט שש מקלות באורך כ-71 ס\"מ, שישה כדורים צבעוניים, שערים ויתדות. ראשי המקלות מעץ גומי, ההרכבה מהירה והמשחק קל ללמוד, והכול נכנס לתיק ניילון עם רוכסן. מתאים לדשא, לחצר ולחוף.",
+    "whyWeLikeIt": "משחק חצר שכולם מבינים תוך דקה.",
     "image": "/assets/images/products/apudarmis-six-player-croquet-set.jpg",
     "additionalImages": [],
-    "price": 49.99,
+    "price": 49.59,
     "currency": "USD",
     "rating": 4.5,
     "reviewCount": 3146,
@@ -20622,20 +20597,19 @@
       "apudarmis"
     ],
     "highlights": [
-      "Up to 6 players",
-      "28-inch mallets",
-      "Balls, wickets + stakes",
-      "Rubberwood heads",
-      "Carry bag"
+      "עד 6 שחקנים",
+      "מקלות 71 ס\"מ",
+      "כדורים, שערים ויתדות",
+      "ראשי עץ",
+      "תיק נשיאה"
     ],
     "affiliateUrl": "https://link.amazon/B0b8O2eil",
     "externalUrl": "https://link.amazon/B0b8O2eil",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z"
   },
   {
     "id": "prd-0513",
@@ -20894,17 +20868,17 @@
   },
   {
     "id": "prd-0519",
-    "name": "LickiMat Classic Buddy Lick Mat, Orange",
+    "name": "משטח ליקוק לכלבים וחתולים LickiMat Classic Buddy, כתום",
     "slug": "lickimat-classic-buddy-lick-mat",
     "category": "pets",
     "secondaryCategories": [
       "gifts",
       "under-25"
     ],
-    "subcategory": "Pets",
-    "shortDescription": "A textured food-grade TPR lick mat for spreading yogurt, peanut butter or wet food as a slow, long-lasting treat.",
-    "description": "The LickiMat Classic Buddy is a textured mat for serving spreadable treats like yogurt, peanut butter and purées, which settle into the mat's surface so pets take longer to finish, per the listing. It's made of non-toxic food-grade TPR (no silicone) and is dishwasher safe. LickiMat notes it isn't a chew toy and pets should be supervised. This is the orange version.",
-    "whyWeLikeIt": "Freezing a spread-covered mat makes an easy boredom-buster for crate time, bath time or a busy afternoon.",
+    "subcategory": "חיות מחמד",
+    "shortDescription": "משטח עם מרקם שמאט את האכילה של ממרחים ומחית.",
+    "description": "משטח עם מרקם שמורחים עליו יוגורט, חמאת בוטנים או מחית. האוכל נכנס לחריצים, כך שלחיה לוקח יותר זמן לסיים. עשוי TPR בדרגת מזון, לא רעיל (בלי סיליקון), ונכנס למדיח. היצרן מציין שזה לא צעצוע לעיסה, ושצריך להשגיח על החיה. בצבע כתום.",
+    "whyWeLikeIt": "כמה דקות של שקט לכלב ולכם.",
     "image": "/assets/images/products/lickimat-classic-buddy-lick-mat.jpg",
     "additionalImages": [],
     "price": 8.99,
@@ -20920,20 +20894,19 @@
       "dog gift"
     ],
     "highlights": [
-      "Textured lick surface",
-      "Food-grade TPR",
-      "Dishwasher safe",
-      "For spreads + wet food",
-      "Orange"
+      "משטח עם מרקם",
+      "TPR בדרגת מזון",
+      "נכנס למדיח",
+      "לממרחים ומזון רטוב",
+      "כתום"
     ],
     "affiliateUrl": "https://link.amazon/B0cKvIJM8",
     "externalUrl": "https://link.amazon/B0cKvIJM8",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z"
   },
   {
     "id": "prd-0520",
@@ -21023,17 +20996,17 @@
   },
   {
     "id": "prd-0522",
-    "name": "Kurgo Rover Hammock Dog Seat Cover, 55\" Wide, Black",
+    "name": "כיסוי מושב ערסל לכלבים Kurgo Rover, שחור",
     "slug": "kurgo-rover-hammock-dog-seat-cover",
     "category": "travel",
     "secondaryCategories": [
       "home",
       "gifts"
     ],
-    "subcategory": "Car Accessories",
-    "shortDescription": "A water- and stain-resistant, machine-washable back-seat hammock for dogs, 55 inches wide with 6 attachment points.",
-    "description": "The Kurgo Rover hammock seat cover protects the back seat from mud and pet hair, and hangs between the front and back seats as a barrier to keep dogs from climbing forward, per the listing. It's water resistant, stain resistant and machine washable, measures 55 inches wide by 56 inches long, and uses 6 attachment points to stay in place. This is the black version.",
-    "whyWeLikeIt": "It keeps the back seat clean after muddy walks and keeps the dog comfortably in the back.",
+    "subcategory": "אביזרי רכב",
+    "shortDescription": "מגן על המושב האחורי מבוץ ושיער, ומונע מהכלב לעבור קדימה.",
+    "description": "כיסוי שמגן על המושב האחורי מבוץ ומשיער, ונתלה בין המושבים הקדמיים לאחוריים כמחסום שמונע מהכלב לטפס קדימה. עמיד במים ובכתמים, אפשר לכבס במכונה, במידות כ-140 על 142 ס\"מ, עם 6 נקודות חיבור שמחזיקות אותו במקום. בצבע שחור.",
+    "whyWeLikeIt": "נסיעה לים עם הכלב בלי לנקות אחר כך.",
     "image": "/assets/images/products/kurgo-rover-hammock-dog-seat-cover.jpg",
     "additionalImages": [],
     "price": 69.95,
@@ -21049,21 +21022,20 @@
       "car accessories"
     ],
     "highlights": [
-      "55 x 56 inches",
-      "Water + stain resistant",
-      "Machine washable",
-      "6 attachment points",
-      "Hammock barrier design"
+      "140x142 ס\"מ",
+      "עמיד במים ובכתמים",
+      "כביסה במכונה",
+      "6 נקודות חיבור",
+      "מבנה ערסל"
     ],
     "affiliateUrl": "https://link.amazon/B0djtDLgE",
     "externalUrl": "https://link.amazon/B0djtDLgE",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-09-30T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "brand": "Kurgo",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z",
+    "brand": "Kurgo"
   },
   {
     "id": "prd-0523",
@@ -22175,17 +22147,17 @@
   },
   {
     "id": "prd-0549",
-    "name": "Kyser Quick-Change Capo for 6-String Acoustic Guitar, Black",
+    "name": "קאפו לגיטרה אקוסטית Kyser Quick-Change, שחור",
     "slug": "kyser-quick-change-capo-acoustic-black",
     "category": "gifts",
     "secondaryCategories": [
       "gaming",
       "under-25"
     ],
-    "subcategory": "Audio",
-    "shortDescription": "The original one-handed spring capo in lightweight aluminum that clips to the headstock when not in use; made in the USA.",
-    "description": "The Kyser Quick-Change is the original one-handed guitar capo, made of lightweight aluminum with a steel spring, per the listing. It's designed for 6-string acoustic guitars, parks on the headstock when not in use, and is made in the USA and guaranteed for life. This is the black version.",
-    "whyWeLikeIt": "A capo lets guitarists change keys in a second, and this one is a staple in gig bags everywhere.",
+    "subcategory": "אודיו",
+    "shortDescription": "קאפו שמזיזים ביד אחת, מאלומיניום קל.",
+    "description": "הקאפו המקורי שמפעילים ביד אחת, מאלומיניום קל עם קפיץ פלדה. מיועד לגיטרות אקוסטיות עם 6 מיתרים, ונתלה על ראש הגיטרה כשלא משתמשים בו. מיוצר בארה\"ב, עם אחריות לכל החיים. בצבע שחור.",
+    "whyWeLikeIt": "מתנה קטנה ושימושית לכל מי שמנגן.",
     "image": "/assets/images/products/kyser-quick-change-capo-acoustic-black.jpg",
     "additionalImages": [],
     "price": 24.95,
@@ -22201,21 +22173,20 @@
       "gift for musicians"
     ],
     "highlights": [
-      "One-handed operation",
-      "Aluminum + steel spring",
-      "For 6-string acoustic",
-      "Parks on headstock",
-      "Made in USA"
+      "הפעלה ביד אחת",
+      "אלומיניום וקפיץ פלדה",
+      "לגיטרה אקוסטית",
+      "נתלה על ראש הגיטרה",
+      "אחריות לכל החיים"
     ],
     "affiliateUrl": "https://link.amazon/B0bYgtOIk",
     "externalUrl": "https://link.amazon/B0bYgtOIk",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-10-02T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "brand": "Kyser",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z",
+    "brand": "Kyser"
   },
   {
     "id": "prd-0550",
@@ -23692,19 +23663,19 @@
   },
   {
     "id": "prd-0585",
-    "name": "Amazon Basics 6-Piece Cotton Towel Set, Gray",
+    "name": "סט 6 מגבות כותנה Amazon Basics, אפור",
     "slug": "amazon-basics-6-piece-cotton-towel-set-gray",
     "category": "home",
     "secondaryCategories": [
       "under-25"
     ],
-    "subcategory": "Bathroom",
-    "shortDescription": "A fade-resistant 100% cotton set with 2 bath towels, 2 hand towels and 2 washcloths with a pique border.",
-    "description": "This Amazon Basics set includes two 54 x 30-inch bath towels, two 26 x 16-inch hand towels and two 12 x 12-inch washcloths, per the listing. They're made of soft, absorbent cotton with a classic pique border in a fade-resistant gray.",
-    "whyWeLikeIt": "A matching set is an easy refresh for a bathroom or guest room.",
+    "subcategory": "אמבטיה",
+    "shortDescription": "שתי מגבות רחצה, שתי מגבות ידיים ושתי מגבות פנים.",
+    "description": "בסט שתי מגבות רחצה בגודל כ-137 על 76 ס\"מ, שתי מגבות ידיים של כ-66 על 41 ס\"מ ושתי מגבות פנים של כ-30 על 30 ס\"מ. עשויות כותנה רכה וסופגת, עם שוליים קלאסיים, בצבע אפור שלא דוהה.",
+    "whyWeLikeIt": "סט בסיסי וטוב לבית חדש או לחדר אורחים.",
     "image": "/assets/images/products/amazon-basics-6-piece-cotton-towel-set-gray.jpg",
     "additionalImages": [],
-    "price": 16.78,
+    "price": 14.08,
     "currency": "USD",
     "rating": 4.4,
     "reviewCount": 26860,
@@ -23717,21 +23688,20 @@
       "guest room"
     ],
     "highlights": [
-      "6 pieces",
-      "2 bath, 2 hand, 2 washcloths",
-      "100% cotton",
-      "Pique border",
-      "Fade-resistant gray"
+      "6 מגבות",
+      "2 רחצה, 2 ידיים, 2 פנים",
+      "כותנה 100%",
+      "שוליים קלאסיים",
+      "אפור שלא דוהה"
     ],
     "affiliateUrl": "https://link.amazon/B04gvwtR7",
     "externalUrl": "https://link.amazon/B04gvwtR7",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-10-02T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "brand": "Amazon Basics",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z",
+    "brand": "Amazon Basics"
   },
   {
     "id": "prd-0586",
@@ -25161,16 +25131,16 @@
   },
   {
     "id": "prd-0620",
-    "name": "CMYK Wavelength Mind-Reading Party Game",
+    "name": "משחק המסיבה Wavelength (באנגלית)",
     "slug": "cmyk-wavelength-party-game",
     "category": "gaming",
     "secondaryCategories": [
       "gifts"
     ],
-    "subcategory": "Tabletop Games",
-    "shortDescription": "A team party game where players give clues to place a hidden target on a spectrum, for 2-12+ people.",
-    "description": "In Wavelength, teams work together to guess where a clue falls on a spectrum like hot to cold or soft to hard, per the listing. It takes seconds to set up, a minute to learn and about 30 minutes to play, and works for groups of 2 to 12 or more.",
-    "whyWeLikeIt": "It sparks great debates among friends, which makes it a fantastic game for big groups.",
+    "subcategory": "משחקי קופסה",
+    "shortDescription": "משחק ניחושים קבוצתי על סקאלה, שלומדים בדקה.",
+    "description": "הקבוצות מנסות לנחש איפה נופל רמז על סקאלה, למשל בין חם לקר או בין רך לקשה. ההכנה לוקחת שניות, הלמידה דקה, ומשחק אחד נמשך כחצי שעה. מתאים לקבוצות של 2 עד 12 משתתפים ויותר. המשחק באנגלית.",
+    "whyWeLikeIt": "מגלה כמה טוב אתם מכירים את החברים.",
     "image": "/assets/images/products/cmyk-wavelength-party-game.jpg",
     "additionalImages": [],
     "price": 34.99,
@@ -25186,20 +25156,19 @@
       "team game"
     ],
     "highlights": [
-      "2-12+ players",
-      "1 minute to learn",
-      "About 30 minutes",
-      "Team guessing",
-      "Spectrum dial"
+      "2-12 שחקנים ויותר",
+      "לומדים בדקה",
+      "כחצי שעה",
+      "ניחוש קבוצתי",
+      "באנגלית"
     ],
     "affiliateUrl": "https://link.amazon/B0eKasRJg",
     "externalUrl": "https://link.amazon/B0eKasRJg",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-10-02T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z"
   },
   {
     "id": "prd-0621",
@@ -25578,20 +25547,20 @@
   },
   {
     "id": "prd-0630",
-    "name": "Big Potato Herd Mentality Party Game",
+    "name": "משחק המסיבה Herd Mentality (באנגלית)",
     "slug": "big-potato-herd-mentality",
     "category": "gaming",
     "secondaryCategories": [
       "gifts",
       "under-25"
     ],
-    "subcategory": "Tabletop Games",
-    "shortDescription": "A party game for 4-20 players where you win cows by giving the same answer as the majority, with 20 bonus questions.",
-    "description": "In Herd Mentality, players flip a question and write down what they think everyone else will answer, per the listing. Answers in the majority win cows, and the odd one out gets stuck with the pink cow. This version includes 20 extra questions. It's for 4 to 20+ players ages 10+.",
-    "whyWeLikeIt": "It's an easy icebreaker that works for big family gatherings.",
+    "subcategory": "משחקי קופסה",
+    "shortDescription": "כותבים את התשובה שכולם יכתבו, ומנצחים עם העדר.",
+    "description": "הופכים קלף שאלה וכל אחד כותב את התשובה שלדעתו רוב השחקנים יכתבו. מי שבצד של הרוב מקבל פרה, ומי שנשאר לבד מקבל את הפרה הוורודה. בגרסה הזו 20 שאלות נוספות. ל-4 עד 20 שחקנים ויותר, מגיל 10. המשחק באנגלית.",
+    "whyWeLikeIt": "משחק שעובד גם עם מי שלא אוהב משחקים.",
     "image": "/assets/images/products/big-potato-herd-mentality.jpg",
     "additionalImages": [],
-    "price": 22.49,
+    "price": 24.99,
     "currency": "USD",
     "rating": 4.7,
     "reviewCount": 4977,
@@ -25604,20 +25573,19 @@
       "holiday game"
     ],
     "highlights": [
-      "4-20+ players",
-      "Ages 10+",
-      "Think like the herd",
-      "20 bonus questions",
-      "Quick to learn"
+      "4-20 שחקנים ויותר",
+      "מגיל 10",
+      "לחשוב כמו העדר",
+      "20 שאלות בונוס",
+      "באנגלית"
     ],
     "affiliateUrl": "https://link.amazon/B07t7Qfdz",
     "externalUrl": "https://link.amazon/B07t7Qfdz",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-10-02T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z"
   },
   {
     "id": "prd-0631",
@@ -27892,16 +27860,16 @@
   },
   {
     "id": "prd-0685",
-    "name": "BOSU Balance Trainer, 26 Inch, with Pump",
+    "name": "כדור שיווי משקל BOSU Balance Trainer, ‏66 ס\"מ, עם משאבה",
     "slug": "bosu-balance-trainer-26-inch",
     "category": "outdoors",
     "secondaryCategories": [
       "gifts"
     ],
-    "subcategory": "Fitness",
-    "shortDescription": "The original 26-inch half-dome balance trainer for strength, cardio and balance exercises, with a pump and guided workouts.",
-    "description": "The BOSU Balance Trainer is a 26-inch inflatable dome on a stable platform that can be used dome-up or platform-up for strength, cardio, flexibility and balance work, per the listing. It supports up to 350 lbs, has a non-slip surface, and includes a pump and a guided workout program. This is the light blue and black version.",
-    "whyWeLikeIt": "One piece of equipment adds a lot of variety to home workouts.",
+    "subcategory": "כושר",
+    "shortDescription": "חצי כדור מתנפח על בסיס יציב, לאימוני כוח ושיווי משקל.",
+    "description": "כיפה מתנפחת בקוטר 66 ס\"מ (26 אינץ') על בסיס יציב. משתמשים בו עם הכיפה למעלה או עם הבסיס למעלה, לאימוני כוח, אירובי, גמישות ושיווי משקל. נושא עד כ-159 ק\"ג, עם משטח שלא מחליק. מגיע עם משאבה ותוכנית אימונים מודרכת. בצבע תכלת ושחור.",
+    "whyWeLikeIt": "חדר כושר קטן שנכנס מתחת למיטה.",
     "image": "/assets/images/products/bosu-balance-trainer-26-inch.jpg",
     "additionalImages": [],
     "price": 139.99,
@@ -27917,21 +27885,20 @@
       "exercise"
     ],
     "highlights": [
-      "26-inch dome",
-      "Supports 350 lbs",
-      "Pump included",
-      "Guided workouts",
-      "Non-slip surface"
+      "קוטר 66 ס\"מ",
+      "עד 159 ק\"ג",
+      "משאבה כלולה",
+      "תוכנית אימונים",
+      "משטח לא מחליק"
     ],
     "affiliateUrl": "https://link.amazon/B0dfc6dF1",
     "externalUrl": "https://link.amazon/B0dfc6dF1",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-10-05T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "brand": "BOSU",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z",
+    "brand": "BOSU"
   },
   {
     "id": "prd-0686",
@@ -28229,17 +28196,17 @@
   },
   {
     "id": "prd-0693",
-    "name": "Mr. Pen Floral Washi Tape Set, 21 Rolls",
+    "name": "סט 21 גלילי וואשי טייפ Mr. Pen, פרחוני",
     "slug": "mr-pen-floral-washi-tape-21-rolls",
     "category": "home",
     "secondaryCategories": [
       "gifts",
       "under-25"
     ],
-    "subcategory": "Crafts & Hobbies",
-    "shortDescription": "Twenty-one rolls of floral and seasonal washi tape in three widths that tear by hand and reposition without residue.",
-    "description": "The Mr. Pen washi tape set includes 21 rolls: 7 each in 0.6-inch, 0.3-inch and 0.12-inch widths, per the listing. Designs include pastels, vintage florals, fall leaves and hearts. The tape tears by hand and can be repositioned without leaving residue, for journals, planners, scrapbooks, cards and gift wrap.",
-    "whyWeLikeIt": "Washi tape is an easy, cheerful way to decorate planners, journals and gifts.",
+    "subcategory": "יצירה ותחביבים",
+    "shortDescription": "סרטי נייר דקורטיביים ביומן, בכרטיסים ובעטיפת מתנות.",
+    "description": "בסט 21 גלילים: 7 בכל אחד משלושה רוחבים, כ-15, 8 ו-3 מ\"מ. העיצובים כוללים פסטלים, פרחים בסגנון וינטג', עלי שלכת ולבבות. הסרט נקרע ביד ואפשר להזיז אותו בלי שיישארו שאריות דבק. מתאים ליומנים, מתכננים, אלבומים, כרטיסי ברכה ועטיפת מתנות.",
+    "whyWeLikeIt": "קישוט מהיר לכל דף ביומן.",
     "image": "/assets/images/products/mr-pen-floral-washi-tape-21-rolls.jpg",
     "additionalImages": [],
     "price": 6.99,
@@ -28255,20 +28222,19 @@
       "crafts"
     ],
     "highlights": [
-      "21 rolls",
-      "3 widths",
-      "Floral designs",
-      "Tears by hand",
-      "No residue"
+      "21 גלילים",
+      "3 רוחבים",
+      "עיצובים פרחוניים",
+      "נקרע ביד",
+      "בלי שאריות דבק"
     ],
     "affiliateUrl": "https://link.amazon/B06ynAfzT",
     "externalUrl": "https://link.amazon/B06ynAfzT",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-10-05T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z"
   },
   {
     "id": "prd-0694",
@@ -28728,17 +28694,17 @@
   },
   {
     "id": "prd-0705",
-    "name": "MIULEE Corduroy Throw Pillow Covers, 18 x 18, Cream White, 2-Pack",
+    "name": "2 ציפיות לכרית נוי מקורדרוי MIULEE, ‏45x45 ס\"מ, שמנת",
     "slug": "miulee-corduroy-throw-pillow-covers-cream",
     "category": "home",
     "secondaryCategories": [
       "gifts",
       "under-25"
     ],
-    "subcategory": "Decor",
-    "shortDescription": "Two soft striped corduroy 18 x 18 inch pillow covers with hidden zippers; inserts not included.",
-    "description": "The MIULEE pillow covers are made of soft polyester corduroy with a boho stripe texture, per the listing. They have a hidden zipper for easy insert removal and come as a pack of two 18 x 18-inch covers in cream white (inserts not included). Hand washing or a gentle machine cycle is recommended.",
-    "whyWeLikeIt": "New pillow covers are one of the easiest ways to refresh a sofa or bed.",
+    "subcategory": "עיצוב",
+    "shortDescription": "ציפיות רכות עם מרקם פסים ורוכסן נסתר.",
+    "description": "ציפיות מקורדרוי פוליאסטר רך עם מרקם פסים בסגנון בוהו. רוכסן נסתר מאפשר להוציא את הכרית בקלות. בחבילה שתי ציפיות בגודל כ-45 על 45 ס\"מ בצבע לבן שמנת, בלי כריות. מומלץ לכבס ביד או בתוכנית עדינה.",
+    "whyWeLikeIt": "דרך זולה לרענן את הספה.",
     "image": "/assets/images/products/miulee-corduroy-throw-pillow-covers-cream.jpg",
     "additionalImages": [],
     "price": 6.99,
@@ -28754,36 +28720,35 @@
       "living room"
     ],
     "highlights": [
-      "2 covers",
-      "18 x 18 inches",
-      "Corduroy texture",
-      "Hidden zipper",
-      "Inserts not included"
+      "2 ציפיות",
+      "45x45 ס\"מ",
+      "מרקם קורדרוי",
+      "רוכסן נסתר",
+      "בלי כריות"
     ],
     "affiliateUrl": "https://link.amazon/B09BHJfAP",
     "externalUrl": "https://link.amazon/B09BHJfAP",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-10-05T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z"
   },
   {
     "id": "prd-0706",
-    "name": "AKCISOT 8-Inch Silent Wall Clock, Black",
+    "name": "שעון קיר שקט AKCISOT בקוטר 20 ס\"מ, שחור",
     "slug": "akcisot-8-inch-silent-wall-clock-black",
     "category": "home",
     "secondaryCategories": [
       "under-25"
     ],
-    "subcategory": "Decor",
-    "shortDescription": "A simple 8-inch battery-operated analog wall clock with large numerals and a quiet sweep movement.",
-    "description": "The AKCISOT wall clock has a clean face with big numerals and a quiet sweep movement that doesn't tick, per the listing. It runs on batteries, measures 8 inches across, and comes with two hooks. This is the black version.",
-    "whyWeLikeIt": "A silent clock is ideal for bedrooms, offices and classrooms where ticking is distracting.",
+    "subcategory": "עיצוב",
+    "shortDescription": "שעון נקי עם ספרות גדולות ומחוג שלא מתקתק.",
+    "description": "שעון קיר עם פנים נקיות, ספרות גדולות ומנגנון שקט שלא מתקתק. עובד על סוללה, בקוטר כ-20 ס\"מ (8 אינץ'), ומגיע עם שני ווים לתלייה. בצבע שחור.",
+    "whyWeLikeIt": "שקט בחדר השינה, בלי תקתוק בלילה.",
     "image": "/assets/images/products/akcisot-8-inch-silent-wall-clock-black.jpg",
     "additionalImages": [],
-    "price": 8.99,
+    "price": 9.99,
     "currency": "USD",
     "rating": 4.5,
     "reviewCount": 9342,
@@ -28796,34 +28761,33 @@
       "bedroom"
     ],
     "highlights": [
-      "8-inch face",
-      "Silent sweep",
-      "Large numerals",
-      "Battery operated",
-      "Black"
+      "קוטר 20 ס\"מ",
+      "מנגנון שקט",
+      "ספרות גדולות",
+      "עובד על סוללה",
+      "שחור"
     ],
     "affiliateUrl": "https://link.amazon/B0abPXArP",
     "externalUrl": "https://link.amazon/B0abPXArP",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-10-05T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z"
   },
   {
     "id": "prd-0707",
-    "name": "BAYKA Floating Shelves, 22.5 Inch, Set of 2, Rustic Brown",
+    "name": "2 מדפים צפים BAYKA ‏57 ס\"מ, חום כפרי",
     "slug": "bayka-floating-shelves-22-5-inch-rustic-brown",
     "category": "home",
     "secondaryCategories": [],
-    "subcategory": "Decor",
-    "shortDescription": "Two 22.5-inch wall-mounted engineered wood shelves with sturdy brackets, a level tool and installation hardware.",
-    "description": "The BAYKA floating shelves measure 6.7 x 22.5 x 1.1 inches each and are made of engineered wood with reinforced brackets, per the listing. They're treated to resist warping, and the set includes instructions and a level tool for installation. They're not solid wood. This is the set of two in Rustic Brown.",
-    "whyWeLikeIt": "Simple wall shelves add display and storage space to any room.",
+    "subcategory": "עיצוב",
+    "shortDescription": "זוג מדפי קיר עם תושבות נסתרות, לספרים ולעציצים.",
+    "description": "כל מדף במידות כ-17 על 57 על 3 ס\"מ, מעץ מהונדס עם תושבות מחוזקות. המדפים מטופלים כדי שלא יתעקמו, ובסט הוראות התקנה ופלס קטן. הם לא מעץ מלא. סט של שניים בגוון חום כפרי.",
+    "whyWeLikeIt": "מקום לתצוגה בלי להוסיף רהיט.",
     "image": "/assets/images/products/bayka-floating-shelves-22-5-inch-rustic-brown.jpg",
     "additionalImages": [],
-    "price": 29.98,
+    "price": 29.99,
     "currency": "USD",
     "rating": 4.4,
     "reviewCount": 11118,
@@ -28836,31 +28800,30 @@
       "farmhouse"
     ],
     "highlights": [
-      "Set of 2",
-      "22.5 inches wide",
-      "Engineered wood",
-      "Brackets included",
-      "Rustic Brown"
+      "סט של 2",
+      "רוחב 57 ס\"מ",
+      "עץ מהונדס",
+      "תושבות כלולות",
+      "חום כפרי"
     ],
     "affiliateUrl": "https://link.amazon/B02Kt3svO",
     "externalUrl": "https://link.amazon/B02Kt3svO",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-10-05T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z"
   },
   {
     "id": "prd-0708",
-    "name": "StorageWorks Handwoven Water Hyacinth Baskets, 2-Pack",
+    "name": "2 סלי אחסון קלועים StorageWorks מיקינטון מים",
     "slug": "storageworks-water-hyacinth-baskets-2-pack",
     "category": "home",
     "secondaryCategories": [],
-    "subcategory": "Organization",
-    "shortDescription": "Two handwoven water hyacinth storage baskets with metal frames and built-in handles, about 13 x 8.25 x 7 inches.",
-    "description": "The StorageWorks baskets are handwoven from water hyacinth over a metal frame for strength, per the listing. Each measures about 13 x 8.25 x 7 inches and has built-in handles. They're sized for shelves, pantries and closets to hold towels, toiletries, books or snacks.",
-    "whyWeLikeIt": "Natural baskets make open shelving look tidy instead of cluttered.",
+    "subcategory": "ארגון",
+    "shortDescription": "סלים קלועים ביד עם ידיות, למדפים ולארונות.",
+    "description": "סלים שנקלעו ביד מיקינטון מים על מסגרת מתכת שנותנת להם חוזק. כל סל בגודל כ-33 על 21 על 18 ס\"מ, עם ידיות מובנות. מתאימים למדפים, למזווה ולארון, למגבות, מוצרי טיפוח, ספרים או חטיפים.",
+    "whyWeLikeIt": "סדר שנראה טוב על המדף.",
     "image": "/assets/images/products/storageworks-water-hyacinth-baskets-2-pack.jpg",
     "additionalImages": [],
     "price": 44.99,
@@ -28876,20 +28839,19 @@
       "pantry"
     ],
     "highlights": [
-      "2 baskets",
-      "Water hyacinth",
-      "Metal frame",
-      "Built-in handles",
-      "13 x 8.25 x 7 in"
+      "2 סלים",
+      "יקינטון מים קלוע",
+      "מסגרת מתכת",
+      "ידיות מובנות",
+      "33x21x18 ס\"מ"
     ],
     "affiliateUrl": "https://link.amazon/B059KjiiC",
     "externalUrl": "https://link.amazon/B059KjiiC",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-10-05T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z"
   },
   {
     "id": "prd-0709",
@@ -29013,19 +28975,19 @@
   },
   {
     "id": "prd-0712",
-    "name": "California Design Den 400 TC Cotton Sateen Sheet Set, Queen, White",
+    "name": "סט מצעים מכותנה סאטן California Design Den, קווין, לבן",
     "slug": "california-design-den-cotton-sateen-sheets-queen",
     "category": "home",
     "secondaryCategories": [
       "gifts"
     ],
-    "subcategory": "Bedding",
-    "shortDescription": "A 4-piece queen sheet set in 400 thread count long-staple cotton sateen with a deep-pocket fitted sheet for 8-16 inch mattresses.",
-    "description": "This California Design Den set is made of single-ply 100% long-staple cotton in a 400 thread count sateen weave, per the listing. It includes a flat sheet, a deep-pocket fitted sheet with all-around elastic that fits 8 to 16-inch mattresses, and 2 pillowcases. The sateen has a smooth, lustrous feel and softens with washing. This is the queen size in white.",
-    "whyWeLikeIt": "Crisp white cotton sateen sheets make a bed feel like a hotel upgrade.",
+    "subcategory": "מצעים",
+    "shortDescription": "סדין, סדין עם גומי ושתי ציפיות, 400 חוטים.",
+    "description": "סט מכותנה 100% ארוכת סיבים, באריגת סאטן של 400 חוטים. בסט סדין עליון, סדין עם גומי מסביב שמתאים למזרנים בעובי 20 עד 40 ס\"מ, ושתי ציפיות לכרית. הסאטן חלק ומבריק ומתרכך בכביסה. מידה אמריקאית קווין (כ-152 על 203 ס\"מ), בצבע לבן.",
+    "whyWeLikeIt": "מצעים של מלון במחיר סביר.",
     "image": "/assets/images/products/california-design-den-cotton-sateen-sheets-queen.jpg",
     "additionalImages": [],
-    "price": 49.99,
+    "price": 52.99,
     "currency": "USD",
     "rating": 4.5,
     "reviewCount": 47656,
@@ -29038,20 +29000,19 @@
       "bedroom"
     ],
     "highlights": [
-      "Queen, 4 pieces",
-      "400 thread count",
-      "100% cotton sateen",
-      "Deep pocket 8-16 in",
-      "White"
+      "קווין, 4 חלקים",
+      "400 חוטים",
+      "כותנה 100% סאטן",
+      "גומי לעומק 20-40 ס\"מ",
+      "לבן"
     ],
     "affiliateUrl": "https://link.amazon/B0iwITHhW",
     "externalUrl": "https://link.amazon/B0iwITHhW",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-10-05T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z"
   },
   {
     "id": "prd-0713",
@@ -29135,16 +29096,16 @@
   },
   {
     "id": "prd-0715",
-    "name": "Gorilla Tape Black Duct Tape, 1.88 in x 10 yd, 2-Pack",
+    "name": "2 גלילי סרט דביק Gorilla Tape, שחור",
     "slug": "gorilla-tape-black-duct-tape-2-pack",
     "category": "home",
     "secondaryCategories": [
       "under-25"
     ],
-    "subcategory": "Tools",
-    "shortDescription": "Two rolls of extra-strength black duct tape with double-thick adhesive and a weather-resistant shell.",
-    "description": "Gorilla Tape has double-thick adhesive that grips smooth, rough and uneven surfaces like wood, stone, stucco, brick, metal and vinyl, per the listing. The reinforced backing is strong yet tears by hand, and the weather-resistant shell withstands moisture, UV and temperature changes, with a service temperature up to 200°F. This is a 2-pack of 1.88-inch x 10-yard black rolls.",
-    "whyWeLikeIt": "It's the tape to reach for when regular duct tape won't hold.",
+    "subcategory": "כלי עבודה",
+    "shortDescription": "סרט דביק עבה שנדבק גם למשטחים מחוספסים ונקרע ביד.",
+    "description": "סרט עם שכבת דבק כפולה שנאחזת במשטחים חלקים, מחוספסים ולא אחידים, כמו עץ, אבן, טיח, לבנים, מתכת וויניל. הגב המחוזק חזק אבל נקרע ביד, והשכבה החיצונית עמידה ללחות, לשמש ולשינויי טמפרטורה, עד כ-93 מעלות. שני גלילים שחורים, ברוחב 4.8 ס\"מ ובאורך 9 מטר כל אחד.",
+    "whyWeLikeIt": "התיקון הזמני שנשאר שנים.",
     "image": "/assets/images/products/gorilla-tape-black-duct-tape-2-pack.jpg",
     "additionalImages": [],
     "price": 11.96,
@@ -29160,37 +29121,36 @@
       "garage"
     ],
     "highlights": [
-      "2 rolls",
-      "1.88 in x 10 yd",
-      "Double-thick adhesive",
-      "Tears by hand",
-      "Weather resistant"
+      "2 גלילים",
+      "4.8 ס\"מ x ‏9 מטר",
+      "דבק בעובי כפול",
+      "נקרע ביד",
+      "עמיד במזג אוויר"
     ],
     "affiliateUrl": "https://link.amazon/B081hkqep",
     "externalUrl": "https://link.amazon/B081hkqep",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-10-05T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "brand": "GORILLA",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z",
+    "brand": "GORILLA"
   },
   {
     "id": "prd-0716",
-    "name": "Umbra Hub 24-Inch Round Wall Mirror, Black",
+    "name": "מראת קיר עגולה Umbra Hub בקוטר 61 ס\"מ, שחורה",
     "slug": "umbra-hub-24-inch-round-wall-mirror-black",
     "category": "home",
     "secondaryCategories": [
       "gifts"
     ],
-    "subcategory": "Decor",
-    "shortDescription": "A modern 24-inch round wall mirror with a soft rubber frame and a hanging wire.",
-    "description": "The Umbra Hub is a 24-inch round wall mirror with a black rubber frame, per the listing. It suits bathrooms, entryways and living rooms, helps bounce light around small spaces, and hangs on a strong wire on the back.",
-    "whyWeLikeIt": "A round mirror is an easy way to make an entryway or bathroom feel brighter and more finished.",
+    "subcategory": "עיצוב",
+    "shortDescription": "מראה עגולה עם מסגרת גומי שחורה, לכניסה או לאמבטיה.",
+    "description": "מראת קיר עגולה בקוטר כ-61 ס\"מ (24 אינץ') עם מסגרת גומי שחורה. מתאימה לחדר רחצה, לכניסה ולסלון, עוזרת לפזר אור בחללים קטנים, ונתלית על חוט חזק בגב.",
+    "whyWeLikeIt": "פריט עיצוב פשוט שמגדיל את החדר.",
     "image": "/assets/images/products/umbra-hub-24-inch-round-wall-mirror-black.jpg",
     "additionalImages": [],
-    "price": 84.97,
+    "price": 90.0,
     "currency": "USD",
     "rating": 4.7,
     "reviewCount": 5252,
@@ -29203,34 +29163,33 @@
       "entryway"
     ],
     "highlights": [
-      "24-inch round",
-      "Rubber frame",
-      "Hanging wire",
-      "Black",
-      "Modern design"
+      "קוטר 61 ס\"מ",
+      "מסגרת גומי",
+      "חוט תלייה",
+      "שחור",
+      "עיצוב מודרני"
     ],
     "affiliateUrl": "https://link.amazon/B09jZI0LP",
     "externalUrl": "https://link.amazon/B09jZI0LP",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-10-05T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z"
   },
   {
     "id": "prd-0717",
-    "name": "Belkin BoostCharge 42W Dual-Port Car Charger, USB-C + USB-A",
+    "name": "מטען לרכב Belkin BoostCharge‏ 42W עם USB-C ו-USB-A",
     "slug": "belkin-boostcharge-42w-dual-car-charger",
     "category": "travel",
     "secondaryCategories": [
       "tech",
       "under-25"
     ],
-    "subcategory": "Car Accessories",
-    "shortDescription": "A dual-port car charger with a USB-C PD 3.0 port and a USB-A port, 42W total, with PPS fast charging.",
-    "description": "The Belkin BoostCharge car charger has one USB-C and one USB-A port to charge two devices at once, per the listing. It's USB-C PD 3.0 certified with PPS technology, and Belkin says it charges an iPhone from 0 to 50% in 21 minutes. The housing uses post-consumer recycled content, packaging is plastic-free, and it carries a 2-year warranty. Cables aren't mentioned as included.",
-    "whyWeLikeIt": "Fast charging for two phones keeps everyone's battery topped up on road trips.",
+    "subcategory": "אביזרי רכב",
+    "shortDescription": "טוען שני מכשירים במקביל משקע המצית.",
+    "description": "מטען לשקע המצית עם יציאת USB-C ויציאת USB-A, לטעינת שני מכשירים בבת אחת. תומך ב-USB-C PD 3.0 ו-PPS, ולפי Belkin טוען אייפון מ-0 ל-50% תוך 21 דקות. המעטפת עשויה בחלקה מפלסטיק ממוחזר, האריזה בלי פלסטיק, ויש אחריות לשנתיים. לא צוין שכבל כלול.",
+    "whyWeLikeIt": "טעינה מהירה לשני הטלפונים בנסיעה.",
     "image": "/assets/images/products/belkin-boostcharge-42w-dual-car-charger.jpg",
     "additionalImages": [],
     "price": 22.79,
@@ -29246,20 +29205,19 @@
       "road trip"
     ],
     "highlights": [
-      "42W total",
-      "USB-C + USB-A",
-      "PD 3.0 + PPS",
-      "Charges 2 devices",
-      "2-year warranty"
+      "42W סך הכול",
+      "USB-C ו-USB-A",
+      "PD 3.0 ו-PPS",
+      "שני מכשירים במקביל",
+      "אחריות לשנתיים"
     ],
     "affiliateUrl": "https://link.amazon/B048DWVlt",
     "externalUrl": "https://link.amazon/B048DWVlt",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-10-05T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z"
   },
   {
     "id": "prd-0718",
@@ -29722,16 +29680,16 @@
   },
   {
     "id": "prd-0729",
-    "name": "BDK 4-Piece All-Weather Rubber Car Floor Mats, Black",
+    "name": "4 שטיחוני גומי לרכב BDK לכל מזג אוויר, שחור",
     "slug": "bdk-4-piece-all-weather-car-floor-mats",
     "category": "travel",
     "secondaryCategories": [
       "under-25"
     ],
-    "subcategory": "Car Accessories",
-    "shortDescription": "A trimmable universal set of heavy-duty rubber car mats with channels that hold water, mud and dirt.",
-    "description": "BDK all-weather mats are heavy-duty PVC rubber with channels that trap water, mud and dirt to protect the original carpet, per the listing. The front mats measure 28 x 18 inches and the rear mats 16.5 x 18 inches, and they can be trimmed for a custom fit in cars, SUVs, trucks and vans. This is a 4-piece black set.",
-    "whyWeLikeIt": "Rubber mats make winter slush and muddy shoes much easier to clean out of the car.",
+    "subcategory": "אביזרי רכב",
+    "shortDescription": "שטיחונים עבים עם תעלות שתופסות מים ובוץ, וניתנים לחיתוך.",
+    "description": "שטיחונים מגומי PVC עבה עם תעלות שתופסות מים, בוץ ולכלוך ומגינות על השטיח המקורי. השטיחונים הקדמיים בגודל כ-71 על 46 ס\"מ והאחוריים כ-42 על 46 ס\"מ, ואפשר לחתוך אותם כדי להתאים לרכב, לג'יפ או לטנדר. סט של 4 בצבע שחור.",
+    "whyWeLikeIt": "רכב נקי גם בחורף.",
     "image": "/assets/images/products/bdk-4-piece-all-weather-car-floor-mats.jpg",
     "additionalImages": [],
     "price": 23.48,
@@ -29747,20 +29705,19 @@
       "winter"
     ],
     "highlights": [
-      "4 pieces",
-      "Heavy-duty rubber",
-      "Mud-trapping channels",
-      "Trimmable",
-      "Universal fit"
+      "4 חלקים",
+      "גומי עבה",
+      "תעלות לבוץ ומים",
+      "ניתנים לחיתוך",
+      "התאמה אוניברסלית"
     ],
     "affiliateUrl": "https://link.amazon/B0gqyggwI",
     "externalUrl": "https://link.amazon/B0gqyggwI",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-10-05T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z"
   },
   {
     "id": "prd-0730",
@@ -29846,17 +29803,17 @@
   },
   {
     "id": "prd-0732",
-    "name": "Prepara Herb Savor Eco Fresh Herb Keeper",
+    "name": "מכל לשמירת עשבי תיבול Prepara Herb Savor Eco",
     "slug": "prepara-herb-savor-eco-herb-keeper",
     "category": "kitchen",
     "secondaryCategories": [],
-    "subcategory": "Kitchen Tools",
-    "shortDescription": "A BPA-free fridge-door pod that holds fresh herbs upright in water to keep them fresh longer.",
-    "description": "The Prepara Herb Savor Eco holds herbs like basil, cilantro, mint, parsley and dill upright in a little fresh water, per the listing. You rinse and pat dry the herbs, place them in the pod and add water through the top. It's BPA-free, dishwasher safe, holds about 700 ml and is sized to fit in a fridge door.",
-    "whyWeLikeIt": "Herbs stay usable for more of the week instead of wilting in the crisper drawer.",
+    "subcategory": "כלי מטבח",
+    "shortDescription": "שומר עשבי תיבול טריים בעמידה, עם קצת מים, בדלת המקרר.",
+    "description": "מחזיק עשבי תיבול כמו בזיליקום, כוסברה, נענע, פטרוזיליה ושמיר בעמידה בתוך מעט מים. שוטפים ומייבשים את העשבים, מכניסים למכל ומוסיפים מים מלמעלה. ללא BPA, נכנס למדיח, בנפח של כ-700 מ\"ל, ובגודל שנכנס לדלת המקרר.",
+    "whyWeLikeIt": "פחות כוסברה שנזרקת לפח.",
     "image": "/assets/images/products/prepara-herb-savor-eco-herb-keeper.jpg",
     "additionalImages": [],
-    "price": 26.0,
+    "price": 39.71,
     "currency": "USD",
     "rating": 4.4,
     "reviewCount": 3316,
@@ -29869,21 +29826,20 @@
       "kitchen gadget"
     ],
     "highlights": [
-      "Holds herbs upright",
-      "Fits a fridge door",
-      "BPA-free",
-      "Dishwasher safe",
-      "700 ml capacity"
+      "עשבים בעמידה",
+      "נכנס לדלת המקרר",
+      "ללא BPA",
+      "נכנס למדיח",
+      "700 מ\"ל"
     ],
     "affiliateUrl": "https://link.amazon/B0gxCXwhC",
     "externalUrl": "https://link.amazon/B0gxCXwhC",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-10-07T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "brand": "Prepara",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z",
+    "brand": "Prepara"
   },
   {
     "id": "prd-0733",
@@ -30252,17 +30208,17 @@
   },
   {
     "id": "prd-0742",
-    "name": "D-Line Large Cable Management Box, Black",
+    "name": "קופסה להסתרת כבלים ומפצל D-Line, גדולה, שחורה",
     "slug": "d-line-large-cable-management-box-black",
     "category": "desk-setup",
     "secondaryCategories": [
       "home",
       "tech"
     ],
-    "subcategory": "Accessories",
-    "shortDescription": "A large ABS box that hides a power strip and excess cords, with three rear cable slots.",
-    "description": "The D-Line cable management box holds popular power strips and excess cord clutter out of sight, per the listing. It's made in the UK from electrically safe ABS plastic, has curved edges and three rear entry and exit slots, and measures about 16.5 x 6.5 x 5.25 inches. Check your power strip size before ordering. This is the large black version.",
-    "whyWeLikeIt": "It's the fastest way to make the cable mess behind a desk or TV disappear.",
+    "subcategory": "אביזרים",
+    "shortDescription": "מסתירה את המפצל ואת סבך הכבלים מתחת לשולחן.",
+    "description": "קופסה שמסתירה מפצל חשמל ועודפי כבלים. מיוצרת בבריטניה מפלסטיק ABS בטיחותי לחשמל, עם פינות מעוגלות ושלושה פתחים מאחור לכניסת הכבלים ויציאתם. מידות כ-42 על 17 על 13 ס\"מ, וכדאי לבדוק שהמפצל שלכם נכנס לפני ההזמנה. הגרסה הגדולה בשחור.",
+    "whyWeLikeIt": "פינת עבודה שנראית מסודרת.",
     "image": "/assets/images/products/d-line-large-cable-management-box-black.jpg",
     "additionalImages": [],
     "price": 27.99,
@@ -30278,20 +30234,19 @@
       "tv setup"
     ],
     "highlights": [
-      "Hides a power strip",
-      "3 cable slots",
-      "ABS plastic",
-      "16.5 x 6.5 x 5.25 in",
-      "Black"
+      "מסתירה מפצל",
+      "3 פתחים לכבלים",
+      "פלסטיק ABS",
+      "42x17x13 ס\"מ",
+      "שחור"
     ],
     "affiliateUrl": "https://link.amazon/B052Y1UIi",
     "externalUrl": "https://link.amazon/B052Y1UIi",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-10-07T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z"
   },
   {
     "id": "prd-0743",
@@ -31433,7 +31388,7 @@
   },
   {
     "id": "prd-0770",
-    "name": "GoSports Ladder Toss Game Set, Classic",
+    "name": "משחק זריקת בולו לסולם GoSports Ladder Toss",
     "slug": "gosports-ladder-toss-game-set-classic",
     "category": "outdoors",
     "secondaryCategories": [
@@ -31441,10 +31396,10 @@
       "gifts",
       "gaming"
     ],
-    "subcategory": "Lawn & Backyard Games",
-    "shortDescription": "A backyard ladder toss set with 2 targets, built-in score trackers, 6 rubber bolos and a carry case.",
-    "description": "This GoSports Ladder Toss set includes two targets with score trackers, six soft rubber bolos, a carrying case and rules, per the listing. The PVC targets come pre-glued so assembly takes under two minutes, and it works indoors or outdoors. This is the Classic version.",
-    "whyWeLikeIt": "It's an easy setup for tailgates, cookouts and camping trips.",
+    "subcategory": "משחקי חצר",
+    "shortDescription": "שני סולמות מטרה ושישה בולו מגומי, מורכב בפחות משתי דקות.",
+    "description": "בסט שתי מטרות בצורת סולם עם מוני ניקוד, שישה בולו מגומי רך, תיק נשיאה וחוקי המשחק. המטרות מצינורות PVC מגיעות מודבקות מראש, כך שההרכבה לוקחת פחות משתי דקות. משחקים בבית או בחוץ. זו הגרסה הקלאסית.",
+    "whyWeLikeIt": "משחק תחרותי לפיקניק שגם ילדים מנצחים בו.",
     "image": "/assets/images/products/gosports-ladder-toss-game-set-classic.jpg",
     "additionalImages": [],
     "price": 34.49,
@@ -31460,21 +31415,20 @@
       "family"
     ],
     "highlights": [
-      "2 targets",
-      "6 rubber bolos",
-      "Score trackers",
-      "Under 2-min setup",
-      "Carry case"
+      "2 מטרות",
+      "6 בולו מגומי",
+      "מוני ניקוד",
+      "הרכבה בפחות מ-2 דקות",
+      "תיק נשיאה"
     ],
     "affiliateUrl": "https://link.amazon/B0drTwk9d",
     "externalUrl": "https://link.amazon/B0drTwk9d",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-10-07T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "brand": "GoSports",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z",
+    "brand": "GoSports"
   },
   {
     "id": "prd-0771",
@@ -32438,16 +32392,16 @@
   },
   {
     "id": "prd-0794",
-    "name": "Hudson Durable Goods Chef Apron, Black",
+    "name": "סינר שף Hudson Durable Goods מכותנה עבה, שחור",
     "slug": "hudson-durable-goods-chef-apron-black",
     "category": "kitchen",
     "secondaryCategories": [
       "gifts"
     ],
-    "subcategory": "Kitchen Tools",
-    "shortDescription": "A heavy-duty 10 oz cotton cross-back apron with pockets for cooking, grilling and BBQ.",
-    "description": "The Hudson Durable Goods chef apron is made of heavy-duty 10 oz cotton with a cross-back design and pockets, per the listing. It's meant for cooking, grilling and BBQ and fits people from about 5'3\" to 6'4\". This is the black version.",
-    "whyWeLikeIt": "A sturdy apron with real pockets makes grilling and cooking less messy.",
+    "subcategory": "כלי מטבח",
+    "shortDescription": "סינר כותנה עבה עם רצועות מוצלבות וכיסים, למטבח ולמנגל.",
+    "description": "סינר מכותנה עבה (10 אונקיות) עם רצועות שמוצלבות על הגב, בלי לחץ על הצוואר, ועם כיסים. מיועד לבישול, למנגל ולגריל, ומתאים לגובה של כ-1.60 עד 1.93 מטר. בצבע שחור.",
+    "whyWeLikeIt": "מתנה טובה למי שאחראי על המנגל.",
     "image": "/assets/images/products/hudson-durable-goods-chef-apron-black.jpg",
     "additionalImages": [],
     "price": 36.99,
@@ -32463,20 +32417,19 @@
       "gift for cooks"
     ],
     "highlights": [
-      "10 oz cotton",
-      "Cross-back straps",
-      "Pockets",
-      "Fits 5'3\"-6'4\"",
-      "Black"
+      "כותנה עבה",
+      "רצועות מוצלבות",
+      "כיסים",
+      "לגובה 1.60-1.93 מטר",
+      "שחור"
     ],
     "affiliateUrl": "https://link.amazon/B06Nc2MoP",
     "externalUrl": "https://link.amazon/B06Nc2MoP",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-10-07T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:04.000Z",
+    "updatedAt": "2026-11-15T08:29:04.000Z"
   },
   {
     "id": "prd-0795",
@@ -33690,19 +33643,19 @@
   },
   {
     "id": "prd-0824",
-    "name": "Green Toys Recycling Truck, Green",
+    "name": "משאית מיחזור Green Toys, ירוקה",
     "slug": "green-toys-recycling-truck-green",
     "category": "kids",
     "secondaryCategories": [
       "gifts"
     ],
-    "subcategory": "Toys",
-    "shortDescription": "A recycled-plastic toy recycling truck with 3 sorting chutes and a tipping bin, dishwasher safe.",
-    "description": "The Green Toys Recycling Truck has three chutes for sorting pretend bottles, cans and paper, per the listing. It's made from earth-friendly materials without BPA, PVC or phthalates, comes without plastic packaging, and is dishwasher safe for easy cleaning.",
-    "whyWeLikeIt": "It's a sturdy truck that also turns recycling into a game.",
+    "subcategory": "צעצועים",
+    "shortDescription": "משאית צעצוע עם שלושה תאים למיון בקבוקים, פחיות ונייר.",
+    "description": "למשאית שלושה פתחים למיון בקבוקים, פחיות ונייר לכאורה. עשויה מחומרים ממוחזרים, ללא BPA, PVC ופתלטים, מגיעה בלי אריזת פלסטיק ונכנסת למדיח לניקוי קל.",
+    "whyWeLikeIt": "צעצוע עמיד שמלמד למיין בלי הרצאות.",
     "image": "/assets/images/products/green-toys-recycling-truck-green.jpg",
     "additionalImages": [],
-    "price": 28.71,
+    "price": 16.16,
     "currency": "USD",
     "rating": 4.8,
     "reviewCount": 4744,
@@ -33715,21 +33668,20 @@
       "kids gift"
     ],
     "highlights": [
-      "3 sorting chutes",
-      "Recycled materials",
-      "No BPA or PVC",
-      "Dishwasher safe",
-      "Plastic-free packaging"
+      "3 תאי מיון",
+      "חומרים ממוחזרים",
+      "ללא BPA ו-PVC",
+      "נכנסת למדיח",
+      "אריזה בלי פלסטיק"
     ],
     "affiliateUrl": "https://link.amazon/B0d8510X3",
     "externalUrl": "https://link.amazon/B0d8510X3",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-10-07T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "brand": "Green Toys",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:47.000Z",
+    "updatedAt": "2026-11-15T08:29:47.000Z",
+    "brand": "Green Toys"
   },
   {
     "id": "prd-0825",
@@ -33897,17 +33849,17 @@
   },
   {
     "id": "prd-0829",
-    "name": "Melissa & Doug Band-in-a-Box Clap! Clang! Tap!",
+    "name": "להקה בקופסה Melissa & Doug, ‏10 כלי נגינה",
     "slug": "melissa-and-doug-band-in-a-box",
     "category": "kids",
     "secondaryCategories": [
       "under-25",
       "gifts"
     ],
-    "subcategory": "Toys",
-    "shortDescription": "A 10-piece kids' musical instrument set stored in a wooden crate, for ages 3-6.",
-    "description": "The Melissa & Doug Band-in-a-Box Clap! Clang! Tap! is a 10-piece set of kid-sized musical instruments with a variety of tones, per the listing. Everything stores in a durable wooden crate, and it's designed for kids ages 3 to 6.",
-    "whyWeLikeIt": "A whole band in one box is great for siblings and playdates.",
+    "subcategory": "צעצועים",
+    "shortDescription": "עשרה כלי נגינה קטנים לילדים בארגז עץ.",
+    "description": "סט של 10 כלי נגינה בגודל ילדים עם צלילים מגוונים. הכול נכנס לארגז עץ חזק לאחסון. מיועד לגילאי 3 עד 6.",
+    "whyWeLikeIt": "הופעה בסלון, וכל ילד מקבל כלי.",
     "image": "/assets/images/products/melissa-and-doug-band-in-a-box.jpg",
     "additionalImages": [],
     "price": 21.99,
@@ -33923,20 +33875,19 @@
       "band"
     ],
     "highlights": [
-      "10 instruments",
-      "Wooden crate",
-      "Variety of tones",
-      "Ages 3-6",
-      "Group play"
+      "10 כלי נגינה",
+      "ארגז עץ",
+      "צלילים מגוונים",
+      "גילאי 3-6",
+      "משחק קבוצתי"
     ],
     "affiliateUrl": "https://link.amazon/B07zslz8G",
     "externalUrl": "https://link.amazon/B07zslz8G",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-10-07T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:47.000Z",
+    "updatedAt": "2026-11-15T08:29:47.000Z"
   },
   {
     "id": "prd-0830",
@@ -34317,19 +34268,19 @@
   },
   {
     "id": "prd-0839",
-    "name": "Gorilla Grip Cat Litter Trapping Mat, 35 x 23, Gray",
+    "name": "שטיחון ללכידת חול חתולים Gorilla Grip, ‏89x58 ס\"מ, אפור",
     "slug": "gorilla-grip-cat-litter-mat-35x23",
     "category": "pets",
     "secondaryCategories": [
       "under-25"
     ],
-    "subcategory": "Pets",
-    "shortDescription": "A coiled-mesh mat that sits outside the litter box and catches litter from your cat's paws.",
-    "description": "The Gorilla Grip litter mat has thick mesh coils and deep grooves on top that trap litter, plus a textured backing that helps keep it from sliding, per the listing. It's water resistant, so liquids don't pass through to the floor, and collected litter can be poured back into the box, vacuumed or shaken out. This is the 35 x 23 inch gray mat.",
-    "whyWeLikeIt": "Stops the trail of litter that usually follows a cat out of the box.",
+    "subcategory": "חיות מחמד",
+    "shortDescription": "שטיחון שתופס את החול שהחתול מוציא מהארגז.",
+    "description": "לשטיחון סלילי רשת עבים וחריצים עמוקים שתופסים את החול, וגב עם מרקם שעוזר לו לא לזוז. הוא עמיד במים, כך שנוזלים לא עוברים לרצפה, ואת החול שנאסף אפשר לשפוך בחזרה לארגז, לשאוב או לנער. גודל כ-89 על 58 ס\"מ, בצבע אפור.",
+    "whyWeLikeIt": "פחות חול מפוזר בכל הבית.",
     "image": "/assets/images/products/gorilla-grip-cat-litter-mat-35x23.jpg",
     "additionalImages": [],
-    "price": 19.99,
+    "price": 18.99,
     "currency": "USD",
     "rating": 4.5,
     "reviewCount": 51642,
@@ -34342,20 +34293,19 @@
       "floor protection"
     ],
     "highlights": [
-      "Coiled mesh top",
-      "Textured non-slip backing",
-      "Water resistant",
-      "Pour litter back in the box",
-      "35 x 23 inches"
+      "משטח רשת עם סלילים",
+      "גב שלא מחליק",
+      "עמיד במים",
+      "מחזירים את החול לארגז",
+      "89x58 ס\"מ"
     ],
     "affiliateUrl": "https://link.amazon/B07t7Vky0",
     "externalUrl": "https://link.amazon/B07t7Vky0",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-10-09T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-15T08:29:47.000Z",
+    "updatedAt": "2026-11-15T08:29:47.000Z"
   },
   {
     "id": "prd-0840",

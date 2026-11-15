@@ -75,7 +75,10 @@ export function initSearchOverlay() {
   };
 
   const renderResults = async (query) => {
-    const products = await productsPromise;
+    // The input can fire before open() has run, so start the fetch here too.
+    productsPromise = productsPromise || getProducts();
+    const [products, categories] = await Promise.all([productsPromise, getCategories()]);
+    const catName = Object.fromEntries(categories.map((c) => [c.slug, c.name]));
     if (!query.trim()) {
       resultsEl.innerHTML = suggestHtml || '';
       revealChips();
@@ -100,10 +103,10 @@ export function initSearchOverlay() {
       .map(
         (p, i) => `
         <a class="search-result" href="/product/${p.slug}/" data-reveal style="transition-delay: ${Math.min(i, 5) * 25}ms">
-          <img src="${p.image}" alt="" loading="lazy" width="48" height="48" />
+          <img src="${p.thumb || p.image}" alt="" loading="lazy" width="48" height="48" />
           <span>
             <span class="search-result__name">${escapeHtml(p.name)}</span><br/>
-            <span class="search-result__meta">${escapeHtml(p.category)} · ${formatPrice(p.price, p.currency)}</span>
+            <span class="search-result__meta">${escapeHtml(catName[p.category] || p.category)} · ${formatPrice(p.price, p.currency)}</span>
           </span>
         </a>`
       )

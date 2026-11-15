@@ -543,7 +543,7 @@ def render_product_card(product, reveal=True, reveal_delay=0, morph=False, eager
 <article class="product-card" {reveal_attr}>
   <a class="product-card-link" href="/product/{product['slug']}/" aria-labelledby="{cid}-name" aria-describedby="{cid}-desc {cid}-meta">
     <div class="product-card__media">
-      <img src="{product['image']}" alt="{esc(product['name'])}" loading="{'eager' if eager else 'lazy'}" width="800" height="800"{morph_style}
+      <img src="{product.get('thumb', product['image'])}" alt="{esc(product['name'])}" loading="{'eager' if eager else 'lazy'}" width="800" height="800"{morph_style}
            onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
     </div>
     <div class="product-card__body">
@@ -591,7 +591,7 @@ def render_category_tile(category, count):
 
 def render_collection_tile(collection):
     thumbs = "".join(
-        f'<span class="collection-tile__thumb"><img src="{p["image"]}" alt="" loading="lazy" width="200" height="200" /></span>'
+        f'<span class="collection-tile__thumb"><img src="{p.get("thumb", p["image"])}" alt="" loading="lazy" width="200" height="200" /></span>'
         for p in collection["items"][:3]
     )
     n = len(collection["items"])
@@ -722,7 +722,7 @@ def render_video_strip(videos):
         return ""
     cards = "".join(
         f'<div class="rail__item"><a class="video-card" href="/v/{v["slug"]}/">'
-        f'<span class="video-card__media"><img src="{v["items"][0]["product"]["image"]}" alt="" loading="lazy" width="400" height="400" />'
+        f'<span class="video-card__media"><img src="{v["items"][0]["product"].get("thumb", v["items"][0]["product"]["image"])}" alt="" loading="lazy" width="400" height="400" />'
         f'<span class="video-card__count">{len(v["items"])} {"מוצר" if len(v["items"]) == 1 else "מוצרים"}</span></span>'
         f'<span class="video-card__title">{esc(v["title"])}</span>'
         f'<span class="video-card__go">לעמוד הסרטון {CHEVRON_ICON}</span></a></div>'
@@ -778,7 +778,7 @@ def render_homepage(site, categories, products, counts, collections=(), videos=(
     def reel_col(items, mod):
         tiles = "".join(
             f'<a class="hero-reel__tile" href="/product/{p["slug"]}/"{" tabindex=\"-1\" aria-hidden=\"true\"" if dup else ""}>'
-            f'<img src="{p["image"]}" alt="{"" if dup else esc(p["name"])}" loading="{"eager" if i < 3 and not dup else "lazy"}" width="400" height="400" /></a>'
+            f'<img src="{p.get("thumb", p["image"])}" alt="{"" if dup else esc(p["name"])}" loading="{"eager" if i < 3 and not dup else "lazy"}" width="400" height="400" /></a>'
             for dup in (False, True) for i, p in enumerate(items)
         )
         return f'<div class="hero-reel__col hero-reel__col--{mod}"><div class="hero-reel__track">{tiles}</div></div>'
@@ -1100,7 +1100,7 @@ def guide_updated(guide):
 
 def render_guide_tile(guide):
     thumbs = "".join(
-        f'<span class="collection-tile__thumb"><img src="{p["image"]}" alt="" loading="lazy" width="200" height="200" /></span>'
+        f'<span class="collection-tile__thumb"><img src="{p.get("thumb", p["image"])}" alt="" loading="lazy" width="200" height="200" /></span>'
         for p in guide["items"][:3]
     )
     return f"""
@@ -1120,7 +1120,7 @@ def render_guide_item(n, p, site):
     return f"""
 <li class="guide-item" id="pick-{n}">
   <a class="guide-item__media" href="/product/{p['slug']}/" tabindex="-1" aria-hidden="true">
-    <img src="{p['image']}" alt="" loading="{'eager' if n <= 2 else 'lazy'}" width="800" height="800" onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
+    <img src="{p.get('thumb', p['image'])}" alt="" loading="{'eager' if n <= 2 else 'lazy'}" width="800" height="800" onerror="this.onerror=null;this.src='/assets/images/fallback.svg';" />
   </a>
   <div class="guide-item__body">
     <span class="guide-item__num">{n:02d}</span>
@@ -1793,6 +1793,46 @@ _ALL_CATEGORIES = []
 _ALL_COUNTS = {}
 
 
+THUMB_DIR = os.path.join("assets", "images", "thumbs")
+THUMB_SIZE = 480
+
+
+def add_card_thumbs(products):
+    """Give each product a small card-size copy of its main photo (p["thumb"]).
+
+    Cards show the photo at about 300px, but the originals are up to 1500px
+    and 600 KB. The thumbnail is the same image scaled down to 480px as WebP;
+    the original stays untouched and is still used on the product page and in
+    share previews. Thumbnails are generated once and reused. If Pillow is
+    missing or a photo cannot be read, the card simply keeps the original."""
+    try:
+        from PIL import Image
+    except ImportError:
+        Image = None
+    for p in products:
+        p["thumb"] = p["image"]
+        src_rel = p["image"].lstrip("/")
+        if Image is None or not src_rel.startswith("assets/images/products/"):
+            continue
+        src = os.path.join(PUBLIC_DIR, src_rel)
+        rel = os.path.join(THUMB_DIR, p["slug"] + ".webp")
+        dst = os.path.join(PUBLIC_DIR, rel)
+        if not os.path.exists(dst) or os.path.getmtime(dst) < os.path.getmtime(src):
+            try:
+                with Image.open(src) as im:
+                    im = im.convert("RGBA") if im.mode in ("P", "LA", "RGBA") else im.convert("RGB")
+                    if im.mode == "RGBA":
+                        bg = Image.new("RGB", im.size, (255, 255, 255))
+                        bg.paste(im, mask=im.split()[3])
+                        im = bg
+                    im.thumbnail((THUMB_SIZE, THUMB_SIZE), Image.LANCZOS)
+                    os.makedirs(os.path.dirname(dst), exist_ok=True)
+                    im.save(dst, "WEBP", quality=82, method=6)
+            except (OSError, ValueError):
+                continue
+        p["thumb"] = "/" + rel.replace(os.sep, "/")
+
+
 def write_file(path, content):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
@@ -1805,6 +1845,7 @@ def main():
     _ALL_CATEGORIES = categories
 
     published = [p for p in products if p.get("published")]
+    add_card_thumbs(published)
     counts = {}
     for p in published:
         for slug in [p["category"], *p.get("secondaryCategories", [])]:
@@ -1815,7 +1856,7 @@ def main():
     # Only the fields the browser uses (cards, search, filters, sorting), minified:
     # the full records are ~4x larger and every page loads this file.
     client_fields = ("id", "name", "slug", "category", "subcategory", "secondaryCategories", "shortDescription",
-                     "tags", "image", "price", "currency", "rating", "reviewCount", "affiliateUrl",
+                     "tags", "image", "thumb", "price", "currency", "rating", "reviewCount", "affiliateUrl",
                      "featured", "trending", "published", "createdAt")
     snapshot = [{k: p[k] for k in client_fields if k in p} for p in published]
     write_file(os.path.join(PUBLIC_DIR, "data", "products.json"), json.dumps(snapshot, ensure_ascii=False, separators=(",", ":")))
