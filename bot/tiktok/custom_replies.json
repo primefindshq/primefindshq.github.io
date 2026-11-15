@@ -1,5 +1,20 @@
 {
   "_readme": "Replies written for a specific video, shown above the general ones. Key = the video's slug (code word). For every new video add 3-4 replies that fit it, in a light, slightly cynical Israeli tone, and always send people to the link in the bio (links in TikTok comments aren't clickable). Then run: py bot/tiktok/make_replies.py",
+  "mayim": [
+    "הקיר נשאר לבן, והילדה עדיין אמנית 🎨 קישור בביו",
+    "מים במקום טוש. ההורים נושמים לרווחה 😅 קישור בביו",
+    "אבא עדיין מנסה על הקיר. אנחנו לא מפריעים לו 😂 קישור בביו"
+  ],
+  "geshem": [
+    "הילדים בשלולית, הבוץ בתעלות, האוטו נקי 🚗 קישור בביו",
+    "מוציאים, שוטפים, מחזירים. החורף הזה לא ינצח 💪 קישור בביו",
+    "תייגו את האבא שקופץ לשלולית לפני הילדים 😂 קישור בביו"
+  ],
+  "kir": [
+    "חור שלישי והשכן כבר שואל שאלות 😅 קישור בביו",
+    "תייגו את האבא שקודח קודם ובודק אחר כך 👆 קישור בביו",
+    "13 חיישנים, אפס חורים מיותרים. השכן מודה לכם 😂 קישור בביו"
+  ],
   "vilon": [
     "השמש של 6 בבוקר לא תנצח הפעם 😎 הקישור בביו",
     "שבת זה בשביל לישון. הוילונות בקישור שבביו 👆",
