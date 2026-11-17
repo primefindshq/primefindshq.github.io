@@ -208,6 +208,21 @@ def render_breadcrumbs(items):
     return f'<nav class="breadcrumbs" aria-label="מיקום באתר">{"".join(parts)}</nav>'
 
 
+def breadcrumb_ld(site, items):
+    """schema.org BreadcrumbList matching the visible breadcrumbs. Items without an href
+    (the current page) are listed without a URL, which schema.org allows for the last item. "#" anchors are skipped, as they are not pages."""
+    base = site["url"].rstrip("/")
+    elems = []
+    for label, href in items:
+        if href and "#" in href:
+            continue
+        el = {"@type": "ListItem", "position": len(elems) + 1, "name": label}
+        if href:
+            el["item"] = base + href
+        elems.append(el)
+    return {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": elems}
+
+
 def render_contact_paragraph(site, lead=""):
     """The one place that decides how a visitor can reach PRIME.FINDS. Only channels
     that actually exist are offered: an email address if one has been configured in
@@ -1045,6 +1060,17 @@ def render_category_page(site, category, all_categories, category_products):
 </section>
 """
 
+    # Only the first page of cards is in the HTML, so the full list is also given as an
+    # ItemList: search engines can then reach every product in the category from here.
+    base = site["url"].rstrip("/")
+    ld = [breadcrumb_ld(site, [("דף הבית", "/"), (category['name'], None)])]
+    if initial_sorted:
+        ld.append({"@context": "https://schema.org", "@type": "ItemList", "name": category["name"],
+                   "numberOfItems": len(initial_sorted),
+                   "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": p["name"],
+                                        "url": f"{base}/product/{p['slug']}/"} for i, p in enumerate(initial_sorted)]})
+    cat_head = "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in ld)
+
     return base_page(
         site,
         title=CATEGORY_TITLES.get(category["slug"], f"{category['name']} מאמזון") + f" | {site['siteName']}",
@@ -1055,6 +1081,7 @@ def render_category_page(site, category, all_categories, category_products):
         body_html=body,
         page_scripts=["/js/pages/category.js"],
         active_nav=category["slug"],
+        extra_head=cat_head,
     )
 
 
@@ -1459,7 +1486,8 @@ def render_product_page(site, product, category, related_products, featured_in=(
             "availability": "https://schema.org/OutOfStock" if product.get("availability") == "unavailable" else "https://schema.org/InStock",
             "url": site["url"].rstrip("/") + f"/product/{product['slug']}/",
         }
-    extra_head = f'<script type="application/ld+json">{json.dumps(ld_json, ensure_ascii=False)}</script>'
+    crumbs = breadcrumb_ld(site, [("דף הבית", "/"), (category['name'], f"/category/{category['slug']}/"), (product['name'], None)])
+    extra_head = "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in (ld_json, crumbs))
     if yt:
         video_ld = {
             "@context": "https://schema.org", "@type": "VideoObject", "name": yt["title"],
