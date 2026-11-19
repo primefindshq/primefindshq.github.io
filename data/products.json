@@ -38927,19 +38927,19 @@
   },
   {
     "id": "prd-0952",
-    "name": "Mr. Clean Magic Eraser Extra Durable Pads",
+    "name": "ספוגי פלא Mr. Clean Magic Eraser עמידים",
     "slug": "mr-clean-magic-eraser-extra-durable",
     "category": "home",
     "secondaryCategories": [
       "under-25"
     ],
-    "subcategory": "Cleaning",
-    "shortDescription": "Melamine cleaning pads that lift scuffs, crayon and built-up grime using just water.",
-    "description": "Mr. Clean Magic Erasers clean scuffs, marker and grime using water alone, per the listing. Wet the pad, squeeze it, and scrub. The upgraded pads are made to last longer and can be rinsed and reused several times.",
-    "whyWeLikeIt": "The easiest fix for scuffs on walls and dirty sneakers.",
+    "subcategory": "ניקיון",
+    "shortDescription": "מנקים כתמים רק עם מים.",
+    "description": "מרטיבים, סוחטים ומשפשפים: הספוג מנקה סימני נעליים, טוש ולכלוך רק עם מים. הגרסה העמידה מחזיקה יותר זמן, ואפשר לשטוף ולהשתמש בה כמה פעמים.",
+    "whyWeLikeIt": "הפתרון לקירות עם ציורי ילדים.",
     "image": "/assets/images/products/mr-clean-magic-eraser-extra-durable.jpg",
     "additionalImages": [],
-    "price": 12.98,
+    "price": 12.94,
     "currency": "USD",
     "rating": 4.6,
     "reviewCount": 3017,
@@ -38952,20 +38952,18 @@
       "home"
     ],
     "highlights": [
-      "Works with just water",
-      "Removes scuffs and marker",
-      "Rinse and reuse",
-      "Longer-lasting pads",
-      "Multi-surface"
+      "רק מים",
+      "מוריד טוש ושריטות",
+      "שוטפים ומשתמשים שוב",
+      "עמיד יותר"
     ],
     "affiliateUrl": "https://link.amazon/B09mBiuXj",
     "externalUrl": "https://link.amazon/B09mBiuXj",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-10-09T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-19T08:31:34.000Z",
+    "updatedAt": "2026-11-19T08:31:34.000Z"
   },
   {
     "id": "prd-0953",
@@ -42890,19 +42888,19 @@
   },
   {
     "id": "prd-1047",
-    "name": "Ontel Battery Daddy Organizer with Tester",
+    "name": "קופסת אחסון לסוללות Battery Daddy עם בודק",
     "slug": "ontel-battery-daddy-organizer-tester",
     "category": "home",
     "secondaryCategories": [
       "under-25"
     ],
-    "subcategory": "Organization",
-    "shortDescription": "A double-sided clear case that stores up to 150 batteries of all sizes, with a battery tester included.",
-    "description": "The Ontel Battery Daddy holds up to 150 batteries on both sides: 58 AA, 68 AAA, 4 9V, 8 C, 8 D and 8 button cells, per the listing. Clear covers show what's inside, and a built-in tester checks whether a battery still has charge.",
-    "whyWeLikeIt": "Ends the junk-drawer hunt for a working AA.",
+    "subcategory": "ארגון",
+    "shortDescription": "עד 150 סוללות במקום אחד.",
+    "description": "קופסה דו-צדדית עם מכסים שקופים: 58 AA, ‏68 AAA, ‏4 של 9V, ‏8 C, ‏8 D ו-8 סוללות כפתור. יש בה בודק מובנה שמראה אם בסוללה נשאר מטען.",
+    "whyWeLikeIt": "נגמר החיפוש במגירות.",
     "image": "/assets/images/products/ontel-battery-daddy-organizer-tester.jpg",
     "additionalImages": [],
-    "price": 16.99,
+    "price": 14.98,
     "currency": "USD",
     "rating": 4.8,
     "reviewCount": 5078,
@@ -42915,20 +42913,18 @@
       "home"
     ],
     "highlights": [
-      "Holds 150 batteries",
-      "All common sizes",
-      "Battery tester",
-      "Clear covers",
-      "Double-sided"
+      "150 סוללות",
+      "כל הגדלים הנפוצים",
+      "בודק סוללות",
+      "מכסים שקופים"
     ],
     "affiliateUrl": "https://link.amazon/B07DADhhS",
     "externalUrl": "https://link.amazon/B07DADhhS",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-10-11T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-19T08:31:34.000Z",
+    "updatedAt": "2026-11-19T08:31:34.000Z"
   },
   {
     "id": "prd-1048",
@@ -46702,14 +46698,14 @@
   },
   {
     "id": "prd-1138",
-    "name": "Laundry Turtle Collapsible Laundry Basket, Large",
+    "name": "סל כביסה מתקפל Laundry Turtle, גדול",
     "slug": "laundry-turtle-collapsible-laundry-basket",
     "category": "home",
     "secondaryCategories": [],
-    "subcategory": "Laundry",
-    "shortDescription": "A pop-up basket that sits in a front-loader opening so clothes drop straight in.",
-    "description": "Laundry Turtle is a collapsible pop-up basket for front-loading washers and dryers, per the listing. You set it inside the machine opening to move clean clothes from washer to dryer or basket, and it comes in two sizes.",
-    "whyWeLikeIt": "A viral laundry hack that stops dropped socks.",
+    "subcategory": "כביסה",
+    "shortDescription": "מעבר נקי מהמכונה לסל.",
+    "description": "סל שנפתח ונסגר, שמתאים לפתח של מכונת כביסה ומייבש עם פתח קדמי. מניחים אותו בפתח ומעבירים את הבגדים בלי שייפלו לרצפה.",
+    "whyWeLikeIt": "מתקפל שטוח כשלא צריך.",
     "image": "/assets/images/products/laundry-turtle-collapsible-laundry-basket.jpg",
     "additionalImages": [],
     "price": 29.99,
@@ -46725,33 +46721,31 @@
       "viral"
     ],
     "highlights": [
-      "Fits front loaders",
-      "Collapsible",
-      "Large size",
-      "Easy transfers",
-      "Pop-up design"
+      "למכונות פתח קדמי",
+      "מתקפל",
+      "גודל גדול",
+      "קל להעביר כביסה"
     ],
     "affiliateUrl": "https://link.amazon/B07wkzqWZ",
     "externalUrl": "https://link.amazon/B07wkzqWZ",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-10-16T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-19T08:31:34.000Z",
+    "updatedAt": "2026-11-19T08:31:34.000Z"
   },
   {
     "id": "prd-1139",
-    "name": "Amazon Basics Diversion Book Safe with Key Lock",
+    "name": "כספת בצורת ספר Amazon Basics עם מנעול",
     "slug": "amazon-basics-diversion-book-safe",
     "category": "home",
     "secondaryCategories": [
       "under-25"
     ],
-    "subcategory": "Home Safety",
-    "shortDescription": "A lock box disguised as a book, for hiding cash, cards and small valuables on a shelf.",
-    "description": "The Amazon Basics book safe has a fabric cover and spine designed to look like a book, per the listing. The front cover lifts to reveal the safe's key lock, 2 keys are included, and it holds cash, cards, documents or jewelry.",
-    "whyWeLikeIt": "A simple way to keep valuables out of sight.",
+    "subcategory": "בטיחות בבית",
+    "shortDescription": "נראית כמו עוד ספר על המדף.",
+    "description": "לכספת יש כריכה ושדרה מבד שנראות כמו ספר. הכריכה הקדמית נפתחת ומתחתיה מנעול מפתח, ובאריזה 2 מפתחות. מתאימה לכסף, כרטיסים, מסמכים או תכשיטים.",
+    "whyWeLikeIt": "מקום מסתור פשוט וחכם.",
     "image": "/assets/images/products/amazon-basics-diversion-book-safe.jpg",
     "additionalImages": [],
     "price": 13.49,
@@ -46767,20 +46761,18 @@
       "home safety"
     ],
     "highlights": [
-      "Looks like a book",
-      "Key lock",
-      "2 keys",
-      "Fabric cover",
-      "Shelf storage"
+      "נראית כמו ספר",
+      "מנעול מפתח",
+      "2 מפתחות",
+      "כריכת בד"
     ],
     "affiliateUrl": "https://link.amazon/B0bLAqrgj",
     "externalUrl": "https://link.amazon/B0bLAqrgj",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-10-16T00:00:00.000Z",
-    "updatedAt": "2026-10-16T00:00:00.000Z",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-19T08:31:34.000Z",
+    "updatedAt": "2026-11-19T08:31:34.000Z"
   },
   {
     "id": "prd-1140",
@@ -48931,20 +48923,20 @@
   },
   {
     "id": "prd-1191",
-    "name": "Bubble Skincare Slam Dunk Hydrating Face Moisturizer",
+    "name": "קרם לחות לפנים Bubble Slam Dunk",
     "slug": "bubble-skincare-slam-dunk-moisturizer",
     "category": "home",
     "secondaryCategories": [
       "gifts",
       "under-25"
     ],
-    "subcategory": "Beauty",
-    "shortDescription": "A lightweight face cream with aloe, avocado oil and vitamin E, from the Gen Z skincare brand.",
-    "description": "Bubble Skincare Slam Dunk is a lightweight hydrating face moisturizer for normal to dry skin, per the listing. It's made with aloe, avocado oil and vitamin E, and is meant for morning and night after toner, with SPF in the daytime.",
-    "whyWeLikeIt": "Skincare made for teens and young adults, at a teen-friendly price.",
+    "subcategory": "טיפוח ויופי",
+    "shortDescription": "קרם קליל לעור רגיל עד יבש.",
+    "description": "קרם לחות קליל עם אלוורה, שמן אבוקדו וויטמין E. לפי היצרן מורחים בוקר וערב אחרי טונר, וביום מוסיפים מקדם הגנה.",
+    "whyWeLikeIt": "מרקם נעים ואריזה צבעונית.",
     "image": "/assets/images/products/bubble-skincare-slam-dunk-moisturizer.jpg",
     "additionalImages": [],
-    "price": 14.97,
+    "price": 11.17,
     "currency": "USD",
     "rating": 4.7,
     "reviewCount": 6852,
@@ -48957,21 +48949,19 @@
       "gift"
     ],
     "highlights": [
-      "Lightweight cream",
-      "Aloe + avocado oil",
-      "Vitamin E",
-      "Normal to dry skin",
-      "AM + PM use"
+      "מרקם קליל",
+      "אלוורה ושמן אבוקדו",
+      "ויטמין E",
+      "בוקר וערב"
     ],
     "affiliateUrl": "https://link.amazon/B09MvXviF",
     "externalUrl": "https://link.amazon/B09MvXviF",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-10-18T00:00:00.000Z",
-    "updatedAt": "2026-10-18T00:00:00.000Z",
-    "brand": "Bubble Skincare",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-19T08:31:34.000Z",
+    "updatedAt": "2026-11-19T08:31:34.000Z",
+    "brand": "Bubble Skincare"
   },
   {
     "id": "prd-1192",
@@ -49962,20 +49952,20 @@
   },
   {
     "id": "prd-1215",
-    "name": "medicube Zero Pore Capsule Foam Cleanser",
+    "name": "קצף ניקוי לפנים medicube Zero Pore",
     "slug": "medicube-zero-pore-capsule-foam-cleanser",
     "category": "home",
     "secondaryCategories": [
       "gifts",
       "under-25"
     ],
-    "subcategory": "Beauty",
-    "shortDescription": "A K-beauty foam cleanser with blue capsules, natural BHA and AHA/BHA/PHA for daily gentle exfoliation.",
-    "description": "The medicube Zero Pore Capsule Foam Cleanser uses blue capsules with cica exosome and natural BHA plus silica particles, alongside AHA, BHA and PHA, per the listing. It uses amino-acid cleansing agents and is dermatologist-tested and non-comedogenic.",
-    "whyWeLikeIt": "From the K-beauty brand everyone is talking about on social media.",
+    "subcategory": "טיפוח ויופי",
+    "shortDescription": "קצף עם קפסולות כחולות.",
+    "description": "קצף ניקוי קוריאני עם קפסולות כחולות, חלקיקי סיליקה ושילוב של AHA, ‏BHA ו-PHA. מבוסס על חומרי ניקוי מחומצות אמינו, ונבדק דרמטולוגית לפי היצרן.",
+    "whyWeLikeIt": "מוצר קוריאני מבוקש.",
     "image": "/assets/images/products/medicube-zero-pore-capsule-foam-cleanser.jpg",
     "additionalImages": [],
-    "price": 14.9,
+    "price": 11.9,
     "currency": "USD",
     "rating": 4.7,
     "reviewCount": 4742,
@@ -49988,21 +49978,19 @@
       "under 25"
     ],
     "highlights": [
-      "Blue capsules",
+      "קפסולות כחולות",
       "AHA + BHA + PHA",
-      "Amino-acid cleanser",
-      "Non-comedogenic",
-      "K-beauty"
+      "ניקוי מחומצות אמינו",
+      "טיפוח קוריאני"
     ],
     "affiliateUrl": "https://link.amazon/B07pwv72i",
     "externalUrl": "https://link.amazon/B07pwv72i",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-10-21T00:00:00.000Z",
-    "updatedAt": "2026-10-21T00:00:00.000Z",
-    "brand": "medicube",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-19T08:31:34.000Z",
+    "updatedAt": "2026-11-19T08:31:34.000Z",
+    "brand": "medicube"
   },
   {
     "id": "prd-1216",
@@ -50175,20 +50163,20 @@
   },
   {
     "id": "prd-1220",
-    "name": "Goddvenus DIY Lash Clusters Kit, 10-16mm",
+    "name": "ערכת ריסים באשכולות Goddvenus, ‏10-16 מ״מ",
     "slug": "goddvenus-diy-lash-clusters-kit",
     "category": "home",
     "secondaryCategories": [
       "gifts",
       "under-25"
     ],
-    "subcategory": "Beauty",
-    "shortDescription": "A beginner-friendly at-home lash extension kit with wispy, lightweight clusters.",
-    "description": "The Goddvenus lash clusters kit is made for DIY lash extensions at home, per the listing. The wispy clusters sit on a thin cotton band to blend with natural lashes and come in 10-16mm lengths for everyday or special-occasion looks.",
-    "whyWeLikeIt": "The DIY lash trend that replaced salon extensions for many people.",
+    "subcategory": "טיפוח ויופי",
+    "shortDescription": "הדבקת ריסים לבד בבית.",
+    "description": "ערכה להארכת ריסים בבית. האשכולות הדקים יושבים על רצועת כותנה דקה כדי להשתלב עם הריסים הטבעיים, באורכים של 10 עד 16 מ״מ.",
+    "whyWeLikeIt": "מראה מלא בלי לצאת מהבית.",
     "image": "/assets/images/products/goddvenus-diy-lash-clusters-kit.jpg",
     "additionalImages": [],
-    "price": 14.99,
+    "price": 12.74,
     "currency": "USD",
     "rating": 4.4,
     "reviewCount": 12405,
@@ -50201,21 +50189,19 @@
       "under 25"
     ],
     "highlights": [
-      "DIY lash kit",
-      "Wispy clusters",
-      "10-16mm",
-      "Thin cotton band",
-      "Beginner-friendly"
+      "אשכולות דקים",
+      "10-16 מ״מ",
+      "רצועת כותנה דקה",
+      "מתאים למתחילות"
     ],
     "affiliateUrl": "https://link.amazon/B00SgI8uA",
     "externalUrl": "https://link.amazon/B00SgI8uA",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-10-21T00:00:00.000Z",
-    "updatedAt": "2026-10-21T00:00:00.000Z",
-    "brand": "Goddvenus",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-19T08:31:34.000Z",
+    "updatedAt": "2026-11-19T08:31:34.000Z",
+    "brand": "Goddvenus"
   },
   {
     "id": "prd-1221",
@@ -55212,7 +55198,7 @@
   },
   {
     "id": "prd-1338",
-    "name": "Vaseline Lip Therapy Rosy Lips Tinted Lip Balm, 2 Pack",
+    "name": "שפתון לחות Vaseline Rosy Lips, זוג",
     "slug": "vaseline-lip-therapy-rosy-lips-2",
     "category": "home",
     "secondaryCategories": [
@@ -55220,13 +55206,13 @@
       "travel",
       "under-25"
     ],
-    "subcategory": "Beauty",
-    "shortDescription": "A tinted mini lip balm made from Vaseline Jelly that adds a glossy rosy tint.",
-    "description": "Vaseline Lip Therapy Rosy Lips is a tinted lip balm made from pure Vaseline Jelly, per the listing. It gives lips a natural glossy shine with a rosy tint and seals in moisture. This pack has two minis, 0.5 oz total.",
-    "whyWeLikeIt": "The tiny tin that lives in every pocket.",
+    "subcategory": "טיפוח ויופי",
+    "shortDescription": "גוון ורוד וברק טבעי.",
+    "description": "שפתון לחות עם גוון ורדרד, על בסיס ג׳לי וזלין. נותן לשפתיים ברק טבעי. בחבילה 2 מיני, ביחד 14 גרם.",
+    "whyWeLikeIt": "קטן לכיס ולתיק.",
     "image": "/assets/images/products/vaseline-lip-therapy-rosy-lips-2.jpg",
     "additionalImages": [],
-    "price": 5.47,
+    "price": 6.49,
     "currency": "USD",
     "rating": 4.7,
     "reviewCount": 1112,
@@ -55239,21 +55225,19 @@
       "under 25"
     ],
     "highlights": [
-      "Rosy tint",
-      "Glossy shine",
-      "Vaseline Jelly",
-      "2 minis",
-      "Under $6"
+      "גוון ורדרד",
+      "ברק טבעי",
+      "2 מיני",
+      "מחיר נמוך"
     ],
     "affiliateUrl": "https://link.amazon/B0fUJbTio",
     "externalUrl": "https://link.amazon/B0fUJbTio",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-10-21T00:00:00.000Z",
-    "updatedAt": "2026-10-21T00:00:00.000Z",
-    "brand": "Vaseline",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-19T08:31:34.000Z",
+    "updatedAt": "2026-11-19T08:31:34.000Z",
+    "brand": "Vaseline"
   },
   {
     "id": "prd-1339",
@@ -56187,16 +56171,16 @@
   },
   {
     "id": "prd-1361",
-    "name": "Olay Body Wash, Cozy Caramel with Maple & Vanilla, 22 fl oz",
+    "name": "סבון גוף Olay בניחוח קרמל, מייפל ווניל",
     "slug": "olay-body-wash-cozy-caramel",
     "category": "home",
     "secondaryCategories": [
       "under-25"
     ],
-    "subcategory": "Beauty",
-    "shortDescription": "A limited-edition body wash with caramel, maple and vanilla notes and vitamin B3.",
-    "description": "Olay Cozy Caramel body wash is a limited-edition scent with notes of caramel, maple and vanilla, per the listing. It's infused with vitamin B3 and antioxidants, lathers richly and is made without parabens, phthalates and silicones. This bottle is 22 fl oz.",
-    "whyWeLikeIt": "A seasonal scent that's flying off shelves.",
+    "subcategory": "טיפוח ויופי",
+    "shortDescription": "ניחוח חורפי במהדורה מוגבלת.",
+    "description": "סבון גוף במהדורה מוגבלת עם ניחוח קרמל, מייפל ווניל. מכיל ויטמין B3, עושה הרבה קצף, ולפי היצרן הוא בלי פרבנים, פתלטים וסיליקונים. בקבוק של 650 מ״ל.",
+    "whyWeLikeIt": "ריח של חורף במקלחת.",
     "image": "/assets/images/products/olay-body-wash-cozy-caramel.jpg",
     "additionalImages": [],
     "price": 7.97,
@@ -56212,21 +56196,19 @@
       "under 25"
     ],
     "highlights": [
-      "Limited edition",
-      "Caramel + maple + vanilla",
-      "Vitamin B3",
-      "Paraben-free",
-      "22 fl oz"
+      "מהדורה מוגבלת",
+      "קרמל, מייפל ווניל",
+      "ויטמין B3",
+      "650 מ״ל"
     ],
     "affiliateUrl": "https://link.amazon/B0262onyi",
     "externalUrl": "https://link.amazon/B0262onyi",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-10-21T00:00:00.000Z",
-    "updatedAt": "2026-10-21T00:00:00.000Z",
-    "brand": "Olay",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-19T08:31:34.000Z",
+    "updatedAt": "2026-11-19T08:31:34.000Z",
+    "brand": "Olay"
   },
   {
     "id": "prd-1362",
@@ -56698,17 +56680,17 @@
   },
   {
     "id": "prd-1373",
-    "name": "TERSE Cheetah Print Headbands, 6 Pack",
+    "name": "סט 6 קשתות בד בהדפס מנומר TERSE",
     "slug": "terse-cheetah-print-headbands-6",
     "category": "home",
     "secondaryCategories": [
       "gifts",
       "under-25"
     ],
-    "subcategory": "Beauty",
-    "shortDescription": "Six colorful leopard-print elastic headbands in soft cloth.",
-    "description": "This TERSE set has 6 colorful cheetah-print headbands, per the listing. They're made of soft cloth fabric with a flexible elastic fit, for mixing and matching with everyday outfits.",
-    "whyWeLikeIt": "Cheetah print is everywhere, including your hair.",
+    "subcategory": "טיפוח ויופי",
+    "shortDescription": "שש קשתות צבעוניות להתאים לכל לבוש.",
+    "description": "סט של 6 קשתות שיער מבד רך בהדפס מנומר בצבעים שונים, עם גמישות שנוחה לראש.",
+    "whyWeLikeIt": "קל לשלב עם בגדים יומיומיים.",
     "image": "/assets/images/products/terse-cheetah-print-headbands-6.jpg",
     "additionalImages": [],
     "price": 16.99,
@@ -56724,21 +56706,19 @@
       "under 25"
     ],
     "highlights": [
-      "6 headbands",
-      "Cheetah print",
-      "Soft cloth",
-      "Elastic fit",
-      "Mix and match"
+      "6 קשתות",
+      "הדפס מנומר",
+      "בד רך",
+      "גמישות נוחה"
     ],
     "affiliateUrl": "https://link.amazon/B0jia4DVE",
     "externalUrl": "https://link.amazon/B0jia4DVE",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-10-22T00:00:00.000Z",
-    "updatedAt": "2026-10-22T00:00:00.000Z",
-    "brand": "TERSE",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-19T08:31:34.000Z",
+    "updatedAt": "2026-11-19T08:31:34.000Z",
+    "brand": "TERSE"
   },
   {
     "id": "prd-1374",
@@ -58963,19 +58943,19 @@
   },
   {
     "id": "prd-1426",
-    "name": "Abib PDRN Volume Fill-It Booster Cream",
+    "name": "קרם Abib PDRN Volume Fill-It Booster",
     "slug": "abib-pdrn-volume-booster-cream",
     "category": "home",
     "secondaryCategories": [
       "under-25"
     ],
-    "subcategory": "Beauty",
-    "shortDescription": "A tube cream with PDRN, peptides and retinal, from the K-beauty brand Abib.",
-    "description": "Abib's Volume Fill-It Booster Cream is formulated with PDRN at 15,000ppm and Volufiline at 10,000ppm, plus peptides and retinal, per the listing. It's dermatologically tested and comes in a 2.5 tube.",
-    "whyWeLikeIt": "Another PDRN pick from the K-beauty wave.",
+    "subcategory": "טיפוח ויופי",
+    "shortDescription": "טיפוח קוריאני בטובה נוחה.",
+    "description": "קרם קוריאני עם PDRN, ‏Volufiline, פפטידים ורטינל, לפי היצרן. נבדק דרמטולוגית ומגיע בטובה.",
+    "whyWeLikeIt": "מותג קוריאני שתופס תאוצה.",
     "image": "/assets/images/products/abib-pdrn-volume-booster-cream.jpg",
     "additionalImages": [],
-    "price": 14.0,
+    "price": 13.3,
     "currency": "USD",
     "rating": 4.2,
     "reviewCount": 1531,
@@ -58988,21 +58968,19 @@
       "skincare"
     ],
     "highlights": [
-      "PDRN 15,000ppm",
+      "PDRN",
       "Volufiline",
-      "Peptides + retinal",
-      "Derm tested",
-      "K-beauty"
+      "פפטידים ורטינל",
+      "טיפוח קוריאני"
     ],
     "affiliateUrl": "https://link.amazon/B046QWduy",
     "externalUrl": "https://link.amazon/B046QWduy",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-10-24T00:00:00.000Z",
-    "updatedAt": "2026-10-24T00:00:00.000Z",
-    "brand": "Abib",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-19T08:31:34.000Z",
+    "updatedAt": "2026-11-19T08:31:34.000Z",
+    "brand": "Abib"
   },
   {
     "id": "prd-1427",
@@ -59174,19 +59152,19 @@
   },
   {
     "id": "prd-1431",
-    "name": "CeraVe Super Boost Serum with Peptides and Hyaluronic Acid",
+    "name": "סרום CeraVe Super Boost עם פפטידים",
     "slug": "cerave-super-boost-serum",
     "category": "home",
     "secondaryCategories": [
       "under-25"
     ],
-    "subcategory": "Beauty",
-    "shortDescription": "A fragrance-free milky serum with peptides, hyaluronic acid and niacinamide.",
-    "description": "CeraVe Super Boost is a lightweight milky serum made with hyaluronic acid, peptides, niacinamide, vitamin B12 and LHA, per the listing. It's fragrance-free, naturally pink from the B12, and absorbs quickly.",
-    "whyWeLikeIt": "A new CeraVe serum that's climbing the charts.",
+    "subcategory": "טיפוח ויופי",
+    "shortDescription": "סרום חלבי וקליל, בלי בישום.",
+    "description": "סרום חלבי עם חומצה היאלורונית, פפטידים, ניאצינמיד, ויטמין B12 ו-LHA. בלי בישום, נספג מהר, והצבע הוורוד מגיע מוויטמין B12.",
+    "whyWeLikeIt": "מותג מוכר בפורמט חדש.",
     "image": "/assets/images/products/cerave-super-boost-serum.jpg",
     "additionalImages": [],
-    "price": 22.46,
+    "price": 24.97,
     "currency": "USD",
     "rating": 4.5,
     "reviewCount": 95,
@@ -59199,21 +59177,19 @@
       "niacinamide"
     ],
     "highlights": [
-      "Peptides",
-      "Hyaluronic acid",
-      "Niacinamide + B12",
-      "Fragrance-free",
-      "Milky texture"
+      "פפטידים",
+      "חומצה היאלורונית",
+      "ניאצינמיד ו-B12",
+      "בלי בישום"
     ],
     "affiliateUrl": "https://link.amazon/B05BIAR1I",
     "externalUrl": "https://link.amazon/B05BIAR1I",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-10-24T00:00:00.000Z",
-    "updatedAt": "2026-10-24T00:00:00.000Z",
-    "brand": "CeraVe",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-19T08:31:34.000Z",
+    "updatedAt": "2026-11-19T08:31:34.000Z",
+    "brand": "CeraVe"
   },
   {
     "id": "prd-1432",
@@ -59944,7 +59920,7 @@
   },
   {
     "id": "prd-1449",
-    "name": "Hasbro Gaming Crossfire Game",
+    "name": "משחק Crossfire של Hasbro",
     "slug": "hasbro-crossfire-game",
     "category": "gaming",
     "secondaryCategories": [
@@ -59952,10 +59928,10 @@
       "gifts",
       "under-25"
     ],
-    "subcategory": "Tabletop Games",
-    "shortDescription": "The rapid-fire '90s marble blaster game is back, for 2 players.",
-    "description": "Crossfire returns with 2 blasters, marbles and an arena, per the listing. Each player fires marbles to push the pucks into the other player's goal. It's a 2-player game for kids, teens and adults.",
-    "whyWeLikeIt": "The '90s game everyone remembers, back on shelves.",
+    "subcategory": "משחקי קופסה",
+    "shortDescription": "הקלאסיקה משנות ה-90 חוזרת.",
+    "description": "שני שחקנים יורים כדורי מתכת קטנים מהמשגרים כדי לדחוף את הדסקיות לשער של היריב. באריזה 2 משגרים, כדורים וזירה.",
+    "whyWeLikeIt": "משחק מהיר ותחרותי לשניים.",
     "image": "/assets/images/products/hasbro-crossfire-game.jpg",
     "additionalImages": [],
     "price": 19.97,
@@ -59971,21 +59947,19 @@
       "family game"
     ],
     "highlights": [
-      "2 blasters",
-      "Marbles + arena",
-      "2 players",
-      "Fast rounds",
-      "'90s classic"
+      "2 משגרים",
+      "זירה וכדורים",
+      "2 שחקנים",
+      "סיבובים מהירים"
     ],
     "affiliateUrl": "https://link.amazon/B09orlHYS",
     "externalUrl": "https://link.amazon/B09orlHYS",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-10-24T00:00:00.000Z",
-    "updatedAt": "2026-10-24T00:00:00.000Z",
-    "brand": "Hasbro Gaming",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-19T08:31:34.000Z",
+    "updatedAt": "2026-11-19T08:31:34.000Z",
+    "brand": "Hasbro Gaming"
   },
   {
     "id": "prd-1450",
@@ -61104,20 +61078,20 @@
   },
   {
     "id": "prd-1476",
-    "name": "KontrolFreek FPS Freek Galaxy Thumbsticks for PS5/PS4, Black",
+    "name": "כיסויי אגודל KontrolFreek FPS Freek Galaxy ל-PS5/PS4",
     "slug": "kontrolfreek-fps-freek-galaxy-black",
     "category": "gaming",
     "secondaryCategories": [
       "gifts",
       "under-25"
     ],
-    "subcategory": "Gaming Gear",
-    "shortDescription": "Clip-on performance thumbsticks for PlayStation controllers.",
-    "description": "The FPS Freek Galaxy set includes one high-rise and one mid-rise concave thumbstick, per the listing. They snap onto PS5 and PS4 controller sticks, add grip with a non-slip rubber compound, and protect the stock sticks from wear.",
-    "whyWeLikeIt": "A tiny upgrade shooter players swear by.",
+    "subcategory": "ציוד גיימינג",
+    "shortDescription": "אחיזה טובה יותר בשלט.",
+    "description": "זוג כיסויים לסטיקים של שלט PS5 ו-PS4: אחד גבוה ואחד בגובה בינוני, עם ראש קעור. הם נצמדים לסטיקים, מוסיפים אחיזה מגומי שלא מחליק ומגנים על הסטיקים המקוריים משחיקה.",
+    "whyWeLikeIt": "שדרוג קטן למשחקי יריות.",
     "image": "/assets/images/products/kontrolfreek-fps-freek-galaxy-black.jpg",
     "additionalImages": [],
-    "price": 16.99,
+    "price": 11.89,
     "currency": "USD",
     "rating": 4.6,
     "reviewCount": 6405,
@@ -61130,21 +61104,19 @@
       "stocking stuffer"
     ],
     "highlights": [
-      "1 high-rise + 1 mid-rise",
-      "PS5 + PS4",
-      "Non-slip grip",
-      "Protects sticks",
-      "Galaxy Black"
+      "גבוה + בינוני",
+      "PS5 ו-PS4",
+      "גומי לא מחליק",
+      "מגן על הסטיקים"
     ],
     "affiliateUrl": "https://link.amazon/B0aVcVLlO",
     "externalUrl": "https://link.amazon/B0aVcVLlO",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-11-01T00:00:00.000Z",
-    "updatedAt": "2026-11-01T00:00:00.000Z",
-    "brand": "KontrolFreek",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-19T08:31:34.000Z",
+    "updatedAt": "2026-11-19T08:31:34.000Z",
+    "brand": "KontrolFreek"
   },
   {
     "id": "prd-1477",
@@ -61530,20 +61502,19 @@
   },
   {
     "id": "prd-1486",
-    "name": "Hydro Flask Micro Hydro 6.7 oz Mini Bottle, Winterberry",
+    "name": "בקבוק מיני Hydro Flask Micro Hydro, ‏200 מ״ל",
     "slug": "hydro-flask-micro-hydro-mini-bottle",
     "category": "travel",
     "secondaryCategories": [
-      "gifts",
-      "under-25"
+      "gifts"
     ],
-    "subcategory": "Drinkware",
-    "shortDescription": "A pocket-size insulated Hydro Flask with a clip strap.",
-    "description": "The Micro Hydro holds 6.7 ounces and keeps drinks hot for 7 hours or cold for 20, per the listing. The mini cap is leakproof when closed, and the removable strap clips onto a bag. This color is Gloss Winterberry.",
-    "whyWeLikeIt": "A cute mini flask that fits in a jacket pocket.",
+    "subcategory": "בקבוקים וכוסות",
+    "shortDescription": "בקבוק תרמי קטנטן לתיק.",
+    "description": "בקבוק מבודד בנפח 200 מ״ל ששומר על משקה חם עד 7 שעות או קר עד 20 שעות, לפי היצרן. המכסה לא דולף כשהוא סגור, ויש רצועה נשלפת לתלייה על התיק. בצבע Winterberry.",
+    "whyWeLikeIt": "גודל מושלם לאספרסו או לתה.",
     "image": "/assets/images/products/hydro-flask-micro-hydro-mini-bottle.jpg",
     "additionalImages": [],
-    "price": 22.95,
+    "price": 27.95,
     "currency": "USD",
     "rating": 4.6,
     "reviewCount": 3137,
@@ -61556,21 +61527,19 @@
       "trending"
     ],
     "highlights": [
-      "6.7 oz mini",
-      "7 hrs hot / 20 cold",
-      "Leakproof cap",
-      "Clip strap",
-      "Winterberry"
+      "200 מ״ל",
+      "7 שעות חם, 20 קר",
+      "מכסה אטום",
+      "רצועה לתיק"
     ],
     "affiliateUrl": "https://link.amazon/B076laWng",
     "externalUrl": "https://link.amazon/B076laWng",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-11-01T00:00:00.000Z",
-    "updatedAt": "2026-11-01T00:00:00.000Z",
-    "brand": "Hydro Flask",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-19T08:31:34.000Z",
+    "updatedAt": "2026-11-19T08:31:34.000Z",
+    "brand": "Hydro Flask"
   },
   {
     "id": "prd-1487",
@@ -64847,20 +64816,20 @@
   },
   {
     "id": "prd-1564",
-    "name": "Vacu Vin Original Wine Saver Pump with 4 Stoppers",
+    "name": "משאבת ואקום ליין Vacu Vin עם 4 פקקים",
     "slug": "vacu-vin-original-wine-saver-pump-4-stoppers",
     "category": "kitchen",
     "secondaryCategories": [
       "gifts",
       "under-25"
     ],
-    "subcategory": "Entertaining",
-    "shortDescription": "A manual wine vacuum pump with 4 reusable stoppers.",
-    "description": "The Vacu Vin wine saver pumps air out of an opened bottle to keep wine fresh for up to 10 days, per the listing. The set includes the pump and 4 reusable BPA-free stoppers that fit standard wine bottles.",
-    "whyWeLikeIt": "A small, useful gift for wine lovers.",
+    "subcategory": "אירוח",
+    "shortDescription": "בקבוק פתוח נשאר טרי יותר.",
+    "description": "משאבה ידנית ששואבת את האוויר מבקבוק יין פתוח. לפי היצרן היין נשאר טרי עד 10 ימים. בסט המשאבה ו-4 פקקים רב-פעמיים שמתאימים לבקבוקים רגילים.",
+    "whyWeLikeIt": "מתנה קטנה לחובבי יין.",
     "image": "/assets/images/products/vacu-vin-original-wine-saver-pump-4-stoppers.jpg",
     "additionalImages": [],
-    "price": 19.99,
+    "price": 18.69,
     "currency": "USD",
     "rating": 4.7,
     "reviewCount": 4830,
@@ -64873,21 +64842,19 @@
       "bar tools"
     ],
     "highlights": [
-      "Vacuum pump",
-      "4 stoppers",
-      "Fresh up to 10 days",
-      "BPA-free",
-      "Standard bottles"
+      "משאבה ידנית",
+      "4 פקקים",
+      "עד 10 ימים",
+      "בלי BPA"
     ],
     "affiliateUrl": "https://link.amazon/B0ctQF9cZ",
     "externalUrl": "https://link.amazon/B0ctQF9cZ",
     "featured": false,
     "trending": false,
-    "published": false,
-    "createdAt": "2026-11-03T00:00:00.000Z",
-    "updatedAt": "2026-11-03T00:00:00.000Z",
-    "brand": "Vacu Vin",
-    "hiddenReason": "hebrew-relaunch-2026-11"
+    "published": true,
+    "createdAt": "2026-11-19T08:31:34.000Z",
+    "updatedAt": "2026-11-19T08:31:34.000Z",
+    "brand": "Vacu Vin"
   },
   {
     "id": "prd-1565",
@@ -65501,5 +65468,368 @@
     "createdAt": "2026-11-14T22:41:31.000Z",
     "updatedAt": "2026-11-14T22:41:31.000Z",
     "brand": "Dr. Brown's"
+  },
+  {
+    "id": "prd-1584",
+    "name": "ערכת איירבראש לטושים Crayola Marker Airbrush",
+    "slug": "crayola-marker-airbrush-spray-art-kit",
+    "category": "kids",
+    "secondaryCategories": [
+      "gifts",
+      "under-25"
+    ],
+    "subcategory": "יצירה",
+    "shortDescription": "מרססים צבע מטושים רגילים.",
+    "description": "ערכה עם מרסס שעובד על סוללות, 8 טושים רחיצים ו-5 שבלונות. מכניסים טוש, לוחצים על הכפתור ומרססים ציור. דורש 4 סוללות AA שלא כלולות. גיל 6+.",
+    "whyWeLikeIt": "יצירה שמרגישה כמו קסם.",
+    "image": "/assets/images/products/crayola-marker-airbrush-spray-art-kit.jpg",
+    "additionalImages": [],
+    "price": 14.99,
+    "currency": "USD",
+    "rating": 4.8,
+    "reviewCount": 1643,
+    "tags": [
+      "crayola",
+      "airbrush",
+      "marker airbrush",
+      "art kit",
+      "kids crafts"
+    ],
+    "highlights": [
+      "מרסס על סוללות",
+      "8 טושים רחיצים",
+      "5 שבלונות",
+      "גיל 6+"
+    ],
+    "affiliateUrl": "https://link.amazon/B00R0v9ut",
+    "externalUrl": "https://link.amazon/B00R0v9ut",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-11-19T08:31:34.000Z",
+    "updatedAt": "2026-11-19T08:31:34.000Z",
+    "brand": "Crayola"
+  },
+  {
+    "id": "prd-1585",
+    "name": "חידת מתכת Hanayama בצורת חרב המאסטר מזלדה",
+    "slug": "hanayama-zelda-master-sword-puzzle",
+    "category": "gaming",
+    "secondaryCategories": [
+      "gifts",
+      "under-25"
+    ],
+    "subcategory": "פאזלים",
+    "shortDescription": "פאזל מתכת ברמת קושי 6.",
+    "description": "חידת היגיון ממתכת בעיצוב חרב המאסטר מ-The Legend of Zelda. רמת קושי 6 מתוך 6 של Hanayama, לגיל 12 ומעלה, ונראית טוב גם על המדף.",
+    "whyWeLikeIt": "מתנה מושלמת למעריצי זלדה.",
+    "image": "/assets/images/products/hanayama-zelda-master-sword-puzzle.jpg",
+    "additionalImages": [],
+    "price": 12.88,
+    "currency": "USD",
+    "rating": 4.7,
+    "reviewCount": 1616,
+    "tags": [
+      "hanayama",
+      "zelda",
+      "master sword",
+      "brain teaser",
+      "metal puzzle"
+    ],
+    "highlights": [
+      "רמת קושי 6",
+      "מתכת",
+      "עיצוב זלדה",
+      "גיל 12+"
+    ],
+    "affiliateUrl": "https://link.amazon/B082yXmNV",
+    "externalUrl": "https://link.amazon/B082yXmNV",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-11-19T08:31:34.000Z",
+    "updatedAt": "2026-11-19T08:31:34.000Z",
+    "brand": "Hanayama"
+  },
+  {
+    "id": "prd-1586",
+    "name": "פאזל משולשים מעץ בסגנון מונטסורי Fisher-Price",
+    "slug": "fisher-price-wood-montessori-triangle-puzzle",
+    "category": "kids",
+    "secondaryCategories": [
+      "under-25"
+    ],
+    "subcategory": "צעצועים",
+    "shortDescription": "היכרות ראשונה עם צורות.",
+    "description": "10 חלקי עץ ומגש אחסון. נקודות מודפסות עוזרות לילדים לחבר את החלקים למשולשים בדרכים שונות. העץ ממקורות עם תו FSC והצבע על בסיס מים. גיל 3+.",
+    "whyWeLikeIt": "משחק שקט שמלמד לחשוב.",
+    "image": "/assets/images/products/fisher-price-wood-montessori-triangle-puzzle.jpg",
+    "additionalImages": [],
+    "price": 14.29,
+    "currency": "USD",
+    "rating": 4.7,
+    "reviewCount": 149,
+    "tags": [
+      "fisher-price",
+      "montessori",
+      "wooden puzzle",
+      "shapes",
+      "toddler"
+    ],
+    "highlights": [
+      "10 חלקי עץ",
+      "מגש אחסון",
+      "עץ FSC",
+      "גיל 3+"
+    ],
+    "affiliateUrl": "https://link.amazon/B0eW394dj",
+    "externalUrl": "https://link.amazon/B0eW394dj",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-11-19T08:31:34.000Z",
+    "updatedAt": "2026-11-19T08:31:34.000Z",
+    "brand": "Fisher-Price"
+  },
+  {
+    "id": "prd-1587",
+    "name": "פאזל עץ חיות משק עם ידיות גדולות Melissa & Doug",
+    "slug": "melissa-doug-farm-animals-jumbo-knob-puzzle",
+    "category": "kids",
+    "secondaryCategories": [
+      "under-25"
+    ],
+    "subcategory": "צעצועים",
+    "shortDescription": "פרה, חזיר וסוס לידיים קטנות.",
+    "description": "3 חלקי עץ עבים עם ידיות גדולות שקל לאחוז. מתחת לכל חלק יש תמונה תואמת, כך שהפעוט יודע לאן הוא שייך.",
+    "whyWeLikeIt": "פאזל ראשון וקלאסי.",
+    "image": "/assets/images/products/melissa-doug-farm-animals-jumbo-knob-puzzle.jpg",
+    "additionalImages": [],
+    "price": 12.97,
+    "currency": "USD",
+    "rating": 4.8,
+    "reviewCount": 4434,
+    "tags": [
+      "melissa and doug",
+      "wooden puzzle",
+      "farm animals",
+      "toddler puzzle",
+      "knob puzzle"
+    ],
+    "highlights": [
+      "3 חלקים עבים",
+      "ידיות גדולות",
+      "תמונה תואמת מתחת",
+      "לפעוטות"
+    ],
+    "affiliateUrl": "https://link.amazon/B08ymvspN",
+    "externalUrl": "https://link.amazon/B08ymvspN",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-11-19T08:31:34.000Z",
+    "updatedAt": "2026-11-19T08:31:34.000Z",
+    "brand": "Melissa & Doug"
+  },
+  {
+    "id": "prd-1588",
+    "name": "EA SPORTS FC 27 ל-PS5, דיסק",
+    "slug": "ea-sports-fc-27-ps5",
+    "category": "gaming",
+    "secondaryCategories": [
+      "gifts"
+    ],
+    "subcategory": "קונסולות",
+    "shortDescription": "משחק הכדורגל של השנה.",
+    "description": "המהדורה הרגילה של EA SPORTS FC 27 על דיסק ל-PlayStation 5. כולל את המשחק המלא: מצב קריירת מנג׳ר, Clubs עם חברים ו-The Grounds. לא מתאים ל-PS4. שפת המשחק אנגלית.",
+    "whyWeLikeIt": "מחיר טוב לכותר חדש.",
+    "image": "/assets/images/products/ea-sports-fc-27-ps5.jpg",
+    "additionalImages": [],
+    "price": 29.99,
+    "currency": "USD",
+    "rating": 4.5,
+    "reviewCount": 111,
+    "tags": [
+      "ea sports fc 27",
+      "fc 27",
+      "ps5",
+      "football game",
+      "fifa"
+    ],
+    "highlights": [
+      "דיסק ל-PS5",
+      "משחק מלא",
+      "קריירת מנג׳ר ו-Clubs",
+      "לא ל-PS4"
+    ],
+    "affiliateUrl": "https://link.amazon/B07KKUyCO",
+    "externalUrl": "https://link.amazon/B07KKUyCO",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-11-19T08:31:34.000Z",
+    "updatedAt": "2026-11-19T08:31:34.000Z",
+    "brand": "EA SPORTS"
+  },
+  {
+    "id": "prd-1589",
+    "name": "סט משאיות בנייה Play-Doh: מחפר ושופל",
+    "slug": "play-doh-excavator-loader-set",
+    "category": "kids",
+    "secondaryCategories": [
+      "under-25"
+    ],
+    "subcategory": "צעצועים",
+    "shortDescription": "בונים אתר בנייה מפליידו.",
+    "description": "שתי משאיות צעצוע: בכף של המחפר יש תבנית לאבנים מפליידו, והשופל לוחץ פליידו לקורות ובולי עץ. שתיהן משאירות עקבות צמיגים בבצק.",
+    "whyWeLikeIt": "שעות של משחק דמיון.",
+    "image": "/assets/images/products/play-doh-excavator-loader-set.jpg",
+    "additionalImages": [],
+    "price": 10.99,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 58,
+    "tags": [
+      "play-doh",
+      "play doh",
+      "construction trucks",
+      "excavator",
+      "modeling clay"
+    ],
+    "highlights": [
+      "מחפר ושופל",
+      "תבניות מובנות",
+      "עקבות צמיגים",
+      "בלעדי לאמזון"
+    ],
+    "affiliateUrl": "https://link.amazon/B0ckwcQKe",
+    "externalUrl": "https://link.amazon/B0ckwcQKe",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-11-19T08:31:34.000Z",
+    "updatedAt": "2026-11-19T08:31:34.000Z",
+    "brand": "Play-Doh"
+  },
+  {
+    "id": "prd-1590",
+    "name": "משחק הקלפים Taco vs Burrito (באנגלית)",
+    "slug": "taco-vs-burrito-card-game",
+    "category": "gaming",
+    "secondaryCategories": [
+      "kids",
+      "gifts",
+      "under-25"
+    ],
+    "subcategory": "משחקי קופסה",
+    "shortDescription": "משחק שילד בן 7 המציא.",
+    "description": "משחק קלפים משפחתי שבו כל אחד בונה את הארוחה הכי מטורפת. לומדים בשלוש דקות, סיבוב נמשך כרבע שעה, ויש 5 דרכים לשחק. הטקסט על הקלפים באנגלית.",
+    "whyWeLikeIt": "פשוט, מצחיק ומפתיע באסטרטגיה.",
+    "image": "/assets/images/products/taco-vs-burrito-card-game.jpg",
+    "additionalImages": [],
+    "price": 12.99,
+    "currency": "USD",
+    "rating": 4.5,
+    "reviewCount": 28136,
+    "tags": [
+      "taco vs burrito",
+      "card game",
+      "family game",
+      "party game"
+    ],
+    "highlights": [
+      "5 דרכים לשחק",
+      "15 דקות לסיבוב",
+      "לכל המשפחה",
+      "קלפים באנגלית"
+    ],
+    "affiliateUrl": "https://link.amazon/B02rPzWXz",
+    "externalUrl": "https://link.amazon/B02rPzWXz",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-11-19T08:31:34.000Z",
+    "updatedAt": "2026-11-19T08:31:34.000Z",
+    "brand": "Taco vs Burrito"
+  },
+  {
+    "id": "prd-1591",
+    "name": "צעצוע סקווישי Minecraft Creeper של Slimygloop",
+    "slug": "slimygloop-gelli-gels-minecraft-creeper",
+    "category": "kids",
+    "secondaryCategories": [
+      "gaming",
+      "under-25"
+    ],
+    "subcategory": "צעצועים",
+    "shortDescription": "נמתח, נמעך וחוזר לצורה.",
+    "description": "צעצוע לחיצה ירוק בצורת הקריפר מ-Minecraft, מלא בנצנצים שזורמים לאט. אפשר למתוח ולמעוך, והוא חוזר לצורה הפיקסלית שלו.",
+    "whyWeLikeIt": "מעריצי מיינקראפט יאהבו.",
+    "image": "/assets/images/products/slimygloop-gelli-gels-minecraft-creeper.jpg",
+    "additionalImages": [],
+    "price": 10.64,
+    "currency": "USD",
+    "rating": 4.4,
+    "reviewCount": 1696,
+    "tags": [
+      "minecraft",
+      "creeper",
+      "squishy",
+      "fidget",
+      "stress toy"
+    ],
+    "highlights": [
+      "עיצוב Creeper",
+      "נצנצים בזרימה איטית",
+      "חוזר לצורה",
+      "גודל כף יד"
+    ],
+    "affiliateUrl": "https://link.amazon/B09Q0N7Iv",
+    "externalUrl": "https://link.amazon/B09Q0N7Iv",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-11-19T08:31:34.000Z",
+    "updatedAt": "2026-11-19T08:31:34.000Z",
+    "brand": "Slimygloop"
+  },
+  {
+    "id": "prd-1592",
+    "name": "כדור רגל Hacky Sack המקורי, 12 פאנלים",
+    "slug": "hacky-sack-performance-footbag",
+    "category": "outdoors",
+    "secondaryCategories": [
+      "under-25"
+    ],
+    "subcategory": "ספורט",
+    "shortDescription": "המשחק של הפארק והחוף.",
+    "description": "כדור רגל קטן מזמש רך עם 12 פאנלים ותפרים מחוזקים בעבודת יד, ממולא במשקל שמתאים לעצירות ולטריקים.",
+    "whyWeLikeIt": "זול, קטן ומתאים לכל תיק.",
+    "image": "/assets/images/products/hacky-sack-performance-footbag.jpg",
+    "additionalImages": [],
+    "price": 7.65,
+    "currency": "USD",
+    "rating": 4.6,
+    "reviewCount": 51,
+    "tags": [
+      "hacky sack",
+      "footbag",
+      "kick bag",
+      "outdoor game"
+    ],
+    "highlights": [
+      "12 פאנלים",
+      "זמש רך",
+      "תפרים מחוזקים",
+      "לטריקים"
+    ],
+    "affiliateUrl": "https://link.amazon/B0f3DdH9K",
+    "externalUrl": "https://link.amazon/B0f3DdH9K",
+    "featured": false,
+    "trending": false,
+    "published": true,
+    "createdAt": "2026-11-19T08:31:34.000Z",
+    "updatedAt": "2026-11-19T08:31:34.000Z",
+    "brand": "Hacky Sack"
   }
 ]

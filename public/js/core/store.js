@@ -127,6 +127,9 @@ function normalise(text) {
   return String(text || '')
     .toLowerCase()
     .replace(/wi-?\s?fi/g, 'wifi')
+    // Hebrew geresh/gershayim inside a word ("לוג׳יטק", "מ״ל") are part of the word, not a break.
+    .replace(/([א-ת])[׳״'"’]+(?=[א-ת])/g, '$1')
+    .replace(/([א-ת])[׳'’]/g, '$1')
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
     .replace(/[^a-z0-9\u05d0-\u05ea]+/g, ' ')
@@ -140,6 +143,24 @@ const SEARCH_ALIASES = {
   slushy: ['slush', 'slushi'],
   hoover: ['vacuum'],
 };
+
+// Brand names as people type them in Hebrew. Product names keep the brand in English
+// ("Razer", "LEGO"), so a Hebrew query is matched against the English spelling too.
+const HEBREW_BRANDS = {
+  לגו: 'lego', רייזר: 'razer', ריזר: 'razer', ראזר: 'razer', פוקימון: 'pokemon', נינטנדו: 'nintendo',
+  סוויץ: 'switch', סוני: 'sony', אנקר: 'anker', לוגיטק: 'logitech', אפל: 'apple', סמסונג: 'samsung',
+  סטנלי: 'stanley', יטי: 'yeti', אוולה: 'owala', הידרו: 'hydro', קריולה: 'crayola', הסברו: 'hasbro',
+  מטל: 'mattel', מליסה: 'melissa', וטק: 'vtech', קונג: 'kong', אוקסו: 'oxo', פולארויד: 'polaroid',
+  פולרויד: 'polaroid', פוגיפילם: 'fujifilm', אינסטקס: 'instax', קודאק: 'kodak', קודק: 'kodak',
+  קוסרקס: 'cosrx', לנייז: 'laneige', לנז: 'laneige', מדיקיוב: 'medicube', סרווה: 'cerave',
+  סקווישמלו: 'squishmallows', סקווישמלוז: 'squishmallows', רוביק: 'rubik', נרף: 'nerf', אונו: 'uno',
+  מונופול: 'monopoly', פלייסטיישן: 'playstation', אקסבוקס: 'xbox', רדרגון: 'redragon', הייפרקס: 'hyperx',
+  סטילסיריס: 'steelseries', קינדל: 'kindle', בוז: 'bose', סאונדקור: 'soundcore', יוגרין: 'ugreen',
+  איירטאג: 'airtag', איירפודס: 'airpods', אייפד: 'ipad', אייפון: 'iphone', דיסני: 'disney',
+  מארוול: 'marvel', מיינקראפט: 'minecraft', מיינקרפט: 'minecraft', קולמן: 'coleman', לייפסטרו: 'lifestraw',
+  גנספורט: 'jansport', הרשל: 'herschel', סמסונייט: 'samsonite', וזלין: 'vaseline', אמזון: 'amazon',
+};
+for (const [he, en] of Object.entries(HEBREW_BRANDS)) SEARCH_ALIASES[he] = [...(SEARCH_ALIASES[he] || []), en];
 
 
 function fieldScore(field, token) {
