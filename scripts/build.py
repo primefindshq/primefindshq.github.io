@@ -1426,7 +1426,7 @@ def render_product_page(site, product, category, related_products, featured_in=(
   {render_breadcrumbs([("דף הבית", "/"), (category['name'], f"/category/{category['slug']}/"), (product['name'], None)])}
   <div class="product-detail">
     <div class="product-detail__gallery pd-gallery-enter">
-      <div class="product-detail__gallery-main"><img src="{product['image']}" alt="{esc(product['name'])}" data-gallery-main loading="eager" style="view-transition-name: product-photo-{product['slug']}" /></div>
+      <div class="product-detail__gallery-main"><img src="{product['image']}" alt="{esc(product['name'])}" data-gallery-main loading="eager" fetchpriority="high" width="800" height="800" style="view-transition-name: product-photo-{product['slug']}" /></div>
       {thumbs_html}
     </div>
     <div>
