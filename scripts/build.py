@@ -1090,7 +1090,8 @@ def render_category_page(site, category, all_categories, category_products):
         # The one-line category blurb is short for a search snippet, so the count and the
         # Israel-shipping check (done for every product before it is published) are added.
         description=category["description"].rstrip(".") + "."
-        + (f" {len(initial_sorted)} מוצרים נבחרים מאמזון, שכל אחד מהם נבדק למשלוח לישראל." if initial_sorted else ""),
+        + (f" {n_avail} מוצרים נבחרים מאמזון שנשלחים לישראל לפי הבדיקה האחרונה."
+           if (n_avail := sum(1 for p in initial_sorted if p.get("availability") != "unavailable")) else ""),
         canonical_path=f"/category/{category['slug']}/",
         # Social cards can't show SVG, so the category's most popular product photo is used.
         og_image=initial_sorted[0]["image"] if initial_sorted else None,
