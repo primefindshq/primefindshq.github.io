@@ -118,6 +118,15 @@ def load_guides(published):
     return out
 
 
+# What the product page says when a product is marked "unavailable", by the reason found
+# at the last Amazon check (see the cycle reports).
+STOCK_NOTES = {
+    "no-ship-il": "בבדיקה האחרונה אמזון לא שלחה את המוצר הזה לישראל. מוצרים דומים למטה.",
+    "no-offer": "בבדיקה האחרונה אמזון עצמה לא מכרה את המוצר הזה למשלוח לישראל. מוצרים דומים למטה.",
+    None: "כרגע קשה למצוא אותו חדש באמזון. מוצרים דומים למטה.",
+}
+
+
 def related_products(product, published, limit=4):
     """Products most like this one: same subcategory, same category, shared secondary categories
     and shared tags all add to the score (never the product itself); ties fall back to newest."""
@@ -127,7 +136,7 @@ def related_products(product, published, limit=4):
     tags = own_tags(product)
     scored = []
     for p in published:
-        if p["slug"] == product["slug"]:
+        if p["slug"] == product["slug"] or p.get("availability") == "unavailable":
             continue
         score = 0
         if product.get("subcategory") and p.get("subcategory") == product["subcategory"]:
@@ -784,6 +793,8 @@ def render_guides_strip(guides):
 
 
 def render_homepage(site, categories, products, counts, collections=(), videos=(), guides=()):
+    # The home page only shows products Amazon can currently sell to Israel.
+    products = [p for p in products if p.get("availability") != "unavailable"]
     trending = [p for p in products if p.get("trending")][:10]
     latest = sorted(products, key=lambda p: p["createdAt"], reverse=True)[:8]
     # Hero reel: two slow columns of real product photos. The second copy of
@@ -949,8 +960,10 @@ CATEGORY_TITLES = {
 
 def popularity(p):
     """Mirror of sortProducts('popular') in js/core/store.js: rating weighted by
-    how many reviews back it up, so a 4.8 with 50k reviews outranks a 5.0 with 12."""
-    return (p.get("rating") or 0) * math.log10((p.get("reviewCount") or 0) + 10)
+    how many reviews back it up, so a 4.8 with 50k reviews outranks a 5.0 with 12.
+    Products Amazon can't currently sell to Israel ("unavailable") sink to the end."""
+    score = (p.get("rating") or 0) * math.log10((p.get("reviewCount") or 0) + 10)
+    return score - 100 if p.get("availability") == "unavailable" else score
 
 
 def render_category_page(site, category, all_categories, category_products):
@@ -1074,7 +1087,10 @@ def render_category_page(site, category, all_categories, category_products):
     return base_page(
         site,
         title=CATEGORY_TITLES.get(category["slug"], f"{category['name']} מאמזון") + f" | {site['siteName']}",
-        description=category["description"],
+        # The one-line category blurb is short for a search snippet, so the count and the
+        # Israel-shipping check (done for every product before it is published) are added.
+        description=category["description"].rstrip(".") + "."
+        + (f" {len(initial_sorted)} מוצרים נבחרים מאמזון, שכל אחד מהם נבדק למשלוח לישראל." if initial_sorted else ""),
         canonical_path=f"/category/{category['slug']}/",
         # Social cards can't show SVG, so the category's most popular product photo is used.
         og_image=initial_sorted[0]["image"] if initial_sorted else None,
@@ -1439,7 +1455,7 @@ def render_product_page(site, product, category, related_products, featured_in=(
         {render_stars(product['rating'], product['reviewCount'])}
       </div>
       {f'<p class="product-detail__price-note pd-enter pd-enter--3">המחיר נבדק ב-{esc(format_date_long(product["updatedAt"][:10]))} באמזון ארה״ב, לפני משלוח ומיסים לישראל. המחירים משתנים, אז כדאי לבדוק את המחיר העדכני באמזון.</p>' if product.get('price') is not None and product.get('updatedAt') else ''}
-      {'<p class="product-detail__stock-note pd-enter pd-enter--3">כרגע קשה למצוא אותו חדש באמזון. מוצרים דומים למטה.</p>' if product.get('availability') == 'unavailable' else ''}
+      {f'<p class="product-detail__stock-note pd-enter pd-enter--3">{STOCK_NOTES.get(product.get("unavailableReason"), STOCK_NOTES[None])}</p>' if product.get('availability') == 'unavailable' else ''}
       <div class="cta-panel pd-enter pd-enter--3">
         <a class="btn btn--primary btn--full" data-affiliate-link data-product-slug="{product['slug']}" aria-label="בדיקת מחיר באמזון: {esc(product['name'])} (נפתח בלשונית חדשה)">בדיקת מחיר באמזון {CHEVRON_ICON}</a>
         <p class="cta-panel__disclaimer"><strong>לפני ההזמנה, בדקו באמזון שהמוצר נשלח לישראל ומה עלות המשלוח.</strong> נפתח בלשונית חדשה. קישור שותפים: ייתכן שנקבל עמלה, בלי עלות נוספת עבורכם. <a href="/affiliate-disclosure.html">גילוי נאות</a>.</p>
@@ -1885,7 +1901,7 @@ def main():
     # the full records are ~4x larger and every page loads this file.
     client_fields = ("id", "name", "slug", "category", "subcategory", "secondaryCategories", "shortDescription",
                      "tags", "image", "thumb", "price", "currency", "rating", "reviewCount", "affiliateUrl",
-                     "featured", "trending", "published", "createdAt")
+                     "featured", "trending", "published", "createdAt", "availability")
     snapshot = [{k: p[k] for k in client_fields if k in p} for p in published]
     write_file(os.path.join(PUBLIC_DIR, "data", "products.json"), json.dumps(snapshot, ensure_ascii=False, separators=(",", ":")))
     write_file(os.path.join(PUBLIC_DIR, "data", "categories.json"), json.dumps(categories, indent=2, ensure_ascii=False))

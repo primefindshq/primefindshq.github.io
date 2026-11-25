@@ -92,7 +92,9 @@ export async function getLatestProducts(limit = 8) {
 
 /** Sort a product list. Supports the sort keys used across category pages / "Latest Finds". */
 function popularity(p) {
-  return (p.rating || 0) * Math.log10((p.reviewCount || 0) + 10);
+  const score = (p.rating || 0) * Math.log10((p.reviewCount || 0) + 10);
+  // Products Amazon can't currently sell to Israel sink to the end (mirrors build.py).
+  return p.availability === 'unavailable' ? score - 100 : score;
 }
 
 export function sortProducts(products, sortKey) {

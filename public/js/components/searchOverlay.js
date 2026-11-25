@@ -55,13 +55,20 @@ export function initSearchOverlay() {
     say('');
     productsPromise = productsPromise || getProducts();
     input.value = '';
+    // Focus right away (visibility flips instantly), so letters typed straight after
+    // opening land in the box instead of being lost while the chips load. Doing it inside
+    // the click also lets phones open the keyboard.
+    input.focus({ preventScroll: true });
     if (!suggestHtml) {
       const [categories, counts] = await Promise.all([getCategories(), getCategoryCounts()]);
       suggestHtml = categoryChipsMarkup(categories, counts);
     }
-    resultsEl.innerHTML = suggestHtml;
-    revealChips();
-    setTimeout(() => input.focus(), 50);
+    // Only show the category chips if the visitor hasn't started typing meanwhile.
+    if (!input.value.trim()) {
+      resultsEl.innerHTML = suggestHtml;
+      revealChips();
+    }
+    setTimeout(() => { if (document.activeElement !== input) input.focus({ preventScroll: true }); }, 50);
   };
 
   const close = ({ restore = true } = {}) => {
