@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "primefinds",
+      "runtimeExecutable": "C:\\Users\\Refael\\AppData\\Local\\Programs\\Python\\Launcher\\py.exe",
+      "runtimeArgs": ["-m", "http.server", "8950", "-d", "public"],
+      "port": 8950
+    }
+  ]
+}
