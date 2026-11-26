@@ -4,3 +4,6 @@ __pycache__/
 server.log
 .DS_Store
 Thumbs.db
+
+.claude/launch.json
+PRIME.FINDS-run-*-report.md
