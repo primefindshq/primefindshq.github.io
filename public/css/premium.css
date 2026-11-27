@@ -528,3 +528,16 @@ html[data-motion="reduce"] [data-reveal] { opacity: 1; transform: none; }
 }
 .page-hero, .category-hero { border-radius: 0; }
 .product-detail img, .product-gallery img { border-radius: var(--radius-md); }
+
+/* Israel-shipping check note on product pages (cycle 2026-11-27) */
+.product-detail__ship-note {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4em;
+  margin: var(--space-xs) 0 0;
+  color: var(--color-text);
+  font-size: var(--fs-body-sm);
+}
+.product-detail__ship-note > span {
+  font-weight: 700;
+}

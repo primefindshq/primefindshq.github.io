@@ -12,7 +12,6 @@
       "bedsure-fleece-blanket-queen-linen-beige",
       "biodance-hydrogel-eye-patches-60",
       "moroccanoil-treatment-hair-oil",
-      "audio-technica-ath-m50x-studio-headphones",
       "tomtoc-360-protective-laptop-sleeve-13",
       "elden-ring-ps5",
       "royal-craft-wood-bamboo-cutting-boards-3",
@@ -21,7 +20,8 @@
       "geedel-rotary-cheese-grater-hand-crank",
       "contigo-west-loop-3-travel-mug-16oz",
       "stanley-quencher-h2-flowstate-40-oz-dark-navy",
-      "yeti-rambler-20-oz-tumbler-royal-blue"
+      "under-armour-undeniable-5-duffle",
+      "learning-resources-calculator-cash-register"
     ],
     "title": "מתנות לחנוכה לכל המשפחה",
     "metaTitle": "מתנות לחנוכה מאמזון: 20 רעיונות לכל המשפחה",
@@ -74,7 +74,7 @@
       "educational-insights-geosafari-kidnoculars",
       "hape-pound-and-tap-bench-xylophone",
       "taco-vs-burrito-card-game",
-      "national-geographic-hobby-rock-tumbler-kit"
+      "learning-resources-calculator-cash-register"
     ],
     "title": "מתנות לחנוכה לילדים",
     "metaTitle": "מתנות לחנוכה לילדים מאמזון: 20 רעיונות",
@@ -113,15 +113,15 @@
       "repel-windproof-travel-umbrella-black",
       "bedsure-gentlesoft-white-throw-blanket",
       "bedsure-down-alternative-comforter-queen-white",
-      "hiware-glass-teapot-with-infuser",
       "oceanstar-bamboo-tea-box",
       "zulay-kitchen-handheld-milk-frother",
-      "zojirushi-stainless-travel-mug-16-oz-black",
-      "yeti-rambler-20-oz-tumbler-royal-blue",
       "owala-smoothsip-slider-coffee-tumbler",
       "muddy-mat-absorbent-chenille-door-mat",
       "gogobunny-waterproof-pet-blanket-reversible",
-      "mora-pets-self-warming-cat-bed-mat"
+      "mora-pets-self-warming-cat-bed-mat",
+      "tea-forte-fiore-steeping-cup-stone-blue",
+      "buffalo-games-winterland-fun-1000-puzzle",
+      "ugg-nita-fleece-throw-blanket-charcoal"
     ],
     "title": "מציאות לחורף",
     "metaTitle": "מציאות לחורף מאמזון: 14 מוצרים לבית ולדרך",
@@ -158,14 +158,14 @@
       "bedsure-gentlesoft-white-throw-blanket",
       "everlasting-comfort-lumbar-support-pillow",
       "hothands-hand-warmers-40-pairs",
-      "hiware-glass-teapot-with-infuser",
       "oceanstar-bamboo-tea-box",
-      "all4jig-rotating-puzzle-board-4-drawers",
       "educational-insights-kanoodle-puzzle",
-      "yeti-rambler-20-oz-tumbler-royal-blue",
       "bedsure-satin-pillowcases-queen-grey",
       "burts-bees-beeswax-lip-balm-4-pack",
-      "o-cedar-easywring-spin-mop-bucket"
+      "o-cedar-easywring-spin-mop-bucket",
+      "blissy-mulberry-silk-pillowcase",
+      "kitsch-microfiber-hair-towel-wrap-pink",
+      "ugg-nita-fleece-throw-blanket-charcoal"
     ],
     "title": "מתנות לסבא וסבתא",
     "metaTitle": "מתנות לסבא וסבתא מאמזון",
@@ -194,8 +194,6 @@
   {
     "slug": "gifts-for-dad",
     "items": [
-      "yeti-rambler-20-oz-tumbler-royal-blue",
-      "temppro-tempswift-instant-read-thermometer",
       "ancel-ad310-obd2-code-reader",
       "fortem-collapsible-car-trunk-organizer",
       "dewalt-40-piece-flextorq-screwdriver-bit-set",
@@ -208,7 +206,9 @@
       "hothands-hand-warmers-40-pairs",
       "sony-mdr-zx110-wired-on-ear-headphones",
       "weber-rapidfire-chimney-starter",
-      "everlasting-comfort-memory-foam-seat-cushion"
+      "everlasting-comfort-memory-foam-seat-cushion",
+      "goodr-og-polarized-sunglasses",
+      "redragon-s101-gaming-keyboard-mouse-combo"
     ],
     "title": "מתנות לאבא",
     "metaTitle": "מתנות לאבא מאמזון",
@@ -239,20 +239,20 @@
     "items": [
       "bedsure-satin-pillowcases-queen-grey",
       "bedsure-fleece-blanket-queen-linen-beige",
-      "yeti-rambler-20-oz-tumbler-royal-blue",
       "stanley-quencher-h2-flowstate-40-oz-dark-navy",
       "zulay-kitchen-handheld-milk-frother",
-      "hiware-glass-teapot-with-infuser",
       "aquacare-8-mode-handheld-shower-head",
       "eos-shea-better-body-lotion-vanilla-cashmere",
       "medicube-collagen-wrapping-mask",
       "kitsch-satin-heatless-curls-set",
       "grace-and-stella-under-eye-patches-gold",
-      "kunphy-46khz-ultrasonic-jewelry-cleaner-white",
       "burts-bees-beeswax-lip-balm-4-pack",
       "cerave-daily-moisturizing-lotion",
       "mighty-patch-original-36",
-      "nicetown-blackout-curtains-42x63-black"
+      "nicetown-blackout-curtains-42x63-black",
+      "mellanni-iconic-sheet-set-queen-white",
+      "blissy-mulberry-silk-pillowcase",
+      "kitsch-microfiber-hair-towel-wrap-pink"
     ],
     "title": "מתנות לאמא",
     "metaTitle": "מתנות לאמא מאמזון",
@@ -295,11 +295,11 @@
       "fashions-talk-cat-toys-variety-pack-20",
       "swihauk-self-cleaning-slicker-brush-blue",
       "the-first-years-stack-and-count-cups",
-      "matein-travel-laptop-backpack-grey",
       "rabbitgoo-no-pull-dog-harness-large-black",
       "kitchenaid-all-purpose-kitchen-shears",
       "outward-hound-fun-feeder-slo-bowl-medium",
-      "paper-mate-inkjoy-gel-pens-14-colors"
+      "paper-mate-inkjoy-gel-pens-14-colors",
+      "naturally-kids-toddler-dinosaur-backpack"
     ],
     "title": "מתנות עד 25 דולר",
     "metaTitle": "מתנות עד 25 דולר מאמזון",
@@ -342,9 +342,9 @@
       "mattel-uno-card-game",
       "taco-cat-goat-cheese-pizza-card-game",
       "sony-mdr-zx110-wired-on-ear-headphones",
-      "hasbro-yahtzee-classic-dice-game",
       "monopoly-deal-card-game",
-      "educational-insights-kanoodle-puzzle"
+      "educational-insights-kanoodle-puzzle",
+      "sandisk-256gb-microsd-super-mario-switch"
     ],
     "title": "מתנות לנוער",
     "metaTitle": "מתנות לנוער מאמזון",
@@ -382,7 +382,6 @@
       "orzly-carrying-case-nintendo-switch-2",
       "mattel-uno-card-game",
       "taco-cat-goat-cheese-pizza-card-game",
-      "hasbro-yahtzee-classic-dice-game",
       "monopoly-deal-card-game",
       "educational-insights-kanoodle-puzzle",
       "spin-master-mexican-train-dominoes-case",
@@ -396,7 +395,8 @@
       "7-wonders-duel-board-game",
       "uno-show-em-no-mercy-tin",
       "hasbro-clue-1986-retro-edition",
-      "5-second-rule-party-game"
+      "5-second-rule-party-game",
+      "sandisk-256gb-microsd-super-mario-switch"
     ],
     "title": "מתנות לגיימרים",
     "metaTitle": "מתנות לגיימרים מאמזון",
@@ -425,10 +425,8 @@
   {
     "slug": "gifts-for-coffee-lovers",
     "items": [
-      "yeti-rambler-20-oz-tumbler-royal-blue",
       "zulay-kitchen-handheld-milk-frother",
       "sok-it-javasok-iced-coffee-sleeve",
-      "zojirushi-stainless-travel-mug-16-oz-black",
       "aeropress-original-coffee-press",
       "owala-smoothsip-slider-coffee-tumbler",
       "hario-v60-ceramic-dripper-02-white",
@@ -436,7 +434,9 @@
       "bodum-pavina-double-wall-glasses-15oz-2",
       "frost-buddy-togo-buddy-30oz-tumbler",
       "nextmug-self-heating-mug-graphite",
-      "tang-pin-matcha-set-bowl-whisk"
+      "tang-pin-matcha-set-bowl-whisk",
+      "tea-forte-fiore-steeping-cup-stone-blue",
+      "joyjolt-savor-double-wall-glass-mugs-2"
     ],
     "title": "מתנות לאוהבי קפה",
     "metaTitle": "מתנות לאוהבי קפה מאמזון",
@@ -465,9 +465,7 @@
   {
     "slug": "gifts-under-50",
     "items": [
-      "kodak-ektar-h35-half-frame-film-camera-sage",
       "stanley-quencher-h2-flowstate-40-oz-dark-navy",
-      "yeti-rambler-20-oz-tumbler-royal-blue",
       "bedsure-fleece-blanket-queen-linen-beige",
       "orzly-carrying-case-nintendo-switch-2",
       "stanley-iceflow-2-flip-straw-30oz",
@@ -477,12 +475,14 @@
       "bedsure-down-alternative-comforter-queen-white",
       "geedel-rotary-cheese-grater-hand-crank",
       "contigo-west-loop-3-travel-mug-16oz",
-      "texsens-bubble-backpack-pet-carrier-black",
       "crocs-classic-clog-white",
       "o-cedar-easywring-spin-mop-bucket",
       "steelseries-qck-xxl-gaming-mouse-pad",
       "hothands-hand-warmers-40-pairs",
-      "best-friends-by-sheri-donut-pet-bed-small-taupe"
+      "best-friends-by-sheri-donut-pet-bed-small-taupe",
+      "mellanni-iconic-sheet-set-queen-white",
+      "amazon-basics-enameled-cast-iron-dutch-oven-6qt",
+      "under-armour-undeniable-5-duffle"
     ],
     "title": "מתנות עד 50 דולר",
     "metaTitle": "מתנות עד 50 דולר מאמזון",
@@ -510,7 +510,6 @@
   {
     "slug": "tech-gifts",
     "items": [
-      "audio-technica-ath-m50x-studio-headphones",
       "scrib3d-p1-3d-printing-pen",
       "marshall-emberton-iii-portable-speaker-cream",
       "fujifilm-instax-mini-13-dreamy-purple",
@@ -523,7 +522,6 @@
       "tomtoc-360-protective-laptop-sleeve-13",
       "anker-333-usb-c-cable-100w-6ft-2-pack",
       "havit-hv-f2056-laptop-cooling-pad",
-      "logitech-c920x-hd-pro-webcam",
       "withings-body-smart-wifi-scale-black",
       "innogear-boom-arm-microphone-stand",
       "samsung-bar-plus-256gb-flash-drive",
@@ -532,7 +530,9 @@
       "d-line-large-cable-management-box-black",
       "kiwi-design-k4-head-strap-quest-3",
       "elgato-stream-deck-plus-studio-controller",
-      "boss-ds-1-distortion-guitar-pedal"
+      "boss-ds-1-distortion-guitar-pedal",
+      "sandisk-256gb-microsd-super-mario-switch",
+      "amd-ryzen-5-5600x-desktop-processor"
     ],
     "title": "מתנות טכנולוגיה",
     "metaTitle": "מתנות טכנולוגיה מאמזון",
@@ -568,7 +568,6 @@
       "paulas-choice-2-bha-liquid-exfoliant",
       "moroccanoil-treatment-hair-oil",
       "kitsch-satin-heatless-curls-set",
-      "yeti-rambler-20-oz-tumbler-royal-blue",
       "bedsure-satin-pillowcases-queen-grey",
       "burts-bees-beeswax-lip-balm-4-pack",
       "cerave-daily-moisturizing-lotion",
@@ -577,7 +576,8 @@
       "nicetown-blackout-curtains-42x63-black",
       "kitchenaid-all-purpose-kitchen-shears",
       "eos-shea-better-body-lotion-vanilla-cashmere",
-      "wet-brush-original-detangler-black-frost"
+      "wet-brush-original-detangler-black-frost",
+      "mellanni-iconic-sheet-set-queen-white"
     ],
     "title": "מתנות לה",
     "metaTitle": "מתנות לה מאמזון",
@@ -607,7 +607,6 @@
     "slug": "gifts-for-him",
     "items": [
       "ancel-ad310-obd2-code-reader",
-      "audio-technica-ath-m50x-studio-headphones",
       "the-ridge-wallet-money-clip-forest-green",
       "contigo-west-loop-3-travel-mug-16oz",
       "orzly-carrying-case-nintendo-switch-2",
@@ -620,7 +619,8 @@
       "sawyer-mini-water-filter-blue",
       "wise-owl-outfitters-double-camping-hammock",
       "gaiam-thick-yoga-mat-10mm",
-      "trideer-exercise-ball"
+      "trideer-exercise-ball",
+      "under-armour-undeniable-5-duffle"
     ],
     "title": "מתנות לו",
     "metaTitle": "מתנות לו מאמזון",
@@ -650,7 +650,6 @@
     "items": [
       "original-slinky-walking-spring-toy",
       "kinetic-sand-2-lb-brown",
-      "national-geographic-hobby-rock-tumbler-kit",
       "lincoln-logs-100th-anniversary-tin",
       "stomp-rocket-ultra-launcher-4-rockets",
       "magna-tiles-classic-100-piece-set",
@@ -667,7 +666,8 @@
       "hape-pound-and-tap-bench-xylophone",
       "taco-vs-burrito-card-game",
       "vtech-drill-and-learn-toolbox",
-      "vtech-kidibeats-kids-drum-set"
+      "vtech-kidibeats-kids-drum-set",
+      "learning-resources-calculator-cash-register"
     ],
     "title": "מתנות לילדים",
     "metaTitle": "מתנות לילדים מאמזון",
@@ -702,17 +702,17 @@
       "yeowww-catnip-banana-cat-toy",
       "outward-hound-granby-dog-life-jacket-large",
       "bedsure-cat-house-bed-scratch-pad-grey",
-      "furminator-deshedding-tool-large-long-hair",
       "kong-wobbler-treat-dispensing-dog-toy",
-      "zakkart-cat-window-perch-bolsters-large",
       "elevation-lab-airtag-dog-collar-holder",
       "woof-pupsicle-interactive-dog-treat-ball",
       "mora-pets-self-warming-cat-bed-mat",
       "petsafe-easy-walk-no-pull-harness-black-medium",
-      "texsens-bubble-backpack-pet-carrier-black",
       "henkelion-soft-sided-pet-carrier-small-medium",
       "swihauk-self-cleaning-slicker-brush-blue",
-      "bedsure-small-round-dog-cat-bed-20in-camel"
+      "bedsure-small-round-dog-cat-bed-20in-camel",
+      "choco-nose-no-drip-small-pet-water-bottle",
+      "rabbitgoo-no-pull-dog-harness-large-black",
+      "maxpower-planet-dog-grooming-rake"
     ],
     "title": "מתנות לבעלי חיות",
     "metaTitle": "מתנות לבעלי חיות מאמזון",
@@ -741,25 +741,25 @@
     "slug": "gifts-for-travelers",
     "items": [
       "apple-airtag-2nd-gen",
-      "matein-travel-laptop-backpack-grey",
       "repel-windproof-travel-umbrella-black",
-      "jansport-superbreak-one-backpack-navy",
       "hydro-flask-32-oz-wide-mouth-flex-cap-beachplum",
       "fjallraven-kanken-backpack",
-      "zojirushi-stainless-travel-mug-16-oz-black",
       "the-ridge-wallet-money-clip-forest-green",
       "hero-rfid-neck-wallet-passport-holder",
       "loop-experience-2-earplugs-black",
       "manta-sleep-mask",
       "contigo-west-loop-3-travel-mug-16oz",
       "stanley-quencher-h2-flowstate-40-oz-dark-navy",
-      "yeti-rambler-20-oz-tumbler-royal-blue",
       "burts-bees-beeswax-lip-balm-4-pack",
       "bedsure-fleece-blanket-queen-linen-beige",
       "orzly-carrying-case-nintendo-switch-2",
       "rabbitgoo-no-pull-dog-harness-large-black",
       "popsockets-adhesive-phone-grip-black",
-      "amazon-basics-microfiber-cleaning-cloths-24"
+      "amazon-basics-microfiber-cleaning-cloths-24",
+      "under-armour-undeniable-5-duffle",
+      "fitgriff-gym-bag-shoe-wet-compartment",
+      "miracase-magnetic-vent-car-phone-mount",
+      "tomtoc-navigator-t66-travel-backpack-40l"
     ],
     "title": "מתנות למטיילים",
     "metaTitle": "מתנות למטיילים מאמזון",
@@ -796,9 +796,9 @@
       "everlasting-comfort-lumbar-support-pillow",
       "vornado-vfan-mini-classic-vintage-green",
       "sharper-image-led-word-clock-silver",
-      "clever-fox-planner-premium-forest-green",
       "elgato-stream-deck-plus-studio-controller",
-      "matein-travel-laptop-backpack-grey"
+      "redragon-s101-gaming-keyboard-mouse-combo",
+      "royal-kludge-rk61-wired-mechanical-keyboard"
     ],
     "title": "שדרוגים לשולחן העבודה",
     "metaTitle": "שדרוגים לשולחן העבודה מאמזון",
@@ -829,14 +829,14 @@
     "items": [
       "pyrex-essentials-glass-measuring-cup-set-3",
       "fullstar-pro-vegetable-chopper-spiralizer",
-      "temppro-tempswift-instant-read-thermometer",
       "chefsofi-granite-mortar-and-pestle",
       "trendplain-glass-olive-oil-sprayer",
       "geedel-rotary-cheese-grater-hand-crank",
       "spring-chef-magnetic-measuring-spoons-8",
       "stanley-quencher-h2-flowstate-40-oz-dark-navy",
-      "yeti-rambler-20-oz-tumbler-royal-blue",
-      "zulay-kitchen-handheld-milk-frother"
+      "zulay-kitchen-handheld-milk-frother",
+      "amazon-basics-enameled-cast-iron-dutch-oven-6qt",
+      "cook-with-color-mixing-bowls-lids-12"
     ],
     "title": "מתנות לאוהבי בישול",
     "metaTitle": "מתנות לאוהבי בישול מאמזון",

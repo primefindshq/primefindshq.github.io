@@ -1457,6 +1457,7 @@ def render_product_page(site, product, category, related_products, featured_in=(
       </div>
       {f'<p class="product-detail__price-note pd-enter pd-enter--3">המחיר נבדק ב-{esc(format_date_long(product["updatedAt"][:10]))} באמזון ארה״ב, לפני משלוח ומיסים לישראל. המחירים משתנים, אז כדאי לבדוק את המחיר העדכני באמזון.</p>' if product.get('price') is not None and product.get('updatedAt') else ''}
       {f'<p class="product-detail__stock-note pd-enter pd-enter--3">{STOCK_NOTES.get(product.get("unavailableReason"), STOCK_NOTES[None])}</p>' if product.get('availability') == 'unavailable' else ''}
+      {f'<p class="product-detail__ship-note pd-enter pd-enter--3"><span aria-hidden="true">✓</span> בבדיקה שלנו ב-{esc(format_date_long(product["availabilityCheckedAt"][:10]))}, אמזון הציעה משלוח של המוצר לישראל.</p>' if product.get('availabilityCheckedAt') and product.get('availability') != 'unavailable' else ''}
       <div class="cta-panel pd-enter pd-enter--3">
         <a class="btn btn--primary btn--full" data-affiliate-link data-product-slug="{product['slug']}" aria-label="בדיקת מחיר באמזון: {esc(product['name'])} (נפתח בלשונית חדשה)">בדיקת מחיר באמזון {CHEVRON_ICON}</a>
         <p class="cta-panel__disclaimer"><strong>לפני ההזמנה, בדקו באמזון שהמוצר נשלח לישראל ומה עלות המשלוח.</strong> נפתח בלשונית חדשה. קישור שותפים: ייתכן שנקבל עמלה, בלי עלות נוספת עבורכם. <a href="/affiliate-disclosure.html">גילוי נאות</a>.</p>
@@ -1810,6 +1811,33 @@ def render_terms_page(site):
     )
 
 
+def render_removed_redirect(site, product, category):
+    """Tiny noindex page left at a removed product's old URL so it is not a dead 404:
+    it points visitors and search engines to the product's category page."""
+    base = site["url"].rstrip("/")
+    target = f"/category/{category['slug']}/"
+    name = esc(category.get("name", ""))
+    return f"""<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, follow">
+<title>המוצר הוסר | {esc(site['siteName'])}</title>
+<link rel="canonical" href="{base}{target}">
+<meta http-equiv="refresh" content="0; url={target}">
+<style>body{{margin:0;min-height:100vh;display:grid;place-items:center;background:#fbf5e6;color:#14213d;font-family:Heebo,Arial,sans-serif;text-align:center;padding:16px}}a{{color:#14213d;font-weight:700}}</style>
+</head>
+<body>
+<main>
+<h1>המוצר הזה כבר לא זמין באתר</h1>
+<p>מעבירים אתכם לקטגוריה <a href="{target}">{name}</a>.</p>
+</main>
+</body>
+</html>
+"""
+
+
 def render_404_page(site):
     body = """
 <section class="container error-page">
@@ -1957,6 +1985,20 @@ def main():
             os.path.join(PUBLIC_DIR, "product", product["slug"], "index.html"),
             render_product_page(site, product, category, related, guides_by_product.get(product["slug"], [])[:3]),
         )
+
+    # ---- Redirects for removed products (old URL -> category page) ----
+    live_slugs = {p["slug"] for p in published}
+    for product in products:
+        if product.get("published") or product["slug"] in live_slugs:
+            continue
+        if not str(product.get("hiddenReason", "")).startswith("unfit-"):
+            continue
+        category = categories_by_slug.get(product["category"])
+        if category:
+            write_file(
+                os.path.join(PUBLIC_DIR, "product", product["slug"], "index.html"),
+                render_removed_redirect(site, product, category),
+            )
 
     # ---- Static pages ----
     write_file(os.path.join(PUBLIC_DIR, "about.html"), render_about_page(site))
